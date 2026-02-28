@@ -9,10 +9,10 @@ export default function ReportsPage(): JSX.Element {
       <p className="text-muted">Placeholder index route for weekly report archives.</p>
       <ul className="divide-y divide-line border-y border-line">
         {reports.map((report) => (
-          <li className="py-4" key={report.slug}>
-            <Link className="block space-y-1" href={`/reports/${report.slug}`}>
-              <p className="text-lg font-medium">{report.title}</p>
-              <p className="text-sm text-muted">{report.publishedAt}</p>
+          <li className="py-4" key={report.metadata.slug}>
+            <Link className="block space-y-1" href={`/reports/${report.metadata.slug}`}>
+              <p className="text-lg font-medium">{report.metadata.title}</p>
+              <p className="text-sm text-muted">{report.metadata.publishedAt}</p>
             </Link>
           </li>
         ))}
