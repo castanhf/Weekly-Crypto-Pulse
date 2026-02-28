@@ -1,15 +1,10 @@
-export type Report = {
-  slug: string;
-  title: string;
-  publishedAt: string;
-  summary: string;
-};
+import type { Report } from '@/domain/report';
 
-export const reports: ReadonlyArray<Report> = [
-  {
-    slug: 'placeholder-week-1',
-    title: 'Placeholder Weekly Report',
-    publishedAt: 'TBD',
-    summary: 'This is placeholder metadata for the first weekly report.'
-  }
-];
+import { sampleWeeklyReport } from '@/data/sample-report';
+
+export const reports: ReadonlyArray<Report> = [sampleWeeklyReport];
+
+export const latestReport: Report = reports[0];
+
+export const findReportBySlug = (slug: string): Report | undefined =>
+  reports.find((report) => report.metadata.slug === slug);
