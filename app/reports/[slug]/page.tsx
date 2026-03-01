@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { findReportBySlug } from '@/data/reports';
+import { getReportBySlug } from '@/lib/reports/report-repository';
 
 type ReportDetailPageProps = {
   params: {
@@ -9,7 +9,7 @@ type ReportDetailPageProps = {
 };
 
 export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX.Element {
-  const report = findReportBySlug(params.slug);
+  const report = getReportBySlug(params.slug);
 
   if (!report) {
     notFound();
