@@ -1,3 +1,9 @@
+import type { Metadata } from 'next';
+
+import { createMethodologyMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createMethodologyMetadata();
+
 const METHODOLOGY_SECTIONS = [
   {
     title: 'What we measure',

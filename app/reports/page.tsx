@@ -1,7 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { formatIsoDate } from '@/components/reports/report-formatters';
+import { createReportsArchiveMetadata } from '@/lib/seo';
 import { getAllReports } from '@/lib/reports/report-repository';
+
+export const metadata: Metadata = createReportsArchiveMetadata();
 
 export default function ReportsPage(): JSX.Element {
   const reports = getAllReports();

@@ -1,3 +1,9 @@
+import type { Metadata } from 'next';
+
+import { createDisclaimerMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createDisclaimerMetadata();
+
 const DISCLAIMER_POINTS = [
   'Weekly Crypto Pulse is provided for informational and educational purposes only.',
   'Content on this site is not personalized financial advice, investment advice, legal advice, or tax advice.',

@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { getSiteOrigin } from '@/lib/seo';
 import { siteConfig } from '@/lib/site';
 
 import './globals.css';
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`
   },
-  description: siteConfig.description
+  description: siteConfig.description,
+  metadataBase: new URL(getSiteOrigin())
 };
 
 type RootLayoutProps = {
