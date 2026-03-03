@@ -1,7 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
 import { getLatestReport } from '@/lib/reports/report-repository';
+import { createHomeMetadata } from '@/lib/seo';
+
+
+export const metadata: Metadata = createHomeMetadata();
 
 const METRICS = [
   'Market structure and risk regime',
