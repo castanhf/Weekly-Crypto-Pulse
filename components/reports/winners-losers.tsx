@@ -7,13 +7,20 @@ type WinnersLosersProps = {
   movers: ReadonlyArray<Mover>;
 };
 
+type MoverTrend = 'winner' | 'loser';
+
 const byPerformanceDesc = (left: Mover, right: Mover): number => right.changePct7d - left.changePct7d;
 
-const getWinners = (movers: ReadonlyArray<Mover>): ReadonlyArray<Mover> =>
-  movers.filter((mover) => mover.changePct7d > 0).sort(byPerformanceDesc);
+const isMoverByTrend = (mover: Mover, trend: MoverTrend): boolean => {
+  if (trend === 'winner') {
+    return mover.changePct7d > 0;
+  }
 
-const getLosers = (movers: ReadonlyArray<Mover>): ReadonlyArray<Mover> =>
-  movers.filter((mover) => mover.changePct7d < 0).sort(byPerformanceDesc);
+  return mover.changePct7d < 0;
+};
+
+const getMoversByTrend = (movers: ReadonlyArray<Mover>, trend: MoverTrend): ReadonlyArray<Mover> =>
+  movers.filter((mover) => isMoverByTrend(mover, trend)).sort(byPerformanceDesc);
 
 const MoverList = ({ items, emptyMessage }: { items: ReadonlyArray<Mover>; emptyMessage: string }): JSX.Element => {
   if (items.length === 0) {
@@ -38,8 +45,8 @@ const MoverList = ({ items, emptyMessage }: { items: ReadonlyArray<Mover>; empty
 };
 
 export function WinnersAndLosers({ movers }: WinnersLosersProps): JSX.Element {
-  const winners = getWinners(movers);
-  const losers = getLosers(movers);
+  const winners = getMoversByTrend(movers, 'winner');
+  const losers = getMoversByTrend(movers, 'loser');
 
   return (
     <SectionCard title="Winners & Losers (7D)">

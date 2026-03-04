@@ -6,7 +6,7 @@ type ReportSectionsProps = {
   sections: ReadonlyArray<ReportSection>;
 };
 
-export function ReportSections({ sections }: ReportSectionsProps): JSX.Element {
+export function ReportSections({ sections }: ReportSectionsProps): JSX.Element | null {
   if (sections.length === 0) {
     return null;
   }
