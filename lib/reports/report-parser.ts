@@ -1,43 +1,7 @@
 import type { MarketSnapshot, Mover, Regime, Report, ReportMetadata, ReportSection } from '@/domain/report';
+import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
-
-type JsonRecord = Record<string, unknown>;
-
-const isRecord = (value: unknown): value is JsonRecord =>
-  typeof value === 'object' && value !== null && !Array.isArray(value);
-
-const assertRecord = (value: unknown, fieldPath: string): JsonRecord => {
-  if (!isRecord(value)) {
-    throw new Error(`Invalid report data at "${fieldPath}": expected object.`);
-  }
-
-  return value;
-};
-
-const assertString = (value: unknown, fieldPath: string): string => {
-  if (typeof value !== 'string' || value.trim().length === 0) {
-    throw new Error(`Invalid report data at "${fieldPath}": expected non-empty string.`);
-  }
-
-  return value;
-};
-
-const assertNumber = (value: unknown, fieldPath: string): number => {
-  if (typeof value !== 'number' || Number.isNaN(value)) {
-    throw new Error(`Invalid report data at "${fieldPath}": expected number.`);
-  }
-
-  return value;
-};
-
-const assertStringArray = (value: unknown, fieldPath: string): ReadonlyArray<string> => {
-  if (!Array.isArray(value)) {
-    throw new Error(`Invalid report data at "${fieldPath}": expected string array.`);
-  }
-
-  return value.map((entry, index) => assertString(entry, `${fieldPath}[${index}]`));
-};
 
 const parseMetadata = (value: unknown): ReportMetadata => {
   const metadata = assertRecord(value, 'metadata');
@@ -73,39 +37,37 @@ const parseMarketSnapshot = (value: unknown): MarketSnapshot => {
   };
 };
 
-const parseMovers = (value: unknown): ReadonlyArray<Mover> => {
-  if (!Array.isArray(value)) {
-    throw new Error('Invalid report data at "movers": expected array.');
-  }
+const parseCollection = <T>(
+  value: unknown,
+  fieldPath: string,
+  parseItem: (item: unknown, index: number) => T
+): ReadonlyArray<T> => assertArray(value, fieldPath).map(parseItem);
 
-  return value.map((entry, index) => {
-    const mover = assertRecord(entry, `movers[${index}]`);
-
-    return {
-      symbol: assertString(mover.symbol, `movers[${index}].symbol`),
-      name: assertString(mover.name, `movers[${index}].name`),
-      changePct7d: assertNumber(mover.changePct7d, `movers[${index}].changePct7d`),
-      catalyst: assertString(mover.catalyst, `movers[${index}].catalyst`)
-    };
-  });
-};
-
-const parseSections = (value: unknown): ReadonlyArray<ReportSection> => {
-  if (!Array.isArray(value)) {
-    throw new Error('Invalid report data at "sections": expected array.');
-  }
-
-  return value.map((entry, index) => {
-    const section = assertRecord(entry, `sections[${index}]`);
+const parseMovers = (value: unknown): ReadonlyArray<Mover> =>
+  parseCollection(value, 'movers', (entry, index) => {
+    const moverFieldPath = `movers[${index}]`;
+    const mover = assertRecord(entry, moverFieldPath);
 
     return {
-      id: assertString(section.id, `sections[${index}].id`),
-      heading: assertString(section.heading, `sections[${index}].heading`),
-      body: assertString(section.body, `sections[${index}].body`),
-      highlights: assertStringArray(section.highlights, `sections[${index}].highlights`)
+      symbol: assertString(mover.symbol, `${moverFieldPath}.symbol`),
+      name: assertString(mover.name, `${moverFieldPath}.name`),
+      changePct7d: assertNumber(mover.changePct7d, `${moverFieldPath}.changePct7d`),
+      catalyst: assertString(mover.catalyst, `${moverFieldPath}.catalyst`)
     };
   });
-};
+
+const parseSections = (value: unknown): ReadonlyArray<ReportSection> =>
+  parseCollection(value, 'sections', (entry, index) => {
+    const sectionFieldPath = `sections[${index}]`;
+    const section = assertRecord(entry, sectionFieldPath);
+
+    return {
+      id: assertString(section.id, `${sectionFieldPath}.id`),
+      heading: assertString(section.heading, `${sectionFieldPath}.heading`),
+      body: assertString(section.body, `${sectionFieldPath}.body`),
+      highlights: assertStringArray(section.highlights, `${sectionFieldPath}.highlights`)
+    };
+  });
 
 export const parseReportJson = (rawJson: string, source: string): Report => {
   let parsed: unknown;
