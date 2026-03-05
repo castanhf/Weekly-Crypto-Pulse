@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "vitest run",
     "generate:local-report": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-local-report.js",
-    "generate:market-data": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-market-data-snapshot.js"
+    "generate:market-data": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-market-data-snapshot.js",
+    "validate:reports": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-reports.js"
   },
   "dependencies": {
     "next": "14.2.5",
