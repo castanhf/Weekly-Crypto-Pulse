@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { ProCta } from '@/components/pro/pro-cta';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
 import { MethodologyNote } from '@/components/reports/methodology-note';
@@ -49,6 +50,13 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
       <RegimeSection regime={report.regime} />
       <ReportSections sections={report.sections} />
       <MethodologyNote />
+      <footer className="space-y-3 border-t border-line pt-6">
+        <h2 className="text-xl font-semibold tracking-tight">Need the full Pro version?</h2>
+        <p className="max-w-2xl text-sm leading-relaxed text-muted">
+          Pro includes deeper context, expanded analysis, and a sharper weekly risk framing.
+        </p>
+        <ProCta label="Upgrade with Stripe" />
+      </footer>
     </article>
   );
 }
