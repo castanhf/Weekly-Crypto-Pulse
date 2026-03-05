@@ -37,3 +37,13 @@ export type Report = Readonly<{
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
 }>;
+
+export const CURRENT_REPORT_SCHEMA_VERSION = '1.0' as const;
+
+export type ReportSchemaVersion = typeof CURRENT_REPORT_SCHEMA_VERSION;
+
+export type ReportArtifact = Readonly<{
+  schemaVersion: ReportSchemaVersion;
+  report: Report;
+  generatedAt?: string;
+}>;

@@ -1,7 +1,17 @@
-import type { MarketSnapshot, Mover, Regime, Report, ReportMetadata, ReportSection } from '@/domain/report';
+import {
+  CURRENT_REPORT_SCHEMA_VERSION,
+  type MarketSnapshot,
+  type Mover,
+  type Regime,
+  type Report,
+  type ReportMetadata,
+  type ReportSchemaVersion,
+  type ReportSection
+} from '@/domain/report';
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
+const SUPPORTED_SCHEMA_VERSIONS: ReadonlySet<ReportSchemaVersion> = new Set([CURRENT_REPORT_SCHEMA_VERSION]);
 
 const parseMetadata = (value: unknown): ReportMetadata => {
   const metadata = assertRecord(value, 'metadata');
@@ -56,8 +66,8 @@ const parseMovers = (value: unknown): ReadonlyArray<Mover> =>
     };
   });
 
-const parseSections = (value: unknown): ReadonlyArray<ReportSection> =>
-  parseCollection(value, 'sections', (entry, index) => {
+const parseSections = (value: unknown): ReadonlyArray<ReportSection> => {
+  const sections = parseCollection(value, 'sections', (entry, index) => {
     const sectionFieldPath = `sections[${index}]`;
     const section = assertRecord(entry, sectionFieldPath);
 
@@ -68,6 +78,44 @@ const parseSections = (value: unknown): ReadonlyArray<ReportSection> =>
       highlights: assertStringArray(section.highlights, `${sectionFieldPath}.highlights`)
     };
   });
+
+  const sectionIds = new Set<string>();
+
+  for (const section of sections) {
+    if (sectionIds.has(section.id)) {
+      throw new Error(`Invalid report data: duplicate section id "${section.id}".`);
+    }
+
+    sectionIds.add(section.id);
+  }
+
+  return sections;
+};
+
+const parseReportShape = (rawReport: unknown): Report => {
+  const report = assertRecord(rawReport, 'report');
+
+  return {
+    metadata: parseMetadata(report.metadata),
+    regime: parseRegime(report.regime),
+    marketSnapshot: parseMarketSnapshot(report.marketSnapshot),
+    movers: parseMovers(report.movers),
+    sections: parseSections(report.sections)
+  };
+};
+
+const parseSchemaVersion = (value: unknown): ReportSchemaVersion => {
+  const schemaVersion = assertString(value, 'schemaVersion');
+
+  if (!SUPPORTED_SCHEMA_VERSIONS.has(schemaVersion as ReportSchemaVersion)) {
+    throw new Error(`Invalid report data at "schemaVersion": unsupported version "${schemaVersion}".`);
+  }
+
+  return schemaVersion as ReportSchemaVersion;
+};
+
+const isVersionedArtifact = (value: Record<string, unknown>): value is Record<'schemaVersion' | 'report', unknown> =>
+  'schemaVersion' in value;
 
 export const parseReportJson = (rawJson: string, source: string): Report => {
   let parsed: unknown;
@@ -80,11 +128,11 @@ export const parseReportJson = (rawJson: string, source: string): Report => {
 
   const root = assertRecord(parsed, 'root');
 
-  return {
-    metadata: parseMetadata(root.metadata),
-    regime: parseRegime(root.regime),
-    marketSnapshot: parseMarketSnapshot(root.marketSnapshot),
-    movers: parseMovers(root.movers),
-    sections: parseSections(root.sections)
-  };
+  if (!isVersionedArtifact(root)) {
+    return parseReportShape(root);
+  }
+
+  parseSchemaVersion(root.schemaVersion);
+
+  return parseReportShape(root.report);
 };
