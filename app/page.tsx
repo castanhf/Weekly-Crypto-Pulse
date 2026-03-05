@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
 import { getLatestReport } from '@/lib/reports/report-repository';
+import { ProCta } from '@/components/pro/pro-cta';
 import { createHomeMetadata } from '@/lib/seo';
 
 
@@ -97,17 +98,20 @@ export default function HomePage(): JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-3 border border-dashed border-line bg-white p-6" aria-labelledby="pro-heading">
+      <section className="space-y-4 border border-line bg-white p-6" aria-labelledby="pro-heading">
         <h2 className="text-2xl font-semibold tracking-tight" id="pro-heading">
-          Weekly Crypto Pulse Pro (coming soon)
+          Weekly Crypto Pulse Pro
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          A future Pro tier will include deeper factor breakdowns, downloadable datasets, and
-          analyst notes. Payments are not live yet.
+          Upgrade to receive the full weekly Pro report with deeper market structure analysis and
+          positioning context, delivered through a simple Stripe-hosted checkout.
         </p>
-        <button className="inline-flex cursor-not-allowed border border-line px-4 py-2 text-sm font-medium text-muted" disabled type="button">
-          Join Pro waitlist
-        </button>
+        <div className="flex flex-wrap gap-3">
+          <ProCta label="Upgrade with Stripe" />
+          <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
+            View Pro details
+          </Link>
+        </div>
       </section>
     </section>
   );

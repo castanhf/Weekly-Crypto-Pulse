@@ -4,6 +4,7 @@ import { siteConfig } from '@/lib/site';
 
 const NAV_ITEMS = [
   { href: '/reports', label: 'Reports' },
+  { href: '/pro', label: 'Pro' },
   { href: '/methodology', label: 'Methodology' },
   { href: '/disclaimer', label: 'Disclaimer' }
 ] as const;

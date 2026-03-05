@@ -83,6 +83,14 @@ export const createDisclaimerMetadata = (): Metadata =>
     path: '/disclaimer'
   });
 
+export const createProMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Weekly Crypto Pulse Pro',
+    description: 'Upgrade to Pro for full weekly reports with deeper structure, flows, and positioning analysis.',
+    path: '/pro'
+  });
+
+
 export const createReportMetadata = (report: Report): Metadata =>
   createPageMetadata({
     title: report.metadata.title,
@@ -90,6 +98,6 @@ export const createReportMetadata = (report: Report): Metadata =>
     path: `/reports/${report.metadata.slug}`
   });
 
-export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/methodology', '/disclaimer'];
+export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer'];
 
 export const getSiteOrigin = (): string => getSiteUrl();
