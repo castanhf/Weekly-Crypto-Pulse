@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-03-02T18:00:00.000Z",
+  "week": {
+    "publishedAt": "2026-03-02",
+    "label": "Week of Mar 2, 2026"
+  },
+  "headline": "ETF Demand Supports Majors as Altcoin Rotation Stalls",
+  "summary": "Bitcoin and Ethereum held key support while selective capital rotated out of high-beta altcoins.",
+  "tags": ["bitcoin", "ethereum", "etf", "rotation"],
+  "regime": "range-bound",
+  "snapshot": {
+    "totalMarketCapUsd": 2815000000000,
+    "btcDominancePct": 56.1,
+    "ethDominancePct": 16.3,
+    "fearGreedIndex": 59
+  },
+  "movers": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "changePct7d": 2.4,
+      "catalyst": "Steady ETF net inflows and resilient spot demand."
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "changePct7d": 1.8,
+      "catalyst": "Large-cap rotation and stable staking participation."
+    },
+    {
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "changePct7d": -5.1,
+      "catalyst": "Momentum unwind after a sharp prior-week rally."
+    }
+  ],
+  "sections": [
+    {
+      "id": "market-overview",
+      "heading": "Market Overview",
+      "body": "Liquidity stayed concentrated in majors while altcoin breadth softened.",
+      "highlights": [
+        "BTC closed above its weekly VWAP.",
+        "Perpetual funding reset to neutral across major venues."
+      ]
+    },
+    {
+      "id": "positioning",
+      "heading": "Positioning & Flows",
+      "body": "Institutional participation remained constructive, but speculative leverage cooled.",
+      "highlights": [
+        "Spot ETF flow momentum remained positive for a sixth consecutive week.",
+        "Open interest declined in mid-cap perpetual pairs."
+      ]
+    }
+  ]
+}
