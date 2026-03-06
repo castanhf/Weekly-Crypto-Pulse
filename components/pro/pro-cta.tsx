@@ -13,11 +13,11 @@ type CheckoutTarget = Readonly<{
 }>;
 
 const getCheckoutTarget = (): CheckoutTarget => {
-  const { stripePaymentLink } = siteConfig.pro;
+  const { hasStripePaymentLink, stripePaymentLink } = siteConfig.pro;
 
-  if (stripePaymentLink.length === 0) {
+  if (!hasStripePaymentLink) {
     return {
-      href: '/pro',
+      href: '/pro#checkout-unavailable',
       isExternal: false
     };
   }
