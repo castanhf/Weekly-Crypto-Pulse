@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { createProMetadata } from '@/lib/seo';
+import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = createProMetadata();
 
@@ -24,6 +25,8 @@ const FREE_INCLUSIONS = [
 ] as const;
 
 export default function ProPage(): JSX.Element {
+  const { hasStripePaymentLink } = siteConfig.pro;
+
   return (
     <section className="space-y-8">
       <header className="space-y-3 border-b border-line pb-6">
@@ -34,6 +37,17 @@ export default function ProPage(): JSX.Element {
         </p>
         <ProCta label="Upgrade with Stripe" />
       </header>
+
+      {!hasStripePaymentLink ? (
+        <section className="space-y-2 border border-amber-300 bg-amber-50 p-4" id="checkout-unavailable">
+          <h2 className="text-base font-semibold">Checkout is temporarily unavailable.</h2>
+          <p className="text-sm text-muted">
+            The Stripe Payment Link is not configured for this environment. Set
+            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK</code>
+            in Vercel to enable paid checkout.
+          </p>
+        </section>
+      ) : null}
 
       <section className="space-y-3" aria-labelledby="pro-included-heading">
         <h2 className="text-2xl font-semibold tracking-tight" id="pro-included-heading">
