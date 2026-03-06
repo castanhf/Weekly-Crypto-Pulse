@@ -2,6 +2,8 @@
 
 This project is static-first and Vercel-friendly by default. Use this runbook to configure **Preview** and **Production** deployments with minimal operational overhead.
 
+For day-2 operational troubleshooting, see `docs/operations/vercel-notes.md`.
+
 ## 1) Connect GitHub repository to Vercel
 
 1. Log in to [Vercel](https://vercel.com) and click **Add New... > Project**.
