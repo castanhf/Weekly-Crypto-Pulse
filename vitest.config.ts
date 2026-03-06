@@ -3,7 +3,9 @@ import { resolve } from 'node:path';
 
 export default defineConfig({
   test: {
-    environment: 'node'
+    environment: 'node',
+    include: ['**/*.test.ts'],
+    exclude: ['node_modules/**', 'e2e/**']
   },
   resolve: {
     alias: {
