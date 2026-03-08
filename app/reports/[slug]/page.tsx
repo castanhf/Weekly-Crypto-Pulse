@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
 import { ProCta } from '@/components/pro/pro-cta';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
@@ -43,6 +44,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
 
   return (
     <article className="space-y-6">
+      <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
       <ExecutiveSummary summary={report.metadata.summary} />
       <MarketSnapshotCards snapshot={report.marketSnapshot} />
