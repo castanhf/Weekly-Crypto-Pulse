@@ -6,22 +6,85 @@ import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = createProMetadata();
 
-const PRO_INCLUSIONS = [
-  'Full weekly report with deeper regime and factor-level market breakdowns',
-  'Expanded winners/losers context with rotational narrative and relative momentum',
-  'Actionable analyst framing focused on positioning risk and next-week scenarios'
+type PlanComparisonRow = Readonly<{
+  feature: string;
+  free: string;
+  pro: string;
+}>;
+
+type Deliverable = Readonly<{
+  title: string;
+  description: string;
+}>;
+
+type FaqItem = Readonly<{
+  question: string;
+  answer: string;
+}>;
+
+const PLAN_COMPARISON_ROWS: ReadonlyArray<PlanComparisonRow> = [
+  {
+    feature: 'Weekly market snapshot',
+    free: 'Included',
+    pro: 'Included'
+  },
+  {
+    feature: 'Public report archive',
+    free: 'Included',
+    pro: 'Included'
+  },
+  {
+    feature: 'Regime and factor-depth analysis',
+    free: 'Headline summary only',
+    pro: 'Full section with rotational context and risk framing'
+  },
+  {
+    feature: 'Signals package',
+    free: 'Not included',
+    pro: 'Thesis, risk checklist, and watchlist levels'
+  },
+  {
+    feature: 'Delivery',
+    free: 'Read on site',
+    pro: 'Immediate access after Stripe checkout'
+  }
 ] as const;
 
-const PRO_AUDIENCE = [
-  'Active traders who need a weekly directional risk check',
-  'Operators and founders tracking market structure for planning decisions',
-  'Allocators who want a concise macro + crypto positioning brief'
+const PRO_DELIVERABLES: ReadonlyArray<Deliverable> = [
+  {
+    title: 'Full weekly report',
+    description:
+      'Expanded narrative covering market regime, leadership rotation, and positioning context beyond the public summary.'
+  },
+  {
+    title: 'Action-ready signals',
+    description: 'Structured thesis bullets, explicit risk checklist, and watchlist levels to track next-week scenarios.'
+  },
+  {
+    title: 'Consistent publication cadence',
+    description: 'One Pro edition is generated each week using the same methodology and committed static report artifacts.'
+  }
 ] as const;
 
-const FREE_INCLUSIONS = [
-  'Public weekly highlight summary',
-  'Core market snapshot and headline context',
-  'Access to the historical report archive'
+const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
+  {
+    question: 'Is this a subscription?',
+    answer:
+      'No. Checkout is handled by a Stripe Payment Link with no account system, entitlements, or recurring subscription management in this app.'
+  },
+  {
+    question: 'How do I access Pro content?',
+    answer:
+      'Use the Stripe checkout button on this page. After payment, fulfillment follows the Pro operations process documented for Weekly Crypto Pulse.'
+  },
+  {
+    question: 'Do I need to create an account on Weekly Crypto Pulse?',
+    answer: 'No. The site does not implement user authentication or account profiles.'
+  },
+  {
+    question: 'Can I still read free content?',
+    answer: 'Yes. The free archive and public weekly highlights remain available without payment.'
+  }
 ] as const;
 
 export default function ProPage(): JSX.Element {
@@ -30,12 +93,14 @@ export default function ProPage(): JSX.Element {
   return (
     <section className="space-y-8">
       <header className="space-y-3 border-b border-line pb-6">
-        <p className="text-sm uppercase tracking-[0.18em] text-muted">Weekly Crypto Pulse Pro</p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Get the full Pro report each week.</h1>
+        <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
+        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Pro is a minimal paid layer powered by Stripe Payment Links. Checkout is hosted by Stripe.
+          Weekly Crypto Pulse keeps the stack simple: free public reports plus a paid Pro layer through Stripe-hosted checkout.
         </p>
-        <ProCta label="Upgrade with Stripe" />
+        <div className="flex flex-wrap gap-3">
+          <ProCta label="Get Pro with Stripe" />
+        </div>
       </header>
 
       {!hasStripePaymentLink ? (
@@ -49,43 +114,67 @@ export default function ProPage(): JSX.Element {
         </section>
       ) : null}
 
-      <section className="space-y-3" aria-labelledby="pro-included-heading">
-        <h2 className="text-2xl font-semibold tracking-tight" id="pro-included-heading">
-          What is included in the Pro report
+      <section aria-labelledby="comparison-heading" className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight" id="comparison-heading">
+          Free vs Pro comparison
         </h2>
-        <ul className="space-y-2 text-sm text-ink">
-          {PRO_INCLUSIONS.map((item) => (
-            <li className="border-l-2 border-line pl-3" key={item}>
-              {item}
+        <div className="overflow-x-auto border border-line bg-white">
+          <table className="min-w-full border-collapse text-left text-sm">
+            <caption className="sr-only">Weekly Crypto Pulse free versus Pro plan comparison.</caption>
+            <thead className="bg-paper">
+              <tr>
+                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
+                  Feature
+                </th>
+                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
+                  Free
+                </th>
+                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
+                  Pro
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {PLAN_COMPARISON_ROWS.map((row) => (
+                <tr className="align-top" key={row.feature}>
+                  <th className="border-b border-line px-4 py-3 font-medium" scope="row">
+                    {row.feature}
+                  </th>
+                  <td className="border-b border-line px-4 py-3 text-muted">{row.free}</td>
+                  <td className="border-b border-line px-4 py-3 text-muted">{row.pro}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="deliverables-heading" className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight" id="deliverables-heading">
+          Exact Pro deliverables
+        </h2>
+        <ul className="space-y-3 text-sm text-ink">
+          {PRO_DELIVERABLES.map((deliverable) => (
+            <li className="border border-line bg-white p-4" key={deliverable.title}>
+              <h3 className="text-base font-semibold tracking-tight">{deliverable.title}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{deliverable.description}</p>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="space-y-3" aria-labelledby="pro-audience-heading">
-        <h2 className="text-2xl font-semibold tracking-tight" id="pro-audience-heading">
-          Who it is for
+      <section aria-labelledby="faq-heading" className="space-y-3">
+        <h2 className="text-2xl font-semibold tracking-tight" id="faq-heading">
+          FAQs
         </h2>
-        <ul className="space-y-2 text-sm text-ink">
-          {PRO_AUDIENCE.map((item) => (
-            <li className="border-l-2 border-line pl-3" key={item}>
-              {item}
-            </li>
+        <div className="space-y-3">
+          {FAQ_ITEMS.map((item) => (
+            <article className="border border-line bg-white p-4" key={item.question}>
+              <h3 className="text-base font-semibold tracking-tight">{item.question}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{item.answer}</p>
+            </article>
           ))}
-        </ul>
-      </section>
-
-      <section className="space-y-3 border border-line bg-white p-6" aria-labelledby="free-included-heading">
-        <h2 className="text-2xl font-semibold tracking-tight" id="free-included-heading">
-          What the free version includes
-        </h2>
-        <ul className="space-y-2 text-sm text-ink">
-          {FREE_INCLUSIONS.map((item) => (
-            <li className="border-l-2 border-line pl-3" key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
+        </div>
       </section>
     </section>
   );

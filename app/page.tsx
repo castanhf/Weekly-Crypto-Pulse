@@ -109,7 +109,7 @@ export default function HomePage(): JSX.Element {
         <div className="flex flex-wrap gap-3">
           <ProCta label="Upgrade with Stripe" />
           <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
-            View Pro details
+            View pricing
           </Link>
         </div>
       </section>
