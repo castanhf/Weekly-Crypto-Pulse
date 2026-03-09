@@ -6,7 +6,9 @@ import {
   type Report,
   type ReportMetadata,
   type ReportSchemaVersion,
-  type ReportSection
+  type ReportSection,
+  type ReportSignals,
+  type WatchlistLevel
 } from '@/domain/report';
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
 
@@ -92,6 +94,28 @@ const parseSections = (value: unknown): ReadonlyArray<ReportSection> => {
   return sections;
 };
 
+const parseWatchlistLevels = (value: unknown): ReadonlyArray<WatchlistLevel> =>
+  parseCollection(value, 'signals.watchlistLevels', (entry, index) => {
+    const levelFieldPath = `signals.watchlistLevels[${index}]`;
+    const level = assertRecord(entry, levelFieldPath);
+
+    return {
+      asset: assertString(level.asset, `${levelFieldPath}.asset`),
+      level: assertString(level.level, `${levelFieldPath}.level`),
+      context: assertString(level.context, `${levelFieldPath}.context`)
+    };
+  });
+
+const parseSignals = (value: unknown): ReportSignals => {
+  const signals = assertRecord(value, 'signals');
+
+  return {
+    thesis: assertStringArray(signals.thesis, 'signals.thesis'),
+    riskChecklist: assertStringArray(signals.riskChecklist, 'signals.riskChecklist'),
+    watchlistLevels: parseWatchlistLevels(signals.watchlistLevels)
+  };
+};
+
 const parseReportShape = (rawReport: unknown): Report => {
   const report = assertRecord(rawReport, 'report');
 
@@ -100,7 +124,8 @@ const parseReportShape = (rawReport: unknown): Report => {
     regime: parseRegime(report.regime),
     marketSnapshot: parseMarketSnapshot(report.marketSnapshot),
     movers: parseMovers(report.movers),
-    sections: parseSections(report.sections)
+    sections: parseSections(report.sections),
+    signals: parseSignals(report.signals)
   };
 };
 

@@ -20,7 +20,12 @@ const baseReport: Report = {
     fearGreedIndex: 1
   },
   movers: [],
-  sections: []
+  sections: [],
+  signals: {
+    thesis: ['thesis'],
+    riskChecklist: ['risk'],
+    watchlistLevels: [{ asset: 'BTC', level: 'test', context: 'test' }]
+  }
 };
 
 describe('seo metadata', () => {

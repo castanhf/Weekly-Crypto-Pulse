@@ -45,7 +45,18 @@ Place generated report JSON artifacts in this directory:
         "body": "...",
         "highlights": ["..."]
       }
-    ]
+    ],
+    "signals": {
+      "thesis": ["..."],
+      "riskChecklist": ["..."],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "...",
+          "context": "..."
+        }
+      ]
+    }
   }
 }
 ```
