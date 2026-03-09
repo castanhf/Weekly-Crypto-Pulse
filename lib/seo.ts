@@ -17,7 +17,17 @@ const getSiteUrl = (): string => {
   return 'http://localhost:3000';
 };
 
-const toAbsoluteUrl = (path: string): string => `${getSiteUrl()}${path}`;
+export const toAbsoluteUrl = (path: string): string => `${getSiteUrl()}${path}`;
+
+const normalizeXHandle = (value: string): string => {
+  const trimmedValue = value.trim();
+
+  if (trimmedValue.length === 0) {
+    return '';
+  }
+
+  return trimmedValue.startsWith('@') ? trimmedValue : `@${trimmedValue}`;
+};
 
 type PageSeoInput = Readonly<{
   title: string;
@@ -25,34 +35,42 @@ type PageSeoInput = Readonly<{
   path: string;
 }>;
 
-const createPageMetadata = ({ title, description, path }: PageSeoInput): Metadata => ({
-  title,
-  description,
-  alternates: {
-    canonical: path
-  },
-  openGraph: {
+const createPageMetadata = ({ title, description, path }: PageSeoInput): Metadata => {
+  const absolutePageUrl = toAbsoluteUrl(path);
+  const openGraphImageUrl = toAbsoluteUrl(DEFAULT_OG_IMAGE_PATH);
+  const xHandle = normalizeXHandle(process.env.NEXT_PUBLIC_X_HANDLE ?? '');
+
+  return {
     title,
     description,
-    url: path,
-    siteName: siteConfig.name,
-    type: 'website',
-    images: [
-      {
-        url: toAbsoluteUrl(DEFAULT_OG_IMAGE_PATH),
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-    images: [toAbsoluteUrl(DEFAULT_OG_IMAGE_PATH)]
-  }
-});
+    alternates: {
+      canonical: absolutePageUrl
+    },
+    openGraph: {
+      title,
+      description,
+      url: absolutePageUrl,
+      siteName: siteConfig.name,
+      type: 'website',
+      images: [
+        {
+          url: openGraphImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [openGraphImageUrl],
+      site: xHandle || undefined,
+      creator: xHandle || undefined
+    }
+  };
+};
 
 export const createHomeMetadata = (): Metadata =>
   createPageMetadata({
@@ -90,13 +108,23 @@ export const createProMetadata = (): Metadata =>
     path: '/pro'
   });
 
-
-export const createReportMetadata = (report: Report): Metadata =>
-  createPageMetadata({
+export const createReportMetadata = (report: Report): Metadata => {
+  const metadata = createPageMetadata({
     title: report.metadata.title,
     description: report.metadata.summary,
     path: `/reports/${report.metadata.slug}`
   });
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: 'article',
+      publishedTime: report.metadata.publishedAt,
+      tags: [...report.metadata.tags]
+    }
+  };
+};
 
 export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer'];
 
