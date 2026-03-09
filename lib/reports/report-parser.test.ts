@@ -33,7 +33,12 @@ const BASE_REPORT = {
       body: 'Body',
       highlights: ['One']
     }
-  ]
+  ],
+  signals: {
+    thesis: ['Thesis'],
+    riskChecklist: ['Risk'],
+    watchlistLevels: [{ asset: 'BTC', level: '90k', context: 'Support test' }]
+  }
 } as const;
 
 describe('parseReportJson', () => {

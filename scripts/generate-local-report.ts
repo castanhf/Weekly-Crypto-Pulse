@@ -7,7 +7,9 @@ import {
   type Mover,
   type Regime,
   type ReportArtifact,
-  type ReportSection
+  type ReportSection,
+  type ReportSignals,
+  type WatchlistLevel
 } from '../domain/report';
 import {
   assertArray,
@@ -32,6 +34,7 @@ type LocalReportInput = Readonly<{
   snapshot: MarketSnapshot;
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
+  signals: ReportSignals;
 }>;
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
@@ -93,6 +96,28 @@ const parseSections = (value: unknown): ReadonlyArray<ReportSection> =>
     };
   });
 
+
+const parseWatchlistLevels = (value: unknown): ReadonlyArray<WatchlistLevel> =>
+  assertArray(value, 'signals.watchlistLevels').map((entry, index) => {
+    const level = assertRecord(entry, `signals.watchlistLevels[${index}]`);
+
+    return {
+      asset: assertString(level.asset, `signals.watchlistLevels[${index}].asset`),
+      level: assertString(level.level, `signals.watchlistLevels[${index}].level`),
+      context: assertString(level.context, `signals.watchlistLevels[${index}].context`)
+    };
+  });
+
+const parseSignals = (value: unknown): ReportSignals => {
+  const signals = assertRecord(value, 'signals');
+
+  return {
+    thesis: assertStringArray(signals.thesis, 'signals.thesis'),
+    riskChecklist: assertStringArray(signals.riskChecklist, 'signals.riskChecklist'),
+    watchlistLevels: parseWatchlistLevels(signals.watchlistLevels)
+  };
+};
+
 const parseInput = (rawInput: string): LocalReportInput => {
   const parsed = JSON.parse(rawInput) as unknown;
   const root = assertRecord(parsed, 'root');
@@ -106,7 +131,8 @@ const parseInput = (rawInput: string): LocalReportInput => {
     regime: parseRegime(root.regime),
     snapshot: parseSnapshot(root.snapshot),
     movers: parseMovers(root.movers),
-    sections: parseSections(root.sections)
+    sections: parseSections(root.sections),
+    signals: parseSignals(root.signals)
   };
 };
 
@@ -139,7 +165,8 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
       regime: input.regime,
       marketSnapshot: input.snapshot,
       movers: input.movers,
-      sections: input.sections
+      sections: input.sections,
+      signals: input.signals
     }
   };
 };

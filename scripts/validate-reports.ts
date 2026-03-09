@@ -42,6 +42,20 @@ const validateReport = (value: unknown): void => {
 
   assertArray(report.movers, 'report.movers');
   assertArray(report.sections, 'report.sections');
+
+  const signals = assertRecord(report.signals, 'report.signals');
+  assertStringArray(signals.thesis, 'report.signals.thesis');
+  assertStringArray(signals.riskChecklist, 'report.signals.riskChecklist');
+
+  const watchlistLevels = assertArray(signals.watchlistLevels, 'report.signals.watchlistLevels');
+
+  watchlistLevels.forEach((entry, index) => {
+    const level = assertRecord(entry, `report.signals.watchlistLevels[${index}]`);
+
+    assertString(level.asset, `report.signals.watchlistLevels[${index}].asset`);
+    assertString(level.level, `report.signals.watchlistLevels[${index}].level`);
+    assertString(level.context, `report.signals.watchlistLevels[${index}].context`);
+  });
 };
 
 const validateArtifact = (rawArtifact: string, fileName: string): void => {

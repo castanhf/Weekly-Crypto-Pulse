@@ -30,12 +30,25 @@ export type ReportSection = Readonly<{
   highlights: ReadonlyArray<string>;
 }>;
 
+export type WatchlistLevel = Readonly<{
+  asset: string;
+  level: string;
+  context: string;
+}>;
+
+export type ReportSignals = Readonly<{
+  thesis: ReadonlyArray<string>;
+  riskChecklist: ReadonlyArray<string>;
+  watchlistLevels: ReadonlyArray<WatchlistLevel>;
+}>;
+
 export type Report = Readonly<{
   metadata: ReportMetadata;
   regime: Regime;
   marketSnapshot: MarketSnapshot;
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
+  signals: ReportSignals;
 }>;
 
 export const CURRENT_REPORT_SCHEMA_VERSION = '1.0' as const;

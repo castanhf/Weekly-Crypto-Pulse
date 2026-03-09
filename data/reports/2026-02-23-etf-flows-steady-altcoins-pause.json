@@ -8,7 +8,12 @@
       "publishedAt": "2026-02-23",
       "weekLabel": "Week of Feb 23, 2026",
       "summary": "Bitcoin held above key support as ETF inflows remained positive, while majors rotated and high-beta altcoins cooled after a two-week rally.",
-      "tags": ["bitcoin", "etf", "market-structure", "altcoins"]
+      "tags": [
+        "bitcoin",
+        "etf",
+        "market-structure",
+        "altcoins"
+      ]
     },
     "regime": "range-bound",
     "marketSnapshot": {
@@ -56,6 +61,37 @@
           "Perpetual open interest rose modestly but stayed below January highs."
         ]
       }
-    ]
+    ],
+    "signals": {
+      "thesis": [
+        "Major-asset demand remains the primary support while broad altcoin participation fades.",
+        "ETF-related flows are still cushioning pullbacks, but upside follow-through is slowing.",
+        "Positioning is shifting from high-beta momentum into higher-liquidity names."
+      ],
+      "riskChecklist": [
+        "Watch for a break below prior weekly support in BTC before adding directional risk.",
+        "Monitor ETF net-flow momentum for a second consecutive down week.",
+        "Track funding and open interest for signs of leverage re-expansion.",
+        "Confirm stablecoin supply growth continues to support spot liquidity.",
+        "Respect macro event windows that can override crypto-native flow signals."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$90k support / $96k reclaim",
+          "context": "Holding support keeps the range constructive; reclaiming resistance reopens trend continuation."
+        },
+        {
+          "asset": "ETH",
+          "level": "$4.6k pivot",
+          "context": "Sustained closes above pivot improve odds of renewed ETH-led breadth."
+        },
+        {
+          "asset": "TOTAL3",
+          "level": "prior month low",
+          "context": "A fresh low would confirm ongoing altcoin-relative weakness."
+        }
+      ]
+    }
   }
 }

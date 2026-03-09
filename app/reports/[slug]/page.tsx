@@ -9,6 +9,7 @@ import { MethodologyNote } from '@/components/reports/methodology-note';
 import { RegimeSection } from '@/components/reports/regime-section';
 import { ReportHero } from '@/components/reports/report-hero';
 import { ReportSections } from '@/components/reports/report-sections';
+import { ReportSignalsBlock } from '@/components/reports/report-signals';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { getAllReports, getReportBySlug } from '@/lib/reports/report-repository';
@@ -54,6 +55,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
       <MarketSnapshotCards snapshot={report.marketSnapshot} />
       <WinnersAndLosers movers={report.movers} />
       <RegimeSection regime={report.regime} />
+      <ReportSignalsBlock signals={report.signals} />
       <ReportSections sections={report.sections} />
       <MethodologyNote />
       <footer className="space-y-3 border-t border-line pt-6">
