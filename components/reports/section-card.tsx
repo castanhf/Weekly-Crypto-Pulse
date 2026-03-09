@@ -1,15 +1,19 @@
 import type { ReactNode } from 'react';
 
-type SectionCardProps = {
+type SectionCardProps = Readonly<{
   title: string;
   children: ReactNode;
-};
+  className?: string;
+  contentClassName?: string;
+}>;
 
-export function SectionCard({ title, children }: SectionCardProps): JSX.Element {
+const mergeClasses = (...classNames: ReadonlyArray<string | undefined>): string => classNames.filter(Boolean).join(' ');
+
+export function SectionCard({ title, children, className, contentClassName }: SectionCardProps): JSX.Element {
   return (
-    <section className="space-y-4 rounded-lg border border-line bg-white p-6">
+    <section className={mergeClasses('space-y-4 rounded-lg border border-line bg-white p-6', className)}>
       <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
-      {children}
+      {contentClassName ? <div className={contentClassName}>{children}</div> : children}
     </section>
   );
 }

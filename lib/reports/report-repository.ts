@@ -32,7 +32,7 @@ const validateUniqueSlugs = (reports: ReadonlyArray<Report>): void => {
   }
 };
 
-const loadReports = (): ReadonlyArray<Report> => {
+const readSortedReportsFromDisk = (): ReadonlyArray<Report> => {
   const reportFileNames = readdirSync(REPORTS_DIRECTORY_PATH).filter(isReportJsonFile).sort((left, right) => left.localeCompare(right));
   const reports = reportFileNames.map(readReportFromFile).sort(byPublishedAtDesc);
 
@@ -41,16 +41,22 @@ const loadReports = (): ReadonlyArray<Report> => {
   return reports;
 };
 
-export const getAllReports = (): ReadonlyArray<Report> => loadReports();
-
-export const getReportBySlug = (slug: string): Report | undefined => {
+const assertSlug = (slug: string): string => {
   const normalizedSlug = slug.trim();
 
   if (normalizedSlug.length === 0) {
     throw new Error('Invalid slug: expected non-empty string.');
   }
 
-  return loadReports().find((report) => report.metadata.slug === normalizedSlug);
+  return normalizedSlug;
 };
 
-export const getLatestReport = (): Report | undefined => loadReports()[0];
+export const getAllReports = (): ReadonlyArray<Report> => readSortedReportsFromDisk();
+
+export const getReportBySlug = (slug: string): Report | undefined => {
+  const normalizedSlug = assertSlug(slug);
+
+  return readSortedReportsFromDisk().find((report) => report.metadata.slug === normalizedSlug);
+};
+
+export const getLatestReport = (): Report | undefined => readSortedReportsFromDisk()[0];
