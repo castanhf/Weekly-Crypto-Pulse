@@ -10,8 +10,9 @@ import { RegimeSection } from '@/components/reports/regime-section';
 import { ReportHero } from '@/components/reports/report-hero';
 import { ReportSections } from '@/components/reports/report-sections';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
+import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { getAllReports, getReportBySlug } from '@/lib/reports/report-repository';
-import { createReportMetadata } from '@/lib/seo';
+import { createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
   params: {
@@ -42,10 +43,13 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
     notFound();
   }
 
+  const reportUrl = toAbsoluteUrl(`/reports/${report.metadata.slug}`);
+
   return (
     <article className="space-y-6">
       <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
+      <ReportShareBlock title={report.metadata.title} url={reportUrl} />
       <ExecutiveSummary summary={report.metadata.summary} />
       <MarketSnapshotCards snapshot={report.marketSnapshot} />
       <WinnersAndLosers movers={report.movers} />
