@@ -14,7 +14,8 @@
     "generate:market-data": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-market-data-snapshot.js",
     "validate:reports": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-reports.js",
     "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
