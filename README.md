@@ -23,3 +23,4 @@ Reports are loaded from local JSON files in `data/reports`.
 - `npm run start`
 - `npm run lint`
 - `npm run test`
+- `pnpm generate:pro -- --slug <report-slug> --buyerEmail <email> --orderRef <ref>`
