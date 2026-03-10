@@ -1,22 +1,45 @@
-# Pro fulfillment runbook (no database)
+# Pro fulfillment runbook (manual, no database)
 
-This runbook defines a repeatable, deterministic Pro delivery flow using only committed report artifacts.
+This runbook defines a repeatable manual fulfillment flow for Pro buyers while keeping the product static-first.
 
 ## Scope and constraints
 
-- No database, no auth, no webhooks.
-- Pro content is generated from `data/reports/*.json` only.
-- Fulfillment output is a static markdown artifact at `data/pro-packs/<report-slug>.md` with buyer-specific watermark metadata.
-- Script output is deterministic for the same report input.
+- No database, auth, or webhook automation.
+- Payment confirmation is done manually in Stripe.
+- Pro packs are generated from committed report artifacts only (`data/reports/*.json`).
+- Delivery is performed manually via email.
+- Do not store personal data in this repository.
 
-## Generate Pro pack artifact
+## Preconditions
 
-1. Pull latest `main` and install dependencies.
-2. Confirm the target report exists in `data/reports` and note its slug.
+- Access to Stripe Dashboard (test and/or live mode as appropriate).
+- Latest repository state and dependencies installed.
+- Buyer email and order reference available from Stripe.
+
+## 1) Confirm payment in Stripe
+
+1. Open Stripe Dashboard.
+2. Toggle to the correct mode:
+   - **Test mode** for drills.
+   - **Live mode** for real fulfillment.
+3. Open **Payments** and locate the transaction.
+4. Verify all of the following:
+   - Status is `Succeeded`.
+   - Amount/currency match the expected offer.
+   - Buyer email is present.
+   - Payment timestamp is recorded.
+5. Copy a minimal reference for operations (for example: payment ID and date).
+
+If payment is not `Succeeded`, do not generate or send the Pro pack.
+
+## 2) Generate Pro pack with watermark via CLI
+
+1. Pull latest `main`.
+2. Confirm target report slug exists in `data/reports`.
 3. Run:
 
 ```bash
-pnpm generate:pro -- --slug <report-slug> --buyerEmail <email> --orderRef <ref>
+pnpm generate:pro -- --slug <report-slug> --buyerEmail <buyer-email> --orderRef <stripe-payment-id>
 ```
 
 Optional flag:
@@ -25,32 +48,39 @@ Optional flag:
 --purchasedAt <ISO-8601 timestamp>
 ```
 
-4. Verify output file:
+4. Verify the generated artifact exists:
 
 ```bash
 data/pro-packs/<report-slug>.md
 ```
 
-5. Review markdown for formatting regressions (headings, bullets, watchlist levels) and confirm watermark values are correct on each major section.
-6. Commit the generated Pro pack when ready to deliver.
+5. Review the file to confirm watermark fields (email/order/date) are correct and content rendering is intact.
 
-## Manual delivery steps
+## 3) Send fulfillment email manually
 
-1. Open the generated markdown artifact.
-2. Optional: convert markdown to PDF in your preferred editor/export tool.
-3. Deliver to the buyer through your manual channel (email, support ticket, or private message).
-4. Record delivery metadata in your internal ops notes (outside this repository if needed):
-   - report slug
-   - delivery date
-   - delivery channel
-   - recipient confirmation status
-5. If delivery fails, retry with the same generated artifact (do not regenerate unless report input changed).
+1. Use the template in `docs/monetization/email-templates.md`.
+2. Attach the generated Pro pack (`.md` or exported PDF).
+3. Send to the buyer email confirmed in Stripe.
+4. Keep messaging concise and professional.
 
-## Edge cases checklist
+Include this disclaimer line in the message:
 
-- [ ] Slug typo: script fails with `Report not found for slug`.
-- [ ] Missing required flags (`--slug`, `--buyerEmail`): script fails with usage guidance.
-- [ ] Duplicate report slugs in repository: resolve source data conflict before fulfillment.
-- [ ] Empty sections/movers/thesis/risk data: output remains valid markdown and explicitly renders `None`.
-- [ ] Report artifact changed after purchase: decide policy (deliver latest vs original) before running the script.
-- [ ] Markdown-to-PDF formatting drift: verify heading and bullet order after conversion.
+> License: Personal use only. This file includes a buyer-specific watermark.
+
+## 4) Record minimal evidence (optional)
+
+Record only non-sensitive operational evidence outside this repository (for example, private ops notes):
+
+- report slug
+- send date/time
+- Stripe payment ID (or redacted reference)
+- delivery status (`sent`, `resent`, `failed`)
+
+Do **not** commit buyer email addresses, full names, or payment screenshots to git.
+
+## Failure handling
+
+- Payment not successful: request buyer to retry checkout; do not fulfill.
+- Wrong or bounced email: resend using corrected email after buyer confirmation.
+- Attachment issue: resend using same generated artifact unless report input changed.
+- Regeneration needed: rerun the CLI with corrected watermark metadata.
