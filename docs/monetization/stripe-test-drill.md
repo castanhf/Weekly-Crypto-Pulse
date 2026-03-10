@@ -42,18 +42,61 @@ If `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` is missing or empty:
 6. Copy the Payment Link URL (looks like `https://buy.stripe.com/test_...`).
 7. Paste it into Vercel as `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`.
 
-## Purchase drill checklist (test mode)
+## Scenario checklists
 
-Use this checklist on Preview first, then Production if needed.
+Use these in order: Preview first, then Production if needed.
 
-1. Confirm deploy environment has `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` set to a **test** link.
-2. Open site home page and a report page.
-3. Click each "Upgrade with Stripe" CTA.
-4. Verify each click opens Stripe Checkout in a new tab.
-5. Complete checkout with a Stripe test card (for example `4242 4242 4242 4242`, any future expiry/CVC/ZIP).
-6. Confirm Stripe displays successful payment confirmation.
-7. Return to the site (manually or via configured return URL).
-8. Open `/pro` and verify no "checkout unavailable" warning appears when env is configured.
+### 1) First-time purchase
+
+- [ ] Confirm the deployed environment has `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` set to a **test** link.
+- [ ] Open home page, `/pro`, and one recent report page.
+- [ ] Click each "Upgrade with Stripe" CTA and verify Checkout opens in a new tab.
+- [ ] Complete checkout using test card `4242 4242 4242 4242` (future expiry/CVC/ZIP).
+- [ ] Confirm Stripe shows successful payment confirmation.
+- [ ] Verify the success page, receipt email (if enabled in Stripe), and no site-side errors.
+- [ ] Return to `/pro` and confirm no `#checkout-unavailable` warning is shown.
+
+### 2) Renewal month (manual verification)
+
+This is a manual process because there are no webhooks or in-app entitlements.
+
+- [ ] Create a **recurring** test subscription via Payment Link.
+- [ ] In Stripe test mode, use **Test Clocks** (recommended) or advance time in your test flow to trigger the next billing cycle.
+- [ ] Verify an invoice is generated and paid for renewal.
+- [ ] Confirm renewal appears in Stripe: subscription status remains active, latest invoice is paid.
+- [ ] Manually verify your operational record/source of truth is updated (for example support tracker or fulfillment log).
+- [ ] If a renewal payment fails, record the failure state and planned support response before customer-facing rollout.
+
+### 3) Refund/cancellation handling (manual steps)
+
+- [ ] In Stripe test mode, locate a completed payment in **Payments**.
+- [ ] Run a test refund (full first; partial if your policy allows it).
+- [ ] Confirm Stripe marks payment as refunded and invoice/payment timelines reflect the refund.
+- [ ] For subscriptions: cancel from Stripe and verify `cancel_at_period_end` vs immediate cancellation behavior matches your policy.
+- [ ] Record the action in your manual ops/support tracker (reason, amount, date, operator).
+- [ ] Verify customer-facing response template is ready (refund confirmed, expected bank processing window, cancellation effective date).
+
+## Support triage (manual)
+
+### User says: "I paid but didn’t receive"
+
+1. Ask for payer email + approximate payment time + last 4 digits.
+2. Search Stripe Payments by email/time and verify status.
+3. If payment succeeded, manually fulfill or resend the deliverable and reply with confirmation.
+4. If payment is missing/pending, ask user to check statement and retry with clear next step.
+
+### User requests resend
+
+1. Verify successful payment/subscription in Stripe.
+2. Resend the promised deliverable using your manual fulfillment process.
+3. Log resend reason and timestamp in support tracker.
+
+### User requests refund
+
+1. Confirm purchase in Stripe and check it is within your refund policy window.
+2. Execute refund in Stripe (full or partial per policy).
+3. Reply with confirmation, refunded amount, and expected settlement timing.
+4. Log refund reason for monthly review.
 
 ## Expected outcomes to verify
 
@@ -74,5 +117,7 @@ Use this checklist on Preview first, then Production if needed.
   - Verify no whitespace-only value was saved.
 - Stripe page fails to load:
   - Confirm link starts with `https://buy.stripe.com/` and was copied from test mode.
+- Renewal verification unclear:
+  - Use Stripe Test Clocks to simulate cycle changes and verify invoice timeline deterministically.
 - Unexpected live charges risk:
   - Ensure Stripe dashboard is in **Test mode** before creating/using link.
