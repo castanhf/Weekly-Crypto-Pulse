@@ -78,6 +78,27 @@ Record only non-sensitive operational evidence outside this repository (for exam
 
 Do **not** commit buyer email addresses, full names, or payment screenshots to git.
 
+## Local fulfillment assistant (optional, local-only)
+
+A local helper page is available at `/internal/fulfillment` to reduce copy/paste mistakes when preparing manual delivery.
+
+- It accepts `buyerEmail`, `orderRef`, and `slug`.
+- It outputs a ready-to-run CLI command for `generate:pro` and a copy-ready fulfillment email body.
+- It does not write files, send emails, or persist data.
+
+This route is server-gated and disabled by default. If `ENABLE_FULFILLMENT_ASSIST` is not exactly `true`, the route returns `404`.
+
+Enable locally only:
+
+```bash
+ENABLE_FULFILLMENT_ASSIST=true npm run dev
+```
+
+For Vercel:
+
+- Keep `ENABLE_FULFILLMENT_ASSIST` unset (recommended), or set it to `false` in Preview and Production environments.
+- Do not enable this flag in production deployments.
+
 ## Failure handling
 
 - Payment not successful: request buyer to retry checkout; do not fulfill.
