@@ -33,8 +33,8 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
 test('/pro renders and includes primary CTA', async ({ page }) => {
   await page.goto('/pro');
 
-  await expect(page.getByRole('heading', { level: 1, name: 'Get the full Pro report each week.' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Upgrade with Stripe' }).first()).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'Clear weekly offer: Free vs Pro.' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Get Pro with Stripe' }).first()).toBeVisible();
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {
