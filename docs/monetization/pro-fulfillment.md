@@ -6,7 +6,7 @@ This runbook defines a repeatable, deterministic Pro delivery flow using only co
 
 - No database, no auth, no webhooks.
 - Pro content is generated from `data/reports/*.json` only.
-- Fulfillment output is a static markdown artifact at `data/pro-packs/<report-slug>.md`.
+- Fulfillment output is a static markdown artifact at `data/pro-packs/<report-slug>.md` with buyer-specific watermark metadata.
 - Script output is deterministic for the same report input.
 
 ## Generate Pro pack artifact
@@ -16,7 +16,13 @@ This runbook defines a repeatable, deterministic Pro delivery flow using only co
 3. Run:
 
 ```bash
-npm run generate:pro-pack -- <report-slug>
+pnpm generate:pro -- --slug <report-slug> --buyerEmail <email> --orderRef <ref>
+```
+
+Optional flag:
+
+```bash
+--purchasedAt <ISO-8601 timestamp>
 ```
 
 4. Verify output file:
@@ -25,7 +31,7 @@ npm run generate:pro-pack -- <report-slug>
 data/pro-packs/<report-slug>.md
 ```
 
-5. Review markdown for formatting regressions (headings, bullets, watchlist levels).
+5. Review markdown for formatting regressions (headings, bullets, watchlist levels) and confirm watermark values are correct on each major section.
 6. Commit the generated Pro pack when ready to deliver.
 
 ## Manual delivery steps
@@ -43,7 +49,7 @@ data/pro-packs/<report-slug>.md
 ## Edge cases checklist
 
 - [ ] Slug typo: script fails with `Report not found for slug`.
-- [ ] Missing slug argument: script fails with usage guidance.
+- [ ] Missing required flags (`--slug`, `--buyerEmail`): script fails with usage guidance.
 - [ ] Duplicate report slugs in repository: resolve source data conflict before fulfillment.
 - [ ] Empty sections/movers/thesis/risk data: output remains valid markdown and explicitly renders `None`.
 - [ ] Report artifact changed after purchase: decide policy (deliver latest vs original) before running the script.
