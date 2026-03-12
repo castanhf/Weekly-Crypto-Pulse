@@ -88,7 +88,8 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
 ] as const;
 
 export default function ProPage(): JSX.Element {
-  const { hasStripePaymentLink } = siteConfig.pro;
+  const { hasSingleIssuePaymentLink, hasMonthlyBundlePaymentLink } = siteConfig.pro;
+  const hasMissingOfferLink = !hasSingleIssuePaymentLink || !hasMonthlyBundlePaymentLink;
 
   return (
     <section className="space-y-8">
@@ -99,16 +100,23 @@ export default function ProPage(): JSX.Element {
           Weekly Crypto Pulse keeps the stack simple: free public reports plus a paid Pro layer through Stripe-hosted checkout.
         </p>
         <div className="flex flex-wrap gap-3">
-          <ProCta label="Get Pro with Stripe" />
+          <ProCta label="Buy Single Issue" offer="singleIssue" />
+          <ProCta
+            className="inline-flex border border-ink bg-ink px-4 py-2 text-sm font-medium text-paper transition hover:opacity-90"
+            label="Buy Monthly Bundle (Best Value)"
+            offer="monthlyBundle"
+          />
         </div>
       </header>
 
-      {!hasStripePaymentLink ? (
+      {hasMissingOfferLink ? (
         <section className="space-y-2 border border-amber-300 bg-amber-50 p-4" id="checkout-unavailable">
-          <h2 className="text-base font-semibold">Checkout is temporarily unavailable.</h2>
+          <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
           <p className="text-sm text-muted">
-            The Stripe Payment Link is not configured for this environment. Set
-            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK</code>
+            One or more Stripe Payment Links are not configured for this environment. Set
+            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE</code>
+            and
+            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE</code>
             in Vercel to enable paid checkout.
           </p>
         </section>
