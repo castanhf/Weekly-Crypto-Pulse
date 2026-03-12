@@ -1,39 +1,44 @@
 # Vercel operations notes
 
-This note complements `docs/deploy/vercel.md` with quick, deployment-focused triage steps.
+Quick guardrails for day-to-day Vercel operations on Weekly Crypto Pulse.
 
 ## Preview vs Production
 
-- **Preview** deploys are created automatically for pull requests and non-`main` branches.
-- **Production** deploys are created from merges to `main`.
-- Use Preview to validate content, routing, and environment configuration before merge.
-- Keep Production branch set to `main` in **Vercel > Project Settings > Git**.
+- **Preview**: every pull request and non-`main` branch deploys automatically.
+- **Production**: deploys from merges to `main` only.
+- Keep **Project Settings → Git → Production Branch = `main`**.
+- Treat Preview as the release gate for routing, metadata, and Pro CTA checks before merge.
 
-## Environment variables in Vercel
+## Where environment variables are configured
 
-Configure variables in **Vercel > Project Settings > Environment Variables** and scope them per environment:
+Set variables in **Vercel → Project Settings → Environment Variables** and scope each value correctly:
 
-- **Production**: canonical values for the live site.
-- **Preview**: safe/staging values used in PR validation.
-- **Development**: optional values for Vercel-hosted development workflows.
+- **Production**: live values.
+- **Preview**: staging/safe values for PR validation.
+- **Development**: optional Vercel-hosted dev values.
 
-Current variables used by this project:
+Current variables used by this app:
 
-- `NEXT_PUBLIC_SITE_URL` (required for canonical metadata in Production)
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` (optional Pro CTA link)
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`
 
-Because these variables are prefixed with `NEXT_PUBLIC_`, they are exposed to the browser bundle. Do not store secrets in them.
+`NEXT_PUBLIC_*` values are public in the browser bundle. Never store secrets in them.
 
 ## Diagnosing build failures
 
-1. Open the failed deployment in Vercel and read the first failing step (`Install`, `Build`, or runtime checks).
-2. Reproduce locally with the same commands:
+1. Open the failed deployment and identify the first failing step (`Install`, `Build`, or post-build checks).
+2. Reproduce locally from a clean state:
 
 ```bash
+rm -rf node_modules .next
 npm ci
 npm run verify
 ```
 
-3. Verify Node compatibility with the repo runtime (`.nvmrc` / Vercel Node setting).
-4. If failure is environment-related, confirm each required variable exists in the same environment scope (Preview or Production) that failed.
-5. If failures occur only on one branch, compare `package-lock.json`, report artifacts in `data/reports`, and config changes (`next.config.mjs`, `tsconfig*.json`).
+3. Confirm Vercel Node version matches repo expectations (`20.x`, aligned with `.nvmrc`).
+4. Re-check required environment variables in the exact failing scope (Preview or Production).
+5. If failures are branch-specific, compare:
+   - `package-lock.json`
+   - `next.config.mjs`
+   - `tsconfig*.json`
+   - latest committed artifacts in `data/reports/`
