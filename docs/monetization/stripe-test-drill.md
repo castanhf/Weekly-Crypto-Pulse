@@ -1,123 +1,123 @@
-# Stripe test drill (Payment Link)
+# Stripe test drill (Payment Links, test mode)
 
-This runbook keeps Stripe checkout testing practical and repeatable while preserving the static-first architecture.
+This runbook makes Stripe Payment Link testing practical and repeatable while keeping Weekly Crypto Pulse static-first.
 
-## Scope and constraints
+## Scope
 
-- Weekly Crypto Pulse uses a Stripe **Payment Link** only.
-- The website does **not** run Stripe webhooks.
-- The website does **not** use auth, accounts, or entitlements.
-- The Pro CTA resolves to an environment-provided URL.
+- Stripe is used only as payment processor and source of truth for buyer/payment identity.
+- No database, no auth, no webhooks, no entitlements.
+- Product model is one-time only:
+  - **Weekly Crypto Pulse Pro — Single Issue**
+  - **Weekly Crypto Pulse Pro — Monthly Bundle**
 
-## Environment config used by the site
+## Site configuration used for paid CTAs
 
-The Pro CTA reads this variable at build/runtime:
+Paid CTAs use public environment variables:
 
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`
+- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE`
+- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
 
-Where to set it (Vercel-first):
+Set them in Vercel:
 
-1. Open Vercel project settings.
-2. Go to **Settings → Environment Variables**.
-3. Add `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` with your Stripe **test-mode Payment Link URL**.
-4. Apply to **Preview** and/or **Production** depending on what you are drilling.
-5. Redeploy so the new value is picked up.
+1. Open **Vercel → Project Settings → Environment Variables**.
+2. Add both variables using Stripe **test mode** Payment Link URLs.
+3. Apply to `Preview` for drill validation first (optionally `Production` when ready).
+4. Redeploy the target environment.
 
-### Fail-safe behavior when env is missing
+### Fail-safe behavior when links are missing
 
-If `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` is missing or empty:
+- If a link is missing, the corresponding CTA routes to `/pro#checkout-unavailable`.
+- `/pro` shows a warning that one or more checkout options are unavailable.
+- Users are never sent to a broken external link.
 
-- Pro CTAs route to `/pro#checkout-unavailable` instead of a dead external link.
-- `/pro` shows a clear "Checkout is temporarily unavailable" message.
+## Create Payment Links in Stripe test mode
 
-## Create a Payment Link in Stripe test mode
+Repeat this once per one-time product.
 
-1. In Stripe Dashboard, toggle to **Test mode**.
-2. Create or select a test product (for example: "Weekly Crypto Pulse Pro").
-3. Create a recurring or one-time test price matching your offer.
-4. Create a **Payment Link** for that price.
-5. In Payment Link settings:
-   - Keep post-payment behavior simple (Stripe hosted confirmation is enough for this drill).
-   - Optional: configure a "return URL" back to `/pro` if you want a tighter loop.
-6. Copy the Payment Link URL (looks like `https://buy.stripe.com/test_...`).
-7. Paste it into Vercel as `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`.
+1. Open Stripe Dashboard and enable **Test mode**.
+2. Go to **Product catalog** and create/select the product:
+   - `Weekly Crypto Pulse Pro — Single Issue`
+   - `Weekly Crypto Pulse Pro — Monthly Bundle`
+3. Create a **one-time** price for each product.
+4. Create a **Payment Link** for each product/price.
+5. (Optional) Set a return URL back to `https://<your-preview-domain>/pro`.
+6. Copy the two URLs (`https://buy.stripe.com/test_...`).
+7. Paste each URL into its matching Vercel variable.
 
-## Scenario checklists
+## Purchase drill checklist (repeatable)
 
-Use these in order: Preview first, then Production if needed.
+Run on a Preview deployment first.
 
-### 1) First-time purchase
+### A) Configuration sanity check
 
-- [ ] Confirm the deployed environment has `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` set to a **test** link.
-- [ ] Open home page, `/pro`, and one recent report page.
-- [ ] Click each "Upgrade with Stripe" CTA and verify Checkout opens in a new tab.
-- [ ] Complete checkout using test card `4242 4242 4242 4242` (future expiry/CVC/ZIP).
-- [ ] Confirm Stripe shows successful payment confirmation.
-- [ ] Verify the success page, receipt email (if enabled in Stripe), and no site-side errors.
-- [ ] Return to `/pro` and confirm no `#checkout-unavailable` warning is shown.
+- [ ] Confirm both env vars are present in the same Vercel environment.
+- [ ] Confirm each value is a Stripe **test** link (`/test_` in URL path).
+- [ ] Redeploy after any variable change.
 
-### 2) Renewal month (manual verification)
+### B) CTA click + redirect checks
 
-This is a manual process because there are no webhooks or in-app entitlements.
+- [ ] Open `/pro`.
+- [ ] Click **Buy Single Issue** → Stripe checkout opens in a new tab.
+- [ ] Click **Buy Monthly Bundle (Best Value)** → Stripe checkout opens in a new tab.
+- [ ] Open `/` and `/reports/<valid-slug>` and click any Pro CTA; verify redirect behavior is the same.
 
-- [ ] Create a **recurring** test subscription via Payment Link.
-- [ ] In Stripe test mode, use **Test Clocks** (recommended) or advance time in your test flow to trigger the next billing cycle.
-- [ ] Verify an invoice is generated and paid for renewal.
-- [ ] Confirm renewal appears in Stripe: subscription status remains active, latest invoice is paid.
-- [ ] Manually verify your operational record/source of truth is updated (for example support tracker or fulfillment log).
-- [ ] If a renewal payment fails, record the failure state and planned support response before customer-facing rollout.
+### C) Test purchase checks
 
-### 3) Refund/cancellation handling (manual steps)
+For each offer, complete a payment in Stripe test mode:
 
-- [ ] In Stripe test mode, locate a completed payment in **Payments**.
-- [ ] Run a test refund (full first; partial if your policy allows it).
-- [ ] Confirm Stripe marks payment as refunded and invoice/payment timelines reflect the refund.
-- [ ] For subscriptions: cancel from Stripe and verify `cancel_at_period_end` vs immediate cancellation behavior matches your policy.
-- [ ] Record the action in your manual ops/support tracker (reason, amount, date, operator).
-- [ ] Verify customer-facing response template is ready (refund confirmed, expected bank processing window, cancellation effective date).
+- [ ] Use test card `4242 4242 4242 4242` with any future expiry/CVC/ZIP.
+- [ ] Stripe shows successful confirmation.
+- [ ] Payment appears in Stripe test dashboard with expected product/amount.
+
+### D) Fail-safe check (missing env)
+
+- [ ] Temporarily remove one CTA env variable in Preview and redeploy.
+- [ ] Click the affected CTA and confirm navigation to `/pro#checkout-unavailable`.
+- [ ] Confirm `/pro` warning message is visible.
+- [ ] Restore env var and redeploy.
+
+## Expected outcomes to verify
+
+- **CTA click behavior**
+  - Each offer CTA points to its configured Stripe test Payment Link.
+  - If not configured, CTA falls back to `/pro#checkout-unavailable`.
+- **Redirect behavior**
+  - Stripe checkout opens in a new tab.
+  - Optional return URL lands back on `/pro` when configured.
+- **Confirmation messaging**
+  - Stripe displays successful payment confirmation after test purchase.
+  - `/pro` warning appears only when one or more links are missing.
+
 
 ## Support triage (manual)
 
-### User says: "I paid but didn’t receive"
+### User says: "I paid but didn't receive"
 
-1. Ask for payer email + approximate payment time + last 4 digits.
+1. Ask for payer email, approximate payment time, and last 4 digits used.
 2. Search Stripe Payments by email/time and verify status.
 3. If payment succeeded, manually fulfill or resend the deliverable and reply with confirmation.
-4. If payment is missing/pending, ask user to check statement and retry with clear next step.
+4. If payment is missing or pending, ask the user to check statement status and retry with a clear next step.
 
 ### User requests resend
 
-1. Verify successful payment/subscription in Stripe.
+1. Verify successful payment in Stripe.
 2. Resend the promised deliverable using your manual fulfillment process.
-3. Log resend reason and timestamp in support tracker.
+3. Log resend reason and timestamp in your operations tracker.
 
 ### User requests refund
 
-1. Confirm purchase in Stripe and check it is within your refund policy window.
+1. Confirm purchase in Stripe and verify it is inside your refund-policy window.
 2. Execute refund in Stripe (full or partial per policy).
 3. Reply with confirmation, refunded amount, and expected settlement timing.
 4. Log refund reason for monthly review.
 
-## Expected outcomes to verify
-
-- CTA click behavior
-  - "Upgrade with Stripe" points to Stripe when env is configured.
-  - CTA never leads to a broken external link when env is missing.
-- Redirect behavior
-  - Checkout opens Stripe hosted page in a new tab.
-  - Optional return URL lands back on site (if configured in Stripe).
-- Confirmation messaging
-  - Stripe confirmation page indicates successful test purchase.
-  - Site-side fallback message appears only when env is absent (`/pro#checkout-unavailable`).
-
 ## Troubleshooting
 
-- CTA still opens `/pro#checkout-unavailable`:
-  - Re-check `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` value and redeploy.
-  - Verify no whitespace-only value was saved.
-- Stripe page fails to load:
-  - Confirm link starts with `https://buy.stripe.com/` and was copied from test mode.
-- Renewal verification unclear:
-  - Use Stripe Test Clocks to simulate cycle changes and verify invoice timeline deterministically.
-- Unexpected live charges risk:
-  - Ensure Stripe dashboard is in **Test mode** before creating/using link.
+- CTA still goes to `/pro#checkout-unavailable`:
+  - Verify the correct env var name was set.
+  - Verify value is not empty/whitespace.
+  - Redeploy the environment.
+- Stripe checkout does not open:
+  - Confirm URL starts with `https://buy.stripe.com/` and was copied from test mode.
+- Risk of real charge:
+  - Confirm Stripe dashboard **Test mode** is enabled before running the drill.

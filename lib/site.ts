@@ -6,13 +6,16 @@ const getOptionalEnv = (value: string | undefined): string => {
   return value.trim();
 };
 
-const stripePaymentLink = getOptionalEnv(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK);
+const singleIssuePaymentLink = getOptionalEnv(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE);
+const monthlyBundlePaymentLink = getOptionalEnv(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE);
 
 export const siteConfig = {
   name: 'Weekly Crypto Pulse',
   description: 'Editorial crypto market summaries and recurring weekly reports.',
   pro: {
-    stripePaymentLink,
-    hasStripePaymentLink: stripePaymentLink.length > 0
+    singleIssuePaymentLink,
+    hasSingleIssuePaymentLink: singleIssuePaymentLink.length > 0,
+    monthlyBundlePaymentLink,
+    hasMonthlyBundlePaymentLink: monthlyBundlePaymentLink.length > 0
   }
 } as const;

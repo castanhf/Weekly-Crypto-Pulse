@@ -20,7 +20,8 @@ Set variables in **Vercel → Project Settings → Environment Variables** and s
 Current variables used by this app:
 
 - `NEXT_PUBLIC_SITE_URL`
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`
+- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE`
+- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
 
 `NEXT_PUBLIC_*` values are public in the browser bundle. Never store secrets in them.
 
