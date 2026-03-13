@@ -50,4 +50,11 @@ describe('seo metadata', () => {
   it('converts paths to absolute URLs', () => {
     expect(toAbsoluteUrl('/reports')).toBe('https://weeklycryptopulse.com/reports');
   });
+
+  it('uses Vercel preview URL when NEXT_PUBLIC_SITE_URL is unset', () => {
+    delete process.env.NEXT_PUBLIC_SITE_URL;
+    process.env.VERCEL_URL = 'weekly-crypto-pulse-git-main.vercel.app';
+
+    expect(toAbsoluteUrl('/reports')).toBe('https://weekly-crypto-pulse-git-main.vercel.app/reports');
+  });
 });

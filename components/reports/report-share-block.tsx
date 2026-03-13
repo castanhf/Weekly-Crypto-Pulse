@@ -11,7 +11,7 @@ const COPIED_FEEDBACK_TIMEOUT_MS = 2000;
 
 const createXShareUrl = (title: string, url: string): string => {
   const query = new URLSearchParams({
-    text: title,
+    text: `${title} | Weekly Crypto Pulse`,
     url
   });
 
@@ -24,20 +24,46 @@ const createLinkedInShareUrl = (url: string): string => {
   return `https://www.linkedin.com/sharing/share-offsite/?${query.toString()}`;
 };
 
+const copyWithLegacyFallback = (value: string): boolean => {
+  const tempInput = document.createElement('input');
+  tempInput.value = value;
+  tempInput.setAttribute('readonly', '');
+  tempInput.style.position = 'absolute';
+  tempInput.style.left = '-9999px';
+
+  document.body.appendChild(tempInput);
+  tempInput.select();
+
+  const didCopy = document.execCommand('copy');
+  document.body.removeChild(tempInput);
+
+  return didCopy;
+};
+
+const copyLinkToClipboard = async (value: string): Promise<boolean> => {
+  if (!navigator.clipboard?.writeText) {
+    return copyWithLegacyFallback(value);
+  }
+
+  try {
+    await navigator.clipboard.writeText(value);
+    return true;
+  } catch {
+    return copyWithLegacyFallback(value);
+  }
+};
+
 export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Element {
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle');
 
   const handleCopyLink = async (): Promise<void> => {
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopyStatus('copied');
+    const didCopy = await copyLinkToClipboard(url);
 
-      window.setTimeout(() => {
-        setCopyStatus('idle');
-      }, COPIED_FEEDBACK_TIMEOUT_MS);
-    } catch {
-      setCopyStatus('error');
-    }
+    setCopyStatus(didCopy ? 'copied' : 'error');
+
+    window.setTimeout(() => {
+      setCopyStatus('idle');
+    }, COPIED_FEEDBACK_TIMEOUT_MS);
   };
 
   const xShareUrl = createXShareUrl(title, url);
@@ -48,6 +74,7 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
       <h2 className="text-sm font-semibold tracking-tight">Share this report</h2>
       <div className="flex flex-wrap gap-2 text-sm">
         <button
+          aria-label="Copy report link"
           className="inline-flex border border-line px-3 py-1.5 font-medium transition hover:border-ink"
           onClick={handleCopyLink}
           type="button"
@@ -55,6 +82,7 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
           Copy link
         </button>
         <a
+          aria-label="Share report on X"
           className="inline-flex border border-line px-3 py-1.5 font-medium transition hover:border-ink"
           href={xShareUrl}
           rel="noopener noreferrer"
@@ -63,6 +91,7 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
           Share on X
         </a>
         <a
+          aria-label="Share report on LinkedIn"
           className="inline-flex border border-line px-3 py-1.5 font-medium transition hover:border-ink"
           href={linkedInShareUrl}
           rel="noopener noreferrer"
