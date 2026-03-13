@@ -1,4 +1,22 @@
 import { expect, test } from '@playwright/test';
+import { readdirSync } from 'node:fs';
+import path from 'node:path';
+
+const reportsDirectory = path.join(process.cwd(), 'data/reports');
+
+const getLatestReportSlug = (): string => {
+  const reportSlugs = readdirSync(reportsDirectory)
+    .filter((fileName) => fileName.endsWith('.json'))
+    .map((fileName) => fileName.replace('.json', ''))
+    .sort((left, right) => right.localeCompare(left));
+
+  const latestReportSlug = reportSlugs[0];
+  if (!latestReportSlug) {
+    throw new Error('Expected at least one report artifact in data/reports.');
+  }
+
+  return latestReportSlug;
+};
 
 test('homepage renders and links to latest report', async ({ page }) => {
   await page.goto('/');
@@ -7,7 +25,7 @@ test('homepage renders and links to latest report', async ({ page }) => {
 
   const latestReportLink = page.getByRole('link', { name: 'Read latest report' });
   await expect(latestReportLink).toBeVisible();
-  await expect(latestReportLink).toHaveAttribute('href', /\/reports\/.+/);
+  await expect(latestReportLink).toHaveAttribute('href', `/reports/${getLatestReportSlug()}`);
 });
 
 test('/reports lists report items', async ({ page }) => {
