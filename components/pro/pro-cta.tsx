@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 import { trackEvent } from '@/lib/analytics/events';
+import { isStripePaymentLink } from '@/lib/analytics/stripe-link';
 import { siteConfig } from '@/lib/site';
 
 type ProOffer = 'singleIssue' | 'monthlyBundle';
@@ -55,7 +56,7 @@ export function ProCta({ className, label = 'Upgrade to Pro', offer = 'singleIss
       isOutbound: checkoutTarget.isExternal
     });
 
-    if (!checkoutTarget.isExternal) {
+    if (!checkoutTarget.isExternal || !isStripePaymentLink(checkoutTarget.href)) {
       return;
     }
 

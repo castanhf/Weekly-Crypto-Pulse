@@ -39,7 +39,7 @@ Payload:
 
 ### `outbound_stripe_payment_link`
 
-Triggered only when `ProCta` links to Stripe and the click goes outbound.
+Triggered only when `ProCta` points to an HTTPS `stripe.com`/`*.stripe.com` link and the click goes outbound.
 
 Payload:
 
