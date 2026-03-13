@@ -9,9 +9,16 @@ const stripTrailingSlash = (value: string): string => value.replace(/\/$/, '');
 
 const getSiteUrl = (): string => {
   const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const vercelUrl = process.env.VERCEL_URL?.trim();
 
   if (configuredSiteUrl && configuredSiteUrl.length > 0) {
     return stripTrailingSlash(configuredSiteUrl);
+  }
+
+  if (vercelUrl && vercelUrl.length > 0) {
+    const normalizedVercelUrl = vercelUrl.startsWith('http') ? vercelUrl : `https://${vercelUrl}`;
+
+    return stripTrailingSlash(normalizedVercelUrl);
   }
 
   return 'http://localhost:3000';
