@@ -12,9 +12,11 @@ This project uses static report artifacts (`data/reports/*.json`) as the single 
 
 - `GET /rss.xml`
   - Returns an RSS 2.0 feed containing all reports in reverse chronological order.
+  - Includes a report item enclosure that points to each report’s email-friendly HTML permalink.
   - Content type: `application/rss+xml; charset=utf-8`.
 - `GET /reports/:slug/email`
   - Returns a plain HTML version of each report suitable for email clients.
+  - Includes report metadata, market snapshot, top movers, and report sections.
   - Content type: `text/html; charset=utf-8`.
 
 Both routes render from shared distribution helpers in `lib/reports/distribution.ts`.
@@ -43,6 +45,7 @@ Run before merging:
 ```bash
 npm run lint
 npm run typecheck
+npm run test -- lib/reports/distribution.test.ts
 npm run build
 ```
 
