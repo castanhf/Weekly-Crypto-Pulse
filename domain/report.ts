@@ -40,6 +40,7 @@ export type ReportSignals = Readonly<{
   thesis: ReadonlyArray<string>;
   riskChecklist: ReadonlyArray<string>;
   watchlistLevels: ReadonlyArray<WatchlistLevel>;
+  changedSinceLastWeek: ReadonlyArray<string>;
 }>;
 
 export type Report = Readonly<{

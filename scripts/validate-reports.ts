@@ -45,9 +45,14 @@ const validateReport = (value: unknown): void => {
 
   const signals = assertRecord(report.signals, 'report.signals');
   assertStringArray(signals.thesis, 'report.signals.thesis');
-  assertStringArray(signals.riskChecklist, 'report.signals.riskChecklist');
+  const riskChecklist = assertStringArray(signals.riskChecklist, 'report.signals.riskChecklist');
+
+  if (riskChecklist.length !== 5) {
+    throw new Error('Invalid report data at "report.signals.riskChecklist": expected exactly 5 items.');
+  }
 
   const watchlistLevels = assertArray(signals.watchlistLevels, 'report.signals.watchlistLevels');
+  assertStringArray(signals.changedSinceLastWeek, 'report.signals.changedSinceLastWeek');
 
   watchlistLevels.forEach((entry, index) => {
     const level = assertRecord(entry, `report.signals.watchlistLevels[${index}]`);

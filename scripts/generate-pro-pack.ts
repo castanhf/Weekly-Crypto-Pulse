@@ -166,6 +166,7 @@ const toProPackMarkdown = (report: Report, details: WatermarkDetails): string =>
     '',
     formatSection('Actionable thesis', signals.thesis, watermark),
     formatSection('Risk checklist', signals.riskChecklist, watermark),
+    formatSection('What changed since last week', signals.changedSinceLastWeek, watermark),
     `## Watchlist levels`,
     '',
     watchlistBlock.length > 0 ? watchlistBlock : '- None',

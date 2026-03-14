@@ -36,5 +36,13 @@ export const ReportSignalsBlock = ({ signals }: ReportSignalsProps): JSX.Element
         ))}
       </ul>
     </SectionCard>
+
+    <SectionCard className="bg-surface p-5" contentClassName="mt-3" title="What changed since last week">
+      <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted">
+        {signals.changedSinceLastWeek.map((change) => (
+          <li key={change}>{change}</li>
+        ))}
+      </ul>
+    </SectionCard>
   </div>
 );

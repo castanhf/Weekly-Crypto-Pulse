@@ -110,11 +110,17 @@ const parseWatchlistLevels = (value: unknown): ReadonlyArray<WatchlistLevel> =>
 
 const parseSignals = (value: unknown): ReportSignals => {
   const signals = assertRecord(value, 'signals');
+  const riskChecklist = assertStringArray(signals.riskChecklist, 'signals.riskChecklist');
+
+  if (riskChecklist.length !== 5) {
+    throw new Error('Invalid input at "signals.riskChecklist": expected exactly 5 items.');
+  }
 
   return {
     thesis: assertStringArray(signals.thesis, 'signals.thesis'),
-    riskChecklist: assertStringArray(signals.riskChecklist, 'signals.riskChecklist'),
-    watchlistLevels: parseWatchlistLevels(signals.watchlistLevels)
+    riskChecklist,
+    watchlistLevels: parseWatchlistLevels(signals.watchlistLevels),
+    changedSinceLastWeek: assertStringArray(signals.changedSinceLastWeek, 'signals.changedSinceLastWeek')
   };
 };
 

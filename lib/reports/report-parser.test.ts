@@ -36,8 +36,9 @@ const BASE_REPORT = {
   ],
   signals: {
     thesis: ['Thesis'],
-    riskChecklist: ['Risk'],
-    watchlistLevels: [{ asset: 'BTC', level: '90k', context: 'Support test' }]
+    riskChecklist: ['Risk 1', 'Risk 2', 'Risk 3', 'Risk 4', 'Risk 5'],
+    watchlistLevels: [{ asset: 'BTC', level: '90k', context: 'Support test' }],
+    changedSinceLastWeek: ['Change']
   }
 } as const;
 
@@ -68,6 +69,20 @@ describe('parseReportJson', () => {
 
     expect(() => parseReportJson(JSON.stringify(artifact), 'artifact.json')).toThrow(
       'Invalid report data at "schemaVersion": unsupported version "2.0".'
+    );
+  });
+
+  it('rejects risk checklists that do not contain exactly five items', () => {
+    const invalidReport = {
+      ...BASE_REPORT,
+      signals: {
+        ...BASE_REPORT.signals,
+        riskChecklist: ['Risk 1', 'Risk 2']
+      }
+    };
+
+    expect(() => parseReportJson(JSON.stringify(invalidReport), 'invalid.json')).toThrow(
+      'Invalid report data at "signals.riskChecklist": expected exactly 5 items.'
     );
   });
 });

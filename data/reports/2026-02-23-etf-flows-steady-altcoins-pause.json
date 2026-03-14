@@ -91,6 +91,11 @@
           "level": "prior month low",
           "context": "A fresh low would confirm ongoing altcoin-relative weakness."
         }
+      ],
+      "changedSinceLastWeek": [
+        "BTC held weekly support despite softer intraday momentum.",
+        "ETF inflows stayed positive, but the pace moderated versus the prior week.",
+        "Altcoin breadth weakened further as TOTAL3 underperformed majors."
       ]
     }
   }
