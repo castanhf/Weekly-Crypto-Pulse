@@ -23,8 +23,9 @@ const baseReport: Report = {
   sections: [],
   signals: {
     thesis: ['thesis'],
-    riskChecklist: ['risk'],
-    watchlistLevels: [{ asset: 'BTC', level: 'test', context: 'test' }]
+    riskChecklist: ['risk 1', 'risk 2', 'risk 3', 'risk 4', 'risk 5'],
+    watchlistLevels: [{ asset: 'BTC', level: 'test', context: 'test' }],
+    changedSinceLastWeek: ['change']
   }
 };
 

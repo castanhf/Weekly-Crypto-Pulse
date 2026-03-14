@@ -48,14 +48,15 @@ Place generated report JSON artifacts in this directory:
     ],
     "signals": {
       "thesis": ["..."],
-      "riskChecklist": ["..."],
+      "riskChecklist": ["... (exactly 5 items)"],
       "watchlistLevels": [
         {
           "asset": "BTC",
           "level": "...",
           "context": "..."
         }
-      ]
+      ],
+      "changedSinceLastWeek": ["..."]
     }
   }
 }
