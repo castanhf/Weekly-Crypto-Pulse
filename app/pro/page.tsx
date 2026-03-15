@@ -2,7 +2,12 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
-import { getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink, type ProOffer } from '@/lib/pro-offers';
+import {
+  getMissingProOfferEnvVarNames,
+  getProCheckoutTarget,
+  hasMissingProOfferPaymentLink,
+  type ProOffer
+} from '@/lib/pro-offers';
 import { createProMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createProMetadata();
@@ -77,6 +82,7 @@ export default function ProPage(): JSX.Element {
         <div className="grid gap-4 md:grid-cols-2">
           {OFFER_CARDS.map((offer) => {
             const product = getProProductDefinition(offer);
+            const checkoutTarget = getProCheckoutTarget(offer);
             const isBestValue = offer === 'monthlyBundle';
 
             return (
@@ -133,7 +139,7 @@ export default function ProPage(): JSX.Element {
                 <ProCta
                   className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
                   label={product.ctaLabel}
-                  offer={offer}
+                  checkoutTarget={checkoutTarget}
                 />
               </article>
             );

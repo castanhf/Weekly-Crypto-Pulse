@@ -16,12 +16,12 @@ type ProOfferSettings = Readonly<{
 
 const PRO_OFFER_SETTINGS: Readonly<Record<ProOffer, ProOfferSettings>> = {
   singleIssue: {
-    envVarName: 'NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE',
-    paymentLink: siteConfig.pro.singleIssuePaymentLink,
-    hasPaymentLink: siteConfig.pro.hasSingleIssuePaymentLink
+    envVarName: 'STRIPE_PAYMENT_LINK_WEEKLY_PRO',
+    paymentLink: siteConfig.pro.weeklyProPaymentLink,
+    hasPaymentLink: siteConfig.pro.hasWeeklyProPaymentLink
   },
   monthlyBundle: {
-    envVarName: 'NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE',
+    envVarName: 'STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE',
     paymentLink: siteConfig.pro.monthlyBundlePaymentLink,
     hasPaymentLink: siteConfig.pro.hasMonthlyBundlePaymentLink
   }

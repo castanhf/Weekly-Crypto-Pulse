@@ -12,6 +12,7 @@ import { ReportSections } from '@/components/reports/report-sections';
 import { ReportSignalsBlock } from '@/components/reports/report-signals';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
+import { getProCheckoutTarget } from '@/lib/pro-offers';
 import { getAllReports, getReportBySlug } from '@/lib/reports/report-repository';
 import { createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
@@ -45,6 +46,8 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
   }
 
   const reportUrl = toAbsoluteUrl(`/reports/${report.metadata.slug}`);
+  const weeklyProCheckoutTarget = getProCheckoutTarget('singleIssue');
+  const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
 
   return (
     <article className="space-y-6">
@@ -65,11 +68,11 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           need continuity across the month.
         </p>
         <div className="flex flex-wrap gap-3">
-          <ProCta label="Buy Single Issue for this report" offer="singleIssue" />
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue for this report" />
           <ProCta
             className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
             label="Compare with Monthly Bundle"
-            offer="monthlyBundle"
+            checkoutTarget={monthlyBundleCheckoutTarget}
           />
         </div>
       </footer>

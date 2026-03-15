@@ -9,8 +9,8 @@ afterEach(() => {
 
 describe('pro offers', () => {
   it('returns external checkout targets when both payment links are configured', async () => {
-    vi.stubEnv('NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE', 'https://buy.stripe.com/test_single');
-    vi.stubEnv('NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
+    vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', 'https://buy.stripe.com/test_single');
+    vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
 
     const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
 
@@ -27,8 +27,8 @@ describe('pro offers', () => {
   });
 
   it('falls back to local checkout warning target for missing links', async () => {
-    vi.stubEnv('NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE', '');
-    vi.stubEnv('NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
+    vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', '');
+    vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
 
     const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
 
@@ -41,6 +41,6 @@ describe('pro offers', () => {
       isExternal: true
     });
     expect(hasMissingProOfferPaymentLink()).toBe(true);
-    expect(getMissingProOfferEnvVarNames()).toEqual(['NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE']);
+    expect(getMissingProOfferEnvVarNames()).toEqual(['STRIPE_PAYMENT_LINK_WEEKLY_PRO']);
   });
 });
