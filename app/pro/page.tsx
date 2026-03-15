@@ -111,7 +111,7 @@ export default function ProPage(): JSX.Element {
     <section className="space-y-8">
       <header className="space-y-3 border-b border-line pb-6">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Choose a one-time Pro offer.</h1>
+        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
           Free content is built for orientation. Pro content is built for weekly decision support. Pick a single issue for
           immediate context or choose the monthly bundle for continuity across the month.
