@@ -4,17 +4,15 @@ import Link from 'next/link';
 
 import { trackEvent } from '@/lib/analytics/events';
 import { isStripePaymentLink } from '@/lib/analytics/stripe-link';
-import { type ProOffer, getProCheckoutTarget } from '@/lib/pro-offers';
+import type { CheckoutTarget } from '@/lib/pro-offers';
 
 type ProCtaProps = Readonly<{
   className?: string;
   label?: string;
-  offer?: ProOffer;
+  checkoutTarget: CheckoutTarget;
 }>;
 
-export function ProCta({ className, label = 'Upgrade to Pro', offer = 'singleIssue' }: ProCtaProps): JSX.Element {
-  const checkoutTarget = getProCheckoutTarget(offer);
-
+export function ProCta({ className, label = 'Upgrade to Pro', checkoutTarget }: ProCtaProps): JSX.Element {
   const handleClick = (): void => {
     trackEvent('click_pro_cta', {
       destination: checkoutTarget.href,

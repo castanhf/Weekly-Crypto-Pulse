@@ -79,9 +79,9 @@ These are embedded in client bundles. Never store secrets in `NEXT_PUBLIC_*` val
 - `NEXT_PUBLIC_SITE_URL`
   - Production: canonical site URL (example: `https://weeklycryptopulse.com`)
   - Preview: optional preview URL if needed for preview-specific behavior
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE`
+- `STRIPE_PAYMENT_LINK_WEEKLY_PRO`
   - Stripe Payment Link URL for **Weekly Crypto Pulse Pro — Single Issue** CTA (safe public URL, not a secret key)
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
+- `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
   - Stripe Payment Link URL for **Weekly Crypto Pulse Pro — Monthly Bundle** CTA (safe public URL, not a secret key)
 
 ### Server-only variables (no `NEXT_PUBLIC_` prefix)

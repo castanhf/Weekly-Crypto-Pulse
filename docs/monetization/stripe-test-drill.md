@@ -14,8 +14,8 @@ This runbook makes Stripe Payment Link testing practical and repeatable while ke
 
 Paid CTAs use public environment variables:
 
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE`
-- `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
+- `STRIPE_PAYMENT_LINK_WEEKLY_PRO`
+- `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`
 
 Set them in Vercel:
 

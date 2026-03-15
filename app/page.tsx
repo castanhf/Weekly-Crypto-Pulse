@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
+import { getProCheckoutTarget } from '@/lib/pro-offers';
 import { getLatestReport } from '@/lib/reports/report-repository';
 import { createHomeMetadata } from '@/lib/seo';
 
@@ -30,6 +31,8 @@ export default function HomePage(): JSX.Element {
   }
 
   const latestReportHref = `/reports/${latestReport.metadata.slug}`;
+  const weeklyProCheckoutTarget = getProCheckoutTarget('singleIssue');
+  const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
 
   return (
     <section className="space-y-12">
@@ -105,11 +108,11 @@ export default function HomePage(): JSX.Element {
           the Monthly Bundle for best value per issue and continuity.
         </p>
         <div className="flex flex-wrap gap-3">
-          <ProCta label="Buy Single Issue" offer="singleIssue" />
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
           <ProCta
             className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
             label="Buy Monthly Bundle (best value)"
-            offer="monthlyBundle"
+            checkoutTarget={monthlyBundleCheckoutTarget}
           />
           <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
             Compare offers
