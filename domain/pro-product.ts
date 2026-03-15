@@ -3,6 +3,9 @@ export type ProProductId = 'singleIssue' | 'monthlyBundle';
 export type ProProductDefinition = Readonly<{
   id: ProProductId;
   name: string;
+  pricingLabel: string;
+  valuePosition: string;
+  valueFraming: string;
   shortDescription: string;
   audience: string;
   includes: ReadonlyArray<string>;
@@ -15,6 +18,9 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
   singleIssue: {
     id: 'singleIssue',
     name: 'Weekly Crypto Pulse Pro — Single Issue',
+    pricingLabel: '$29 one-time',
+    valuePosition: 'Entry product',
+    valueFraming: 'Best when you need one week of focused decision support without a bigger commitment.',
     shortDescription: 'Entry offer for one week when you need a focused decision brief.',
     audience: 'Readers who want one decision-ready weekly Pro issue.',
     includes: [
@@ -29,6 +35,9 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
   monthlyBundle: {
     id: 'monthlyBundle',
     name: 'Weekly Crypto Pulse Pro — Monthly Bundle',
+    pricingLabel: '$79 one-time',
+    valuePosition: 'Best value product',
+    valueFraming: 'Lower effective price per issue than buying weekly, with continuity across the month.',
     shortDescription: 'Continuity offer for month-long tracking across weekly updates.',
     audience: 'Readers who want continuity and better per-issue value across the month.',
     includes: [

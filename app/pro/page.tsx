@@ -7,58 +7,12 @@ import { createProMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createProMetadata();
 
-type PlanComparisonRow = Readonly<{
-  feature: string;
-  free: string;
-  paid: string;
-}>;
-
-type OfferCard = Readonly<{
-  offer: ProOffer;
-  badge?: string;
-}>;
-
 type FaqItem = Readonly<{
   question: string;
   answer: string;
 }>;
 
-const PLAN_COMPARISON_ROWS: ReadonlyArray<PlanComparisonRow> = [
-  {
-    feature: 'Weekly orientation',
-    free: 'Public summary, headline context, and archive browsing',
-    paid: 'Action-focused report built for weekly decision support'
-  },
-  {
-    feature: 'Depth of analysis',
-    free: 'High-level narrative only',
-    paid: 'Full regime, factors, rotations, and scenario framing'
-  },
-  {
-    feature: 'Signals and risk controls',
-    free: 'Not included',
-    paid: 'Thesis, watchlist levels, and explicit risk checklist'
-  },
-  {
-    feature: 'Monetization model',
-    free: 'Free access',
-    paid: 'One-time Stripe checkout only (no subscriptions)'
-  },
-  {
-    feature: 'Fulfillment source of truth',
-    free: 'Not required',
-    paid: 'Stripe payment record'
-  }
-] as const;
-
-const OFFER_BADGES: Readonly<Partial<Record<ProOffer, string>>> = {
-  monthlyBundle: 'Best value'
-} as const;
-
-const OFFER_CARDS: ReadonlyArray<OfferCard> = PRO_PRODUCT_IDS.map((offer) => ({
-  offer,
-  badge: OFFER_BADGES[offer]
-}));
+const OFFER_CARDS: ReadonlyArray<ProOffer> = [...PRO_PRODUCT_IDS];
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -75,11 +29,6 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
     question: 'How is Pro access delivered?',
     answer:
       'After successful Stripe checkout, fulfillment follows the existing Pro operations workflow. Stripe payment details are the source of truth for fulfillment.'
-  },
-  {
-    question: 'Can I continue reading free content?',
-    answer:
-      'Yes. Free report summaries, archive pages, methodology, and disclaimer content remain publicly available.'
   }
 ] as const;
 
@@ -93,8 +42,8 @@ export default function ProPage(): JSX.Element {
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Free content is built for orientation. Pro content is built for weekly decision support. Pick a single issue for
-          immediate context or choose the monthly bundle for continuity across the month.
+          Free is for orientation. Pro is for decision support. Choose a Single Issue as the entry option or the Monthly
+          Bundle for better per-issue value and continuity.
         </p>
       </header>
 
@@ -115,73 +64,80 @@ export default function ProPage(): JSX.Element {
 
       <section aria-labelledby="offers-heading" className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
-          Paid offers and exact deliverables
+          Paid one-time products
         </h2>
+
+        <div className="rounded border border-line bg-paper p-4 text-sm text-ink">
+          <p>
+            <span className="font-semibold">Value hierarchy:</span> Single Issue is the entry product. Monthly Bundle is
+            the best value product.
+          </p>
+        </div>
+
         <div className="grid gap-4 md:grid-cols-2">
-          {OFFER_CARDS.map((offerCard) => {
-            const product = getProProductDefinition(offerCard.offer);
+          {OFFER_CARDS.map((offer) => {
+            const product = getProProductDefinition(offer);
+            const isBestValue = offer === 'monthlyBundle';
 
             return (
-              <article className="space-y-4 border border-line bg-white p-5" key={product.id}>
+              <article
+                className={`space-y-4 border bg-white p-5 ${isBestValue ? 'border-ink shadow-sm' : 'border-line'}`}
+                key={product.id}
+              >
                 <div className="space-y-2">
-                  {offerCard.badge ? (
-                    <p className="inline-flex bg-ink px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-paper">
-                      {offerCard.badge}
-                    </p>
-                  ) : null}
+                  <p
+                    className={`inline-flex px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
+                      isBestValue ? 'bg-ink text-paper' : 'bg-paper text-ink'
+                    }`}
+                  >
+                    {product.valuePosition}
+                  </p>
                   <h3 className="text-xl font-semibold tracking-tight">{product.name}</h3>
+                  <p className="text-base font-semibold text-ink">{product.pricingLabel}</p>
                   <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
+                  <p className="text-sm leading-relaxed text-ink">
+                    <span className="font-medium">Value framing:</span> {product.valueFraming}
+                  </p>
                 </div>
 
-                <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
-                  {product.includes.map((deliverable) => (
-                    <li key={deliverable}>{deliverable}</li>
-                  ))}
-                </ul>
+                <div className="space-y-3 text-sm">
+                  <section aria-label={`${product.name} includes`} className="space-y-2">
+                    <h4 className="font-semibold">Includes</h4>
+                    <ul className="list-disc space-y-2 pl-5 text-ink">
+                      {product.includes.map((deliverable) => (
+                        <li key={deliverable}>{deliverable}</li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  <section aria-label={`${product.name} audience`} className="space-y-1">
+                    <h4 className="font-semibold">Who it is for</h4>
+                    <p className="text-muted">{product.audience}</p>
+                  </section>
+
+                  <section aria-label={`${product.name} delivery`} className="space-y-1">
+                    <h4 className="font-semibold">How delivery works</h4>
+                    <p className="text-muted">{product.deliveryModel}</p>
+                  </section>
+
+                  <section aria-label={`${product.name} exclusions`} className="space-y-2">
+                    <h4 className="font-semibold">Not included</h4>
+                    <ul className="list-disc space-y-1 pl-5 text-muted">
+                      {product.excludes.map((excludedItem) => (
+                        <li key={excludedItem}>{excludedItem}</li>
+                      ))}
+                    </ul>
+                  </section>
+                </div>
 
                 <ProCta
                   className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
                   label={product.ctaLabel}
-                  offer={offerCard.offer}
+                  offer={offer}
                 />
               </article>
             );
           })}
-        </div>
-      </section>
-
-      <section aria-labelledby="comparison-heading" className="space-y-3">
-        <h2 className="text-2xl font-semibold tracking-tight" id="comparison-heading">
-          Free vs paid comparison
-        </h2>
-        <div className="overflow-x-auto border border-line bg-white">
-          <table className="min-w-full border-collapse text-left text-sm">
-            <caption className="sr-only">Weekly Crypto Pulse free versus paid offer comparison.</caption>
-            <thead className="bg-paper">
-              <tr>
-                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
-                  Feature
-                </th>
-                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
-                  Free
-                </th>
-                <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
-                  Paid (Single Issue or Monthly Bundle)
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {PLAN_COMPARISON_ROWS.map((row) => (
-                <tr className="align-top" key={row.feature}>
-                  <th className="border-b border-line px-4 py-3 font-medium" scope="row">
-                    {row.feature}
-                  </th>
-                  <td className="border-b border-line px-4 py-3 text-muted">{row.free}</td>
-                  <td className="border-b border-line px-4 py-3 text-muted">{row.paid}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </section>
 
