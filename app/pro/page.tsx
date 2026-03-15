@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { createProMetadata } from '@/lib/seo';
-import { siteConfig } from '@/lib/site';
+import { getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } from '@/lib/pro-offers';
 
 export const metadata: Metadata = createProMetadata();
 
@@ -88,8 +88,8 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
 ] as const;
 
 export default function ProPage(): JSX.Element {
-  const { hasSingleIssuePaymentLink, hasMonthlyBundlePaymentLink } = siteConfig.pro;
-  const hasMissingOfferLink = !hasSingleIssuePaymentLink || !hasMonthlyBundlePaymentLink;
+  const hasMissingOfferLink = hasMissingProOfferPaymentLink();
+  const missingEnvVarNames = getMissingProOfferEnvVarNames();
 
   return (
     <section className="space-y-8">
@@ -113,10 +113,12 @@ export default function ProPage(): JSX.Element {
         <section className="space-y-2 border border-amber-300 bg-amber-50 p-4" id="checkout-unavailable">
           <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
           <p className="text-sm text-muted">
-            One or more Stripe Payment Links are not configured for this environment. Set
-            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE</code>
-            and
-            <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono">NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE</code>
+            One or more Stripe Payment Links are not configured for this environment. Set{' '}
+            {missingEnvVarNames.map((envVarName) => (
+              <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
+                {envVarName}
+              </code>
+            ))}
             in Vercel to enable paid checkout.
           </p>
         </section>
