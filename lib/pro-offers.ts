@@ -1,6 +1,7 @@
 import { siteConfig } from '@/lib/site';
+import type { ProProductId } from '@/domain/pro-product';
 
-export type ProOffer = 'singleIssue' | 'monthlyBundle';
+export type ProOffer = ProProductId;
 
 export type CheckoutTarget = Readonly<{
   href: string;
