@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
-import { createProMetadata } from '@/lib/seo';
+import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
 import { getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink, type ProOffer } from '@/lib/pro-offers';
+import { createProMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createProMetadata();
 
@@ -15,10 +16,6 @@ type PlanComparisonRow = Readonly<{
 type OfferCard = Readonly<{
   offer: ProOffer;
   badge?: string;
-  title: string;
-  positioning: string;
-  deliverables: ReadonlyArray<string>;
-  ctaLabel: string;
 }>;
 
 type FaqItem = Readonly<{
@@ -54,31 +51,14 @@ const PLAN_COMPARISON_ROWS: ReadonlyArray<PlanComparisonRow> = [
   }
 ] as const;
 
-const OFFER_CARDS: ReadonlyArray<OfferCard> = [
-  {
-    offer: 'singleIssue',
-    title: 'Weekly Crypto Pulse Pro — Single Issue',
-    positioning: 'Entry offer for one week when you need a focused decision brief.',
-    deliverables: [
-      'One Pro weekly report for the selected issue',
-      'Full narrative: regime, factor flow, and rotation context',
-      'Signals package: thesis bullets, risk checklist, and watchlist levels'
-    ],
-    ctaLabel: 'Buy Single Issue'
-  },
-  {
-    offer: 'monthlyBundle',
-    badge: 'Best value',
-    title: 'Weekly Crypto Pulse Pro — Monthly Bundle',
-    positioning: 'Continuity offer for month-long tracking across weekly updates.',
-    deliverables: [
-      'Four Pro weekly issues for the active month',
-      'Same full report structure each week for consistency',
-      'Better per-issue value than buying each issue individually'
-    ],
-    ctaLabel: 'Buy Monthly Bundle'
-  }
-] as const;
+const OFFER_BADGES: Readonly<Partial<Record<ProOffer, string>>> = {
+  monthlyBundle: 'Best value'
+} as const;
+
+const OFFER_CARDS: ReadonlyArray<OfferCard> = PRO_PRODUCT_IDS.map((offer) => ({
+  offer,
+  badge: OFFER_BADGES[offer]
+}));
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -138,31 +118,35 @@ export default function ProPage(): JSX.Element {
           Paid offers and exact deliverables
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
-          {OFFER_CARDS.map((offerCard) => (
-            <article className="space-y-4 border border-line bg-white p-5" key={offerCard.title}>
-              <div className="space-y-2">
-                {offerCard.badge ? (
-                  <p className="inline-flex bg-ink px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-paper">
-                    {offerCard.badge}
-                  </p>
-                ) : null}
-                <h3 className="text-xl font-semibold tracking-tight">{offerCard.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{offerCard.positioning}</p>
-              </div>
+          {OFFER_CARDS.map((offerCard) => {
+            const product = getProProductDefinition(offerCard.offer);
 
-              <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
-                {offerCard.deliverables.map((deliverable) => (
-                  <li key={deliverable}>{deliverable}</li>
-                ))}
-              </ul>
+            return (
+              <article className="space-y-4 border border-line bg-white p-5" key={product.id}>
+                <div className="space-y-2">
+                  {offerCard.badge ? (
+                    <p className="inline-flex bg-ink px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-paper">
+                      {offerCard.badge}
+                    </p>
+                  ) : null}
+                  <h3 className="text-xl font-semibold tracking-tight">{product.name}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
+                </div>
 
-              <ProCta
-                className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
-                label={offerCard.ctaLabel}
-                offer={offerCard.offer}
-              />
-            </article>
-          ))}
+                <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
+                  {product.includes.map((deliverable) => (
+                    <li key={deliverable}>{deliverable}</li>
+                  ))}
+                </ul>
+
+                <ProCta
+                  className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
+                  label={product.ctaLabel}
+                  offer={offerCard.offer}
+                />
+              </article>
+            );
+          })}
         </div>
       </section>
 
