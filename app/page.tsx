@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { ProCta } from '@/components/pro/pro-cta';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
 import { getLatestReport } from '@/lib/reports/report-repository';
-import { ProCta } from '@/components/pro/pro-cta';
 import { createHomeMetadata } from '@/lib/seo';
-
 
 export const metadata: Metadata = createHomeMetadata();
 
@@ -40,8 +39,8 @@ export default function HomePage(): JSX.Element {
           Institutional-grade signal for a market that moves 24/7.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Weekly Crypto Pulse distills the noise into one concise report so operators can assess
-          regime, flows, and positioning faster.
+          Weekly Crypto Pulse distills the noise into one concise report so operators can assess regime, flows, and
+          positioning faster.
         </p>
         <Link
           className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
@@ -86,8 +85,7 @@ export default function HomePage(): JSX.Element {
           What we measure
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Each issue tracks the same core indicators to keep weekly comparisons consistent and
-          decision-ready.
+          Each issue tracks the same core indicators to keep weekly comparisons consistent and decision-ready.
         </p>
         <ul className="space-y-2 text-sm text-ink">
           {METRICS.map((metric) => (
@@ -103,13 +101,18 @@ export default function HomePage(): JSX.Element {
           Weekly Crypto Pulse Pro
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Upgrade to receive the full weekly Pro report with deeper market structure analysis and
-          positioning context, delivered through a simple Stripe-hosted checkout.
+          Free gives orientation. Pro supports decisions. Start with the Single Issue when you need one week, or choose
+          the Monthly Bundle for best value per issue and continuity.
         </p>
         <div className="flex flex-wrap gap-3">
-          <ProCta label="Upgrade with Stripe" />
+          <ProCta label="Buy Single Issue" offer="singleIssue" />
+          <ProCta
+            className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
+            label="Buy Monthly Bundle (best value)"
+            offer="monthlyBundle"
+          />
           <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
-            View pricing
+            Compare offers
           </Link>
         </div>
       </section>

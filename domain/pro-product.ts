@@ -30,7 +30,7 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
     ],
     excludes: ['No subscription billing', 'No user account or entitlement system', 'No database-backed access management'],
     deliveryModel: 'One-time Stripe Payment Link checkout with operational fulfillment based on Stripe payment records.',
-    ctaLabel: 'Buy Single Issue'
+    ctaLabel: 'Buy Single Issue (best for this report)'
   },
   monthlyBundle: {
     id: 'monthlyBundle',
@@ -47,7 +47,7 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
     ],
     excludes: ['No subscription billing', 'No user account or entitlement system', 'No database-backed access management'],
     deliveryModel: 'One-time Stripe Payment Link checkout with operational fulfillment based on Stripe payment records.',
-    ctaLabel: 'Buy Monthly Bundle'
+    ctaLabel: 'Buy Monthly Bundle (best value per issue)'
   }
 } as const;
 
