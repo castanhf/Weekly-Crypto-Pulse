@@ -2,19 +2,23 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { createProMetadata } from '@/lib/seo';
-import { getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } from '@/lib/pro-offers';
+import { getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink, type ProOffer } from '@/lib/pro-offers';
 
 export const metadata: Metadata = createProMetadata();
 
 type PlanComparisonRow = Readonly<{
   feature: string;
   free: string;
-  pro: string;
+  paid: string;
 }>;
 
-type Deliverable = Readonly<{
+type OfferCard = Readonly<{
+  offer: ProOffer;
+  badge?: string;
   title: string;
-  description: string;
+  positioning: string;
+  deliverables: ReadonlyArray<string>;
+  ctaLabel: string;
 }>;
 
 type FaqItem = Readonly<{
@@ -24,45 +28,55 @@ type FaqItem = Readonly<{
 
 const PLAN_COMPARISON_ROWS: ReadonlyArray<PlanComparisonRow> = [
   {
-    feature: 'Weekly market snapshot',
-    free: 'Included',
-    pro: 'Included'
+    feature: 'Weekly orientation',
+    free: 'Public summary, headline context, and archive browsing',
+    paid: 'Action-focused report built for weekly decision support'
   },
   {
-    feature: 'Public report archive',
-    free: 'Included',
-    pro: 'Included'
+    feature: 'Depth of analysis',
+    free: 'High-level narrative only',
+    paid: 'Full regime, factors, rotations, and scenario framing'
   },
   {
-    feature: 'Regime and factor-depth analysis',
-    free: 'Headline summary only',
-    pro: 'Full section with rotational context and risk framing'
-  },
-  {
-    feature: 'Signals package',
+    feature: 'Signals and risk controls',
     free: 'Not included',
-    pro: 'Thesis, risk checklist, and watchlist levels'
+    paid: 'Thesis, watchlist levels, and explicit risk checklist'
   },
   {
-    feature: 'Delivery',
-    free: 'Read on site',
-    pro: 'Immediate access after Stripe checkout'
+    feature: 'Monetization model',
+    free: 'Free access',
+    paid: 'One-time Stripe checkout only (no subscriptions)'
+  },
+  {
+    feature: 'Fulfillment source of truth',
+    free: 'Not required',
+    paid: 'Stripe payment record'
   }
 ] as const;
 
-const PRO_DELIVERABLES: ReadonlyArray<Deliverable> = [
+const OFFER_CARDS: ReadonlyArray<OfferCard> = [
   {
-    title: 'Full weekly report',
-    description:
-      'Expanded narrative covering market regime, leadership rotation, and positioning context beyond the public summary.'
+    offer: 'singleIssue',
+    title: 'Weekly Crypto Pulse Pro — Single Issue',
+    positioning: 'Entry offer for one week when you need a focused decision brief.',
+    deliverables: [
+      'One Pro weekly report for the selected issue',
+      'Full narrative: regime, factor flow, and rotation context',
+      'Signals package: thesis bullets, risk checklist, and watchlist levels'
+    ],
+    ctaLabel: 'Buy Single Issue'
   },
   {
-    title: 'Action-ready signals',
-    description: 'Structured thesis bullets, explicit risk checklist, and watchlist levels to track next-week scenarios.'
-  },
-  {
-    title: 'Consistent publication cadence',
-    description: 'One Pro edition is generated each week using the same methodology and committed static report artifacts.'
+    offer: 'monthlyBundle',
+    badge: 'Best value',
+    title: 'Weekly Crypto Pulse Pro — Monthly Bundle',
+    positioning: 'Continuity offer for month-long tracking across weekly updates.',
+    deliverables: [
+      'Four Pro weekly issues for the active month',
+      'Same full report structure each week for consistency',
+      'Better per-issue value than buying each issue individually'
+    ],
+    ctaLabel: 'Buy Monthly Bundle'
   }
 ] as const;
 
@@ -70,20 +84,22 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
     question: 'Is this a subscription?',
     answer:
-      'No. Checkout is handled by a Stripe Payment Link with no account system, entitlements, or recurring subscription management in this app.'
+      'No. Both products are one-time purchases through Stripe Payment Links. Weekly Crypto Pulse does not run subscription billing.'
   },
   {
-    question: 'How do I access Pro content?',
+    question: 'Do I need an account or login?',
     answer:
-      'Use the Stripe checkout button on this page. After payment, fulfillment follows the Pro operations process documented for Weekly Crypto Pulse.'
+      'No. This site has no user authentication and no entitlement system. Stripe checkout confirms purchase identity and payment status.'
   },
   {
-    question: 'Do I need to create an account on Weekly Crypto Pulse?',
-    answer: 'No. The site does not implement user authentication or account profiles.'
+    question: 'How is Pro access delivered?',
+    answer:
+      'After successful Stripe checkout, fulfillment follows the existing Pro operations workflow. Stripe payment details are the source of truth for fulfillment.'
   },
   {
-    question: 'Can I still read free content?',
-    answer: 'Yes. The free archive and public weekly highlights remain available without payment.'
+    question: 'Can I continue reading free content?',
+    answer:
+      'Yes. Free report summaries, archive pages, methodology, and disclaimer content remain publicly available.'
   }
 ] as const;
 
@@ -96,17 +112,10 @@ export default function ProPage(): JSX.Element {
       <header className="space-y-3 border-b border-line pb-6">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Weekly Crypto Pulse keeps the stack simple: free public reports plus a paid Pro layer through Stripe-hosted checkout.
+        <p className="max-w-3xl text-sm leading-relaxed text-muted">
+          Free content is built for orientation. Pro content is built for weekly decision support. Pick a single issue for
+          immediate context or choose the monthly bundle for continuity across the month.
         </p>
-        <div className="flex flex-wrap gap-3">
-          <ProCta label="Buy Single Issue" offer="singleIssue" />
-          <ProCta
-            className="inline-flex border border-ink bg-ink px-4 py-2 text-sm font-medium text-paper transition hover:opacity-90"
-            label="Buy Monthly Bundle (Best Value)"
-            offer="monthlyBundle"
-          />
-        </div>
       </header>
 
       {hasMissingOfferLink ? (
@@ -124,13 +133,46 @@ export default function ProPage(): JSX.Element {
         </section>
       ) : null}
 
+      <section aria-labelledby="offers-heading" className="space-y-4">
+        <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
+          Paid offers and exact deliverables
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {OFFER_CARDS.map((offerCard) => (
+            <article className="space-y-4 border border-line bg-white p-5" key={offerCard.title}>
+              <div className="space-y-2">
+                {offerCard.badge ? (
+                  <p className="inline-flex bg-ink px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-paper">
+                    {offerCard.badge}
+                  </p>
+                ) : null}
+                <h3 className="text-xl font-semibold tracking-tight">{offerCard.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{offerCard.positioning}</p>
+              </div>
+
+              <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
+                {offerCard.deliverables.map((deliverable) => (
+                  <li key={deliverable}>{deliverable}</li>
+                ))}
+              </ul>
+
+              <ProCta
+                className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
+                label={offerCard.ctaLabel}
+                offer={offerCard.offer}
+              />
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section aria-labelledby="comparison-heading" className="space-y-3">
         <h2 className="text-2xl font-semibold tracking-tight" id="comparison-heading">
-          Free vs Pro comparison
+          Free vs paid comparison
         </h2>
         <div className="overflow-x-auto border border-line bg-white">
           <table className="min-w-full border-collapse text-left text-sm">
-            <caption className="sr-only">Weekly Crypto Pulse free versus Pro plan comparison.</caption>
+            <caption className="sr-only">Weekly Crypto Pulse free versus paid offer comparison.</caption>
             <thead className="bg-paper">
               <tr>
                 <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
@@ -140,7 +182,7 @@ export default function ProPage(): JSX.Element {
                   Free
                 </th>
                 <th className="border-b border-line px-4 py-3 font-semibold" scope="col">
-                  Pro
+                  Paid (Single Issue or Monthly Bundle)
                 </th>
               </tr>
             </thead>
@@ -151,26 +193,12 @@ export default function ProPage(): JSX.Element {
                     {row.feature}
                   </th>
                   <td className="border-b border-line px-4 py-3 text-muted">{row.free}</td>
-                  <td className="border-b border-line px-4 py-3 text-muted">{row.pro}</td>
+                  <td className="border-b border-line px-4 py-3 text-muted">{row.paid}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section aria-labelledby="deliverables-heading" className="space-y-3">
-        <h2 className="text-2xl font-semibold tracking-tight" id="deliverables-heading">
-          Exact Pro deliverables
-        </h2>
-        <ul className="space-y-3 text-sm text-ink">
-          {PRO_DELIVERABLES.map((deliverable) => (
-            <li className="border border-line bg-white p-4" key={deliverable.title}>
-              <h3 className="text-base font-semibold tracking-tight">{deliverable.title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted">{deliverable.description}</p>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section aria-labelledby="faq-heading" className="space-y-3">
