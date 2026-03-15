@@ -1,4 +1,4 @@
-const getOptionalEnv = (value: string | undefined): string => {
+const sanitizeOptionalEnvValue = (value: string | undefined): string => {
   if (!value) {
     return '';
   }
@@ -6,8 +6,8 @@ const getOptionalEnv = (value: string | undefined): string => {
   return value.trim();
 };
 
-const singleIssuePaymentLink = getOptionalEnv(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE);
-const monthlyBundlePaymentLink = getOptionalEnv(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE);
+const singleIssuePaymentLink = sanitizeOptionalEnvValue(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_SINGLE_ISSUE);
+const monthlyBundlePaymentLink = sanitizeOptionalEnvValue(process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE);
 
 export const siteConfig = {
   name: 'Weekly Crypto Pulse',

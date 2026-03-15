@@ -4,9 +4,7 @@ import Link from 'next/link';
 
 import { trackEvent } from '@/lib/analytics/events';
 import { isStripePaymentLink } from '@/lib/analytics/stripe-link';
-import { siteConfig } from '@/lib/site';
-
-type ProOffer = 'singleIssue' | 'monthlyBundle';
+import { type ProOffer, getProCheckoutTarget } from '@/lib/pro-offers';
 
 type ProCtaProps = Readonly<{
   className?: string;
@@ -14,41 +12,8 @@ type ProCtaProps = Readonly<{
   offer?: ProOffer;
 }>;
 
-type CheckoutTarget = Readonly<{
-  href: string;
-  isExternal: boolean;
-}>;
-
-const getCheckoutTarget = (offer: ProOffer): CheckoutTarget => {
-  if (offer === 'monthlyBundle') {
-    if (!siteConfig.pro.hasMonthlyBundlePaymentLink) {
-      return {
-        href: '/pro#checkout-unavailable',
-        isExternal: false
-      };
-    }
-
-    return {
-      href: siteConfig.pro.monthlyBundlePaymentLink,
-      isExternal: true
-    };
-  }
-
-  if (!siteConfig.pro.hasSingleIssuePaymentLink) {
-    return {
-      href: '/pro#checkout-unavailable',
-      isExternal: false
-    };
-  }
-
-  return {
-    href: siteConfig.pro.singleIssuePaymentLink,
-    isExternal: true
-  };
-};
-
 export function ProCta({ className, label = 'Upgrade to Pro', offer = 'singleIssue' }: ProCtaProps): JSX.Element {
-  const checkoutTarget = getCheckoutTarget(offer);
+  const checkoutTarget = getProCheckoutTarget(offer);
 
   const handleClick = (): void => {
     trackEvent('click_pro_cta', {
