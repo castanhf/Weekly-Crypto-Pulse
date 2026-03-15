@@ -5,15 +5,6 @@ import type { Report } from '../domain/report';
 
 type ProPackCliArgs = {
   slug: string;
-  buyerEmail: string;
-  orderRef?: string;
-  purchasedAt?: string;
-};
-
-type WatermarkDetails = {
-  maskedBuyerEmail: string;
-  purchaseDateLabel: string;
-  truncatedOrderRef: string;
 };
 
 const REPORTS_DIRECTORY_PATH = path.resolve(process.cwd(), 'data/reports');
@@ -29,103 +20,35 @@ const formatUsd = (value: number): string =>
 
 const formatPercent = (value: number): string => `${value.toFixed(2)}%`;
 
-const normalizeEmail = (email: string): string => email.trim().toLowerCase();
+const formatList = (items: ReadonlyArray<string>): string => (items.length === 0 ? '- None' : items.map((item) => `- ${item}`).join('\n'));
 
-const assertValidEmail = (email: string): void => {
-  const normalized = normalizeEmail(email);
+const formatSubSection = (heading: string, body: string, highlights: ReadonlyArray<string>): string => [
+  `### ${heading}`,
+  '',
+  body,
+  '',
+  'Highlights',
+  '',
+  formatList(highlights)
+].join('\n');
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
-    throw new Error(`Invalid buyer email: "${email}".`);
-  }
-};
-
-const maskEmail = (email: string): string => {
-  const normalized = normalizeEmail(email);
-  const [localPart, domain] = normalized.split('@');
-
-  if (!localPart || !domain) {
-    throw new Error(`Invalid buyer email: "${email}".`);
-  }
-
-  if (localPart.length === 1) {
-    return `${localPart}***@${domain}`;
-  }
-
-  return `${localPart[0]}***${localPart[localPart.length - 1]}@${domain}`;
-};
-
-const formatPurchasedDate = (purchasedAt?: string): string => {
-  if (!purchasedAt) {
-    return 'unspecified';
-  }
-
-  const timestamp = Date.parse(purchasedAt);
-
-  if (Number.isNaN(timestamp)) {
-    throw new Error(`Invalid purchasedAt value: "${purchasedAt}". Use an ISO-8601 date string.`);
-  }
-
-  return new Date(timestamp).toISOString().slice(0, 10);
-};
-
-const truncateOrderRef = (orderRef?: string): string => {
-  const normalized = orderRef?.trim();
-
-  if (!normalized) {
-    return 'n/a';
-  }
-
-  if (normalized.length <= 14) {
-    return normalized;
-  }
-
-  return `${normalized.slice(0, 6)}…${normalized.slice(-4)}`;
-};
-
-const toWatermarkDetails = (args: ProPackCliArgs): WatermarkDetails => ({
-  maskedBuyerEmail: maskEmail(args.buyerEmail),
-  purchaseDateLabel: formatPurchasedDate(args.purchasedAt),
-  truncatedOrderRef: truncateOrderRef(args.orderRef)
-});
-
-const formatWatermark = (details: WatermarkDetails): string =>
-  `> _Buyer: ${details.maskedBuyerEmail} · Purchased: ${details.purchaseDateLabel} · Ref: ${details.truncatedOrderRef}_`;
-
-const formatSection = (title: string, items: ReadonlyArray<string>, watermark: string): string => {
-  const content = items.length === 0 ? '- None' : items.map((item) => `- ${item}`).join('\n');
-  return `## ${title}\n\n${content}\n\n${watermark}\n`;
-};
-
-const formatSubSection = (title: string, body: string, highlights: ReadonlyArray<string>, watermark: string): string => {
-  const highlightsBlock = highlights.length > 0 ? highlights.map((highlight) => `- ${highlight}`).join('\n') : '- None';
-  return `### ${title}\n\n${body}\n\n${highlightsBlock}\n\n${watermark}`;
-};
-
-const formatReportSection = (report: Report, watermark: string): string => {
+const formatReportHeader = (report: Report): string => {
   const { metadata } = report;
 
   return [
-    `## Report`,
+    '## Report metadata',
     '',
     `- Title: ${metadata.title}`,
     `- Slug: ${metadata.slug}`,
     `- Week: ${metadata.weekLabel}`,
     `- Published at: ${metadata.publishedAt}`,
     `- Regime: ${report.regime}`,
-    `- Tags: ${metadata.tags.join(', ')}`,
-    '',
-    watermark,
-    ''
+    `- Tags: ${metadata.tags.join(', ')}`
   ].join('\n');
 };
 
-const toProPackMarkdown = (report: Report, details: WatermarkDetails): string => {
+const toProPackMarkdown = (report: Report): string => {
   const { metadata, marketSnapshot, movers, sections, signals } = report;
-  const watermark = formatWatermark(details);
-
-  const sectionBlocks = sections
-    .map((section) => formatSubSection(section.heading, section.body, section.highlights, watermark))
-    .join('\n\n');
 
   const moversBlock = movers
     .map((mover) => `- **${mover.symbol} (${mover.name})**: ${formatPercent(mover.changePct7d)} — ${mover.catalyst}`)
@@ -135,50 +58,51 @@ const toProPackMarkdown = (report: Report, details: WatermarkDetails): string =>
     .map((level) => `- **${level.asset}** at \`${level.level}\`: ${level.context}`)
     .join('\n');
 
+  const sectionBlocks = sections.map((section) => formatSubSection(section.heading, section.body, section.highlights)).join('\n\n');
+
   return [
-    `# Weekly Crypto Pulse Pro Pack`,
+    '# Weekly Crypto Pulse Pro Pack',
     '',
-    formatReportSection(report, watermark),
-    `## Executive summary`,
+    formatReportHeader(report),
+    '',
+    '## Executive summary',
     '',
     metadata.summary,
     '',
-    watermark,
-    '',
-    `## Market snapshot`,
+    '## Market snapshot',
     '',
     `- Total market cap: ${formatUsd(marketSnapshot.totalMarketCapUsd)}`,
     `- BTC dominance: ${formatPercent(marketSnapshot.btcDominancePct)}`,
     `- ETH dominance: ${formatPercent(marketSnapshot.ethDominancePct)}`,
     `- Fear & Greed index: ${marketSnapshot.fearGreedIndex}`,
     '',
-    watermark,
-    '',
-    `## Movers (7d)`,
+    '## Movers (7d)',
     '',
     moversBlock.length > 0 ? moversBlock : '- None',
     '',
-    watermark,
+    '## Deep dive sections',
     '',
-    `## Deep dive sections`,
+    sectionBlocks.length > 0 ? sectionBlocks : 'No sections available.',
     '',
-    sectionBlocks.length > 0 ? sectionBlocks : `No sections available.\n\n${watermark}`,
+    '## Actionable thesis',
     '',
-    formatSection('Actionable thesis', signals.thesis, watermark),
-    formatSection('Risk checklist', signals.riskChecklist, watermark),
-    formatSection('What changed since last week', signals.changedSinceLastWeek, watermark),
-    `## Watchlist levels`,
+    formatList(signals.thesis),
+    '',
+    '## Risk checklist',
+    '',
+    formatList(signals.riskChecklist),
+    '',
+    '## What changed since last week',
+    '',
+    formatList(signals.changedSinceLastWeek),
+    '',
+    '## Watchlist levels',
     '',
     watchlistBlock.length > 0 ? watchlistBlock : '- None',
     '',
-    watermark,
+    '## Fulfillment note',
     '',
-    `## Manual delivery note`,
-    '',
-    `Deliver this markdown as-is, or convert to PDF while preserving headings and bullet order.`,
-    '',
-    watermark,
-    ''
+    'This markdown is deterministic for a given report slug and is suitable for direct delivery or PDF conversion.'
   ].join('\n');
 };
 
@@ -206,9 +130,11 @@ const parseArtifact = (rawJson: string, sourceFile: string): Report => {
 };
 
 const readReportBySlug = async (slug: string): Promise<Report> => {
-  const fileNames = (await readdir(REPORTS_DIRECTORY_PATH)).filter((fileName) => fileName.endsWith('.json')).sort((a, b) => a.localeCompare(b));
+  const reportFileNames = (await readdir(REPORTS_DIRECTORY_PATH))
+    .filter((fileName) => fileName.endsWith('.json'))
+    .sort((left, right) => left.localeCompare(right));
 
-  for (const fileName of fileNames) {
+  for (const fileName of reportFileNames) {
     const filePath = path.join(REPORTS_DIRECTORY_PATH, fileName);
     const rawJson = await readFile(filePath, 'utf-8');
     const report = parseArtifact(rawJson, fileName);
@@ -239,30 +165,19 @@ const readFlagValue = (argv: ReadonlyArray<string>, flagName: string): string | 
 
 const parseArgs = (argv: ReadonlyArray<string>): ProPackCliArgs => {
   const slug = readFlagValue(argv, '--slug');
-  const buyerEmail = readFlagValue(argv, '--buyerEmail');
 
-  if (!slug || !buyerEmail) {
-    throw new Error(
-      'Missing required flags. Usage: npm run generate:pro -- --slug <report-slug> --buyerEmail <email> [--orderRef <ref>] [--purchasedAt <ISO-8601>]'
-    );
+  if (!slug) {
+    throw new Error('Missing required flags. Usage: npm run generate:pro -- --slug <report-slug>');
   }
 
-  assertValidEmail(buyerEmail);
-
-  return {
-    slug,
-    buyerEmail,
-    orderRef: readFlagValue(argv, '--orderRef'),
-    purchasedAt: readFlagValue(argv, '--purchasedAt')
-  };
+  return { slug };
 };
 
 const main = async (): Promise<void> => {
-  const args = parseArgs(process.argv);
-  const report = await readReportBySlug(args.slug);
-  const watermarkDetails = toWatermarkDetails(args);
-  const markdown = toProPackMarkdown(report, watermarkDetails);
-  const outputPath = path.join(OUTPUT_DIRECTORY_PATH, `${args.slug}.md`);
+  const { slug } = parseArgs(process.argv);
+  const report = await readReportBySlug(slug);
+  const markdown = toProPackMarkdown(report);
+  const outputPath = path.join(OUTPUT_DIRECTORY_PATH, `${slug}.md`);
 
   await mkdir(OUTPUT_DIRECTORY_PATH, { recursive: true });
   await writeFile(outputPath, markdown, 'utf-8');

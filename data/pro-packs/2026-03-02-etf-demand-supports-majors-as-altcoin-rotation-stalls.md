@@ -1,6 +1,6 @@
 # Weekly Crypto Pulse Pro Pack
 
-## Report
+## Report metadata
 
 - Title: Weekly Crypto Pulse: ETF Demand Supports Majors as Altcoin Rotation Stalls
 - Slug: 2026-03-02-etf-demand-supports-majors-as-altcoin-rotation-stalls
@@ -32,12 +32,16 @@ Bitcoin and Ethereum held key support while selective capital rotated out of hig
 
 Liquidity stayed concentrated in majors while altcoin breadth softened.
 
+Highlights
+
 - BTC closed above its weekly VWAP.
 - Perpetual funding reset to neutral across major venues.
 
 ### Positioning & Flows
 
 Institutional participation remained constructive, but speculative leverage cooled.
+
+Highlights
 
 - Spot ETF flow momentum remained positive for a sixth consecutive week.
 - Open interest declined in mid-cap perpetual pairs.
@@ -56,12 +60,18 @@ Institutional participation remained constructive, but speculative leverage cool
 - Confirm stablecoin supply growth continues to support spot liquidity.
 - Respect macro event windows that can override crypto-native flow signals.
 
+## What changed since last week
+
+- BTC held weekly support despite softer intraday momentum.
+- ETF inflows stayed positive, but the pace moderated versus the prior week.
+- Altcoin breadth weakened further as TOTAL3 underperformed majors.
+
 ## Watchlist levels
 
 - **BTC** at `$90k support / $96k reclaim`: Holding support keeps the range constructive; reclaiming resistance reopens trend continuation.
 - **ETH** at `$4.6k pivot`: Sustained closes above pivot improve odds of renewed ETH-led breadth.
 - **TOTAL3** at `prior month low`: A fresh low would confirm ongoing altcoin-relative weakness.
 
-## Manual delivery note
+## Fulfillment note
 
-Deliver this markdown as-is, or convert to PDF while preserving headings and bullet order.
+This markdown is deterministic for a given report slug and is suitable for direct delivery or PDF conversion.
