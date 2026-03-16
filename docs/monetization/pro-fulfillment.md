@@ -41,13 +41,25 @@ This runbook defines a repeatable Pro fulfillment workflow for one-time purchase
 3. Generate artifacts from committed report JSON files:
 
 ```bash
-npm run generate:pro -- --slug <report-slug>
+# Single Issue
+npm run generate:pro -- --product singleIssue --slug <report-slug>
+
+# Monthly Bundle (auto-select exactly four reports in the month)
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM>
+
+# Monthly Bundle (explicit report selection)
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> --slugs <slug1,slug2,slug3,slug4>
 ```
 
-4. Confirm output exists:
+4. Confirm outputs exist:
 
 ```bash
+# Single Issue
 data/pro-packs/<report-slug>.md
+
+# Monthly Bundle
+data/pro-packs/monthly-bundles/<YYYY-MM>-bundle.md
+data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
 ```
 
 5. Open `docs/monetization/email-templates.md`, select the correct template, attach generated artifact (or exported PDF), and send to Stripe-confirmed buyer email.
@@ -57,11 +69,14 @@ data/pro-packs/<report-slug>.md
 
 ## Optional deterministic check
 
-Run generation twice for the same slug and verify no diff:
+Run generation twice with the same inputs and verify no diff:
 
 ```bash
-npm run generate:pro -- --slug <report-slug>
+npm run generate:pro -- --product singleIssue --slug <report-slug>
 git diff -- data/pro-packs/<report-slug>.md
+
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM>
+git diff -- data/pro-packs/monthly-bundles/<YYYY-MM>-bundle.md data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
 ```
 
 If the diff is empty, output is deterministic.
