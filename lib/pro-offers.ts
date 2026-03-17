@@ -1,38 +1,45 @@
-import { siteConfig } from '@/lib/site';
 import type { ProProductId } from '@/domain/pro-product';
-
-export type ProOffer = ProProductId;
+import { siteConfig } from '@/lib/site';
+import { toStripePaymentLinkOrEmpty } from '@/lib/stripe/payment-links';
 
 export type CheckoutTarget = Readonly<{
   href: string;
   isExternal: boolean;
 }>;
 
-type ProOfferSettings = Readonly<{
-  envVarName: string;
+type ProCheckoutConfig = Readonly<{
+  productId: ProProductId;
+  envVarName: 'STRIPE_PAYMENT_LINK_WEEKLY_PRO' | 'STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE';
   paymentLink: string;
-  hasPaymentLink: boolean;
 }>;
-
-const PRO_OFFER_SETTINGS: Readonly<Record<ProOffer, ProOfferSettings>> = {
-  singleIssue: {
-    envVarName: 'STRIPE_PAYMENT_LINK_WEEKLY_PRO',
-    paymentLink: siteConfig.pro.weeklyProPaymentLink,
-    hasPaymentLink: siteConfig.pro.hasWeeklyProPaymentLink
-  },
-  monthlyBundle: {
-    envVarName: 'STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE',
-    paymentLink: siteConfig.pro.monthlyBundlePaymentLink,
-    hasPaymentLink: siteConfig.pro.hasMonthlyBundlePaymentLink
-  }
-} as const;
 
 const CHECKOUT_UNAVAILABLE_TARGET = '/pro#checkout-unavailable';
 
-export const getProCheckoutTarget = (offer: ProOffer): CheckoutTarget => {
-  const offerSettings = PRO_OFFER_SETTINGS[offer];
+const createCheckoutConfig = (
+  productId: ProProductId,
+  envVarName: ProCheckoutConfig['envVarName'],
+  rawPaymentLink: string
+): ProCheckoutConfig => ({
+  productId,
+  envVarName,
+  paymentLink: toStripePaymentLinkOrEmpty(rawPaymentLink)
+});
 
-  if (!offerSettings.hasPaymentLink) {
+const PRO_CHECKOUT_CONFIGS: Readonly<Record<ProProductId, ProCheckoutConfig>> = {
+  singleIssue: createCheckoutConfig('singleIssue', 'STRIPE_PAYMENT_LINK_WEEKLY_PRO', siteConfig.pro.weeklyProPaymentLink),
+  monthlyBundle: createCheckoutConfig(
+    'monthlyBundle',
+    'STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE',
+    siteConfig.pro.monthlyBundlePaymentLink
+  )
+};
+
+const hasCheckoutLink = (productId: ProProductId): boolean => PRO_CHECKOUT_CONFIGS[productId].paymentLink.length > 0;
+
+export const getProCheckoutTarget = (productId: ProProductId): CheckoutTarget => {
+  const checkoutConfig = PRO_CHECKOUT_CONFIGS[productId];
+
+  if (!hasCheckoutLink(productId)) {
     return {
       href: CHECKOUT_UNAVAILABLE_TARGET,
       isExternal: false
@@ -40,14 +47,14 @@ export const getProCheckoutTarget = (offer: ProOffer): CheckoutTarget => {
   }
 
   return {
-    href: offerSettings.paymentLink,
+    href: checkoutConfig.paymentLink,
     isExternal: true
   };
 };
 
-export const getMissingProOfferEnvVarNames = (): ReadonlyArray<string> =>
-  (Object.values(PRO_OFFER_SETTINGS) as ReadonlyArray<ProOfferSettings>)
-    .filter((offerSettings) => !offerSettings.hasPaymentLink)
-    .map((offerSettings) => offerSettings.envVarName);
+export const getMissingProOfferEnvVarNames = (): ReadonlyArray<ProCheckoutConfig['envVarName']> =>
+  (Object.values(PRO_CHECKOUT_CONFIGS) as ReadonlyArray<ProCheckoutConfig>)
+    .filter((checkoutConfig) => checkoutConfig.paymentLink.length === 0)
+    .map((checkoutConfig) => checkoutConfig.envVarName);
 
 export const hasMissingProOfferPaymentLink = (): boolean => getMissingProOfferEnvVarNames().length > 0;

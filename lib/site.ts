@@ -14,8 +14,6 @@ export const siteConfig = {
   description: 'Editorial crypto market summaries and recurring weekly reports.',
   pro: {
     weeklyProPaymentLink,
-    hasWeeklyProPaymentLink: weeklyProPaymentLink.length > 0,
-    monthlyBundlePaymentLink,
-    hasMonthlyBundlePaymentLink: monthlyBundlePaymentLink.length > 0
+    monthlyBundlePaymentLink
   }
 } as const;
