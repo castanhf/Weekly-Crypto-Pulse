@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
+import { getProPricingDefinition } from '@/domain/pro-pricing';
 import {
   getMissingProOfferEnvVarNames,
   getProCheckoutTarget,
@@ -82,7 +83,8 @@ export default function ProPage(): JSX.Element {
           {OFFER_CARDS.map((productId) => {
             const product = getProProductDefinition(productId);
             const checkoutTarget = getProCheckoutTarget(productId);
-            const isBestValue = productId === 'monthlyBundle';
+            const pricing = getProPricingDefinition(productId);
+            const isBestValue = pricing.tier === 'bestValueOffer';
 
             return (
               <article
@@ -95,13 +97,13 @@ export default function ProPage(): JSX.Element {
                       isBestValue ? 'bg-ink text-paper' : 'bg-paper text-ink'
                     }`}
                   >
-                    {product.valuePosition}
+                    {pricing.valueLabel}
                   </p>
                   <h3 className="text-xl font-semibold tracking-tight">{product.name}</h3>
-                  <p className="text-base font-semibold text-ink">{product.pricingLabel}</p>
+                  <p className="text-base font-semibold text-ink">{pricing.displayPrice} {pricing.displayPeriodLabel}</p>
                   <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
                   <p className="text-sm leading-relaxed text-ink">
-                    <span className="font-medium">Value framing:</span> {product.valueFraming}
+                    <span className="font-medium">Value framing:</span> {pricing.comparisonHint}
                   </p>
                 </div>
 
