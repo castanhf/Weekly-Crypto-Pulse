@@ -5,8 +5,7 @@ import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
 import {
   getMissingProOfferEnvVarNames,
   getProCheckoutTarget,
-  hasMissingProOfferPaymentLink,
-  type ProOffer
+  hasMissingProOfferPaymentLink
 } from '@/lib/pro-offers';
 import { createProMetadata } from '@/lib/seo';
 
@@ -17,7 +16,7 @@ type FaqItem = Readonly<{
   answer: string;
 }>;
 
-const OFFER_CARDS: ReadonlyArray<ProOffer> = [...PRO_PRODUCT_IDS];
+const OFFER_CARDS = [...PRO_PRODUCT_IDS];
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -80,10 +79,10 @@ export default function ProPage(): JSX.Element {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {OFFER_CARDS.map((offer) => {
-            const product = getProProductDefinition(offer);
-            const checkoutTarget = getProCheckoutTarget(offer);
-            const isBestValue = offer === 'monthlyBundle';
+          {OFFER_CARDS.map((productId) => {
+            const product = getProProductDefinition(productId);
+            const checkoutTarget = getProCheckoutTarget(productId);
+            const isBestValue = productId === 'monthlyBundle';
 
             return (
               <article

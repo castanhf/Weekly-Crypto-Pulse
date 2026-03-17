@@ -43,4 +43,25 @@ describe('pro offers', () => {
     expect(hasMissingProOfferPaymentLink()).toBe(true);
     expect(getMissingProOfferEnvVarNames()).toEqual(['STRIPE_PAYMENT_LINK_WEEKLY_PRO']);
   });
+
+  it('treats non-stripe links as unavailable checkout', async () => {
+    vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', 'https://example.com/not-stripe');
+    vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'http://buy.stripe.com/insecure_link');
+
+    const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
+
+    expect(getProCheckoutTarget('singleIssue')).toEqual({
+      href: '/pro#checkout-unavailable',
+      isExternal: false
+    });
+    expect(getProCheckoutTarget('monthlyBundle')).toEqual({
+      href: '/pro#checkout-unavailable',
+      isExternal: false
+    });
+    expect(hasMissingProOfferPaymentLink()).toBe(true);
+    expect(getMissingProOfferEnvVarNames()).toEqual([
+      'STRIPE_PAYMENT_LINK_WEEKLY_PRO',
+      'STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE'
+    ]);
+  });
 });
