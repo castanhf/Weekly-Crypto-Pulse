@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { ProCta } from '@/components/pro/pro-cta';
+import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
 import { getContentTierDefinition } from '@/domain/content-tier';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
@@ -43,24 +44,35 @@ export default function HomePage(): JSX.Element {
       <header className="space-y-5 border-b border-line pb-8">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Weekly crypto research</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-          Institutional-grade signal for a market that moves 24/7.
+          Weekly coverage with a clear ladder from orientation to decision to continuity.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Weekly Crypto Pulse distills the noise into one concise report so operators can assess regime, flows, and
-          positioning faster.
+          Weekly Crypto Pulse publishes a public market read for orientation, then offers paid products for readers who
+          need a single-week decision brief or month-long follow-through.
         </p>
-        <Link
-          className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
-          href={latestReportHref}
-        >
-          Read latest report
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
+            href={latestReportHref}
+          >
+            Read latest free report
+          </Link>
+          <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
+            Compare paid offers
+          </Link>
+        </div>
       </header>
 
       <section className="space-y-4" aria-labelledby="latest-report-heading">
-        <h2 className="text-2xl font-semibold tracking-tight" id="latest-report-heading">
-          Latest report
-        </h2>
+        <div className="space-y-2">
+          <h2 className="text-2xl font-semibold tracking-tight" id="latest-report-heading">
+            Latest free report
+          </h2>
+          <p className="max-w-2xl text-sm leading-relaxed text-muted">
+            The public report is the orientation layer. It helps you identify the current setup before deciding whether
+            a weekly decision brief or a month-long bundle is warranted.
+          </p>
+        </div>
         <article className="space-y-4 border border-line bg-white p-6">
           <div className="space-y-1">
             <p className="text-sm text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
@@ -82,17 +94,18 @@ export default function HomePage(): JSX.Element {
             </div>
           </dl>
           <Link className="text-sm font-medium text-ink underline underline-offset-4" href={latestReportHref}>
-            Open full report
+            Open latest free report
           </Link>
         </article>
       </section>
 
       <section className="space-y-3" aria-labelledby="measures-heading">
         <h2 className="text-2xl font-semibold tracking-tight" id="measures-heading">
-          What we measure
+          What we measure each week
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Each issue tracks the same core indicators to keep weekly comparisons consistent and decision-ready.
+          Every issue follows the same measurement sequence so the public layer and paid layers stay comparable from one
+          week to the next.
         </p>
         <ul className="space-y-2 text-sm text-ink">
           {METRICS.map((metric) => (
@@ -103,14 +116,19 @@ export default function HomePage(): JSX.Element {
         </ul>
       </section>
 
-      <section className="space-y-4 border border-line bg-white p-6" aria-labelledby="pro-heading">
-        <h2 className="text-2xl font-semibold tracking-tight" id="pro-heading">
-          Weekly Crypto Pulse Pro
+      <TierDifferentiation
+        description="The distinction is functional. Free helps you understand the current environment. Weekly Pro helps you act on one issue. Monthly Bundle helps you keep the thesis connected across the month."
+        title="How each tier is meant to be used"
+      />
+
+      <section className="space-y-4 border border-line bg-white p-6" aria-labelledby="offers-heading">
+        <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
+          Choose the paid scope that matches the job
         </h2>
-        <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          {freeTier.name} gives {freeTier.editorialRole}. {weeklyProTier.name} supports {weeklyProTier.editorialRole}.
-          {' '}
-          {monthlyBundleTier.name} adds {monthlyBundleTier.editorialRole} across the month.
+        <p className="max-w-3xl text-sm leading-relaxed text-muted">
+          {freeTier.name} remains the public baseline. {weeklyProTier.name} is the entry offer when this week requires a
+          decision. {monthlyBundleTier.name} is the best-value offer when you want the month to remain connected from
+          issue to issue.
         </p>
         <div className="grid gap-3 md:grid-cols-3">
           {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => (
@@ -122,14 +140,14 @@ export default function HomePage(): JSX.Element {
           ))}
         </div>
         <div className="flex flex-wrap gap-3">
-          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
           <ProCta
             className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
-            label="Buy Monthly Bundle (best value)"
+            label="Buy Monthly Bundle — Best value"
             checkoutTarget={monthlyBundleCheckoutTarget}
           />
           <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
-            Compare offers
+            View full comparison
           </Link>
         </div>
       </section>

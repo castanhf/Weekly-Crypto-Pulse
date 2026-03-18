@@ -10,6 +10,8 @@ describe('content tiers', () => {
   it('defines free as the orientation tier', () => {
     expect(getContentTierDefinition('free')).toMatchObject({
       editorialRole: 'orientation',
+      workflowMoment: 'Use before you decide whether deeper follow-through is necessary.',
+      primaryQuestion: 'What is the market environment right now?',
       includedContentBlocks: ['archiveAccess', 'latestReportRead', 'marketSnapshotMetrics', 'methodologyAndDisclaimer']
     });
   });
@@ -17,6 +19,8 @@ describe('content tiers', () => {
   it('defines weekly pro as the decision tier', () => {
     expect(getContentTierDefinition('weeklyPro')).toMatchObject({
       editorialRole: 'decision',
+      workflowMoment: 'Use when the current week requires a concrete decision, not just awareness.',
+      primaryQuestion: 'How should this week change my posture or watchlist?',
       includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage']
     });
   });
@@ -24,6 +28,8 @@ describe('content tiers', () => {
   it('defines monthly bundle as the continuity tier', () => {
     expect(getContentTierDefinition('monthlyBundle')).toMatchObject({
       editorialRole: 'continuity',
+      workflowMoment: 'Use when one issue is not enough and you want the month to stay connected from week to week.',
+      primaryQuestion: 'How is the market thesis developing across the full month?',
       includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'monthlyContinuity', 'crossIssueTracking']
     });
   });
