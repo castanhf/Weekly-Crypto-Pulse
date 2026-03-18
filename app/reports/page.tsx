@@ -43,7 +43,7 @@ export default function ReportsPage(): JSX.Element {
                 </h2>
                 <p className="max-w-3xl text-sm leading-relaxed text-muted">{report.metadata.summary}</p>
                 <Link className="inline-flex text-sm font-medium text-ink underline underline-offset-4" href={reportUrl}>
-                  Read full report
+                  Read free report
                 </Link>
               </article>
             </li>

@@ -46,7 +46,7 @@ export default function ProPage(): JSX.Element {
     <section className="space-y-8">
       <header className="space-y-3 border-b border-line pb-6">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
+        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Free, Weekly Pro, and Monthly Bundle.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
           The value hierarchy is functional rather than promotional. Free helps you read the current market. Weekly Pro
           helps you work one issue into a decision. Monthly Bundle helps you keep several weekly decisions connected.

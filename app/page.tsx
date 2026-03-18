@@ -44,7 +44,7 @@ export default function HomePage(): JSX.Element {
       <header className="space-y-5 border-b border-line pb-8">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Weekly crypto research</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-          Institutional-grade signal with a clear ladder from orientation to decision to continuity.
+          Weekly coverage with a clear ladder from orientation to decision to continuity.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Weekly Crypto Pulse publishes a public market read for orientation, then offers paid products for readers who
@@ -55,7 +55,7 @@ export default function HomePage(): JSX.Element {
             className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
             href={latestReportHref}
           >
-            Read latest report
+            Read latest free report
           </Link>
           <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
             Compare paid offers
