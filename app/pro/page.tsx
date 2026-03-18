@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
-import { CONTENT_TIER_IDS, getContentBlockLabel, getContentTierDefinition } from '@/domain/content-tier';
+import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
 import { getProPricingDefinition } from '@/domain/pro-pricing';
 import {
@@ -19,7 +19,6 @@ type FaqItem = Readonly<{
 }>;
 
 const OFFER_CARDS = [...PRO_PRODUCT_IDS];
-const EDITORIAL_TIER_CARDS = [...CONTENT_TIER_IDS];
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -47,10 +46,10 @@ export default function ProPage(): JSX.Element {
     <section className="space-y-8">
       <header className="space-y-3 border-b border-line pb-6">
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
+        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Free, Weekly Pro, and Monthly Bundle.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Free is for orientation. Weekly Pro is for decision support. Monthly Bundle is for continuity across the
-          month.
+          The value hierarchy is functional rather than promotional. Free helps you read the current market. Weekly Pro
+          helps you work one issue into a decision. Monthly Bundle helps you keep several weekly decisions connected.
         </p>
       </header>
 
@@ -69,75 +68,26 @@ export default function ProPage(): JSX.Element {
         </section>
       ) : null}
 
-      <section aria-labelledby="editorial-hierarchy-heading" className="space-y-4">
+      <TierDifferentiation
+        description="Each tier answers a different reader need: public orientation, a single-week decision brief, or continuity across the month."
+        title="Editorial hierarchy by function"
+      />
+
+      <section aria-labelledby="offers-heading" className="space-y-4">
         <div className="space-y-2">
-          <h2 className="text-2xl font-semibold tracking-tight" id="editorial-hierarchy-heading">
-            Editorial value hierarchy
+          <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
+            Paid one-time products
           </h2>
           <p className="max-w-3xl text-sm leading-relaxed text-muted">
-            The tiers use one editorial ladder: Free gives orientation, Weekly Pro supports the current decision, and
-            Monthly Bundle maintains continuity as new issues are published.
+            Both paid products use Stripe Payment Links, remain one-time purchases, and map to two distinct jobs: one
+            issue when the current setup matters most, or four issues when continuity across the month matters more.
           </p>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3">
-          {EDITORIAL_TIER_CARDS.map((tierId) => {
-            const tier = getContentTierDefinition(tierId);
-
-            return (
-              <article className="space-y-4 border border-line bg-white p-5" key={tier.id}>
-                <div className="space-y-2">
-                  <p className="inline-flex bg-paper px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink">
-                    {tier.editorialRole}
-                  </p>
-                  <h3 className="text-xl font-semibold tracking-tight">{tier.name}</h3>
-                  <p className="text-sm leading-relaxed text-muted">{tier.purpose}</p>
-                </div>
-
-                <div className="space-y-3 text-sm">
-                  <section className="space-y-1">
-                    <h4 className="font-semibold">Reader need</h4>
-                    <p className="text-muted">{tier.targetReaderNeed}</p>
-                  </section>
-
-                  <section className="space-y-2">
-                    <h4 className="font-semibold">Included content blocks</h4>
-                    <ul className="list-disc space-y-1 pl-5 text-ink">
-                      {tier.includedContentBlocks.map((contentBlockId) => (
-                        <li key={contentBlockId}>{getContentBlockLabel(contentBlockId)}</li>
-                      ))}
-                    </ul>
-                  </section>
-
-                  <section className="space-y-2">
-                    <h4 className="font-semibold">Excluded content blocks</h4>
-                    <ul className="list-disc space-y-1 pl-5 text-muted">
-                      {tier.excludedContentBlocks.map((contentBlockId) => (
-                        <li key={contentBlockId}>{getContentBlockLabel(contentBlockId)}</li>
-                      ))}
-                    </ul>
-                  </section>
-
-                  <section className="space-y-1">
-                    <h4 className="font-semibold">Editorial role</h4>
-                    <p className="text-muted">{tier.valueHierarchyLabel}</p>
-                  </section>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section aria-labelledby="offers-heading" className="space-y-4">
-        <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
-          Paid one-time products
-        </h2>
-
         <div className="rounded border border-line bg-paper p-4 text-sm text-ink">
           <p>
-            <span className="font-semibold">Value hierarchy:</span> Single Issue is the entry product. Monthly Bundle is
-            the best value product.
+            <span className="font-semibold">Pricing hierarchy:</span> Single Issue is the entry offer for one decision
+            cycle. Monthly Bundle is the best-value offer for continuity across the month.
           </p>
         </div>
 
@@ -167,13 +117,16 @@ export default function ProPage(): JSX.Element {
                   </p>
                   <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
                   <p className="text-sm leading-relaxed text-ink">
+                    <span className="font-medium">Best used when:</span> {product.audience}
+                  </p>
+                  <p className="text-sm leading-relaxed text-ink">
                     <span className="font-medium">Value framing:</span> {pricing.comparisonHint}
                   </p>
                 </div>
 
                 <div className="space-y-3 text-sm">
                   <section aria-label={`${product.name} includes`} className="space-y-2">
-                    <h4 className="font-semibold">Includes</h4>
+                    <h4 className="font-semibold">Functionally includes</h4>
                     <ul className="list-disc space-y-2 pl-5 text-ink">
                       {product.includes.map((deliverable) => (
                         <li key={deliverable}>{deliverable}</li>
@@ -181,13 +134,8 @@ export default function ProPage(): JSX.Element {
                     </ul>
                   </section>
 
-                  <section aria-label={`${product.name} audience`} className="space-y-1">
-                    <h4 className="font-semibold">Who it is for</h4>
-                    <p className="text-muted">{product.audience}</p>
-                  </section>
-
                   <section aria-label={`${product.name} delivery`} className="space-y-1">
-                    <h4 className="font-semibold">How delivery works</h4>
+                    <h4 className="font-semibold">Delivery model</h4>
                     <p className="text-muted">{product.deliveryModel}</p>
                   </section>
 

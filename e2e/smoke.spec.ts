@@ -21,9 +21,9 @@ const getLatestReportSlug = (): string => {
 test('homepage renders and links to latest report', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Institutional-grade signal');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Weekly coverage with a clear ladder');
 
-  const latestReportLink = page.getByRole('link', { name: 'Read latest report' });
+  const latestReportLink = page.getByRole('link', { name: 'Read latest free report' });
   await expect(latestReportLink).toBeVisible();
   await expect(latestReportLink).toHaveAttribute('href', `/reports/${getLatestReportSlug()}`);
 });
@@ -39,7 +39,7 @@ test('/reports lists report items', async ({ page }) => {
 test('/reports/[slug] renders report headings', async ({ page }) => {
   await page.goto('/reports');
 
-  const firstReportLink = page.getByRole('link', { name: 'Read full report' }).first();
+  const firstReportLink = page.getByRole('link', { name: 'Read free report' }).first();
   await expect(firstReportLink).toBeVisible();
   await firstReportLink.click();
 
@@ -51,7 +51,7 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
 test('/pro renders and includes primary CTA', async ({ page }) => {
   await page.goto('/pro');
 
-  await expect(page.getByRole('heading', { level: 1, name: 'Clear weekly offer: Free vs Pro.' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'Free, Weekly Pro, and Monthly Bundle.' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toBeVisible();
 });
 
