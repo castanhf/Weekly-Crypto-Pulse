@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
+import { CONTENT_TIER_IDS, getContentBlockLabel, getContentTierDefinition } from '@/domain/content-tier';
 import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
 import { getProPricingDefinition } from '@/domain/pro-pricing';
 import {
@@ -18,6 +19,7 @@ type FaqItem = Readonly<{
 }>;
 
 const OFFER_CARDS = [...PRO_PRODUCT_IDS];
+const EDITORIAL_TIER_CARDS = [...CONTENT_TIER_IDS];
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -47,8 +49,8 @@ export default function ProPage(): JSX.Element {
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Clear weekly offer: Free vs Pro.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Free is for orientation. Pro is for decision support. Choose a Single Issue as the entry option or the Monthly
-          Bundle for better per-issue value and continuity.
+          Free is for orientation. Weekly Pro is for decision support. Monthly Bundle is for continuity across the
+          month.
         </p>
       </header>
 
@@ -66,6 +68,66 @@ export default function ProPage(): JSX.Element {
           </p>
         </section>
       ) : null}
+
+      <section aria-labelledby="editorial-hierarchy-heading" className="space-y-4">
+        <div className="space-y-2">
+          <h2 className="text-2xl font-semibold tracking-tight" id="editorial-hierarchy-heading">
+            Editorial value hierarchy
+          </h2>
+          <p className="max-w-3xl text-sm leading-relaxed text-muted">
+            The tiers use one editorial ladder: Free gives orientation, Weekly Pro supports the current decision, and
+            Monthly Bundle maintains continuity as new issues are published.
+          </p>
+        </div>
+
+        <div className="grid gap-4 lg:grid-cols-3">
+          {EDITORIAL_TIER_CARDS.map((tierId) => {
+            const tier = getContentTierDefinition(tierId);
+
+            return (
+              <article className="space-y-4 border border-line bg-white p-5" key={tier.id}>
+                <div className="space-y-2">
+                  <p className="inline-flex bg-paper px-2 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink">
+                    {tier.editorialRole}
+                  </p>
+                  <h3 className="text-xl font-semibold tracking-tight">{tier.name}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{tier.purpose}</p>
+                </div>
+
+                <div className="space-y-3 text-sm">
+                  <section className="space-y-1">
+                    <h4 className="font-semibold">Reader need</h4>
+                    <p className="text-muted">{tier.targetReaderNeed}</p>
+                  </section>
+
+                  <section className="space-y-2">
+                    <h4 className="font-semibold">Included content blocks</h4>
+                    <ul className="list-disc space-y-1 pl-5 text-ink">
+                      {tier.includedContentBlocks.map((contentBlockId) => (
+                        <li key={contentBlockId}>{getContentBlockLabel(contentBlockId)}</li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  <section className="space-y-2">
+                    <h4 className="font-semibold">Excluded content blocks</h4>
+                    <ul className="list-disc space-y-1 pl-5 text-muted">
+                      {tier.excludedContentBlocks.map((contentBlockId) => (
+                        <li key={contentBlockId}>{getContentBlockLabel(contentBlockId)}</li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  <section className="space-y-1">
+                    <h4 className="font-semibold">Editorial role</h4>
+                    <p className="text-muted">{tier.valueHierarchyLabel}</p>
+                  </section>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
       <section aria-labelledby="offers-heading" className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight" id="offers-heading">
@@ -100,7 +162,9 @@ export default function ProPage(): JSX.Element {
                     {pricing.valueLabel}
                   </p>
                   <h3 className="text-xl font-semibold tracking-tight">{product.name}</h3>
-                  <p className="text-base font-semibold text-ink">{pricing.displayPrice} {pricing.displayPeriodLabel}</p>
+                  <p className="text-base font-semibold text-ink">
+                    {pricing.displayPrice} {pricing.displayPeriodLabel}
+                  </p>
                   <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
                   <p className="text-sm leading-relaxed text-ink">
                     <span className="font-medium">Value framing:</span> {pricing.comparisonHint}

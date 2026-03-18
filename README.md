@@ -9,6 +9,14 @@ Static-first Next.js scaffold for a weekly crypto editorial web app.
 - `NEXT_PUBLIC_SITE_URL`: Canonical site URL used for metadata and share links (for example `https://weeklycryptopulse.com`).
 - `NEXT_PUBLIC_X_HANDLE`: Optional X handle used in Twitter/X metadata (for example `@weeklycryptopulse`).
 
+Set these environment variables in Vercel for both Preview and Production deployments.
+
+## Editorial tiers
+
+- **Free = orientation:** public pages and report context help readers understand the week.
+- **Weekly Pro = decision:** one paid issue provides the decision-ready brief for the current week.
+- **Monthly Bundle = continuity:** a one-time bundle extends Weekly Pro across the month for consistent follow-through.
+
 ## Report data
 
 Reports are loaded from local JSON files in `data/reports`.
