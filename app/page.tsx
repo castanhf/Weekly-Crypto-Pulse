@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
+import { getContentTierDefinition } from '@/domain/content-tier';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
 import { getLatestReport } from '@/lib/reports/report-repository';
 import { createHomeMetadata } from '@/lib/seo';
@@ -33,6 +34,9 @@ export default function HomePage(): JSX.Element {
   const latestReportHref = `/reports/${latestReport.metadata.slug}`;
   const weeklyProCheckoutTarget = getProCheckoutTarget('singleIssue');
   const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
+  const freeTier = getContentTierDefinition('free');
+  const weeklyProTier = getContentTierDefinition('weeklyPro');
+  const monthlyBundleTier = getContentTierDefinition('monthlyBundle');
 
   return (
     <section className="space-y-12">
@@ -104,9 +108,19 @@ export default function HomePage(): JSX.Element {
           Weekly Crypto Pulse Pro
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-muted">
-          Free gives orientation. Pro supports decisions. Start with the Single Issue when you need one week, or choose
-          the Monthly Bundle for best value per issue and continuity.
+          {freeTier.name} gives {freeTier.editorialRole}. {weeklyProTier.name} supports {weeklyProTier.editorialRole}.
+          {' '}
+          {monthlyBundleTier.name} adds {monthlyBundleTier.editorialRole} across the month.
         </p>
+        <div className="grid gap-3 md:grid-cols-3">
+          {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => (
+            <article className="border border-line p-4" key={tier.id}>
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">{tier.editorialRole}</p>
+              <h3 className="mt-1 text-base font-semibold tracking-tight">{tier.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{tier.targetReaderNeed}</p>
+            </article>
+          ))}
+        </div>
         <div className="flex flex-wrap gap-3">
           <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
           <ProCta
