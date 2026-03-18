@@ -1,5 +1,7 @@
 # Product operations: one-time paid products
 
+For canonical editorial tier definitions, see `domain/content-tier.ts` and `docs/monetization/content-tiers.md`.
+
 ## Product definitions
 
 ### Weekly Crypto Pulse Pro — Single Issue
