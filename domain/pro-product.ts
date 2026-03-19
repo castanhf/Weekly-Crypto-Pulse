@@ -15,29 +15,36 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
   singleIssue: {
     id: 'singleIssue',
     name: 'Weekly Crypto Pulse Pro — Single Issue',
-    shortDescription: 'Entry offer for one week when the current setup needs a concrete decision, not just awareness.',
-    audience: 'You want a deeper read for this week only and do not need month-long continuity.',
+    shortDescription: 'Entry offer for one week when the free report frames the setup but a decision still has to be made.',
+    audience: 'You want this week turned into a decision memo and do not need the thesis carried across the rest of the month.',
     includes: [
       'One Pro weekly report for the selected issue',
-      'Full narrative: regime, factor flow, and rotation context for that week',
+      'Decision memo for that week: posture, scenario framing, and invalidation',
       'Signals package: thesis bullets, risk checklist, and watchlist levels for the current decision cycle'
     ],
-    excludes: ['No subscription billing', 'No user account or entitlement system', 'No database-backed access management'],
+    excludes: [
+      'No subscription billing',
+      'No user account or entitlement system',
+      'No database-backed access management',
+      'No cross-week continuity layer beyond the selected issue'
+    ],
     deliveryModel: 'One-time Stripe Payment Link checkout with fulfillment tied to Stripe payment records.',
     ctaLabel: 'Buy Single Issue'
   },
   monthlyBundle: {
     id: 'monthlyBundle',
     name: 'Weekly Crypto Pulse Pro — Monthly Bundle',
-    shortDescription: 'Best-value offer when you want to track how the thesis evolves across the month.',
-    audience: 'You want continuity across four weekly issues so the narrative and risk changes stay connected.',
+    shortDescription: 'Best-value offer for a continuity workflow, not just a discount on four isolated reports.',
+    audience: 'You want weekly decisions to compound across the month, with a month-end view of what persisted, changed, or failed.',
     includes: [
       'Four Pro weekly issues for the active month',
-      'The same full report structure each week to keep comparisons consistent',
+      'Cross-issue continuity through a consistent weekly structure and carry-forward context',
+      'One month-end summary artifact that reconciles recurring thesis points, regime distribution, and key movers',
       'Better per-issue value than buying each issue individually when continuity matters'
     ],
     excludes: ['No subscription billing', 'No user account or entitlement system', 'No database-backed access management'],
-    deliveryModel: 'One-time Stripe Payment Link checkout with fulfillment tied to Stripe payment records.',
+    deliveryModel:
+      'One-time Stripe Payment Link checkout with weekly fulfillment across the purchased month plus a month-end summary.',
     ctaLabel: 'Buy Monthly Bundle'
   }
 } as const;

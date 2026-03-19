@@ -37,12 +37,12 @@ export const PRO_FULFILLMENT_DEFINITIONS: ProductFulfillmentMap = {
   singleIssue: {
     productId: 'singleIssue',
     deliveryChannel: 'manualEmail',
-    deliverySummary: 'One Pro weekly report delivered once after purchase confirmation.',
+    deliverySummary: 'One Pro weekly decision report delivered once after purchase confirmation.',
     deliverables: [
       {
         type: 'weeklyProReport',
         quantity: 1,
-        description: 'Selected Pro weekly report for the purchased issue.',
+        description: 'Selected Pro weekly decision report for the purchased issue.',
         timing: 'afterPaymentConfirmation'
       }
     ],
@@ -51,18 +51,19 @@ export const PRO_FULFILLMENT_DEFINITIONS: ProductFulfillmentMap = {
   monthlyBundle: {
     productId: 'monthlyBundle',
     deliveryChannel: 'manualEmail',
-    deliverySummary: 'Four Pro weekly reports delivered across the purchased month plus one monthly summary at month end.',
+    deliverySummary:
+      'Four Pro weekly decision reports delivered across the purchased month plus one month-end continuity summary.',
     deliverables: [
       {
         type: 'weeklyProReport',
         quantity: 4,
-        description: 'Four Pro weekly reports for the purchased month.',
+        description: 'Four Pro weekly decision reports for the purchased month.',
         timing: 'acrossPurchasedMonth'
       },
       {
         type: 'monthlyProSummary',
         quantity: 1,
-        description: 'Monthly Pro summary covering the purchased month.',
+        description: 'Month-end continuity summary covering recurring thesis points, regime shifts, and key movers.',
         timing: 'monthEndPurchasedMonth'
       }
     ],

@@ -11,7 +11,7 @@ describe('getProductFulfillmentDefinition', () => {
       {
         type: 'weeklyProReport',
         quantity: 1,
-        description: 'Selected Pro weekly report for the purchased issue.',
+        description: 'Selected Pro weekly decision report for the purchased issue.',
         timing: 'afterPaymentConfirmation'
       }
     ]);
@@ -25,13 +25,13 @@ describe('getProductFulfillmentDefinition', () => {
       {
         type: 'weeklyProReport',
         quantity: 4,
-        description: 'Four Pro weekly reports for the purchased month.',
+        description: 'Four Pro weekly decision reports for the purchased month.',
         timing: 'acrossPurchasedMonth'
       },
       {
         type: 'monthlyProSummary',
         quantity: 1,
-        description: 'Monthly Pro summary covering the purchased month.',
+        description: 'Month-end continuity summary covering recurring thesis points, regime shifts, and key movers.',
         timing: 'monthEndPurchasedMonth'
       }
     ]);

@@ -48,8 +48,8 @@ export default function ProPage(): JSX.Element {
         <p className="text-sm uppercase tracking-[0.18em] text-muted">Pricing</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">Free, Weekly Pro, and Monthly Bundle.</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          The value hierarchy is functional rather than promotional. Free helps you read the current market. Weekly Pro
-          helps you work one issue into a decision. Monthly Bundle helps you keep several weekly decisions connected.
+          The hierarchy is editorial, not promotional. Free is for orientation. Weekly Pro is for a single decision.
+          Monthly Bundle is for continuity across the month.
         </p>
       </header>
 
@@ -68,8 +68,16 @@ export default function ProPage(): JSX.Element {
         </section>
       ) : null}
 
+      <section className="rounded border border-line bg-paper p-4 text-sm text-ink">
+        <p>
+          <span className="font-semibold">Where the line moves:</span> Free tells you what changed. Weekly Pro tells
+          you what to do with this week. Monthly Bundle keeps the thesis connected so each weekly decision is carried
+          into the next one and resolved at month end.
+        </p>
+      </section>
+
       <TierDifferentiation
-        description="Each tier answers a different reader need: public orientation, a single-week decision brief, or continuity across the month."
+        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
         title="Editorial hierarchy by function"
       />
 
@@ -79,15 +87,17 @@ export default function ProPage(): JSX.Element {
             Paid one-time products
           </h2>
           <p className="max-w-3xl text-sm leading-relaxed text-muted">
-            Both paid products use Stripe Payment Links, remain one-time purchases, and map to two distinct jobs: one
-            issue when the current setup matters most, or four issues when continuity across the month matters more.
+            Both paid products use Stripe Payment Links and remain one-time purchases. The distinction is the job to be
+            done: one issue when the current setup needs a decision now, or a continuity workflow when the full month
+            needs to stay connected.
           </p>
         </div>
 
         <div className="rounded border border-line bg-paper p-4 text-sm text-ink">
           <p>
             <span className="font-semibold">Pricing hierarchy:</span> Single Issue is the entry offer for one decision
-            cycle. Monthly Bundle is the best-value offer for continuity across the month.
+            cycle. Monthly Bundle is the best-value offer because it adds continuity and a month-end synthesis, not
+            just more files.
           </p>
         </div>
 
