@@ -42,14 +42,19 @@ This runbook defines a repeatable Pro fulfillment workflow for one-time purchase
 
 ```bash
 # Single Issue
-npm run generate:pro -- --product singleIssue --slug <report-slug>
+npm run generate:pro -- --product singleIssue --slug <report-slug> \
+  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 
 # Monthly Bundle (auto-select exactly four reports in the month)
-npm run generate:pro -- --product monthlyBundle --month <YYYY-MM>
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> \
+  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 
 # Monthly Bundle (explicit report selection)
-npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> --slugs <slug1,slug2,slug3,slug4>
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> --slugs <slug1,slug2,slug3,slug4> \
+  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 ```
+
+Buyer-specific watermarking is driven entirely by CLI input. The generator masks the buyer email, truncates the order reference, and renders the purchase date as `YYYY-MM-DD` on each major section when buyer metadata is supplied.
 
 4. Confirm outputs exist:
 
@@ -72,10 +77,12 @@ data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
 Run generation twice with the same inputs and verify no diff:
 
 ```bash
-npm run generate:pro -- --product singleIssue --slug <report-slug>
+npm run generate:pro -- --product singleIssue --slug <report-slug> \
+  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 git diff -- data/pro-packs/<report-slug>.md
 
-npm run generate:pro -- --product monthlyBundle --month <YYYY-MM>
+npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> \
+  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 git diff -- data/pro-packs/monthly-bundles/<YYYY-MM>-bundle.md data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
 ```
 

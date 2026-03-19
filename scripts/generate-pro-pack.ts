@@ -1,17 +1,13 @@
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import type { ProProductId } from '@/domain/pro-product';
+import { PRO_PRODUCT_IDS, type ProProductId } from '../domain/pro-product';
 import type { Report } from '../domain/report';
-
-type Watermark = Readonly<{
-  buyerEmail: string;
-  orderRef: string;
-}>;
+import { assertBuyerEmail, toBuyerWatermarkLine, type BuyerWatermark } from '../lib/pro-pack-watermark';
 
 type BaseCliArgs = Readonly<{
   product: ProProductId;
-  watermark?: Watermark;
+  watermark?: BuyerWatermark;
 }>;
 
 type SingleIssueCliArgs = BaseCliArgs &
@@ -56,45 +52,60 @@ const formatPercent = (value: number): string => `${value.toFixed(2)}%`;
 
 const formatList = (items: ReadonlyArray<string>): string => (items.length === 0 ? '- None' : items.map((item) => `- ${item}`).join('\n'));
 
-const formatSubSection = (heading: string, body: string, highlights: ReadonlyArray<string>): string => [
-  `### ${heading}`,
-  '',
-  body,
-  '',
-  'Highlights',
-  '',
-  formatList(highlights)
-].join('\n');
-
-const formatWatermarkSection = (watermark?: Watermark): string => {
-  if (!watermark) {
-    return ['## License and watermark', '', 'License: Personal use only. Redistribution is not allowed.'].join('\n');
-  }
+const createMarkdownSection = (
+  heading: string,
+  content: string | ReadonlyArray<string>,
+  watermark?: BuyerWatermark,
+  level = 2
+): string => {
+  const lines = Array.isArray(content) ? [...content] : [content];
+  const watermarkLine = toBuyerWatermarkLine(watermark);
+  const headingPrefix = '#'.repeat(level);
 
   return [
-    '## License and watermark',
+    `${headingPrefix} ${heading}`,
+    ...(watermarkLine ? ['', watermarkLine] : []),
     '',
-    'License: Personal use only. Redistribution is not allowed.',
-    `Buyer watermark: ${watermark.buyerEmail} · ${watermark.orderRef}`
+    ...lines
   ].join('\n');
 };
 
-const formatReportHeader = (report: Report): string => {
+const formatSubSection = (heading: string, body: string, highlights: ReadonlyArray<string>, watermark?: BuyerWatermark): string =>
+  createMarkdownSection(
+    heading,
+    [body, '', 'Highlights', '', formatList(highlights)],
+    watermark,
+    3
+  );
+
+const formatWatermarkSection = (watermark?: BuyerWatermark): string =>
+  createMarkdownSection(
+    'License and watermark',
+    [
+      'License: Personal use only. Redistribution is not allowed.',
+      watermark ? `Buyer watermark: ${toBuyerWatermarkLine(watermark)?.replace(/^>\s*/, '')}` : 'Buyer watermark: Generated only when buyer metadata is supplied.'
+    ],
+    watermark
+  );
+
+const formatReportHeader = (report: Report, watermark?: BuyerWatermark): string => {
   const { metadata } = report;
 
-  return [
-    '## Report metadata',
-    '',
-    `- Title: ${metadata.title}`,
-    `- Slug: ${metadata.slug}`,
-    `- Week: ${metadata.weekLabel}`,
-    `- Published at: ${metadata.publishedAt}`,
-    `- Regime: ${report.regime}`,
-    `- Tags: ${metadata.tags.join(', ')}`
-  ].join('\n');
+  return createMarkdownSection(
+    'Report metadata',
+    [
+      `- Title: ${metadata.title}`,
+      `- Slug: ${metadata.slug}`,
+      `- Week: ${metadata.weekLabel}`,
+      `- Published at: ${metadata.publishedAt}`,
+      `- Regime: ${report.regime}`,
+      `- Tags: ${metadata.tags.join(', ')}`
+    ],
+    watermark
+  );
 };
 
-const toSingleIssueMarkdown = (report: Report, watermark?: Watermark): string => {
+const toSingleIssueMarkdown = (report: Report, watermark?: BuyerWatermark): string => {
   const { metadata, marketSnapshot, movers, sections, signals } = report;
 
   const moversBlock = movers
@@ -105,53 +116,45 @@ const toSingleIssueMarkdown = (report: Report, watermark?: Watermark): string =>
     .map((level) => `- **${level.asset}** at \`${level.level}\`: ${level.context}`)
     .join('\n');
 
-  const sectionBlocks = sections.map((section) => formatSubSection(section.heading, section.body, section.highlights)).join('\n\n');
+  const sectionBlocks = sections.map((section) => formatSubSection(section.heading, section.body, section.highlights, watermark)).join('\n\n');
 
   return [
     '# Weekly Crypto Pulse Pro Pack — Single Issue',
     '',
-    formatReportHeader(report),
+    formatReportHeader(report, watermark),
     '',
-    '## Executive summary',
+    createMarkdownSection('Executive summary', metadata.summary, watermark),
     '',
-    metadata.summary,
+    createMarkdownSection(
+      'Market snapshot',
+      [
+        `- Total market cap: ${formatUsd(marketSnapshot.totalMarketCapUsd)}`,
+        `- BTC dominance: ${formatPercent(marketSnapshot.btcDominancePct)}`,
+        `- ETH dominance: ${formatPercent(marketSnapshot.ethDominancePct)}`,
+        `- Fear & Greed index: ${marketSnapshot.fearGreedIndex}`
+      ],
+      watermark
+    ),
     '',
-    '## Market snapshot',
+    createMarkdownSection('Movers (7d)', moversBlock.length > 0 ? moversBlock : '- None', watermark),
     '',
-    `- Total market cap: ${formatUsd(marketSnapshot.totalMarketCapUsd)}`,
-    `- BTC dominance: ${formatPercent(marketSnapshot.btcDominancePct)}`,
-    `- ETH dominance: ${formatPercent(marketSnapshot.ethDominancePct)}`,
-    `- Fear & Greed index: ${marketSnapshot.fearGreedIndex}`,
+    createMarkdownSection('Deep dive sections', sectionBlocks.length > 0 ? sectionBlocks : 'No sections available.', watermark),
     '',
-    '## Movers (7d)',
+    createMarkdownSection('Actionable thesis', formatList(signals.thesis), watermark),
     '',
-    moversBlock.length > 0 ? moversBlock : '- None',
+    createMarkdownSection('Risk checklist', formatList(signals.riskChecklist), watermark),
     '',
-    '## Deep dive sections',
+    createMarkdownSection('What changed since last week', formatList(signals.changedSinceLastWeek), watermark),
     '',
-    sectionBlocks.length > 0 ? sectionBlocks : 'No sections available.',
-    '',
-    '## Actionable thesis',
-    '',
-    formatList(signals.thesis),
-    '',
-    '## Risk checklist',
-    '',
-    formatList(signals.riskChecklist),
-    '',
-    '## What changed since last week',
-    '',
-    formatList(signals.changedSinceLastWeek),
-    '',
-    '## Watchlist levels',
-    '',
-    watchlistBlock.length > 0 ? watchlistBlock : '- None',
+    createMarkdownSection('Watchlist levels', watchlistBlock.length > 0 ? watchlistBlock : '- None', watermark),
     '',
     formatWatermarkSection(watermark),
     '',
-    '## Fulfillment note',
-    '',
-    'This markdown is deterministic for a given report slug and input watermark and is suitable for direct delivery or PDF conversion.'
+    createMarkdownSection(
+      'Fulfillment note',
+      'This markdown is deterministic for a given report slug and input watermark and is suitable for direct delivery or PDF conversion.',
+      watermark
+    )
   ].join('\n');
 };
 
@@ -232,7 +235,7 @@ const aggregateMonthlySummary = (month: string, weeklyReports: ReadonlyArray<Rep
   };
 };
 
-const toMonthlySummaryMarkdown = (summary: MonthlySummary, watermark?: Watermark): string => {
+const toMonthlySummaryMarkdown = (summary: MonthlySummary, watermark?: BuyerWatermark): string => {
   const weeklyReferenceLines = summary.weeklyReports
     .map((report) => `- ${report.metadata.weekLabel}: ${report.metadata.title} (\`${report.metadata.slug}\`)`)
     .join('\n');
@@ -248,40 +251,43 @@ const toMonthlySummaryMarkdown = (summary: MonthlySummary, watermark?: Watermark
   return [
     '# Weekly Crypto Pulse Pro — Monthly Summary',
     '',
-    `## Month: ${summary.month}`,
+    createMarkdownSection('Month', summary.month, watermark),
     '',
-    '## Weekly reports included',
+    createMarkdownSection('Weekly reports included', weeklyReferenceLines.length > 0 ? weeklyReferenceLines : '- None', watermark),
     '',
-    weeklyReferenceLines,
+    createMarkdownSection(
+      'Monthly aggregate snapshot',
+      [
+        `- Average total market cap: ${formatUsd(summary.averageMarketCapUsd)}`,
+        `- Average BTC dominance: ${formatPercent(summary.averageBtcDominancePct)}`,
+        `- Average ETH dominance: ${formatPercent(summary.averageEthDominancePct)}`,
+        `- Average Fear & Greed index: ${summary.averageFearGreedIndex.toFixed(2)}`
+      ],
+      watermark
+    ),
     '',
-    '## Monthly aggregate snapshot',
+    createMarkdownSection('Regime distribution', regimeLines.length > 0 ? regimeLines : '- None', watermark),
     '',
-    `- Average total market cap: ${formatUsd(summary.averageMarketCapUsd)}`,
-    `- Average BTC dominance: ${formatPercent(summary.averageBtcDominancePct)}`,
-    `- Average ETH dominance: ${formatPercent(summary.averageEthDominancePct)}`,
-    `- Average Fear & Greed index: ${summary.averageFearGreedIndex.toFixed(2)}`,
+    createMarkdownSection('Top movers across the month (absolute 7d change)', moversLines.length > 0 ? moversLines : '- None', watermark),
     '',
-    '## Regime distribution',
-    '',
-    regimeLines.length > 0 ? regimeLines : '- None',
-    '',
-    '## Top movers across the month (absolute 7d change)',
-    '',
-    moversLines.length > 0 ? moversLines : '- None',
-    '',
-    '## Recurring thesis points',
-    '',
-    recurringThesisLines.length > 0 ? recurringThesisLines : '- None',
+    createMarkdownSection('Recurring thesis points', recurringThesisLines.length > 0 ? recurringThesisLines : '- None', watermark),
     '',
     formatWatermarkSection(watermark),
     '',
-    '## Fulfillment note',
-    '',
-    'This summary is deterministically assembled from exactly four weekly report artifacts for the requested month.'
+    createMarkdownSection(
+      'Fulfillment note',
+      'This summary is deterministically assembled from exactly four weekly report artifacts for the requested month.',
+      watermark
+    )
   ].join('\n');
 };
 
-const toMonthlyBundleAssemblyMarkdown = (month: string, weeklyReports: ReadonlyArray<Report>, monthlySummaryFileName: string, watermark?: Watermark): string => {
+const toMonthlyBundleAssemblyMarkdown = (
+  month: string,
+  weeklyReports: ReadonlyArray<Report>,
+  monthlySummaryFileName: string,
+  watermark?: BuyerWatermark
+): string => {
   const references = weeklyReports
     .map(
       (report, index) =>
@@ -292,21 +298,15 @@ const toMonthlyBundleAssemblyMarkdown = (month: string, weeklyReports: ReadonlyA
   return [
     '# Weekly Crypto Pulse Pro Pack — Monthly Bundle',
     '',
-    `## Month: ${month}`,
+    createMarkdownSection('Month', month, watermark),
     '',
-    '## Weekly report references (4)',
+    createMarkdownSection('Weekly report references (4)', references, watermark),
     '',
-    references,
-    '',
-    '## Monthly summary artifact',
-    '',
-    `- File: \`${monthlySummaryFileName}\``,
+    createMarkdownSection('Monthly summary artifact', `- File: \`${monthlySummaryFileName}\``, watermark),
     '',
     formatWatermarkSection(watermark),
     '',
-    '## Fulfillment note',
-    '',
-    'This assembly is deterministic for a given month and ordered weekly report slug set.'
+    createMarkdownSection('Fulfillment note', 'This assembly is deterministic for a given month and ordered weekly report slug set.', watermark)
   ].join('\n');
 };
 
@@ -412,30 +412,47 @@ const readFlagValue = (argv: ReadonlyArray<string>, flagName: string): string | 
   return value;
 };
 
-const parseOptionalWatermark = (argv: ReadonlyArray<string>): Watermark | undefined => {
+const parseProductId = (value?: string): ProProductId => {
+  const product = value ?? 'singleIssue';
+
+  if (!PRO_PRODUCT_IDS.includes(product as ProProductId)) {
+    throw new Error(`Unsupported --product value "${product}". Expected "singleIssue" or "monthlyBundle".`);
+  }
+
+  return product as ProProductId;
+};
+
+const parseOptionalWatermark = (argv: ReadonlyArray<string>): BuyerWatermark | undefined => {
   const buyerEmail = readFlagValue(argv, '--buyerEmail');
   const orderRef = readFlagValue(argv, '--orderRef');
+  const purchasedAt = readFlagValue(argv, '--purchasedAt');
 
-  if (!buyerEmail && !orderRef) {
+  if (!buyerEmail && !orderRef && !purchasedAt) {
     return undefined;
   }
 
-  if (!buyerEmail || !orderRef) {
-    throw new Error('Watermark inputs require both --buyerEmail and --orderRef.');
+  if (!buyerEmail) {
+    throw new Error('Buyer metadata requires --buyerEmail.');
   }
 
-  return { buyerEmail, orderRef };
+  return {
+    buyerEmail: assertBuyerEmail(buyerEmail),
+    orderRef,
+    purchasedAt
+  };
 };
 
 const parseArgs = (argv: ReadonlyArray<string>): ProPackCliArgs => {
-  const product = (readFlagValue(argv, '--product') ?? 'singleIssue') as ProProductId;
+  const product = parseProductId(readFlagValue(argv, '--product'));
   const watermark = parseOptionalWatermark(argv);
 
   if (product === 'singleIssue') {
     const slug = readFlagValue(argv, '--slug');
 
     if (!slug) {
-      throw new Error('Missing required flags. Usage: npm run generate:pro -- --product singleIssue --slug <report-slug>');
+      throw new Error(
+        'Missing required flags. Usage: npm run generate:pro -- --product singleIssue --slug <report-slug> [--buyerEmail <email>] [--orderRef <ref>] [--purchasedAt <ISO-8601>]'
+      );
     }
 
     return { product, slug, watermark };
@@ -446,7 +463,7 @@ const parseArgs = (argv: ReadonlyArray<string>): ProPackCliArgs => {
 
     if (!month) {
       throw new Error(
-        'Missing required flags. Usage: npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> [--slugs <slug1,slug2,slug3,slug4>]'
+        'Missing required flags. Usage: npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> [--slugs <slug1,slug2,slug3,slug4>] [--buyerEmail <email>] [--orderRef <ref>] [--purchasedAt <ISO-8601>]'
       );
     }
 
