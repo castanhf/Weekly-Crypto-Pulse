@@ -43,6 +43,10 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
                   <dd className="mt-1 text-muted">{tier.primaryOutcome}</dd>
                 </div>
                 <div>
+                  <dt className="font-semibold text-ink">Boundary</dt>
+                  <dd className="mt-1 text-muted">{tier.differentiationBoundary}</dd>
+                </div>
+                <div>
                   <dt className="font-semibold text-ink">Included blocks</dt>
                   <dd className="mt-2">
                     <ul className="list-disc space-y-1 pl-5 text-ink">

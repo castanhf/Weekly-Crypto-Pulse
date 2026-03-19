@@ -13,9 +13,9 @@ Set these environment variables in Vercel for both Preview and Production deploy
 
 ## Editorial tiers
 
-- **Free = orientation:** public pages and report context help readers understand the week.
-- **Weekly Pro = decision:** one paid issue provides the decision-ready brief for the current week.
-- **Monthly Bundle = continuity:** a one-time bundle extends Weekly Pro across the month for consistent follow-through.
+- **Free = orientation:** public pages and report context help readers understand what changed this week.
+- **Weekly Pro = decision:** one paid issue turns that week's setup into a decision memo with posture, invalidation, and watchlist levels.
+- **Monthly Bundle = continuity:** a one-time bundle extends Weekly Pro across the month with cross-issue follow-through and a month-end summary.
 
 ## Report data
 
