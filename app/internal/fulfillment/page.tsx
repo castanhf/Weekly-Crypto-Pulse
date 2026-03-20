@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import {
+  getFulfillmentAssistValidationMessage,
   hasCompleteFulfillmentAssistInput,
   isFulfillmentAssistEnabled,
   toFulfillmentAssistInput,
+  toFulfillmentAssistTarget,
   toFulfillmentEmailBody,
   toProPackCommand
 } from '@/lib/fulfillment-assist';
@@ -13,6 +15,8 @@ import { getAllReports, getReportBySlug } from '@/lib/reports/report-repository'
 type FulfillmentAssistPageProps = {
   searchParams: Record<string, string | string[] | undefined>;
 };
+
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Fulfillment assist',
@@ -28,9 +32,11 @@ export default function FulfillmentAssistPage({ searchParams }: FulfillmentAssis
   }
 
   const input = toFulfillmentAssistInput(searchParams);
-  const report = input.slug ? getReportBySlug(input.slug) : undefined;
+  const target = toFulfillmentAssistTarget(input);
+  const report = target?.product === 'singleIssue' ? getReportBySlug(target.slug) : undefined;
   const reportTitle = report?.metadata.title ?? input.slug;
-  const shouldRenderOutput = hasCompleteFulfillmentAssistInput(input);
+  const validationMessage = getFulfillmentAssistValidationMessage(input);
+  const shouldRenderOutput = hasCompleteFulfillmentAssistInput(input) && (target?.product !== 'singleIssue' || Boolean(report));
   const command = shouldRenderOutput ? toProPackCommand(input) : '';
   const emailBody = shouldRenderOutput ? toFulfillmentEmailBody(input, reportTitle) : '';
 
@@ -55,10 +61,19 @@ export default function FulfillmentAssistPage({ searchParams }: FulfillmentAssis
           <input className="w-full border border-line px-3 py-2 text-sm" defaultValue={input.orderRef} id="orderRef" name="orderRef" required type="text" />
         </label>
 
-        <label className="block space-y-1" htmlFor="slug">
-          <span className="text-sm font-medium">Report slug</span>
-          <input className="w-full border border-line px-3 py-2 text-sm" defaultValue={input.slug} id="slug" list="report-slugs" name="slug" required type="text" />
-        </label>
+        <div className="grid gap-4 md:grid-cols-2">
+          <label className="block space-y-1" htmlFor="slug">
+            <span className="text-sm font-medium">Report slug</span>
+            <input className="w-full border border-line px-3 py-2 text-sm" defaultValue={input.slug} id="slug" list="report-slugs" name="slug" type="text" />
+          </label>
+
+          <label className="block space-y-1" htmlFor="month">
+            <span className="text-sm font-medium">Bundle month</span>
+            <input className="w-full border border-line px-3 py-2 text-sm" defaultValue={input.month} id="month" name="month" pattern="\d{4}-\d{2}" placeholder="YYYY-MM" type="text" />
+          </label>
+        </div>
+
+        <p className="text-xs text-muted">Provide either a report slug for a single issue or a month in YYYY-MM format for a monthly bundle.</p>
 
         <datalist id="report-slugs">
           {getAllReports().map((availableReport) => (
@@ -71,7 +86,8 @@ export default function FulfillmentAssistPage({ searchParams }: FulfillmentAssis
         </button>
       </form>
 
-      {input.slug && !report ? <p className="text-sm text-red-700">No report found for slug: {input.slug}</p> : null}
+      {validationMessage ? <p className="text-sm text-red-700">{validationMessage}</p> : null}
+      {target?.product === 'singleIssue' && input.slug && !report ? <p className="text-sm text-red-700">No report found for slug: {input.slug}</p> : null}
 
       {shouldRenderOutput ? (
         <section className="space-y-4">

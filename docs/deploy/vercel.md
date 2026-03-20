@@ -86,7 +86,11 @@ These are embedded in client bundles. Never store secrets in `NEXT_PUBLIC_*` val
 
 ### Server-only variables (no `NEXT_PUBLIC_` prefix)
 
-No required server-only variables currently.
+- `ENABLE_FULFILLMENT_ASSIST`
+  - Internal-only helper flag for `/internal/fulfillment`
+  - Default: unset / disabled
+  - Recommended scope: `Development` only
+  - Production: keep unset so the route returns `404`
 
 If introduced later, add them only as non-public variables in Vercel and scope by environment.
 

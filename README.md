@@ -8,8 +8,9 @@ Static-first Next.js scaffold for a weekly crypto editorial web app.
 - `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`: Stripe Payment Link for **Weekly Crypto Pulse Pro — Monthly Bundle** CTA.
 - `NEXT_PUBLIC_SITE_URL`: Canonical site URL used for metadata and share links (for example `https://weeklycryptopulse.com`).
 - `NEXT_PUBLIC_X_HANDLE`: Optional X handle used in Twitter/X metadata (for example `@weeklycryptopulse`).
+- `ENABLE_FULFILLMENT_ASSIST`: Server-only flag that enables the internal `/internal/fulfillment` helper. Leave unset in Production; set to `true` only in local development when the helper is needed.
 
-Set these environment variables in Vercel for both Preview and Production deployments.
+Set these environment variables in Vercel for both Preview and Production deployments, except `ENABLE_FULFILLMENT_ASSIST`, which should stay disabled unless you explicitly need the helper in a non-production environment.
 
 ## Editorial tiers
 
