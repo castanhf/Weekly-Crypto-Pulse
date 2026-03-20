@@ -1,105 +1,160 @@
-# Pro fulfillment runbook (manual, no database)
+# Pro fulfillment runbook (manual)
 
-This runbook defines a repeatable Pro fulfillment workflow for one-time purchases using only committed report artifacts.
+This runbook defines the manual fulfillment workflow for one-time Pro purchases while keeping Weekly Crypto Pulse static-first.
 
-## Scope and constraints
+## Scope
 
 - No database.
-- No auth/accounts.
-- No runtime crypto API fetching.
-- Stripe is the payment source of truth.
-- Pro packs are generated from committed `data/reports/*.json` artifacts.
-- Fulfillment is manual delivery.
+- No user accounts or auth.
+- No runtime crypto API fetching for page rendering.
+- Stripe is the payment processor and source of truth for payment status and buyer identity.
+- Deliverables are generated from committed report artifacts only.
+- Fulfillment is manual email delivery.
 
-## Product delivery definitions
+## Before you start
 
-### Weekly Crypto Pulse Pro — Single Issue
+Confirm the purchase maps to one of the supported offers:
 
-- **What gets delivered**: 1 Pro weekly report for the purchased issue.
-- **When it gets delivered**: once, after Stripe payment is confirmed as `Succeeded`.
-- **How it is delivered**: manual email delivery to the Stripe-confirmed buyer email.
+- **Weekly Crypto Pulse Pro — Single Issue**
+- **Weekly Crypto Pulse Pro — Monthly Bundle**
 
-### Weekly Crypto Pulse Pro — Monthly Bundle
+Use Stripe data only for operational fulfillment. Do not store buyer personal data in this repository.
 
-- **What gets delivered**:
-  - 4 Pro weekly reports for the purchased month.
-  - 1 monthly Pro summary delivered at month end.
-- **When it gets delivered**:
-  - Weekly reports are delivered across the purchased month as each issue is available.
-  - Monthly summary is delivered at the end of the purchased month.
-- **How it is delivered**: manual email delivery to the Stripe-confirmed buyer email.
+## Manual workflow
 
-## Operator steps
+### 1) Confirm payment in Stripe
 
-1. In Stripe Dashboard, locate the payment and confirm:
-   - Status is `Succeeded`.
-   - Product matches purchased offer (`Single Issue` or `Monthly Bundle`).
-   - Buyer email is present.
-2. Determine required deliverables from product rules:
-   - Single Issue → deliver 1 Pro weekly report.
-   - Monthly Bundle → deliver 4 weekly reports across month + 1 month-end summary.
-3. Generate artifacts from committed report JSON files:
+In Stripe Dashboard:
+
+1. Open the payment or checkout session.
+2. Confirm the payment status is `Succeeded`.
+3. Confirm the product matches the purchased offer.
+4. Confirm the buyer email is present.
+5. Capture the minimum operational details needed to fulfill the order:
+   - product name
+   - report slug or bundle month
+   - purchase date
+   - Stripe payment or session reference
+
+If the payment is not `Succeeded`, stop and do not deliver.
+
+### 2) Generate the Pro pack with watermark
+
+Generate the deliverable from committed report artifacts using the existing CLI. Supply buyer metadata so the generated file includes the buyer-specific watermark.
+
+#### Single Issue
 
 ```bash
-# Single Issue
 npm run generate:pro -- --product singleIssue --slug <report-slug> \
   --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
+```
 
-# Monthly Bundle (auto-select exactly four reports in the month)
+Expected output:
+
+```text
+data/pro-packs/<report-slug>.md
+```
+
+#### Monthly Bundle
+
+Use one of the following depending on the order you are fulfilling.
+
+```bash
 npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> \
   --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
+```
 
-# Monthly Bundle (explicit report selection)
+```bash
 npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> --slugs <slug1,slug2,slug3,slug4> \
   --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
 ```
 
-Buyer-specific watermarking is driven entirely by CLI input. The generator masks the buyer email, truncates the order reference, and renders the purchase date as `YYYY-MM-DD` on each major section when buyer metadata is supplied.
+Expected outputs:
 
-4. Confirm outputs exist:
-
-```bash
-# Single Issue
-data/pro-packs/<report-slug>.md
-
-# Monthly Bundle
+```text
 data/pro-packs/monthly-bundles/<YYYY-MM>-bundle.md
 data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
 ```
 
-5. Open `docs/monetization/email-templates.md`, select the correct template, attach generated artifact (or exported PDF), and send to Stripe-confirmed buyer email.
-6. Include the license note in every delivery email:
+#### Watermark verification
 
-> License: Personal use only. Redistribution is not allowed.
+After generation, open the produced file and verify that:
 
-## Optional deterministic check
+- the correct issue or month was generated
+- the buyer-specific watermark is present
+- the purchase metadata is masked or truncated as intended by the generator
 
-Run generation twice with the same inputs and verify no diff:
+If the output is wrong, regenerate before sending.
 
-```bash
-npm run generate:pro -- --product singleIssue --slug <report-slug> \
-  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
-git diff -- data/pro-packs/<report-slug>.md
+### 3) Attach and send the email manually
 
-npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> \
-  --buyerEmail <buyer@example.com> --orderRef <stripe-ref> --purchasedAt <ISO-8601>
-git diff -- data/pro-packs/monthly-bundles/<YYYY-MM>-bundle.md data/pro-packs/monthly-summaries/<YYYY-MM>-summary.md
-```
+Use the templates in `docs/monetization/email-templates.md`.
 
-If the diff is empty, output is deterministic.
+Delivery rules:
 
-## Edge cases checklist
+- Send only to the email address confirmed in Stripe.
+- Attach the generated markdown artifact or an exported PDF if that is the preferred buyer-facing format.
+- Select the matching template:
+  - new purchase email
+  - monthly bundle purchase email
+  - monthly summary delivery email
+  - resend/support email
+- Keep edits factual and concise.
+- Include the license reminder in every fulfillment message.
 
-- [ ] Payment is not `Succeeded` → do not deliver; request retry.
-- [ ] Buyer email missing in Stripe → request confirmation before delivery.
-- [ ] Wrong report slug selected → regenerate with correct slug and resend.
-- [ ] Generated file missing sections → validate source artifact with `npm run validate:reports`.
-- [ ] Buyer requests resend → resend existing artifact if report artifact has not changed.
-- [ ] Markdown rendering issue in buyer client → export markdown to PDF and resend.
-- [ ] Monthly Bundle purchase → track all 5 deliverables (4 weekly + 1 month-end summary) before marking complete.
+Required license reminder:
 
-## Data handling policy
+> Personal use only. Redistribution is not permitted.
 
-- Do not commit buyer email addresses, names, payment IDs, or screenshots.
-- Keep operational records in private systems outside this repository.
-- Treat Stripe Dashboard as the source of truth for payment identity and status.
+### 4) Record minimal evidence without storing personal data in the repo
+
+Record fulfillment evidence in a private operational system outside this repository.
+
+Store only the minimum needed to prove fulfillment happened, such as:
+
+- fulfillment date
+- product type
+- report slug or bundle month
+- partial Stripe reference, if needed
+- delivery channel used
+- operator initials
+- resend or exception note, if applicable
+
+Do **not** commit or store in this repo:
+
+- buyer email address
+- buyer name
+- full Stripe payment ID or session ID
+- screenshots containing personal data
+- copied email contents with personal data
+
+If you need a reference key, use a redacted form such as the last 6-8 characters of the Stripe reference in a private tracker only.
+
+## Product-specific fulfillment notes
+
+### Single Issue
+
+- Deliver one Pro report for the purchased issue.
+- Fulfill once, after Stripe payment is confirmed.
+- Resends should use the resend/support template and the same buyer-confirmed destination email.
+
+### Monthly Bundle
+
+- Deliver weekly Pro issues as they become available during the purchased month.
+- Deliver the monthly summary at month end.
+- Use the monthly bundle purchase email when the order is first confirmed.
+- Use the monthly summary delivery email when sending the end-of-month summary.
+
+## Exception handling
+
+- **Payment not found or not succeeded:** do not fulfill; verify details in Stripe first.
+- **Missing buyer email in Stripe:** contact support workflow and wait for confirmation before sending.
+- **Wrong slug or month selected:** regenerate the correct deliverable and resend.
+- **Attachment problem or formatting issue:** export to PDF and resend using the resend/support template.
+- **Buyer asks for a resend:** verify the original successful payment in Stripe, then resend manually.
+
+## Repository data policy
+
+- This repository stores product docs and static report artifacts only.
+- Personal data must stay in Stripe or a separate private operations tool.
+- Stripe remains the source of truth for buyer/payment identity.
