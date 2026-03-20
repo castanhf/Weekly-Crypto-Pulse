@@ -1,81 +1,89 @@
 # Email templates (manual fulfillment)
 
-Use these templates for Stripe Payment Link operations. Keep edits factual and concise.
+Use these templates for manual delivery after verifying payment in Stripe. Keep each message professional, concise, and factual.
+
+## Template guidance
+
+- Send only to the buyer email confirmed in Stripe.
+- Replace placeholders before sending.
+- Keep the subject clear and specific to the order.
+- Attach the generated Pro file or exported PDF.
+- Include the license reminder in every message.
+
+License reminder for all templates:
+
+> Personal use only. Redistribution is not permitted.
 
 ---
 
-## 1) Single Issue purchase fulfillment
+## 1) New purchase email
 
-**Subject:** Weekly Crypto Pulse Pro — Your Single Issue report
+**Subject:** Weekly Crypto Pulse Pro — Your report is attached
 
-Hi {{first_name_or_customer}},
+Hi {{customer_name}},
 
-Thank you for purchasing **Weekly Crypto Pulse Pro — Single Issue**.
+Thank you for your purchase of **Weekly Crypto Pulse Pro — Single Issue**.
 
-Your Pro report for **{{report_title}}** is attached.
+Your report for **{{report_title}}** is attached to this email.
 
-If you have any delivery issue, reply to this email and we will help.
+If you have any issue opening the file or need the report resent, reply to this message and we will assist.
 
-License reminder: Personal use only. Redistribution is not permitted.
-Watermark notice: This file includes a buyer-specific watermark.
+Personal use only. Redistribution is not permitted.
 
 Best regards,  
 Weekly Crypto Pulse
 
 ---
 
-## 2) Monthly Bundle purchase confirmation
+## 2) Monthly bundle purchase email
 
 **Subject:** Weekly Crypto Pulse Pro — Monthly Bundle confirmed
 
-Hi {{first_name_or_customer}},
+Hi {{customer_name}},
 
-Thank you for purchasing **Weekly Crypto Pulse Pro — Monthly Bundle**.
+Thank you for purchasing **Weekly Crypto Pulse Pro — Monthly Bundle** for **{{bundle_month}}**.
 
 You will receive:
-- 4 weekly Pro reports across **{{bundle_month}}**
+- 4 weekly Pro reports during the month
 - 1 month-end Pro summary
 
-Your first delivery will be sent to this email as soon as the corresponding report is available.
+Each delivery will be sent manually to this email address after the relevant report is prepared.
 
-License reminder: Personal use only. Redistribution is not permitted.
-Watermark notice: Every delivered file includes a buyer-specific watermark.
-
-Best regards,  
-Weekly Crypto Pulse
-
----
-
-## 3) Monthly Summary delivery
-
-**Subject:** Weekly Crypto Pulse Pro — Your monthly summary for {{bundle_month}}
-
-Hi {{first_name_or_customer}},
-
-Your **Weekly Crypto Pulse Pro monthly summary** for **{{bundle_month}}** is attached.
-
-If you would like any of the monthly weekly reports resent, reply and we can assist.
-
-License reminder: Personal use only. Redistribution is not permitted.
-Watermark notice: This file includes a buyer-specific watermark.
+Personal use only. Redistribution is not permitted.
 
 Best regards,  
 Weekly Crypto Pulse
 
 ---
 
-## 4) Resend request fulfillment
+## 3) Monthly summary delivery email
 
-**Subject:** Weekly Crypto Pulse Pro — Resent report files
+**Subject:** Weekly Crypto Pulse Pro — Monthly summary for {{bundle_month}}
 
-Hi {{first_name_or_customer}},
+Hi {{customer_name}},
 
-As requested, we have resent your Pro files for **{{requested_issue_or_month}}**.
+Your **Weekly Crypto Pulse Pro** monthly summary for **{{bundle_month}}** is attached.
 
-Please confirm that you can open the attachment(s). If not, reply and we will provide an alternative format.
+If you also need any weekly report from this bundle resent, reply to this email and we will help.
 
-License reminder: Personal use only. Redistribution is not permitted.
-Watermark notice: Resent files retain the original buyer-specific watermark.
+Personal use only. Redistribution is not permitted.
+
+Best regards,  
+Weekly Crypto Pulse
+
+---
+
+## 4) Resend/support email
+
+**Subject:** Weekly Crypto Pulse Pro — Requested files resent
+
+Hi {{customer_name}},
+
+As requested, we have resent your Pro delivery for **{{requested_issue_or_month}}**.
+
+Please reply if you need the files in another format or if anything is missing.
+
+Personal use only. Redistribution is not permitted.
 
 Best regards,  
 Weekly Crypto Pulse
