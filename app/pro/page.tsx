@@ -2,13 +2,7 @@ import type { Metadata } from 'next';
 
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
-import { PRO_PRODUCT_IDS, getProProductDefinition } from '@/domain/pro-product';
-import { getProPricingDefinition } from '@/domain/pro-pricing';
-import {
-  getMissingProOfferEnvVarNames,
-  getProCheckoutTarget,
-  hasMissingProOfferPaymentLink
-} from '@/lib/pro-offers';
+import { getProOffersPageData } from '@/lib/pro-offers';
 import { createProMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createProMetadata();
@@ -17,8 +11,6 @@ type FaqItem = Readonly<{
   question: string;
   answer: string;
 }>;
-
-const OFFER_CARDS = [...PRO_PRODUCT_IDS];
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -39,8 +31,8 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
 ] as const;
 
 export default function ProPage(): JSX.Element {
-  const hasMissingOfferLink = hasMissingProOfferPaymentLink();
-  const missingEnvVarNames = getMissingProOfferEnvVarNames();
+  const { missingPaymentLinkEnvVarNames, offers } = getProOffersPageData();
+  const hasMissingOfferLink = missingPaymentLinkEnvVarNames.length > 0;
 
   return (
     <section className="space-y-8">
@@ -58,7 +50,7 @@ export default function ProPage(): JSX.Element {
           <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
           <p className="text-sm text-muted">
             One or more Stripe Payment Links are not configured for this environment. Set{' '}
-            {missingEnvVarNames.map((envVarName) => (
+            {missingPaymentLinkEnvVarNames.map((envVarName) => (
               <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
                 {envVarName}
               </code>
@@ -102,16 +94,13 @@ export default function ProPage(): JSX.Element {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {OFFER_CARDS.map((productId) => {
-            const product = getProProductDefinition(productId);
-            const checkoutTarget = getProCheckoutTarget(productId);
-            const pricing = getProPricingDefinition(productId);
-            const isBestValue = pricing.tier === 'bestValueOffer';
+          {offers.map((offer) => {
+            const isBestValue = offer.pricing.tier === 'bestValueOffer';
 
             return (
               <article
                 className={`space-y-4 border bg-white p-5 ${isBestValue ? 'border-ink shadow-sm' : 'border-line'}`}
-                key={product.id}
+                key={offer.id}
               >
                 <div className="space-y-2">
                   <p
@@ -119,40 +108,40 @@ export default function ProPage(): JSX.Element {
                       isBestValue ? 'bg-ink text-paper' : 'bg-paper text-ink'
                     }`}
                   >
-                    {pricing.valueLabel}
+                    {offer.pricing.valueLabel}
                   </p>
-                  <h3 className="text-xl font-semibold tracking-tight">{product.name}</h3>
+                  <h3 className="text-xl font-semibold tracking-tight">{offer.product.name}</h3>
                   <p className="text-base font-semibold text-ink">
-                    {pricing.displayPrice} {pricing.displayPeriodLabel}
+                    {offer.pricing.displayPrice} {offer.pricing.displayPeriodLabel}
                   </p>
-                  <p className="text-sm leading-relaxed text-muted">{product.shortDescription}</p>
+                  <p className="text-sm leading-relaxed text-muted">{offer.product.shortDescription}</p>
                   <p className="text-sm leading-relaxed text-ink">
-                    <span className="font-medium">Best used when:</span> {product.audience}
+                    <span className="font-medium">Best used when:</span> {offer.product.audience}
                   </p>
                   <p className="text-sm leading-relaxed text-ink">
-                    <span className="font-medium">Value framing:</span> {pricing.comparisonHint}
+                    <span className="font-medium">Value framing:</span> {offer.pricing.comparisonHint}
                   </p>
                 </div>
 
                 <div className="space-y-3 text-sm">
-                  <section aria-label={`${product.name} includes`} className="space-y-2">
+                  <section aria-label={`${offer.product.name} includes`} className="space-y-2">
                     <h4 className="font-semibold">Functionally includes</h4>
                     <ul className="list-disc space-y-2 pl-5 text-ink">
-                      {product.includes.map((deliverable) => (
+                      {offer.product.includes.map((deliverable) => (
                         <li key={deliverable}>{deliverable}</li>
                       ))}
                     </ul>
                   </section>
 
-                  <section aria-label={`${product.name} delivery`} className="space-y-1">
+                  <section aria-label={`${offer.product.name} delivery`} className="space-y-1">
                     <h4 className="font-semibold">Delivery model</h4>
-                    <p className="text-muted">{product.deliveryModel}</p>
+                    <p className="text-muted">{offer.product.deliveryModel}</p>
                   </section>
 
-                  <section aria-label={`${product.name} exclusions`} className="space-y-2">
+                  <section aria-label={`${offer.product.name} exclusions`} className="space-y-2">
                     <h4 className="font-semibold">Not included</h4>
                     <ul className="list-disc space-y-1 pl-5 text-muted">
-                      {product.excludes.map((excludedItem) => (
+                      {offer.product.excludes.map((excludedItem) => (
                         <li key={excludedItem}>{excludedItem}</li>
                       ))}
                     </ul>
@@ -161,8 +150,8 @@ export default function ProPage(): JSX.Element {
 
                 <ProCta
                   className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
-                  label={product.ctaLabel}
-                  checkoutTarget={checkoutTarget}
+                  label={offer.product.ctaLabel}
+                  checkoutTarget={offer.checkoutTarget}
                 />
               </article>
             );

@@ -1,5 +1,9 @@
 const STRIPE_HOST_SUFFIX = '.stripe.com';
 
+export type StripePaymentLink = string & {
+  readonly __brand: 'StripePaymentLink';
+};
+
 const normalizeUrl = (value: string): string => value.trim();
 
 const isHttps = (url: URL): boolean => url.protocol === 'https:';
@@ -24,12 +28,14 @@ export const isStripePaymentLink = (url: string): boolean => {
   }
 };
 
-export const toStripePaymentLinkOrEmpty = (url: string): string => {
+export const toStripePaymentLink = (url: string): StripePaymentLink | undefined => {
   const normalizedUrl = normalizeUrl(url);
 
   if (!isStripePaymentLink(normalizedUrl)) {
-    return '';
+    return undefined;
   }
 
-  return normalizedUrl;
+  return normalizedUrl as StripePaymentLink;
 };
+
+export const toStripePaymentLinkOrEmpty = (url: string): string => toStripePaymentLink(url) ?? '';

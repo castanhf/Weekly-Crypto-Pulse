@@ -3,7 +3,6 @@
 import Link from 'next/link';
 
 import { trackEvent } from '@/lib/analytics/events';
-import { isStripePaymentLink } from '@/lib/analytics/stripe-link';
 import type { CheckoutTarget } from '@/lib/pro-offers';
 
 type ProCtaProps = Readonly<{
@@ -13,19 +12,21 @@ type ProCtaProps = Readonly<{
 }>;
 
 export function ProCta({ className, label = 'Upgrade to Pro', checkoutTarget }: ProCtaProps): JSX.Element {
+  const isStripeCheckout = checkoutTarget.kind === 'stripePaymentLink';
+
   const handleClick = (): void => {
     trackEvent('click_pro_cta', {
       destination: checkoutTarget.href,
-      isOutbound: checkoutTarget.isExternal
+      isOutbound: isStripeCheckout
     });
 
-    if (!checkoutTarget.isExternal || !isStripePaymentLink(checkoutTarget.href)) {
+    if (!isStripeCheckout) {
       return;
     }
 
     trackEvent('outbound_stripe_payment_link', {
       destination: checkoutTarget.href,
-      isOutbound: checkoutTarget.isExternal
+      isOutbound: true
     });
   };
 
@@ -37,8 +38,8 @@ export function ProCta({ className, label = 'Upgrade to Pro', checkoutTarget }: 
       }
       href={checkoutTarget.href}
       onClick={handleClick}
-      rel={checkoutTarget.isExternal ? 'noopener noreferrer' : undefined}
-      target={checkoutTarget.isExternal ? '_blank' : undefined}
+      rel={isStripeCheckout ? 'noopener noreferrer' : undefined}
+      target={isStripeCheckout ? '_blank' : undefined}
     >
       {label}
     </Link>
