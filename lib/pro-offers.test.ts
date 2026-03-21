@@ -8,55 +8,85 @@ afterEach(() => {
 });
 
 describe('pro offers', () => {
-  it('returns external checkout targets when both payment links are configured', async () => {
+  it('returns Stripe checkout targets when both payment links are configured', async () => {
     vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', 'https://buy.stripe.com/test_single');
     vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
 
-    const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
+    const {
+      getMissingProOfferEnvVarNames,
+      getProCheckoutTarget,
+      getProOfferCard,
+      getProOfferCards,
+      getProOffersPageData,
+      hasMissingProOfferPaymentLink
+    } = await loadOffersModule();
 
     expect(getProCheckoutTarget('singleIssue')).toEqual({
       href: 'https://buy.stripe.com/test_single',
-      isExternal: true
+      kind: 'stripePaymentLink'
     });
     expect(getProCheckoutTarget('monthlyBundle')).toEqual({
       href: 'https://buy.stripe.com/test_bundle',
-      isExternal: true
+      kind: 'stripePaymentLink'
+    });
+    expect(getProOfferCard('singleIssue')).toMatchObject({
+      id: 'singleIssue',
+      pricing: {
+        tier: 'entryOffer'
+      },
+      product: {
+        ctaLabel: 'Buy Single Issue'
+      }
+    });
+    expect(getProOfferCards().map((offer) => offer.id)).toEqual(['singleIssue', 'monthlyBundle']);
+    expect(getProOffersPageData()).toMatchObject({
+      missingPaymentLinkEnvVarNames: [],
+      offers: [
+        {
+          id: 'singleIssue'
+        },
+        {
+          id: 'monthlyBundle'
+        }
+      ]
     });
     expect(hasMissingProOfferPaymentLink()).toBe(false);
     expect(getMissingProOfferEnvVarNames()).toEqual([]);
   });
 
-  it('falls back to local checkout warning target for missing links', async () => {
+  it('falls back to the local checkout warning target for missing links', async () => {
     vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', '');
     vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'https://buy.stripe.com/test_bundle');
 
-    const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
+    const { getMissingProOfferEnvVarNames, getProCheckoutTarget, getProOffersPageData, hasMissingProOfferPaymentLink } =
+      await loadOffersModule();
 
     expect(getProCheckoutTarget('singleIssue')).toEqual({
       href: '/pro#checkout-unavailable',
-      isExternal: false
+      kind: 'checkoutUnavailable'
     });
     expect(getProCheckoutTarget('monthlyBundle')).toEqual({
       href: 'https://buy.stripe.com/test_bundle',
-      isExternal: true
+      kind: 'stripePaymentLink'
     });
+    expect(getProOffersPageData().missingPaymentLinkEnvVarNames).toEqual(['STRIPE_PAYMENT_LINK_WEEKLY_PRO']);
     expect(hasMissingProOfferPaymentLink()).toBe(true);
     expect(getMissingProOfferEnvVarNames()).toEqual(['STRIPE_PAYMENT_LINK_WEEKLY_PRO']);
   });
 
-  it('treats non-stripe links as unavailable checkout', async () => {
+  it('treats non-Stripe links as unavailable checkout', async () => {
     vi.stubEnv('STRIPE_PAYMENT_LINK_WEEKLY_PRO', 'https://example.com/not-stripe');
     vi.stubEnv('STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE', 'http://buy.stripe.com/insecure_link');
 
-    const { getProCheckoutTarget, getMissingProOfferEnvVarNames, hasMissingProOfferPaymentLink } = await loadOffersModule();
+    const { getMissingProOfferEnvVarNames, getProCheckoutTarget, hasMissingProOfferPaymentLink } = await loadOffersModule();
 
     expect(getProCheckoutTarget('singleIssue')).toEqual({
       href: '/pro#checkout-unavailable',
-      isExternal: false
+      kind: 'checkoutUnavailable'
     });
     expect(getProCheckoutTarget('monthlyBundle')).toEqual({
       href: '/pro#checkout-unavailable',
-      isExternal: false
+      kind: 'checkoutUnavailable'
     });
     expect(hasMissingProOfferPaymentLink()).toBe(true);
     expect(getMissingProOfferEnvVarNames()).toEqual([
