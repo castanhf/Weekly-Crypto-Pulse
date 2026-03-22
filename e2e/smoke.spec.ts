@@ -23,6 +23,13 @@ test('homepage renders and links to latest report', async ({ page }) => {
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Weekly coverage with a clear ladder');
 
+  const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
+  await expect(primaryNavigation.getByRole('link', { name: 'Reports' })).toBeVisible();
+  await expect(primaryNavigation.getByRole('link', { name: 'Pro' })).toBeVisible();
+  await expect(primaryNavigation.getByRole('link', { name: 'Methodology' })).toBeVisible();
+  await expect(primaryNavigation.getByRole('link', { name: 'Disclaimer' })).toBeVisible();
+  await expect(primaryNavigation.getByRole('link', { name: 'Pricing' })).toHaveCount(0);
+
   const latestReportLink = page.getByRole('link', { name: 'Read latest free report' });
   await expect(latestReportLink).toBeVisible();
   await expect(latestReportLink).toHaveAttribute('href', `/reports/${getLatestReportSlug()}`);
