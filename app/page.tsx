@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { PageHeader, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { ContentWidth, PageHeader, PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
@@ -62,7 +62,7 @@ export default function HomePage(): JSX.Element {
         title="Weekly coverage with a clear ladder from orientation to decision to continuity."
       />
 
-      <section aria-labelledby="latest-report-heading" className="space-y-6">
+      <PageSection aria-labelledby="latest-report-heading">
         <SectionIntro
           description="The public report is the orientation layer. It helps you identify the current setup before deciding whether a weekly decision brief or a month-long bundle is warranted."
           id="latest-report-heading"
@@ -70,13 +70,13 @@ export default function HomePage(): JSX.Element {
         />
         <SurfaceCard className="space-y-6">
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.8fr)] lg:items-start">
-            <div className="space-y-3">
+            <ContentWidth className="space-y-3" size="feature">
               <p className="text-sm leading-7 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
               <div className="space-y-3">
-                <h3 className="max-w-3xl text-2xl font-semibold tracking-tight">{latestReport.metadata.title}</h3>
-                <p className="max-w-2xl text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
+                <h3 className="text-2xl font-semibold tracking-tight">{latestReport.metadata.title}</h3>
+                <p className="text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
               </div>
-            </div>
+            </ContentWidth>
             <dl className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
@@ -96,9 +96,9 @@ export default function HomePage(): JSX.Element {
             Open full report
           </Link>
         </SurfaceCard>
-      </section>
+      </PageSection>
 
-      <section aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+      <PageSection aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
         <SectionIntro
           description="Every issue follows the same measurement sequence so the public layer and paid layers stay comparable from one week to the next."
           id="measures-heading"
@@ -113,14 +113,14 @@ export default function HomePage(): JSX.Element {
             ))}
           </ul>
         </SurfaceCard>
-      </section>
+      </PageSection>
 
       <TierDifferentiation
         description="The distinction is functional. Free helps you understand the current environment. Weekly Pro helps you act on one issue. Monthly Bundle helps you keep the thesis connected across the month."
         title="How each tier is meant to be used"
       />
 
-      <section aria-labelledby="offers-heading" className="space-y-6">
+      <PageSection aria-labelledby="offers-heading">
         <SectionIntro
           description={`${freeTier.name} remains the public baseline. ${weeklyProTier.name} is the entry offer when this week requires a decision. ${monthlyBundleTier.name} is the best-value offer when you want the month to remain connected from issue to issue.`}
           id="offers-heading"
@@ -148,7 +148,7 @@ export default function HomePage(): JSX.Element {
             </Link>
           </div>
         </SurfaceCard>
-      </section>
+      </PageSection>
     </PageShell>
   );
 }

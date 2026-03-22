@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { PageHeader, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createMethodologyMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMethodologyMetadata();
@@ -49,7 +49,7 @@ export default function MethodologyPage(): JSX.Element {
         title="A consistent framework for reading each week."
       />
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <PageSection className="grid gap-4 lg:grid-cols-2 lg:gap-6">
         {METHODOLOGY_SECTIONS.map((section) => (
           <SurfaceCard className="space-y-4" key={section.title}>
             <h2 className="text-xl font-semibold tracking-tight">{section.title}</h2>
@@ -62,7 +62,7 @@ export default function MethodologyPage(): JSX.Element {
             </ul>
           </SurfaceCard>
         ))}
-      </div>
+      </PageSection>
     </PageShell>
   );
 }

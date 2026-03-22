@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { PageHeader, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { formatIsoDate } from '@/components/reports/report-formatters';
 import { createReportsArchiveMetadata } from '@/lib/seo';
 import { getAllReports } from '@/lib/reports/report-repository';
@@ -19,7 +19,7 @@ export default function ReportsPage(): JSX.Element {
         title="Public weekly reports, organized for quick scanning."
       />
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(17rem,0.8fr)] lg:items-start">
+      <PageSection className="grid gap-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(17rem,0.8fr)] lg:items-start">
         <ul className="space-y-4">
           {reports.map((report) => {
             const reportUrl = `/reports/${report.metadata.slug}`;
@@ -34,7 +34,7 @@ export default function ReportsPage(): JSX.Element {
                         {report.metadata.title}
                       </Link>
                     </h2>
-                    <p className="max-w-3xl text-sm leading-7 text-muted">{report.metadata.summary}</p>
+                    <p className="text-sm leading-7 text-muted">{report.metadata.summary}</p>
                   </div>
                   <Link className="inline-flex text-sm font-medium text-ink underline underline-offset-4" href={reportUrl}>
                     Read free report
@@ -58,7 +58,7 @@ export default function ReportsPage(): JSX.Element {
             </Link>
           </SurfaceCard>
         </aside>
-      </div>
+      </PageSection>
     </PageShell>
   );
 }
