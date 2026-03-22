@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { pageContainerClassName } from '@/components/layout/page-shell';
 import { siteConfig } from '@/lib/site';
 
 const NAV_ITEMS = [
@@ -12,7 +13,7 @@ const NAV_ITEMS = [
 export function Header(): JSX.Element {
   return (
     <header className="border-b border-line/80 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <div className={`${pageContainerClassName} flex flex-col gap-4 py-5 lg:flex-row lg:items-center lg:justify-between`}>
         <Link className="max-w-xs text-lg font-semibold tracking-tight text-ink transition hover:text-muted" href="/">
           {siteConfig.name}
         </Link>

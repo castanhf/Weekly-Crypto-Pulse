@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { PageHeader, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createDisclaimerMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createDisclaimerMetadata();
@@ -22,16 +22,20 @@ export default function DisclaimerPage(): JSX.Element {
         title="Important context before acting on the research."
       />
 
-      <SurfaceCard className="space-y-4 max-w-4xl">
-        <h2 className="text-xl font-semibold tracking-tight">Important notice</h2>
-        <ul className="space-y-3 text-sm leading-7 text-muted">
-          {DISCLAIMER_POINTS.map((point) => (
-            <li className="border-l-2 border-line pl-4" key={point}>
-              {point}
-            </li>
-          ))}
-        </ul>
-      </SurfaceCard>
+      <PageSection>
+        <ContentWidth>
+          <SurfaceCard className="space-y-4">
+            <h2 className="text-xl font-semibold tracking-tight">Important notice</h2>
+            <ul className="space-y-3 text-sm leading-7 text-muted">
+              {DISCLAIMER_POINTS.map((point) => (
+                <li className="border-l-2 border-line pl-4" key={point}>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </SurfaceCard>
+        </ContentWidth>
+      </PageSection>
     </PageShell>
   );
 }

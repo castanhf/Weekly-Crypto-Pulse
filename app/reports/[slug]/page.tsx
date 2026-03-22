@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
-import { PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
@@ -54,7 +54,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
     <PageShell className="space-y-10 sm:space-y-12 lg:space-y-14">
       <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(18rem,0.75fr)] xl:items-start">
+      <PageSection className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(18rem,0.75fr)] xl:items-start">
         <div className="space-y-6">
           <SurfaceCard className="text-sm leading-7 text-muted" aria-label="Tier context">
             <p>
@@ -109,7 +109,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
             </div>
           </SurfaceCard>
         </div>
-      </div>
+      </PageSection>
     </PageShell>
   );
 }

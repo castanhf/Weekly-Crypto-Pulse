@@ -1,4 +1,4 @@
-import { SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { PageSection, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { CONTENT_TIER_IDS, getContentBlockLabel, getContentTierDefinition } from '@/domain/content-tier';
 
 type TierDifferentiationProps = Readonly<{
@@ -8,7 +8,7 @@ type TierDifferentiationProps = Readonly<{
 
 export function TierDifferentiation({ description, title }: TierDifferentiationProps): JSX.Element {
   return (
-    <section aria-labelledby="tier-differentiation-heading" className="space-y-6">
+    <PageSection aria-labelledby="tier-differentiation-heading">
       <SectionIntro description={description} id="tier-differentiation-heading" title={title} />
 
       <div className="grid gap-4 lg:grid-cols-3">
@@ -59,6 +59,6 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
           );
         })}
       </div>
-    </section>
+    </PageSection>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { PageHeader, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { PageHeader, PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { getProOffersPageData } from '@/lib/pro-offers';
@@ -43,29 +43,29 @@ export default function ProPage(): JSX.Element {
         title="Free, Weekly Pro, and Monthly Bundle."
       />
 
-      {hasMissingOfferLink ? (
-        <SurfaceCard className="space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
-          <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
-          <p className="text-sm leading-7 text-muted">
-            One or more Stripe Payment Links are not configured for this environment. Set{' '}
-            {missingPaymentLinkEnvVarNames.map((envVarName) => (
-              <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
-                {envVarName}
-              </code>
-            ))}
-            in Vercel to enable paid checkout.
-          </p>
-        </SurfaceCard>
-      ) : null}
-
-      <section aria-labelledby="offers-heading" className="space-y-6">
+      <PageSection aria-labelledby="offers-heading">
         <SectionIntro
           description="Both paid products use Stripe Payment Links and remain one-time purchases. The distinction is the job to be done: one issue when the current setup needs a decision now, or a continuity workflow when the full month needs to stay connected."
           id="offers-heading"
           title="Paid one-time products"
         />
 
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.9fr)_minmax(17rem,0.9fr)] lg:items-start">
+        {hasMissingOfferLink ? (
+          <SurfaceCard className="space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
+            <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
+            <p className="text-sm leading-7 text-muted">
+              One or more Stripe Payment Links are not configured for this environment. Set{' '}
+              {missingPaymentLinkEnvVarNames.map((envVarName) => (
+                <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
+                  {envVarName}
+                </code>
+              ))}
+              in Vercel to enable paid checkout.
+            </p>
+          </SurfaceCard>
+        ) : null}
+
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(17rem,0.9fr)] lg:items-start">
           <div className="grid gap-4 md:grid-cols-2">
             {offers.map((offer) => {
               const isBestValue = offer.pricing.tier === 'bestValueOffer';
@@ -157,14 +157,14 @@ export default function ProPage(): JSX.Element {
             </SurfaceCard>
           </div>
         </div>
-      </section>
+      </PageSection>
 
       <TierDifferentiation
         description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
         title="Editorial hierarchy by function"
       />
 
-      <section aria-labelledby="faq-heading" className="space-y-6">
+      <PageSection aria-labelledby="faq-heading">
         <SectionIntro id="faq-heading" title="FAQs" />
         <div className="grid gap-4 lg:grid-cols-3">
           {FAQ_ITEMS.map((item) => (
@@ -174,7 +174,7 @@ export default function ProPage(): JSX.Element {
             </SurfaceCard>
           ))}
         </div>
-      </section>
+      </PageSection>
     </PageShell>
   );
 }
