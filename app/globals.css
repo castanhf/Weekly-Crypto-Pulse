@@ -6,6 +6,15 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-paper text-ink antialiased;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(252, 252, 253, 0.98));
+}
+
+::selection {
+  @apply bg-ink text-paper;
 }

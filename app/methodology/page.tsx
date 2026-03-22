@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { PageHeader, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createMethodologyMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMethodologyMetadata();
@@ -41,28 +42,27 @@ const METHODOLOGY_SECTIONS = [
 
 export default function MethodologyPage(): JSX.Element {
   return (
-    <section className="space-y-8">
-      <header className="space-y-3 border-b border-line pb-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Methodology</h1>
-        <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Weekly Crypto Pulse follows a repeatable process so readers can compare each issue on like-for-like terms.
-        </p>
-      </header>
+    <PageShell>
+      <PageHeader
+        description="Weekly Crypto Pulse follows a repeatable process so readers can compare each issue on like-for-like terms."
+        eyebrow="Methodology"
+        title="A consistent framework for reading each week."
+      />
 
-      <div className="space-y-4">
+      <div className="grid gap-4 lg:grid-cols-2">
         {METHODOLOGY_SECTIONS.map((section) => (
-          <article className="space-y-3 border border-line bg-white p-6" key={section.title}>
+          <SurfaceCard className="space-y-4" key={section.title}>
             <h2 className="text-xl font-semibold tracking-tight">{section.title}</h2>
-            <ul className="space-y-2 text-sm leading-relaxed text-muted">
+            <ul className="space-y-3 text-sm leading-7 text-muted">
               {section.points.map((point) => (
-                <li className="border-l-2 border-line pl-3" key={point}>
+                <li className="border-l-2 border-line pl-4" key={point}>
                   {point}
                 </li>
               ))}
             </ul>
-          </article>
+          </SurfaceCard>
         ))}
       </div>
-    </section>
+    </PageShell>
   );
 }

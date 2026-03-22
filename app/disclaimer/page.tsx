@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { PageHeader, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createDisclaimerMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createDisclaimerMetadata();
@@ -14,24 +15,23 @@ const DISCLAIMER_POINTS = [
 
 export default function DisclaimerPage(): JSX.Element {
   return (
-    <section className="space-y-8">
-      <header className="space-y-3 border-b border-line pb-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Disclaimer</h1>
-        <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Please read this page before using any information published on Weekly Crypto Pulse.
-        </p>
-      </header>
+    <PageShell>
+      <PageHeader
+        description="Please read this page before using any information published on Weekly Crypto Pulse."
+        eyebrow="Disclaimer"
+        title="Important context before acting on the research."
+      />
 
-      <article className="space-y-4 border border-line bg-white p-6">
+      <SurfaceCard className="space-y-4 max-w-4xl">
         <h2 className="text-xl font-semibold tracking-tight">Important notice</h2>
-        <ul className="space-y-2 text-sm leading-relaxed text-muted">
+        <ul className="space-y-3 text-sm leading-7 text-muted">
           {DISCLAIMER_POINTS.map((point) => (
-            <li className="border-l-2 border-line pl-3" key={point}>
+            <li className="border-l-2 border-line pl-4" key={point}>
               {point}
             </li>
           ))}
         </ul>
-      </article>
-    </section>
+      </SurfaceCard>
+    </PageShell>
   );
 }
