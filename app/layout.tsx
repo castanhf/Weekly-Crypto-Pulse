@@ -29,7 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <div className="flex min-h-screen flex-col">
           <AnalyticsProvider />
           <Header />
-          <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">{children}</main>
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">{children}</main>
           <Footer />
         </div>
       </body>
