@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { PageHeader, PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { getProOffersPageData } from '@/lib/pro-offers';
@@ -40,140 +40,206 @@ export default function ProPage(): JSX.Element {
 
   return (
     <PageShell>
-      <PageHeader
-        actions={
-          <div className="grid gap-3 sm:grid-cols-2">
-            {offers.map((offer) => (
-              <ProCta key={offer.id} checkoutTarget={offer.checkoutTarget} label={offer.product.ctaLabel} />
-            ))}
+      <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-5 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-8 lg:p-10">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
+              <div className="space-y-3">
+                <h1 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
+                  Free for orientation. Paid offers for the decision and the follow-through.
+                </h1>
+                <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                  The page is structured around the two one-time paid products first: Single Issue when this week needs a
+                  decision now, and Monthly Bundle when you want the month to remain connected from issue to issue.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-line/80 bg-white px-5 py-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Entry offer</p>
+                <h2 className="mt-2 text-lg font-semibold tracking-tight">Single Issue</h2>
+                <p className="mt-2 text-sm leading-7 text-muted">
+                  Best when you want one weekly decision brief without committing to a longer arc.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-ink/10 bg-ink px-5 py-5 text-paper shadow-[0_16px_40px_rgba(16,24,40,0.16)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-paper/70">Best value</p>
+                <h2 className="mt-2 text-lg font-semibold tracking-tight">Monthly Bundle</h2>
+                <p className="mt-2 text-sm leading-7 text-paper/80">
+                  Best when weekly decisions need continuity and a month-end synthesis, not just more files.
+                </p>
+              </div>
+            </div>
+
+            <dl className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
+                <dd className="mt-2 text-sm font-medium text-ink">One-time Stripe checkout</dd>
+              </div>
+              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Identity source</dt>
+                <dd className="mt-2 text-sm font-medium text-ink">Stripe payment details</dd>
+              </div>
+              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
+                <dd className="mt-2 text-sm font-medium text-ink">Static-first, no accounts</dd>
+              </div>
+            </dl>
           </div>
-        }
-        className="rounded-[2rem] border border-line/80 bg-white px-5 py-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-8"
-        description="The hierarchy is editorial, not promotional. Free is for orientation. Weekly Pro is for a single decision. Monthly Bundle is for continuity across the month."
-        eyebrow="Pro offers"
-        title="Free, Weekly Pro, and Monthly Bundle."
-      />
 
-      <PageSection aria-labelledby="offers-heading">
-        <SectionIntro
-          description="Both paid products use Stripe Payment Links and remain one-time purchases. The distinction is the job to be done: one issue when the current setup needs a decision now, or a continuity workflow when the full month needs to stay connected."
-          id="offers-heading"
-          title="Paid one-time products"
-        />
-
-        {hasMissingOfferLink ? (
-          <SurfaceCard className="space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
-            <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
-            <p className="text-sm leading-7 text-muted">
-              One or more Stripe Payment Links are not configured for this environment. Set{' '}
-              {missingPaymentLinkEnvVarNames.map((envVarName) => (
-                <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
-                  {envVarName}
-                </code>
-              ))}
-              in Vercel to enable paid checkout.
-            </p>
-          </SurfaceCard>
-        ) : null}
-
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(18rem,0.9fr)] lg:items-start">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-4">
             {offers.map((offer) => {
               const isBestValue = offer.pricing.tier === 'bestValueOffer';
 
               return (
                 <article
-                  className={`space-y-5 rounded-2xl border bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8 ${
-                    isBestValue ? 'border-ink ring-1 ring-ink/10' : 'border-line/80'
+                  className={`space-y-5 rounded-[1.75rem] border p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8 ${
+                    isBestValue
+                      ? 'border-ink bg-ink text-paper shadow-[0_20px_45px_rgba(16,24,40,0.16)]'
+                      : 'border-line/80 bg-white'
                   }`}
                   key={offer.id}
                 >
-                  <div className="space-y-3">
-                    <p
-                      className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
-                        isBestValue ? 'bg-ink text-paper' : 'bg-paper text-ink'
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="space-y-2">
+                      <p
+                        className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
+                          isBestValue ? 'bg-white/10 text-paper' : 'bg-paper text-ink'
+                        }`}
+                      >
+                        {offer.pricing.valueLabel}
+                      </p>
+                      <div className="space-y-1">
+                        <h2 className="text-2xl font-semibold tracking-tight">{offer.product.name}</h2>
+                        <p className={`text-sm font-semibold ${isBestValue ? 'text-paper/80' : 'text-muted'}`}>
+                          {offer.pricing.displayPrice} {offer.pricing.displayPeriodLabel}
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className={`rounded-2xl border px-4 py-3 text-sm ${
+                        isBestValue ? 'border-white/10 bg-white/5 text-paper/80' : 'border-line/80 bg-paper text-muted'
                       }`}
                     >
-                      {offer.pricing.valueLabel}
-                    </p>
-                    <div className="space-y-2">
-                      <h3 className="text-2xl font-semibold tracking-tight">{offer.product.name}</h3>
-                      <p className="text-base font-semibold text-ink">
-                        {offer.pricing.displayPrice} {offer.pricing.displayPeriodLabel}
-                      </p>
+                      <p className="font-semibold text-current">Best used when</p>
+                      <p className="mt-2 max-w-xs leading-7">{offer.product.audience}</p>
                     </div>
-                    <p className="text-sm leading-7 text-muted">{offer.product.shortDescription}</p>
                   </div>
 
-                  <dl className="grid gap-4 text-sm">
-                    <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
-                      <dt className="font-semibold text-ink">Best used when</dt>
-                      <dd className="mt-2 leading-7 text-muted">{offer.product.audience}</dd>
-                    </div>
-                    <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
-                      <dt className="font-semibold text-ink">Value framing</dt>
-                      <dd className="mt-2 leading-7 text-muted">{offer.pricing.comparisonHint}</dd>
-                    </div>
-                  </dl>
+                  <p className={`text-sm leading-7 ${isBestValue ? 'text-paper/80' : 'text-muted'}`}>
+                    {offer.product.shortDescription}
+                  </p>
 
-                  <div className="space-y-4 text-sm">
-                    <section aria-label={`${offer.product.name} includes`} className="space-y-2">
-                      <h4 className="font-semibold">Functionally includes</h4>
-                      <ul className="list-disc space-y-2 pl-5 leading-7 text-ink marker:text-muted">
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div
+                      className={`rounded-2xl border px-4 py-4 ${
+                        isBestValue ? 'border-white/10 bg-white/5' : 'border-line/80 bg-paper'
+                      }`}
+                    >
+                      <h3 className="text-sm font-semibold">What you receive</h3>
+                      <ul
+                        className={`mt-3 list-disc space-y-2 pl-5 text-sm leading-7 marker:text-current ${
+                          isBestValue ? 'text-paper/85' : 'text-ink'
+                        }`}
+                      >
                         {offer.product.includes.map((deliverable) => (
                           <li key={deliverable}>{deliverable}</li>
                         ))}
                       </ul>
-                    </section>
-
-                    <section aria-label={`${offer.product.name} delivery`} className="space-y-1">
-                      <h4 className="font-semibold">Delivery model</h4>
-                      <p className="leading-7 text-muted">{offer.product.deliveryModel}</p>
-                    </section>
-
-                    <section aria-label={`${offer.product.name} exclusions`} className="space-y-2">
-                      <h4 className="font-semibold">Not included</h4>
-                      <ul className="list-disc space-y-2 pl-5 leading-7 text-muted marker:text-muted">
-                        {offer.product.excludes.map((excludedItem) => (
-                          <li key={excludedItem}>{excludedItem}</li>
-                        ))}
-                      </ul>
-                    </section>
+                    </div>
+                    <div
+                      className={`rounded-2xl border px-4 py-4 ${
+                        isBestValue ? 'border-white/10 bg-white/5' : 'border-line/80 bg-paper'
+                      }`}
+                    >
+                      <h3 className="text-sm font-semibold">Why this tier exists</h3>
+                      <p className={`mt-3 text-sm leading-7 ${isBestValue ? 'text-paper/80' : 'text-muted'}`}>
+                        {offer.pricing.comparisonHint}
+                      </p>
+                      <p className={`mt-3 text-sm leading-7 ${isBestValue ? 'text-paper/80' : 'text-muted'}`}>
+                        {offer.product.deliveryModel}
+                      </p>
+                    </div>
                   </div>
 
                   <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <ProCta
-                      className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper"
-                      label={offer.product.ctaLabel}
+                      className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${
+                        isBestValue
+                          ? 'border border-white bg-white text-ink hover:bg-paper'
+                          : 'border border-ink bg-ink text-paper hover:bg-ink/90'
+                      }`}
                       checkoutTarget={offer.checkoutTarget}
+                      label={offer.product.ctaLabel}
                     />
-                    {isBestValue ? null : (
-                      <a className={secondaryCtaClassName} href="#tier-differentiation-heading">
-                        See tier breakdown
-                      </a>
-                    )}
+                    <a
+                      className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${
+                        isBestValue
+                          ? 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5'
+                          : 'border-line text-ink hover:border-ink'
+                      }`}
+                      href="#tier-differentiation-heading"
+                    >
+                      Compare tiers
+                    </a>
                   </div>
                 </article>
               );
             })}
-          </div>
 
-          <div className="space-y-4 lg:sticky lg:top-24">
-            <SurfaceCard className="space-y-3 bg-paper">
-              <h2 className="text-lg font-semibold tracking-tight">Where the line moves</h2>
-              <p className="text-sm leading-7 text-muted">
-                Free tells you what changed. Weekly Pro tells you what to do with this week. Monthly Bundle keeps the
-                thesis connected so each weekly decision is carried into the next one and resolved at month end.
-              </p>
-            </SurfaceCard>
-            <SurfaceCard className="space-y-3 bg-paper">
-              <h2 className="text-lg font-semibold tracking-tight">Pricing hierarchy</h2>
-              <p className="text-sm leading-7 text-muted">
-                Single Issue is the entry offer for one decision cycle. Monthly Bundle is the best-value offer because it
-                adds continuity and a month-end synthesis, not just more files.
-              </p>
-            </SurfaceCard>
+            {hasMissingOfferLink ? (
+              <SurfaceCard className="space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
+                <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
+                <p className="text-sm leading-7 text-muted">
+                  One or more Stripe Payment Links are not configured for this environment. Set{' '}
+                  {missingPaymentLinkEnvVarNames.map((envVarName) => (
+                    <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
+                      {envVarName}
+                    </code>
+                  ))}
+                  in Vercel to enable paid checkout.
+                </p>
+              </SurfaceCard>
+            ) : null}
           </div>
+        </div>
+      </section>
+
+      <PageSection aria-labelledby="offers-heading">
+        <SectionIntro
+          description="Both paid products remain one-time purchases through Stripe Payment Links. The decision is about scope: a single issue when the setup is clear, or a month-long workflow when each weekly view should carry into the next one."
+          id="offers-heading"
+          title="How to choose the right paid scope"
+        />
+
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+          <SurfaceCard className="space-y-4 bg-white">
+            <h2 className="text-lg font-semibold tracking-tight">Decision guide</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
+                <h3 className="text-sm font-semibold">Choose Single Issue</h3>
+                <p className="mt-2 text-sm leading-7 text-muted">
+                  You already know the current setup matters and want one focused brief for the week in front of you.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
+                <h3 className="text-sm font-semibold">Choose Monthly Bundle</h3>
+                <p className="mt-2 text-sm leading-7 text-muted">
+                  You want continuity across the month so weekly positioning changes can be tracked and resolved in one arc.
+                </p>
+              </div>
+            </div>
+          </SurfaceCard>
+
+          <SurfaceCard className="space-y-3 bg-paper">
+            <h2 className="text-lg font-semibold tracking-tight">What stays constant</h2>
+            <p className="text-sm leading-7 text-muted">
+              Free tells you what changed. Weekly Pro tells you what to do with this week. Monthly Bundle keeps the thesis
+              connected so each weekly decision is carried into the next one and closed with a month-end synthesis.
+            </p>
+          </SurfaceCard>
         </div>
       </PageSection>
 
