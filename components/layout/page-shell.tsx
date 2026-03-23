@@ -67,12 +67,12 @@ export function PageContainer({ as: Component = 'div', children, className }: Pa
 }
 
 export function PageShell({ children, className }: PageShellProps): JSX.Element {
-  return <div className={mergeClasses('space-y-14 sm:space-y-16 lg:space-y-20', className)}>{children}</div>;
+  return <div className={mergeClasses('space-y-12 sm:space-y-16 lg:space-y-20', className)}>{children}</div>;
 }
 
 export function PageSection({ id, children, className, ...restProps }: PageSectionProps): JSX.Element {
   return (
-    <section {...restProps} className={mergeClasses('space-y-6 sm:space-y-8', className)} id={id}>
+    <section {...restProps} className={mergeClasses('space-y-5 sm:space-y-8', className)} id={id}>
       {children}
     </section>
   );
@@ -84,15 +84,15 @@ export function ContentWidth({ children, className, size = 'content' }: ContentW
 
 export function PageHeader({ eyebrow, title, description, actions, className, titleClassName }: PageHeaderProps): JSX.Element {
   return (
-    <header className={mergeClasses('space-y-6 border-b border-line/80 pb-8 sm:space-y-7 sm:pb-10', className)}>
+    <header className={mergeClasses('space-y-5 border-b border-line/80 pb-7 sm:space-y-7 sm:pb-10', className)}>
       <ContentWidth className="space-y-4" size="feature">
         {eyebrow ? <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">{eyebrow}</p> : null}
         <div className="space-y-3">
-          <h1 className={mergeClasses('text-4xl font-semibold tracking-tight sm:text-5xl', titleClassName)}>{title}</h1>
-          {description ? <p className="text-base leading-7 text-muted">{description}</p> : null}
+          <h1 className={mergeClasses('text-3xl font-semibold tracking-tight sm:text-5xl', titleClassName)}>{title}</h1>
+          {description ? <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">{description}</p> : null}
         </div>
       </ContentWidth>
-      {actions ? <div className="flex flex-wrap gap-3">{actions}</div> : null}
+      {actions ? <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">{actions}</div> : null}
     </header>
   );
 }
@@ -116,7 +116,7 @@ export function SurfaceCard({ children, className, ...restProps }: SurfaceCardPr
     <div
       {...restProps}
       className={mergeClasses(
-        'rounded-2xl border border-line/80 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8',
+        'rounded-2xl border border-line/80 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8',
         className
       )}
     >

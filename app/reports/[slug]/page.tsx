@@ -23,6 +23,9 @@ type ReportDetailPageProps = {
   };
 };
 
+const secondaryCtaClassName =
+  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
+
 export const generateStaticParams = (): Array<ReportDetailPageProps['params']> =>
   getAllReports().map((report) => ({ slug: report.metadata.slug }));
 
@@ -51,11 +54,11 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
   const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
 
   return (
-    <PageShell className="space-y-10 sm:space-y-12 lg:space-y-14">
+    <PageShell className="space-y-8 sm:space-y-12 lg:space-y-14">
       <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
       <PageSection className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(18rem,0.75fr)] xl:items-start">
-        <div className="space-y-6">
+        <div className="order-last space-y-6 xl:order-first">
           <SurfaceCard className="text-sm leading-7 text-muted" aria-label="Tier context">
             <p>
               This page is part of the <span className="font-semibold text-ink">Free</span> layer and is meant to orient
@@ -73,9 +76,9 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           <MethodologyNote />
         </div>
 
-        <div className="space-y-6 xl:sticky xl:top-8">
+        <div className="order-first space-y-4 xl:order-last xl:sticky xl:top-24">
           <ReportShareBlock title={report.metadata.title} url={reportUrl} />
-          <SurfaceCard className="space-y-4">
+          <SurfaceCard className="space-y-4 bg-gradient-to-br from-white via-white to-paper/90">
             <div className="space-y-2">
               <h2 className="text-xl font-semibold tracking-tight">Choose the paid depth only if the workflow changes</h2>
               <p className="text-sm leading-7 text-muted">
@@ -83,7 +86,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
                 over several weekly reports. Both remain one-time purchases through Stripe Payment Links.
               </p>
             </div>
-            <div className="grid gap-3">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Decision</p>
                 <h3 className="mt-1 text-base font-semibold tracking-tight">Weekly Pro — Single Issue</h3>
@@ -99,13 +102,9 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
-              <ProCta
-                className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
-                label="Buy Monthly Bundle"
-                checkoutTarget={monthlyBundleCheckoutTarget}
-              />
+              <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle" checkoutTarget={monthlyBundleCheckoutTarget} />
             </div>
           </SurfaceCard>
         </div>

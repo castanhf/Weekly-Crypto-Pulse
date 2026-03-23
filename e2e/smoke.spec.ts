@@ -19,6 +19,7 @@ const getLatestReportSlug = (): string => {
 };
 
 test('homepage renders and links to latest report', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Weekly coverage with a clear ladder');
@@ -56,10 +57,12 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
 });
 
 test('/pro renders and includes primary CTA', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/pro');
 
   await expect(page.getByRole('heading', { level: 1, name: 'Free, Weekly Pro, and Monthly Bundle.' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle — Best value' })).toBeVisible();
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {

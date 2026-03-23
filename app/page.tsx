@@ -18,6 +18,9 @@ const METRICS = [
   'Major asset leadership and momentum'
 ] as const;
 
+const secondaryCtaClassName =
+  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
+
 export default function HomePage(): JSX.Element {
   const latestReport = getLatestReport();
 
@@ -47,16 +50,17 @@ export default function HomePage(): JSX.Element {
         actions={
           <>
             <Link
-              className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink bg-ink px-4 py-3 text-center text-sm font-medium text-paper transition hover:bg-ink/90 sm:w-auto"
               href={latestReportHref}
             >
               Read latest free report
             </Link>
-            <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
+            <Link className={secondaryCtaClassName} href="/pro">
               Compare paid offers
             </Link>
           </>
         }
+        className="rounded-[2rem] border border-line/80 bg-white px-5 py-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-8"
         description="Weekly Crypto Pulse publishes a public market read for orientation, then offers paid products for readers who need a single-week decision brief or month-long follow-through."
         eyebrow="Weekly crypto research"
         title="Weekly coverage with a clear ladder from orientation to decision to continuity."
@@ -68,16 +72,24 @@ export default function HomePage(): JSX.Element {
           id="latest-report-heading"
           title="Latest free report"
         />
-        <SurfaceCard className="space-y-6">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.8fr)] lg:items-start">
-            <ContentWidth className="space-y-3" size="feature">
+        <SurfaceCard className="space-y-6 bg-gradient-to-br from-white via-white to-paper/80">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(18rem,0.8fr)] lg:items-start">
+            <ContentWidth className="space-y-4" size="feature">
               <p className="text-sm leading-7 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
               <div className="space-y-3">
-                <h3 className="text-2xl font-semibold tracking-tight">{latestReport.metadata.title}</h3>
+                <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">{latestReport.metadata.title}</h3>
                 <p className="text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
               </div>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link className="inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-sm font-medium transition hover:bg-ink hover:text-paper" href={latestReportHref}>
+                  Open full report
+                </Link>
+                <Link className={secondaryCtaClassName} href="/pro">
+                  See Pro options
+                </Link>
+              </div>
             </ContentWidth>
-            <dl className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            <dl className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
                 <dd className="mt-2 text-lg font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
@@ -92,9 +104,6 @@ export default function HomePage(): JSX.Element {
               </div>
             </dl>
           </div>
-          <Link className="inline-flex text-sm font-medium text-ink underline underline-offset-4" href={latestReportHref}>
-            Open full report
-          </Link>
         </SurfaceCard>
       </PageSection>
 
@@ -136,14 +145,10 @@ export default function HomePage(): JSX.Element {
               </article>
             ))}
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
-            <ProCta
-              className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink"
-              label="Buy Monthly Bundle — Best value"
-              checkoutTarget={monthlyBundleCheckoutTarget}
-            />
-            <Link className="inline-flex border border-line px-4 py-2 text-sm font-medium transition hover:border-ink" href="/pro">
+            <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle — Best value" checkoutTarget={monthlyBundleCheckoutTarget} />
+            <Link className={secondaryCtaClassName} href="/pro">
               View full comparison
             </Link>
           </div>
