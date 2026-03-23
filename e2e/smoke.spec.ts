@@ -73,8 +73,8 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
       name: /choose the paid scope that matches the job this week\./i
     })
   ).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Single Issue' })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(1);
   await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
   await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();

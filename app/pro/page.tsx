@@ -47,8 +47,6 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   }
 ] as const;
 
-const secondaryCtaClassName =
-  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
 
 const offerAccentClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
   entryOffer: 'border-line/80 bg-white text-ink',
@@ -171,7 +169,7 @@ export default function ProPage(): JSX.Element {
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               {HERO_NOTES.map((note) => (
                 <div className="rounded-2xl border border-line/80 bg-white px-5 py-5" key={note.title}>
-                  <h2 className="text-base font-semibold tracking-tight">{note.title}</h2>
+                  <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
                   <p className="mt-2 text-sm leading-7 text-muted">{note.description}</p>
                 </div>
               ))}
