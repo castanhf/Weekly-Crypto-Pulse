@@ -67,10 +67,18 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/pro');
 
-  await expect(page.getByRole('heading', { level: 1, name: /free, weekly pro, and monthly bundle\./i })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Paid one-time products' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(2);
-  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(2);
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: /choose the paid scope that matches the job this week\./i
+    })
+  ).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(1);
+  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
+  await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Editorial hierarchy by function' })).toBeVisible();
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {
