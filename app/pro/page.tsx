@@ -31,6 +31,9 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   }
 ] as const;
 
+const secondaryCtaClassName =
+  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
+
 export default function ProPage(): JSX.Element {
   const { missingPaymentLinkEnvVarNames, offers } = getProOffersPageData();
   const hasMissingOfferLink = missingPaymentLinkEnvVarNames.length > 0;
@@ -38,6 +41,14 @@ export default function ProPage(): JSX.Element {
   return (
     <PageShell>
       <PageHeader
+        actions={
+          <div className="grid gap-3 sm:grid-cols-2">
+            {offers.map((offer) => (
+              <ProCta key={offer.id} checkoutTarget={offer.checkoutTarget} label={offer.product.ctaLabel} />
+            ))}
+          </div>
+        }
+        className="rounded-[2rem] border border-line/80 bg-white px-5 py-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-8"
         description="The hierarchy is editorial, not promotional. Free is for orientation. Weekly Pro is for a single decision. Monthly Bundle is for continuity across the month."
         eyebrow="Pro offers"
         title="Free, Weekly Pro, and Monthly Bundle."
@@ -65,15 +76,15 @@ export default function ProPage(): JSX.Element {
           </SurfaceCard>
         ) : null}
 
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(17rem,0.9fr)] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(18rem,0.9fr)] lg:items-start">
           <div className="grid gap-4 md:grid-cols-2">
             {offers.map((offer) => {
               const isBestValue = offer.pricing.tier === 'bestValueOffer';
 
               return (
                 <article
-                  className={`space-y-5 rounded-2xl border bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8 ${
-                    isBestValue ? 'border-ink' : 'border-line/80'
+                  className={`space-y-5 rounded-2xl border bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8 ${
+                    isBestValue ? 'border-ink ring-1 ring-ink/10' : 'border-line/80'
                   }`}
                   key={offer.id}
                 >
@@ -130,17 +141,24 @@ export default function ProPage(): JSX.Element {
                     </section>
                   </div>
 
-                  <ProCta
-                    className="inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper"
-                    label={offer.product.ctaLabel}
-                    checkoutTarget={offer.checkoutTarget}
-                  />
+                  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <ProCta
+                      className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper"
+                      label={offer.product.ctaLabel}
+                      checkoutTarget={offer.checkoutTarget}
+                    />
+                    {isBestValue ? null : (
+                      <a className={secondaryCtaClassName} href="#tier-differentiation-heading">
+                        See tier breakdown
+                      </a>
+                    )}
+                  </div>
                 </article>
               );
             })}
           </div>
 
-          <div className="space-y-4 lg:sticky lg:top-8">
+          <div className="space-y-4 lg:sticky lg:top-24">
             <SurfaceCard className="space-y-3 bg-paper">
               <h2 className="text-lg font-semibold tracking-tight">Where the line moves</h2>
               <p className="text-sm leading-7 text-muted">

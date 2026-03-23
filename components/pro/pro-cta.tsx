@@ -34,7 +34,7 @@ export function ProCta({ className, label = 'Upgrade to Pro', checkoutTarget }: 
     <Link
       className={
         className ??
-        'inline-flex border border-ink px-4 py-2 text-sm font-medium transition hover:bg-ink hover:text-paper'
+        'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper sm:w-auto'
       }
       href={checkoutTarget.href}
       onClick={handleClick}

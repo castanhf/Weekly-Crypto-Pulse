@@ -19,9 +19,10 @@ const getLatestReportSlug = (): string => {
 };
 
 test('homepage renders and links to latest report', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Weekly coverage with a clear ladder');
+  await expect(page.getByRole('heading', { level: 1, name: /weekly coverage with a clear ladder/i })).toBeVisible();
 
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation.getByRole('link', { name: 'Reports' })).toBeVisible();
@@ -33,17 +34,22 @@ test('homepage renders and links to latest report', async ({ page }) => {
   const latestReportLink = page.getByRole('link', { name: 'Read latest free report' });
   await expect(latestReportLink).toBeVisible();
   await expect(latestReportLink).toHaveAttribute('href', `/reports/${getLatestReportSlug()}`);
+  await expect(page.getByRole('link', { name: 'Compare paid offers' })).toBeVisible();
 });
 
 test('/reports lists report items', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/reports');
 
-  await expect(page.getByRole('heading', { name: 'Reports archive' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /public weekly reports, organized for quick scanning\./i })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Compare Weekly Pro and Monthly Bundle' })).toBeVisible();
+
   const reportItems = page.getByRole('listitem');
   expect(await reportItems.count()).toBeGreaterThan(0);
 });
 
 test('/reports/[slug] renders report headings', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/reports');
 
   const firstReportLink = page.getByRole('link', { name: 'Read free report' }).first();
@@ -51,15 +57,20 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
   await firstReportLink.click();
 
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Executive summary' })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Market snapshot' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toBeVisible();
 });
 
-test('/pro renders and includes primary CTA', async ({ page }) => {
+test('/pro renders and includes primary CTAs', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/pro');
 
-  await expect(page.getByRole('heading', { level: 1, name: 'Free, Weekly Pro, and Monthly Bundle.' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /free, weekly pro, and monthly bundle\./i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Paid one-time products' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(2);
+  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(2);
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {
