@@ -70,14 +70,15 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /free for orientation\. paid offers for the decision and the follow-through\./i
+      name: /choose the paid scope that matches the job this week\./i
     })
   ).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Single Issue' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(1);
   await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
-  await expect(page.getByRole('heading', { level: 2, name: 'How to choose the right paid scope' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Editorial hierarchy by function' })).toBeVisible();
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {
