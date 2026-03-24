@@ -22,7 +22,7 @@ test('homepage renders and links to latest report', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { level: 1, name: /weekly coverage with a clear ladder/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /read the market setup, then choose the depth you need this week\./i })).toBeVisible();
 
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation.getByRole('link', { name: 'Reports' })).toBeVisible();
@@ -34,7 +34,7 @@ test('homepage renders and links to latest report', async ({ page }) => {
   const latestReportLink = page.getByRole('link', { name: 'Read latest free report' });
   await expect(latestReportLink).toBeVisible();
   await expect(latestReportLink).toHaveAttribute('href', `/reports/${getLatestReportSlug()}`);
-  await expect(page.getByRole('link', { name: 'Compare paid offers' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Explore Pro products' })).toBeVisible();
 });
 
 test('/reports lists report items', async ({ page }) => {
