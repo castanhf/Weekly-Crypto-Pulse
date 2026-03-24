@@ -18,6 +18,21 @@ const METRICS = [
   'Major asset leadership and momentum'
 ] as const;
 
+const EDITORIAL_PATH = [
+  {
+    label: 'Free',
+    description: 'Start with the weekly orientation layer to understand the setup.'
+  },
+  {
+    label: 'Weekly Pro',
+    description: 'Move to a single-issue decision brief when timing matters this week.'
+  },
+  {
+    label: 'Monthly Bundle',
+    description: 'Keep decisions coherent across the month with connected weekly issues.'
+  }
+] as const;
+
 const secondaryCtaClassName =
   'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
 
@@ -56,84 +71,79 @@ export default function HomePage(): JSX.Element {
               Read latest free report
             </Link>
             <Link className={secondaryCtaClassName} href="/pro">
-              Compare paid offers
+              Explore Pro products
             </Link>
           </>
         }
         className="rounded-[2rem] border border-line/80 bg-white px-5 py-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-8"
-        description="Weekly Crypto Pulse publishes a public market read for orientation, then offers paid products for readers who need a single-week decision brief or month-long follow-through."
+        description="Weekly Crypto Pulse keeps the homepage editorial: one public report for orientation, one paid path for weekly decisions, and one bundle for month-long continuity."
         eyebrow="Weekly crypto research"
-        title="Weekly coverage with a clear ladder from orientation to decision to continuity."
+        title="Read the market setup, then choose the depth you need this week."
       />
+
+      <PageSection aria-labelledby="focus-heading" className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] lg:items-stretch">
+        <SurfaceCard className="space-y-4 bg-gradient-to-br from-white via-white to-paper/70">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Latest report</p>
+          <div className="space-y-3">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl" id="focus-heading">
+              {latestReport.metadata.title}
+            </h2>
+            <p className="text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
+            <p className="text-sm leading-7 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link className="inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-sm font-medium transition hover:bg-ink hover:text-paper" href={latestReportHref}>
+              Open full report
+            </Link>
+            <Link className={secondaryCtaClassName} href="/pro">
+              Compare Free vs Pro
+            </Link>
+          </div>
+        </SurfaceCard>
+
+        <SurfaceCard className="space-y-4 border-ink/10 bg-paper/70">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Path to Pro</p>
+          <div className="space-y-4">
+            {EDITORIAL_PATH.map((step) => (
+              <div className="space-y-1 border-l-2 border-line pl-3" key={step.label}>
+                <p className="text-sm font-semibold text-ink">{step.label}</p>
+                <p className="text-sm leading-6 text-muted">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
+        </SurfaceCard>
+      </PageSection>
 
       <PageSection aria-labelledby="latest-report-heading">
         <SectionIntro
-          description="The public report is the orientation layer. It helps you identify the current setup before deciding whether a weekly decision brief or a month-long bundle is warranted."
+          description="The public report is the baseline read. Snapshot metrics keep each issue scannable before you decide whether to move into Pro."
           id="latest-report-heading"
-          title="Latest free report"
-        />
-        <SurfaceCard className="space-y-6 bg-gradient-to-br from-white via-white to-paper/80">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(18rem,0.8fr)] lg:items-start">
-            <ContentWidth className="space-y-4" size="feature">
-              <p className="text-sm leading-7 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">{latestReport.metadata.title}</h3>
-                <p className="text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link className="inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-sm font-medium transition hover:bg-ink hover:text-paper" href={latestReportHref}>
-                  Open full report
-                </Link>
-                <Link className={secondaryCtaClassName} href="/pro">
-                  See Pro options
-                </Link>
-              </div>
-            </ContentWidth>
-            <dl className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
-                <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
-                <dd className="mt-2 text-lg font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
-              </div>
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
-                <dt className="text-xs uppercase tracking-[0.12em] text-muted">BTC dominance</dt>
-                <dd className="mt-2 text-lg font-medium">{formatPercent(latestReport.marketSnapshot.btcDominancePct)}</dd>
-              </div>
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
-                <dt className="text-xs uppercase tracking-[0.12em] text-muted">Fear &amp; greed</dt>
-                <dd className="mt-2 text-lg font-medium">{latestReport.marketSnapshot.fearGreedIndex}</dd>
-              </div>
-            </dl>
-          </div>
-        </SurfaceCard>
-      </PageSection>
-
-      <PageSection aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
-        <SectionIntro
-          description="Every issue follows the same measurement sequence so the public layer and paid layers stay comparable from one week to the next."
-          id="measures-heading"
-          title="What we measure each week"
+          title="This week at a glance"
         />
         <SurfaceCard>
-          <ul className="space-y-4 text-sm leading-7 text-ink">
-            {METRICS.map((metric) => (
-              <li className="border-l-2 border-line pl-4" key={metric}>
-                {metric}
-              </li>
-            ))}
-          </ul>
+          <dl className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
+              <dd className="mt-2 text-lg font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
+            </div>
+            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <dt className="text-xs uppercase tracking-[0.12em] text-muted">BTC dominance</dt>
+              <dd className="mt-2 text-lg font-medium">{formatPercent(latestReport.marketSnapshot.btcDominancePct)}</dd>
+            </div>
+            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <dt className="text-xs uppercase tracking-[0.12em] text-muted">Fear &amp; greed</dt>
+              <dd className="mt-2 text-lg font-medium">{latestReport.marketSnapshot.fearGreedIndex}</dd>
+            </div>
+          </dl>
         </SurfaceCard>
       </PageSection>
-
-      <TierDifferentiation
-        description="The distinction is functional. Free helps you understand the current environment. Weekly Pro helps you act on one issue. Monthly Bundle helps you keep the thesis connected across the month."
-        title="How each tier is meant to be used"
-      />
 
       <PageSection aria-labelledby="offers-heading">
         <SectionIntro
-          description={`${freeTier.name} remains the public baseline. ${weeklyProTier.name} is the entry offer when this week requires a decision. ${monthlyBundleTier.name} is the best-value offer when you want the month to remain connected from issue to issue.`}
+          description={`${freeTier.name} keeps orientation public. ${weeklyProTier.name} is the entry offer for a single decision cycle. ${monthlyBundleTier.name} is the best-value option for continuity across the month.`}
           id="offers-heading"
-          title="Choose the paid scope that matches the job"
+          title="Free and Pro, by editorial job"
         />
         <SurfaceCard className="space-y-6">
           <div className="grid gap-4 md:grid-cols-3">
@@ -154,6 +164,28 @@ export default function HomePage(): JSX.Element {
           </div>
         </SurfaceCard>
       </PageSection>
+
+      <PageSection aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+        <SectionIntro
+          description="Each issue follows the same sequence so Free and Pro stay comparable over time."
+          id="measures-heading"
+          title="What we measure each week"
+        />
+        <SurfaceCard>
+          <ul className="space-y-4 text-sm leading-7 text-ink">
+            {METRICS.map((metric) => (
+              <li className="border-l-2 border-line pl-4" key={metric}>
+                {metric}
+              </li>
+            ))}
+          </ul>
+        </SurfaceCard>
+      </PageSection>
+
+      <TierDifferentiation
+        description="The distinction is functional. Free explains the environment. Weekly Pro supports one decision week. Monthly Bundle keeps the thesis connected across the month."
+        title="How each tier is meant to be used"
+      />
     </PageShell>
   );
 }
