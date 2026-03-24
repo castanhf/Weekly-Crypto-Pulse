@@ -18,6 +18,16 @@ type HeroNote = Readonly<{
   description: string;
 }>;
 
+type OfferMetric = Readonly<{
+  label: string;
+  value: string;
+}>;
+
+type OfferNarrative = Readonly<{
+  emphasis: string;
+  metrics: ReadonlyArray<OfferMetric>;
+}>;
+
 const HERO_NOTES: ReadonlyArray<HeroNote> = [
   {
     title: 'Single Issue',
@@ -47,20 +57,25 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   }
 ] as const;
 
-
-const offerAccentClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border-line/80 bg-white text-ink',
-  bestValueOffer: 'border-ink bg-ink text-paper shadow-[0_20px_45px_rgba(16,24,40,0.16)]'
+const offerCardClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
+  entryOffer: 'border-line/80 bg-white text-ink shadow-[0_18px_35px_rgba(16,24,40,0.05)]',
+  bestValueOffer:
+    'border-ink bg-ink text-paper shadow-[0_24px_50px_rgba(16,24,40,0.18)] lg:-translate-y-3 lg:scale-[1.02]'
 };
 
-const offerPanelClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border-line/80 bg-paper text-muted',
-  bestValueOffer: 'border-white/10 bg-white/5 text-paper/80'
+const offerSurfaceClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
+  entryOffer: 'border-line/80 bg-paper/80 text-ink',
+  bestValueOffer: 'border-white/10 bg-white/5 text-paper'
+};
+
+const offerMutedTextClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
+  entryOffer: 'text-muted',
+  bestValueOffer: 'text-paper/75'
 };
 
 const offerListClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
   entryOffer: 'text-ink marker:text-muted',
-  bestValueOffer: 'text-paper/85 marker:text-paper/50'
+  bestValueOffer: 'text-paper/88 marker:text-paper/45'
 };
 
 const offerCtaClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
@@ -73,72 +88,126 @@ const offerSecondaryLinkClassNames: Record<ProOfferCard['pricing']['tier'], stri
   bestValueOffer: 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5'
 };
 
+const OFFER_NARRATIVES: Readonly<Record<ProOfferCard['id'], OfferNarrative>> = {
+  singleIssue: {
+    emphasis: 'A focused purchase for one decision cycle.',
+    metrics: [
+      { label: 'Coverage', value: '1 weekly Pro issue' },
+      { label: 'Workflow fit', value: 'One immediate decision memo' },
+      { label: 'Effective rate', value: '$29 per issue' }
+    ]
+  },
+  monthlyBundle: {
+    emphasis: 'The continuity option for readers who want the thesis to compound across the month.',
+    metrics: [
+      { label: 'Coverage', value: '4 weekly Pro issues + month-end synthesis' },
+      { label: 'Workflow fit', value: 'Connected weekly decisions across the month' },
+      { label: 'Effective rate', value: '$19.75 per issue • saves $37 vs four single issues' }
+    ]
+  }
+} as const;
+
 function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
   const { pricing, product, checkoutTarget } = offer;
+  const narrative = OFFER_NARRATIVES[offer.id];
+  const isBestValueOffer = pricing.tier === 'bestValueOffer';
 
   return (
-    <article className={`flex h-full flex-col rounded-[1.75rem] border p-6 sm:p-8 ${offerAccentClassNames[pricing.tier]}`}>
+    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
       <div className="flex flex-1 flex-col gap-6">
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
-            <p
-              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
-                pricing.tier === 'bestValueOffer' ? 'bg-white/10 text-paper' : 'bg-paper text-ink'
-              }`}
-            >
-              {pricing.valueLabel}
-            </p>
+            <div className="space-y-3">
+              <p
+                className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
+                  isBestValueOffer ? 'border-white/10 bg-white/10 text-paper' : 'border-line/80 bg-paper text-ink'
+                }`}
+              >
+                {pricing.valueLabel}
+              </p>
+              <div className="space-y-2">
+                <h2 className="text-2xl font-semibold tracking-tight sm:text-[1.95rem]">{product.name}</h2>
+                <p className={`max-w-xl text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
+              </div>
+            </div>
+
             <div
-              className={`rounded-2xl border px-4 py-3 text-right text-sm ${offerPanelClassNames[pricing.tier]}`}
+              className={`min-w-[10rem] rounded-[1.5rem] border px-5 py-4 text-left sm:text-right ${offerSurfaceClassNames[pricing.tier]}`}
             >
-              <p className="font-semibold text-current">{pricing.displayPrice}</p>
-              <p className="mt-1 leading-6">{pricing.displayPeriodLabel}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
+              <p className="mt-3 text-3xl font-semibold tracking-tight">{pricing.displayPrice}</p>
+              <p className={`mt-2 text-sm leading-6 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
             </div>
           </div>
 
-          <div className="space-y-2">
-            <h2 className="text-2xl font-semibold tracking-tight">{product.name}</h2>
-            <p className={`text-sm leading-7 ${pricing.tier === 'bestValueOffer' ? 'text-paper/80' : 'text-muted'}`}>
-              {product.shortDescription}
-            </p>
+          <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div className="space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
+                <p className="text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
+              </div>
+              <p className={`max-w-md text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
+            </div>
+
+            <dl className="mt-5 grid gap-3 sm:grid-cols-3">
+              {narrative.metrics.map((metric) => (
+                <div
+                  className={`rounded-2xl border px-4 py-4 ${
+                    isBestValueOffer ? 'border-white/10 bg-black/10' : 'border-line/80 bg-white'
+                  }`}
+                  key={metric.label}
+                >
+                  <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">{metric.label}</dt>
+                  <dd className="mt-2 text-sm font-medium leading-6 text-current">{metric.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
 
-        <div className={`rounded-2xl border px-4 py-4 ${offerPanelClassNames[pricing.tier]}`}>
-          <p className="text-sm font-semibold text-current">Best used when</p>
-          <p className="mt-2 text-sm leading-7">{product.audience}</p>
-        </div>
-
-        <div className="grid gap-3 md:grid-cols-2">
-          <div className={`rounded-2xl border px-4 py-4 ${offerPanelClassNames[pricing.tier]}`}>
-            <h3 className="text-sm font-semibold text-current">Includes</h3>
-            <ul className={`mt-3 list-disc space-y-2 pl-5 text-sm leading-7 ${offerListClassNames[pricing.tier]}`}>
+        <div className="grid gap-3 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+            <h3 className="text-sm font-semibold text-current">Included in this offer</h3>
+            <ul className={`mt-4 list-disc space-y-2.5 pl-5 text-sm leading-7 ${offerListClassNames[pricing.tier]}`}>
               {product.includes.map((deliverable) => (
                 <li key={deliverable}>{deliverable}</li>
               ))}
             </ul>
           </div>
 
-          <div className={`rounded-2xl border px-4 py-4 ${offerPanelClassNames[pricing.tier]}`}>
-            <h3 className="text-sm font-semibold text-current">Why it exists</h3>
-            <p className="mt-3 text-sm leading-7 text-current">{pricing.comparisonHint}</p>
-            <p className="mt-3 text-sm leading-7 text-current">{product.deliveryModel}</p>
+          <div className="grid gap-3">
+            <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+              <h3 className="text-sm font-semibold text-current">Best used when</h3>
+              <p className={`mt-3 text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
+            </div>
+
+            <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+              <h3 className="text-sm font-semibold text-current">Not included</h3>
+              <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-sm leading-7 ${offerListClassNames[pricing.tier]}`}>
+                {product.excludes.map((exclusion) => (
+                  <li key={exclusion}>{exclusion}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <ProCta
-          className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerCtaClassNames[pricing.tier]}`}
-          checkoutTarget={checkoutTarget}
-          label={product.ctaLabel}
-        />
-        <a
-          className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerSecondaryLinkClassNames[pricing.tier]}`}
-          href="#tier-differentiation-heading"
-        >
-          Compare tiers
-        </a>
+      <div className="mt-6 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p className={`max-w-md text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+          <ProCta
+            className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerCtaClassNames[pricing.tier]}`}
+            checkoutTarget={checkoutTarget}
+            label={product.ctaLabel}
+          />
+          <a
+            className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerSecondaryLinkClassNames[pricing.tier]}`}
+            href="#tier-differentiation-heading"
+          >
+            Compare tiers
+          </a>
+        </div>
       </div>
     </article>
   );
@@ -199,7 +268,7 @@ export default function ProPage(): JSX.Element {
             </div>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-2 lg:items-stretch">
+          <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch lg:pt-3">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}
