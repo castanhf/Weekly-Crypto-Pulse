@@ -12,15 +12,22 @@ export function ReportSections({ sections }: ReportSectionsProps): JSX.Element |
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 sm:space-y-7">
       {sections.map((section) => (
         <SectionCard key={section.id} title={section.heading}>
-          <p className="leading-relaxed text-muted">{section.body}</p>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-muted">
-            {section.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
+          <div className="space-y-4">
+            <p className="text-[1.01rem] leading-8 text-muted">{section.body}</p>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Key points</p>
+              <ul className="space-y-2.5 text-sm leading-7 text-muted">
+                {section.highlights.map((highlight) => (
+                  <li className="rounded-lg border border-line/70 bg-paper/50 px-3 py-2" key={highlight}>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </SectionCard>
       ))}
     </div>
