@@ -59,8 +59,13 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toBeVisible();
+  const singleIssueCtas = page.getByRole('link', { name: 'Buy Single Issue' });
+  const monthlyBundleCtas = page.getByRole('link', { name: 'Buy Monthly Bundle' });
+
+  await expect(singleIssueCtas).toHaveCount(2);
+  await expect(monthlyBundleCtas).toHaveCount(2);
+  await expect(singleIssueCtas.first()).toBeVisible();
+  await expect(monthlyBundleCtas.first()).toBeVisible();
 });
 
 test('/pro renders and includes primary CTAs', async ({ page }) => {
