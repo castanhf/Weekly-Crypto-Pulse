@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createMethodologyMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMethodologyMetadata();
@@ -44,24 +44,29 @@ export default function MethodologyPage(): JSX.Element {
   return (
     <PageShell>
       <PageHeader
+        className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
         description="Weekly Crypto Pulse follows a repeatable process so readers can compare each issue on like-for-like terms."
         eyebrow="Methodology"
         title="A consistent framework for reading each week."
       />
 
-      <PageSection className="grid gap-5 lg:grid-cols-2 lg:gap-7">
-        {METHODOLOGY_SECTIONS.map((section) => (
-          <SurfaceCard className="space-y-5" key={section.title}>
-            <h2 className="text-[1.45rem] font-semibold tracking-tight">{section.title}</h2>
-            <ul className="space-y-3.5 text-base leading-8 text-muted">
-              {section.points.map((point) => (
-                <li className="border-l-2 border-line pl-4" key={point}>
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </SurfaceCard>
-        ))}
+      <PageSection>
+        <ContentWidth className="mx-auto" size="feature">
+          <div className="grid gap-5 lg:grid-cols-2 lg:gap-7">
+            {METHODOLOGY_SECTIONS.map((section) => (
+              <SurfaceCard className="space-y-5" key={section.title}>
+                <h2 className="text-[1.45rem] font-semibold tracking-tight">{section.title}</h2>
+                <ul className="space-y-3.5 text-base leading-8 text-muted">
+                  {section.points.map((point) => (
+                    <li className="border-l-2 border-line pl-4" key={point}>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </SurfaceCard>
+            ))}
+          </div>
+        </ContentWidth>
       </PageSection>
     </PageShell>
   );
