@@ -147,13 +147,24 @@ export default function HomePage(): JSX.Element {
         />
         <SurfaceCard className="space-y-6">
           <div className="grid gap-4 md:grid-cols-3">
-            {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => (
-              <article className="space-y-3 rounded-xl border border-line/80 bg-paper px-5 py-5" key={tier.id}>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">{tier.editorialRole}</p>
-                <h3 className="text-base font-semibold tracking-tight">{tier.name}</h3>
-                <p className="text-sm leading-7 text-muted">{tier.targetReaderNeed}</p>
-              </article>
-            ))}
+            {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => {
+              const toneClassName =
+                tier.id === 'weeklyPro'
+                  ? 'border-ink bg-ink text-paper'
+                  : tier.id === 'monthlyBundle'
+                    ? 'border-amber-200 bg-amber-50'
+                    : 'border-line/80 bg-paper';
+
+              const mutedClassName = tier.id === 'weeklyPro' ? 'text-paper/75' : 'text-muted';
+
+              return (
+                <article className={`space-y-3 rounded-xl border px-5 py-5 ${toneClassName}`} key={tier.id}>
+                  <p className={`text-xs font-semibold uppercase tracking-[0.12em] ${mutedClassName}`}>{tier.editorialRole}</p>
+                  <h3 className="text-base font-semibold tracking-tight">{tier.name}</h3>
+                  <p className={`text-sm leading-7 ${mutedClassName}`}>{tier.targetReaderNeed}</p>
+                </article>
+              );
+            })}
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />

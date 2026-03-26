@@ -18,6 +18,13 @@ type HeroNote = Readonly<{
   description: string;
 }>;
 
+type HierarchyStep = Readonly<{
+  role: string;
+  title: string;
+  description: string;
+  className: string;
+}>;
+
 type OfferMetric = Readonly<{
   label: string;
   value: string;
@@ -31,11 +38,32 @@ type OfferNarrative = Readonly<{
 const HERO_NOTES: ReadonlyArray<HeroNote> = [
   {
     title: 'Single Issue',
-    description: 'The entry offer when one week needs a decision now.'
+    description: 'Entry paid offer for one immediate decision cycle.'
   },
   {
     title: 'Monthly Bundle',
-    description: 'The best-value option when decisions need continuity across the month.'
+    description: 'Most complete package for continuity across the full month.'
+  }
+] as const;
+
+const HIERARCHY_STEPS: ReadonlyArray<HierarchyStep> = [
+  {
+    role: 'Free',
+    title: 'Orientation',
+    description: 'Read the public issue first to map the current setup.',
+    className: 'border-line/80 bg-white text-ink'
+  },
+  {
+    role: 'Weekly Pro',
+    title: 'Decision support',
+    description: 'Upgrade for one issue when this week needs a clear posture.',
+    className: 'border-ink bg-ink text-paper'
+  },
+  {
+    role: 'Monthly Bundle',
+    title: 'Continuity',
+    description: 'Stay connected across all weekly issues with month-end synthesis.',
+    className: 'border-amber-200 bg-amber-50 text-amber-950'
   }
 ] as const;
 
@@ -235,6 +263,22 @@ export default function ProPage(): JSX.Element {
               </div>
             </div>
 
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Hierarchy at a glance</p>
+              <div className="grid gap-3">
+                {HIERARCHY_STEPS.map((step) => (
+                  <div className={`rounded-2xl border px-5 py-5 ${step.className}`} key={step.role}>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/70">{step.role}</p>
+                      <span aria-hidden="true" className="text-current/45">→</span>
+                      <p className="text-sm font-semibold tracking-tight text-current">{step.title}</p>
+                    </div>
+                    <p className="mt-2 text-sm leading-7 text-current/80">{step.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               {HERO_NOTES.map((note) => (
                 <div className="rounded-2xl border border-line/80 bg-white px-5 py-5" key={note.title}>
@@ -262,8 +306,7 @@ export default function ProPage(): JSX.Element {
             <div className="rounded-2xl border border-line/80 bg-white px-5 py-5">
               <p className="text-sm font-semibold text-ink">Editorial hierarchy</p>
               <p className="mt-2 text-sm leading-7 text-muted">
-                Free remains the orientation layer. Pro exists for action: Single Issue for one decision cycle and
-                Monthly Bundle for continuity plus a month-end synthesis.
+                Free remains orientation. Weekly Pro turns one issue into an actionable decision memo. Monthly Bundle adds the continuity layer that keeps the thesis connected across the month.
               </p>
             </div>
           </div>
