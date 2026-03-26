@@ -54,12 +54,12 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
   const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
 
   return (
-    <PageShell className="space-y-8 sm:space-y-12 lg:space-y-14">
+    <PageShell className="space-y-10 sm:space-y-14 lg:space-y-16">
       <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
       <PageSection className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(19rem,0.75fr)] xl:items-start">
         <div className="order-last space-y-8 xl:order-first xl:space-y-10">
-          <SurfaceCard className="border-line/70 bg-gradient-to-b from-white to-paper/60 text-sm leading-7 text-muted" aria-label="Tier context">
+          <SurfaceCard className="border-line/70 bg-gradient-to-b from-white to-paper/60 text-base leading-8 text-muted" aria-label="Tier context">
             <p>
               This page is part of the <span className="font-semibold text-ink">Free</span> layer and is designed for
               orientation. If you need a paid decision brief for this exact issue, choose{' '}
@@ -74,11 +74,11 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           <RegimeSection regime={report.regime} />
           <ReportSignalsBlock signals={report.signals} />
 
-          <SurfaceCard className="space-y-4 border-line/70 bg-white/95">
+          <SurfaceCard className="space-y-5 border-line/70 bg-white/95">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Paid depth when needed</p>
-              <h2 className="text-2xl font-semibold tracking-tight">Need an actionable brief, not just orientation?</h2>
-              <p className="max-w-3xl text-sm leading-7 text-muted">
+              <h2 className="text-[1.7rem] font-semibold tracking-tight sm:text-[2.1rem]">Need an actionable brief, not just orientation?</h2>
+              <p className="max-w-3xl text-base leading-8 text-muted">
                 Stay in reading mode, then choose paid depth only if this issue changes your workflow. Weekly Pro covers
                 one decision cycle; Monthly Bundle keeps the thesis connected across the month.
               </p>
@@ -98,8 +98,8 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           <SurfaceCard className="space-y-5 border-line/70 bg-gradient-to-br from-white via-white to-paper/90">
             <div className="space-y-2.5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Pro decision layer</p>
-              <h2 className="text-xl font-semibold tracking-tight">Choose paid depth only when the workflow changes</h2>
-              <p className="text-sm leading-7 text-muted">
+              <h2 className="text-[1.45rem] font-semibold tracking-tight">Choose paid depth only when the workflow changes</h2>
+              <p className="text-base leading-8 text-muted">
                 Stripe Payment Links handle one-time purchases for each product. No subscriptions and no account setup.
               </p>
             </div>
@@ -107,14 +107,14 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Decision</p>
                 <h3 className="mt-1 text-base font-semibold tracking-tight">Weekly Pro — Single Issue</h3>
-                <p className="mt-2 text-sm leading-7 text-muted">
+                <p className="mt-2 text-base leading-8 text-muted">
                   Best when this week requires deeper execution context and one issue is enough.
                 </p>
               </div>
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Continuity</p>
                 <h3 className="mt-1 text-base font-semibold tracking-tight">Monthly Bundle</h3>
-                <p className="mt-2 text-sm leading-7 text-muted">
+                <p className="mt-2 text-base leading-8 text-muted">
                   Best when you want week-to-week continuity instead of evaluating each report in isolation.
                 </p>
               </div>

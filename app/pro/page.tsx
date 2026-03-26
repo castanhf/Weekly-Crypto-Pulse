@@ -141,7 +141,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
   const isBestValueOffer = pricing.tier === 'bestValueOffer';
 
   return (
-    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
+    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 lg:p-9 ${offerCardClassNames[pricing.tier]}`}>
       <div className="flex flex-1 flex-col gap-6">
         <div className="space-y-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
@@ -154,8 +154,8 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
                 {pricing.valueLabel}
               </p>
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight sm:text-[1.95rem]">{product.name}</h2>
-                <p className={`max-w-xl text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
+                <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.05rem]">{product.name}</h2>
+                <p className={`max-w-xl text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
               </div>
             </div>
 
@@ -164,7 +164,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
             >
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
               <p className="mt-3 text-3xl font-semibold tracking-tight">{pricing.displayPrice}</p>
-              <p className={`mt-2 text-sm leading-6 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
+              <p className={`mt-2 text-base leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
                 <p className="text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
               </div>
-              <p className={`max-w-md text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
+              <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
             </div>
 
             <dl className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -186,7 +186,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
                   key={metric.label}
                 >
                   <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">{metric.label}</dt>
-                  <dd className="mt-2 text-sm font-medium leading-6 text-current">{metric.value}</dd>
+                  <dd className="mt-2 text-base font-medium leading-7 text-current">{metric.value}</dd>
                 </div>
               ))}
             </dl>
@@ -195,8 +195,8 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
 
         <div className="grid gap-3 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
           <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-            <h3 className="text-sm font-semibold text-current">Included in this offer</h3>
-            <ul className={`mt-4 list-disc space-y-2.5 pl-5 text-sm leading-7 ${offerListClassNames[pricing.tier]}`}>
+            <h3 className="text-base font-semibold text-current">Included in this offer</h3>
+            <ul className={`mt-4 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
               {product.includes.map((deliverable) => (
                 <li key={deliverable}>{deliverable}</li>
               ))}
@@ -205,13 +205,13 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
 
           <div className="grid gap-3">
             <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-              <h3 className="text-sm font-semibold text-current">Best used when</h3>
-              <p className={`mt-3 text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
+              <h3 className="text-base font-semibold text-current">Best used when</h3>
+              <p className={`mt-3 text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
             </div>
 
             <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-              <h3 className="text-sm font-semibold text-current">Not included</h3>
-              <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-sm leading-7 ${offerListClassNames[pricing.tier]}`}>
+              <h3 className="text-base font-semibold text-current">Not included</h3>
+              <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
                 {product.excludes.map((exclusion) => (
                   <li key={exclusion}>{exclusion}</li>
                 ))}
@@ -222,7 +222,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
       </div>
 
       <div className="mt-6 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-        <p className={`max-w-md text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
+        <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
           <ProCta
             className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerCtaClassNames[pricing.tier]}`}
@@ -253,10 +253,10 @@ export default function ProPage(): JSX.Element {
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
               <div className="space-y-3">
-                <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-5xl">
+                <h1 className="max-w-2xl text-[2rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.06]">
                   Choose the paid scope that matches the job this week.
                 </h1>
-                <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                <p className="max-w-2xl text-base leading-8 text-muted">
                   Weekly Crypto Pulse keeps the buying decision simple: one issue when you need a single decision memo,
                   or the Monthly Bundle when you want the thesis to stay connected across the month.
                 </p>
@@ -271,9 +271,9 @@ export default function ProPage(): JSX.Element {
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/70">{step.role}</p>
                       <span aria-hidden="true" className="text-current/45">→</span>
-                      <p className="text-sm font-semibold tracking-tight text-current">{step.title}</p>
+                      <p className="text-base font-semibold tracking-tight text-current">{step.title}</p>
                     </div>
-                    <p className="mt-2 text-sm leading-7 text-current/80">{step.description}</p>
+                    <p className="mt-2 text-base leading-8 text-current/80">{step.description}</p>
                   </div>
                 ))}
               </div>
@@ -283,7 +283,7 @@ export default function ProPage(): JSX.Element {
               {HERO_NOTES.map((note) => (
                 <div className="rounded-2xl border border-line/80 bg-white px-5 py-5" key={note.title}>
                   <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-muted">{note.description}</p>
+                  <p className="mt-2 text-base leading-8 text-muted">{note.description}</p>
                 </div>
               ))}
             </div>
@@ -291,21 +291,21 @@ export default function ProPage(): JSX.Element {
             <dl className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
-                <dd className="mt-2 text-sm font-medium text-ink">One-time Stripe checkout</dd>
+                <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
               </div>
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
-                <dd className="mt-2 text-sm font-medium text-ink">Stripe payment details</dd>
+                <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
               </div>
               <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
-                <dd className="mt-2 text-sm font-medium text-ink">Static-first, no accounts</dd>
+                <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
               </div>
             </dl>
 
             <div className="rounded-2xl border border-line/80 bg-white px-5 py-5">
-              <p className="text-sm font-semibold text-ink">Editorial hierarchy</p>
-              <p className="mt-2 text-sm leading-7 text-muted">
+              <p className="text-base font-semibold text-ink">Editorial hierarchy</p>
+              <p className="mt-2 text-base leading-8 text-muted">
                 Free remains orientation. Weekly Pro turns one issue into an actionable decision memo. Monthly Bundle adds the continuity layer that keeps the thesis connected across the month.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function ProPage(): JSX.Element {
         {hasMissingOfferLink ? (
           <SurfaceCard className="mt-4 space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
             <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
-            <p className="text-sm leading-7 text-muted">
+            <p className="text-base leading-8 text-muted">
               One or more Stripe Payment Links are not configured for this environment. Set{' '}
               {missingPaymentLinkEnvVarNames.map((envVarName) => (
                 <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
@@ -346,14 +346,14 @@ export default function ProPage(): JSX.Element {
             <h2 className="text-lg font-semibold tracking-tight">Decision guide</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
-                <h3 className="text-sm font-semibold">Choose Single Issue</h3>
-                <p className="mt-2 text-sm leading-7 text-muted">
+                <h3 className="text-base font-semibold">Choose Single Issue</h3>
+                <p className="mt-2 text-base leading-8 text-muted">
                   You want a focused brief for the current setup and do not need the thesis carried through the rest of the month.
                 </p>
               </div>
               <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
-                <h3 className="text-sm font-semibold">Choose Monthly Bundle</h3>
-                <p className="mt-2 text-sm leading-7 text-muted">
+                <h3 className="text-base font-semibold">Choose Monthly Bundle</h3>
+                <p className="mt-2 text-base leading-8 text-muted">
                   You want each weekly decision to build on the last one, with continuity across the month and a closing synthesis.
                 </p>
               </div>
@@ -364,7 +364,7 @@ export default function ProPage(): JSX.Element {
             {FAQ_ITEMS.map((item) => (
               <SurfaceCard className="space-y-3 bg-paper" key={item.question}>
                 <h2 className="text-base font-semibold tracking-tight">{item.question}</h2>
-                <p className="text-sm leading-7 text-muted">{item.answer}</p>
+                <p className="text-base leading-8 text-muted">{item.answer}</p>
               </SurfaceCard>
             ))}
           </div>

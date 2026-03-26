@@ -24,9 +24,9 @@ export default function DisclaimerPage(): JSX.Element {
 
       <PageSection>
         <ContentWidth>
-          <SurfaceCard className="space-y-4">
-            <h2 className="text-xl font-semibold tracking-tight">Important notice</h2>
-            <ul className="space-y-3 text-sm leading-7 text-muted">
+          <SurfaceCard className="space-y-5">
+            <h2 className="text-[1.45rem] font-semibold tracking-tight">Important notice</h2>
+            <ul className="space-y-3.5 text-base leading-8 text-muted">
               {DISCLAIMER_POINTS.map((point) => (
                 <li className="border-l-2 border-line pl-4" key={point}>
                   {point}

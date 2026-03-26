@@ -11,8 +11,21 @@ html {
 }
 
 body {
-  @apply bg-paper text-ink antialiased;
+  @apply bg-paper text-base text-ink antialiased;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(252, 252, 253, 0.98));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {

@@ -49,11 +49,11 @@ export default function MethodologyPage(): JSX.Element {
         title="A consistent framework for reading each week."
       />
 
-      <PageSection className="grid gap-4 lg:grid-cols-2 lg:gap-6">
+      <PageSection className="grid gap-5 lg:grid-cols-2 lg:gap-7">
         {METHODOLOGY_SECTIONS.map((section) => (
-          <SurfaceCard className="space-y-4" key={section.title}>
-            <h2 className="text-xl font-semibold tracking-tight">{section.title}</h2>
-            <ul className="space-y-3 text-sm leading-7 text-muted">
+          <SurfaceCard className="space-y-5" key={section.title}>
+            <h2 className="text-[1.45rem] font-semibold tracking-tight">{section.title}</h2>
+            <ul className="space-y-3.5 text-base leading-8 text-muted">
               {section.points.map((point) => (
                 <li className="border-l-2 border-line pl-4" key={point}>
                   {point}
