@@ -75,21 +75,21 @@ export default function HomePage(): JSX.Element {
             </Link>
           </>
         }
-        className="rounded-[2rem] border border-line/80 bg-white px-5 py-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-8"
+        className="rounded-[2rem] border border-line/80 bg-white px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
         description="Weekly Crypto Pulse keeps the homepage editorial: one public report for orientation, one paid path for weekly decisions, and one bundle for month-long continuity."
         eyebrow="Weekly crypto research"
         title="Read the market setup, then choose the depth you need this week."
       />
 
-      <PageSection aria-labelledby="focus-heading" className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] lg:items-stretch">
-        <SurfaceCard className="space-y-4 bg-gradient-to-br from-white via-white to-paper/70">
+      <PageSection aria-labelledby="focus-heading" className="grid gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] lg:items-stretch">
+        <SurfaceCard className="space-y-5 bg-gradient-to-br from-white via-white to-paper/70">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Latest report</p>
           <div className="space-y-3">
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl" id="focus-heading">
+            <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.25rem]" id="focus-heading">
               {latestReport.metadata.title}
             </h2>
-            <p className="text-sm leading-7 text-muted">{latestReport.metadata.summary}</p>
-            <p className="text-sm leading-7 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
+            <p className="text-base leading-8 text-muted">{latestReport.metadata.summary}</p>
+            <p className="text-base leading-8 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link className="inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-sm font-medium transition hover:bg-ink hover:text-paper" href={latestReportHref}>
@@ -101,13 +101,13 @@ export default function HomePage(): JSX.Element {
           </div>
         </SurfaceCard>
 
-        <SurfaceCard className="space-y-4 border-ink/10 bg-paper/70">
+        <SurfaceCard className="space-y-5 border-ink/10 bg-paper/70">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Path to Pro</p>
           <div className="space-y-4">
             {EDITORIAL_PATH.map((step) => (
               <div className="space-y-1 border-l-2 border-line pl-3" key={step.label}>
-                <p className="text-sm font-semibold text-ink">{step.label}</p>
-                <p className="text-sm leading-6 text-muted">{step.description}</p>
+                <p className="text-base font-semibold text-ink">{step.label}</p>
+                <p className="text-base leading-8 text-muted">{step.description}</p>
               </div>
             ))}
           </div>
@@ -125,15 +125,15 @@ export default function HomePage(): JSX.Element {
           <dl className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
-              <dd className="mt-2 text-lg font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
+              <dd className="mt-2 text-xl font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
             </div>
             <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">BTC dominance</dt>
-              <dd className="mt-2 text-lg font-medium">{formatPercent(latestReport.marketSnapshot.btcDominancePct)}</dd>
+              <dd className="mt-2 text-xl font-medium">{formatPercent(latestReport.marketSnapshot.btcDominancePct)}</dd>
             </div>
             <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">Fear &amp; greed</dt>
-              <dd className="mt-2 text-lg font-medium">{latestReport.marketSnapshot.fearGreedIndex}</dd>
+              <dd className="mt-2 text-xl font-medium">{latestReport.marketSnapshot.fearGreedIndex}</dd>
             </div>
           </dl>
         </SurfaceCard>
@@ -160,8 +160,8 @@ export default function HomePage(): JSX.Element {
               return (
                 <article className={`space-y-3 rounded-xl border px-5 py-5 ${toneClassName}`} key={tier.id}>
                   <p className={`text-xs font-semibold uppercase tracking-[0.12em] ${mutedClassName}`}>{tier.editorialRole}</p>
-                  <h3 className="text-base font-semibold tracking-tight">{tier.name}</h3>
-                  <p className={`text-sm leading-7 ${mutedClassName}`}>{tier.targetReaderNeed}</p>
+                  <h3 className="text-lg font-semibold tracking-tight">{tier.name}</h3>
+                  <p className={`text-base leading-8 ${mutedClassName}`}>{tier.targetReaderNeed}</p>
                 </article>
               );
             })}
@@ -183,7 +183,7 @@ export default function HomePage(): JSX.Element {
           title="What we measure each week"
         />
         <SurfaceCard>
-          <ul className="space-y-4 text-sm leading-7 text-ink">
+          <ul className="space-y-4 text-base leading-8 text-ink">
             {METRICS.map((metric) => (
               <li className="border-l-2 border-line pl-4" key={metric}>
                 {metric}

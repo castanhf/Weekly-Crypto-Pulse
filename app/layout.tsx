@@ -30,7 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <div className="flex min-h-screen flex-col">
           <AnalyticsProvider />
           <Header />
-          <main className={`${pageContainerClassName} flex-1 py-8 sm:py-12 lg:py-14`}>{children}</main>
+          <main className={`${pageContainerClassName} flex-1 py-10 sm:py-14 lg:py-16`}>{children}</main>
           <Footer />
         </div>
       </body>
