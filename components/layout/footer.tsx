@@ -1,28 +1,49 @@
 import Link from 'next/link';
 
+import { pageContainerClassName } from '@/components/layout/page-shell';
+
+const primaryFooterLinks = [
+  { href: '/reports', label: 'Reports archive' },
+  { href: '/pro', label: 'Pro offers' },
+  { href: '/methodology', label: 'Methodology' },
+  { href: '/disclaimer', label: 'Disclaimer' }
+] as const;
+
 export function Footer(): JSX.Element {
   return (
     <footer className="border-t border-line/80 bg-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:px-8">
-        <div className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Weekly Crypto Pulse</p>
-          <p className="max-w-xl text-sm leading-7 text-muted">
-            Static-first weekly crypto research with a clear editorial ladder from free orientation to paid decision and continuity products.
-          </p>
-        </div>
-        <div className="grid gap-3 text-sm text-muted sm:grid-cols-2 md:justify-items-end">
-          <Link className="transition hover:text-ink" href="/reports">
-            Reports archive
-          </Link>
-          <Link className="transition hover:text-ink" href="/pro">
-            Pro offers
-          </Link>
-          <Link className="transition hover:text-ink" href="/methodology">
-            Methodology
-          </Link>
-          <Link className="transition hover:text-ink" href="/disclaimer">
-            Disclaimer
-          </Link>
+      <div className={`${pageContainerClassName} py-10 sm:py-12`}>
+        <div className="grid gap-9 border border-line/80 bg-paper/70 p-6 sm:rounded-[1.75rem] sm:p-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:p-10">
+          <div className="space-y-4">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-muted">Weekly Crypto Pulse</p>
+            <p className="max-w-2xl text-base leading-8 text-muted">
+              Static-first weekly crypto research with a clear editorial ladder from free orientation to paid decision and continuity.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:justify-items-end">
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Navigate</p>
+              <ul className="space-y-2.5 text-sm text-muted">
+                {primaryFooterLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link className="transition hover:text-ink" href={link.href}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Positioning</p>
+              <ul className="space-y-2.5 text-sm leading-6 text-muted">
+                <li>Free: weekly orientation</li>
+                <li>Weekly Pro: one decision cycle</li>
+                <li>Monthly Bundle: continuity across the month</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
