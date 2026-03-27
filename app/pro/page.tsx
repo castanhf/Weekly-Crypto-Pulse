@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { composeClassNames, editorialLabelClassName, getCtaClassName, getSectionTileClassName } from '@/components/layout/ui-primitives';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { getProOffersPageData, type ProOfferCard } from '@/lib/pro-offers';
@@ -107,13 +108,13 @@ const offerListClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
 };
 
 const offerCtaClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border border-ink bg-ink text-paper hover:bg-ink/90',
-  bestValueOffer: 'border border-white bg-white text-ink hover:bg-paper'
+  entryOffer: getCtaClassName({ tone: 'primary' }),
+  bestValueOffer: getCtaClassName({ tone: 'inverted' })
 };
 
 const offerSecondaryLinkClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border-line text-ink hover:border-ink',
-  bestValueOffer: 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5'
+  entryOffer: getCtaClassName({ tone: 'secondary' }),
+  bestValueOffer: getCtaClassName({ className: 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5' })
 };
 
 const OFFER_NARRATIVES: Readonly<Record<ProOfferCard['id'], OfferNarrative>> = {
@@ -224,13 +225,9 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
       <div className="mt-6 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
-          <ProCta
-            className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerCtaClassNames[pricing.tier]}`}
-            checkoutTarget={checkoutTarget}
-            label={product.ctaLabel}
-          />
+          <ProCta className={composeClassNames(offerCtaClassNames[pricing.tier], 'w-full sm:w-auto')} checkoutTarget={checkoutTarget} label={product.ctaLabel} />
           <a
-            className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-4 py-3 text-center text-sm font-medium transition sm:w-auto ${offerSecondaryLinkClassNames[pricing.tier]}`}
+            className={composeClassNames(offerSecondaryLinkClassNames[pricing.tier], 'w-full sm:w-auto')}
             href="#tier-differentiation-heading"
           >
             Compare tiers
@@ -251,7 +248,7 @@ export default function ProPage(): JSX.Element {
         <div className="grid gap-8 xl:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:items-start">
           <div className="order-2 space-y-6 xl:order-1 xl:sticky xl:top-24">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
               <div className="space-y-3">
                 <h1 className="max-w-2xl text-[2rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.06]">
                   Choose the paid scope that matches the job this week.
@@ -264,7 +261,7 @@ export default function ProPage(): JSX.Element {
             </div>
 
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Hierarchy at a glance</p>
+              <p className={editorialLabelClassName}>Hierarchy at a glance</p>
               <div className="grid gap-3">
                 {HIERARCHY_STEPS.map((step) => (
                   <div className={`rounded-2xl border px-5 py-5 ${step.className}`} key={step.role}>
@@ -281,7 +278,7 @@ export default function ProPage(): JSX.Element {
 
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               {HERO_NOTES.map((note) => (
-                <div className="rounded-2xl border border-line/80 bg-white px-5 py-5" key={note.title}>
+                <div className={getSectionTileClassName('default', 'px-5 py-5')} key={note.title}>
                   <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
                   <p className="mt-2 text-base leading-8 text-muted">{note.description}</p>
                 </div>
@@ -289,21 +286,21 @@ export default function ProPage(): JSX.Element {
             </div>
 
             <dl className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
                 <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
               </div>
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
                 <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
               </div>
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
                 <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
               </div>
             </dl>
 
-            <div className="rounded-2xl border border-line/80 bg-white px-5 py-5">
+            <div className={getSectionTileClassName('default', 'px-5 py-5')}>
               <p className="text-base font-semibold text-ink">Editorial hierarchy</p>
               <p className="mt-2 text-base leading-8 text-muted">
                 Free remains orientation. Weekly Pro turns one issue into an actionable decision memo. Monthly Bundle adds the continuity layer that keeps the thesis connected across the month.
@@ -345,13 +342,13 @@ export default function ProPage(): JSX.Element {
           <SurfaceCard className="space-y-4 bg-white">
             <h2 className="text-lg font-semibold tracking-tight">Decision guide</h2>
             <div className="grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
+              <div className={getSectionTileClassName('subtle')}>
                 <h3 className="text-base font-semibold">Choose Single Issue</h3>
                 <p className="mt-2 text-base leading-8 text-muted">
                   You want a focused brief for the current setup and do not need the thesis carried through the rest of the month.
                 </p>
               </div>
-              <div className="rounded-2xl border border-line/80 bg-paper px-4 py-4">
+              <div className={getSectionTileClassName('subtle')}>
                 <h3 className="text-base font-semibold">Choose Monthly Bundle</h3>
                 <p className="mt-2 text-base leading-8 text-muted">
                   You want each weekly decision to build on the last one, with continuity across the month and a closing synthesis.
