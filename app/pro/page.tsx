@@ -249,7 +249,7 @@ export default function ProPage(): JSX.Element {
     <PageShell>
       <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-5 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-8 lg:p-10">
         <div className="grid gap-8 xl:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:items-start">
-          <div className="space-y-6 xl:sticky xl:top-24">
+          <div className="order-2 space-y-6 xl:order-1 xl:sticky xl:top-24">
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
               <div className="space-y-3">
@@ -311,7 +311,7 @@ export default function ProPage(): JSX.Element {
             </div>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch lg:pt-3">
+          <div className="order-1 grid gap-5 md:grid-cols-2 md:items-stretch xl:order-2 xl:pt-3">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}

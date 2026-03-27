@@ -58,7 +58,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
       <ReportViewTracker reportSlug={report.metadata.slug} />
       <ReportHero metadata={report.metadata} />
       <PageSection className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(19rem,0.75fr)] xl:items-start">
-        <div className="order-last space-y-8 xl:order-first xl:space-y-10">
+        <div className="order-first space-y-8 xl:order-first xl:space-y-10">
           <SurfaceCard className="border-line/70 bg-gradient-to-b from-white to-paper/60 text-base leading-8 text-muted" aria-label="Tier context">
             <p>
               This page is part of the <span className="font-semibold text-ink">Free</span> layer and is designed for
@@ -93,7 +93,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           <MethodologyNote />
         </div>
 
-        <div className="order-first space-y-4 xl:order-last xl:sticky xl:top-24">
+        <div className="order-last space-y-4 xl:order-last xl:sticky xl:top-24">
           <ReportShareBlock title={report.metadata.title} url={reportUrl} />
           <SurfaceCard className="space-y-5 border-line/70 bg-gradient-to-br from-white via-white to-paper/90">
             <div className="space-y-2.5">

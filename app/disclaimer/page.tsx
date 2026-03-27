@@ -24,7 +24,7 @@ export default function DisclaimerPage(): JSX.Element {
       />
 
       <PageSection>
-        <ContentWidth className="mx-auto" size="feature">
+        <ContentWidth className="mx-auto" size="content">
           <SurfaceCard className="space-y-5">
             <h2 className="text-[1.45rem] font-semibold tracking-tight">Important notice</h2>
             <ul className="space-y-3.5 text-base leading-8 text-muted">

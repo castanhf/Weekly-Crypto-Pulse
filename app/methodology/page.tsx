@@ -51,8 +51,8 @@ export default function MethodologyPage(): JSX.Element {
       />
 
       <PageSection>
-        <ContentWidth className="mx-auto" size="feature">
-          <div className="grid gap-5 lg:grid-cols-2 lg:gap-7">
+        <ContentWidth className="mx-auto" size="content">
+          <div className="grid gap-5 xl:grid-cols-2 xl:gap-7">
             {METHODOLOGY_SECTIONS.map((section) => (
               <SurfaceCard className="space-y-5" key={section.title}>
                 <h2 className="text-[1.45rem] font-semibold tracking-tight">{section.title}</h2>
