@@ -25,8 +25,8 @@ export default function ReportsPage(): JSX.Element {
 
       <PageSection>
         <ContentWidth className="mx-auto" size="feature">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.8fr)_minmax(18rem,0.8fr)] lg:items-start">
-            <aside className="order-first lg:order-last lg:sticky lg:top-24">
+          <div className="grid gap-6 xl:grid-cols-[minmax(0,1.8fr)_minmax(18rem,0.8fr)] xl:items-start">
+            <aside className="order-first xl:order-last xl:sticky xl:top-24">
               <SurfaceCard className="space-y-5 bg-paper">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">

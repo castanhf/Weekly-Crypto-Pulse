@@ -81,7 +81,7 @@ export default function HomePage(): JSX.Element {
         title="Read the market setup, then choose the depth you need this week."
       />
 
-      <PageSection aria-labelledby="focus-heading" className="grid gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] lg:items-stretch">
+      <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
         <SurfaceCard className="space-y-5 bg-gradient-to-br from-white via-white to-paper/70">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Latest report</p>
           <div className="space-y-3">
@@ -146,7 +146,7 @@ export default function HomePage(): JSX.Element {
           title="Free and Pro, by editorial job"
         />
         <SurfaceCard className="space-y-6">
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-3">
             {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => {
               const toneClassName =
                 tier.id === 'weeklyPro'
