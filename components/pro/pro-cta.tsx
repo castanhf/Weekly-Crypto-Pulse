@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 
+import { getCtaClassName } from '@/components/layout/ui-primitives';
 import { trackEvent } from '@/lib/analytics/events';
 import type { CheckoutTarget } from '@/lib/pro-offers';
 
@@ -32,10 +33,7 @@ export function ProCta({ className, label = 'Upgrade to Pro', checkoutTarget }: 
 
   return (
     <Link
-      className={
-        className ??
-        'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper sm:w-auto'
-      }
+      className={className ?? getCtaClassName({ fullWidth: true })}
       href={checkoutTarget.href}
       onClick={handleClick}
       rel={isStripeCheckout ? 'noopener noreferrer' : undefined}

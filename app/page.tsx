@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { ContentWidth, PageHeader, PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
+import { editorialLabelClassName, getCtaClassName, getSectionTileClassName } from '@/components/layout/ui-primitives';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
@@ -33,8 +34,8 @@ const EDITORIAL_PATH = [
   }
 ] as const;
 
-const secondaryCtaClassName =
-  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
+const primaryCtaClassName = getCtaClassName({ fullWidth: true });
+const secondaryCtaClassName = getCtaClassName({ fullWidth: true, tone: 'secondary' });
 
 export default function HomePage(): JSX.Element {
   const latestReport = getLatestReport();
@@ -65,7 +66,7 @@ export default function HomePage(): JSX.Element {
         actions={
           <>
             <Link
-              className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-ink bg-ink px-4 py-3 text-center text-sm font-medium text-paper transition hover:bg-ink/90 sm:w-auto"
+              className={primaryCtaClassName}
               href={latestReportHref}
             >
               Read latest free report
@@ -83,7 +84,7 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
         <SurfaceCard className="space-y-5 bg-gradient-to-br from-white via-white to-paper/70">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Latest report</p>
+          <p className={editorialLabelClassName}>Latest report</p>
           <div className="space-y-3">
             <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.25rem]" id="focus-heading">
               {latestReport.metadata.title}
@@ -92,7 +93,7 @@ export default function HomePage(): JSX.Element {
             <p className="text-base leading-8 text-muted">Published {formatIsoDate(latestReport.metadata.publishedAt)}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link className="inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-sm font-medium transition hover:bg-ink hover:text-paper" href={latestReportHref}>
+            <Link className={getCtaClassName()} href={latestReportHref}>
               Open full report
             </Link>
             <Link className={secondaryCtaClassName} href="/pro">
@@ -102,7 +103,7 @@ export default function HomePage(): JSX.Element {
         </SurfaceCard>
 
         <SurfaceCard className="space-y-5 border-ink/10 bg-paper/70">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Path to Pro</p>
+          <p className={editorialLabelClassName}>Path to Pro</p>
           <div className="space-y-4">
             {EDITORIAL_PATH.map((step) => (
               <div className="space-y-1 border-l-2 border-line pl-3" key={step.label}>
@@ -123,15 +124,15 @@ export default function HomePage(): JSX.Element {
         />
         <SurfaceCard>
           <dl className="grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+            <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">Total market cap</dt>
               <dd className="mt-2 text-xl font-medium">{formatCompactUsd(latestReport.marketSnapshot.totalMarketCapUsd)}</dd>
             </div>
-            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+            <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">BTC dominance</dt>
               <dd className="mt-2 text-xl font-medium">{formatPercent(latestReport.marketSnapshot.btcDominancePct)}</dd>
             </div>
-            <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+            <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
               <dt className="text-xs uppercase tracking-[0.12em] text-muted">Fear &amp; greed</dt>
               <dd className="mt-2 text-xl font-medium">{latestReport.marketSnapshot.fearGreedIndex}</dd>
             </div>

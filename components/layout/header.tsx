@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { pageContainerClassName } from '@/components/layout/page-shell';
+import { composeClassNames, getCtaClassName } from '@/components/layout/ui-primitives';
 import { siteConfig } from '@/lib/site';
 
 type NavItem = Readonly<{
@@ -18,10 +19,13 @@ const navItems: readonly NavItem[] = [
 
 const getNavItemClassName = (item: NavItem): string => {
   if (item.isEmphasized) {
-    return 'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl border border-ink bg-ink px-4 py-2.5 text-sm font-medium text-paper transition hover:bg-ink/90';
+    return getCtaClassName({ className: 'whitespace-nowrap py-2.5', tone: 'primary' });
   }
 
-  return 'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-muted transition hover:bg-paper hover:text-ink';
+  return composeClassNames(
+    'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-muted transition',
+    'hover:bg-paper hover:text-ink'
+  );
 };
 
 export function Header(): JSX.Element {
