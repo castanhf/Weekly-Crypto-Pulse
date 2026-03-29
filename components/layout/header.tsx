@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { pageContainerClassName } from '@/components/layout/page-shell';
 import { composeClassNames, getCtaClassName } from '@/components/layout/ui-primitives';
@@ -17,18 +20,44 @@ const navItems: readonly NavItem[] = [
   { href: '/disclaimer', label: 'Disclaimer' }
 ] as const;
 
-const getNavItemClassName = (item: NavItem): string => {
+const normalizePathname = (pathname: string): string => {
+  if (pathname === '/') {
+    return pathname;
+  }
+
+  return pathname.replace(/\/+$/, '');
+};
+
+const isReportsPath = (pathname: string): boolean => pathname === '/reports' || pathname.startsWith('/reports/');
+
+const isProPath = (pathname: string): boolean => pathname === '/pro' || pathname.startsWith('/pro/');
+
+const isNavItemActive = (itemHref: string, currentPathname: string): boolean => {
+  if (itemHref === '/reports') {
+    return isReportsPath(currentPathname);
+  }
+
+  if (itemHref === '/pro') {
+    return isProPath(currentPathname);
+  }
+
+  return currentPathname === itemHref || currentPathname.startsWith(`${itemHref}/`);
+};
+
+const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
   if (item.isEmphasized) {
-    return getCtaClassName({ className: 'whitespace-nowrap py-2.5', tone: 'primary' });
+    return getCtaClassName({ className: 'whitespace-nowrap py-2.5', tone: isActive ? 'primary' : 'secondary' });
   }
 
   return composeClassNames(
     'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-muted transition',
-    'hover:bg-paper hover:text-ink'
+    isActive ? 'bg-paper text-ink' : 'hover:bg-paper hover:text-ink'
   );
 };
 
 export function Header(): JSX.Element {
+  const pathname = normalizePathname(usePathname() ?? '/');
+
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className={`${pageContainerClassName} py-4 sm:py-5`}>
@@ -47,13 +76,17 @@ export function Header(): JSX.Element {
 
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
             <ul className="flex gap-2 overflow-x-auto rounded-2xl border border-line/80 bg-white p-1.5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:flex-wrap sm:justify-end">
-              {navItems.map((item) => (
-                <li className="shrink-0" key={item.href}>
-                  <Link className={getNavItemClassName(item)} href={item.href}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const isActive = isNavItemActive(item.href, pathname);
+
+                return (
+                  <li className="shrink-0" key={item.href}>
+                    <Link aria-current={isActive ? 'page' : undefined} className={getNavItemClassName(item, isActive)} href={item.href}>
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </div>
