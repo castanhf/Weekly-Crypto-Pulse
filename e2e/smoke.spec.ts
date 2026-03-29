@@ -43,6 +43,14 @@ test('/reports lists report items', async ({ page }) => {
 
   await expect(page.getByRole('heading', { level: 1, name: /public weekly reports, organized for quick scanning\./i })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Compare Weekly Pro and Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
+    'aria-current',
+    'page'
+  );
+  await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Pro' })).not.toHaveAttribute(
+    'aria-current',
+    'page'
+  );
 
   const reportItems = page.getByRole('listitem');
   expect(await reportItems.count()).toBeGreaterThan(0);
@@ -59,6 +67,11 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
+  await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
+    'aria-current',
+    'page'
+  );
+
   const singleIssueCtas = page.getByRole('link', { name: 'Buy Single Issue' });
   const monthlyBundleCtas = page.getByRole('link', { name: 'Buy Monthly Bundle' });
 
@@ -80,6 +93,10 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Pro' })).toHaveAttribute(
+    'aria-current',
+    'page'
+  );
   await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(1);
   await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
   await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();
