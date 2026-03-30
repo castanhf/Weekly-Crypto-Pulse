@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-03-23T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: ETF Demand Supports Majors as Altcoin Rotation Stalls",
+      "slug": "2026-03-23-etf-demand-supports-majors-as-altcoin-rotation-stalls",
+      "publishedAt": "2026-03-23",
+      "weekLabel": "Week of Mar 23, 2026",
+      "summary": "Bitcoin and Ethereum held key support while selective capital rotated out of high-beta altcoins.",
+      "tags": [
+        "bitcoin",
+        "ethereum",
+        "etf",
+        "rotation"
+      ]
+    },
+    "regime": "range-bound",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2815000000000,
+      "btcDominancePct": 56.1,
+      "ethDominancePct": 16.3,
+      "fearGreedIndex": 59
+    },
+    "movers": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 2.4,
+        "catalyst": "Steady ETF net inflows and resilient spot demand."
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 1.8,
+        "catalyst": "Large-cap rotation and stable staking participation."
+      },
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct7d": -5.1,
+        "catalyst": "Momentum unwind after a sharp prior-week rally."
+      }
+    ],
+    "sections": [
+      {
+        "id": "market-overview",
+        "heading": "Market Overview",
+        "body": "Liquidity stayed concentrated in majors while altcoin breadth softened.",
+        "highlights": [
+          "BTC closed above its weekly VWAP.",
+          "Perpetual funding reset to neutral across major venues."
+        ]
+      },
+      {
+        "id": "positioning",
+        "heading": "Positioning & Flows",
+        "body": "Institutional participation remained constructive, but speculative leverage cooled.",
+        "highlights": [
+          "Spot ETF flow momentum remained positive for a sixth consecutive week.",
+          "Open interest declined in mid-cap perpetual pairs."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Major-asset demand remains the primary support while broad altcoin participation fades.",
+        "ETF-related flows are still cushioning pullbacks, but upside follow-through is slowing.",
+        "Positioning is shifting from high-beta momentum into higher-liquidity names."
+      ],
+      "riskChecklist": [
+        "Watch for a break below prior weekly support in BTC before adding directional risk.",
+        "Monitor ETF net-flow momentum for a second consecutive down week.",
+        "Track funding and open interest for signs of leverage re-expansion.",
+        "Confirm stablecoin supply growth continues to support spot liquidity.",
+        "Respect macro event windows that can override crypto-native flow signals."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$90k support / $96k reclaim",
+          "context": "Holding support keeps the range constructive; reclaiming resistance reopens trend continuation."
+        },
+        {
+          "asset": "ETH",
+          "level": "$4.6k pivot",
+          "context": "Sustained closes above pivot improve odds of renewed ETH-led breadth."
+        },
+        {
+          "asset": "TOTAL3",
+          "level": "prior month low",
+          "context": "A fresh low would confirm ongoing altcoin-relative weakness."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "BTC held weekly support despite softer intraday momentum.",
+        "ETF inflows stayed positive, but the pace moderated versus the prior week.",
+        "Altcoin breadth weakened further as TOTAL3 underperformed majors."
+      ]
+    }
+  }
+}
