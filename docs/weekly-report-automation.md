@@ -14,7 +14,8 @@ This repository includes a GitHub Actions workflow at `.github/workflows/weekly-
 3. Install dependencies with `npm ci`.
 4. Generate the report artifact with `npm run generate:local-report`.
 5. Validate all report artifacts with `npm run validate:reports`.
-6. Commit and push `data/reports` changes when files were updated.
+6. Sync premium artifacts (latest Weekly Pro single issue, plus Monthly Bundle when the latest month has four reports) with `npm run generate:premium`.
+7. Commit and push `data/reports` and `data/pro-packs` changes when files were updated.
 
 If generation does not produce any diff, the workflow exits without creating a commit.
 

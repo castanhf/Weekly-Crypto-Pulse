@@ -16,7 +16,8 @@
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
-    "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js"
+    "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
+    "generate:premium": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/sync-premium-artifacts.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

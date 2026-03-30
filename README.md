@@ -35,3 +35,4 @@ Reports are loaded from local JSON files in `data/reports`.
 - `npm run test`
 - `npm run generate:pro -- --product singleIssue --slug <report-slug> [--buyerEmail <email>] [--orderRef <ref>] [--purchasedAt <ISO-8601>]`
 - `npm run generate:pro -- --product monthlyBundle --month <YYYY-MM> [--slugs <slug1,slug2,slug3,slug4>] [--buyerEmail <email>] [--orderRef <ref>] [--purchasedAt <ISO-8601>]`
+- `npm run generate:premium` (syncs premium artifacts from current report data: latest Weekly Pro single issue, and Monthly Bundle when the latest month reaches four reports)
