@@ -18,6 +18,13 @@ This repository includes a GitHub Actions workflow at `.github/workflows/weekly-
 
 If generation does not produce any diff, the workflow exits without creating a commit.
 
+## Publication date source of truth
+
+- The generator derives the report `publishedAt` date from the current **UTC week Monday** by default.
+- `generatedAt` is normalized to `YYYY-MM-DDT06:00:00.000Z` for that same Monday to keep reruns stable.
+- For backfills or manual overrides, set `REPORT_PUBLISHED_AT=YYYY-MM-DD` when running `npm run generate:local-report`.
+- `data/report-inputs/local-report-input.json` is treated as a **content template** for headline/body/signals, not as the publication calendar source.
+
 ## Secret handling
 
 The workflow only relies on `secrets.GITHUB_TOKEN` for repository push access. No additional secrets are required.
