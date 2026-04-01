@@ -66,6 +66,12 @@ Highlights
 - ETF inflows stayed positive, but the pace moderated versus the prior week.
 - Altcoin breadth weakened further as TOTAL3 underperformed majors.
 
+## Decision scorecard (single-week)
+
+- Primary posture: Major-asset demand remains the primary support while broad altcoin participation fades.
+- Invalidation cues: Watch for a break below prior weekly support in BTC before adding directional risk. | Monitor ETF net-flow momentum for a second consecutive down week. | Track funding and open interest for signs of leverage re-expansion.
+- Immediate execution focus: BTC held weekly support despite softer intraday momentum. | ETF inflows stayed positive, but the pace moderated versus the prior week. | Altcoin breadth weakened further as TOTAL3 underperformed majors.
+
 ## Watchlist levels
 
 - **BTC** at `$90k support / $96k reclaim`: Holding support keeps the range constructive; reclaiming resistance reopens trend continuation.

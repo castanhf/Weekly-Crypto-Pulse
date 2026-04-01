@@ -1,4 +1,4 @@
-# Weekly Crypto Pulse Pro Pack
+# Weekly Crypto Pulse Pro Pack — Single Issue
 
 ## Report metadata
 
@@ -66,12 +66,23 @@ Highlights
 - ETF inflows stayed positive, but the pace moderated versus the prior week.
 - Altcoin breadth weakened further as TOTAL3 underperformed majors.
 
+## Decision scorecard (single-week)
+
+- Primary posture: Major-asset demand remains the primary support while broad altcoin participation fades.
+- Invalidation cues: Watch for a break below prior weekly support in BTC before adding directional risk. | Monitor ETF net-flow momentum for a second consecutive down week. | Track funding and open interest for signs of leverage re-expansion.
+- Immediate execution focus: BTC held weekly support despite softer intraday momentum. | ETF inflows stayed positive, but the pace moderated versus the prior week. | Altcoin breadth weakened further as TOTAL3 underperformed majors.
+
 ## Watchlist levels
 
 - **BTC** at `$90k support / $96k reclaim`: Holding support keeps the range constructive; reclaiming resistance reopens trend continuation.
 - **ETH** at `$4.6k pivot`: Sustained closes above pivot improve odds of renewed ETH-led breadth.
 - **TOTAL3** at `prior month low`: A fresh low would confirm ongoing altcoin-relative weakness.
 
+## License and watermark
+
+License: Personal use only. Redistribution is not allowed.
+Buyer watermark: Generated only when buyer metadata is supplied.
+
 ## Fulfillment note
 
-This markdown is deterministic for a given report slug and is suitable for direct delivery or PDF conversion.
+This markdown is deterministic for a given report slug and input watermark and is suitable for direct delivery or PDF conversion.
