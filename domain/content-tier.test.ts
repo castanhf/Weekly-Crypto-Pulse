@@ -14,7 +14,7 @@ describe('content tiers', () => {
       primaryQuestion: 'What is the market environment right now?',
       differentiationBoundary:
         'Stops at orientation. It describes the setup, but it does not turn that setup into a paid decision memo or a month-long continuity workflow.',
-      includedContentBlocks: ['archiveAccess', 'latestReportRead', 'marketSnapshotMetrics', 'methodologyAndDisclaimer']
+      includedContentBlocks: ['archiveAccess', 'latestReportRead', 'marketSnapshotMetrics', 'methodologyAndDisclaimer', 'orientationTakeaways']
     });
   });
 
@@ -25,7 +25,7 @@ describe('content tiers', () => {
       primaryQuestion: "What should I do with this week's setup?",
       differentiationBoundary:
         'Starts where Free stops: it moves from descriptive orientation into a decision memo. It still stops before any cross-week continuity or month-end synthesis.',
-      includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage']
+      includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'decisionScorecard', 'weeklyExecutionChecklist']
     });
   });
 
@@ -36,7 +36,15 @@ describe('content tiers', () => {
       primaryQuestion: 'How is the market thesis developing across the full month?',
       differentiationBoundary:
         'Not just four reports together. It adds the continuity layer: what carried forward, what changed, and how the month resolved in aggregate.',
-      includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'monthlyContinuity', 'crossIssueTracking']
+      includedContentBlocks: [
+        'weeklyDecisionBrief',
+        'fullNarrative',
+        'signalsPackage',
+        'decisionScorecard',
+        'weeklyExecutionChecklist',
+        'monthlyContinuity',
+        'crossIssueTracking'
+      ]
     });
   });
 });

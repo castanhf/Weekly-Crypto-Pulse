@@ -5,9 +5,12 @@ export type ContentBlockId =
   | 'latestReportRead'
   | 'marketSnapshotMetrics'
   | 'methodologyAndDisclaimer'
+  | 'orientationTakeaways'
   | 'weeklyDecisionBrief'
   | 'fullNarrative'
   | 'signalsPackage'
+  | 'decisionScorecard'
+  | 'weeklyExecutionChecklist'
   | 'monthlyContinuity'
   | 'crossIssueTracking';
 
@@ -33,11 +36,14 @@ export const CONTENT_BLOCK_LABELS: Readonly<Record<ContentBlockId, string>> = {
   latestReportRead: 'Public weekly report for market orientation',
   marketSnapshotMetrics: 'Core market snapshot metrics and descriptive market read',
   methodologyAndDisclaimer: 'Methodology, disclaimer, and process context',
+  orientationTakeaways: 'Orientation takeaways that frame regime and flow context without prescribing a paid posture',
   weeklyDecisionBrief: 'Decision memo with posture, scenario framing, and invalidation for one issue',
   fullNarrative: 'Full narrative analysis across regime, flows, and rotation for the paid thesis',
   signalsPackage: 'Decision checklist with thesis bullets, risks, and watchlist levels',
-  monthlyContinuity: 'Month-end continuity summary that reconciles the four paid weekly issues',
-  crossIssueTracking: 'Cross-issue tracker showing what changed, persisted, or broke week to week'
+  decisionScorecard: 'Single-week decision scorecard with posture, key triggers, and invalidation cues',
+  weeklyExecutionChecklist: 'Single-week execution checklist that translates the thesis into immediate monitoring actions',
+  monthlyContinuity: 'Monthly continuity ledger that tracks what persisted, changed, or broke across each week',
+  crossIssueTracking: 'Month-end synthesis linking recurring thesis points, regime distribution, and top movers'
 } as const;
 
 export const CONTENT_TIERS: Readonly<Record<ContentTierId, ContentTierDefinition>> = {
@@ -51,8 +57,16 @@ export const CONTENT_TIERS: Readonly<Record<ContentTierId, ContentTierDefinition
     primaryOutcome: 'A shared baseline for reading the week without committing to a paid workflow.',
     differentiationBoundary:
       'Stops at orientation. It describes the setup, but it does not turn that setup into a paid decision memo or a month-long continuity workflow.',
-    includedContentBlocks: ['archiveAccess', 'latestReportRead', 'marketSnapshotMetrics', 'methodologyAndDisclaimer'],
-    excludedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'monthlyContinuity', 'crossIssueTracking'],
+    includedContentBlocks: ['archiveAccess', 'latestReportRead', 'marketSnapshotMetrics', 'methodologyAndDisclaimer', 'orientationTakeaways'],
+    excludedContentBlocks: [
+      'weeklyDecisionBrief',
+      'fullNarrative',
+      'signalsPackage',
+      'decisionScorecard',
+      'weeklyExecutionChecklist',
+      'monthlyContinuity',
+      'crossIssueTracking'
+    ],
     editorialRole: 'orientation',
     valueHierarchyLabel: 'Public orientation layer.'
   },
@@ -66,8 +80,8 @@ export const CONTENT_TIERS: Readonly<Record<ContentTierId, ContentTierDefinition
     primaryOutcome: 'One issue, one decision cycle, with a clearer posture, invalidation, and actionable checkpoints.',
     differentiationBoundary:
       'Starts where Free stops: it moves from descriptive orientation into a decision memo. It still stops before any cross-week continuity or month-end synthesis.',
-    includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage'],
-    excludedContentBlocks: ['archiveAccess', 'latestReportRead', 'methodologyAndDisclaimer', 'monthlyContinuity', 'crossIssueTracking'],
+    includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'decisionScorecard', 'weeklyExecutionChecklist'],
+    excludedContentBlocks: ['archiveAccess', 'latestReportRead', 'methodologyAndDisclaimer', 'orientationTakeaways', 'monthlyContinuity', 'crossIssueTracking'],
     editorialRole: 'decision',
     valueHierarchyLabel: 'Entry paid layer for a single issue and a single decision cycle.'
   },
@@ -81,8 +95,16 @@ export const CONTENT_TIERS: Readonly<Record<ContentTierId, ContentTierDefinition
     primaryOutcome: 'A continuity workflow with recurring decision support, cross-issue tracking, and a month-end synthesis.',
     differentiationBoundary:
       'Not just four reports together. It adds the continuity layer: what carried forward, what changed, and how the month resolved in aggregate.',
-    includedContentBlocks: ['weeklyDecisionBrief', 'fullNarrative', 'signalsPackage', 'monthlyContinuity', 'crossIssueTracking'],
-    excludedContentBlocks: ['archiveAccess', 'latestReportRead', 'methodologyAndDisclaimer'],
+    includedContentBlocks: [
+      'weeklyDecisionBrief',
+      'fullNarrative',
+      'signalsPackage',
+      'decisionScorecard',
+      'weeklyExecutionChecklist',
+      'monthlyContinuity',
+      'crossIssueTracking'
+    ],
+    excludedContentBlocks: ['archiveAccess', 'latestReportRead', 'methodologyAndDisclaimer', 'orientationTakeaways'],
     editorialRole: 'continuity',
     valueHierarchyLabel: 'Best-value paid layer for continuity across the month.'
   }
