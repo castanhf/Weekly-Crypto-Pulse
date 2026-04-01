@@ -38,12 +38,12 @@ type OfferNarrative = Readonly<{
 
 const HERO_NOTES: ReadonlyArray<HeroNote> = [
   {
-    title: 'Single Issue',
-    description: 'Entry paid offer for one immediate decision cycle.'
+    title: 'Weekly Pro — Single Issue',
+    description: 'Entry offer when you need one high-conviction decision memo this week.'
   },
   {
     title: 'Monthly Bundle',
-    description: 'Most complete package for continuity across the full month.'
+    description: 'Best value when you want continuity across all weekly decisions this month.'
   }
 ] as const;
 
@@ -88,8 +88,7 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
 
 const offerCardClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
   entryOffer: 'border-line/80 bg-white text-ink shadow-[0_18px_35px_rgba(16,24,40,0.05)]',
-  bestValueOffer:
-    'border-ink bg-ink text-paper shadow-[0_24px_50px_rgba(16,24,40,0.18)] lg:-translate-y-3 lg:scale-[1.02]'
+  bestValueOffer: 'border-ink bg-ink text-paper shadow-[0_24px_50px_rgba(16,24,40,0.18)]'
 };
 
 const offerSurfaceClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
@@ -142,87 +141,78 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
   const isBestValueOffer = pricing.tier === 'bestValueOffer';
 
   return (
-    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 lg:p-9 ${offerCardClassNames[pricing.tier]}`}>
-      <div className="flex flex-1 flex-col gap-6">
-        <div className="space-y-5">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div className="space-y-3">
-              <p
-                className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
-                  isBestValueOffer ? 'border-white/10 bg-white/10 text-paper' : 'border-line/80 bg-paper text-ink'
-                }`}
-              >
-                {pricing.valueLabel}
-              </p>
-              <div className="space-y-2">
-                <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.05rem]">{product.name}</h2>
-                <p className={`max-w-xl text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
-              </div>
-            </div>
-
-            <div
-              className={`min-w-[10rem] rounded-[1.5rem] border px-5 py-4 text-left sm:text-right ${offerSurfaceClassNames[pricing.tier]}`}
+    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
+      <div className="space-y-6">
+        <header className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p
+              className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
+                isBestValueOffer ? 'border-white/10 bg-white/10 text-paper' : 'border-line/80 bg-paper text-ink'
+              }`}
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
-              <p className="mt-3 text-3xl font-semibold tracking-tight">{pricing.displayPrice}</p>
-              <p className={`mt-2 text-base leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
-            </div>
+              {pricing.valueLabel}
+            </p>
+            <p className={`text-sm font-medium ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
           </div>
 
-          <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
-                <p className="text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
-              </div>
-              <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
-            </div>
-
-            <dl className="mt-5 grid gap-3 sm:grid-cols-3">
-              {narrative.metrics.map((metric) => (
-                <div
-                  className={`rounded-2xl border px-4 py-4 ${
-                    isBestValueOffer ? 'border-white/10 bg-black/10' : 'border-line/80 bg-white'
-                  }`}
-                  key={metric.label}
-                >
-                  <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">{metric.label}</dt>
-                  <dd className="mt-2 text-base font-medium leading-7 text-current">{metric.value}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="space-y-2">
+            <h2 className="text-[1.7rem] font-semibold tracking-tight sm:text-[1.95rem]">{product.name}</h2>
+            <p className={`text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
           </div>
+        </header>
+
+        <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
+          <p className="mt-2 text-4xl font-semibold tracking-tight">{pricing.displayPrice}</p>
+          <p className={`mt-2 text-base leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
         </div>
 
-        <div className="grid gap-3 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
-          <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+        <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
+          <p className="mt-2 text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
+
+          <dl className="mt-4 grid gap-3 sm:grid-cols-3">
+            {narrative.metrics.map((metric) => (
+              <div
+                className={`rounded-2xl border px-4 py-4 ${
+                  isBestValueOffer ? 'border-white/10 bg-black/10' : 'border-line/80 bg-white'
+                }`}
+                key={metric.label}
+              >
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">{metric.label}</dt>
+                <dd className="mt-2 text-base font-medium leading-7 text-current">{metric.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <div className="space-y-4">
+          <div>
             <h3 className="text-base font-semibold text-current">Included in this offer</h3>
-            <ul className={`mt-4 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+            <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
               {product.includes.map((deliverable) => (
                 <li key={deliverable}>{deliverable}</li>
               ))}
             </ul>
           </div>
 
-          <div className="grid gap-3">
-            <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-              <h3 className="text-base font-semibold text-current">Best used when</h3>
-              <p className={`mt-3 text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
-            </div>
+          <div>
+            <h3 className="text-base font-semibold text-current">Best used when</h3>
+            <p className={`mt-2 text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
+          </div>
 
-            <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
-              <h3 className="text-base font-semibold text-current">Not included</h3>
-              <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
-                {product.excludes.map((exclusion) => (
-                  <li key={exclusion}>{exclusion}</li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h3 className="text-base font-semibold text-current">Not included</h3>
+            <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+              {product.excludes.map((exclusion) => (
+                <li key={exclusion}>{exclusion}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+      <div className="mt-8 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
           <ProCta className={composeClassNames(offerCtaClassNames[pricing.tier], 'w-full sm:w-auto')} checkoutTarget={checkoutTarget} label={product.ctaLabel} />
@@ -245,10 +235,26 @@ export default function ProPage(): JSX.Element {
   return (
     <PageShell>
       <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-5 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-8 lg:p-10">
-        <div className="grid gap-8 xl:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:items-start">
-          <div className="order-2 space-y-6 xl:order-1 xl:sticky xl:top-24">
-            <div className="space-y-4">
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
+              <dl className="grid gap-3 sm:grid-cols-3">
+                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
+                  <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
+                </div>
+                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
+                  <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
+                </div>
+                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
+                  <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
+                </div>
+              </dl>
+            </div>
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
               <div className="space-y-3">
                 <h1 className="max-w-2xl text-[2rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.06]">
                   Choose the paid scope that matches the job this week.
@@ -258,57 +264,34 @@ export default function ProPage(): JSX.Element {
                   or the Monthly Bundle when you want the thesis to stay connected across the month.
                 </p>
               </div>
-            </div>
-
-            <div className="space-y-3">
-              <p className={editorialLabelClassName}>Hierarchy at a glance</p>
-              <div className="grid gap-3">
-                {HIERARCHY_STEPS.map((step) => (
-                  <div className={`rounded-2xl border px-5 py-5 ${step.className}`} key={step.role}>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/70">{step.role}</p>
-                      <span aria-hidden="true" className="text-current/45">→</span>
-                      <p className="text-base font-semibold tracking-tight text-current">{step.title}</p>
+              <div className={getSectionTileClassName('default', 'px-5 py-5')}>
+                <p className={editorialLabelClassName}>Plan comparison</p>
+                <div className="mt-3 grid gap-3">
+                  {HIERARCHY_STEPS.map((step) => (
+                    <div className={`rounded-2xl border px-4 py-4 ${step.className}`} key={step.role}>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/70">{step.role}</p>
+                        <span aria-hidden="true" className="text-current/45">→</span>
+                        <p className="text-base font-semibold tracking-tight text-current">{step.title}</p>
+                      </div>
+                      <p className="mt-1.5 text-sm leading-7 text-current/80">{step.description}</p>
                     </div>
-                    <p className="mt-2 text-base leading-8 text-current/80">{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
-              {HERO_NOTES.map((note) => (
-                <div className={getSectionTileClassName('default', 'px-5 py-5')} key={note.title}>
-                  <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
-                  <p className="mt-2 text-base leading-8 text-muted">{note.description}</p>
+                  ))}
                 </div>
-              ))}
-            </div>
-
-            <dl className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
-                <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
               </div>
-              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
-                <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
-              </div>
-              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
-                <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
-              </div>
-            </dl>
-
-            <div className={getSectionTileClassName('default', 'px-5 py-5')}>
-              <p className="text-base font-semibold text-ink">Editorial hierarchy</p>
-              <p className="mt-2 text-base leading-8 text-muted">
-                Free remains orientation. Weekly Pro turns one issue into an actionable decision memo. Monthly Bundle adds the continuity layer that keeps the thesis connected across the month.
-              </p>
             </div>
           </div>
 
-          <div className="order-1 grid gap-5 md:grid-cols-2 md:items-stretch xl:order-2 xl:pt-3">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {HERO_NOTES.map((note) => (
+              <div className={getSectionTileClassName('default', 'px-5 py-5')} key={note.title}>
+                <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
+                <p className="mt-2 text-base leading-8 text-muted">{note.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}
