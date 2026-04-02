@@ -70,19 +70,20 @@ const HIERARCHY_STEPS: ReadonlyArray<HierarchyStep> = [
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
+    question: 'How do I choose between Single Issue and Monthly Bundle?',
+    answer: 'Pick Single Issue for one immediate decision. Pick Monthly Bundle when you want continuity across every week of the month.'
+  },
+  {
     question: 'Is this a subscription?',
-    answer:
-      'No. Both products are one-time purchases through Stripe Payment Links. Weekly Crypto Pulse does not run subscription billing.'
+    answer: 'No. Both products are one-time purchases through Stripe Payment Links.'
   },
   {
     question: 'Do I need an account or login?',
-    answer:
-      'No. This site has no user authentication and no entitlement system. Stripe checkout confirms purchase identity and payment status.'
+    answer: 'No. This site has no user accounts or login flow. Stripe checkout confirms payment identity.'
   },
   {
     question: 'How is Pro access delivered?',
-    answer:
-      'After successful Stripe checkout, fulfillment follows the existing Pro operations workflow. Stripe payment details are the source of truth for fulfillment.'
+    answer: 'After successful Stripe checkout, fulfillment follows the existing Pro operations workflow using Stripe payment details.'
   }
 ] as const;
 
@@ -314,47 +315,27 @@ export default function ProPage(): JSX.Element {
         ) : null}
       </section>
 
+      <TierDifferentiation
+        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
+        title="Plan comparison"
+      />
+
       <PageSection aria-labelledby="offers-heading">
         <SectionIntro
-          description="The paid products stay intentionally simple. Both use Stripe Payment Links, both are one-time purchases, and the real choice is whether you need one weekly decision or continuity across the month."
+          description="Quick answers before checkout. This is a practical reference section, not a separate offer."
           id="offers-heading"
           title="Before you buy"
         />
 
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start">
-          <SurfaceCard className="space-y-4 bg-white">
-            <h2 className="text-lg font-semibold tracking-tight">Decision guide</h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className={getSectionTileClassName('subtle')}>
-                <h3 className="text-base font-semibold">Choose Single Issue</h3>
-                <p className="mt-2 text-base leading-8 text-muted">
-                  You want a focused brief for the current setup and do not need the thesis carried through the rest of the month.
-                </p>
-              </div>
-              <div className={getSectionTileClassName('subtle')}>
-                <h3 className="text-base font-semibold">Choose Monthly Bundle</h3>
-                <p className="mt-2 text-base leading-8 text-muted">
-                  You want each weekly decision to build on the last one, with continuity across the month and a closing synthesis.
-                </p>
-              </div>
-            </div>
-          </SurfaceCard>
-
-          <div className="grid gap-4">
-            {FAQ_ITEMS.map((item) => (
-              <SurfaceCard className="space-y-3 bg-paper" key={item.question}>
-                <h2 className="text-base font-semibold tracking-tight">{item.question}</h2>
-                <p className="text-base leading-8 text-muted">{item.answer}</p>
-              </SurfaceCard>
-            ))}
-          </div>
+        <div className="mx-auto max-w-4xl space-y-4">
+          {FAQ_ITEMS.map((item) => (
+            <SurfaceCard className="space-y-2 bg-paper px-6 py-5 sm:px-7" key={item.question}>
+              <h2 className="text-base font-semibold tracking-tight">{item.question}</h2>
+              <p className="text-base leading-8 text-muted">{item.answer}</p>
+            </SurfaceCard>
+          ))}
         </div>
       </PageSection>
-
-      <TierDifferentiation
-        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
-        title="Editorial hierarchy by function"
-      />
     </PageShell>
   );
 }
