@@ -314,6 +314,11 @@ export default function ProPage(): JSX.Element {
         ) : null}
       </section>
 
+      <TierDifferentiation
+        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
+        title="Plan comparison"
+      />
+
       <PageSection aria-labelledby="offers-heading">
         <SectionIntro
           description="The paid products stay intentionally simple. Both use Stripe Payment Links, both are one-time purchases, and the real choice is whether you need one weekly decision or continuity across the month."
@@ -350,11 +355,6 @@ export default function ProPage(): JSX.Element {
           </div>
         </div>
       </PageSection>
-
-      <TierDifferentiation
-        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
-        title="Editorial hierarchy by function"
-      />
     </PageShell>
   );
 }
