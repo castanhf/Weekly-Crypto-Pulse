@@ -88,7 +88,7 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /choose the paid scope that matches the job this week\./i
+      name: /choose the paid scope that matches the decision you need this week\./i
     })
   ).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
