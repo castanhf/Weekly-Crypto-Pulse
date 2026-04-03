@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
-import { composeClassNames, editorialLabelClassName, getCtaClassName, getSectionTileClassName } from '@/components/layout/ui-primitives';
+import { composeClassNames, getCtaClassName, getSectionTileClassName } from '@/components/layout/ui-primitives';
 import { ProCta } from '@/components/pro/pro-cta';
 import { TierDifferentiation } from '@/components/pro/tier-differentiation';
 import { getProOffersPageData, type ProOfferCard } from '@/lib/pro-offers';
@@ -14,18 +14,6 @@ type FaqItem = Readonly<{
   answer: string;
 }>;
 
-type HeroNote = Readonly<{
-  title: string;
-  description: string;
-}>;
-
-type HierarchyStep = Readonly<{
-  role: string;
-  title: string;
-  description: string;
-  className: string;
-}>;
-
 type OfferMetric = Readonly<{
   label: string;
   value: string;
@@ -35,38 +23,6 @@ type OfferNarrative = Readonly<{
   emphasis: string;
   metrics: ReadonlyArray<OfferMetric>;
 }>;
-
-const HERO_NOTES: ReadonlyArray<HeroNote> = [
-  {
-    title: 'Weekly Pro — Single Issue',
-    description: 'Entry offer when you need one high-conviction decision memo this week.'
-  },
-  {
-    title: 'Monthly Bundle',
-    description: 'Best value when you want continuity across all weekly decisions this month.'
-  }
-] as const;
-
-const HIERARCHY_STEPS: ReadonlyArray<HierarchyStep> = [
-  {
-    role: 'Free',
-    title: 'Orientation',
-    description: 'Read the public issue first to map the current setup.',
-    className: 'border-line/80 bg-white text-ink'
-  },
-  {
-    role: 'Weekly Pro',
-    title: 'Decision support',
-    description: 'Upgrade for one issue when this week needs a clear posture.',
-    className: 'border-ink bg-ink text-paper'
-  },
-  {
-    role: 'Monthly Bundle',
-    title: 'Continuity',
-    description: 'Stay connected across all weekly issues with month-end synthesis.',
-    className: 'border-amber-200 bg-amber-50 text-amber-950'
-  }
-] as const;
 
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
@@ -234,64 +190,36 @@ export default function ProPage(): JSX.Element {
 
   return (
     <PageShell>
-      <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-5 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-8 lg:p-10">
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
-              <dl className="grid gap-3 sm:grid-cols-3">
-                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
-                  <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
-                </div>
-                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
-                  <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
-                </div>
-                <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
-                  <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
-                </div>
-              </dl>
+      <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-10 lg:p-12">
+        <div className="space-y-10 sm:space-y-12">
+          <header className="space-y-6">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
+            <div className="space-y-4">
+              <h1 className="max-w-3xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.08]">
+                Choose the paid scope that matches the decision you need this week.
+              </h1>
+              <p className="max-w-2xl text-base leading-8 text-muted">
+                Weekly Crypto Pulse keeps the purchase model simple: one issue when you need a single decision memo, or the
+                Monthly Bundle when you want the thesis to stay connected across the month.
+              </p>
             </div>
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-              <div className="space-y-3">
-                <h1 className="max-w-2xl text-[2rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.06]">
-                  Choose the paid scope that matches the job this week.
-                </h1>
-                <p className="max-w-2xl text-base leading-8 text-muted">
-                  Weekly Crypto Pulse keeps the buying decision simple: one issue when you need a single decision memo,
-                  or the Monthly Bundle when you want the thesis to stay connected across the month.
-                </p>
+            <dl className="grid gap-4 sm:grid-cols-3">
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
+                <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
               </div>
-              <div className={getSectionTileClassName('default', 'px-5 py-5')}>
-                <p className={editorialLabelClassName}>Plan comparison</p>
-                <div className="mt-3 grid gap-3">
-                  {HIERARCHY_STEPS.map((step) => (
-                    <div className={`rounded-2xl border px-4 py-4 ${step.className}`} key={step.role}>
-                      <div className="flex flex-wrap items-center gap-2">
-                        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/70">{step.role}</p>
-                        <span aria-hidden="true" className="text-current/45">→</span>
-                        <p className="text-base font-semibold tracking-tight text-current">{step.title}</p>
-                      </div>
-                      <p className="mt-1.5 text-sm leading-7 text-current/80">{step.description}</p>
-                    </div>
-                  ))}
-                </div>
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Buyer identity</dt>
+                <dd className="mt-2 text-base font-medium text-ink">Stripe payment details</dd>
               </div>
-            </div>
-          </div>
+              <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
+                <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Site model</dt>
+                <dd className="mt-2 text-base font-medium text-ink">Static-first, no accounts</dd>
+              </div>
+            </dl>
+          </header>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {HERO_NOTES.map((note) => (
-              <div className={getSectionTileClassName('default', 'px-5 py-5')} key={note.title}>
-                <p className="text-base font-semibold tracking-tight text-ink">{note.title}</p>
-                <p className="mt-2 text-base leading-8 text-muted">{note.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}
@@ -299,7 +227,7 @@ export default function ProPage(): JSX.Element {
         </div>
 
         {hasMissingOfferLink ? (
-          <SurfaceCard className="mt-4 space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
+          <SurfaceCard className="mt-6 space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
             <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
             <p className="text-base leading-8 text-muted">
               One or more Stripe Payment Links are not configured for this environment. Set{' '}
@@ -319,41 +247,23 @@ export default function ProPage(): JSX.Element {
         title="Plan comparison"
       />
 
-      <PageSection aria-labelledby="offers-heading">
+      <PageSection aria-labelledby="before-you-buy-heading" className="space-y-6">
         <SectionIntro
-          description="The paid products stay intentionally simple. Both use Stripe Payment Links, both are one-time purchases, and the real choice is whether you need one weekly decision or continuity across the month."
-          id="offers-heading"
+          description="Everything is structured to keep checkout and fulfillment clear: Stripe handles payment identity, products are one-time purchases, and the site has no account system."
+          id="before-you-buy-heading"
           title="Before you buy"
         />
 
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start">
-          <SurfaceCard className="space-y-4 bg-white">
-            <h2 className="text-lg font-semibold tracking-tight">Decision guide</h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className={getSectionTileClassName('subtle')}>
-                <h3 className="text-base font-semibold">Choose Single Issue</h3>
-                <p className="mt-2 text-base leading-8 text-muted">
-                  You want a focused brief for the current setup and do not need the thesis carried through the rest of the month.
-                </p>
-              </div>
-              <div className={getSectionTileClassName('subtle')}>
-                <h3 className="text-base font-semibold">Choose Monthly Bundle</h3>
-                <p className="mt-2 text-base leading-8 text-muted">
-                  You want each weekly decision to build on the last one, with continuity across the month and a closing synthesis.
-                </p>
-              </div>
-            </div>
-          </SurfaceCard>
-
-          <div className="grid gap-4">
+        <SurfaceCard className="border-line/80 bg-white p-0">
+          <div className="divide-y divide-line/70">
             {FAQ_ITEMS.map((item) => (
-              <SurfaceCard className="space-y-3 bg-paper" key={item.question}>
-                <h2 className="text-base font-semibold tracking-tight">{item.question}</h2>
+              <article className="space-y-3 px-5 py-5 sm:px-6" key={item.question}>
+                <h2 className="text-base font-semibold tracking-tight text-ink">{item.question}</h2>
                 <p className="text-base leading-8 text-muted">{item.answer}</p>
-              </SurfaceCard>
+              </article>
             ))}
           </div>
-        </div>
+        </SurfaceCard>
       </PageSection>
     </PageShell>
   );
