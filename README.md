@@ -18,6 +18,10 @@ Set these environment variables in Vercel for both Preview and Production deploy
 - **Weekly Pro = decision:** one paid issue turns that week's setup into a decision memo with posture, invalidation, and watchlist levels.
 - **Monthly Bundle = continuity:** a one-time bundle extends Weekly Pro across the month with cross-issue follow-through and a month-end summary.
 
+## Agent operations
+
+- See `docs/operations/agent-operating-model.md` for the three-agent async operating model, startup checklist, and templates.
+
 ## Report data
 
 Reports are loaded from local JSON files in `data/reports`.
