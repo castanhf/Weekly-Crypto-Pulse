@@ -46,7 +46,13 @@ const isNavItemActive = (itemHref: string, currentPathname: string): boolean => 
 
 const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
   if (item.isEmphasized) {
-    return getCtaClassName({ className: 'whitespace-nowrap py-2.5', tone: isActive ? 'primary' : 'secondary' });
+    return getCtaClassName({
+      className: composeClassNames(
+        'whitespace-nowrap py-2.5',
+        isActive ? 'shadow-[0_6px_20px_rgba(16,24,40,0.15)]' : 'border-line/80 bg-white hover:border-ink/30 hover:bg-paper'
+      ),
+      tone: isActive ? 'primary' : 'secondary'
+    });
   }
 
   return composeClassNames(
@@ -75,7 +81,7 @@ export function Header(): JSX.Element {
           </Link>
 
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
-            <ul className="flex gap-2 overflow-x-auto rounded-2xl border border-line/80 bg-white p-1.5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:flex-wrap sm:justify-end">
+            <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-line/80 bg-white p-1.5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:flex-wrap sm:justify-end">
               {navItems.map((item) => {
                 const isActive = isNavItemActive(item.href, pathname);
 
