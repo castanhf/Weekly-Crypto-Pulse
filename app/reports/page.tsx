@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { formatIsoDate } from '@/components/reports/report-formatters';
 import { createReportsArchiveMetadata } from '@/lib/seo';
-import { getAllReports } from '@/lib/reports/report-repository';
+import { getAllReportArtifacts } from '@/lib/reports/report-repository';
 
 export const metadata: Metadata = createReportsArchiveMetadata();
 
@@ -12,7 +13,9 @@ const archiveCtaClassName =
   'inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper';
 
 export default function ReportsPage(): JSX.Element {
-  const reports = getAllReports();
+  const reportArtifacts = getAllReportArtifacts();
+  const reports = reportArtifacts.map((reportArtifact) => reportArtifact.report);
+  const latestReportArtifact = reportArtifacts[0];
 
   return (
     <PageShell>
@@ -26,7 +29,7 @@ export default function ReportsPage(): JSX.Element {
       <PageSection>
         <ContentWidth className="mx-auto" size="feature">
           <div className="grid gap-6 lg:gap-8 xl:grid-cols-[minmax(0,1.8fr)_minmax(18rem,0.8fr)] xl:items-start">
-            <aside className="xl:sticky xl:top-24">
+            <aside className="space-y-4 xl:sticky xl:top-24">
               <SurfaceCard className="space-y-5 bg-paper p-5 sm:p-6">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">
@@ -38,6 +41,16 @@ export default function ReportsPage(): JSX.Element {
                   Compare Weekly Pro and Monthly Bundle
                 </Link>
               </SurfaceCard>
+
+              {latestReportArtifact ? (
+                <ArtifactTrustCard
+                  className="p-5 sm:p-6"
+                  description="Archive freshness comes from the newest committed report artifact included in this build. No runtime market-data fetch is required to render this page."
+                  extraItems={[{ label: 'Archive reports', value: `${reportArtifacts.length}` }]}
+                  reportArtifact={latestReportArtifact}
+                  title="Archive trust cues"
+                />
+              ) : null}
             </aside>
 
             <ul className="space-y-4 sm:space-y-5">

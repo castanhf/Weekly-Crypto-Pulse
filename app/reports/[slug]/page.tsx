@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
+import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
 import { MethodologyNote } from '@/components/reports/methodology-note';
@@ -14,7 +15,7 @@ import { ReportSignalsBlock } from '@/components/reports/report-signals';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
-import { getAllReports, getReportBySlug } from '@/lib/reports/report-repository';
+import { getAllReports, getReportArtifactBySlug, getReportBySlug } from '@/lib/reports/report-repository';
 import { createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
@@ -43,7 +44,8 @@ export const generateMetadata = ({ params }: ReportDetailPageProps): Metadata =>
 };
 
 export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX.Element {
-  const report = getReportBySlug(params.slug);
+  const reportArtifact = getReportArtifactBySlug(params.slug);
+  const report = reportArtifact?.report;
 
   if (!report) {
     notFound();
@@ -67,6 +69,14 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
               several weekly updates, choose the <span className="font-semibold text-ink">Monthly Bundle</span>.
             </p>
           </SurfaceCard>
+
+          {reportArtifact ? (
+            <ArtifactTrustCard
+              description="This report page is rendered from the committed artifact used at build time. No runtime market-data fetch is required to show the report."
+              reportArtifact={reportArtifact}
+              title="Report trust cues"
+            />
+          ) : null}
 
           <ExecutiveSummary summary={report.metadata.summary} />
           <MarketSnapshotCards snapshot={report.marketSnapshot} />

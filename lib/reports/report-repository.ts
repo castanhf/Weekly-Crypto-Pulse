@@ -2,19 +2,36 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type { Report } from '@/domain/report';
-import { parseReportJson } from '@/lib/reports/report-parser';
+import { parseReportArtifactJson } from '@/lib/reports/report-parser';
 
 export const REPORTS_DIRECTORY_PATH = join(process.cwd(), 'data', 'reports');
+
+export type ReportArtifactRecord = Readonly<{
+  report: Report;
+  artifact: Readonly<{
+    fileName: string;
+    schemaVersion: ReturnType<typeof parseReportArtifactJson>['artifact']['schemaVersion'];
+    generatedAt?: string;
+  }>;
+}>;
 
 const isReportJsonFile = (fileName: string): boolean => fileName.endsWith('.json');
 const REPORT_FILE_NAME_PATTERN = /\.json$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
-const readReportFromFile = (fileName: string): Report => {
+const readReportArtifactFromFile = (fileName: string): ReportArtifactRecord => {
   const filePath = join(REPORTS_DIRECTORY_PATH, fileName);
   const fileContent = readFileSync(filePath, 'utf-8');
+  const parsedArtifact = parseReportArtifactJson(fileContent, fileName);
 
-  return parseReportJson(fileContent, fileName);
+  return {
+    report: parsedArtifact.report,
+    artifact: {
+      fileName,
+      schemaVersion: parsedArtifact.artifact.schemaVersion,
+      generatedAt: parsedArtifact.artifact.generatedAt
+    }
+  };
 };
 
 const getSlugFromFileName = (fileName: string): string => fileName.replace(REPORT_FILE_NAME_PATTERN, '');
@@ -25,14 +42,14 @@ const assertIsoDate = (publishedAt: string, slug: string): void => {
   }
 };
 
-const byPublishedAtDesc = (left: Report, right: Report): number => {
-  const publishedAtSortOrder = right.metadata.publishedAt.localeCompare(left.metadata.publishedAt);
+const byPublishedAtDesc = (left: ReportArtifactRecord, right: ReportArtifactRecord): number => {
+  const publishedAtSortOrder = right.report.metadata.publishedAt.localeCompare(left.report.metadata.publishedAt);
 
   if (publishedAtSortOrder !== 0) {
     return publishedAtSortOrder;
   }
 
-  return right.metadata.slug.localeCompare(left.metadata.slug);
+  return right.report.metadata.slug.localeCompare(left.report.metadata.slug);
 };
 
 const validateReportCollection = (reports: ReadonlyArray<Report>, fileNamesBySlug: ReadonlyMap<string, string>): void => {
@@ -56,16 +73,17 @@ const validateReportCollection = (reports: ReadonlyArray<Report>, fileNamesBySlu
   }
 };
 
-const readSortedReportsFromDisk = (): ReadonlyArray<Report> => {
+const readSortedReportArtifactsFromDisk = (): ReadonlyArray<ReportArtifactRecord> => {
   const reportFileNames = readdirSync(REPORTS_DIRECTORY_PATH).filter(isReportJsonFile).sort((left, right) => left.localeCompare(right));
   const fileNamesBySlug = new Map<string, string>(
     reportFileNames.map((fileName) => [getSlugFromFileName(fileName), fileName] as const)
   );
-  const reports = reportFileNames.map(readReportFromFile).sort(byPublishedAtDesc);
+  const reportArtifacts = reportFileNames.map(readReportArtifactFromFile).sort(byPublishedAtDesc);
+  const reports = reportArtifacts.map((reportArtifact) => reportArtifact.report);
 
   validateReportCollection(reports, fileNamesBySlug);
 
-  return reports;
+  return reportArtifacts;
 };
 
 const assertSlug = (slug: string): string => {
@@ -78,12 +96,20 @@ const assertSlug = (slug: string): string => {
   return normalizedSlug;
 };
 
-export const getAllReports = (): ReadonlyArray<Report> => readSortedReportsFromDisk();
+export const getAllReportArtifacts = (): ReadonlyArray<ReportArtifactRecord> => readSortedReportArtifactsFromDisk();
 
-export const getReportBySlug = (slug: string): Report | undefined => {
+export const getAllReports = (): ReadonlyArray<Report> => getAllReportArtifacts().map((reportArtifact) => reportArtifact.report);
+
+export const getReportArtifactBySlug = (slug: string): ReportArtifactRecord | undefined => {
   const normalizedSlug = assertSlug(slug);
 
-  return readSortedReportsFromDisk().find((report) => report.metadata.slug === normalizedSlug);
+  return getAllReportArtifacts().find((reportArtifact) => reportArtifact.report.metadata.slug === normalizedSlug);
 };
 
-export const getLatestReport = (): Report | undefined => readSortedReportsFromDisk()[0];
+export const getReportBySlug = (slug: string): Report | undefined => {
+  return getReportArtifactBySlug(slug)?.report;
+};
+
+export const getLatestReportArtifact = (): ReportArtifactRecord | undefined => getAllReportArtifacts()[0];
+
+export const getLatestReport = (): Report | undefined => getLatestReportArtifact()?.report;

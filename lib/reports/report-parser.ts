@@ -2,6 +2,7 @@ import {
   CURRENT_REPORT_SCHEMA_VERSION,
   type MarketSnapshot,
   type Mover,
+  type ParsedReportArtifact,
   type Regime,
   type Report,
   type ReportMetadata,
@@ -145,10 +146,20 @@ const parseSchemaVersion = (value: unknown): ReportSchemaVersion => {
   return schemaVersion as ReportSchemaVersion;
 };
 
+const parseGeneratedAt = (value: unknown): string => {
+  const generatedAt = assertString(value, 'generatedAt');
+
+  if (Number.isNaN(Date.parse(generatedAt))) {
+    throw new Error(`Invalid report data at "generatedAt": expected ISO timestamp, received "${generatedAt}".`);
+  }
+
+  return generatedAt;
+};
+
 const isVersionedArtifact = (value: Record<string, unknown>): value is Record<'schemaVersion' | 'report', unknown> =>
   'schemaVersion' in value;
 
-export const parseReportJson = (rawJson: string, source: string): Report => {
+export const parseReportArtifactJson = (rawJson: string, source: string): ParsedReportArtifact => {
   let parsed: unknown;
 
   try {
@@ -160,10 +171,24 @@ export const parseReportJson = (rawJson: string, source: string): Report => {
   const root = assertRecord(parsed, 'root');
 
   if (!isVersionedArtifact(root)) {
-    return parseReportShape(root);
+    return {
+      report: parseReportShape(root),
+      artifact: {
+        schemaVersion: 'legacy'
+      }
+    };
   }
 
-  parseSchemaVersion(root.schemaVersion);
+  const schemaVersion = parseSchemaVersion(root.schemaVersion);
+  const generatedAt = 'generatedAt' in root && root.generatedAt !== undefined ? parseGeneratedAt(root.generatedAt) : undefined;
 
-  return parseReportShape(root.report);
+  return {
+    report: parseReportShape(root.report),
+    artifact: {
+      schemaVersion,
+      generatedAt
+    }
+  };
 };
+
+export const parseReportJson = (rawJson: string, source: string): Report => parseReportArtifactJson(rawJson, source).report;

@@ -61,6 +61,7 @@ test('/reports lists report items', async ({ page }) => {
 
   await expect(page.getByRole('heading', { level: 1, name: /public weekly reports, organized for quick scanning\./i })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Compare Weekly Pro and Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Archive trust cues' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',
     'page'
@@ -85,6 +86,7 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Report trust cues' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',
     'page'
@@ -109,6 +111,7 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
       name: /choose your paid research plan\./i
     })
   ).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'One week or full-month continuity?' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Pro' })).toHaveAttribute(
@@ -119,6 +122,28 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
   await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Plan comparison' })).toBeVisible();
+});
+
+test('single-page navigation items only activate on their exact routes', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
+
+  await page.goto('/methodology');
+  await expect(primaryNavigation.getByRole('link', { name: 'Methodology' })).toHaveAttribute('aria-current', 'page');
+  await expect(primaryNavigation.getByRole('link', { name: 'Disclaimer' })).not.toHaveAttribute('aria-current', 'page');
+
+  await page.goto('/disclaimer');
+  await expect(primaryNavigation.getByRole('link', { name: 'Disclaimer' })).toHaveAttribute('aria-current', 'page');
+  await expect(primaryNavigation.getByRole('link', { name: 'Methodology' })).not.toHaveAttribute('aria-current', 'page');
+
+  const methodologyNotFoundResponse = await page.goto('/methodology/not-a-real-page');
+  expect(methodologyNotFoundResponse?.status()).toBe(404);
+  await expect(primaryNavigation.getByRole('link', { name: 'Methodology' })).not.toHaveAttribute('aria-current', 'page');
+
+  const disclaimerNotFoundResponse = await page.goto('/disclaimer/not-a-real-page');
+  expect(disclaimerNotFoundResponse?.status()).toBe(404);
+  await expect(primaryNavigation.getByRole('link', { name: 'Disclaimer' })).not.toHaveAttribute('aria-current', 'page');
 });
 
 test('invalid report slug returns 404 content', async ({ page }) => {

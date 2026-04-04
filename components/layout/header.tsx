@@ -32,7 +32,7 @@ const normalizePathname = (pathname: string): string => {
 
 const isNavItemActive = (item: NavItem, currentPathname: string): boolean => {
   const exactPaths = item.matchPaths ?? [item.href];
-  const prefixPaths = item.matchPrefixes ?? [`${item.href}/`];
+  const prefixPaths = item.matchPrefixes ?? [];
 
   return exactPaths.includes(currentPathname) || prefixPaths.some((prefixPath) => currentPathname.startsWith(prefixPath));
 };

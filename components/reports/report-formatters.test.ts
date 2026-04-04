@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
+import { formatCompactUsd, formatIsoDate, formatIsoDateTime, formatPercent } from '@/components/reports/report-formatters';
 
 describe('report formatters', () => {
   it('formats compact USD values for dashboard-style summaries', () => {
@@ -14,5 +14,9 @@ describe('report formatters', () => {
 
   it('formats ISO dates as UTC calendar dates', () => {
     expect(formatIsoDate('2026-02-23')).toBe('Feb 23, 2026');
+  });
+
+  it('formats ISO timestamps as UTC date-times', () => {
+    expect(formatIsoDateTime('2026-03-03T00:00:00.000Z')).toBe('Mar 3, 2026, 12:00 AM UTC');
   });
 });

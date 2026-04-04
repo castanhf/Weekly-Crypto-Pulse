@@ -24,6 +24,14 @@ type OfferNarrative = Readonly<{
   metrics: ReadonlyArray<OfferMetric>;
 }>;
 
+type OfferSelectionGuide = Readonly<{
+  title: string;
+  eyebrow: string;
+  summary: string;
+  bestWhen: string;
+  notBuiltFor: string;
+}>;
+
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
     question: 'Is this a subscription?',
@@ -72,22 +80,49 @@ const offerSecondaryLinkClassNames: Record<ProOfferCard['pricing']['tier'], stri
   bestValueOffer: getCtaClassName({ className: 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5' })
 };
 
+const offerSelectionGuideClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
+  entryOffer: 'border-line/80 bg-white text-ink',
+  bestValueOffer: 'border-amber-200 bg-amber-50 text-amber-950'
+};
+
+const offerSelectionGuideMutedTextClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
+  entryOffer: 'text-muted',
+  bestValueOffer: 'text-amber-950/78'
+};
+
 const OFFER_NARRATIVES: Readonly<Record<ProOfferCard['id'], OfferNarrative>> = {
   singleIssue: {
-    emphasis: 'A focused purchase for one decision cycle.',
+    emphasis: 'Best when one weekly setup needs an actionable posture now.',
     metrics: [
       { label: 'Coverage', value: '1 weekly Pro issue' },
-      { label: 'Workflow fit', value: 'One immediate decision memo' },
-      { label: 'Effective rate', value: '$29 per issue' }
+      { label: 'Decision horizon', value: 'This week only' },
+      { label: 'Price logic', value: '$29 for the one issue that matters now' }
     ]
   },
   monthlyBundle: {
-    emphasis: 'The continuity option for readers who want the thesis to compound across the month.',
+    emphasis: 'Best when you want each weekly decision to carry forward through month-end.',
     metrics: [
       { label: 'Coverage', value: '4 weekly Pro issues + month-end synthesis' },
-      { label: 'Workflow fit', value: 'Connected weekly decisions across the month' },
+      { label: 'Decision horizon', value: 'Full-month continuity' },
       { label: 'Effective rate', value: '$19.75 per issue • saves $37 vs four single issues' }
     ]
+  }
+} as const;
+
+const OFFER_SELECTION_GUIDES: Readonly<Record<ProOfferCard['id'], OfferSelectionGuide>> = {
+  singleIssue: {
+    title: 'Single Issue',
+    eyebrow: 'One decision week',
+    summary: 'Choose the entry offer when you need one paid memo for the current setup.',
+    bestWhen: 'The free report framed the market, but this week still needs posture, invalidation, and a watchlist.',
+    notBuiltFor: 'You do not need the thesis carried across the rest of the month.'
+  },
+  monthlyBundle: {
+    title: 'Monthly Bundle',
+    eyebrow: 'Continuity across the month',
+    summary: 'Choose the bundle when four isolated weekly decisions would create avoidable rework.',
+    bestWhen: 'You want each weekly Pro issue to build on the last one and close with a month-end synthesis.',
+    notBuiltFor: 'You are solving for one issue only and do not need cross-week follow-through.'
   }
 } as const;
 
@@ -193,15 +228,62 @@ export default function ProPage(): JSX.Element {
       <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-10 lg:p-12">
         <div className="space-y-12 sm:space-y-16">
           <header className="space-y-8 sm:space-y-10">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
-            <div className="space-y-6">
-              <h1 className="max-w-2xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.1rem] sm:leading-[1.08]">
-                Choose your paid research plan.
-              </h1>
-              <p className="max-w-3xl text-base leading-8 text-muted">
-                Weekly Crypto Pulse keeps the purchase model simple: one issue when you need a single decision memo, or the
-                Monthly Bundle when you want the thesis to stay connected across the month.
-              </p>
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start">
+              <div className="space-y-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
+                <div className="space-y-6">
+                  <h1 className="max-w-2xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.1rem] sm:leading-[1.08]">
+                    Choose your paid research plan.
+                  </h1>
+                  <p className="max-w-3xl text-base leading-8 text-muted">
+                    Weekly Crypto Pulse keeps the purchase model simple: one issue when you need a single decision memo, or
+                    the Monthly Bundle when you want the thesis to stay connected across the month.
+                  </p>
+                </div>
+              </div>
+
+              <div className={getSectionTileClassName('default', 'space-y-5 px-5 py-5 sm:px-6 sm:py-6')}>
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Choose by workflow</p>
+                  <h2 className="text-[1.35rem] font-semibold tracking-tight">One week or full-month continuity?</h2>
+                  <p className="text-sm leading-7 text-muted">
+                    Both products are one-time Stripe purchases. The difference is whether you need one decision cycle or a
+                    connected month of follow-through.
+                  </p>
+                </div>
+
+                <div className="grid gap-3">
+                  {offers.map((offer) => {
+                    const selectionGuide = OFFER_SELECTION_GUIDES[offer.id];
+                    const mutedTextClassName = offerSelectionGuideMutedTextClassNames[offer.pricing.tier];
+
+                    return (
+                      <article className={`rounded-2xl border px-4 py-4 ${offerSelectionGuideClassNames[offer.pricing.tier]}`} key={`guide-${offer.id}`}>
+                        <div className="flex flex-wrap items-start justify-between gap-3">
+                          <div className="space-y-1">
+                            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">{selectionGuide.eyebrow}</p>
+                            <h3 className="text-base font-semibold tracking-tight text-current">{selectionGuide.title}</h3>
+                          </div>
+                          <p className="text-sm font-semibold text-current">
+                            {offer.pricing.displayPrice} {offer.pricing.displayPeriodLabel}
+                          </p>
+                        </div>
+                        <p className={`mt-2 text-sm leading-7 ${mutedTextClassName}`}>{selectionGuide.summary}</p>
+                        <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                          <div>
+                            <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">Best when</dt>
+                            <dd className={`mt-1 text-sm leading-7 ${mutedTextClassName}`}>{selectionGuide.bestWhen}</dd>
+                          </div>
+                          <div>
+                            <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-current/65">Not built for</dt>
+                            <dd className={`mt-1 text-sm leading-7 ${mutedTextClassName}`}>{selectionGuide.notBuiltFor}</dd>
+                          </div>
+                        </dl>
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
             <dl className="grid gap-4 md:grid-cols-3">
               <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
@@ -243,7 +325,7 @@ export default function ProPage(): JSX.Element {
       </section>
 
       <TierDifferentiation
-        description="Each tier answers a different reader need: public orientation, a single-week decision memo, or a continuity workflow that ties the month together."
+        description="Free stays public for orientation. Single Issue covers one decision week. Monthly Bundle adds the continuity layer across the month."
         title="Plan comparison"
       />
 

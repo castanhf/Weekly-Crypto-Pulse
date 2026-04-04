@@ -21,3 +21,14 @@ export const formatIsoDate = (isoDate: string): string =>
     year: 'numeric',
     timeZone: 'UTC'
   });
+
+export const formatIsoDateTime = (isoDateTime: string): string =>
+  new Date(isoDateTime).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZone: 'UTC',
+    timeZoneName: 'short'
+  });
