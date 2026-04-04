@@ -97,8 +97,8 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
   const isBestValueOffer = pricing.tier === 'bestValueOffer';
 
   return (
-    <article className={`flex h-full flex-col rounded-[2rem] border p-6 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
-      <div className="space-y-6">
+    <article className={`flex h-full flex-col rounded-[2rem] border p-5 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
+      <div className="space-y-5 sm:space-y-6">
         <header className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p
@@ -117,17 +117,17 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
           </div>
         </header>
 
-        <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+        <div className={`rounded-[1.5rem] border px-4 py-5 sm:px-5 ${offerSurfaceClassNames[pricing.tier]}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
           <p className="mt-2 text-4xl font-semibold tracking-tight">{pricing.displayPrice}</p>
           <p className={`mt-2 text-base leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
         </div>
 
-        <div className={`rounded-[1.5rem] border px-5 py-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+        <div className={`rounded-[1.5rem] border px-4 py-5 sm:px-5 ${offerSurfaceClassNames[pricing.tier]}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
           <p className="mt-2 text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
 
-          <dl className="mt-4 grid gap-3 sm:grid-cols-3">
+          <dl className="mt-4 grid gap-3 lg:grid-cols-3">
             {narrative.metrics.map((metric) => (
               <div
                 className={`rounded-2xl border px-4 py-4 ${
@@ -168,7 +168,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
         </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-3 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+      <div className="mt-8 flex flex-col gap-4 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
           <ProCta className={composeClassNames(offerCtaClassNames[pricing.tier], 'w-full sm:w-auto')} checkoutTarget={checkoutTarget} label={product.ctaLabel} />
@@ -191,10 +191,10 @@ export default function ProPage(): JSX.Element {
   return (
     <PageShell>
       <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-10 lg:p-12">
-        <div className="space-y-10 sm:space-y-12">
-          <header className="space-y-6">
+        <div className="space-y-10 sm:space-y-14">
+          <header className="space-y-7 sm:space-y-8">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <h1 className="max-w-3xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.08]">
                 Choose the paid scope that matches the decision you need this week.
               </h1>
@@ -203,7 +203,7 @@ export default function ProPage(): JSX.Element {
                 Monthly Bundle when you want the thesis to stay connected across the month.
               </p>
             </div>
-            <dl className="grid gap-4 sm:grid-cols-3">
+            <dl className="grid gap-4 md:grid-cols-3">
               <div className={getSectionTileClassName('subtle', 'rounded-xl')}>
                 <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Purchase model</dt>
                 <dd className="mt-2 text-base font-medium text-ink">One-time Stripe checkout</dd>
