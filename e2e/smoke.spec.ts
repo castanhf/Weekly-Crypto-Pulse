@@ -1,21 +1,39 @@
 import { expect, test } from '@playwright/test';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const reportsDirectory = path.join(process.cwd(), 'data/reports');
 
-const getLatestReportSlug = (): string => {
-  const reportSlugs = readdirSync(reportsDirectory)
-    .filter((fileName) => fileName.endsWith('.json'))
-    .map((fileName) => fileName.replace('.json', ''))
-    .sort((left, right) => right.localeCompare(left));
+type ReportArtifact = Readonly<{
+  report: Readonly<{
+    metadata: Readonly<{
+      slug: string;
+      publishedAt: string;
+    }>;
+  }>;
+}>;
 
-  const latestReportSlug = reportSlugs[0];
-  if (!latestReportSlug) {
+const getLatestReportSlug = (): string => {
+  const reportArtifacts = readdirSync(reportsDirectory)
+    .filter((fileName) => fileName.endsWith('.json'))
+    .map((fileName) => readFileSync(path.join(reportsDirectory, fileName), 'utf-8'))
+    .map((rawArtifact) => JSON.parse(rawArtifact) as ReportArtifact)
+    .sort((left, right) => {
+      const publishedAtSortOrder = right.report.metadata.publishedAt.localeCompare(left.report.metadata.publishedAt);
+
+      if (publishedAtSortOrder !== 0) {
+        return publishedAtSortOrder;
+      }
+
+      return right.report.metadata.slug.localeCompare(left.report.metadata.slug);
+    });
+
+  const latestReport = reportArtifacts[0];
+  if (!latestReport) {
     throw new Error('Expected at least one report artifact in data/reports.');
   }
 
-  return latestReportSlug;
+  return latestReport.report.metadata.slug;
 };
 
 test('homepage renders and links to latest report', async ({ page }) => {
@@ -88,7 +106,7 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /choose the paid scope that matches the decision you need this week\./i
+      name: /choose your paid research plan\./i
     })
   ).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();

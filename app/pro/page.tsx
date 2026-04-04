@@ -191,14 +191,14 @@ export default function ProPage(): JSX.Element {
   return (
     <PageShell>
       <section className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 p-6 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:p-10 lg:p-12">
-        <div className="space-y-10 sm:space-y-14">
-          <header className="space-y-7 sm:space-y-8">
+        <div className="space-y-12 sm:space-y-16">
+          <header className="space-y-8 sm:space-y-10">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">Pro offers</p>
-            <div className="space-y-5">
-              <h1 className="max-w-3xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.2rem] sm:leading-[1.08]">
-                Choose the paid scope that matches the decision you need this week.
+            <div className="space-y-6">
+              <h1 className="max-w-2xl text-[2.05rem] font-semibold tracking-tight sm:text-[3.1rem] sm:leading-[1.08]">
+                Choose your paid research plan.
               </h1>
-              <p className="max-w-2xl text-base leading-8 text-muted">
+              <p className="max-w-3xl text-base leading-8 text-muted">
                 Weekly Crypto Pulse keeps the purchase model simple: one issue when you need a single decision memo, or the
                 Monthly Bundle when you want the thesis to stay connected across the month.
               </p>
@@ -219,7 +219,7 @@ export default function ProPage(): JSX.Element {
             </dl>
           </header>
 
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+          <div className="grid gap-7 lg:grid-cols-2 lg:items-stretch">
             {offers.map((offer) => (
               <OfferCard key={offer.id} offer={offer} />
             ))}
