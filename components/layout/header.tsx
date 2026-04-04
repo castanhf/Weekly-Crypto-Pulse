@@ -11,11 +11,13 @@ type NavItem = Readonly<{
   href: string;
   label: string;
   isEmphasized?: boolean;
+  matchPaths?: ReadonlyArray<string>;
+  matchPrefixes?: ReadonlyArray<string>;
 }>;
 
 const navItems: readonly NavItem[] = [
-  { href: '/reports', label: 'Reports' },
-  { href: '/pro', label: 'Pro', isEmphasized: true },
+  { href: '/reports', label: 'Reports', matchPaths: ['/reports'], matchPrefixes: ['/reports/'] },
+  { href: '/pro', label: 'Pro', isEmphasized: true, matchPaths: ['/pro'], matchPrefixes: ['/pro/'] },
   { href: '/methodology', label: 'Methodology' },
   { href: '/disclaimer', label: 'Disclaimer' }
 ] as const;
@@ -28,20 +30,11 @@ const normalizePathname = (pathname: string): string => {
   return pathname.replace(/\/+$/, '');
 };
 
-const isReportsPath = (pathname: string): boolean => pathname === '/reports' || pathname.startsWith('/reports/');
+const isNavItemActive = (item: NavItem, currentPathname: string): boolean => {
+  const exactPaths = item.matchPaths ?? [item.href];
+  const prefixPaths = item.matchPrefixes ?? [`${item.href}/`];
 
-const isProPath = (pathname: string): boolean => pathname === '/pro' || pathname.startsWith('/pro/');
-
-const isNavItemActive = (itemHref: string, currentPathname: string): boolean => {
-  if (itemHref === '/reports') {
-    return isReportsPath(currentPathname);
-  }
-
-  if (itemHref === '/pro') {
-    return isProPath(currentPathname);
-  }
-
-  return currentPathname === itemHref || currentPathname.startsWith(`${itemHref}/`);
+  return exactPaths.includes(currentPathname) || prefixPaths.some((prefixPath) => currentPathname.startsWith(prefixPath));
 };
 
 const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
@@ -83,7 +76,7 @@ export function Header(): JSX.Element {
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
             <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-line/80 bg-white p-1.5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:flex-wrap sm:justify-end">
               {navItems.map((item) => {
-                const isActive = isNavItemActive(item.href, pathname);
+                const isActive = isNavItemActive(item, pathname);
 
                 return (
                   <li className="shrink-0" key={item.href}>
