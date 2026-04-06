@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { pageContainerClassName } from '@/components/layout/page-shell';
 import { getSiteOrigin } from '@/lib/seo';
 import { siteConfig } from '@/lib/site';
 
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <div className="flex min-h-screen flex-col">
           <AnalyticsProvider />
           <Header />
-          <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">{children}</main>
+          <main className={`${pageContainerClassName} flex-1 py-10 sm:py-14 lg:py-16`}>{children}</main>
           <Footer />
         </div>
       </body>

@@ -3,9 +3,9 @@
 ## Report metadata
 
 - Title: Weekly Crypto Pulse: ETF Demand Supports Majors as Altcoin Rotation Stalls
-- Slug: 2026-03-02-etf-demand-supports-majors-as-altcoin-rotation-stalls
-- Week: Week of Mar 2, 2026
-- Published at: 2026-03-02
+- Slug: 2026-03-23-etf-demand-supports-majors-as-altcoin-rotation-stalls
+- Week: Week of Mar 23, 2026
+- Published at: 2026-03-23
 - Regime: range-bound
 - Tags: bitcoin, ethereum, etf, rotation
 

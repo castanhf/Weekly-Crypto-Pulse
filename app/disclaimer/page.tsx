@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createDisclaimerMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createDisclaimerMetadata();
@@ -14,24 +15,28 @@ const DISCLAIMER_POINTS = [
 
 export default function DisclaimerPage(): JSX.Element {
   return (
-    <section className="space-y-8">
-      <header className="space-y-3 border-b border-line pb-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Disclaimer</h1>
-        <p className="max-w-3xl text-sm leading-relaxed text-muted">
-          Please read this page before using any information published on Weekly Crypto Pulse.
-        </p>
-      </header>
+    <PageShell>
+      <PageHeader
+        className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
+        description="Please read this page before using any information published on Weekly Crypto Pulse."
+        eyebrow="Disclaimer"
+        title="Important context before acting on the research."
+      />
 
-      <article className="space-y-4 border border-line bg-white p-6">
-        <h2 className="text-xl font-semibold tracking-tight">Important notice</h2>
-        <ul className="space-y-2 text-sm leading-relaxed text-muted">
-          {DISCLAIMER_POINTS.map((point) => (
-            <li className="border-l-2 border-line pl-3" key={point}>
-              {point}
-            </li>
-          ))}
-        </ul>
-      </article>
-    </section>
+      <PageSection>
+        <ContentWidth className="mx-auto" size="content">
+          <SurfaceCard className="space-y-5">
+            <h2 className="text-[1.45rem] font-semibold tracking-tight">Important notice</h2>
+            <ul className="space-y-3.5 text-base leading-8 text-muted">
+              {DISCLAIMER_POINTS.map((point) => (
+                <li className="border-l-2 border-line pl-4" key={point}>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </SurfaceCard>
+        </ContentWidth>
+      </PageSection>
+    </PageShell>
   );
 }

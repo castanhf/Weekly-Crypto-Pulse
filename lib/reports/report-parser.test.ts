@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { parseReportJson } from '@/lib/reports/report-parser';
+import { parseReportArtifactJson, parseReportJson } from '@/lib/reports/report-parser';
 
 const BASE_REPORT = {
   metadata: {
@@ -43,6 +43,12 @@ const BASE_REPORT = {
 } as const;
 
 describe('parseReportJson', () => {
+  it('returns legacy artifact metadata for legacy report shape', () => {
+    const parsedArtifact = parseReportArtifactJson(JSON.stringify(BASE_REPORT), 'legacy.json');
+
+    expect(parsedArtifact.artifact).toEqual({ schemaVersion: 'legacy' });
+  });
+
   it('parses legacy report shape', () => {
     const report = parseReportJson(JSON.stringify(BASE_REPORT), 'legacy.json');
 
@@ -61,6 +67,21 @@ describe('parseReportJson', () => {
     expect(report.metadata.slug).toBe('sample-report');
   });
 
+  it('parses artifact metadata for versioned reports', () => {
+    const artifact = {
+      schemaVersion: '1.0',
+      report: BASE_REPORT,
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    };
+
+    const parsedArtifact = parseReportArtifactJson(JSON.stringify(artifact), 'artifact.json');
+
+    expect(parsedArtifact.artifact).toEqual({
+      schemaVersion: '1.0',
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    });
+  });
+
   it('rejects unsupported schema versions', () => {
     const artifact = {
       schemaVersion: '2.0',
@@ -69,6 +90,18 @@ describe('parseReportJson', () => {
 
     expect(() => parseReportJson(JSON.stringify(artifact), 'artifact.json')).toThrow(
       'Invalid report data at "schemaVersion": unsupported version "2.0".'
+    );
+  });
+
+  it('rejects invalid generatedAt values', () => {
+    const artifact = {
+      schemaVersion: '1.0',
+      report: BASE_REPORT,
+      generatedAt: 'not-a-timestamp'
+    };
+
+    expect(() => parseReportArtifactJson(JSON.stringify(artifact), 'artifact.json')).toThrow(
+      'Invalid report data at "generatedAt": expected ISO timestamp, received "not-a-timestamp".'
     );
   });
 

@@ -35,6 +35,12 @@ type MonthlySummary = Readonly<{
   regimeDistribution: ReadonlyArray<Readonly<{ regime: Report['regime']; count: number }>>;
   topMovers: ReadonlyArray<Readonly<{ symbol: string; name: string; changePct7d: number; reportSlug: string }>>;
   recurringThesis: ReadonlyArray<Readonly<{ item: string; count: number }>>;
+  continuityLedger: ReadonlyArray<Readonly<{ weekLabel: string; reportSlug: string; changeLines: ReadonlyArray<string> }>>;
+  thesisCarryForward: Readonly<{
+    persisted: ReadonlyArray<Readonly<{ item: string; count: number }>>;
+    emerging: ReadonlyArray<Readonly<{ item: string; firstSeenWeekLabel: string }>>;
+    faded: ReadonlyArray<Readonly<{ item: string; lastSeenWeekLabel: string }>>;
+  }>;
 }>;
 
 const REPORTS_DIRECTORY_PATH = path.resolve(process.cwd(), 'data/reports');
@@ -146,6 +152,8 @@ const toSingleIssueMarkdown = (report: Report, watermark?: BuyerWatermark): stri
     '',
     createMarkdownSection('What changed since last week', formatList(signals.changedSinceLastWeek), watermark),
     '',
+    createMarkdownSection('Decision scorecard (single-week)', formatDecisionSupportOverview(report), watermark),
+    '',
     createMarkdownSection('Watchlist levels', watchlistBlock.length > 0 ? watchlistBlock : '- None', watermark),
     '',
     formatWatermarkSection(watermark),
@@ -166,6 +174,93 @@ const ensureMonthKey = (value: string): string => {
   }
 
   return value;
+};
+
+const formatDecisionSupportOverview = (report: Report): string => {
+  const primaryPosture = report.signals.thesis[0] ?? 'No primary posture captured in thesis bullets.';
+  const invalidationCues = report.signals.riskChecklist.slice(0, 3);
+  const executionFocus = report.signals.changedSinceLastWeek.slice(0, 3);
+
+  return [
+    `- Primary posture: ${primaryPosture}`,
+    `- Invalidation cues: ${invalidationCues.length > 0 ? invalidationCues.join(' | ') : 'No invalidation cues provided.'}`,
+    `- Immediate execution focus: ${executionFocus.length > 0 ? executionFocus.join(' | ') : 'No week-over-week changes provided.'}`
+  ].join('\n');
+};
+
+const collectContinuityLedger = (weeklyReports: ReadonlyArray<Report>): MonthlySummary['continuityLedger'] =>
+  weeklyReports.map((report) => ({
+    weekLabel: report.metadata.weekLabel,
+    reportSlug: report.metadata.slug,
+    changeLines:
+      report.signals.changedSinceLastWeek.length > 0
+        ? report.signals.changedSinceLastWeek
+        : ['No explicit change lines were recorded for this issue.']
+  }));
+
+const collectThesisCarryForward = (weeklyReports: ReadonlyArray<Report>): MonthlySummary['thesisCarryForward'] => {
+  const occurrenceByItem = new Map<
+    string,
+    {
+      count: number;
+      firstSeenIndex: number;
+      firstSeenWeekLabel: string;
+      lastSeenIndex: number;
+      lastSeenWeekLabel: string;
+    }
+  >();
+
+  weeklyReports.forEach((report, index) => {
+    report.signals.thesis.forEach((thesisItem) => {
+      const item = thesisItem.trim();
+      const current = occurrenceByItem.get(item);
+
+      if (!current) {
+        occurrenceByItem.set(item, {
+          count: 1,
+          firstSeenIndex: index,
+          firstSeenWeekLabel: report.metadata.weekLabel,
+          lastSeenIndex: index,
+          lastSeenWeekLabel: report.metadata.weekLabel
+        });
+        return;
+      }
+
+      occurrenceByItem.set(item, {
+        count: current.count + 1,
+        firstSeenIndex: current.firstSeenIndex,
+        firstSeenWeekLabel: current.firstSeenWeekLabel,
+        lastSeenIndex: index,
+        lastSeenWeekLabel: report.metadata.weekLabel
+      });
+    });
+  });
+
+  const occurrences = [...occurrenceByItem.entries()].map(([item, occurrence]) => ({
+    item,
+    ...occurrence
+  }));
+  const finalWeekIndex = weeklyReports.length - 1;
+
+  const persisted = occurrences
+    .filter((occurrence) => occurrence.count >= 3)
+    .map((occurrence) => ({ item: occurrence.item, count: occurrence.count }))
+    .sort((left, right) => (right.count - left.count === 0 ? left.item.localeCompare(right.item) : right.count - left.count))
+    .slice(0, 6);
+
+  const emerging = occurrences
+    .filter((occurrence) => occurrence.firstSeenIndex >= 2)
+    .map((occurrence) => ({ item: occurrence.item, firstSeenWeekLabel: occurrence.firstSeenWeekLabel }))
+    .sort((left, right) => left.item.localeCompare(right.item))
+    .slice(0, 6);
+
+  const faded = occurrences
+    .filter((occurrence) => occurrence.lastSeenIndex < finalWeekIndex)
+    .map((occurrence) => ({ item: occurrence.item, lastSeenWeekLabel: occurrence.lastSeenWeekLabel }))
+    .sort((left, right) => left.item.localeCompare(right.item))
+    .slice(0, 6);
+
+  return { persisted, emerging, faded };
 };
 
 const aggregateMonthlySummary = (month: string, weeklyReports: ReadonlyArray<Report>): MonthlySummary => {
@@ -221,6 +316,8 @@ const aggregateMonthlySummary = (month: string, weeklyReports: ReadonlyArray<Rep
     .map(([item, count]) => ({ item, count }))
     .sort((left, right) => (right.count - left.count === 0 ? left.item.localeCompare(right.item) : right.count - left.count))
     .slice(0, 10);
+  const continuityLedger = collectContinuityLedger(weeklyReports);
+  const thesisCarryForward = collectThesisCarryForward(weeklyReports);
 
   return {
     month,
@@ -231,7 +328,9 @@ const aggregateMonthlySummary = (month: string, weeklyReports: ReadonlyArray<Rep
     averageFearGreedIndex,
     regimeDistribution,
     topMovers,
-    recurringThesis
+    recurringThesis,
+    continuityLedger,
+    thesisCarryForward
   };
 };
 
@@ -246,6 +345,18 @@ const toMonthlySummaryMarkdown = (summary: MonthlySummary, watermark?: BuyerWate
     .join('\n');
   const recurringThesisLines = summary.recurringThesis
     .map((entry) => `- (${entry.count}x) ${entry.item}`)
+    .join('\n');
+  const continuityLedgerLines = summary.continuityLedger
+    .map((entry) => `- **${entry.weekLabel}** (\`${entry.reportSlug}\`): ${entry.changeLines.join(' | ')}`)
+    .join('\n');
+  const persistedLines = summary.thesisCarryForward.persisted
+    .map((entry) => `- (${entry.count}x) ${entry.item}`)
+    .join('\n');
+  const emergingLines = summary.thesisCarryForward.emerging
+    .map((entry) => `- ${entry.item} (first seen: ${entry.firstSeenWeekLabel})`)
+    .join('\n');
+  const fadedLines = summary.thesisCarryForward.faded
+    .map((entry) => `- ${entry.item} (last seen: ${entry.lastSeenWeekLabel})`)
     .join('\n');
 
   return [
@@ -271,6 +382,26 @@ const toMonthlySummaryMarkdown = (summary: MonthlySummary, watermark?: BuyerWate
     createMarkdownSection('Top movers across the month (absolute 7d change)', moversLines.length > 0 ? moversLines : '- None', watermark),
     '',
     createMarkdownSection('Recurring thesis points', recurringThesisLines.length > 0 ? recurringThesisLines : '- None', watermark),
+    '',
+    createMarkdownSection('Continuity ledger (week-to-week)', continuityLedgerLines.length > 0 ? continuityLedgerLines : '- None', watermark),
+    '',
+    createMarkdownSection(
+      'Thesis carry-forward map',
+      [
+        'Persisted signals',
+        '',
+        persistedLines.length > 0 ? persistedLines : '- None',
+        '',
+        'Emerging signals',
+        '',
+        emergingLines.length > 0 ? emergingLines : '- None',
+        '',
+        'Faded signals',
+        '',
+        fadedLines.length > 0 ? fadedLines : '- None'
+      ],
+      watermark
+    ),
     '',
     formatWatermarkSection(watermark),
     '',
@@ -299,6 +430,16 @@ const toMonthlyBundleAssemblyMarkdown = (
     '# Weekly Crypto Pulse Pro Pack — Monthly Bundle',
     '',
     createMarkdownSection('Month', month, watermark),
+    '',
+    createMarkdownSection(
+      'Bundle continuity package',
+      [
+        '- Four weekly Pro decision reports (single-week decision support each)',
+        '- One monthly continuity summary (cross-week ledger + thesis carry-forward map)',
+        '- One assembly index to keep fulfillment deterministic'
+      ],
+      watermark
+    ),
     '',
     createMarkdownSection('Weekly report references (4)', references, watermark),
     '',

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { getAllReports, getLatestReport, getReportBySlug } from '@/lib/reports/report-repository';
+import { getAllReportArtifacts, getAllReports, getLatestReport, getLatestReportArtifact, getReportArtifactBySlug, getReportBySlug } from '@/lib/reports/report-repository';
 
 describe('report repository', () => {
   it('returns reports sorted by publishedAt in descending order', () => {
@@ -26,8 +26,23 @@ describe('report repository', () => {
     expect(report).toEqual(firstReport);
   });
 
+  it('returns artifact metadata for an existing slug', () => {
+    const [firstArtifact] = getAllReportArtifacts();
+
+    expect(firstArtifact).toBeDefined();
+
+    const reportArtifact = getReportArtifactBySlug(firstArtifact!.report.metadata.slug);
+
+    expect(reportArtifact).toEqual(firstArtifact);
+    expect(reportArtifact?.artifact.fileName).toMatch(/\.json$/);
+  });
+
   it('returns undefined for an unknown slug', () => {
     expect(getReportBySlug('missing-report')).toBeUndefined();
+  });
+
+  it('returns undefined artifact metadata for an unknown slug', () => {
+    expect(getReportArtifactBySlug('missing-report')).toBeUndefined();
   });
 
   it('rejects empty slugs', () => {
@@ -36,5 +51,9 @@ describe('report repository', () => {
 
   it('returns the same report as the first sorted report for latest', () => {
     expect(getLatestReport()).toEqual(getAllReports()[0]);
+  });
+
+  it('returns the same artifact as the first sorted artifact for latest', () => {
+    expect(getLatestReportArtifact()).toEqual(getAllReportArtifacts()[0]);
   });
 });

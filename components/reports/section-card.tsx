@@ -11,8 +11,13 @@ const mergeClasses = (...classNames: ReadonlyArray<string | undefined>): string 
 
 export function SectionCard({ title, children, className, contentClassName }: SectionCardProps): JSX.Element {
   return (
-    <section className={mergeClasses('space-y-4 rounded-lg border border-line bg-white p-6', className)}>
-      <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
+    <section
+      className={mergeClasses(
+        'space-y-5 rounded-2xl border border-line/80 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:space-y-6 sm:p-8',
+        className
+      )}
+    >
+      <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">{title}</h2>
       {contentClassName ? <div className={contentClassName}>{children}</div> : children}
     </section>
   );

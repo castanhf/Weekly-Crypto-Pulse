@@ -61,3 +61,11 @@ export type ReportArtifact = Readonly<{
   report: Report;
   generatedAt?: string;
 }>;
+
+export type ParsedReportArtifact = Readonly<{
+  report: Report;
+  artifact: Readonly<{
+    schemaVersion: ReportSchemaVersion | 'legacy';
+    generatedAt?: string;
+  }>;
+}>;

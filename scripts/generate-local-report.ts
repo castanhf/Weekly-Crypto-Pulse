@@ -41,6 +41,63 @@ const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'rang
 
 const REPORT_INPUT_PATH = path.resolve(process.cwd(), 'data/report-inputs/local-report-input.json');
 const OUTPUT_DIRECTORY = path.resolve(process.cwd(), 'data/reports');
+const REPORT_PUBLISHED_AT_ENV_KEY = 'REPORT_PUBLISHED_AT';
+const DISPLAY_WEEK_LABEL_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC'
+});
+
+const assertIsoDate = (value: string, fieldName: string): string => {
+  const normalized = value.trim();
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+    throw new Error(`Invalid input at "${fieldName}": expected YYYY-MM-DD.`);
+  }
+
+  return normalized;
+};
+
+const isoDateToUtcDate = (isoDate: string, fieldName: string): Date => {
+  const parsedDate = new Date(`${isoDate}T00:00:00.000Z`);
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    throw new Error(`Invalid input at "${fieldName}": invalid date value "${isoDate}".`);
+  }
+
+  return parsedDate;
+};
+
+const formatIsoDateUtc = (date: Date): string => date.toISOString().slice(0, 10);
+
+const toUtcMonday = (date: Date): Date => {
+  const monday = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  const day = monday.getUTCDay();
+  const daysSinceMonday = (day + 6) % 7;
+
+  monday.setUTCDate(monday.getUTCDate() - daysSinceMonday);
+
+  return monday;
+};
+
+const resolvePublishedAt = (): string => {
+  const publishedAtFromEnv = process.env[REPORT_PUBLISHED_AT_ENV_KEY];
+
+  if (publishedAtFromEnv) {
+    return assertIsoDate(publishedAtFromEnv, REPORT_PUBLISHED_AT_ENV_KEY);
+  }
+
+  return formatIsoDateUtc(toUtcMonday(new Date()));
+};
+
+const buildWeekLabel = (publishedAt: string): string => {
+  const publishedAtDate = isoDateToUtcDate(publishedAt, 'publishedAt');
+
+  return `Week of ${DISPLAY_WEEK_LABEL_FORMATTER.format(publishedAtDate)}`;
+};
+
+const buildGeneratedAt = (publishedAt: string): string => `${publishedAt}T06:00:00.000Z`;
 
 const parseWeek = (value: unknown): LocalReportWeekInput => {
   const week = assertRecord(value, 'week');
@@ -154,17 +211,19 @@ const toSlug = (publishedAt: string, headline: string): string => {
 };
 
 const buildArtifact = (input: LocalReportInput): ReportArtifact => {
-  const slug = toSlug(input.week.publishedAt, input.headline);
+  const publishedAt = resolvePublishedAt();
+  const weekLabel = buildWeekLabel(publishedAt);
+  const slug = toSlug(publishedAt, input.headline);
 
   return {
     schemaVersion: CURRENT_REPORT_SCHEMA_VERSION,
-    generatedAt: input.generatedAt,
+    generatedAt: buildGeneratedAt(publishedAt),
     report: {
       metadata: {
         title: `Weekly Crypto Pulse: ${input.headline}`,
         slug,
-        publishedAt: input.week.publishedAt,
-        weekLabel: input.week.label,
+        publishedAt,
+        weekLabel,
         summary: input.summary,
         tags: input.tags
       },
