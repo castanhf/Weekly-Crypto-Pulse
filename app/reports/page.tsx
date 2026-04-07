@@ -4,17 +4,31 @@ import Link from 'next/link';
 import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { formatIsoDate } from '@/components/reports/report-formatters';
+import type { Regime } from '@/domain/report';
 import { createReportsArchiveMetadata } from '@/lib/seo';
 import { getAllReportArtifacts } from '@/lib/reports/report-repository';
 
 export const metadata: Metadata = createReportsArchiveMetadata();
+
+const REGIME_BADGE_CLASS_NAMES: Record<Regime, string> = {
+  'risk-on': 'border-green-200 bg-green-50 text-green-800',
+  'risk-off': 'border-red-200 bg-red-50 text-red-800',
+  'range-bound': 'border-amber-200 bg-amber-50 text-amber-800',
+  transition: 'border-amber-200 bg-amber-50 text-amber-800'
+} as const;
+
+const REGIME_LABELS: Record<Regime, string> = {
+  'risk-on': 'Risk-on',
+  'risk-off': 'Risk-off',
+  'range-bound': 'Range-bound',
+  transition: 'Transition'
+} as const;
 
 const archiveCtaClassName =
   'inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper';
 
 export default function ReportsPage(): JSX.Element {
   const reportArtifacts = getAllReportArtifacts();
-  const reports = reportArtifacts.map((reportArtifact) => reportArtifact.report);
   const latestReportArtifact = reportArtifacts[0];
 
   return (
@@ -54,13 +68,23 @@ export default function ReportsPage(): JSX.Element {
             </aside>
 
             <ul className="space-y-4 sm:space-y-5">
-              {reports.map((report) => {
+              {reportArtifacts.map(({ report }) => {
                 const reportUrl = `/reports/${report.metadata.slug}`;
 
                 return (
                   <li key={report.metadata.slug}>
                     <SurfaceCard className="space-y-5 p-5 sm:space-y-6 sm:p-6">
-                      <p className="text-sm font-medium leading-7 text-muted sm:text-base">Published {formatIsoDate(report.metadata.publishedAt)}</p>
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div className="space-y-1">
+                          <p className="text-sm font-semibold text-ink">{report.metadata.weekLabel}</p>
+                          <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">Published {formatIsoDate(report.metadata.publishedAt)}</p>
+                        </div>
+                        <span
+                          className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] ${REGIME_BADGE_CLASS_NAMES[report.regime]}`}
+                        >
+                          {REGIME_LABELS[report.regime]}
+                        </span>
+                      </div>
                       <div className="space-y-3">
                         <h2 className="text-[1.3rem] font-semibold tracking-tight sm:text-[1.75rem]">
                           <Link className="transition hover:text-muted" href={reportUrl}>

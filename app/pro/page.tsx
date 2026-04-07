@@ -133,8 +133,8 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
 
   return (
     <article className={`flex h-full flex-col rounded-[2rem] border p-5 sm:p-8 ${offerCardClassNames[pricing.tier]}`}>
-      <div className="space-y-5 sm:space-y-6">
-        <header className="space-y-4">
+      <div className="space-y-7 sm:space-y-10">
+        <header className="space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p
               className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
@@ -146,23 +146,23 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
             <p className={`text-sm font-medium ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.comparisonHint}</p>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h2 className="text-[1.7rem] font-semibold tracking-tight sm:text-[1.95rem]">{product.name}</h2>
             <p className={`text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.shortDescription}</p>
           </div>
         </header>
 
-        <div className={`rounded-[1.5rem] border px-4 py-5 sm:px-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+        <div className={`rounded-[1.5rem] border px-5 py-7 sm:px-7 ${offerSurfaceClassNames[pricing.tier]}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">One-time price</p>
-          <p className="mt-2 text-4xl font-semibold tracking-tight">{pricing.displayPrice}</p>
+          <p className="mt-3 text-4xl font-semibold tracking-tight">{pricing.displayPrice}</p>
           <p className={`mt-2 text-base leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>{pricing.displayPeriodLabel}</p>
         </div>
 
-        <div className={`rounded-[1.5rem] border px-4 py-5 sm:px-5 ${offerSurfaceClassNames[pricing.tier]}`}>
+        <div className={`rounded-[1.5rem] border px-5 py-7 sm:px-7 ${offerSurfaceClassNames[pricing.tier]}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-current/70">What this buys</p>
-          <p className="mt-2 text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
+          <p className="mt-3 text-lg font-semibold tracking-tight text-current">{narrative.emphasis}</p>
 
-          <dl className="mt-4 grid gap-3 lg:grid-cols-3">
+          <dl className="mt-6 grid gap-3 lg:grid-cols-3">
             {narrative.metrics.map((metric) => (
               <div
                 className={`rounded-2xl border px-4 py-4 ${
@@ -177,10 +177,10 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
           </dl>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-7 sm:space-y-8">
           <div>
             <h3 className="text-base font-semibold text-current">Included in this offer</h3>
-            <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+            <ul className={`mt-5 list-disc space-y-3.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
               {product.includes.map((deliverable) => (
                 <li key={deliverable}>{deliverable}</li>
               ))}
@@ -189,12 +189,12 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
 
           <div>
             <h3 className="text-base font-semibold text-current">Best used when</h3>
-            <p className={`mt-2 text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
+            <p className={`mt-3 text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.audience}</p>
           </div>
 
           <div>
             <h3 className="text-base font-semibold text-current">Not included</h3>
-            <ul className={`mt-3 list-disc space-y-2.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+            <ul className={`mt-5 list-disc space-y-3.5 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
               {product.excludes.map((exclusion) => (
                 <li key={exclusion}>{exclusion}</li>
               ))}
@@ -203,7 +203,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
         </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-4 border-t border-current/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+      <div className="mt-10 flex flex-col gap-4 border-t border-current/10 pt-7 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className={`max-w-md text-base leading-8 ${offerMutedTextClassNames[pricing.tier]}`}>{product.deliveryModel}</p>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
           <ProCta className={composeClassNames(offerCtaClassNames[pricing.tier], 'w-full sm:w-auto')} checkoutTarget={checkoutTarget} label={product.ctaLabel} />
