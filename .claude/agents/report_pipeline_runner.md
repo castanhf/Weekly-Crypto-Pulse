@@ -1,5 +1,6 @@
 ---
 name: report_pipeline_runner
+model: claude-haiku-4-5-20251001
 description: Orchestrate the full weekly report generation pipeline — research, generate, validate, and produce pro-pack artifacts. Use this agent to run the complete Monday generation sequence locally or to prepare a dry-run for review before the automated GitHub Actions run.
 ---
 
