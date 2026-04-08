@@ -15,13 +15,16 @@ This file feeds `npm run generate:local-report`, which validates it strictly. Yo
 
 ```json
 {
-  "week": "Week of April 7–13, 2026",
+  "generatedAt": "YYYY-MM-DDT06:00:00.000Z",
+  "week": {
+    "publishedAt": "YYYY-MM-DD (the Monday of this week)",
+    "label": "Week of Mon D, YYYY (e.g. Week of Apr 7, 2026)"
+  },
   "headline": "string — one punchy editorial headline for this week",
   "summary": "string — 2–3 sentence orientation summary for free readers",
-  "publishedAt": "YYYY-MM-DD (the Monday of this week)",
   "tags": ["string", "..."],
   "regime": "risk-on | risk-off | range-bound | transition",
-  "marketSnapshot": {
+  "snapshot": {
     "totalMarketCapUsd": 0,
     "btcDominancePct": 0.0,
     "ethDominancePct": 0.0,
@@ -62,7 +65,9 @@ This file feeds `npm run generate:local-report`, which validates it strictly. Yo
 
 - `riskChecklist` MUST contain **exactly 5 items**. The parser enforces this. Fewer or more will cause pipeline failure.
 - `regime` MUST be one of: `risk-on`, `risk-off`, `range-bound`, `transition`. Exact string match.
-- `publishedAt` MUST be the Monday of the current week in `YYYY-MM-DD` format.
+- `week.publishedAt` MUST be the Monday of the current week in `YYYY-MM-DD` format.
+- `generatedAt` MUST be `YYYY-MM-DDT06:00:00.000Z` using the same Monday date.
+- `snapshot` is the correct key for market data — NOT `marketSnapshot`.
 - You may ONLY write to `data/report-inputs/local-report-input.json`. Never write to `data/reports/`, `data/pro-packs/`, or any source file.
 - All numbers in `marketSnapshot` must be actual numbers (not strings). `fearGreedIndex` is 0–100.
 

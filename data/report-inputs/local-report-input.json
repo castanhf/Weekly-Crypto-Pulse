@@ -1,98 +1,105 @@
 {
-  "generatedAt": "2026-03-02T18:00:00.000Z",
+  "generatedAt": "2026-04-07T06:00:00.000Z",
   "week": {
-    "publishedAt": "2026-03-02",
-    "label": "Week of Mar 2, 2026"
+    "publishedAt": "2026-04-07",
+    "label": "Week of Apr 7, 2026"
   },
-  "headline": "ETF Demand Supports Majors as Altcoin Rotation Stalls",
-  "summary": "Bitcoin and Ethereum held key support while selective capital rotated out of high-beta altcoins.",
-  "tags": [
-    "bitcoin",
-    "ethereum",
-    "etf",
-    "rotation"
-  ],
-  "regime": "range-bound",
+  "headline": "Extreme Fear Grips Crypto as Iran War Threat Pressures Risk Assets",
+  "summary": "Bitcoin trades near $72,000 with a fear and greed reading of 17 — extreme fear — as geopolitical uncertainty over the Iran conflict and the Strait of Hormuz deadline dominates sentiment. The total crypto market cap has fallen to $2.53 trillion, down sharply from the $2.8 trillion range seen in late March. Despite modestly positive 7-day price changes, the macro backdrop keeps conditions fragile and directional conviction low.",
+  "tags": ["crypto", "weekly", "bitcoin", "geopolitics", "fear-greed"],
+  "regime": "transition",
   "snapshot": {
-    "totalMarketCapUsd": 2815000000000,
-    "btcDominancePct": 56.1,
-    "ethDominancePct": 16.3,
-    "fearGreedIndex": 59
+    "totalMarketCapUsd": 2535324933385,
+    "btcDominancePct": 56.86,
+    "ethDominancePct": 10.74,
+    "fearGreedIndex": 17
   },
   "movers": [
     {
       "symbol": "BTC",
       "name": "Bitcoin",
-      "changePct7d": 2.4,
-      "catalyst": "Steady ETF net inflows and resilient spot demand."
+      "changePct7d": 5.55,
+      "catalyst": "Bitcoin briefly reclaimed $70,000 intraday on Monday before pulling back, supported by renewed ETF inflows but capped by geopolitical risk as traders await developments in the Iran conflict."
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
-      "changePct7d": 1.8,
-      "catalyst": "Large-cap rotation and stable staking participation."
+      "changePct7d": 5.98,
+      "catalyst": "Ethereum posted the strongest 7-day gain among majors but remains well below prior range highs near $4,600, reflecting the broader de-risking that has compressed ETH dominance to 10.74%."
     },
     {
-      "symbol": "AVAX",
-      "name": "Avalanche",
-      "changePct7d": -5.1,
-      "catalyst": "Momentum unwind after a sharp prior-week rally."
+      "symbol": "SOL",
+      "name": "Solana",
+      "changePct7d": 1.86,
+      "catalyst": "Solana lagged the majors on a 7-day basis, consistent with continued rotation away from higher-beta assets as macro uncertainty suppresses speculative appetite."
     }
   ],
   "sections": [
     {
-      "id": "market-overview",
-      "heading": "Market Overview",
-      "body": "Liquidity stayed concentrated in majors while altcoin breadth softened.",
+      "id": "macro",
+      "heading": "Macro Context: Geopolitical Shock Meets Crypto Sentiment",
+      "body": "The dominant story entering the week of April 7 is not on-chain — it is geopolitical. President Trump's deadline demanding Iran reopen the Strait of Hormuz has injected significant uncertainty across risk markets, and crypto is not immune. Oil supply disruption fears, dollar volatility, and the prospect of broader military escalation have all contributed to suppressed risk appetite, reflected directly in the Fear and Greed Index reading of 17 — the lowest classification on the scale.\n\nTotal cryptocurrency market capitalization has declined to approximately $2.53 trillion, down from $2.82 trillion just two weeks ago. This contraction represents a meaningful drawdown in aggregate value, though Bitcoin's dominance at 56.86% indicates that capital is concentrating rather than exiting entirely — a pattern consistent with flight-to-quality within the asset class.\n\nEthereum's dominance has compressed sharply to 10.74%, a significant drop from the 16.3% observed in the March 23 report. This compression signals that ETH has underperformed BTC on an absolute basis over the past two weeks, even as both assets show modest positive 7-day changes. The divergence is notable and reflects reduced institutional confidence in the ETH thesis relative to BTC's digital-gold narrative during geopolitical stress.\n\nLooking ahead, the macro event calendar centers on whether the Iran situation escalates or de-escalates by week-end. A resolution would likely provide a sharp relief rally in risk assets. An escalation would extend the current risk-off pressure and could push crypto market caps toward the lower end of the two-month trading range.",
       "highlights": [
-        "BTC closed above its weekly VWAP.",
-        "Perpetual funding reset to neutral across major venues."
+        "Fear and Greed Index at 17 — classified as Extreme Fear, the lowest reading in months.",
+        "Total market cap fell from $2.82T to $2.53T over the past two weeks.",
+        "BTC dominance at 56.86%; ETH dominance compressed sharply to 10.74%.",
+        "Iran war deadline and Strait of Hormuz standoff are the primary macro catalyst for the week."
       ]
     },
     {
-      "id": "positioning",
-      "heading": "Positioning & Flows",
-      "body": "Institutional participation remained constructive, but speculative leverage cooled.",
+      "id": "btc-eth",
+      "heading": "Bitcoin and Ethereum: Bouncing, But Not Breaking Out",
+      "body": "Bitcoin's 7-day price change of +5.55% and Ethereum's +5.98% look constructive in isolation, but context is critical. Both assets remain well below the range highs observed in the March report — BTC traded between $90,000 and $96,000 just weeks ago, and now consolidates near $72,000. Ethereum has fallen from the $4,600 pivot level to approximately $2,257. These are not minor corrections; they represent a structural repricing of risk across the cycle.\n\nThe intraday Bitcoin move on Monday — briefly touching $70,000 before retreating to the high $60,000s — illustrates the market's current character: buyers emerge on dips, but sellers cap recoveries quickly. ETF inflows are providing a floor, with institutional participation remaining present. However, the pace of net inflows has clearly moderated from the levels that supported the Q1 range, and speculative leverage remains muted.\n\nFor Ethereum, the ETH/BTC ratio compression to approximately 0.031 represents a significant shift in relative performance. The prior thesis of ETH-led breadth expansion, anchored on the $4,600 pivot, has failed to materialize. The current environment favors watching ETH for signs of stabilization against BTC before drawing any conclusion about renewed ETH outperformance.",
       "highlights": [
-        "Spot ETF flow momentum remained positive for a sixth consecutive week.",
-        "Open interest declined in mid-cap perpetual pairs."
+        "BTC at ~$72,000 — down roughly $20,000 from the March range high near $96,000.",
+        "ETH at ~$2,257 — well below the $4,600 pivot level flagged in the prior report.",
+        "Both assets show positive 7-day changes (+5.55% and +5.98%), suggesting a short-term bounce.",
+        "ETF inflows remain a structural floor but are not generating breakout momentum."
+      ]
+    },
+    {
+      "id": "outlook",
+      "heading": "Outlook: Transition Regime — Handle With Care",
+      "body": "The current market environment is best described as a transition regime. Prices have fallen sharply from prior highs, sentiment is at extreme fear, and a major macro catalyst — the Iran conflict — is unresolved. Yet prices are not in free fall: 7-day changes are modestly positive and ETF demand continues to absorb selling pressure. The market is between states: not fully risk-off (flows are still present) but not risk-on either (sentiment is deeply negative and macro is hostile).\n\nIn transition regimes, false moves are common in both directions. A headline de-escalation on the Iran front could produce a sharp short-squeeze rally that looks like a regime change but proves transient. Conversely, escalation could accelerate the drawdown toward the two-month range lows near $62,000–$65,000. Participants should be especially cautious about leaning heavily in either direction until the geopolitical situation resolves.\n\nBTC dominance holding above 56% is one constructive signal — if a recovery does begin, Bitcoin typically leads. The ETH/BTC compression and altcoin underperformance suggest any rotation back to higher-beta names, if it comes, is likely weeks away rather than imminent.",
+      "highlights": [
+        "Regime classified as transition: positive 7-day returns but deeply negative sentiment.",
+        "BTC dominance above 56% is the clearest constructive signal in the current environment.",
+        "Iran conflict resolution or escalation is the binary macro event to watch this week.",
+        "Range lows near $62,000–$65,000 BTC are the key downside reference in an escalation scenario."
       ]
     }
   ],
   "signals": {
     "thesis": [
-      "Major-asset demand remains the primary support while broad altcoin participation fades.",
-      "ETF-related flows are still cushioning pullbacks, but upside follow-through is slowing.",
-      "Positioning is shifting from high-beta momentum into higher-liquidity names."
+      "BTC is the only major with a credible bid in a geopolitical risk-off environment — maintain BTC over ETH and altcoin exposure until the Iran situation resolves.",
+      "The Fear and Greed reading of 17 historically marks the outer edge of sustained selling; a geopolitical resolution could produce a sharp mean-reversion rally.",
+      "ETH/BTC compression is severe but not yet a buy signal — wait for ETH to stabilize against BTC (ratio holding above 0.030) before rotating.",
+      "ETF inflows are acting as a structural floor but are insufficient to drive breakouts — treat $72,000–$75,000 BTC as distribution range, not breakout zone, until macro clears."
     ],
     "riskChecklist": [
-      "Watch for a break below prior weekly support in BTC before adding directional risk.",
-      "Monitor ETF net-flow momentum for a second consecutive down week.",
-      "Track funding and open interest for signs of leverage re-expansion.",
-      "Confirm stablecoin supply growth continues to support spot liquidity.",
-      "Respect macro event windows that can override crypto-native flow signals."
+      "Iran military escalation: if the Strait of Hormuz conflict expands, expect BTC to test the $62,000–$65,000 two-month range low.",
+      "BTC breaks below $68,000: a sustained close below this level removes the near-term floor and opens the lower range.",
+      "ETF net outflow week: if spot BTC ETF flows turn net negative for a full week, the structural bid thesis is impaired.",
+      "ETH/BTC ratio breaks below 0.029: would signal continued relative ETH deterioration and reduce the case for near-term ETH rotation.",
+      "Macro surprise from Fed or CPI: any inflation re-acceleration signal or hawkish Fed commentary this week would compound existing risk-off pressure."
     ],
     "watchlistLevels": [
       {
         "asset": "BTC",
-        "level": "$90k support / $96k reclaim",
-        "context": "Holding support keeps the range constructive; reclaiming resistance reopens trend continuation."
+        "level": "$68,000",
+        "context": "Key near-term floor — the market has bounced from this area multiple times in the two-month range. A sustained break below invalidates the current range-hold and targets $62,000–$65,000."
       },
       {
         "asset": "ETH",
-        "level": "$4.6k pivot",
-        "context": "Sustained closes above pivot improve odds of renewed ETH-led breadth."
-      },
-      {
-        "asset": "TOTAL3",
-        "level": "prior month low",
-        "context": "A fresh low would confirm ongoing altcoin-relative weakness."
+        "level": "$2,100",
+        "context": "Prior range low for ETH over the past two months. A break below would confirm continued ETH underperformance and discourage any rotation into the asset."
       }
     ],
     "changedSinceLastWeek": [
-      "BTC held weekly support despite softer intraday momentum.",
-      "ETF inflows stayed positive, but the pace moderated versus the prior week.",
-      "Altcoin breadth weakened further as TOTAL3 underperformed majors."
+      "BTC has fallen from the $90,000–$96,000 range (March levels) to approximately $72,000 — a major structural repricing, not a minor pullback.",
+      "ETH dominance compressed sharply from 16.3% to 10.74%, invalidating the prior ETH-led breadth thesis anchored on the $4,600 pivot level.",
+      "Fear and Greed dropped from 59 (neutral/greed border) to 17 (extreme fear), marking a full sentiment reversal in two weeks.",
+      "Regime shifted from range-bound to transition as geopolitical risk (Iran conflict) became the primary macro driver, displacing crypto-native flow signals."
     ]
   }
 }
