@@ -1,5 +1,13 @@
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.coingecko.com)",
+      "WebFetch(domain:api.alternative.me)",
+      "WebSearch",
+      "Bash(npm run:*)"
+    ]
   }
 }

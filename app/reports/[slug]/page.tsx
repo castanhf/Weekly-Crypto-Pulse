@@ -11,7 +11,6 @@ import { MethodologyNote } from '@/components/reports/methodology-note';
 import { RegimeSection } from '@/components/reports/regime-section';
 import { ReportHero } from '@/components/reports/report-hero';
 import { ReportSections } from '@/components/reports/report-sections';
-import { ReportSignalsBlock } from '@/components/reports/report-signals';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
@@ -82,7 +81,27 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
           <MarketSnapshotCards snapshot={report.marketSnapshot} />
           <WinnersAndLosers movers={report.movers} />
           <RegimeSection regime={report.regime} />
-          <ReportSignalsBlock signals={report.signals} />
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-line/70 bg-white p-5 sm:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Pro signals layer</p>
+              <h2 className="mt-2 text-[1.3rem] font-semibold tracking-tight">Decision checklist, risk review, and watchlist levels</h2>
+              <p className="mt-3 text-base leading-8 text-muted">
+                The Pro signals package for this issue includes a thesis checklist, a risk review, and concrete watchlist
+                levels with entry context — the actionable layer that sits on top of the free orientation.
+              </p>
+
+              {report.signals.thesis[0] ? (
+                <div className="mt-4 select-none overflow-hidden rounded-xl border border-line/60 bg-paper px-4 py-3" aria-hidden="true">
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">This week&rsquo;s thesis — preview</p>
+                  <p className="mt-2 blur-sm text-sm leading-7 text-ink">{report.signals.thesis[0]}</p>
+                </div>
+              ) : null}
+
+              <div className="mt-5">
+                <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Unlock Pro signals — Single Issue" />
+              </div>
+            </div>
+          </div>
 
           <SurfaceCard className="space-y-5 border-line/70 bg-white/95">
             <div className="space-y-2">

@@ -39,13 +39,17 @@ const isNavItemActive = (item: NavItem, currentPathname: string): boolean => {
 
 const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
   if (item.isEmphasized) {
-    return getCtaClassName({
-      className: composeClassNames(
-        'whitespace-nowrap py-2.5',
-        isActive ? 'shadow-[0_6px_20px_rgba(16,24,40,0.15)]' : 'border-line/80 bg-white hover:border-ink/30 hover:bg-paper'
-      ),
-      tone: isActive ? 'primary' : 'secondary'
-    });
+    if (isActive) {
+      return getCtaClassName({
+        className: 'whitespace-nowrap py-2.5 shadow-[0_6px_20px_rgba(16,24,40,0.15)]',
+        tone: 'primary'
+      });
+    }
+
+    return composeClassNames(
+      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl border border-ink/20 px-4 py-2.5 text-sm font-medium text-ink/60 transition',
+      'hover:border-ink/50 hover:text-ink hover:bg-paper'
+    );
   }
 
   return composeClassNames(

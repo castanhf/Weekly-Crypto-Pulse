@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # local tooling output
 /.generated/
+
+# claude code local settings (machine-specific permissions)
+.claude/settings.local.json
