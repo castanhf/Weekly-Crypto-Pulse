@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
-import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { formatIsoDate } from '@/components/reports/report-formatters';
 import type { Regime } from '@/domain/report';
 import { createReportsArchiveMetadata } from '@/lib/seo';
@@ -29,7 +28,6 @@ const archiveCtaClassName =
 
 export default function ReportsPage(): JSX.Element {
   const reportArtifacts = getAllReportArtifacts();
-  const latestReportArtifact = reportArtifacts[0];
 
   return (
     <PageShell>
@@ -37,36 +35,12 @@ export default function ReportsPage(): JSX.Element {
         className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
         description="Browse every public Weekly Crypto Pulse issue in reverse chronological order."
         eyebrow="Reports archive"
-        title="Public weekly reports, organized for quick scanning."
+        title="Weekly reports, free to read."
       />
 
       <PageSection>
         <ContentWidth className="mx-auto" size="feature">
           <div className="grid gap-6 lg:gap-8 xl:grid-cols-[minmax(0,1.8fr)_minmax(18rem,0.8fr)] xl:items-start">
-            <aside className="space-y-4 xl:sticky xl:top-24">
-              <SurfaceCard className="space-y-5 bg-paper p-5 sm:p-6">
-                <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
-                <p className="text-base leading-8 text-muted">
-                  Archive reports are the <span className="font-semibold text-ink">Free</span> layer for orientation.
-                  Readers who need a deeper decision brief for one week or continuity across the month can compare the paid
-                  offers on the Pro page.
-                </p>
-                <Link className={archiveCtaClassName} href="/pro">
-                  Compare Weekly Pro and Monthly Bundle
-                </Link>
-              </SurfaceCard>
-
-              {latestReportArtifact ? (
-                <ArtifactTrustCard
-                  className="p-5 sm:p-6"
-                  description="Archive freshness comes from the newest committed report artifact included in this build. No runtime market-data fetch is required to render this page."
-                  extraItems={[{ label: 'Archive reports', value: `${reportArtifacts.length}` }]}
-                  reportArtifact={latestReportArtifact}
-                  title="Archive trust cues"
-                />
-              ) : null}
-            </aside>
-
             <ul className="space-y-4 sm:space-y-5">
               {reportArtifacts.map(({ report }) => {
                 const reportUrl = `/reports/${report.metadata.slug}`;
@@ -101,6 +75,20 @@ export default function ReportsPage(): JSX.Element {
                 );
               })}
             </ul>
+
+            <aside className="space-y-4 xl:sticky xl:top-24">
+              <SurfaceCard className="space-y-5 bg-paper p-5 sm:p-6">
+                <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
+                <p className="text-base leading-8 text-muted">
+                  Archive reports are the <span className="font-semibold text-ink">Free</span> layer for orientation.
+                  Readers who need a deeper decision brief for one week or continuity across the month can compare the paid
+                  offers on the Pro page.
+                </p>
+                <Link className={archiveCtaClassName} href="/pro">
+                  Compare Weekly Pro and Monthly Bundle
+                </Link>
+              </SurfaceCard>
+            </aside>
           </div>
         </ContentWidth>
       </PageSection>
