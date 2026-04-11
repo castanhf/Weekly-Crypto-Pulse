@@ -14,7 +14,7 @@ body {
   @apply bg-paper text-base text-ink antialiased;
   line-height: 1.65;
   letter-spacing: -0.005em;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(252, 252, 253, 0.98));
+  background-image: linear-gradient(to bottom, rgba(245, 247, 250, 0.92), rgba(245, 247, 250, 0.98));
 }
 
 h1,

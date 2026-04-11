@@ -47,14 +47,14 @@ const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
     }
 
     return composeClassNames(
-      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl border border-ink/20 px-4 py-2.5 text-sm font-medium text-ink/60 transition',
-      'hover:border-ink/50 hover:text-ink hover:bg-paper'
+      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-ink/60 transition',
+      'hover:text-ink hover:bg-paper'
     );
   }
 
   return composeClassNames(
     'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-muted transition',
-    isActive ? 'bg-paper text-ink' : 'hover:bg-paper hover:text-ink'
+    isActive ? 'bg-line/50 text-ink font-semibold' : 'hover:bg-paper hover:text-ink'
   );
 };
 
@@ -62,7 +62,7 @@ export function Header(): JSX.Element {
   const pathname = normalizePathname(usePathname() ?? '/');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80">
       <div className={`${pageContainerClassName} py-4 sm:py-5`}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <Link className="min-w-0 max-w-2xl" href="/">

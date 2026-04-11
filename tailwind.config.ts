@@ -10,8 +10,9 @@ const config: Config = {
       colors: {
         ink: '#101828',
         muted: '#475467',
-        line: '#d0d5dd',
-        paper: '#fcfcfd'
+        line: '#CBD5E1',
+        paper: '#F5F7FA',
+        brand: '#1a365d'
       }
     }
   },
