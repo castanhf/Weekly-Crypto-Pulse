@@ -70,12 +70,12 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
   const linkedInShareUrl = createLinkedInShareUrl(url);
 
   return (
-    <aside className="space-y-3 rounded-2xl border border-line/80 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)]" aria-label="Share this report">
-      <h2 className="text-sm font-semibold tracking-tight">Share this report</h2>
+    <aside className="space-y-3 rounded-2xl border border-white/10 bg-surface p-5 shadow-[0_2px_8px_rgba(0,0,0,0.4)]" aria-label="Share this report">
+      <h2 className="text-sm font-semibold tracking-tight text-paper">Share this report</h2>
       <div className="grid gap-2 text-sm sm:grid-cols-3 xl:grid-cols-1">
         <button
           aria-label="Copy report link"
-          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-line px-3 py-2 font-medium transition hover:border-ink"
+          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 px-3 py-2 font-medium text-paper transition hover:border-white/30 hover:bg-white/5"
           onClick={handleCopyLink}
           type="button"
         >
@@ -83,7 +83,7 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
         </button>
         <a
           aria-label="Share report on X"
-          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-line px-3 py-2 font-medium transition hover:border-ink"
+          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 px-3 py-2 font-medium text-paper transition hover:border-white/30 hover:bg-white/5"
           href={xShareUrl}
           rel="noopener noreferrer"
           target="_blank"
@@ -92,7 +92,7 @@ export function ReportShareBlock({ title, url }: ReportShareBlockProps): JSX.Ele
         </a>
         <a
           aria-label="Share report on LinkedIn"
-          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-line px-3 py-2 font-medium transition hover:border-ink"
+          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 px-3 py-2 font-medium text-paper transition hover:border-white/30 hover:bg-white/5"
           href={linkedInShareUrl}
           rel="noopener noreferrer"
           target="_blank"

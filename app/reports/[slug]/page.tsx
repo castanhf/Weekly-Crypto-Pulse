@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
-import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
 import { MethodologyNote } from '@/components/reports/methodology-note';
@@ -24,7 +23,7 @@ type ReportDetailPageProps = {
 };
 
 const secondaryCtaClassName =
-  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-line px-4 py-3 text-center text-sm font-medium transition hover:border-ink sm:w-auto';
+  'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-center text-sm font-medium transition hover:border-white/40 sm:w-auto';
 
 export const generateStaticParams = (): Array<ReportDetailPageProps['params']> =>
   getAllReports().map((report) => ({ slug: report.metadata.slug }));
@@ -60,29 +59,21 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
       <ReportHero metadata={report.metadata} />
       <PageSection className="grid gap-6 xl:grid-cols-[minmax(0,1.75fr)_minmax(19rem,0.75fr)] xl:items-start">
         <div className="order-first space-y-8 xl:order-first xl:space-y-10">
-          <SurfaceCard className="border-line/70 bg-gradient-to-b from-white to-paper/60 text-base leading-8 text-muted" aria-label="Tier context">
+          <SurfaceCard className="border-white/10 bg-gradient-to-b from-surface to-canvas/50 text-base leading-8 text-muted" aria-label="Tier context">
             <p>
-              This page is part of the <span className="font-semibold text-ink">Free</span> layer and is designed for
+              This page is part of the <span className="font-semibold text-paper">Free</span> layer and is designed for
               orientation. If you need a paid decision brief for this exact issue, choose{' '}
-              <span className="font-semibold text-ink">Weekly Pro — Single Issue</span>. If you want continuity across
-              several weekly updates, choose the <span className="font-semibold text-ink">Monthly Bundle</span>.
+              <span className="font-semibold text-paper">Weekly Pro — Single Issue</span>. If you want continuity across
+              several weekly updates, choose the <span className="font-semibold text-paper">Monthly Bundle</span>.
             </p>
           </SurfaceCard>
-
-          {reportArtifact ? (
-            <ArtifactTrustCard
-              description="This report page is rendered from the committed artifact used at build time. No runtime market-data fetch is required to show the report."
-              reportArtifact={reportArtifact}
-              title="Report trust cues"
-            />
-          ) : null}
 
           <ExecutiveSummary summary={report.metadata.summary} />
           <MarketSnapshotCards snapshot={report.marketSnapshot} />
           <WinnersAndLosers movers={report.movers} />
           <RegimeSection regime={report.regime} />
           <div className="space-y-4">
-            <div className="rounded-2xl border border-line/70 bg-white p-5 sm:p-6">
+            <div className="rounded-2xl border border-white/10 bg-surface p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Pro signals layer</p>
               <h2 className="mt-2 text-[1.3rem] font-semibold tracking-tight">Decision checklist, risk review, and watchlist levels</h2>
               <p className="mt-3 text-base leading-8 text-muted">
@@ -91,9 +82,9 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
               </p>
 
               {report.signals.thesis[0] ? (
-                <div className="mt-4 select-none overflow-hidden rounded-xl border border-line/60 bg-paper px-4 py-3" aria-hidden="true">
+                <div className="mt-4 select-none overflow-hidden rounded-xl border border-white/10 bg-canvas/50 px-4 py-3" aria-hidden="true">
                   <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">This week&rsquo;s thesis — preview</p>
-                  <p className="mt-2 blur-sm text-sm leading-7 text-ink">{report.signals.thesis[0]}</p>
+                  <p className="mt-2 blur-sm text-sm leading-7 text-paper">{report.signals.thesis[0]}</p>
                 </div>
               ) : null}
 
@@ -103,7 +94,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
             </div>
           </div>
 
-          <SurfaceCard className="space-y-5 border-line/70 bg-white/95">
+          <SurfaceCard className="space-y-5 border-white/10 bg-surface">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Paid depth when needed</p>
               <h2 className="text-[1.7rem] font-semibold tracking-tight sm:text-[2.1rem]">Need an actionable brief, not just orientation?</h2>
@@ -124,7 +115,7 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
 
         <div className="order-last space-y-4 xl:order-last xl:sticky xl:top-24">
           <ReportShareBlock title={report.metadata.title} url={reportUrl} />
-          <SurfaceCard className="space-y-5 border-line/70 bg-gradient-to-br from-white via-white to-paper/90">
+          <SurfaceCard className="space-y-5 border-white/10 bg-gradient-to-br from-surface via-surface to-canvas/50">
             <div className="space-y-2.5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Pro decision layer</p>
               <h2 className="text-[1.45rem] font-semibold tracking-tight">Choose paid depth only when the workflow changes</h2>
@@ -133,14 +124,14 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <div className="rounded-xl border border-white/10 bg-canvas/50 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Decision</p>
                 <h3 className="mt-1 text-base font-semibold tracking-tight">Weekly Pro — Single Issue</h3>
                 <p className="mt-2 text-base leading-8 text-muted">
                   Best when this week requires deeper execution context and one issue is enough.
                 </p>
               </div>
-              <div className="rounded-xl border border-line/80 bg-paper px-4 py-4">
+              <div className="rounded-xl border border-white/10 bg-canvas/50 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Continuity</p>
                 <h3 className="mt-1 text-base font-semibold tracking-tight">Monthly Bundle</h3>
                 <p className="mt-2 text-base leading-8 text-muted">

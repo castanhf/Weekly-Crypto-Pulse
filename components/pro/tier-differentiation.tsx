@@ -16,24 +16,24 @@ type TierPresentation = Readonly<{
 
 const TIER_PRESENTATIONS: Readonly<Record<ContentTierId, TierPresentation>> = {
   free: {
-    badgeClassName: 'border-line/80 bg-paper text-ink',
-    cardClassName: 'border-line/80 bg-white',
+    badgeClassName: 'border-white/10 bg-surface text-paper',
+    cardClassName: 'border-white/10 bg-surface',
     icon: '◎',
-    railClassName: 'border-line',
+    railClassName: 'border-white/20',
     toneLabel: 'Orientation layer'
   },
   weeklyPro: {
-    badgeClassName: 'border-ink/15 bg-ink text-paper',
-    cardClassName: 'border-ink/15 bg-gradient-to-br from-ink to-neutral-800 text-paper',
+    badgeClassName: 'border-accent/30 bg-brand text-paper',
+    cardClassName: 'border-accent/30 bg-gradient-to-br from-brand to-canvas text-paper',
     icon: '◉',
     railClassName: 'border-paper/35',
     toneLabel: 'Decision layer'
   },
   monthlyBundle: {
-    badgeClassName: 'border-amber-200 bg-amber-50 text-amber-900',
-    cardClassName: 'border-amber-200 bg-gradient-to-br from-amber-50 via-white to-amber-100/60',
+    badgeClassName: 'border-accent/20 bg-accent/10 text-accent',
+    cardClassName: 'border-accent/20 bg-gradient-to-br from-accent/15 via-surface to-surface',
     icon: '◆',
-    railClassName: 'border-amber-200',
+    railClassName: 'border-accent/30',
     toneLabel: 'Continuity layer'
   }
 } as const;
@@ -45,9 +45,9 @@ const mutedClassByTierId: Readonly<Record<ContentTierId, string>> = {
 };
 
 const listClassByTierId: Readonly<Record<ContentTierId, string>> = {
-  free: 'text-ink marker:text-muted',
+  free: 'text-paper marker:text-muted',
   weeklyPro: 'text-paper/90 marker:text-paper/45',
-  monthlyBundle: 'text-ink marker:text-muted'
+  monthlyBundle: 'text-paper marker:text-muted'
 };
 
 export function TierDifferentiation({ description, title }: TierDifferentiationProps): JSX.Element {
@@ -55,19 +55,19 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
     <PageSection aria-labelledby="tier-differentiation-heading" className="space-y-6">
       <SectionIntro description={description} id="tier-differentiation-heading" title={title} />
 
-      <SurfaceCard className="space-y-4 border-line/80 bg-gradient-to-r from-white via-paper/35 to-white px-5 py-5 sm:px-6">
+      <SurfaceCard className="space-y-4 border-white/10 bg-gradient-to-r from-surface via-canvas/30 to-surface px-5 py-5 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Usage ladder</p>
         <div className="grid gap-3 md:grid-cols-3">
-          <div className="rounded-xl border border-line/80 bg-white px-4 py-4">
+          <div className="rounded-xl border border-white/10 bg-surface px-4 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Free</p>
             <p className="mt-2 text-sm leading-7 text-muted">Read first to orient on regime, flows, and baseline risk.</p>
           </div>
-          <div className="rounded-xl border border-ink/15 bg-ink px-4 py-4 text-paper">
+          <div className="rounded-xl border border-accent/30 bg-brand px-4 py-4 text-paper">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">Weekly Pro</p>
             <p className="mt-2 text-sm leading-7 text-paper/88">Buy when this week requires a concrete decision memo.</p>
           </div>
-          <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-900">Monthly Bundle</p>
+          <div className="rounded-xl border border-accent/20 bg-accent/10 px-4 py-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Monthly Bundle</p>
             <p className="mt-2 text-sm leading-7 text-muted">Use for continuity so each weekly decision compounds through month-end.</p>
           </div>
         </div>
