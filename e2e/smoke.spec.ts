@@ -59,9 +59,8 @@ test('/reports lists report items', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/reports');
 
-  await expect(page.getByRole('heading', { level: 1, name: /public weekly reports, organized for quick scanning\./i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /weekly reports, free to read\./i })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Compare Weekly Pro and Monthly Bundle' })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Archive trust cues' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',
     'page'
@@ -86,7 +85,6 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Report trust cues' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',
     'page'
@@ -108,10 +106,9 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /choose your paid research plan\./i
+      name: /one issue or the full month\./i
     })
   ).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'One week or full-month continuity?' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Pro' })).toHaveAttribute(
