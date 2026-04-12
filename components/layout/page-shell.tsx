@@ -82,7 +82,7 @@ export function ContentWidth({ children, className, size = 'content' }: ContentW
 
 export function PageHeader({ eyebrow, title, description, actions, className, titleClassName }: PageHeaderProps): JSX.Element {
   return (
-    <header className={composeClassNames('space-y-6 border-b border-line/80 pb-8 sm:space-y-8 sm:pb-12', className)}>
+    <header className={composeClassNames('space-y-6 border-b border-white/10 pb-8 sm:space-y-8 sm:pb-12', className)}>
       <ContentWidth className="space-y-5" size="feature">
         {eyebrow ? <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-muted">{eyebrow}</p> : null}
         <div className="space-y-4">
@@ -114,7 +114,7 @@ export function SurfaceCard({ children, className, ...restProps }: SurfaceCardPr
     <div
       {...restProps}
       className={composeClassNames(
-        'rounded-2xl border border-line/80 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:p-8 lg:p-9',
+        'rounded-2xl border border-white/10 bg-surface p-5 shadow-[0_2px_8px_rgba(0,0,0,0.4)] sm:p-8 lg:p-9',
         className
       )}
     >

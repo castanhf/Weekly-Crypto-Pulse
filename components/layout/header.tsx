@@ -47,14 +47,18 @@ const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
     }
 
     return composeClassNames(
-      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl border border-ink/20 px-4 py-2.5 text-sm font-medium text-ink/60 transition',
-      'hover:border-ink/50 hover:text-ink hover:bg-paper'
+      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-paper/60 transition',
+      'hover:bg-white/5 hover:text-paper'
     );
   }
 
+  if (isActive) {
+    return getCtaClassName({ tone: 'primary', className: 'whitespace-nowrap' });
+  }
+
   return composeClassNames(
-    'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-muted transition',
-    isActive ? 'bg-paper text-ink' : 'hover:bg-paper hover:text-ink'
+    'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-paper/60 transition',
+    'hover:bg-white/5 hover:text-paper'
   );
 };
 
@@ -62,14 +66,14 @@ export function Header(): JSX.Element {
   const pathname = normalizePathname(usePathname() ?? '/');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
       <div className={`${pageContainerClassName} py-4 sm:py-5`}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <Link className="min-w-0 max-w-2xl" href="/">
             <div className="space-y-2">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted">Weekly crypto research</p>
               <div className="space-y-1">
-                <p className="text-lg font-semibold tracking-tight text-ink sm:text-2xl">{siteConfig.name}</p>
+                <p className="text-lg font-semibold tracking-tight text-paper sm:text-2xl">{siteConfig.name}</p>
                 <p className="max-w-xl text-sm leading-6 text-muted sm:text-[0.95rem]">
                   Public market orientation with paid weekly decision briefs and monthly continuity.
                 </p>
@@ -78,7 +82,7 @@ export function Header(): JSX.Element {
           </Link>
 
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
-            <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-line/80 bg-white p-1.5 shadow-[0_1px_2px_rgba(16,24,40,0.04)] sm:flex-wrap sm:justify-end">
+            <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-surface p-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:flex-wrap sm:justify-end">
               {navItems.map((item) => {
                 const isActive = isNavItemActive(item, pathname);
 
