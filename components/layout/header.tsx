@@ -52,9 +52,13 @@ const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
     );
   }
 
+  if (isActive) {
+    return getCtaClassName({ tone: 'primary', className: 'whitespace-nowrap' });
+  }
+
   return composeClassNames(
     'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-paper/60 transition',
-    isActive ? 'bg-white/10 text-paper font-semibold' : 'hover:bg-white/5 hover:text-paper'
+    'hover:bg-white/5 hover:text-paper'
   );
 };
 
@@ -69,7 +73,7 @@ export function Header(): JSX.Element {
             <div className="space-y-2">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted">Weekly crypto research</p>
               <div className="space-y-1">
-                <p className="text-lg font-semibold tracking-tight text-ink sm:text-2xl">{siteConfig.name}</p>
+                <p className="text-lg font-semibold tracking-tight text-paper sm:text-2xl">{siteConfig.name}</p>
                 <p className="max-w-xl text-sm leading-6 text-muted sm:text-[0.95rem]">
                   Public market orientation with paid weekly decision briefs and monthly continuity.
                 </p>

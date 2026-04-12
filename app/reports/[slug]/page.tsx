@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
-import { ArtifactTrustCard } from '@/components/reports/artifact-trust-card';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
 import { MethodologyNote } from '@/components/reports/methodology-note';
@@ -68,14 +67,6 @@ export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX
               several weekly updates, choose the <span className="font-semibold text-paper">Monthly Bundle</span>.
             </p>
           </SurfaceCard>
-
-          {reportArtifact ? (
-            <ArtifactTrustCard
-              description="This report page is rendered from the committed artifact used at build time. No runtime market-data fetch is required to show the report."
-              reportArtifact={reportArtifact}
-              title="Report trust cues"
-            />
-          ) : null}
 
           <ExecutiveSummary summary={report.metadata.summary} />
           <MarketSnapshotCards snapshot={report.marketSnapshot} />
