@@ -43,23 +43,23 @@ const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
 ] as const;
 
 const offerCardClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border-line/80 bg-white text-ink shadow-[0_18px_35px_rgba(16,24,40,0.05)]',
-  bestValueOffer: 'border-ink bg-ink text-paper shadow-[0_24px_50px_rgba(16,24,40,0.18)]'
+  entryOffer: 'border border-white/10 bg-surface text-paper shadow-[0_18px_35px_rgba(0,0,0,0.3)]',
+  bestValueOffer: 'border border-accent/40 bg-accent text-ink shadow-[0_24px_50px_rgba(247,147,26,0.25)]'
 };
 
 const offerSurfaceClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'border-line/80 bg-paper/80 text-ink',
-  bestValueOffer: 'border-white/10 bg-white/5 text-paper'
+  entryOffer: 'border border-white/10 bg-canvas/50 text-paper',
+  bestValueOffer: 'border border-ink/15 bg-ink/20 text-ink'
 };
 
 const offerMutedTextClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
   entryOffer: 'text-muted',
-  bestValueOffer: 'text-paper/75'
+  bestValueOffer: 'text-ink/70'
 };
 
 const offerListClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
-  entryOffer: 'text-ink marker:text-muted',
-  bestValueOffer: 'text-paper/88 marker:text-paper/45'
+  entryOffer: 'text-paper marker:text-muted',
+  bestValueOffer: 'text-ink/80 marker:text-ink/50'
 };
 
 const offerCtaClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
@@ -69,7 +69,7 @@ const offerCtaClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
 
 const offerSecondaryLinkClassNames: Record<ProOfferCard['pricing']['tier'], string> = {
   entryOffer: getCtaClassName({ tone: 'secondary' }),
-  bestValueOffer: getCtaClassName({ className: 'border-white/15 text-paper hover:border-white/40 hover:bg-white/5' })
+  bestValueOffer: getCtaClassName({ className: 'border-ink/20 text-ink hover:border-ink/40 hover:bg-ink/5' })
 };
 
 const OFFER_NARRATIVES: Readonly<Record<ProOfferCard['id'], OfferNarrative>> = {
@@ -103,7 +103,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p
               className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
-                isBestValueOffer ? 'border-white/10 bg-white/10 text-paper' : 'border-line/80 bg-paper text-ink'
+                isBestValueOffer ? 'border-white/10 bg-white/10 text-paper' : 'border-white/10 bg-canvas/50 text-paper'
               }`}
             >
               {pricing.valueLabel}
@@ -131,7 +131,7 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
             {narrative.metrics.map((metric) => (
               <div
                 className={`rounded-2xl border px-4 py-4 ${
-                  isBestValueOffer ? 'border-white/10 bg-black/10' : 'border-line/80 bg-white'
+                  isBestValueOffer ? 'border-white/10 bg-black/10' : 'border-white/10 bg-surface'
                 }`}
                 key={metric.label}
               >
@@ -209,12 +209,12 @@ export default function ProPage(): JSX.Element {
         </div>
 
         {hasMissingOfferLink ? (
-          <SurfaceCard className="mt-6 space-y-3 border-amber-300 bg-amber-50" id="checkout-unavailable">
+          <SurfaceCard className="mt-6 space-y-3 border-accent/30 bg-accent/10" id="checkout-unavailable">
             <h2 className="text-base font-semibold">Some checkout options are temporarily unavailable.</h2>
             <p className="text-base leading-8 text-muted">
               One or more Stripe Payment Links are not configured for this environment. Set{' '}
               {missingPaymentLinkEnvVarNames.map((envVarName) => (
-                <code className="mx-1 rounded bg-amber-100 px-1 py-0.5 font-mono" key={envVarName}>
+                <code className="mx-1 rounded bg-accent/20 px-1 py-0.5 font-mono" key={envVarName}>
                   {envVarName}
                 </code>
               ))}
@@ -236,11 +236,11 @@ export default function ProPage(): JSX.Element {
           title="Before you buy"
         />
 
-        <SurfaceCard className="border-line/80 bg-white p-0">
-          <div className="divide-y divide-line/70">
+        <SurfaceCard className="border-white/10 bg-surface p-0">
+          <div className="divide-y divide-white/10">
             {FAQ_ITEMS.map((item) => (
               <article className="space-y-3 px-5 py-5 sm:px-6" key={item.question}>
-                <h2 className="text-base font-semibold tracking-tight text-ink">{item.question}</h2>
+                <h2 className="text-base font-semibold tracking-tight text-paper">{item.question}</h2>
                 <p className="text-base leading-8 text-muted">{item.answer}</p>
               </article>
             ))}

@@ -10,10 +10,10 @@ import { getAllReportArtifacts } from '@/lib/reports/report-repository';
 export const metadata: Metadata = createReportsArchiveMetadata();
 
 const REGIME_BADGE_CLASS_NAMES: Record<Regime, string> = {
-  'risk-on': 'border-green-200 bg-green-50 text-green-800',
-  'risk-off': 'border-red-200 bg-red-50 text-red-800',
-  'range-bound': 'border-amber-200 bg-amber-50 text-amber-800',
-  transition: 'border-amber-200 bg-amber-50 text-amber-800'
+  'risk-on': 'border-green-700/50 bg-green-900/30 text-green-400',
+  'risk-off': 'border-red-700/50 bg-red-900/30 text-red-400',
+  'range-bound': 'border-amber-600/50 bg-amber-900/30 text-amber-400',
+  transition: 'border-amber-600/50 bg-amber-900/30 text-amber-400'
 } as const;
 
 const REGIME_LABELS: Record<Regime, string> = {
@@ -24,7 +24,7 @@ const REGIME_LABELS: Record<Regime, string> = {
 } as const;
 
 const archiveCtaClassName =
-  'inline-flex min-h-11 items-center justify-center rounded-xl border border-ink px-4 py-3 text-center text-sm font-medium transition hover:bg-ink hover:text-paper';
+  'inline-flex min-h-11 items-center justify-center rounded-xl border border-accent px-4 py-3 text-center text-sm font-medium transition hover:bg-accent hover:text-ink';
 
 export default function ReportsPage(): JSX.Element {
   const reportArtifacts = getAllReportArtifacts();
@@ -32,7 +32,7 @@ export default function ReportsPage(): JSX.Element {
   return (
     <PageShell>
       <PageHeader
-        className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
+        className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-surface via-surface to-canvas/50 px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
         description="Browse every public Weekly Crypto Pulse issue in reverse chronological order."
         eyebrow="Reports archive"
         title="Weekly reports, free to read."
@@ -50,7 +50,7 @@ export default function ReportsPage(): JSX.Element {
                     <SurfaceCard className="space-y-5 p-5 sm:space-y-6 sm:p-6">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div className="space-y-1">
-                          <p className="text-sm font-semibold text-ink">{report.metadata.weekLabel}</p>
+                          <p className="text-sm font-semibold text-paper">{report.metadata.weekLabel}</p>
                           <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">Published {formatIsoDate(report.metadata.publishedAt)}</p>
                         </div>
                         <span
@@ -67,7 +67,7 @@ export default function ReportsPage(): JSX.Element {
                         </h2>
                         <p className="text-base leading-7 text-muted sm:leading-8">{report.metadata.summary}</p>
                       </div>
-                      <Link className="inline-flex min-h-11 items-center text-sm font-medium text-ink underline underline-offset-4" href={reportUrl}>
+                      <Link className="inline-flex min-h-11 items-center text-sm font-medium text-paper underline underline-offset-4" href={reportUrl}>
                         Read free report
                       </Link>
                     </SurfaceCard>
@@ -77,10 +77,10 @@ export default function ReportsPage(): JSX.Element {
             </ul>
 
             <aside className="space-y-4 xl:sticky xl:top-24">
-              <SurfaceCard className="space-y-5 bg-paper p-5 sm:p-6">
+              <SurfaceCard className="space-y-5 bg-surface p-5 sm:p-6">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">
-                  Archive reports are the <span className="font-semibold text-ink">Free</span> layer for orientation.
+                  Archive reports are the <span className="font-semibold text-paper">Free</span> layer for orientation.
                   Readers who need a deeper decision brief for one week or continuity across the month can compare the paid
                   offers on the Pro page.
                 </p>

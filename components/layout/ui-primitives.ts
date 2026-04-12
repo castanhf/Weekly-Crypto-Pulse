@@ -14,15 +14,15 @@ const CTA_BASE_CLASS_NAME =
   'inline-flex min-h-11 items-center justify-center rounded-xl px-4 py-3 text-center text-sm font-medium transition';
 
 const CTA_TONE_CLASS_NAMES: Record<CtaTone, string> = {
-  primary: 'border border-ink bg-ink text-paper hover:bg-ink/90',
-  secondary: 'border border-line text-ink hover:border-ink',
-  inverted: 'border border-white bg-white text-ink hover:bg-paper'
+  primary: 'border border-accent bg-accent text-ink hover:bg-accent-hover',
+  secondary: 'border border-white/20 text-paper hover:border-white/40 hover:bg-white/5',
+  inverted: 'border border-white/15 bg-surface text-paper hover:border-white/30'
 };
 
 const SECTION_TILE_TONE_CLASS_NAMES: Record<SectionTileTone, string> = {
-  default: 'border border-line/80 bg-white',
-  subtle: 'border border-line/80 bg-paper',
-  dark: 'border border-white/10 bg-white/5'
+  default: 'border border-white/10 bg-surface',
+  subtle: 'border border-white/8 bg-canvas',
+  dark: 'border border-white/15 bg-brand'
 };
 
 export const composeClassNames = (...classValues: ReadonlyArray<ClassValue>): string => classValues.filter(Boolean).join(' ');

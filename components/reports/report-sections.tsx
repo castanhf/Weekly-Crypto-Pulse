@@ -21,7 +21,7 @@ export function ReportSections({ sections }: ReportSectionsProps): JSX.Element |
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Key points</p>
               <ul className="space-y-2.5 text-sm leading-7 text-muted">
                 {section.highlights.map((highlight) => (
-                  <li className="rounded-lg border border-line/70 bg-paper/50 px-3 py-2" key={highlight}>
+                  <li className="rounded-lg border border-white/10 bg-surface px-3 py-2" key={highlight}>
                     {highlight}
                   </li>
                 ))}

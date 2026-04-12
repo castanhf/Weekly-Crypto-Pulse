@@ -44,7 +44,7 @@ export default function MethodologyPage(): JSX.Element {
   return (
     <PageShell>
       <PageHeader
-        className="rounded-[2rem] border border-line/80 bg-gradient-to-br from-white via-white to-paper/70 px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
+        className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-surface via-surface to-canvas/50 px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
         description="Weekly Crypto Pulse follows a repeatable process so readers can compare each issue on like-for-like terms."
         eyebrow="Methodology"
         title="A consistent framework for reading each week."

@@ -11,9 +11,9 @@ const primaryFooterLinks = [
 
 export function Footer(): JSX.Element {
   return (
-    <footer className="border-t border-line/80 bg-white">
+    <footer className="border-t border-white/10 bg-canvas">
       <div className={`${pageContainerClassName} py-10 sm:py-12`}>
-        <div className="grid gap-9 border border-line/80 bg-paper/70 p-6 sm:rounded-[1.75rem] sm:p-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:p-10">
+        <div className="grid gap-9 border border-white/10 bg-surface/70 p-6 sm:rounded-[1.75rem] sm:p-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:p-10">
           <div className="space-y-4">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-muted">Weekly Crypto Pulse</p>
             <p className="max-w-2xl text-base leading-8 text-muted">
@@ -27,7 +27,7 @@ export function Footer(): JSX.Element {
               <ul className="space-y-2.5 text-sm text-muted">
                 {primaryFooterLinks.map((link) => (
                   <li key={link.href}>
-                    <Link className="transition hover:text-ink" href={link.href}>
+                    <Link className="transition hover:text-paper" href={link.href}>
                       {link.label}
                     </Link>
                   </li>

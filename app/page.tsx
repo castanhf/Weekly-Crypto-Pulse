@@ -76,14 +76,14 @@ export default function HomePage(): JSX.Element {
             </Link>
           </>
         }
-        className="rounded-[2rem] border border-line/80 bg-white px-5 py-7 shadow-[0_20px_50px_rgba(16,24,40,0.06)] sm:px-8 sm:py-9"
+        className="rounded-[2rem] border border-white/10 bg-surface px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
         description="Weekly Crypto Pulse keeps the homepage editorial: one public report for orientation, one paid path for weekly decisions, and one bundle for month-long continuity."
         eyebrow="Weekly crypto research"
         title="Read the market setup, then choose the depth you need this week."
       />
 
       <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
-        <SurfaceCard className="space-y-5 bg-gradient-to-br from-white via-white to-paper/70">
+        <SurfaceCard className="space-y-5 bg-gradient-to-br from-surface via-surface to-canvas/50">
           <p className={editorialLabelClassName}>Latest report</p>
           <div className="space-y-3">
             <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.25rem]" id="focus-heading">
@@ -151,10 +151,10 @@ export default function HomePage(): JSX.Element {
             {[freeTier, weeklyProTier, monthlyBundleTier].map((tier) => {
               const toneClassName =
                 tier.id === 'weeklyPro'
-                  ? 'border-ink bg-ink text-paper'
+                  ? 'border-accent/40 bg-ink text-paper'
                   : tier.id === 'monthlyBundle'
-                    ? 'border-amber-200 bg-amber-50'
-                    : 'border-line/80 bg-paper';
+                    ? 'border-accent/30 bg-gradient-to-br from-accent/20 via-surface to-surface'
+                    : 'border-white/10 bg-surface';
 
               const mutedClassName = tier.id === 'weeklyPro' ? 'text-paper/75' : 'text-muted';
 
@@ -184,7 +184,7 @@ export default function HomePage(): JSX.Element {
           title="What we measure each week"
         />
         <SurfaceCard>
-          <ul className="space-y-4 text-base leading-8 text-ink">
+          <ul className="space-y-4 text-base leading-8 text-paper">
             {METRICS.map((metric) => (
               <li className="border-l-2 border-line pl-4" key={metric}>
                 {metric}
