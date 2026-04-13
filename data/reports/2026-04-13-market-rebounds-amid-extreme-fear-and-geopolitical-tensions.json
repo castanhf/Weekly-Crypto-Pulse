@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-04-13T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Market rebounds amid extreme fear and geopolitical tensions",
+      "slug": "2026-04-13-market-rebounds-amid-extreme-fear-and-geopolitical-tensions",
+      "publishedAt": "2026-04-13",
+      "weekLabel": "Week of Apr 13, 2026",
+      "summary": "The total crypto market cap is currently $2.614 trillion, with Bitcoin dominance at 57.27% and Ethereum at 10.99%. Despite a surge in asset prices, sentiment remains fearful as exemplified by a Fear & Greed Index score of 12.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "price movement"
+      ]
+    },
+    "regime": "risk-off",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2614000000000,
+      "btcDominancePct": 57.27,
+      "ethDominancePct": 10.99,
+      "fearGreedIndex": 12
+    },
+    "movers": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 7.58,
+        "catalyst": "Bitcoin's price climbed to $74,788, influenced by broader market recovery despite prevailing geopolitical tensions."
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 11.09,
+        "catalyst": "Ethereum's price increased to $2,377, driven by positive momentum in the altcoin market as investors sought bargains."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": 6.32,
+        "catalyst": "Solana's growth to $87 reflects renewed interest in scalable platforms despite systemic risks affecting the sector."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market context amid geopolitical uncertainty",
+        "body": "The cryptocurrency market is currently navigating significant geopolitical instability, particularly regarding the ongoing unrest in Iran, which has considerably affected investor sentiment. With the Fear & Greed Index reflecting extreme fear at 12, many market participants are adopting a cautious stance as they weigh the implications of geopolitical events on global markets. The total market cap saw an increase to $2.614 trillion this week, indicating a potential recovery from last week's downturn. However, the macro environment remains conducive to volatility, and traders are advised to remain vigilant regarding external factors that could affect price dynamics.",
+        "highlights": [
+          "The Fear & Greed Index reading of 12 illustrates prevailing extreme fear in the market.",
+          "Geopolitical tensions are exerting downward pressure on crypto asset prices.",
+          "The total market capitalization has increased to $2.614 trillion from last week's $2.54 trillion."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum show positive trends",
+        "body": "Bitcoin's recent price performance, now reaching $74,788, represents a 7.58% increase over the past week. This upward trend can be attributed to a mix of short-covering and renewed interest from institutional investors seeking to capitalize on lower prices amidst market fear. On the other hand, Ethereum's 11.09% price rise, taking it to $2,377, may signify growing confidence in DeFi and NFT projects following recent developments. Despite their gains, both assets remain constrained as market participants weigh risk against outside pressures, particularly from geopolitical developments.",
+        "highlights": [
+          "Bitcoin's price surge of 7.58% indicates potential recovery mechanisms at play.",
+          "Ethereum leads with an impressive 11.09% increase, signaling renewed investor interest.",
+          "Both BTC and ETH are influenced by external events while showing some resilience."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Forward-looking scenarios and risk considerations",
+        "body": "Looking ahead, the crypto market appears to be in a risk-off regime, with geopolitical tensions likely to continue influencing investor behavior. While short-term recoveries may be possible, significant external events could reverse recent gains, emphasizing the need for caution among traders. The fragility of market sentiment is underscored by the extreme fear readings, which may impede sustained upward momentum for Bitcoin and Ethereum. Investors must be prepared for further volatility and potential declines if geopolitical events escalate.",
+        "highlights": [
+          "The current risk-off regime suggests potential for further volatility.",
+          "Sustained gains may be challenged by ongoing geopolitical tensions.",
+          "Investors are advised to remain vigilant and recalibrate their expectations accordingly."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "The extreme fear reflected in the market may present opportunities for long-term investors.",
+        "Renewed momentum in Bitcoin and Ethereum could signal a shift in market dynamics if maintained.",
+        "Geopolitical risks are a significant factor to monitor as they could impact price movements.",
+        "Increased buying activity may indicate bullish short-term signals, yet caution is warranted."
+      ],
+      "riskChecklist": [
+        "Geopolitical tensions affecting market sentiment.",
+        "Regulatory developments impacting asset prices.",
+        "Liquidity concerns in the face of market volatility.",
+        "Potential for rapid price corrections after short-term gains.",
+        "Investor sentiment influenced by news cycles and external events."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$75,000",
+          "context": "This level is seen as a psychological barrier that could attract profit-taking."
+        },
+        {
+          "asset": "ETH",
+          "level": "$2,400",
+          "context": "This price point may act as resistance given recent upward momentum."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market cap has risen to $2.614 trillion from $2.54 trillion.",
+        "Bitcoin's price has increased significantly from around $72,000 to $74,788.",
+        "Ethereum has seen stronger gains, increasing to $2,377 from lower weekly closes."
+      ]
+    }
+  }
+}
