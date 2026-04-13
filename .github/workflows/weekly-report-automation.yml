@@ -29,7 +29,8 @@ jobs:
       - name: Research and generate weekly report input
         run: npm run generate:report-input
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # GITHUB_TOKEN is auto-injected by Actions — no extra secrets needed.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate weekly report artifact
         run: npm run generate:local-report
