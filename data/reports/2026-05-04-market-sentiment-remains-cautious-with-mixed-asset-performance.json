@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-04T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Market sentiment remains cautious with mixed asset performance",
+      "slug": "2026-05-04-market-sentiment-remains-cautious-with-mixed-asset-performance",
+      "publishedAt": "2026-05-04",
+      "weekLabel": "Week of May 4, 2026",
+      "summary": "The total cryptocurrency market capitalization reached $2.724 trillion this week, reflecting a modest increase. Bitcoin continues to lead the market with a dominance of 58.51% as investor caution remains, indicated by a Fear & Greed Index of 40.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "investment"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2724000000000,
+      "btcDominancePct": 58.51,
+      "ethDominancePct": 10.45,
+      "fearGreedIndex": 40
+    },
+    "movers": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 2.68,
+        "catalyst": "Bitcoin's steady ascent continues, driven by its safe-haven appeal and increasing institutional interest."
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 1.86,
+        "catalyst": "Ethereum's price remains stable as ongoing developments in decentralized finance support confidence."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": -0.75,
+        "catalyst": "Solana's recent price decline appears to stem from profit-taking after a significant rally in previous weeks."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Macro sentiment shows caution amidst market stabilization",
+        "body": "The cryptocurrency market has demonstrated resilience this week, with a total market capitalization of $2.724 trillion. Investor sentiment remains cautious, reflected in a Fear & Greed Index reading of 40, indicating a neutral to slightly fearful market perspective. Traditional economic indicators continue to influence the crypto landscape as investors weigh macroeconomic uncertainties against the backdrop of a recovering equity market. Additionally, regulatory clarity in various jurisdictions is becoming a significant focus for market participants, suggesting a potential shift in confidence levels in the near future.",
+        "highlights": [
+          "Market capitalization increased, indicating a slight recovery.",
+          "Investor sentiment remains cautious, as reflected in the Fear & Greed Index.",
+          "Regulatory developments are influencing market dynamics.",
+          "Equity markets are perceived as stabilizing, which could impact cryptocurrency investments."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Price action and structural developments for BTC and ETH",
+        "body": "Bitcoin has shown a notable increase of 2.68% over the past week, complementing its robust dominance in the market. The price action suggests accumulation patterns as whales appear to buy on dips, enhancing its bullish outlook. Ethereum has also demonstrated resilience, with a modest increase of 1.86%, supported by ongoing upgrades to its core infrastructure that promise enhanced scalability and efficiency. The current market structure for both assets indicates a period of consolidation, potentially setting the stage for future volatility depending on broader economic signals.",
+        "highlights": [
+          "Bitcoin continues to accumulate strength as it approaches $80,000.",
+          "ETH maintains a stable presence amidst ongoing development work.",
+          "Consolidation patterns suggest potential volatility ahead.",
+          "Market participants are closely monitoring structural developments."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Forward outlook considering regime risks and scenarios",
+        "body": "The current regime remains classified as transition, which suggests that the market is experiencing a shift between volatility and stability. Emerging risks, such as regulatory scrutiny and macroeconomic shifts, could impact momentum. Investors should be aware of the potential for further corrections, particularly if the Fear & Greed Index shifts significantly. However, the continued institutional interest in Bitcoin and Ethereum suggests that any downturn may be tempered by strong support levels. Future scenarios might include a resurgence in risk appetite as market fundamentals improve, particularly if the broader economy shows signs of stability.",
+        "highlights": [
+          "The market is in a transition regime with potential for shifts in volatility.",
+          "Regulatory developments pose risks that could impact momentum.",
+          "Institutional interest may provide buffers against downturns.",
+          "Future gains could hinge on broader economic performance."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Bitcoin's bullish momentum could lead to testing new price levels.",
+        "Ethereum's developments may enhance its utility and drive demand.",
+        "Cautious sentiment may precede significant market movements.",
+        "Regulatory clarity could unlock further capital inflow into crypto."
+      ],
+      "riskChecklist": [
+        "Potential regulatory changes could impact market access.",
+        "Economic fluctuations may lead to decreased investor confidence.",
+        "High levels of market speculation could trigger volatility.",
+        "Technical resistance levels may hinder upward price movement.",
+        "Geopolitical risks might create additional market uncertainty."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$80,000",
+          "context": "A critical psychological resistance level that may determine future price movements."
+        },
+        {
+          "asset": "ETH",
+          "level": "$2,500",
+          "context": "A key technical resistance point as Ethereum seeks to break upward from its current consolidation."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market capitalization increased by approximately $51 billion.",
+        "BTC dominance rose from 58.19% to 58.51%, reflecting Bitcoin's strengthening position.",
+        "Fear & Greed Index decreased from 47 to 40, indicating a shift towards caution in investor sentiment."
+      ]
+    }
+  }
+}
