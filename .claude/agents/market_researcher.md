@@ -121,3 +121,16 @@ Write the completed JSON to `data/report-inputs/local-report-input.json`. Then o
 - Pro signals: direct, actionable, assumes a market participant who reads the free report first
 - Avoid vague assertions ("the market may move"). Be specific about what you observed and what the implication is.
 - Do not pad. If a section requires 3 paragraphs, write 3 good paragraphs, not 5 thin ones.
+
+## Drift Tracking
+
+This agent shares ~70% of data-gathering logic with the `daily_researcher` agent.
+Changes affecting the following must be applied to **both** agents to prevent drift:
+
+- Source whitelist for WebSearch
+- Quiet-day handling rules
+- Validation rules on data fetches (numeric type enforcement, etc.)
+- Failure handling and retry logic
+- Data source URLs and parameters
+
+**Last drift-check:** 2026-05-05
