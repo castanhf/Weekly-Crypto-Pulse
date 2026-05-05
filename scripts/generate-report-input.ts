@@ -2,21 +2,22 @@
  * generate-report-input.ts
  *
  * Fetches live market data from CoinGecko and the Alternative.me Fear & Greed
- * index, then calls the GitHub Models inference API (OpenAI-compatible, free,
- * uses the GITHUB_TOKEN that is auto-injected in every Actions workflow) to
+ * index, then calls the LLM client (GitHub Models primary, OpenAI fallback) to
  * produce a fresh LocalReportInput JSON written to
  * data/report-inputs/local-report-input.json.
  *
  * Called as the first step in the weekly automation workflow, before
  * generate-local-report.ts runs.
  *
- * Required env var: GITHUB_TOKEN (auto-injected by GitHub Actions; set locally
- * with a personal access token that has read access to your account)
+ * Required env vars: GITHUB_TOKEN (primary LLM provider, auto-injected by GitHub
+ * Actions), OPENAI_API_KEY (fallback LLM provider, strongly recommended).
  */
 
-import OpenAI from 'openai';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+
+import { callLlm } from '../lib/llm/client';
+import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -87,8 +88,6 @@ const COINGECKO_GLOBAL_URL = 'https://api.coingecko.com/api/v3/global';
 const COINGECKO_MARKETS_URL =
   'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana&order=market_cap_desc&price_change_percentage=7d';
 const FEAR_GREED_URL = 'https://api.alternative.me/fng/?limit=1';
-const GITHUB_MODELS_BASE_URL = 'https://models.inference.ai.azure.com';
-const GITHUB_MODELS_MODEL = 'gpt-4o-mini';
 const VALID_REGIMES = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
 
 // ---------------------------------------------------------------------------
@@ -294,24 +293,26 @@ Generate the full report input JSON. week.publishedAt must be "${publishedAt}" a
 // Validation
 // ---------------------------------------------------------------------------
 
-const validateReportInput = (input: RawReportInput): void => {
-  if (!VALID_REGIMES.has(input.regime)) {
-    throw new Error(`Invalid regime: "${input.regime}". Must be one of: ${[...VALID_REGIMES].join(', ')}`);
+const validateReportInput = (input: unknown): RawReportInput => {
+  const typed = input as RawReportInput;
+  if (!VALID_REGIMES.has(typed.regime)) {
+    throw new Error(`Invalid regime: "${typed.regime}". Must be one of: ${[...VALID_REGIMES].join(', ')}`);
   }
-  if (input.signals.riskChecklist.length !== 5) {
-    throw new Error(`signals.riskChecklist must have exactly 5 items, got ${input.signals.riskChecklist.length}`);
+  if (typed.signals.riskChecklist.length !== 5) {
+    throw new Error(`signals.riskChecklist must have exactly 5 items, got ${typed.signals.riskChecklist.length}`);
   }
   const numericFields: [string, unknown][] = [
-    ['snapshot.totalMarketCapUsd', input.snapshot.totalMarketCapUsd],
-    ['snapshot.btcDominancePct', input.snapshot.btcDominancePct],
-    ['snapshot.ethDominancePct', input.snapshot.ethDominancePct],
-    ['snapshot.fearGreedIndex', input.snapshot.fearGreedIndex]
+    ['snapshot.totalMarketCapUsd', typed.snapshot.totalMarketCapUsd],
+    ['snapshot.btcDominancePct', typed.snapshot.btcDominancePct],
+    ['snapshot.ethDominancePct', typed.snapshot.ethDominancePct],
+    ['snapshot.fearGreedIndex', typed.snapshot.fearGreedIndex]
   ];
   for (const [name, value] of numericFields) {
     if (typeof value !== 'number' || Number.isNaN(value)) {
       throw new Error(`Field "${name}" must be a number, got: ${JSON.stringify(value)}`);
     }
   }
+  return typed;
 };
 
 // ---------------------------------------------------------------------------
@@ -319,11 +320,6 @@ const validateReportInput = (input: RawReportInput): void => {
 // ---------------------------------------------------------------------------
 
 const main = async (): Promise<void> => {
-  const githubToken = process.env['GITHUB_TOKEN'];
-  if (!githubToken) {
-    throw new Error('GITHUB_TOKEN environment variable is required.');
-  }
-
   const publishedAt = resolvePublishedAt();
   const weekLabel = buildWeekLabel(publishedAt);
 
@@ -341,41 +337,24 @@ const main = async (): Promise<void> => {
   // 2. Load previous report for context
   const previousReport = await loadPreviousReportSummary();
 
-  // 3. Call GitHub Models (OpenAI-compatible, free, uses GITHUB_TOKEN)
-  console.log(`Calling GitHub Models (${GITHUB_MODELS_MODEL})…`);
-  const client = new OpenAI({
-    baseURL: GITHUB_MODELS_BASE_URL,
-    apiKey: githubToken
-  });
-
-  const response = await client.chat.completions.create({
-    model: GITHUB_MODELS_MODEL,
-    max_tokens: 4096,
-    messages: [
-      { role: 'system', content: SYSTEM_PROMPT },
-      { role: 'user', content: buildUserPrompt(publishedAt, weekLabel, marketData, previousReport) }
-    ]
-  });
-
-  const rawContent = response.choices[0]?.message?.content;
-  if (!rawContent) {
-    throw new Error('Empty response from GitHub Models API.');
-  }
-
-  // Strip markdown fences if the model added them despite instructions
-  const rawJson = rawContent.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
+  // 3. Call LLM (GitHub Models primary, OpenAI fallback)
+  console.log('Calling LLM…');
+  const llmResponse = await callLlm(
+    {
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'user', content: buildUserPrompt(publishedAt, weekLabel, marketData, previousReport) }
+      ],
+      jsonMode: true,
+      maxTokens: 4096
+    },
+    { primary: 'github-models', secondary: 'openai', requestId: `weekly-${publishedAt}` }
+  );
+  console.log(`  Provider: ${llmResponse.provider} | Tokens: ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
   // 4. Parse and validate
-  let reportInput: RawReportInput;
-  try {
-    reportInput = JSON.parse(rawJson) as RawReportInput;
-  } catch (err) {
-    throw new Error(
-      `Model returned invalid JSON: ${err instanceof Error ? err.message : String(err)}\n\nRaw response:\n${rawJson.slice(0, 500)}`
-    );
-  }
-
-  validateReportInput(reportInput);
+  const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput);
 
   // 5. Write output
   await writeFile(REPORT_INPUT_PATH, `${JSON.stringify(reportInput, null, 2)}\n`, 'utf-8');
