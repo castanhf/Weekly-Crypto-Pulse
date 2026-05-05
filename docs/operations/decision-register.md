@@ -69,3 +69,24 @@ This file records architectural and operational decisions that shaped the projec
 - **Category D (historical docs — unchanged):** `docs/`, `.claude/agents/`, LLM system prompts
 
 **Constants scaffolded for R2.1:** `WEEKLY_TITLE_PREFIX = 'Weekly Crypto Pulse'` and `DAILY_TITLE_PREFIX = 'Daily Crypto Pulse'` exported from `lib/site.ts` for use in per-artifact `<title>` and OG title composition.
+
+---
+
+## Editorial decisions
+
+### Voice register: plainspoken on chrome, sophisticated on reports
+
+**Decision (WCP-108, locked decisions Q12 → 12b, Q2 → 2a):** Site chrome copy uses plainspoken voice — assume the reader is intelligent but not specialized. No unexplained jargon. No advisory framing. Educate, don't advise.
+
+**In-scope chrome (plainspoken):** Homepage, methodology, disclaimer, archive page header, /pro explainer prose, SEO meta descriptions, tier-differentiation usage ladder card, shared product prose in `domain/pro-product.ts` that renders as page copy.
+
+**Out-of-scope (unchanged):** Report body content (`sections` field, weekly narrative), Pro signals package content (thesis checklist, risk review, watchlist levels), Pro-pack deliverables. These stay in sophisticated voice — that is the register the primary audience (intermediate-to-veteran retail) expects from the analytical product.
+
+**Voice rules applied (WCP-108):**
+- No unexplained jargon: "regime", "flows", "institutional positioning", "decision memo", "thesis", "continuity workflow", "actionable posture" translated or removed from chrome
+- No advisory framing: "you should", "we recommend", "this is a good time to" never appear in chrome copy
+- No marketing register: "trusted source", "actionable insights", "cutting-edge analysis" not used
+- Concrete over abstract: named data sources (CoinGecko, Alternative.me), explicit cadence (weekly on Mondays, shorter daily updates), plain regime definitions
+- AI-assisted drafting explicitly disclosed on the methodology page
+
+**Boundary note:** The Monday weekly's plainspoken opening section (decision 23a, R2.1) is the bridge: chrome-register opening on a sophisticated-register body.
