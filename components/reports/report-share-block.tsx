@@ -11,7 +11,7 @@ const COPIED_FEEDBACK_TIMEOUT_MS = 2000;
 
 const createXShareUrl = (title: string, url: string): string => {
   const query = new URLSearchParams({
-    text: `${title} | Weekly Crypto Pulse`,
+    text: `${title} | Crypto Pulse`,
     url
   });
 

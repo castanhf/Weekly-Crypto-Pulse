@@ -53,3 +53,19 @@ This file records architectural and operational decisions that shaped the projec
 **Implementation:** `lib/llm/client.ts` with `callGithubModels` and `callOpenAI` as provider functions. Retry policy: 3 retries with exponential backoff (1m, 3m, 9m) on retryable errors before falling back. Both providers use identical request/response types (`LlmRequest`, `LlmResponse` in `lib/llm/types.ts`).
 
 **Constraint:** Do not add an Anthropic provider, a third fallback, or speculative providers without revisiting this decision.
+
+---
+
+## D-04 — Brand naming: "Crypto Pulse" vs "Weekly Crypto Pulse"
+
+**Decision (WCP-107):** "Crypto Pulse" is the master brand for all site chrome. "Weekly Crypto Pulse" and "Daily Crypto Pulse" are cadence prefixes reserved for per-artifact metadata (report titles, pro-pack headers, product names).
+
+**Rationale:** The site will eventually host daily and weekly cadences side by side. Using "Weekly Crypto Pulse" in the header, footer, OG tags, and share text would anchor the brand to a single cadence and make rebranding expensive. Separating the site brand from the artifact cadence prefix decouples navigation chrome from content cadence.
+
+**Scope of change:**
+- **Category A (site chrome — changed):** `lib/site.ts` (`SITE_NAME`), `components/layout/footer.tsx`, `components/reports/report-share-block.tsx` share text, `lib/fulfillment-assist.ts` email signatures, `lib/site.test.ts`, `README.md` H1
+- **Category B (per-artifact — unchanged):** Report JSON `title` fields, pro-pack document headers, `domain/pro-product.ts` product names, `lib/fulfillment-assist.ts` product name lines (e.g. "Weekly Crypto Pulse Pro — Single Issue")
+- **Category C (page copy — deferred to Prompt 8):** `/pro` page headings, `/methodology`, `lib/seo.ts` descriptions
+- **Category D (historical docs — unchanged):** `docs/`, `.claude/agents/`, LLM system prompts
+
+**Constants scaffolded for R2.1:** `WEEKLY_TITLE_PREFIX = 'Weekly Crypto Pulse'` and `DAILY_TITLE_PREFIX = 'Daily Crypto Pulse'` exported from `lib/site.ts` for use in per-artifact `<title>` and OG title composition.

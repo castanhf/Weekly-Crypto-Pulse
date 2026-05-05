@@ -1,4 +1,4 @@
-# Weekly Crypto Pulse
+# Crypto Pulse
 
 Static-first Next.js scaffold for a weekly crypto editorial web app.
 
