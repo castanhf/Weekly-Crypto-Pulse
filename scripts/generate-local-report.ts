@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import { WEEKLY_SCHEMA_V1_1 } from '../domain/schema-version';
 import {
-  CURRENT_REPORT_SCHEMA_VERSION,
   type MarketSnapshot,
   type Mover,
   type Regime,
@@ -216,7 +216,7 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
   const slug = toSlug(publishedAt, input.headline);
 
   return {
-    schemaVersion: CURRENT_REPORT_SCHEMA_VERSION,
+    schemaVersion: WEEKLY_SCHEMA_V1_1,
     generatedAt: buildGeneratedAt(publishedAt),
     report: {
       metadata: {

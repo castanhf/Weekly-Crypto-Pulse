@@ -1,81 +1,9 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { CURRENT_REPORT_SCHEMA_VERSION, type Regime } from '../domain/report';
-import {
-  assertArray,
-  assertNumber,
-  assertRecord,
-  assertString,
-  assertStringArray
-} from '../lib/reports/json-assertions';
+import { validateArtifact } from '../lib/reports/artifact-validator';
 
 const REPORTS_DIRECTORY = path.resolve(process.cwd(), 'data/reports');
-const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
-
-const validateRegime = (value: unknown): void => {
-  const regime = assertString(value, 'report.regime') as Regime;
-
-  if (!VALID_REGIMES.has(regime)) {
-    throw new Error(`Invalid report data at "report.regime": unsupported regime "${regime}".`);
-  }
-};
-
-const validateReport = (value: unknown): void => {
-  const report = assertRecord(value, 'report');
-  const metadata = assertRecord(report.metadata, 'report.metadata');
-  const marketSnapshot = assertRecord(report.marketSnapshot, 'report.marketSnapshot');
-
-  assertString(metadata.title, 'report.metadata.title');
-  assertString(metadata.slug, 'report.metadata.slug');
-  assertString(metadata.publishedAt, 'report.metadata.publishedAt');
-  assertString(metadata.weekLabel, 'report.metadata.weekLabel');
-  assertString(metadata.summary, 'report.metadata.summary');
-  assertStringArray(metadata.tags, 'report.metadata.tags');
-
-  validateRegime(report.regime);
-
-  assertNumber(marketSnapshot.totalMarketCapUsd, 'report.marketSnapshot.totalMarketCapUsd');
-  assertNumber(marketSnapshot.btcDominancePct, 'report.marketSnapshot.btcDominancePct');
-  assertNumber(marketSnapshot.ethDominancePct, 'report.marketSnapshot.ethDominancePct');
-  assertNumber(marketSnapshot.fearGreedIndex, 'report.marketSnapshot.fearGreedIndex');
-
-  assertArray(report.movers, 'report.movers');
-  assertArray(report.sections, 'report.sections');
-
-  const signals = assertRecord(report.signals, 'report.signals');
-  assertStringArray(signals.thesis, 'report.signals.thesis');
-  const riskChecklist = assertStringArray(signals.riskChecklist, 'report.signals.riskChecklist');
-
-  if (riskChecklist.length !== 5) {
-    throw new Error('Invalid report data at "report.signals.riskChecklist": expected exactly 5 items.');
-  }
-
-  const watchlistLevels = assertArray(signals.watchlistLevels, 'report.signals.watchlistLevels');
-  assertStringArray(signals.changedSinceLastWeek, 'report.signals.changedSinceLastWeek');
-
-  watchlistLevels.forEach((entry, index) => {
-    const level = assertRecord(entry, `report.signals.watchlistLevels[${index}]`);
-
-    assertString(level.asset, `report.signals.watchlistLevels[${index}].asset`);
-    assertString(level.level, `report.signals.watchlistLevels[${index}].level`);
-    assertString(level.context, `report.signals.watchlistLevels[${index}].context`);
-  });
-};
-
-const validateArtifact = (rawArtifact: string, fileName: string): void => {
-  const artifact = assertRecord(JSON.parse(rawArtifact) as unknown, fileName);
-
-  const schemaVersion = assertString(artifact.schemaVersion, `${fileName}.schemaVersion`);
-
-  if (schemaVersion !== CURRENT_REPORT_SCHEMA_VERSION) {
-    throw new Error(
-      `Invalid report data at "${fileName}.schemaVersion": expected "${CURRENT_REPORT_SCHEMA_VERSION}" and received "${schemaVersion}".`
-    );
-  }
-
-  validateReport(artifact.report);
-};
 
 const validateFile = async (fileName: string): Promise<void> => {
   const reportPath = path.join(REPORTS_DIRECTORY, fileName);
