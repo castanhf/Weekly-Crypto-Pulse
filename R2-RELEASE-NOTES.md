@@ -22,6 +22,7 @@ The Decision Register language updates from strict "four env vars" to "minimal e
 
 - **WCP-102** — Schema versioning policy adopted (semver, `schemaVersion` field on artifacts). Daily schema v1.0 introduced (`domain/daily.ts`). Weekly schema bumped to v1.1 (additive, optional `plainspokenOpening` field). Validator dispatches per version; legacy `"1.0"` string treated as `weekly@1.0`. PR: #102
 - **WCP-103** — Unified repository layer added. New `lib/reports/daily-repository.ts` and `lib/reports/artifact-repository.ts` provide a discriminated-union view over weekly + daily artifacts for surfaces that mix them. Existing weekly repository unchanged. `data/dailies/` directory created (empty until R2.1). PR: #103
+- **WCP-104** — Daily pipeline agent definitions added: `daily_researcher.md`, `daily_writer.md`, `daily_editor.md`. Pipeline Runner extended for daily cadence orchestration. Drift-tracking note added to both researchers per decision 22a. Permission for DeFiLlama added to settings. No daily generation scripts yet — those ship in R2.1. PR: #104
 
 ## R2.1 — Merged PRs
 
