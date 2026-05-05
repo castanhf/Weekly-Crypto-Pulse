@@ -90,3 +90,19 @@ This file records architectural and operational decisions that shaped the projec
 - AI-assisted drafting explicitly disclosed on the methodology page
 
 **Boundary note:** The Monday weekly's plainspoken opening section (decision 23a, R2.1) is the bridge: chrome-register opening on a sophisticated-register body.
+
+---
+
+## Security decisions
+
+### Security baseline established R2.0
+
+**Decision (WCP-109):** Crypto Pulse maintains a documented security baseline focused on the actual threat surface of a static-first editorial product with manual fulfillment.
+
+**Baseline covers:** secret hygiene (inventory, NEXT_PUBLIC_ review, rotation cadence), dependency security (Dependabot, npm audit in CI, Next.js upgrade to 14.2.35), GitHub Actions hardening (SHA pinning, permission scoping, trigger safety), security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy), LLM prompt injection defenses (documented in researcher agents), Stripe surface integrity (no webhooks, runtime-gated internal page, no PII in repo), and CodeQL SAST.
+
+**Ongoing review cadence and rotation policies** documented in `docs/operations/security.md`.
+
+**Threat model review trigger:** The threat model is reviewed whenever any new persistent state, authentication system, or third-party integration is added. Such additions are explicitly not planned (the architecture constitution prohibits them), but each would change the threat surface materially.
+
+**Constraint:** Do not add commercial SAST scanners (Snyk, Sonarqube, etc.) beyond CodeQL. They add operational cost and complexity without proportionate benefit for this architecture.
