@@ -20,7 +20,7 @@ The Decision Register language updates from strict "four env vars" to "minimal e
 
 ## R2.0 — Merged PRs
 
-_(populated as PRs land in `release/r2.0`)_
+- **WCP-102** — Schema versioning policy adopted (semver, `schemaVersion` field on artifacts). Daily schema v1.0 introduced (`domain/daily.ts`). Weekly schema bumped to v1.1 (additive, optional `plainspokenOpening` field). Validator dispatches per version; legacy `"1.0"` string treated as `weekly@1.0`. PR: #102
 
 ## R2.1 — Merged PRs
 
