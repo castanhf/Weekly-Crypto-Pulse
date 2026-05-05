@@ -16,7 +16,11 @@ const config: Config = {
         canvas: '#0d1b2e',
         surface: '#132238',
         accent: '#F7931A',
-        'accent-hover': '#e07d10'
+        'accent-hover': '#e07d10',
+        'regime-risk-on': '#16a34a',
+        'regime-risk-off': '#dc2626',
+        'regime-range-bound': '#d97706',
+        'regime-transition': '#94a3b8'
       }
     }
   },
