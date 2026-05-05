@@ -40,7 +40,7 @@ test('homepage renders and links to latest report', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { level: 1, name: /read the market setup, then choose the depth you need this week\./i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /read the market\. then decide how deep you need to go\./i })).toBeVisible();
 
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation.getByRole('link', { name: 'Reports' })).toBeVisible();
@@ -59,7 +59,7 @@ test('/reports lists report items', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/reports');
 
-  await expect(page.getByRole('heading', { level: 1, name: /weekly reports, free to read\./i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /all reports, free to read\./i })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Compare Weekly Pro and Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',

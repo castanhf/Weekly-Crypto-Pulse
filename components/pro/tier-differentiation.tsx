@@ -60,15 +60,15 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-white/10 bg-surface px-4 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Free</p>
-            <p className="mt-2 text-sm leading-7 text-muted">Read first to orient on regime, flows, and baseline risk.</p>
+            <p className="mt-2 text-sm leading-7 text-muted">Read first. Free covers what&apos;s happening this week.</p>
           </div>
           <div className="rounded-xl border border-accent/30 bg-brand px-4 py-4 text-paper">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">Weekly Pro</p>
-            <p className="mt-2 text-sm leading-7 text-paper/88">Buy when this week requires a concrete decision memo.</p>
+            <p className="mt-2 text-sm leading-7 text-paper/88">Buy when the free summary isn&apos;t enough for this week.</p>
           </div>
           <div className="rounded-xl border border-accent/20 bg-accent/10 px-4 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Monthly Bundle</p>
-            <p className="mt-2 text-sm leading-7 text-muted">Use for continuity so each weekly decision compounds through month-end.</p>
+            <p className="mt-2 text-sm leading-7 text-muted">Use when you want four weeks connected, not four separate reads.</p>
           </div>
         </div>
       </SurfaceCard>

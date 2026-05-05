@@ -81,37 +81,36 @@ const createPageMetadata = ({ title, description, path }: PageSeoInput): Metadat
 
 export const createHomeMetadata = (): Metadata =>
   createPageMetadata({
-    title: 'Weekly crypto market reports',
-    description:
-      'Weekly Crypto Pulse delivers concise, data-driven crypto market reports covering regime, flows, and positioning.',
+    title: 'Crypto market reports',
+    description: 'Weekly and daily crypto market reports. Free to read. We cover what happened and what it means.',
     path: '/'
   });
 
 export const createReportsArchiveMetadata = (): Metadata =>
   createPageMetadata({
     title: 'Reports archive',
-    description: 'Browse all Weekly Crypto Pulse reports in reverse chronological order.',
+    description: 'Every Crypto Pulse report, free to read, newest first.',
     path: '/reports'
   });
 
 export const createMethodologyMetadata = (): Metadata =>
   createPageMetadata({
     title: 'Methodology',
-    description: 'Learn the repeatable process and data inputs used to produce Weekly Crypto Pulse reports.',
+    description: 'How Crypto Pulse reports are put together — data sources, process, and what they cover.',
     path: '/methodology'
   });
 
 export const createDisclaimerMetadata = (): Metadata =>
   createPageMetadata({
     title: 'Disclaimer',
-    description: 'Read important informational and risk disclosures for Weekly Crypto Pulse content.',
+    description: 'Crypto Pulse is informational only. Read this before acting on anything here.',
     path: '/disclaimer'
   });
 
 export const createProMetadata = (): Metadata =>
   createPageMetadata({
-    title: 'Weekly Crypto Pulse Pro',
-    description: 'Upgrade to Pro for full weekly reports with deeper structure, flows, and positioning analysis.',
+    title: 'Crypto Pulse Pro',
+    description: 'Weekly Pro and Monthly Bundle: the decision layer on top of the free reports. One-time purchases, delivered by email.',
     path: '/pro'
   });
 
