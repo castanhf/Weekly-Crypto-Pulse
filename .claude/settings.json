@@ -7,7 +7,7 @@
       "WebFetch(domain:api.coingecko.com)",
       "WebFetch(domain:api.alternative.me)",
       "WebSearch",
-      "Bash(npm run:*)"
+      "Bash"
     ]
   }
 }
