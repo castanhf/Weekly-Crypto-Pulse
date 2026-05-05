@@ -15,7 +15,7 @@ export function Footer(): JSX.Element {
       <div className={`${pageContainerClassName} py-10 sm:py-12`}>
         <div className="grid gap-9 border border-white/10 bg-surface/70 p-6 sm:rounded-[1.75rem] sm:p-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:p-10">
           <div className="space-y-4">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-muted">Weekly Crypto Pulse</p>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-muted">Crypto Pulse</p>
             <p className="max-w-2xl text-base leading-8 text-muted">
               Static-first weekly crypto research with a clear editorial ladder from free orientation to paid decision and continuity.
             </p>
