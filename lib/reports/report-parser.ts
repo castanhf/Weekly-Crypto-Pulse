@@ -1,12 +1,12 @@
+import { WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, type SchemaVersion } from '@/domain/schema-version';
 import {
-  CURRENT_REPORT_SCHEMA_VERSION,
   type MarketSnapshot,
   type Mover,
   type ParsedReportArtifact,
+  type PlainspokenOpening,
   type Regime,
   type Report,
   type ReportMetadata,
-  type ReportSchemaVersion,
   type ReportSection,
   type ReportSignals,
   type WatchlistLevel
@@ -14,7 +14,13 @@ import {
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
-const SUPPORTED_SCHEMA_VERSIONS: ReadonlySet<ReportSchemaVersion> = new Set([CURRENT_REPORT_SCHEMA_VERSION]);
+
+/** Schema versions the parser accepts from on-disk artifacts. */
+const SUPPORTED_SCHEMA_VERSIONS: ReadonlySet<string> = new Set([
+  '1.0',            // legacy format produced before the weekly@* prefix was introduced
+  WEEKLY_SCHEMA_V1_0,
+  WEEKLY_SCHEMA_V1_1
+]);
 
 const parseMetadata = (value: unknown): ReportMetadata => {
   const metadata = assertRecord(value, 'metadata');
@@ -123,6 +129,17 @@ const parseSignals = (value: unknown): ReportSignals => {
   };
 };
 
+const parsePlainspokenOpening = (value: unknown): PlainspokenOpening | undefined => {
+  if (value === undefined || value === null) return undefined;
+
+  const opening = assertRecord(value, 'plainspokenOpening');
+
+  return {
+    headline: assertString(opening.headline, 'plainspokenOpening.headline'),
+    body: assertString(opening.body, 'plainspokenOpening.body')
+  };
+};
+
 const parseReportShape = (rawReport: unknown): Report => {
   const report = assertRecord(rawReport, 'report');
 
@@ -132,18 +149,24 @@ const parseReportShape = (rawReport: unknown): Report => {
     marketSnapshot: parseMarketSnapshot(report.marketSnapshot),
     movers: parseMovers(report.movers),
     sections: parseSections(report.sections),
-    signals: parseSignals(report.signals)
+    signals: parseSignals(report.signals),
+    plainspokenOpening: parsePlainspokenOpening(report.plainspokenOpening)
   };
 };
 
-const parseSchemaVersion = (value: unknown): ReportSchemaVersion => {
+/** Normalises the on-disk schemaVersion to the canonical SchemaVersion type.
+ *  The legacy "1.0" string (used before the weekly@* prefix was introduced)
+ *  is mapped to WEEKLY_SCHEMA_V1_0. */
+const parseSchemaVersion = (value: unknown): SchemaVersion => {
   const schemaVersion = assertString(value, 'schemaVersion');
 
-  if (!SUPPORTED_SCHEMA_VERSIONS.has(schemaVersion as ReportSchemaVersion)) {
+  if (schemaVersion === '1.0') return WEEKLY_SCHEMA_V1_0;
+
+  if (!SUPPORTED_SCHEMA_VERSIONS.has(schemaVersion)) {
     throw new Error(`Invalid report data at "schemaVersion": unsupported version "${schemaVersion}".`);
   }
 
-  return schemaVersion as ReportSchemaVersion;
+  return schemaVersion as SchemaVersion;
 };
 
 const parseGeneratedAt = (value: unknown): string => {
