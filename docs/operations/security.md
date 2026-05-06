@@ -61,6 +61,22 @@ In WCP-121, Next.js was upgraded to 16.2.5, resolving all five high-severity adv
 
 ---
 
+## Accepted residual advisories
+
+This section documents security advisories that `npm audit` reports but that we have explicitly accepted as residual risk, with reasoning.
+
+### GHSA-qx2v-qp2m-jg93 — postcss CSS stringify XSS (moderate)
+
+This advisory affects a version of `postcss` bundled inside Next.js itself. It cannot be patched independently of Next.js — `npm audit fix` would suggest downgrading Next.js, which the scanner incorrectly recommends. The Next.js team is tracking the underlying issue and will bump their bundled `postcss` in a future release.
+
+**Risk assessment:** Moderate severity. The advisory describes XSS via `</style>` injection in CSS strings. Crypto Pulse pages do not render user-controlled CSS — all CSS is authored by the project (Tailwind utility classes, no user-submitted styles). The advisory is therefore not exploitable in our application as deployed. We accept the residual risk pending Next.js's upstream fix.
+
+**Tracking:** Re-evaluate on each Next.js minor version bump. Restore `npm audit fix` action if Next.js publishes a release that no longer triggers the advisory.
+
+**Accepted by:** Filipe Castanheira, 2026-05-07.
+
+---
+
 ## GitHub Actions
 
 ### SHA pinning
