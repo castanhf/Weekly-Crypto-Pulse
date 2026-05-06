@@ -17,18 +17,19 @@ import { getAllReports, getReportArtifactBySlug, getReportBySlug } from '@/lib/r
 import { createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 const secondaryCtaClassName =
   'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-center text-sm font-medium transition hover:border-white/40 sm:w-auto';
 
-export const generateStaticParams = (): Array<ReportDetailPageProps['params']> =>
+export const generateStaticParams = (): Array<{ slug: string }> =>
   getAllReports().map((report) => ({ slug: report.metadata.slug }));
 
-export const generateMetadata = ({ params }: ReportDetailPageProps): Metadata => {
+export const generateMetadata = async (props: ReportDetailPageProps): Promise<Metadata> => {
+  const params = await props.params;
   const report = getReportBySlug(params.slug);
 
   if (!report) {
@@ -41,7 +42,8 @@ export const generateMetadata = ({ params }: ReportDetailPageProps): Metadata =>
   return createReportMetadata(report);
 };
 
-export default function ReportDetailPage({ params }: ReportDetailPageProps): JSX.Element {
+export default async function ReportDetailPage(props: ReportDetailPageProps): Promise<JSX.Element> {
+  const params = await props.params;
   const reportArtifact = getReportArtifactBySlug(params.slug);
   const report = reportArtifact?.report;
 
