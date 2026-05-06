@@ -28,5 +28,8 @@ pnpm-debug.log*
 # local tooling output
 /.generated/
 
+# data API response cache (populated by daily pipeline scripts)
+/.cache/
+
 # claude code local settings (machine-specific permissions)
 .claude/settings.local.json
