@@ -11,10 +11,14 @@ on:
 permissions:
   contents: read
   security-events: write
+  actions: read
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    # Dependabot PRs run with a restricted token that cannot upload SARIF.
+    # Coverage is provided by push-to-main and the weekly schedule.
+    if: github.actor != 'dependabot[bot]'
 
     strategy:
       matrix:
