@@ -51,15 +51,13 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 
 ### npm audit in CI
 
-`npm audit --production --audit-level=critical` runs in CI (`.github/workflows/ci.yml`) before the test suite. CI fails on any critical production vulnerability. High-severity advisories are currently accepted as a temporary risk (see below); moderate and low advisories are tracked via Dependabot and do not block CI.
+`npm audit --production --audit-level=high` runs in CI (`.github/workflows/ci.yml`) before the test suite. CI fails on any high-severity or critical production vulnerability. Moderate and low advisories are tracked via Dependabot and do not block CI.
 
-**TODO(R2.1):** Restore `--audit-level=high` after the Next.js 14 → 16 upgrade lands (R2.1 Prompt 1). The threshold is mirrored in `.github/workflows/ci.yml`.
+### Audit baseline (established WCP-109, threshold restored WCP-121)
 
-### Audit baseline (established WCP-109)
+Next.js was upgraded from 14.2.5 to 14.2.35 in WCP-109 to address critical vulnerabilities. The CI threshold was temporarily lowered to `--audit-level=critical` because five high-severity advisories (GHSA-9g9p-9gw9-jx7f, GHSA-h25m-26qc-wcjf, GHSA-ggv3-7p47-pfv8, GHSA-3x4c-7xq6-9pq8, GHSA-q4gf-8mx6-v5v3) required Next.js 15+ to fix.
 
-Next.js was upgraded from 14.2.5 to 14.2.35 to address critical vulnerabilities (including GHSA-gp8f-8m3g-qvj9 and related advisories) discovered during this audit.
-
-Post-upgrade: `npm audit --production --audit-level=critical` exits 0. One high-severity advisory remains (GHSA-9g9p-9gw9-jx7f and related Next.js 14.x advisories); fix requires Next.js 15/16 which is a breaking change. Deferred to R2.1 Prompt 1.
+In WCP-121, Next.js was upgraded to 16.2.5, resolving all five high-severity advisories. Threshold restored to `--audit-level=high`. Post-upgrade: `npm audit --production --audit-level=high` exits 0. One moderate advisory remains (GHSA-qx2v-qp2m-jg93, postcss bundled inside Next.js); no fix available without downgrading Next.js.
 
 ---
 

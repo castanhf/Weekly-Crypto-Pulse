@@ -3,17 +3,18 @@ import { createDistributionContext, createEmailReportHtml } from '@/lib/reports/
 import { getSiteOrigin } from '@/lib/seo';
 
 type ReportEmailRouteProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const dynamic = 'force-static';
 
-export const generateStaticParams = (): Array<ReportEmailRouteProps['params']> =>
+export const generateStaticParams = (): Array<{ slug: string }> =>
   getAllReports().map((report) => ({ slug: report.metadata.slug }));
 
-export function GET(_request: Request, { params }: ReportEmailRouteProps): Response {
+export async function GET(_request: Request, props: ReportEmailRouteProps): Promise<Response> {
+  const params = await props.params;
   const report = getReportBySlug(params.slug);
 
   if (!report) {
