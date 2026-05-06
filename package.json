@@ -22,7 +22,7 @@
     "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.6.1",
+    "@vercel/analytics": "^2.0.1",
     "next": "14.2.35",
     "openai": "^6.36.0",
     "react": "18.3.1",
