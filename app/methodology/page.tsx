@@ -9,33 +9,46 @@ const METHODOLOGY_SECTIONS = [
   {
     title: 'What we measure',
     points: [
-      'Market structure indicators such as total crypto market capitalization, Bitcoin dominance, and broad risk sentiment.',
-      'Positioning and participation signals that help identify whether leadership is concentrated or broadening across major assets.',
-      'Weekly performance and momentum context for large-cap tokens to track relative strength and short-term trend shifts.'
+      'Total crypto market capitalization — how big the market is overall and which direction it is moving.',
+      "Bitcoin's share of that total (Bitcoin dominance) — whether money is concentrating in the safest crypto asset or spreading into others.",
+      'A fear and greed score from 0 to 100 — a sentiment reading that combines price volatility, trading volume, and social signals.',
+      'Weekly performance for Bitcoin, Ethereum, and Solana — which assets led and which fell behind.'
     ]
   },
   {
-    title: 'What data we use',
+    title: 'Where the data comes from',
     points: [
-      'Public market data from major spot exchanges and established index aggregators for prices, market cap, and dominance.',
-      'Publicly available ETF flow disclosures and related institutional flow summaries where relevant to the weekly narrative.',
-      'A consistent internal report schema so each edition can be compared against prior weeks without changing definitions.'
+      'Prices, market cap, and dominance from CoinGecko — a publicly available market data source.',
+      'The Fear & Greed Index from Alternative.me — updated daily, based on volatility, volume, social media, and surveys.',
+      'ETF flow data from public institutional disclosures where available — to gauge whether large investors are adding or reducing positions.',
+      'News and macro context from reputable public sources; no single outlet is treated as a sole source.'
     ]
   },
   {
-    title: 'Cadence',
+    title: 'How we describe market conditions',
     points: [
-      'The report is published weekly and uses a fixed snapshot process for each issue.',
-      'Metrics are reviewed in the same order every week to keep interpretation consistent and reduce process drift.',
-      'When a data source is delayed, the report notes the timing and carries forward the most recent confirmed figure.'
+      'Each week we put the market into one of four states: risk-on, risk-off, range-bound, or in transition.',
+      'Risk-on: money is moving into riskier assets. Prices tend to rise broadly.',
+      'Risk-off: investors are pulling back toward safer assets. Prices tend to fall or flatten.',
+      'Range-bound: no strong move in either direction. In transition: the state is shifting and it is not yet clear which way.'
     ]
   },
   {
-    title: 'Limits of the analysis',
+    title: 'How reports are written',
     points: [
-      'This is a high-level market brief, not a complete model of all on-chain, macroeconomic, or project-specific risk factors.',
-      'Data quality depends on third-party sources, which may revise values after publication.',
-      'The analysis is descriptive and process-driven; it does not guarantee outcomes or eliminate uncertainty.'
+      'Published weekly, covering the previous seven days.',
+      'The same data sequence is used for every issue so you can compare them directly.',
+      'Analysis is AI-assisted: a language model drafts the sections, which are then reviewed and structured against the source data.',
+      'When a data source is delayed or unavailable, we note it and use the most recent confirmed figure.'
+    ]
+  },
+  {
+    title: 'What this is and is not',
+    points: [
+      'We explain what is happening in the market. We do not tell you what to do about it. That is your decision.',
+      'This is a summary read — on-chain data, macroeconomic factors, and project-specific risk are not fully covered.',
+      'Third-party data sources can revise their numbers after we publish; we update when corrections are material.',
+      'Nothing here is personalized financial advice. Read the disclaimer for the full statement.'
     ]
   }
 ] as const;
@@ -45,9 +58,9 @@ export default function MethodologyPage(): JSX.Element {
     <PageShell>
       <PageHeader
         className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-surface via-surface to-canvas/50 px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
-        description="Weekly Crypto Pulse follows a repeatable process so readers can compare each issue on like-for-like terms."
+        description="Every report follows the same process. That keeps each issue comparable to the one before it."
         eyebrow="Methodology"
-        title="A consistent framework for reading each week."
+        title="How we read the market each week."
       />
 
       <PageSection>

@@ -76,8 +76,39 @@ describe('parseReportJson', () => {
 
     const parsedArtifact = parseReportArtifactJson(JSON.stringify(artifact), 'artifact.json');
 
+    // Legacy "1.0" is normalised to the canonical "weekly@1.0" during parsing.
     expect(parsedArtifact.artifact).toEqual({
-      schemaVersion: '1.0',
+      schemaVersion: 'weekly@1.0',
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    });
+  });
+
+  it('parses artifact metadata for weekly@1.0 versioned reports', () => {
+    const artifact = {
+      schemaVersion: 'weekly@1.0',
+      report: BASE_REPORT,
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    };
+
+    const parsedArtifact = parseReportArtifactJson(JSON.stringify(artifact), 'artifact.json');
+
+    expect(parsedArtifact.artifact).toEqual({
+      schemaVersion: 'weekly@1.0',
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    });
+  });
+
+  it('parses artifact metadata for weekly@1.1 versioned reports', () => {
+    const artifact = {
+      schemaVersion: 'weekly@1.1',
+      report: BASE_REPORT,
+      generatedAt: '2026-03-03T00:00:00.000Z'
+    };
+
+    const parsedArtifact = parseReportArtifactJson(JSON.stringify(artifact), 'artifact.json');
+
+    expect(parsedArtifact.artifact).toEqual({
+      schemaVersion: 'weekly@1.1',
       generatedAt: '2026-03-03T00:00:00.000Z'
     });
   });

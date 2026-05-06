@@ -1,3 +1,7 @@
+import type { SchemaVersion } from './schema-version';
+
+export type { SchemaVersion };
+
 export type Regime = 'risk-on' | 'risk-off' | 'range-bound' | 'transition';
 
 export type ReportMetadata = Readonly<{
@@ -43,6 +47,11 @@ export type ReportSignals = Readonly<{
   changedSinceLastWeek: ReadonlyArray<string>;
 }>;
 
+export type PlainspokenOpening = Readonly<{
+  headline: string;
+  body: string;
+}>;
+
 export type Report = Readonly<{
   metadata: ReportMetadata;
   regime: Regime;
@@ -50,14 +59,12 @@ export type Report = Readonly<{
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
   signals: ReportSignals;
+  /** Weekly v1.1 additive field. Present on new weeklies; absent on v1.0 artifacts. */
+  plainspokenOpening?: PlainspokenOpening;
 }>;
 
-export const CURRENT_REPORT_SCHEMA_VERSION = '1.0' as const;
-
-export type ReportSchemaVersion = typeof CURRENT_REPORT_SCHEMA_VERSION;
-
 export type ReportArtifact = Readonly<{
-  schemaVersion: ReportSchemaVersion;
+  schemaVersion: SchemaVersion;
   report: Report;
   generatedAt?: string;
 }>;
@@ -65,7 +72,7 @@ export type ReportArtifact = Readonly<{
 export type ParsedReportArtifact = Readonly<{
   report: Report;
   artifact: Readonly<{
-    schemaVersion: ReportSchemaVersion | 'legacy';
+    schemaVersion: SchemaVersion | 'legacy';
     generatedAt?: string;
   }>;
 }>;

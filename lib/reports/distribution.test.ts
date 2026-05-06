@@ -10,7 +10,7 @@ describe('report distribution', () => {
 
     expect(feedXml).toContain('<?xml version="1.0" encoding="UTF-8"?>');
     expect(feedXml).toContain('<rss version="2.0">');
-    expect(feedXml).toContain('<title>Weekly Crypto Pulse</title>');
+    expect(feedXml).toContain('<title>Crypto Pulse</title>');
 
     const firstReport = reports[0];
     expect(feedXml).toContain(`<link>https://weeklycryptopulse.com/reports/${firstReport.metadata.slug}</link>`);

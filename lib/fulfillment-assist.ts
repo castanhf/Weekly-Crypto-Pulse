@@ -148,7 +148,7 @@ export const toFulfillmentEmailBody = (
       'Personal use only. Redistribution is not permitted.',
       '',
       'Best regards,',
-      'Weekly Crypto Pulse'
+      'Crypto Pulse'
     ].join('\n');
   }
 
@@ -166,6 +166,6 @@ export const toFulfillmentEmailBody = (
     'Personal use only. Redistribution is not permitted.',
     '',
     'Best regards,',
-    'Weekly Crypto Pulse'
+    'Crypto Pulse'
   ].join('\n');
 };

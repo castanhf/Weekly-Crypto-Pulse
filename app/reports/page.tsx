@@ -33,9 +33,9 @@ export default function ReportsPage(): JSX.Element {
     <PageShell>
       <PageHeader
         className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-surface via-surface to-canvas/50 px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
-        description="Browse every public Weekly Crypto Pulse issue in reverse chronological order."
+        description="Every report is free to read. Newest first."
         eyebrow="Reports archive"
-        title="Weekly reports, free to read."
+        title="All reports, free to read."
       />
 
       <PageSection>
@@ -80,9 +80,9 @@ export default function ReportsPage(): JSX.Element {
               <SurfaceCard className="space-y-5 bg-surface p-5 sm:p-6">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">
-                  Archive reports are the <span className="font-semibold text-paper">Free</span> layer for orientation.
-                  Readers who need a deeper decision brief for one week or continuity across the month can compare the paid
-                  offers on the Pro page.
+                  Every report here is free to read. They cover what happened in crypto markets that week and what it
+                  meant. If you want the decision layer — more detail on what to watch — head over to the{' '}
+                  <span className="font-semibold text-paper">Pro</span> page.
                 </p>
                 <Link className={archiveCtaClassName} href="/pro">
                   Compare Weekly Pro and Monthly Bundle

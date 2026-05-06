@@ -1,8 +1,10 @@
-# Weekly Crypto Pulse
+# Crypto Pulse
 
 Static-first Next.js scaffold for a weekly crypto editorial web app.
 
 ## Environment
+
+### Site and payment (Vercel)
 
 - `STRIPE_PAYMENT_LINK_WEEKLY_PRO`: Stripe Payment Link for **Weekly Crypto Pulse Pro — Single Issue** CTA.
 - `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`: Stripe Payment Link for **Weekly Crypto Pulse Pro — Monthly Bundle** CTA.
@@ -11,6 +13,11 @@ Static-first Next.js scaffold for a weekly crypto editorial web app.
 - `ENABLE_FULFILLMENT_ASSIST`: Server-only flag that enables the internal `/internal/fulfillment` helper. Leave unset in Production; set to `true` only in local development when the helper is needed.
 
 Set these environment variables in Vercel for both Preview and Production deployments, except `ENABLE_FULFILLMENT_ASSIST`, which should stay disabled unless you explicitly need the helper in a non-production environment.
+
+### Pipeline (GitHub Actions / local)
+
+- `GITHUB_TOKEN`: Auto-injected in every GitHub Actions workflow. Required as the primary LLM provider (GitHub Models). For local runs, use a personal access token with read access to your account.
+- `OPENAI_API_KEY`: OpenAI API key for LLM fallback when GitHub Models is unavailable. Optional but strongly recommended. **Set a hard usage cap in the OpenAI dashboard** to prevent runaway costs.
 
 ## Editorial tiers
 

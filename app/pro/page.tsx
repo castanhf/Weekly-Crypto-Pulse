@@ -27,18 +27,16 @@ type OfferNarrative = Readonly<{
 const FAQ_ITEMS: ReadonlyArray<FaqItem> = [
   {
     question: 'Is this a subscription?',
-    answer:
-      'No. Both products are one-time purchases through Stripe Payment Links. Weekly Crypto Pulse does not run subscription billing.'
+    answer: 'No. You pay once through Stripe and get the report. There is no recurring charge and nothing to cancel.'
   },
   {
     question: 'Do I need an account or login?',
-    answer:
-      'No. This site has no user authentication and no entitlement system. Stripe checkout confirms purchase identity and payment status.'
+    answer: 'No account needed. You pay through Stripe, and we fulfill based on your payment record. Nothing to log into.'
   },
   {
     question: 'How is Pro access delivered?',
     answer:
-      'After successful Stripe checkout, fulfillment follows the existing Pro operations workflow. Stripe payment details are the source of truth for fulfillment.'
+      'After your Stripe payment goes through, we deliver the report to the email on your order. The fulfillment is manual — we check payment records and send the file.'
   }
 ] as const;
 
@@ -74,18 +72,18 @@ const offerSecondaryLinkClassNames: Record<ProOfferCard['pricing']['tier'], stri
 
 const OFFER_NARRATIVES: Readonly<Record<ProOfferCard['id'], OfferNarrative>> = {
   singleIssue: {
-    emphasis: 'Best when one weekly setup needs an actionable posture now.',
+    emphasis: 'Good when this week specifically needs more than the free summary.',
     metrics: [
       { label: 'Coverage', value: '1 weekly Pro issue' },
-      { label: 'Decision horizon', value: 'This week only' },
-      { label: 'Price logic', value: '$29 for the one issue that matters now' }
+      { label: 'Covers', value: 'This week only' },
+      { label: 'Price', value: '$29 for one issue' }
     ]
   },
   monthlyBundle: {
-    emphasis: 'Best when you want each weekly decision to carry forward through month-end.',
+    emphasis: 'Good when you want to follow the market week by week through a full month.',
     metrics: [
       { label: 'Coverage', value: '4 weekly Pro issues + month-end synthesis' },
-      { label: 'Decision horizon', value: 'Full-month continuity' },
+      { label: 'Covers', value: 'All four weekly issues in the month' },
       { label: 'Effective rate', value: '$19.75 per issue • saves $37 vs four single issues' }
     ]
   }
@@ -198,7 +196,7 @@ export default function ProPage(): JSX.Element {
               One issue or the full month.<br />Both are one-time purchases.
             </h1>
             <p className="text-base leading-8 text-white/70">
-              No subscription. No account. Stripe checkout confirms your purchase — pick the coverage that fits your decision horizon.
+              No subscription. No account. Pay through Stripe once and get the report by email — pick the coverage that fits the week.
             </p>
           </header>
           <div className="grid gap-7 lg:grid-cols-2 lg:items-stretch">
@@ -225,7 +223,7 @@ export default function ProPage(): JSX.Element {
       </section>
 
       <TierDifferentiation
-        description="Free stays public for orientation. Single Issue covers one decision week. Monthly Bundle adds the continuity layer across the month."
+        description="Free covers what's happening. Weekly Pro adds the decision layer for one week. Monthly Bundle does that for four weeks in a row."
         title="Plan comparison"
       />
 

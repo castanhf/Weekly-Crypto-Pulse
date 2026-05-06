@@ -6,22 +6,31 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   smoke-e2e:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '20'
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      # TODO(R2.1): restore --audit-level=high after Next.js 14 → 16 upgrade lands
+      # (R2.1 Prompt 1). The lowered threshold is a temporary risk acceptance
+      # documented in docs/operations/security.md.
+      - name: Audit production dependencies
+        run: npm audit --production --audit-level=critical
 
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium

@@ -18,14 +18,17 @@
     "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:premium": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/sync-premium-artifacts.js",
-    "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-report-input.js"
+    "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-report-input.js",
+    "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "openai": "^6.34.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "recharts": "^3.8.1",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",

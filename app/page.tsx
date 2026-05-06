@@ -14,23 +14,23 @@ import { createHomeMetadata } from '@/lib/seo';
 export const metadata: Metadata = createHomeMetadata();
 
 const METRICS = [
-  'Market structure and risk regime',
-  'Institutional flows and positioning',
-  'Major asset leadership and momentum'
+  'Total market size and whether investors are leaning into risk or pulling back',
+  'Where money is moving, and whether that movement is broadening or narrowing',
+  'Which assets led last week and which fell behind'
 ] as const;
 
 const EDITORIAL_PATH = [
   {
     label: 'Free',
-    description: 'Start with the weekly orientation layer to understand the setup.'
+    description: 'The public layer. Weekly reports every Monday, plus shorter daily updates in between. All free.'
   },
   {
     label: 'Weekly Pro',
-    description: 'Move to a single-issue decision brief when timing matters this week.'
+    description: 'Go deeper on one specific week when the free read is not enough.'
   },
   {
     label: 'Monthly Bundle',
-    description: 'Keep decisions coherent across the month with connected weekly issues.'
+    description: 'Follow four Pro weeks in a row, with a summary at the end of the month.'
   }
 ] as const;
 
@@ -44,9 +44,9 @@ export default function HomePage(): JSX.Element {
     return (
       <PageShell>
         <PageHeader
-          description="Data-driven weekly briefs on crypto market structure, flows, and risk."
-          eyebrow="Weekly crypto research"
-          title="Weekly Crypto Pulse"
+          description="Free weekly and daily reports on what's happening in the crypto market."
+          eyebrow="Crypto research"
+          title="Crypto Pulse"
           titleClassName="max-w-3xl"
         />
       </PageShell>
@@ -77,9 +77,9 @@ export default function HomePage(): JSX.Element {
           </>
         }
         className="rounded-[2rem] border border-white/10 bg-surface px-5 py-7 shadow-[0_20px_50px_rgba(0,0,0,0.4)] sm:px-8 sm:py-9"
-        description="Weekly Crypto Pulse keeps the homepage editorial: one public report for orientation, one paid path for weekly decisions, and one bundle for month-long continuity."
-        eyebrow="Weekly crypto research"
-        title="Read the market setup, then choose the depth you need this week."
+        description="Free weekly and daily reports on what's happening in crypto. Pro adds the decision layer when you need more than a summary."
+        eyebrow="Crypto research"
+        title="Read the market. Then decide how deep you need to go."
       />
 
       <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
@@ -118,7 +118,7 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="latest-report-heading">
         <SectionIntro
-          description="The public report is the baseline read. Snapshot metrics keep each issue scannable before you decide whether to move into Pro."
+          description="Three numbers from this week's free report. A fast read before you click in."
           id="latest-report-heading"
           title="This week at a glance"
         />
@@ -142,9 +142,9 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="offers-heading">
         <SectionIntro
-          description={`${freeTier.name} keeps orientation public. ${weeklyProTier.name} is the entry offer for a single decision cycle. ${monthlyBundleTier.name} is the best-value option for continuity across the month.`}
+          description="Free gives you the picture every week. Pro adds what we'd watch and how we'd think about it — the decision layer on top of the orientation layer."
           id="offers-heading"
-          title="Free and Pro, by editorial job"
+          title="Free and Pro"
         />
         <SurfaceCard className="space-y-6">
           <div className="grid gap-4 lg:grid-cols-3">
@@ -179,7 +179,7 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
         <SectionIntro
-          description="Each issue follows the same sequence so Free and Pro stay comparable over time."
+          description="Same sequence every week so you can compare issues side by side."
           id="measures-heading"
           title="What we measure each week"
         />
@@ -195,7 +195,7 @@ export default function HomePage(): JSX.Element {
       </PageSection>
 
       <TierDifferentiation
-        description="The distinction is functional. Free explains the environment. Weekly Pro supports one decision week. Monthly Bundle keeps the thesis connected across the month."
+        description="Free explains what's happening. Weekly Pro adds what to watch and how to think about it, for one week. Monthly Bundle does that for four weeks running."
         title="How each tier is meant to be used"
       />
     </PageShell>
