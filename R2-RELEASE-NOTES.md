@@ -28,6 +28,13 @@ The Decision Register language updates from strict "four env vars" to "minimal e
 - **WCP-107** — Brand simplification: "Crypto Pulse" is now the master brand for all site chrome (header wordmark, footer, X share text, email footer signatures, RSS `<title>`, `README.md`). "Weekly Crypto Pulse" / "Daily Crypto Pulse" retained as cadence prefixes in per-artifact metadata and product names. `SITE_NAME`, `WEEKLY_TITLE_PREFIX`, and `DAILY_TITLE_PREFIX` constants exported from `lib/site.ts`. Decision D-04 added to Decision Register. PR: #107
 - **WCP-108** — Plainspoken accessibility pass applied to site chrome copy: homepage, methodology, disclaimer, archive page header, /pro explainer prose, SEO meta descriptions, tier-differentiation component, and product prose in `domain/pro-product.ts`. Methodology expanded with named data sources (CoinGecko, Alternative.me), plain-language regime definitions, and AI-assisted drafting disclosure. Editorial decisions documented in Decision Register under "Editorial decisions." Report bodies and Pro signals untouched per decision 12b. /pro structural restructure (15b) deferred to R2.1. PR: #108
 - **WCP-109** — Security baseline established: Next.js upgraded 14.2.5 → 14.2.35 (critical vuln fix; remaining high-severity advisories require Next.js 15.x, deferred); Dependabot added for weekly npm + GitHub Actions scanning; CI hardened with SHA-pinned actions, `contents: read` permission scope, and `--audit-level=critical` npm audit step; full CSP + five additional security headers added to `next.config.mjs`; prompt injection defense sections added to `market_researcher.md` and `daily_researcher.md`; CodeQL SAST workflow added (push/PR/weekly schedule); `docs/operations/security.md` created documenting the full posture; security decisions block added to Decision Register. 11 new unit tests (security-headers + actions-sha-pinning suites). PR: #109
+- **WCP-110** — R2.0 final cleanup: CI audit threshold annotated with R2.1 restoration TODO in both `ci.yml` and `security.md`; `security.md` corrected (was incorrectly describing `--audit-level=high`); manual CSP verification across all five chrome pages confirmed clean; OG image situation documented (no image exists — text-only OG metadata; not blocking). Final commit before R2.0 → main merge. PR: #110
+
+## R2.0 — Phase complete
+
+Phase merged to `main` on 2026-05-06 as `v2.0.0`. See merged-PRs list above.
+
+R2.1 (reader-visible launch) begins. First work unit: Next.js 14 → 16 upgrade.
 
 ## R2.1 — Merged PRs
 
