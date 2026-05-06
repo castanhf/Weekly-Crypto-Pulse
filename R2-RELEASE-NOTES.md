@@ -38,4 +38,4 @@ R2.1 (reader-visible launch) begins. First work unit: Next.js 14 → 16 upgrade.
 
 ## R2.1 — Merged PRs
 
-_(populated as PRs land in `release/r2.1`)_
+- **WCP-121** — Synced `release/r2.1` with main (6 interim commits: CodeQL Dependabot fix, 5 Dependabot updates) and upgraded Next.js 14.2.35 → 16.2.5. Resolves 5 high-severity advisories: GHSA-9g9p-9gw9-jx7f, GHSA-h25m-26qc-wcjf, GHSA-ggv3-7p47-pfv8, GHSA-3x4c-7xq6-9pq8, GHSA-q4gf-8mx6-v5v3. ESLint 8 → 9 (required peer dep). Async params/searchParams migration applied to 3 route files. CI audit threshold restored to `--audit-level=high`. Turbopack is now the default build bundler. Bundle size metric format changed (Turbopack does not report webpack-style "First Load JS"). PR: #121
