@@ -1,4 +1,4 @@
-import { DAILY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, isValidSchemaVersion } from '../../domain/schema-version';
+import { DAILY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, WEEKLY_SCHEMA_V1_2, isValidSchemaVersion } from '../../domain/schema-version';
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from './json-assertions';
 import type { JsonRecord } from './json-assertions';
 
@@ -82,6 +82,28 @@ export const validateWeeklyV1_1 = (artifact: JsonRecord, fileName: string): void
   }
 };
 
+export const validateWeeklyV1_2 = (artifact: JsonRecord, fileName: string): void => {
+  try {
+    validateWeeklyReport(artifact.report);
+
+    const report = artifact.report as JsonRecord;
+
+    if (report.plainspokenOpening !== undefined) {
+      const opening = assertRecord(report.plainspokenOpening, 'report.plainspokenOpening');
+      assertString(opening.headline, 'report.plainspokenOpening.headline');
+      assertString(opening.body, 'report.plainspokenOpening.body');
+    }
+
+    if (report.capitalFlows !== undefined) {
+      const capitalFlows = assertRecord(report.capitalFlows, 'report.capitalFlows');
+      assertArray(capitalFlows.topChainsTvl, 'report.capitalFlows.topChainsTvl');
+      assertArray(capitalFlows.notableMovements, 'report.capitalFlows.notableMovements');
+    }
+  } catch (error) {
+    throw new Error(`${fileName} (weekly@1.2): ${error instanceof Error ? error.message : String(error)}`);
+  }
+};
+
 export const validateDailyV1_0 = (artifact: JsonRecord, fileName: string): void => {
   try {
     assertString(artifact.generatedAt, 'generatedAt');
@@ -162,6 +184,11 @@ export const validateArtifact = (rawArtifact: string, fileName: string): void =>
 
   if (raw === WEEKLY_SCHEMA_V1_1) {
     validateWeeklyV1_1(artifact, fileName);
+    return;
+  }
+
+  if (raw === WEEKLY_SCHEMA_V1_2) {
+    validateWeeklyV1_2(artifact, fileName);
     return;
   }
 

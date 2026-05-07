@@ -1,4 +1,5 @@
 import type { SchemaVersion } from './schema-version';
+import type { CapitalFlows } from './market-data';
 
 export type { SchemaVersion };
 
@@ -52,6 +53,8 @@ export type PlainspokenOpening = Readonly<{
   body: string;
 }>;
 
+export type { CapitalFlows } from './market-data';
+
 export type Report = Readonly<{
   metadata: ReportMetadata;
   regime: Regime;
@@ -61,6 +64,8 @@ export type Report = Readonly<{
   signals: ReportSignals;
   /** Weekly v1.1 additive field. Present on new weeklies; absent on v1.0 artifacts. */
   plainspokenOpening?: PlainspokenOpening;
+  /** Weekly v1.2 additive field. DeFiLlama TVL data. Absent on v1.0/v1.1 artifacts. */
+  capitalFlows?: CapitalFlows;
 }>;
 
 export type ReportArtifact = Readonly<{
