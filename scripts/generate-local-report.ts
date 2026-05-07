@@ -1,8 +1,9 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { WEEKLY_SCHEMA_V1_1 } from '../domain/schema-version';
+import { WEEKLY_SCHEMA_V1_2 } from '../domain/schema-version';
 import {
+  type CapitalFlows,
   type MarketSnapshot,
   type Mover,
   type Regime,
@@ -35,6 +36,7 @@ type LocalReportInput = Readonly<{
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
   signals: ReportSignals;
+  capitalFlows?: CapitalFlows;
 }>;
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
@@ -181,6 +183,37 @@ const parseSignals = (value: unknown): ReportSignals => {
   };
 };
 
+const parseCapitalFlows = (value: unknown): CapitalFlows | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const flows = assertRecord(value, 'capitalFlows');
+  const topChainsTvl = assertArray(flows.topChainsTvl, 'capitalFlows.topChainsTvl').map((entry, i) => {
+    const chain = assertRecord(entry, `capitalFlows.topChainsTvl[${i}]`);
+    return {
+      chain: assertString(chain.chain, `capitalFlows.topChainsTvl[${i}].chain`),
+      tvlUsd: assertNumber(chain.tvlUsd, `capitalFlows.topChainsTvl[${i}].tvlUsd`),
+      changePct24h: assertNumber(chain.changePct24h, `capitalFlows.topChainsTvl[${i}].changePct24h`),
+      changeUsd24h: assertNumber(chain.changeUsd24h, `capitalFlows.topChainsTvl[${i}].changeUsd24h`)
+    };
+  });
+  const notableMovements = assertArray(flows.notableMovements, 'capitalFlows.notableMovements').map((entry, i) => {
+    const mov = assertRecord(entry, `capitalFlows.notableMovements[${i}]`);
+    const trigger = assertString(mov.trigger, `capitalFlows.notableMovements[${i}].trigger`);
+    if (trigger !== 'percent_threshold' && trigger !== 'absolute_threshold') {
+      throw new Error(
+        `Invalid input at "capitalFlows.notableMovements[${i}].trigger": expected "percent_threshold" or "absolute_threshold".`
+      );
+    }
+    return {
+      chain: assertString(mov.chain, `capitalFlows.notableMovements[${i}].chain`),
+      tvlUsd: assertNumber(mov.tvlUsd, `capitalFlows.notableMovements[${i}].tvlUsd`),
+      changePct24h: assertNumber(mov.changePct24h, `capitalFlows.notableMovements[${i}].changePct24h`),
+      changeUsd24h: assertNumber(mov.changeUsd24h, `capitalFlows.notableMovements[${i}].changeUsd24h`),
+      trigger: trigger as 'percent_threshold' | 'absolute_threshold'
+    };
+  });
+  return { topChainsTvl, notableMovements };
+};
+
 const parseInput = (rawInput: string): LocalReportInput => {
   const parsed = JSON.parse(rawInput) as unknown;
   const root = assertRecord(parsed, 'root');
@@ -195,7 +228,8 @@ const parseInput = (rawInput: string): LocalReportInput => {
     snapshot: parseSnapshot(root.snapshot),
     movers: parseMovers(root.movers),
     sections: parseSections(root.sections),
-    signals: parseSignals(root.signals)
+    signals: parseSignals(root.signals),
+    capitalFlows: parseCapitalFlows(root.capitalFlows)
   };
 };
 
@@ -216,7 +250,7 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
   const slug = toSlug(publishedAt, input.headline);
 
   return {
-    schemaVersion: WEEKLY_SCHEMA_V1_1,
+    schemaVersion: WEEKLY_SCHEMA_V1_2,
     generatedAt: buildGeneratedAt(publishedAt),
     report: {
       metadata: {
@@ -231,7 +265,8 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
       marketSnapshot: input.snapshot,
       movers: input.movers,
       sections: input.sections,
-      signals: input.signals
+      signals: input.signals,
+      ...(input.capitalFlows !== undefined ? { capitalFlows: input.capitalFlows } : {})
     }
   };
 };

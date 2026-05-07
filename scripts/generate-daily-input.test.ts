@@ -2,6 +2,13 @@ import { describe, expect, it, vi, beforeEach } from 'vitest';
 
 vi.mock('../lib/llm/client', () => ({ callLlm: vi.fn() }));
 vi.mock('../lib/cache/file-cache', () => ({ getCached: vi.fn() }));
+vi.mock('../lib/markets/defi-llama', () => ({
+  fetchTopChainsTvl: vi.fn(),
+  detectNotableTvlMovements: vi.fn()
+}));
+vi.mock('../lib/news/crypto-panic', () => ({
+  fetchNewsWithFallback: vi.fn()
+}));
 vi.mock('node:fs/promises', async (importOriginal) => {
   const actual = await importOriginal<typeof import('node:fs/promises')>();
   return {
@@ -15,11 +22,16 @@ vi.mock('node:fs/promises', async (importOriginal) => {
 
 import { callLlm } from '../lib/llm/client';
 import { getCached } from '../lib/cache/file-cache';
+import { fetchTopChainsTvl, detectNotableTvlMovements } from '../lib/markets/defi-llama';
+import { fetchNewsWithFallback } from '../lib/news/crypto-panic';
 import * as fs from 'node:fs/promises';
 import { generateDailyInput } from './generate-daily-input';
 
 const mockedCallLlm = vi.mocked(callLlm);
 const mockedGetCached = vi.mocked(getCached);
+const mockedFetchTopChainsTvl = vi.mocked(fetchTopChainsTvl);
+const mockedDetectNotableTvlMovements = vi.mocked(detectNotableTvlMovements);
+const mockedFetchNewsWithFallback = vi.mocked(fetchNewsWithFallback);
 
 const TARGET_DATE = '2026-05-07';
 
@@ -68,8 +80,6 @@ const MOCK_FEAR_GREED = {
   data: [{ value: '72', value_classification: 'Greed' }]
 };
 
-const MOCK_CHAINS: Array<{ name: string; tvl: number; change_1d: number | null }> = [];
-
 const MOCK_LLM_RESPONSE = {
   content: JSON.stringify({
     catalysts: {
@@ -93,24 +103,25 @@ const MOCK_LLM_RESPONSE = {
 
 describe('generateDailyInput', () => {
   beforeEach(() => {
-    vi.mocked(fs.mkdir).mockResolvedValue(undefined);
-    vi.mocked(fs.readdir).mockResolvedValue([]);
-    vi.mocked(fs.readFile).mockRejectedValue({ code: 'ENOENT' });
-    vi.mocked(fs.writeFile).mockResolvedValue(undefined);
+    vi.mocked(fs.mkdir).mockReset().mockResolvedValue(undefined);
+    vi.mocked(fs.readdir).mockReset().mockResolvedValue([]);
+    vi.mocked(fs.readFile).mockReset().mockRejectedValue({ code: 'ENOENT' });
+    vi.mocked(fs.writeFile).mockReset().mockResolvedValue(undefined);
 
-    mockedGetCached.mockImplementation(async (_key, _ttl, fetcher) => fetcher());
-    mockedCallLlm.mockResolvedValue(MOCK_LLM_RESPONSE);
-  });
-
-  it('produces correctly shaped output for a normal day', async () => {
-    mockedGetCached.mockImplementation(async (key, _ttl, fetcher) => {
+    mockedGetCached.mockReset().mockImplementation(async (key, _ttl, fetcher) => {
       if (key === 'coingecko-markets-top50') return MOCK_TOP50;
       if (key === 'coingecko-global') return MOCK_GLOBAL;
       if (key === 'fear-greed') return MOCK_FEAR_GREED;
-      if (key === 'defillama-chains') return MOCK_CHAINS;
       return fetcher();
     });
 
+    mockedFetchTopChainsTvl.mockReset().mockResolvedValue([]);
+    mockedDetectNotableTvlMovements.mockReset().mockReturnValue([]);
+    mockedFetchNewsWithFallback.mockReset().mockResolvedValue([]);
+    mockedCallLlm.mockReset().mockResolvedValue(MOCK_LLM_RESPONSE);
+  });
+
+  it('produces correctly shaped output for a normal day', async () => {
     let writtenJson: string | undefined;
     vi.mocked(fs.writeFile).mockImplementation(async (_path, content) => {
       writtenJson = content as string;
@@ -131,15 +142,7 @@ describe('generateDailyInput', () => {
     expect(output.marketSnapshot.fearGreedIndex).toBe(72);
   });
 
-  it('correctly flags USDT as stablecoin and WBTC as wrapped/derivative', async () => {
-    mockedGetCached.mockImplementation(async (key, _ttl, fetcher) => {
-      if (key === 'coingecko-markets-top50') return MOCK_TOP50;
-      if (key === 'coingecko-global') return MOCK_GLOBAL;
-      if (key === 'fear-greed') return MOCK_FEAR_GREED;
-      if (key === 'defillama-chains') return MOCK_CHAINS;
-      return fetcher();
-    });
-
+  it('correctly flags USDT as stablecoin and WBTC as wrapped/derivative via shared module', async () => {
     let writtenJson: string | undefined;
     vi.mocked(fs.writeFile).mockImplementation(async (_path, content) => {
       writtenJson = content as string;
@@ -163,6 +166,63 @@ describe('generateDailyInput', () => {
     expect(btc?.isWrappedOrDerivative).toBe(false);
   });
 
+  it('includes DeFiLlama notable movements in capitalFlows output', async () => {
+    const mockMovement = {
+      chain: 'Ethereum',
+      tvlUsd: 50_000_000_000,
+      changePct24h: 12.5,
+      changeUsd24h: 6_250_000_000,
+      trigger: 'percent_threshold' as const
+    };
+    mockedFetchTopChainsTvl.mockResolvedValue([{ chain: 'Ethereum', tvlUsd: 50e9, changePct24h: 12.5, changeUsd24h: 6.25e9 }]);
+    mockedDetectNotableTvlMovements.mockReturnValue([mockMovement]);
+
+    let writtenJson: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (_path, content) => {
+      writtenJson = content as string;
+    });
+
+    await generateDailyInput(TARGET_DATE);
+
+    const output = JSON.parse(writtenJson!) as {
+      capitalFlows: { notableTvlMovements: Array<{ chain: string; changePct24h: number }> };
+    };
+
+    expect(output.capitalFlows.notableTvlMovements).toHaveLength(1);
+    expect(output.capitalFlows.notableTvlMovements[0].chain).toBe('Ethereum');
+    expect(output.capitalFlows.notableTvlMovements[0].changePct24h).toBe(12.5);
+  });
+
+  it('wraps news items in <news_item> tags for LLM prompt', async () => {
+    mockedFetchNewsWithFallback.mockResolvedValue([
+      {
+        headline: 'Bitcoin ETF inflows surge',
+        url: 'https://example.com/btc-etf',
+        source: 'CoinDesk',
+        publishedAt: '2026-05-07T10:00:00.000Z',
+        importance: 'high' as const
+      }
+    ]);
+
+    await generateDailyInput(TARGET_DATE);
+
+    const llmCall = mockedCallLlm.mock.calls[0];
+    const userMessage = llmCall[0].messages.find((m: { role: string }) => m.role === 'user');
+    expect(userMessage?.content).toContain('<news_item');
+    expect(userMessage?.content).toContain('Bitcoin ETF inflows surge');
+    expect(userMessage?.content).toContain('source="CoinDesk"');
+  });
+
+  it('sends empty news prompt when fetchNewsWithFallback returns empty', async () => {
+    mockedFetchNewsWithFallback.mockResolvedValue([]);
+
+    await generateDailyInput(TARGET_DATE);
+
+    const llmCall = mockedCallLlm.mock.calls[0];
+    const userMessage = llmCall[0].messages.find((m: { role: string }) => m.role === 'user');
+    expect(userMessage?.content).toContain('No real news available');
+  });
+
   it('handles quiet day with no movers meeting threshold', async () => {
     const quietMarkets = MOCK_TOP50.map((m) => ({
       ...m,
@@ -173,7 +233,6 @@ describe('generateDailyInput', () => {
       if (key === 'coingecko-markets-top50') return quietMarkets;
       if (key === 'coingecko-global') return MOCK_GLOBAL;
       if (key === 'fear-greed') return MOCK_FEAR_GREED;
-      if (key === 'defillama-chains') return MOCK_CHAINS;
       return fetcher();
     });
 
@@ -203,7 +262,6 @@ describe('generateDailyInput', () => {
 
     await expect(generateDailyInput(TARGET_DATE)).rejects.toThrow();
 
-    // Failure sentinel should have been written
     const sentinelCall = writeFileSpy.mock.calls.find(
       ([filePath]) => typeof filePath === 'string' && filePath.includes(`.failure-${TARGET_DATE}`)
     );
