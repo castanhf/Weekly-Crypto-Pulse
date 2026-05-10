@@ -2,7 +2,7 @@
 
 ## Threat model summary
 
-Crypto Pulse is a static-first Next.js editorial product with no database, no user authentication, and no server-side entitlement system. The primary threat surface is narrow: secret exposure via the repository or CI/CD environment; supply chain attacks via compromised npm packages or GitHub Actions; GitHub Actions abuse via misconfigured permissions or unpinned action references; prompt injection in the LLM research pipeline via malicious content in WebSearch results; and Stripe surface integrity (ensuring payment link IDs are not leaked to unintended surfaces).
+Crypto Pulse is a static-first Next.js editorial product with no database, no user authentication, and no server-side entitlement system. The primary threat surface is narrow: secret exposure via the repository or CI/CD environment; supply chain attacks via compromised npm packages or GitHub Actions; GitHub Actions abuse via misconfigured permissions or unpinned action references; prompt injection in the LLM research pipeline via malicious content in RSS news feeds; and Stripe surface integrity (ensuring payment link IDs are not leaked to unintended surfaces).
 
 There is no SQL injection surface, no XSS via user-generated content, no IDOR, and no session management to protect — those threats require a database or user state that this architecture deliberately avoids.
 
@@ -16,7 +16,6 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 |---|---|---|---|
 | `GITHUB_TOKEN` | Auto-injected by GitHub Actions | No | Never set manually in repo secrets; Actions injects it per-job |
 | `OPENAI_API_KEY` | GitHub Actions secret (local: `.env`) | No | Optional fallback LLM provider; set a hard usage cap in OpenAI dashboard |
-| `CRYPTOPANIC_API_KEY` | GitHub Actions secret (local: `.env`) | No | News API; pipeline degrades to empty news if absent (no crash) |
 | `STRIPE_PAYMENT_LINK_WEEKLY_PRO` | GitHub Actions / Vercel env | Yes (in href) | Static Stripe URL; intended public surface; not a secret |
 | `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE` | GitHub Actions / Vercel env | Yes (in href) | Static Stripe URL; intended public surface; not a secret |
 | `NEXT_PUBLIC_SITE_URL` | Vercel env | Yes (NEXT_PUBLIC_) | Canonical URL — not sensitive |
@@ -128,7 +127,7 @@ Security headers are applied via `next.config.mjs` to all routes (`/(.*)`):
 
 ### Prompt injection threat
 
-The weekly (`market_researcher`) and daily (`daily_researcher`) agents use CryptoPanic to pull news. CryptoPanic returns content from external publishers, which may contain adversarial instructions designed to manipulate the agent's output — a prompt injection attack.
+The weekly (`market_researcher`) and daily (`daily_researcher`) agents use a multi-source RSS aggregator (`lib/news/rss-aggregator.ts`) to pull news from public feeds (CoinDesk, The Block, Decrypt, CoinTelegraph, Bloomberg Crypto, Ethereum Foundation Blog). These feeds return content from external publishers, which may contain adversarial instructions designed to manipulate the agent's output — a prompt injection attack.
 
 ### Defenses in place
 

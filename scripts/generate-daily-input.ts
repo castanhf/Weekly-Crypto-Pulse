@@ -2,25 +2,24 @@
  * generate-daily-input.ts
  *
  * Fetches live market data from CoinGecko, DeFiLlama, the Alternative.me
- * Fear & Greed index, and CryptoPanic news, then calls the LLM to produce a
- * structured daily researcher JSON written to data/daily-inputs/local-daily-input.json.
+ * Fear & Greed index, and RSS-aggregated news, then calls the LLM to produce
+ * a structured daily researcher JSON written to
+ * data/daily-inputs/local-daily-input.json.
  *
  * Called as step 1 in the daily pipeline, before generate-daily-report.ts.
  *
  * Required env vars: GITHUB_TOKEN (primary LLM, auto-injected by GitHub
  * Actions), OPENAI_API_KEY (fallback LLM, strongly recommended).
- * Optional env vars: DAILY_TARGET_DATE (YYYY-MM-DD override for target date),
- *                    CRYPTOPANIC_API_KEY (news integration; degrades gracefully
- *                    if absent).
+ * Optional env vars: DAILY_TARGET_DATE (YYYY-MM-DD override for target date).
  *
  * DRIFT TRACKING: This script shares ~70% of data-gathering logic with the
  * weekly researcher (scripts/generate-report-input.ts). Shared logic lives in:
  *   - lib/markets/asset-categories.ts (stablecoin/wrapped detection)
  *   - lib/markets/defi-llama.ts (DeFiLlama TVL fetch + notable detection)
- *   - lib/news/crypto-panic.ts (CryptoPanic news fetch)
+ *   - lib/news/rss-aggregator.ts (multi-source RSS news fetch)
  *   - lib/llm/prompt-helpers.ts (news XML wrapping)
  * Changes to data source URLs, thresholds, or validation rules must apply
- * to BOTH scripts via these shared modules. Last drift-check: 2026-05-07.
+ * to BOTH scripts via these shared modules. Last drift-check: 2026-05-10.
  */
 
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
@@ -32,7 +31,7 @@ import { wrapNewsItemsForPrompt } from '../lib/llm/prompt-helpers';
 import { getCached } from '../lib/cache/file-cache';
 import { isStablecoin, isWrappedOrDerivative } from '../lib/markets/asset-categories';
 import { fetchTopChainsTvl, detectNotableTvlMovements } from '../lib/markets/defi-llama';
-import { fetchNewsWithFallback } from '../lib/news/crypto-panic';
+import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -261,7 +260,7 @@ const buildUserPrompt = (
       : ['  None meeting threshold'];
 
   const newsSection = wrappedNews
-    ? `NEWS ITEMS (real, from CryptoPanic — select and summarize the 3-5 most relevant):\n${wrappedNews}`
+    ? `NEWS ITEMS (real, from RSS aggregation — select and summarize the 3-5 most relevant):\n${wrappedNews}`
     : 'NEWS ITEMS: No real news available for this date. Return newsItems as [].';
 
   return `Target date: ${targetDate}
@@ -440,9 +439,9 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
     console.error(`  DeFiLlama FAILED (non-critical): ${err instanceof Error ? err.message : String(err)}`);
   }
 
-  // 3. Fetch CryptoPanic news via shared module
-  const newsItems = await fetchNewsWithFallback({ hoursBack: 24, maxItems: 20 });
-  console.log(`  CryptoPanic news: ${newsItems.length} items`);
+  // 3. Fetch news via RSS aggregator
+  const newsItems = await fetchRecentNewsWithFallback({ hoursBack: 24, maxTotalItems: 20 });
+  console.log(`  RSS news: ${newsItems.length} items`);
 
   // 4. Critical-field check
   if (markets.length < 15 || globalData === null) {
