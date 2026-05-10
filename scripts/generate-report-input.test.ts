@@ -6,8 +6,8 @@ vi.mock('../lib/markets/defi-llama', () => ({
   fetchTopChainsTvl: vi.fn(),
   detectNotableTvlMovements: vi.fn()
 }));
-vi.mock('../lib/news/crypto-panic', () => ({
-  fetchNewsWithFallback: vi.fn()
+vi.mock('../lib/news/rss-aggregator', () => ({
+  fetchRecentNewsWithFallback: vi.fn()
 }));
 vi.mock('node:fs/promises', async (importOriginal) => {
   const actual = await importOriginal<typeof import('node:fs/promises')>();
@@ -23,7 +23,7 @@ vi.mock('node:fs/promises', async (importOriginal) => {
 import { callLlm } from '../lib/llm/client';
 import { getCached } from '../lib/cache/file-cache';
 import { fetchTopChainsTvl, detectNotableTvlMovements } from '../lib/markets/defi-llama';
-import { fetchNewsWithFallback } from '../lib/news/crypto-panic';
+import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 import * as fs from 'node:fs/promises';
 import { generateReportInput } from './generate-report-input';
 
@@ -31,7 +31,7 @@ const mockedCallLlm = vi.mocked(callLlm);
 const mockedGetCached = vi.mocked(getCached);
 const mockedFetchTopChainsTvl = vi.mocked(fetchTopChainsTvl);
 const mockedDetectNotableTvlMovements = vi.mocked(detectNotableTvlMovements);
-const mockedFetchNewsWithFallback = vi.mocked(fetchNewsWithFallback);
+const mockedFetchRecentNewsWithFallback = vi.mocked(fetchRecentNewsWithFallback);
 
 const PUBLISHED_AT = '2026-05-05';
 
@@ -163,7 +163,7 @@ describe('generateReportInput', () => {
 
     mockedFetchTopChainsTvl.mockReset().mockResolvedValue([]);
     mockedDetectNotableTvlMovements.mockReset().mockReturnValue([]);
-    mockedFetchNewsWithFallback.mockReset().mockResolvedValue([]);
+    mockedFetchRecentNewsWithFallback.mockReset().mockResolvedValue([]);
     mockedCallLlm.mockReset().mockResolvedValue(MOCK_LLM_RESPONSE);
   });
 
@@ -228,9 +228,9 @@ describe('generateReportInput', () => {
     expect(output.capitalFlows.notableMovements).toEqual([]);
   });
 
-  it('fetches news with hoursBack: 168 and maxItems: 30', async () => {
+  it('fetches news with hoursBack: 168 and maxTotalItems: 30', async () => {
     await generateReportInput(PUBLISHED_AT);
-    expect(mockedFetchNewsWithFallback).toHaveBeenCalledWith({ hoursBack: 168, maxItems: 30 });
+    expect(mockedFetchRecentNewsWithFallback).toHaveBeenCalledWith({ hoursBack: 168, maxTotalItems: 30 });
   });
 
   it('fetches top-15 from DeFiLlama via fetchTopChainsTvl', async () => {
@@ -239,7 +239,7 @@ describe('generateReportInput', () => {
   });
 
   it('passes news items wrapped in <news_item> tags to LLM', async () => {
-    mockedFetchNewsWithFallback.mockResolvedValue([
+    mockedFetchRecentNewsWithFallback.mockResolvedValue([
       {
         headline: 'Ethereum upgrade successful',
         url: 'https://example.com/eth',
@@ -259,7 +259,7 @@ describe('generateReportInput', () => {
   });
 
   it('includes prompt-injection defense instruction in LLM user prompt for news', async () => {
-    mockedFetchNewsWithFallback.mockResolvedValue([
+    mockedFetchRecentNewsWithFallback.mockResolvedValue([
       {
         headline: 'Some news',
         url: 'https://example.com',
@@ -347,7 +347,7 @@ describe('generateReportInput', () => {
   });
 
   it('handles empty news gracefully — omits NEWS ITEMS section from prompt', async () => {
-    mockedFetchNewsWithFallback.mockResolvedValue([]);
+    mockedFetchRecentNewsWithFallback.mockResolvedValue([]);
 
     await generateReportInput(PUBLISHED_AT);
 

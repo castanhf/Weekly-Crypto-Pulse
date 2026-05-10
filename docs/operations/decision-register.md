@@ -8,7 +8,7 @@ This file records architectural and operational decisions that shaped the projec
 
 **Decision:** Minimal env vars; justified additions only.
 
-**Current set (7 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST):**
+**Current set (6 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST):**
 
 | Variable | Purpose | When added |
 |---|---|---|
@@ -17,7 +17,6 @@ This file records architectural and operational decisions that shaped the projec
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL for metadata and share links | R1 |
 | `NEXT_PUBLIC_X_HANDLE` | Optional X/Twitter handle for Open Graph metadata | R1 |
 | `OPENAI_API_KEY` | OpenAI API key for LLM fallback when GitHub Models is unavailable | R2.0 (WCP-105) |
-| `CRYPTOPANIC_API_KEY` | CryptoPanic news integration for daily and weekly pipelines | R2.1 (WCP-123) |
 | `BEEHIIV_API_KEY` | Beehiiv email distribution API key _(planned R2.1)_ | — |
 
 **Original constraint (R1):** "no more than four env vars." Enforced strictly through R1.
@@ -26,7 +25,7 @@ This file records architectural and operational decisions that shaped the projec
 
 **Justification for OPENAI_API_KEY (added WCP-105):** Pipeline reliability. GitHub Models (the primary LLM provider) is a free tier with rate limits and occasional availability gaps. The weekly pipeline is time-critical (Monday 06:00 UTC automation). OpenAI serves as a fallback provider in `lib/llm/client.ts` — the client retries on the primary, then falls back automatically. A hard usage cap is required in the OpenAI dashboard to prevent runaway costs. The key is optional at runtime (the pipeline attempts GitHub Models first), but strongly recommended.
 
-**Justification for CRYPTOPANIC_API_KEY (added WCP-123):** News quality. Both the daily and weekly researchers previously relied on LLM training knowledge for news context — a known hallucination risk. CryptoPanic provides a structured real-time news feed with vote-based importance signals. The key is optional: `fetchNewsWithFallback` returns `[]` without throwing if the key is absent, so the pipeline degrades gracefully. Obtain from https://cryptopanic.com/developers/api/
+**Note on CRYPTOPANIC_API_KEY (added WCP-123, removed WCP-124):** CryptoPanic discontinued their free API tier on 2026-04-01. The integration was removed in WCP-124 and replaced with a multi-source RSS aggregator (`lib/news/rss-aggregator.ts`) requiring no API key. News now comes from public RSS feeds (CoinDesk, The Block, Decrypt, CoinTelegraph, Bloomberg Crypto, Ethereum Foundation Blog). The aggregator uses Jaccard dedup and cross-source coverage to score importance.
 
 ---
 

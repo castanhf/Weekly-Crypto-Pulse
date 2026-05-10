@@ -6,8 +6,8 @@ vi.mock('../lib/markets/defi-llama', () => ({
   fetchTopChainsTvl: vi.fn(),
   detectNotableTvlMovements: vi.fn()
 }));
-vi.mock('../lib/news/crypto-panic', () => ({
-  fetchNewsWithFallback: vi.fn()
+vi.mock('../lib/news/rss-aggregator', () => ({
+  fetchRecentNewsWithFallback: vi.fn()
 }));
 vi.mock('node:fs/promises', async (importOriginal) => {
   const actual = await importOriginal<typeof import('node:fs/promises')>();
@@ -23,7 +23,7 @@ vi.mock('node:fs/promises', async (importOriginal) => {
 import { callLlm } from '../lib/llm/client';
 import { getCached } from '../lib/cache/file-cache';
 import { fetchTopChainsTvl, detectNotableTvlMovements } from '../lib/markets/defi-llama';
-import { fetchNewsWithFallback } from '../lib/news/crypto-panic';
+import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 import * as fs from 'node:fs/promises';
 import { generateDailyInput } from './generate-daily-input';
 
@@ -31,7 +31,7 @@ const mockedCallLlm = vi.mocked(callLlm);
 const mockedGetCached = vi.mocked(getCached);
 const mockedFetchTopChainsTvl = vi.mocked(fetchTopChainsTvl);
 const mockedDetectNotableTvlMovements = vi.mocked(detectNotableTvlMovements);
-const mockedFetchNewsWithFallback = vi.mocked(fetchNewsWithFallback);
+const mockedFetchRecentNewsWithFallback = vi.mocked(fetchRecentNewsWithFallback);
 
 const TARGET_DATE = '2026-05-07';
 
@@ -117,7 +117,7 @@ describe('generateDailyInput', () => {
 
     mockedFetchTopChainsTvl.mockReset().mockResolvedValue([]);
     mockedDetectNotableTvlMovements.mockReset().mockReturnValue([]);
-    mockedFetchNewsWithFallback.mockReset().mockResolvedValue([]);
+    mockedFetchRecentNewsWithFallback.mockReset().mockResolvedValue([]);
     mockedCallLlm.mockReset().mockResolvedValue(MOCK_LLM_RESPONSE);
   });
 
@@ -194,7 +194,7 @@ describe('generateDailyInput', () => {
   });
 
   it('wraps news items in <news_item> tags for LLM prompt', async () => {
-    mockedFetchNewsWithFallback.mockResolvedValue([
+    mockedFetchRecentNewsWithFallback.mockResolvedValue([
       {
         headline: 'Bitcoin ETF inflows surge',
         url: 'https://example.com/btc-etf',
@@ -213,8 +213,8 @@ describe('generateDailyInput', () => {
     expect(userMessage?.content).toContain('source="CoinDesk"');
   });
 
-  it('sends empty news prompt when fetchNewsWithFallback returns empty', async () => {
-    mockedFetchNewsWithFallback.mockResolvedValue([]);
+  it('sends empty news prompt when fetchRecentNewsWithFallback returns empty', async () => {
+    mockedFetchRecentNewsWithFallback.mockResolvedValue([]);
 
     await generateDailyInput(TARGET_DATE);
 

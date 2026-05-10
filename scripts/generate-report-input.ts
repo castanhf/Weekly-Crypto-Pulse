@@ -2,16 +2,16 @@
  * generate-report-input.ts
  *
  * Fetches live market data from CoinGecko (top-15 by market cap), DeFiLlama
- * (chain TVL), Alternative.me Fear & Greed index, and CryptoPanic news, then
- * calls the LLM client (GitHub Models primary, OpenAI fallback) to produce a
- * fresh LocalReportInput JSON written to data/report-inputs/local-report-input.json.
+ * (chain TVL), Alternative.me Fear & Greed index, and RSS-aggregated news,
+ * then calls the LLM client (GitHub Models primary, OpenAI fallback) to
+ * produce a fresh LocalReportInput JSON written to
+ * data/report-inputs/local-report-input.json.
  *
  * Called as the first step in the weekly automation workflow, before
  * generate-local-report.ts runs.
  *
  * Required env vars: GITHUB_TOKEN (primary LLM provider, auto-injected by GitHub
- * Actions), OPENAI_API_KEY (fallback LLM provider, strongly recommended),
- * CRYPTOPANIC_API_KEY (news integration, optional — degrades gracefully).
+ * Actions), OPENAI_API_KEY (fallback LLM provider, strongly recommended).
  */
 
 import { readdir, readFile, writeFile } from 'node:fs/promises';
@@ -24,7 +24,7 @@ import { wrapNewsItemsForPrompt } from '../lib/llm/prompt-helpers';
 import { getCached } from '../lib/cache/file-cache';
 import { isExcludedFromMovers, isStablecoin, isWrappedOrDerivative } from '../lib/markets/asset-categories';
 import { detectNotableTvlMovements, fetchTopChainsTvl } from '../lib/markets/defi-llama';
-import { fetchNewsWithFallback } from '../lib/news/crypto-panic';
+import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -368,7 +368,7 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
   const [marketData, topChainsTvl, newsItems] = await Promise.all([
     fetchMarketData(),
     fetchTopChainsTvl({ topN: 15 }),
-    fetchNewsWithFallback({ hoursBack: 168, maxItems: 30 })
+    fetchRecentNewsWithFallback({ hoursBack: 168, maxTotalItems: 30 })
   ]);
 
   const notableMovements = detectNotableTvlMovements(topChainsTvl);
