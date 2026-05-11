@@ -8,22 +8,20 @@
  * Called as step 2 in the daily pipeline, after generate-daily-input.ts and
  * before review-daily-report.ts.
  *
- * Schema decision (Option A): the weekly footer link is included as the last
- * item in worthKnowing (max 3 editorial bullets + 1 footer = 4 total, within
- * the daily@1.0 schema's max of 4). A proper footer field requires a schema
- * bump to daily@1.1 — tracked as TODO for a future prompt.
+ * Schema: daily@1.1. The weeklyFooter field replaces the worthKnowing[3] hack
+ * from daily@1.0. worthKnowing now holds up to 4 editorial bullets; the footer
+ * link lives in its own structured field.
  */
 
 import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { DAILY_SCHEMA_V1_0 } from '../domain/schema-version';
+import { DAILY_SCHEMA_V1_1 } from '../domain/schema-version';
 import type { DailyArtifact, MoverEntry, TrackedAssetEntry } from '../domain/daily';
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
-import { validateDailyV1_0 } from '../lib/reports/artifact-validator';
+import { validateDailyV1_1 } from '../lib/reports/artifact-validator';
 import type { JsonRecord } from '../lib/reports/json-assertions';
-import { SITE_URL } from '../lib/site';
 import type { DailyResearcherInput } from './generate-daily-input';
 
 // ---------------------------------------------------------------------------
@@ -68,13 +66,6 @@ const findMostRecentWeeklySlug = async (): Promise<string | null> => {
   } catch {
     return null;
   }
-};
-
-const buildFooterString = (weeklySlug: string | null): string => {
-  if (weeklySlug) {
-    return `For deeper context, see this week's Crypto Pulse: ${SITE_URL}/reports/${weeklySlug}`;
-  }
-  return `For deeper context, see the Crypto Pulse archive: ${SITE_URL}/reports`;
 };
 
 // ---------------------------------------------------------------------------
@@ -129,7 +120,7 @@ SECTION INSTRUCTIONS:
 - whatMoved.topTracked: exactly the 15 assets provided. Non-stablecoin, non-derivative entries get one line of context. Stablecoins and derivatives appear but are NOT narrated as market news.
 - whatMoved.winners / losers: include all from researcher data. Include catalyst if provided. If both arrays are empty, include a note: "No assets in the 16-50 range moved more than 5%."
 - whyItMoved: 200-300 words. Plainspoken prose explaining the day's main driver. Weave in news items where relevant. On quiet days, be honest and brief — do not pad with invented causal explanations. FORBIDDEN causal attributions: "ongoing interest in the asset", "continues to hold a dominant position", "market sentiment appears to be stabilizing", "investor caution as the market awaits developments" (unless quantified). If an asset moved <1%, say it didn't move meaningfully — don't manufacture an explanation.
-- worthKnowing: up to 3 bullets (the 4th slot is reserved for a footer link the script adds). Each bullet is one plain-English sentence. Priority: TVL movements first, then regulatory, then protocol events. May be empty on a quiet day.
+- worthKnowing: up to 4 bullets of actual news content. Each bullet is one plain-English sentence. Priority: TVL movements first, then regulatory, then protocol events. May be empty on a quiet day.
 - snapshot: pass through the 4 numeric fields from researcher data. No prose — just the numbers.
 - tags: 3-6 day-specific kebab-case tags. FORBIDDEN generic tags: "crypto", "daily", "market", "news", "update". Use specific tags: company names ("circle", "ripple"), regulatory events ("senate-stablecoin-vote"), market themes ("etf-flows"), specific moving assets with catalysts.
 
@@ -203,7 +194,7 @@ Rules for whatMoved:
 - winners and losers must use catalyst as a non-empty string (invent a brief explanation if the researcher had null).
 - marketCapUsd for each topTracked entry comes from the researcher data.
 - isStablecoin reflects the researcher's classification.
-- worthKnowing must have at most 3 items (the script adds a 4th footer item).`;
+- worthKnowing must have at most 4 items of actual news content.`;
 };
 
 // ---------------------------------------------------------------------------
@@ -231,7 +222,7 @@ const validateWriterOutput = (parsed: unknown): WriterLlmOutput => {
   if (typeof typed.summary !== 'string' || !typed.summary) throw new Error('summary must be a non-empty string');
   if (typeof typed.whyItMoved !== 'string' || !typed.whyItMoved) throw new Error('whyItMoved must be a non-empty string');
   if (!Array.isArray(typed.worthKnowing)) throw new Error('worthKnowing must be an array');
-  if (typed.worthKnowing.length > 3) throw new Error(`worthKnowing must have at most 3 items (script adds footer), got ${typed.worthKnowing.length}`);
+  if (typed.worthKnowing.length > 4) throw new Error(`worthKnowing must have at most 4 items, got ${typed.worthKnowing.length}`);
   if (!Array.isArray(typed.tags) || typed.tags.length === 0) throw new Error('tags must be a non-empty array');
   if (typeof typed.whatMoved !== 'object' || typed.whatMoved === null) throw new Error('whatMoved must be an object');
   if (!Array.isArray(typed.whatMoved.topTracked)) throw new Error('whatMoved.topTracked must be an array');
@@ -252,7 +243,7 @@ const assembleDraft = (
   targetDate: string,
   writerOutput: WriterLlmOutput,
   researcherInput: DailyResearcherInput,
-  footerString: string
+  weeklySlug: string | null
 ): DailyArtifact => {
   const slug = buildArtifactSlug(targetDate, writerOutput.headline);
 
@@ -286,8 +277,6 @@ const assembleDraft = (
     isStablecoin: a.isStablecoin
   }));
 
-  const worthKnowing = [...writerOutput.worthKnowing, footerString];
-
   // Use researcher's marketSnapshot directly — LLM-generated snapshot values are
   // unreliable for large numbers (units confusion between billions and trillions).
   const snapshot = {
@@ -297,8 +286,12 @@ const assembleDraft = (
     fearGreedIndex: researcherInput.marketSnapshot.fearGreedIndex
   };
 
+  const weeklyFooter = weeklySlug
+    ? { text: "For deeper context, see this week's Crypto Pulse", weeklySlug }
+    : undefined;
+
   return {
-    schemaVersion: DAILY_SCHEMA_V1_0,
+    schemaVersion: DAILY_SCHEMA_V1_1,
     generatedAt: new Date().toISOString(),
     publishedAt: targetDate,
     slug,
@@ -306,9 +299,10 @@ const assembleDraft = (
     summary: writerOutput.summary,
     whatMoved: { winners, losers, topTracked },
     whyItMoved: writerOutput.whyItMoved,
-    worthKnowing,
+    worthKnowing: writerOutput.worthKnowing,
     snapshot,
-    tags: writerOutput.tags
+    tags: writerOutput.tags,
+    ...(weeklyFooter !== undefined ? { weeklyFooter } : {})
   };
 };
 
@@ -319,7 +313,7 @@ const assembleDraft = (
 const validateDraft = (draft: DailyArtifact): string[] => {
   const errors: string[] = [];
   try {
-    validateDailyV1_0(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
+    validateDailyV1_1(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
   } catch (err) {
     errors.push(err instanceof Error ? err.message : String(err));
   }
@@ -356,9 +350,8 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
     console.log('  Incorporating editor revision notes…');
   }
 
-  // Find weekly footer slug
+  // Find most recent weekly slug for the weeklyFooter field
   const weeklySlug = await findMostRecentWeeklySlug();
-  const footerString = buildFooterString(weeklySlug);
 
   // Call LLM
   console.log('  Calling LLM (writer)…');
@@ -372,7 +365,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
       jsonMode: true,
       maxTokens: 4096
     },
-    { primary: 'github-models', secondary: 'openai', requestId: `daily-report-${targetDate}` }
+    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-${targetDate}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
@@ -389,7 +382,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   let validationErrors: string[] = firstParseError ? [firstParseError] : [];
 
   if (writerOutput) {
-    draft = assembleDraft(targetDate, writerOutput, researcherInput, footerString);
+    draft = assembleDraft(targetDate, writerOutput, researcherInput, weeklySlug);
     validationErrors = validateDraft(draft);
   }
 
@@ -409,10 +402,10 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
         jsonMode: true,
         maxTokens: 4096
       },
-      { primary: 'github-models', secondary: 'openai', requestId: `daily-report-correction-${targetDate}` }
+      { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-correction-${targetDate}` }
     );
     writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput);
-    draft = assembleDraft(targetDate, writerOutput, researcherInput, footerString);
+    draft = assembleDraft(targetDate, writerOutput, researcherInput, weeklySlug);
     validationErrors = validateDraft(draft);
   }
 

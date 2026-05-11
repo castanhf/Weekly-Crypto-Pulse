@@ -66,7 +66,7 @@ const MOCK_WRITER_OUTPUT = {
     ethDominancePct: 13.1,
     fearGreedIndex: 72
   },
-  tags: ['crypto', 'daily', 'bitcoin']
+  tags: ['bitcoin', 'sideways-action', 'fed-minutes']
 };
 
 const MOCK_LLM_RESPONSE = {
@@ -76,6 +76,10 @@ const MOCK_LLM_RESPONSE = {
   usage: { inputTokens: 800, outputTokens: 600 },
   rawResponse: {}
 };
+
+const MOCK_WEEKLY_ARTIFACT = JSON.stringify({
+  report: { metadata: { slug: '2026-05-06-bitcoin-holds-steady-ahead-of-fed' } }
+});
 
 describe('generateDailyReport', () => {
   beforeEach(() => {
@@ -87,7 +91,7 @@ describe('generateDailyReport', () => {
     vi.mocked(callLlm).mockResolvedValue(MOCK_LLM_RESPONSE);
   });
 
-  it('produces a valid daily@1.0 artifact draft', async () => {
+  it('produces a valid daily@1.1 artifact draft', async () => {
     vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
       if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
         return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
@@ -114,24 +118,81 @@ describe('generateDailyReport', () => {
       whatMoved: { topTracked: unknown[] };
     };
 
-    expect(draft.schemaVersion).toBe('daily@1.0');
+    expect(draft.schemaVersion).toBe('daily@1.1');
     expect(draft.publishedAt).toBe(TARGET_DATE);
     expect(draft.slug).toMatch(new RegExp(`^${TARGET_DATE}-`));
     expect(draft.headline).toBeTruthy();
-    expect(draft.worthKnowing).toHaveLength(1); // 0 from LLM + 1 footer
-    expect(draft.worthKnowing[0]).toContain('/reports');
     expect(draft.whatMoved.topTracked).toHaveLength(15);
   });
 
-  it('appends footer link as last worthKnowing item', async () => {
-    const outputWithBullets = {
+  it('populates weeklyFooter field when a weekly artifact exists', async () => {
+    vi.mocked(fs.readdir).mockResolvedValue(['2026-05-06-bitcoin-holds-steady-ahead-of-fed.json'] as unknown as ReturnType<typeof fs.readdir> extends Promise<infer T> ? T : never);
+    vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
+      const p = filePath as string;
+      if (p.includes('local-daily-input')) {
+        return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      if (p.includes('2026-05-06-bitcoin-holds-steady-ahead-of-fed.json')) {
+        return MOCK_WEEKLY_ARTIFACT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      throw { code: 'ENOENT' };
+    });
+
+    let writtenDraft: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (filePath, content) => {
+      if (typeof filePath === 'string' && filePath.includes(`draft-${TARGET_DATE}.json`)) {
+        writtenDraft = content as string;
+      }
+    });
+
+    await generateDailyReport(TARGET_DATE);
+
+    const draft = JSON.parse(writtenDraft!) as {
+      weeklyFooter?: { text: string; weeklySlug: string };
+      worthKnowing: string[];
+    };
+    expect(draft.weeklyFooter).toBeDefined();
+    expect(draft.weeklyFooter!.weeklySlug).toBe('2026-05-06-bitcoin-holds-steady-ahead-of-fed');
+    expect(draft.weeklyFooter!.text).toContain('Crypto Pulse');
+    // worthKnowing should NOT contain a footer URL
+    expect(draft.worthKnowing.every((item) => !item.includes('/reports/'))).toBe(true);
+  });
+
+  it('omits weeklyFooter when no weekly artifacts exist', async () => {
+    vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
+      if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
+        return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      throw { code: 'ENOENT' };
+    });
+
+    let writtenDraft: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (filePath, content) => {
+      if (typeof filePath === 'string' && filePath.includes(`draft-${TARGET_DATE}.json`)) {
+        writtenDraft = content as string;
+      }
+    });
+
+    await generateDailyReport(TARGET_DATE);
+
+    const draft = JSON.parse(writtenDraft!) as { weeklyFooter?: unknown };
+    expect(draft.weeklyFooter).toBeUndefined();
+  });
+
+  it('worthKnowing allows up to 4 editorial bullets (no footer hack)', async () => {
+    const outputWithFourBullets = {
       ...MOCK_WRITER_OUTPUT,
-      worthKnowing: ['Ethereum DeFi TVL fell 5% on Arbitrum.', 'SEC clarified staking rules for institutional providers.']
+      worthKnowing: [
+        'Ethereum DeFi TVL fell 5% on Arbitrum.',
+        'SEC clarified staking rules for institutional providers.',
+        'Solana validator upgrades completed without incident.',
+        'Fed minutes release Thursday may move risk assets.'
+      ]
     };
 
     vi.mocked(callLlm).mockResolvedValue({
       ...MOCK_LLM_RESPONSE,
-      content: JSON.stringify(outputWithBullets)
+      content: JSON.stringify(outputWithFourBullets)
     });
 
     vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
@@ -151,8 +212,7 @@ describe('generateDailyReport', () => {
     await generateDailyReport(TARGET_DATE);
 
     const draft = JSON.parse(writtenDraft!) as { worthKnowing: string[] };
-    expect(draft.worthKnowing).toHaveLength(3); // 2 bullets + 1 footer
-    expect(draft.worthKnowing[2]).toContain('/reports');
+    expect(draft.worthKnowing).toHaveLength(4);
     expect(draft.worthKnowing[0]).toContain('Ethereum');
   });
 
@@ -182,7 +242,6 @@ describe('generateDailyReport', () => {
 
     await generateDailyReport(TARGET_DATE);
 
-    // LLM should have been called with revision notes in user prompt
     const llmCalls = vi.mocked(callLlm).mock.calls;
     expect(llmCalls.length).toBeGreaterThanOrEqual(1);
     const userMessage = llmCalls[0][0].messages.find((m) => m.role === 'user');
@@ -214,7 +273,6 @@ describe('generateDailyReport', () => {
     await generateDailyReport(TARGET_DATE);
 
     const draft = JSON.parse(writtenDraft!) as { snapshot: { totalMarketCapUsd: number } };
-    // Researcher had 3.2T; LLM had 2.8B. Assembled artifact must use researcher's value.
     expect(draft.snapshot.totalMarketCapUsd).toBeGreaterThan(1e11);
     expect(draft.snapshot.totalMarketCapUsd).toBe(3_200_000_000_000);
   });
@@ -254,11 +312,11 @@ describe('generateDailyReport', () => {
   });
 
   it('attempts self-correction when first LLM response fails validation', async () => {
-    const invalidOutput = { ...MOCK_WRITER_OUTPUT, whatMoved: { ...MOCK_WRITER_OUTPUT.whatMoved, topTracked: [] } }; // empty topTracked fails validation
+    const invalidOutput = { ...MOCK_WRITER_OUTPUT, whatMoved: { ...MOCK_WRITER_OUTPUT.whatMoved, topTracked: [] } };
 
     vi.mocked(callLlm)
       .mockResolvedValueOnce({ ...MOCK_LLM_RESPONSE, content: JSON.stringify(invalidOutput) })
-      .mockResolvedValueOnce(MOCK_LLM_RESPONSE); // correction succeeds
+      .mockResolvedValueOnce(MOCK_LLM_RESPONSE);
 
     vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
       if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
@@ -269,7 +327,6 @@ describe('generateDailyReport', () => {
 
     await generateDailyReport(TARGET_DATE);
 
-    // Should have made 2 LLM calls (initial + correction)
     expect(vi.mocked(callLlm)).toHaveBeenCalledTimes(2);
   });
 });

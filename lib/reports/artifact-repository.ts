@@ -38,3 +38,6 @@ export const loadArtifactsByDateRange = (startIso: string, endIso: string): Read
 
 export const loadLatestArtifacts = (limit: number): ReadonlyArray<Artifact> =>
   loadAllArtifacts().slice(0, limit);
+
+export const loadArtifactBySlug = (slug: string): Artifact | undefined =>
+  loadAllArtifacts().find((artifact) => artifact.slug === slug);

@@ -57,6 +57,10 @@ This file feeds `npm run generate:local-report`, which validates it strictly. Yo
       }
     ],
     "changedSinceLastWeek": ["string", "..."]
+  },
+  "plainspokenOpening": {
+    "headline": "string — 1 sentence, plain-English headline for non-specialists",
+    "body": "string — 150–350 words, accessible plain-English opening for the free report"
   }
 }
 ```
@@ -64,6 +68,7 @@ This file feeds `npm run generate:local-report`, which validates it strictly. Yo
 ## Hard Constraints
 
 - `riskChecklist` MUST contain **exactly 5 items**. The parser enforces this. Fewer or more will cause pipeline failure.
+- `plainspokenOpening` is optional but strongly recommended. When present, `headline` must be one sentence and `body` must be 150–350 words. The parser accepts it if present and passes it through to the published artifact.
 - `regime` MUST be one of: `risk-on`, `risk-off`, `range-bound`, `transition`. Exact string match.
 - `week.publishedAt` MUST be the Monday of the current week in `YYYY-MM-DD` format.
 - `generatedAt` MUST be `YYYY-MM-DDT06:00:00.000Z` using the same Monday date.

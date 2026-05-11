@@ -6,6 +6,7 @@ import {
   type CapitalFlows,
   type MarketSnapshot,
   type Mover,
+  type PlainspokenOpening,
   type Regime,
   type ReportArtifact,
   type ReportSection,
@@ -36,6 +37,7 @@ type LocalReportInput = Readonly<{
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
   signals: ReportSignals;
+  plainspokenOpening?: PlainspokenOpening;
   capitalFlows?: CapitalFlows;
 }>;
 
@@ -214,6 +216,15 @@ const parseCapitalFlows = (value: unknown): CapitalFlows | undefined => {
   return { topChainsTvl, notableMovements };
 };
 
+const parsePlainspokenOpening = (value: unknown): PlainspokenOpening | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const opening = assertRecord(value, 'plainspokenOpening');
+  return {
+    headline: assertString(opening.headline, 'plainspokenOpening.headline'),
+    body: assertString(opening.body, 'plainspokenOpening.body')
+  };
+};
+
 const parseInput = (rawInput: string): LocalReportInput => {
   const parsed = JSON.parse(rawInput) as unknown;
   const root = assertRecord(parsed, 'root');
@@ -229,6 +240,7 @@ const parseInput = (rawInput: string): LocalReportInput => {
     movers: parseMovers(root.movers),
     sections: parseSections(root.sections),
     signals: parseSignals(root.signals),
+    plainspokenOpening: parsePlainspokenOpening(root.plainspokenOpening),
     capitalFlows: parseCapitalFlows(root.capitalFlows)
   };
 };
@@ -266,6 +278,7 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
       movers: input.movers,
       sections: input.sections,
       signals: input.signals,
+      ...(input.plainspokenOpening !== undefined ? { plainspokenOpening: input.plainspokenOpening } : {}),
       ...(input.capitalFlows !== undefined ? { capitalFlows: input.capitalFlows } : {})
     }
   };
