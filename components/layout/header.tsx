@@ -37,29 +37,31 @@ const isNavItemActive = (item: NavItem, currentPathname: string): boolean => {
   return exactPaths.includes(currentPathname) || prefixPaths.some((prefixPath) => currentPathname.startsWith(prefixPath));
 };
 
+const NAV_ITEM_BASE = 'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm transition';
+
 const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
   if (item.isEmphasized) {
+    // Pro is always shown as an accent button — it's a purchase CTA, not just a nav link.
+    // Full brightness when active (you're on /pro); dimmed accent border when inactive.
     if (isActive) {
       return getCtaClassName({
-        className: 'whitespace-nowrap py-2.5 shadow-[0_6px_20px_rgba(16,24,40,0.15)]',
+        className: 'whitespace-nowrap py-2.5',
         tone: 'primary'
       });
     }
-
     return composeClassNames(
-      'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-paper/60 transition',
-      'hover:bg-white/5 hover:text-paper'
+      NAV_ITEM_BASE,
+      'border border-accent/35 font-medium text-accent/75 hover:border-accent/60 hover:text-accent'
     );
   }
 
+  // Regular nav items use a semantic "current page" indicator — a subtle white-glass
+  // pill — rather than the orange CTA button style (which signals "buy", not "you are here").
   if (isActive) {
-    return getCtaClassName({ tone: 'primary', className: 'whitespace-nowrap' });
+    return composeClassNames(NAV_ITEM_BASE, 'bg-white/[0.08] font-semibold text-paper');
   }
 
-  return composeClassNames(
-    'inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-paper/60 transition',
-    'hover:bg-white/5 hover:text-paper'
-  );
+  return composeClassNames(NAV_ITEM_BASE, 'font-medium text-paper/60 hover:bg-white/5 hover:text-paper');
 };
 
 export function Header(): JSX.Element {
