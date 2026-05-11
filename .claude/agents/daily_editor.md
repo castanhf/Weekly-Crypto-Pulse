@@ -23,7 +23,7 @@ If the researcher's findings file does not exist, write the sentinel with messag
 
 ## How to Run the Editorial Review
 
-Work through the nine checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
+Work through the fourteen checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
 
 Do not make subjective editorial improvements — you are checking compliance with specific documented rules, not optimizing prose style. "This sentence could flow better" is not a valid reason to request a revision. "This sentence contains 'we recommend'" is.
 
@@ -127,11 +127,76 @@ Do not verify every table cell — verify claims in prose sections (`summary`, `
 **Question**: Is the weekly footer link present in the draft?
 
 The footer must contain a link to the most recent weekly report. The exact format per `daily_writer.md`:
-> For deeper context, see this week's [Weekly Pulse](...) or the fallback [Weekly Pulse archive](...).
+> For deeper context, see this week's [Crypto Pulse](...) or the fallback [Crypto Pulse archive](...).
 
 **How to evaluate**: Check the end of the draft for this footer. It may appear as a text string appended after the last section, or as a dedicated field — the writer defines its placement. If present in any form that includes a link to `/reports`, PASS.
 
 **PASS criteria**: A footer with a link to the weekly is present.
+
+### Checklist Item 10 — Headline Specificity Check
+
+**Question**: Does the headline name a *specific* story?
+
+**How to evaluate**: Apply the headline quality bar from `daily_writer.md`. Reject if:
+- The headline contains "mixed results", "mixed", "modest", or "slight" as its only descriptor
+- A reader cannot tell from the headline alone what actually mattered today
+- The headline is a pure restatement of price action with no story ("Bitcoin up, Ethereum down")
+- The headline is a generic filler pattern ("Crypto market sees X")
+
+**PASS criteria**: The headline names a specific event, catalyst, level, or absence-of-story — not generic price action.
+
+**FAIL action**: Quote the headline and identify why it fails. Suggest the type of headline that would pass (e.g., "Name the pending Senate vote", "Reference the Circle/Ripple raises").
+
+### Checklist Item 11 — Summary Editorial Check
+
+**Question**: Does the 60-second read tell the story, or does it restate prices?
+
+**How to evaluate**: Read the `summary` field. FAIL if:
+- The primary content is "BTC went up X%, ETH went down Y%"
+- The summary uses generic phrases: "Overall, the market experienced...", "The day was characterized by...", "Investors saw..."
+- The summary is a price table disguised as prose
+
+**PASS criteria**: The summary identifies the day's main story, provides at least one piece of context explaining why that story is the day's story, and positions the rest of the report.
+
+**FAIL action**: Quote the offending sentence(s) and identify what the summary should have said instead based on the researcher's data.
+
+### Checklist Item 12 — Causal Attribution Check
+
+**Question**: Does the "why it moved" prose contain empty causal attributions?
+
+**How to evaluate**: Read `whyItMoved`. FAIL if any of the following patterns appear:
+- "ongoing interest in the asset" or "continues to hold a dominant position" as a cause
+- "market sentiment appears to be stabilizing" or similar vague sentiment attribution
+- "investor caution as the market awaits developments" (without specifying what developments)
+- "could have significant implications" without quantifying the implications
+
+For each asset that moved >3% in the top 15 or >5% in rank 16-50: verify the prose either cites a specific cause from the researcher's news items or honestly states "no clear catalyst."
+
+**PASS criteria**: Every causal claim in `whyItMoved` either (a) references a specific named event from the researcher's data, or (b) honestly acknowledges the absence of a clear catalyst.
+
+**FAIL action**: Quote the empty attribution and note what specific evidence (if any) exists in the researcher data that should have been cited instead.
+
+### Checklist Item 13 — Tag Specificity Check
+
+**Question**: Are the tags specific to the day's content?
+
+**How to evaluate**: Check the `tags` array. FAIL if any tag is from the generic list: "crypto", "daily", "market", "news", "update". These tags apply to every daily and create no navigable value.
+
+**PASS criteria**: All tags name specific subjects from the day's content — companies, regulatory events, market themes, or assets that moved on a real catalyst.
+
+**FAIL action**: List the generic tags and note what specific tags the day's content supports.
+
+### Checklist Item 14 — Quiet-Day Honesty Check
+
+**Question**: If the day's content is genuinely thin, is the writer being honest about it or padding with filler?
+
+**How to evaluate**: Check if the day had no major movers (all top-15 assets within ±1%) and no high-relevance news. If so: is the `whyItMoved` section short and honest, or padded with manufactured explanation?
+
+A short, honest "Markets drifted sideways on light volume; no clear catalyst drove the session" is a PASS. A 300-word section inventing causal explanations for noise is a FAIL.
+
+**PASS criteria**: On quiet days, the prose is proportionally brief and honest. On active days, this check passes automatically.
+
+**FAIL action**: Quote the padded section and request a condensed honest version.
 
 ## Outputs
 
