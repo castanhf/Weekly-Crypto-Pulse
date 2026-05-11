@@ -23,6 +23,7 @@ import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
 import { validateDailyV1_0 } from '../lib/reports/artifact-validator';
 import type { JsonRecord } from '../lib/reports/json-assertions';
+import { SITE_URL } from '../lib/site';
 import type { DailyResearcherInput } from './generate-daily-input';
 
 // ---------------------------------------------------------------------------
@@ -32,7 +33,6 @@ import type { DailyResearcherInput } from './generate-daily-input';
 const DAILY_INPUT_PATH = path.resolve(process.cwd(), 'data/daily-inputs/local-daily-input.json');
 const DRAFTS_DIR = path.resolve(process.cwd(), 'data/daily-drafts');
 const REPORTS_DIR = path.resolve(process.cwd(), 'data/reports');
-const SITE_URL = process.env['NEXT_PUBLIC_SITE_URL'] ?? 'https://weekly-crypto-pulse.com';
 
 // ---------------------------------------------------------------------------
 // Slug helpers
@@ -72,9 +72,9 @@ const findMostRecentWeeklySlug = async (): Promise<string | null> => {
 
 const buildFooterString = (weeklySlug: string | null): string => {
   if (weeklySlug) {
-    return `For deeper context, see this week's Weekly Pulse: ${SITE_URL}/reports/${weeklySlug}`;
+    return `For deeper context, see this week's Crypto Pulse: ${SITE_URL}/reports/${weeklySlug}`;
   }
-  return `For deeper context, see the Weekly Pulse archive: ${SITE_URL}/reports`;
+  return `For deeper context, see the Crypto Pulse archive: ${SITE_URL}/reports`;
 };
 
 // ---------------------------------------------------------------------------
@@ -238,9 +238,17 @@ const validateWriterOutput = (parsed: unknown): WriterLlmOutput => {
 const assembleDraft = (
   targetDate: string,
   writerOutput: WriterLlmOutput,
+  researcherInput: DailyResearcherInput,
   footerString: string
 ): DailyArtifact => {
   const slug = buildArtifactSlug(targetDate, writerOutput.headline);
+
+  // Build lookup from researcher's topTracked for authoritative numeric values.
+  // The LLM misinterprets large numbers (e.g. reads "$2.807T" → outputs 2807000000
+  // instead of 2807000000000). Always use researcher data for market cap fields.
+  const researcherCapBySymbol = new Map<string, number>(
+    researcherInput.topTracked.map((a) => [a.symbol.toUpperCase(), a.marketCapUsd])
+  );
 
   const winners: MoverEntry[] = writerOutput.whatMoved.winners.map((w) => ({
     symbol: w.symbol,
@@ -261,11 +269,20 @@ const assembleDraft = (
     name: a.name,
     priceUsd: a.priceUsd,
     changePct24h: a.changePct24h,
-    marketCapUsd: a.marketCapUsd,
+    marketCapUsd: researcherCapBySymbol.get(a.symbol.toUpperCase()) ?? a.marketCapUsd,
     isStablecoin: a.isStablecoin
   }));
 
   const worthKnowing = [...writerOutput.worthKnowing, footerString];
+
+  // Use researcher's marketSnapshot directly — LLM-generated snapshot values are
+  // unreliable for large numbers (units confusion between billions and trillions).
+  const snapshot = {
+    totalMarketCapUsd: researcherInput.marketSnapshot.totalMarketCapUsd,
+    btcDominancePct: researcherInput.marketSnapshot.btcDominancePct,
+    ethDominancePct: researcherInput.marketSnapshot.ethDominancePct,
+    fearGreedIndex: researcherInput.marketSnapshot.fearGreedIndex
+  };
 
   return {
     schemaVersion: DAILY_SCHEMA_V1_0,
@@ -277,7 +294,7 @@ const assembleDraft = (
     whatMoved: { winners, losers, topTracked },
     whyItMoved: writerOutput.whyItMoved,
     worthKnowing,
-    snapshot: writerOutput.snapshot,
+    snapshot,
     tags: writerOutput.tags
   };
 };
@@ -359,7 +376,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   let validationErrors: string[] = firstParseError ? [firstParseError] : [];
 
   if (writerOutput) {
-    draft = assembleDraft(targetDate, writerOutput, footerString);
+    draft = assembleDraft(targetDate, writerOutput, researcherInput, footerString);
     validationErrors = validateDraft(draft);
   }
 
@@ -382,7 +399,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
       { primary: 'github-models', secondary: 'openai', requestId: `daily-report-correction-${targetDate}` }
     );
     writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput);
-    draft = assembleDraft(targetDate, writerOutput, footerString);
+    draft = assembleDraft(targetDate, writerOutput, researcherInput, footerString);
     validationErrors = validateDraft(draft);
   }
 
