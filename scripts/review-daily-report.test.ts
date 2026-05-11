@@ -27,7 +27,7 @@ const MOCK_DRAFT = JSON.stringify({
   summary: 'Bitcoin traded in a tight range above $95,000 on Wednesday.',
   whatMoved: { winners: [], losers: [], topTracked: [] },
   whyItMoved: 'Markets drifted on light volume with no major catalysts.',
-  worthKnowing: ['For deeper context, see this week\'s Weekly Pulse: https://weekly-crypto-pulse.com/reports/2026-04-28-bull-market-thesis'],
+  worthKnowing: ['For deeper context, see this week\'s Crypto Pulse: https://crypto-pulse.com/reports/2026-04-28-bull-market-thesis'],
   snapshot: { totalMarketCapUsd: 3_200_000_000_000, btcDominancePct: 58.7, ethDominancePct: 13.1, fearGreedIndex: 72 },
   tags: ['crypto', 'daily']
 });
