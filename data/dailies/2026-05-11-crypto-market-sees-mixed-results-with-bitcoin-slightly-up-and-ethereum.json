@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "daily@1.0",
+  "generatedAt": "2026-05-11T17:38:26.597Z",
+  "publishedAt": "2026-05-11",
+  "slug": "2026-05-11-crypto-market-sees-mixed-results-with-bitcoin-slightly-up-and-ethereum",
+  "headline": "Crypto market sees mixed results with Bitcoin slightly up and Ethereum down.",
+  "summary": "Bitcoin edged up by 0.47% to $81,672, while Ethereum declined by 0.97% to $2,330.04. Overall, the market remains stable, with a total market cap of $2.802 trillion and a fear and greed index reading of 48, indicating a neutral sentiment among investors.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": 6.11,
+        "catalyst": "Cronos gained 6.11% as market sentiment appears to improve, despite overall market stability."
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -5.05,
+        "catalyst": "Zcash fell 5.05% amid ongoing regulatory concerns affecting the broader crypto market."
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81672,
+        "changePct24h": 0.47,
+        "marketCapUsd": 1634046335396,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2330.04,
+        "changePct24h": -0.97,
+        "marketCapUsd": 280947493612,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.03,
+        "marketCapUsd": 189614587975,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.47,
+        "changePct24h": -1.27,
+        "marketCapUsd": 90835457031,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 660.12,
+        "changePct24h": 0.21,
+        "marketCapUsd": 88908396464,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 77553745901,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 97.16,
+        "changePct24h": 1.55,
+        "marketCapUsd": 56073194846,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.351,
+        "changePct24h": -0.17,
+        "marketCapUsd": 33270930045,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 3.92,
+        "marketCapUsd": 18253839747,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1112,
+        "changePct24h": 0.54,
+        "marketCapUsd": 17117619101,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 59.99,
+        "changePct24h": -0.08,
+        "marketCapUsd": 12798720984,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 11056513240,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2811,
+        "changePct24h": -2.02,
+        "marketCapUsd": 10391897449,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 41.91,
+        "changePct24h": -3.4,
+        "marketCapUsd": 9977625246,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.22,
+        "changePct24h": 0.04,
+        "marketCapUsd": 9410323057,
+        "isStablecoin": false
+      }
+    ]
+  },
+  "whyItMoved": "Today's market activity was characterized by a mix of stability and slight fluctuations among major cryptocurrencies. Bitcoin's modest increase of 0.47% reflects a steady demand, while Ethereum's decline of 0.97% may be attributed to profit-taking after recent gains. Meanwhile, Cronos stood out with a notable rise of 6.11%, suggesting a positive shift in sentiment for this asset. On the other hand, Zcash's drop of 5.05% highlights ongoing regulatory concerns that continue to weigh on the broader market. Recent news indicates that banking groups are intensifying their lobbying efforts regarding stablecoin yield regulations, which could impact market dynamics in the near future. Additionally, Ripple's successful fundraising of $200 million to expand its Ripple Prime platform signals strong institutional interest, potentially influencing market sentiment positively. As Solana's major consensus overhaul enters testing, it may enhance its scalability and performance, which could attract more users and investors in the long run.",
+  "worthKnowing": [
+    "Banking groups are ramping up their lobbying efforts regarding stablecoin yield regulations as a Senate vote approaches.",
+    "Ripple has raised $200 million from Neuberger Berman to expand its Ripple Prime platform, indicating strong institutional interest.",
+    "Anchorage's withdrawal from the stablecoin group raises questions about future partnerships in the stablecoin sector.",
+    "For deeper context, see this week's Crypto Pulse: https://crypto-pulse.com/reports/2026-05-04-market-sentiment-remains-cautious-with-mixed-asset-performance"
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2802175657275,
+    "btcDominancePct": 58.3228,
+    "ethDominancePct": 10.0288,
+    "fearGreedIndex": 48
+  },
+  "tags": [
+    "crypto",
+    "daily",
+    "market update"
+  ]
+}
