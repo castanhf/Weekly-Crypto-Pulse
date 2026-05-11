@@ -6,9 +6,11 @@ import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { pageContainerClassName } from '@/components/layout/page-shell';
 import { getSiteOrigin } from '@/lib/seo';
-import { siteConfig } from '@/lib/site';
+import { SITE_NAME, siteConfig } from '@/lib/site';
 
 import './globals.css';
+
+const siteOrigin = getSiteOrigin();
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +18,15 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
-  metadataBase: new URL(getSiteOrigin())
+  metadataBase: new URL(siteOrigin),
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        { url: `${siteOrigin}/rss.xml`, title: `${SITE_NAME} — Weekly` },
+        { url: `${siteOrigin}/rss/daily.xml`, title: `${SITE_NAME} — Daily` }
+      ]
+    }
+  }
 };
 
 type RootLayoutProps = {
