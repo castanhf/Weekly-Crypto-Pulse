@@ -6,7 +6,8 @@ export const dynamic = 'force-static';
 
 export function GET(): Response {
   const reports = getAllReports();
-  const rssFeed = createRssFeed(reports, createDistributionContext(getSiteOrigin()));
+  const siteOrigin = getSiteOrigin();
+  const rssFeed = createRssFeed(reports, createDistributionContext(siteOrigin, new Date(), `${siteOrigin}/rss.xml`));
 
   return new Response(rssFeed, {
     headers: {
