@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import type { DailyArtifact } from '@/domain/daily';
+import { PaidBlock } from '@/components/conversion/PaidBlock';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
 
@@ -187,6 +188,10 @@ export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element
             </SurfaceCard>
           )}
         </div>
+      </PageSection>
+
+      <PageSection>
+        <PaidBlock />
       </PageSection>
     </PageShell>
   );
