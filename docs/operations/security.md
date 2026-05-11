@@ -154,6 +154,23 @@ The following files contain hardcoded asset classification data that requires pe
 
 ---
 
+## Claude Code permissions
+
+The project's `.claude/settings.json` grants broad edit, write, and read access (`./**`) to Claude Code. This is a deliberate choice for the agentic coding workflow:
+
+- The operator approves every PR before it reaches `release/r2.1`.
+- All edits are visible in git diffs before commit.
+- The agent operates in a directory the operator owns and trusts.
+
+The alternative (narrow per-path permissions requiring approval on each edit) creates unsustainable friction for prompt-driven development. Broad permissions are accepted as the right tradeoff for this project's workflow.
+
+Tighter permissions should be reconsidered if:
+- The project gains external contributors with shell access.
+- Sensitive credentials are introduced that should be inaccessible to the agent.
+- The architecture changes to include execution surfaces beyond development tooling.
+
+---
+
 ## SAST
 
 CodeQL analysis is configured in `.github/workflows/codeql.yml`. It runs on push and pull request to `main`, `release/r2.0`, and `release/r2.1`, and on a weekly schedule (Mondays 14:23 UTC).
@@ -170,6 +187,6 @@ Findings appear in the repository's Security tab (GitHub Advanced Security). Rev
 |---|---|
 | **Weekly** | Dependabot PRs: review and merge patch/minor updates; escalate major bumps |
 | **Weekly** | CodeQL findings: review Security tab; high-severity findings block next release |
-| **Annually** | Full secret rotation (OPENAI_API_KEY on 1 January) |
+| **Annually** | Full secret rotation (ANTHROPIC_API_KEY on 1 January) |
 | **On trigger** | Any new third-party integration, auth surface, or database added → re-assess threat model |
 | **On compromise** | Rotate affected secrets immediately; audit access logs |

@@ -4,11 +4,14 @@
   },
   "permissions": {
     "allow": [
+      "Bash",
       "WebFetch(domain:api.coingecko.com)",
       "WebFetch(domain:api.alternative.me)",
       "WebFetch(domain:api.llama.fi)",
       "WebSearch",
-      "Bash"
+      "Edit(./**)",
+      "Write(./**)",
+      "Read(./**)"
     ]
   }
 }

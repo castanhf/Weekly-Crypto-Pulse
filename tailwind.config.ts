@@ -20,7 +20,13 @@ const config: Config = {
         'regime-risk-on': '#16a34a',
         'regime-risk-off': '#dc2626',
         'regime-range-bound': '#d97706',
-        'regime-transition': '#94a3b8'
+        'regime-transition': '#94a3b8',
+        chart: {
+          'market-cap': '#F7931A',
+          'btc-dom': '#60a5fa',
+          'eth-dom': '#a78bfa',
+          'fear-greed': '#94a3b8'
+        }
       }
     }
   },

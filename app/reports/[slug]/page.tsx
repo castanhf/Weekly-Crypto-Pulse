@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
+import { RegimeHistoryStrip } from '@/components/charts/RegimeHistoryStrip';
+import { SnapshotTrendChart } from '@/components/charts/SnapshotTrendChart';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
 import { DailyReportPage } from '@/components/reports/daily-report-page';
@@ -13,8 +15,10 @@ import { ReportHero } from '@/components/reports/report-hero';
 import { ReportSections } from '@/components/reports/report-sections';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
+import { computeRegimeHistoryWindow, computeSnapshotTrendWindow } from '@/lib/charts/window';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
 import { loadAllArtifacts, loadArtifactBySlug } from '@/lib/reports/artifact-repository';
+import type { WeeklyArtifact } from '@/lib/reports/artifact-types';
 import { createDailyMetadata, createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
@@ -63,6 +67,10 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
   const reportUrl = toAbsoluteUrl(`/reports/${report.metadata.slug}`);
   const weeklyProCheckoutTarget = getProCheckoutTarget('singleIssue');
   const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');
+
+  const weeklyArtifacts = loadAllArtifacts().filter((a): a is WeeklyArtifact => a.kind === 'weekly');
+  const snapshotTrendData = computeSnapshotTrendWindow({ asOfDate: artifact.publishedAt, artifacts: weeklyArtifacts });
+  const regimeHistoryData = computeRegimeHistoryWindow({ asOfDate: artifact.publishedAt, artifacts: weeklyArtifacts });
 
   return (
     <PageShell className="space-y-10 sm:space-y-14 lg:space-y-16">
@@ -156,6 +164,21 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
             </div>
           </SurfaceCard>
         </div>
+      </PageSection>
+
+      <PageSection>
+        <SurfaceCard className="space-y-8 border-white/10 bg-surface p-5 sm:p-8">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">12-week context</p>
+            <h2 className="mt-1 text-[1.1rem] font-semibold tracking-tight">Market snapshot trend</h2>
+          </div>
+          <SnapshotTrendChart data={snapshotTrendData} />
+          <div>
+            <h2 className="mb-1 text-[1.1rem] font-semibold tracking-tight">Regime history</h2>
+            <p className="mb-4 text-sm text-muted">Each cell is one weekly report. The highlighted cell is this issue.</p>
+            <RegimeHistoryStrip data={regimeHistoryData} currentPublishedAt={artifact.publishedAt} />
+          </div>
+        </SurfaceCard>
       </PageSection>
     </PageShell>
   );
