@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "daily@1.0",
+  "generatedAt": "2026-05-11T17:42:01.397Z",
+  "publishedAt": "2026-05-11",
+  "slug": "2026-05-11-ripple-raises-200-million-as-stablecoin-regulations-loom-ahead-of-sena",
+  "headline": "Ripple raises $200 million as stablecoin regulations loom ahead of Senate vote.",
+  "summary": "Ripple's recent $200 million fundraising round from Neuberger Berman highlights strong institutional interest in its services, particularly as the crypto market braces for potential regulatory changes regarding stablecoins. Meanwhile, Bitcoin managed to hold above $81,000, but concerns over geopolitical tensions and whale selling are casting a shadow on market stability. As the Senate prepares to vote on stablecoin regulations, the outcome could significantly impact major players in the sector.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": 6.11,
+        "catalyst": "Cronos gained 6.11% as market interest in alternative cryptocurrencies surged amid stablecoin developments."
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -5.05,
+        "catalyst": "Zcash dropped 5.05% following negative sentiment surrounding regulatory actions affecting stablecoins."
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81672,
+        "changePct24h": 0.47,
+        "marketCapUsd": 1634046335396,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2330.04,
+        "changePct24h": -0.97,
+        "marketCapUsd": 280947493612,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.03,
+        "marketCapUsd": 189614587975,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.47,
+        "changePct24h": -1.27,
+        "marketCapUsd": 90835457031,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 660.12,
+        "changePct24h": 0.21,
+        "marketCapUsd": 88908396464,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 77553745901,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 97.16,
+        "changePct24h": 1.55,
+        "marketCapUsd": 56073194846,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.351,
+        "changePct24h": -0.17,
+        "marketCapUsd": 33270930045,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 3.92,
+        "marketCapUsd": 18253839747,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1112,
+        "changePct24h": 0.54,
+        "marketCapUsd": 17117619101,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 59.99,
+        "changePct24h": -0.08,
+        "marketCapUsd": 12798720984,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 11056513240,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2811,
+        "changePct24h": -2.02,
+        "marketCapUsd": 10391897449,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 41.91,
+        "changePct24h": -3.4,
+        "marketCapUsd": 9977625246,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.22,
+        "changePct24h": 0.04,
+        "marketCapUsd": 9410323057,
+        "isStablecoin": false
+      }
+    ]
+  },
+  "whyItMoved": "The crypto market is currently focused on the upcoming Senate vote regarding stablecoin regulations, which could have far-reaching implications for the industry. Ripple's successful $200 million fundraising round from Neuberger Berman indicates a strong institutional backing, suggesting confidence in its platform amid regulatory uncertainties. Additionally, the market is reacting to geopolitical tensions and whale selling, which are contributing to the cautious sentiment surrounding Bitcoin's price stability. As these factors unfold, they are shaping the market dynamics and influencing investor behavior.",
+  "worthKnowing": [
+    "The Senate is set to vote on stablecoin regulations, which could impact major players in the crypto market.",
+    "Ripple's recent funding round reflects growing institutional interest in its services.",
+    "Concerns over geopolitical tensions and whale activity are influencing market sentiment.",
+    "For deeper context, see this week's Crypto Pulse: https://crypto-pulse.com/reports/2026-05-04-market-sentiment-remains-cautious-with-mixed-asset-performance"
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2802175657275,
+    "btcDominancePct": 58.3228,
+    "ethDominancePct": 10.0288,
+    "fearGreedIndex": 48
+  },
+  "tags": [
+    "ripple",
+    "senate-stablecoin-vote",
+    "stablecoin-regulations",
+    "geopolitical-tensions",
+    "solana-consensus-update"
+  ]
+}

@@ -189,6 +189,70 @@ describe('generateDailyReport', () => {
     expect(userMessage?.content).toContain('REVISION NOTES');
   });
 
+  it('snapshot.totalMarketCapUsd comes from researcher data, not LLM output', async () => {
+    const llmOutputWithWrongCap = {
+      ...MOCK_WRITER_OUTPUT,
+      snapshot: { totalMarketCapUsd: 2807000000, btcDominancePct: 58.7, ethDominancePct: 13.1, fearGreedIndex: 72 }
+    };
+
+    vi.mocked(callLlm).mockResolvedValue({ ...MOCK_LLM_RESPONSE, content: JSON.stringify(llmOutputWithWrongCap) });
+
+    vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
+      if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
+        return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      throw { code: 'ENOENT' };
+    });
+
+    let writtenDraft: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (filePath, content) => {
+      if (typeof filePath === 'string' && filePath.includes(`draft-${TARGET_DATE}.json`)) {
+        writtenDraft = content as string;
+      }
+    });
+
+    await generateDailyReport(TARGET_DATE);
+
+    const draft = JSON.parse(writtenDraft!) as { snapshot: { totalMarketCapUsd: number } };
+    // Researcher had 3.2T; LLM had 2.8B. Assembled artifact must use researcher's value.
+    expect(draft.snapshot.totalMarketCapUsd).toBeGreaterThan(1e11);
+    expect(draft.snapshot.totalMarketCapUsd).toBe(3_200_000_000_000);
+  });
+
+  it('topTracked.marketCapUsd is populated from researcher data, not LLM output', async () => {
+    const llmOutputWithZeroCaps = {
+      ...MOCK_WRITER_OUTPUT,
+      whatMoved: {
+        ...MOCK_WRITER_OUTPUT.whatMoved,
+        topTracked: MOCK_WRITER_OUTPUT.whatMoved.topTracked.map((a) => ({ ...a, marketCapUsd: 0 }))
+      }
+    };
+
+    vi.mocked(callLlm).mockResolvedValue({ ...MOCK_LLM_RESPONSE, content: JSON.stringify(llmOutputWithZeroCaps) });
+
+    vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
+      if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
+        return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      throw { code: 'ENOENT' };
+    });
+
+    let writtenDraft: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (filePath, content) => {
+      if (typeof filePath === 'string' && filePath.includes(`draft-${TARGET_DATE}.json`)) {
+        writtenDraft = content as string;
+      }
+    });
+
+    await generateDailyReport(TARGET_DATE);
+
+    const draft = JSON.parse(writtenDraft!) as { whatMoved: { topTracked: Array<{ symbol: string; marketCapUsd: number }> } };
+    const btc = draft.whatMoved.topTracked.find((a) => a.symbol === 'BTC');
+    expect(btc).toBeDefined();
+    expect(btc!.marketCapUsd).toBeGreaterThan(0);
+    expect(btc!.marketCapUsd).toBe(1_880_000_000_000);
+  });
+
   it('attempts self-correction when first LLM response fails validation', async () => {
     const invalidOutput = { ...MOCK_WRITER_OUTPUT, whatMoved: { ...MOCK_WRITER_OUTPUT.whatMoved, topTracked: [] } }; // empty topTracked fails validation
 
