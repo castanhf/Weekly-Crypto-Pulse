@@ -15,7 +15,7 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 | Secret | Where it lives | Exposed to client? | Notes |
 |---|---|---|---|
 | `GITHUB_TOKEN` | Auto-injected by GitHub Actions | No | Never set manually in repo secrets; Actions injects it per-job |
-| `OPENAI_API_KEY` | GitHub Actions secret (local: `.env`) | No | Optional fallback LLM provider; set a hard usage cap in OpenAI dashboard |
+| `ANTHROPIC_API_KEY` | GitHub Actions secret (local: `.env`) | No | Optional fallback LLM provider; set a hard usage cap via prepaid credit at console.anthropic.com |
 | `STRIPE_PAYMENT_LINK_WEEKLY_PRO` | GitHub Actions / Vercel env | Yes (in href) | Static Stripe URL; intended public surface; not a secret |
 | `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE` | GitHub Actions / Vercel env | Yes (in href) | Static Stripe URL; intended public surface; not a secret |
 | `NEXT_PUBLIC_SITE_URL` | Vercel env | Yes (NEXT_PUBLIC_) | Canonical URL — not sensitive |
@@ -33,8 +33,8 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 
 ### Rotation cadence
 
-- **Annual rotation:** OPENAI_API_KEY. Rotate on 1 January of each year.
-- **On compromise:** Rotate the affected secret immediately. For OPENAI_API_KEY: revoke in OpenAI dashboard, generate new key, update GitHub Actions secret. For GITHUB_TOKEN: auto-rotated by GitHub per-job; no manual action required.
+- **Annual rotation:** ANTHROPIC_API_KEY. Rotate on 1 January of each year.
+- **On compromise:** Rotate the affected secret immediately. For ANTHROPIC_API_KEY: revoke in Anthropic console, generate new key, update GitHub Actions secret. For GITHUB_TOKEN: auto-rotated by GitHub per-job; no manual action required.
 - **On team change:** Rotate all secrets accessible to the departing team member.
 
 ### Lockfile policy

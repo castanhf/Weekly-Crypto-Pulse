@@ -98,7 +98,7 @@ Note: quiet-day reports that are honest about having thin content may fall below
 **Question**: Does the draft validate against the `daily@1.0` schema?
 
 **How to evaluate**: Verify the following structural requirements manually:
-- `schemaVersion` equals `"daily@1.0"`
+- `schemaVersion` equals `"daily@1.1"`
 - `generatedAt` is a non-empty string (ISO timestamp format)
 - `publishedAt` is a non-empty string in `YYYY-MM-DD` format
 - `slug` is a non-empty string
@@ -107,6 +107,7 @@ Note: quiet-day reports that are honest about having thin content may fall below
 - `worthKnowing` is an array with 0–4 entries
 - `snapshot.totalMarketCapUsd`, `snapshot.btcDominancePct`, `snapshot.ethDominancePct`, `snapshot.fearGreedIndex` are all numbers
 - `tags` is an array of non-empty strings
+- `weeklyFooter` is **optional**; if present, it must be an object with non-empty `text` (string) and `weeklySlug` (string) fields
 
 **PASS criteria**: All structural requirements satisfied.
 
@@ -122,16 +123,19 @@ Do not verify every table cell — verify claims in prose sections (`summary`, `
 
 **FAIL action**: Quote the prose claim, the section it appears in, and the actual value from the researcher's data.
 
-### Checklist Item 9 — Footer Check
+### Checklist Item 9 — Weekly Footer Check
 
-**Question**: Is the weekly footer link present in the draft?
+**Question**: If `weeklyFooter` is present in the draft, is it structurally valid?
 
-The footer must contain a link to the most recent weekly report. The exact format per `daily_writer.md`:
-> For deeper context, see this week's [Crypto Pulse](...) or the fallback [Crypto Pulse archive](...).
+`weeklyFooter` is an optional field injected by the pipeline script (not produced by the writer). The pipeline adds it when a weekly slug is available; it is absent on days when no weekly has been published yet.
 
-**How to evaluate**: Check the end of the draft for this footer. It may appear as a text string appended after the last section, or as a dedicated field — the writer defines its placement. If present in any form that includes a link to `/reports`, PASS.
+**How to evaluate**:
+- If `weeklyFooter` is **absent**: PASS. The writer is not responsible for it.
+- If `weeklyFooter` is **present**: verify it has a non-empty `text` string and a non-empty `weeklySlug` string. Do **not** check URL formatting — the rendering layer handles linking.
 
-**PASS criteria**: A footer with a link to the weekly is present.
+**PASS criteria**: `weeklyFooter` is absent, or if present it has valid `text` and `weeklySlug` strings.
+
+**FAIL action**: If `weeklyFooter` is present but structurally invalid, flag the specific missing or empty field.
 
 ### Checklist Item 10 — Headline Specificity Check
 

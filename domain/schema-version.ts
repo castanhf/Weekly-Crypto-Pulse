@@ -8,19 +8,22 @@
  * - The validator dispatches per schemaVersion — existing artifacts remain
  *   valid against their original version forever, no forced migrations.
  */
-export type SchemaVersion = 'weekly@1.0' | 'weekly@1.1' | 'weekly@1.2' | 'daily@1.0';
+export type SchemaVersion = 'weekly@1.0' | 'weekly@1.1' | 'weekly@1.2' | 'daily@1.0' | 'daily@1.1';
 
 export const WEEKLY_SCHEMA_V1_0 = 'weekly@1.0' as const;
 export const WEEKLY_SCHEMA_V1_1 = 'weekly@1.1' as const;
 /** weekly@1.2: additive capitalFlows field (DeFiLlama TVL data). Introduced in WCP-123. */
 export const WEEKLY_SCHEMA_V1_2 = 'weekly@1.2' as const;
 export const DAILY_SCHEMA_V1_0 = 'daily@1.0' as const;
+/** daily@1.1: additive weeklyFooter field replacing the worthKnowing[3] hack. Introduced in WCP-132. */
+export const DAILY_SCHEMA_V1_1 = 'daily@1.1' as const;
 
 const VALID_SCHEMA_VERSIONS: ReadonlySet<string> = new Set([
   WEEKLY_SCHEMA_V1_0,
   WEEKLY_SCHEMA_V1_1,
   WEEKLY_SCHEMA_V1_2,
-  DAILY_SCHEMA_V1_0
+  DAILY_SCHEMA_V1_0,
+  DAILY_SCHEMA_V1_1
 ]);
 
 export const isValidSchemaVersion = (value: unknown): value is SchemaVersion =>

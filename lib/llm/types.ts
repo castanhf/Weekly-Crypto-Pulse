@@ -1,6 +1,6 @@
-export type LlmProvider = 'github-models' | 'openai';
+export type LlmProvider = 'github-models' | 'anthropic';
 
-export type LlmModel = 'gpt-4o-mini';
+export type LlmModel = 'gpt-4o-mini' | 'claude-sonnet-4-6';
 
 export type LlmMessage = Readonly<{
   role: 'system' | 'user' | 'assistant';

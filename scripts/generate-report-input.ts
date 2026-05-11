@@ -89,6 +89,10 @@ type RawReportInput = {
     watchlistLevels: Array<{ asset: string; level: string; context: string }>;
     changedSinceLastWeek: string[];
   };
+  plainspokenOpening?: {
+    headline: string;
+    body: string;
+  };
   capitalFlows?: CapitalFlows;
 };
 
@@ -281,13 +285,28 @@ SCHEMA (all fields required):
   }
 }
 
+  "plainspokenOpening": {
+    "headline": "<plainspoken headline, different voice than the main headline — specific story, no forbidden patterns>",
+    "body": "<200–300 word plainspoken summary of the week in plain English — see PLAINSPOKEN RULES below>"
+  }
+}
+
 HARD CONSTRAINTS:
 - signals.riskChecklist must have EXACTLY 5 items — no more, no fewer.
 - regime must be exactly one of: risk-on, risk-off, range-bound, transition.
 - All numeric fields must be JSON numbers (not strings).
 - movers should cover the most significant non-stablecoin, non-wrapped-derivative assets from the provided top-15 list; prioritize by absolute 7-day price change and news relevance.
 - Do NOT wrap the output in markdown code fences.
-- Do NOT include any text before or after the JSON object.`;
+- Do NOT include any text before or after the JSON object.
+
+PLAINSPOKEN RULES (apply only to plainspokenOpening):
+- Voice: would a smart Financial Times reader who doesn't trade crypto understand this without Googling? If no, rewrite.
+- Specific over vague: "Bitcoin fell 4.2% to $88,400" not "Bitcoin fell significantly."
+- No advisory framing. FORBIDDEN: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play".
+- Headline forbidden patterns: "mixed results", "modest gains/losses", "slight/minor movement", "crypto market sees/shows X". These describe nothing.
+- Good plainspoken headline: "Bitcoin holds $90k for a third week as stablecoin rules edge closer." Bad: "Crypto market sees mixed results." (NEVER produce this)
+- Body: 200–300 words. Tell the week's story in plain English. What happened, what drove it, what does it mean for next week. Weave in key data points naturally. Do not pad.
+- The plainspokenOpening.headline must be DIFFERENT from the main headline — same event, different angle or voice.`;
 
 const buildUserPrompt = (
   publishedAt: string,
@@ -351,6 +370,14 @@ const validateReportInput = (input: unknown): RawReportInput => {
       throw new Error(`Field "${name}" must be a number, got: ${JSON.stringify(value)}`);
     }
   }
+  if (typed.plainspokenOpening !== undefined) {
+    if (typeof typed.plainspokenOpening.headline !== 'string' || !typed.plainspokenOpening.headline) {
+      throw new Error('plainspokenOpening.headline must be a non-empty string');
+    }
+    if (typeof typed.plainspokenOpening.body !== 'string' || !typed.plainspokenOpening.body) {
+      throw new Error('plainspokenOpening.body must be a non-empty string');
+    }
+  }
   return typed;
 };
 
@@ -402,7 +429,7 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
       jsonMode: true,
       maxTokens: 4096
     },
-    { primary: 'github-models', secondary: 'openai', requestId: `weekly-${publishedAt}` }
+    { primary: 'github-models', secondary: 'anthropic', requestId: `weekly-${publishedAt}` }
   );
   console.log(
     `  Provider: ${llmResponse.provider} | Tokens: ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`

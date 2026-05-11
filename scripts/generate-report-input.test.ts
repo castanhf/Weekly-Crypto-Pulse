@@ -87,6 +87,10 @@ const VALID_REPORT_INPUT = {
   summary: 'Crypto markets showed resilience this week with BTC maintaining key levels.',
   tags: ['crypto', 'weekly', 'bitcoin'],
   regime: 'risk-on',
+  plainspokenOpening: {
+    headline: 'Bitcoin stays above $90k for a third week as ETF buyers keep the floor.',
+    body: 'Another week, another quiet hold above $90,000 for Bitcoin. The story this week was less about price action and more about what kept it from falling: spot ETF buyers soaked up every dip, with aggregate inflows staying positive for the fifth consecutive week. Ethereum lagged, losing about 1.5% while Bitcoin gained 3.2%, which pushed BTC dominance to 58.7% — near its highest point since 2021. The Fear & Greed Index sat at 65, which is Greed territory but well below the 85+ readings that preceded prior corrections. Solana was the week\'s standout, up 5.8% on record DEX volume. DeFi total value locked held steady across major chains. The macro backdrop was supportive: US equity markets edged higher, and there were no major surprises from the Federal Reserve. Next week, watch for the Senate stablecoin bill vote, which could move the broader market if it passes with amendments that restrict algorithmic stablecoins.'
+  },
   snapshot: {
     totalMarketCapUsd: 3_200_000_000_000,
     btcDominancePct: 58.7,
@@ -301,6 +305,24 @@ describe('generateReportInput', () => {
     const systemMessage = llmCall[0].messages.find((m: { role: string }) => m.role === 'system');
     expect(systemMessage?.content).not.toContain('movers must include BTC, ETH, and SOL');
     expect(systemMessage?.content).not.toContain('movers must include BTC, ETH');
+  });
+
+  it('writes plainspokenOpening to output when LLM produces it', async () => {
+    let writtenJson: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (_path, content) => {
+      writtenJson = content as string;
+    });
+
+    await generateReportInput(PUBLISHED_AT);
+
+    const output = JSON.parse(writtenJson!) as {
+      plainspokenOpening?: { headline: string; body: string };
+    };
+    expect(output.plainspokenOpening).toBeDefined();
+    expect(output.plainspokenOpening!.headline).toContain('Bitcoin');
+    const wordCount = output.plainspokenOpening!.body.split(/\s+/).length;
+    expect(wordCount).toBeGreaterThanOrEqual(150);
+    expect(wordCount).toBeLessThanOrEqual(350);
   });
 
   it('validates regime and throws on invalid LLM output', async () => {

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ReportViewTracker } from '@/components/analytics/report-view-tracker';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { ProCta } from '@/components/pro/pro-cta';
+import { DailyReportPage } from '@/components/reports/daily-report-page';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
 import { MethodologyNote } from '@/components/reports/methodology-note';
@@ -13,8 +14,8 @@ import { ReportSections } from '@/components/reports/report-sections';
 import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
 import { getProCheckoutTarget } from '@/lib/pro-offers';
-import { getAllReports, getReportArtifactBySlug, getReportBySlug } from '@/lib/reports/report-repository';
-import { createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
+import { loadAllArtifacts, loadArtifactBySlug } from '@/lib/reports/artifact-repository';
+import { createDailyMetadata, createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
   params: Promise<{
@@ -26,31 +27,39 @@ const secondaryCtaClassName =
   'inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-center text-sm font-medium transition hover:border-white/40 sm:w-auto';
 
 export const generateStaticParams = (): Array<{ slug: string }> =>
-  getAllReports().map((report) => ({ slug: report.metadata.slug }));
+  loadAllArtifacts().map((artifact) => ({ slug: artifact.slug }));
 
 export const generateMetadata = async (props: ReportDetailPageProps): Promise<Metadata> => {
   const params = await props.params;
-  const report = getReportBySlug(params.slug);
+  const artifact = loadArtifactBySlug(params.slug);
 
-  if (!report) {
+  if (!artifact) {
     return {
       title: 'Report not found',
       description: 'The requested report could not be found.'
     };
   }
 
-  return createReportMetadata(report);
+  if (artifact.kind === 'daily') {
+    return createDailyMetadata(artifact.daily);
+  }
+
+  return createReportMetadata(artifact.report);
 };
 
 export default async function ReportDetailPage(props: ReportDetailPageProps): Promise<JSX.Element> {
   const params = await props.params;
-  const reportArtifact = getReportArtifactBySlug(params.slug);
-  const report = reportArtifact?.report;
+  const artifact = loadArtifactBySlug(params.slug);
 
-  if (!report) {
+  if (!artifact) {
     notFound();
   }
 
+  if (artifact.kind === 'daily') {
+    return <DailyReportPage artifact={artifact.daily} />;
+  }
+
+  const report = artifact.report;
   const reportUrl = toAbsoluteUrl(`/reports/${report.metadata.slug}`);
   const weeklyProCheckoutTarget = getProCheckoutTarget('singleIssue');
   const monthlyBundleCheckoutTarget = getProCheckoutTarget('monthlyBundle');

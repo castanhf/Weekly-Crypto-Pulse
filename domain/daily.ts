@@ -18,6 +18,14 @@ export type TrackedAssetEntry = Readonly<{
   isStablecoin: boolean;
 }>;
 
+/** daily@1.1 additive field — proper footer link replacing the worthKnowing[3] hack. */
+export type WeeklyFooter = Readonly<{
+  /** Display text, e.g. "For deeper context, see this week's Crypto Pulse" */
+  text: string;
+  /** Slug of the most recent weekly artifact, used to build the URL at render time. */
+  weeklySlug: string;
+}>;
+
 export type DailyArtifact = Readonly<{
   schemaVersion: SchemaVersion;
   generatedAt: string;
@@ -43,4 +51,6 @@ export type DailyArtifact = Readonly<{
     fearGreedIndex: number;
   }>;
   tags: ReadonlyArray<string>;
+  /** daily@1.1 additive field. Present on v1.1+ artifacts; absent on v1.0. */
+  weeklyFooter?: WeeklyFooter;
 }>;

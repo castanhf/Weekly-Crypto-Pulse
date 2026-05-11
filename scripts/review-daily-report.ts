@@ -271,7 +271,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
       jsonMode: true,
       maxTokens: 2048
     },
-    { primary: 'github-models', secondary: 'openai', requestId: `daily-review-${targetDate}-r${revisionRound}` }
+    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-review-${targetDate}-r${revisionRound}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 

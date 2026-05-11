@@ -488,7 +488,7 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
       jsonMode: true,
       maxTokens: 2048
     },
-    { primary: 'github-models', secondary: 'openai', requestId: `daily-input-${targetDate}` }
+    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-input-${targetDate}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 

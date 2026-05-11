@@ -1,8 +1,8 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { DailyArtifact, MoverEntry, TrackedAssetEntry } from '@/domain/daily';
-import { DAILY_SCHEMA_V1_0 } from '@/domain/schema-version';
+import type { DailyArtifact, MoverEntry, TrackedAssetEntry, WeeklyFooter } from '@/domain/daily';
+import { DAILY_SCHEMA_V1_0, DAILY_SCHEMA_V1_1 } from '@/domain/schema-version';
 import type { SchemaVersion } from '@/domain/schema-version';
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
 
@@ -60,7 +60,7 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
   const root = assertRecord(parsed, fileName);
   const schemaVersion = assertString(root.schemaVersion, 'schemaVersion');
 
-  if (schemaVersion !== DAILY_SCHEMA_V1_0) {
+  if (schemaVersion !== DAILY_SCHEMA_V1_0 && schemaVersion !== DAILY_SCHEMA_V1_1) {
     throw new Error(`${fileName}: unsupported daily schemaVersion "${schemaVersion}".`);
   }
 
@@ -86,8 +86,20 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
   const losers = assertArray(whatMovedRecord.losers, 'whatMoved.losers').map((e, i) => parseMoverEntry(e, `whatMoved.losers[${i}]`));
   const topTracked = assertArray(whatMovedRecord.topTracked, 'whatMoved.topTracked').map((e, i) => parseTrackedAssetEntry(e, `whatMoved.topTracked[${i}]`));
 
+  const parsedSchemaVersion = (schemaVersion === DAILY_SCHEMA_V1_1 ? DAILY_SCHEMA_V1_1 : DAILY_SCHEMA_V1_0) as typeof DAILY_SCHEMA_V1_0 | typeof DAILY_SCHEMA_V1_1;
+
+  let weeklyFooter: WeeklyFooter | undefined;
+
+  if (root.weeklyFooter !== undefined) {
+    const footer = assertRecord(root.weeklyFooter, 'weeklyFooter');
+    weeklyFooter = {
+      text: assertString(footer.text, 'weeklyFooter.text'),
+      weeklySlug: assertString(footer.weeklySlug, 'weeklyFooter.weeklySlug')
+    };
+  }
+
   const daily: DailyArtifact = {
-    schemaVersion: DAILY_SCHEMA_V1_0,
+    schemaVersion: parsedSchemaVersion,
     generatedAt,
     publishedAt,
     slug,
@@ -102,14 +114,15 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
       ethDominancePct: assertNumber(snapshotRecord.ethDominancePct, 'snapshot.ethDominancePct'),
       fearGreedIndex: assertNumber(snapshotRecord.fearGreedIndex, 'snapshot.fearGreedIndex')
     },
-    tags
+    tags,
+    ...(weeklyFooter !== undefined ? { weeklyFooter } : {})
   };
 
   return {
     daily,
     artifact: {
       fileName,
-      schemaVersion: DAILY_SCHEMA_V1_0,
+      schemaVersion: parsedSchemaVersion,
       generatedAt
     }
   };

@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { formatIsoDate } from '@/components/reports/report-formatters';
 import type { Regime } from '@/domain/report';
+import type { Artifact } from '@/lib/reports/artifact-types';
+import { loadAllArtifacts } from '@/lib/reports/artifact-repository';
 import { createReportsArchiveMetadata } from '@/lib/seo';
-import { getAllReportArtifacts } from '@/lib/reports/report-repository';
 
 export const metadata: Metadata = createReportsArchiveMetadata();
 
@@ -26,8 +27,68 @@ const REGIME_LABELS: Record<Regime, string> = {
 const archiveCtaClassName =
   'inline-flex min-h-11 items-center justify-center rounded-xl border border-accent px-4 py-3 text-center text-sm font-medium transition hover:bg-accent hover:text-ink';
 
+function ArtifactCard({ artifact }: { artifact: Artifact }): JSX.Element {
+  const href = `/reports/${artifact.slug}`;
+
+  if (artifact.kind === 'daily') {
+    const { daily } = artifact;
+
+    return (
+      <SurfaceCard className="space-y-4 p-5 sm:space-y-5 sm:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">
+            Published {formatIsoDate(daily.publishedAt)}
+          </p>
+          <span className="inline-flex rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-accent">
+            Daily
+          </span>
+        </div>
+        <div className="space-y-3">
+          <h2 className="text-[1.1rem] font-semibold tracking-tight sm:text-[1.35rem]">
+            <Link className="transition hover:text-muted" href={href}>
+              {daily.headline}
+            </Link>
+          </h2>
+          <p className="text-base leading-7 text-muted sm:leading-8">{daily.summary}</p>
+        </div>
+        <Link className="inline-flex min-h-11 items-center text-sm font-medium text-paper underline underline-offset-4" href={href}>
+          Read daily briefing
+        </Link>
+      </SurfaceCard>
+    );
+  }
+
+  const { report } = artifact;
+  const { metadata: meta, regime } = report;
+
+  return (
+    <SurfaceCard className="space-y-5 p-5 sm:space-y-6 sm:p-6">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-paper">{meta.weekLabel}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">Published {formatIsoDate(meta.publishedAt)}</p>
+        </div>
+        <span className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] ${REGIME_BADGE_CLASS_NAMES[regime]}`}>
+          {REGIME_LABELS[regime]}
+        </span>
+      </div>
+      <div className="space-y-3">
+        <h2 className="text-[1.3rem] font-semibold tracking-tight sm:text-[1.75rem]">
+          <Link className="transition hover:text-muted" href={href}>
+            {meta.title}
+          </Link>
+        </h2>
+        <p className="text-base leading-7 text-muted sm:leading-8">{meta.summary}</p>
+      </div>
+      <Link className="inline-flex min-h-11 items-center text-sm font-medium text-paper underline underline-offset-4" href={href}>
+        Read free report
+      </Link>
+    </SurfaceCard>
+  );
+}
+
 export default function ReportsPage(): JSX.Element {
-  const reportArtifacts = getAllReportArtifacts();
+  const artifacts = loadAllArtifacts();
 
   return (
     <PageShell>
@@ -42,46 +103,20 @@ export default function ReportsPage(): JSX.Element {
         <ContentWidth className="mx-auto" size="feature">
           <div className="grid gap-6 lg:gap-8 xl:grid-cols-[minmax(0,1.8fr)_minmax(18rem,0.8fr)] xl:items-start">
             <ul className="space-y-4 sm:space-y-5">
-              {reportArtifacts.map(({ report }) => {
-                const reportUrl = `/reports/${report.metadata.slug}`;
-
-                return (
-                  <li key={report.metadata.slug}>
-                    <SurfaceCard className="space-y-5 p-5 sm:space-y-6 sm:p-6">
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div className="space-y-1">
-                          <p className="text-sm font-semibold text-paper">{report.metadata.weekLabel}</p>
-                          <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">Published {formatIsoDate(report.metadata.publishedAt)}</p>
-                        </div>
-                        <span
-                          className={`inline-flex rounded-full border px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] ${REGIME_BADGE_CLASS_NAMES[report.regime]}`}
-                        >
-                          {REGIME_LABELS[report.regime]}
-                        </span>
-                      </div>
-                      <div className="space-y-3">
-                        <h2 className="text-[1.3rem] font-semibold tracking-tight sm:text-[1.75rem]">
-                          <Link className="transition hover:text-muted" href={reportUrl}>
-                            {report.metadata.title}
-                          </Link>
-                        </h2>
-                        <p className="text-base leading-7 text-muted sm:leading-8">{report.metadata.summary}</p>
-                      </div>
-                      <Link className="inline-flex min-h-11 items-center text-sm font-medium text-paper underline underline-offset-4" href={reportUrl}>
-                        Read free report
-                      </Link>
-                    </SurfaceCard>
-                  </li>
-                );
-              })}
+              {artifacts.map((artifact) => (
+                <li key={artifact.slug}>
+                  <ArtifactCard artifact={artifact} />
+                </li>
+              ))}
             </ul>
 
             <aside className="space-y-4 xl:sticky xl:top-24">
               <SurfaceCard className="space-y-5 bg-surface p-5 sm:p-6">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">
-                  Every report here is free to read. They cover what happened in crypto markets that week and what it
-                  meant. If you want the decision layer — more detail on what to watch — head over to the{' '}
+                  Every report here is free to read. Weekly reports cover what happened in crypto markets that week and
+                  what it meant. Daily briefings track significant moves as they happen. If you want the decision layer —
+                  more detail on what to watch — head over to the{' '}
                   <span className="font-semibold text-paper">Pro</span> page.
                 </p>
                 <Link className={archiveCtaClassName} href="/pro">
