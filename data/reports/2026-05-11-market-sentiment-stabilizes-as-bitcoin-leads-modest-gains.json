@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "weekly@1.1",
+  "generatedAt": "2026-05-11T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Market sentiment stabilizes as Bitcoin leads modest gains",
+      "slug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains",
+      "publishedAt": "2026-05-11",
+      "weekLabel": "Week of May 11, 2026",
+      "summary": "The total cryptocurrency market capitalization has reached $2.784 trillion, with Bitcoin dominance at 58.22%. The Fear & Greed Index indicates a neutral sentiment at 48, reflecting a cautious market environment.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2784000000000,
+      "btcDominancePct": 58.22,
+      "ethDominancePct": 10.13,
+      "fearGreedIndex": 48
+    },
+    "movers": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 1.5,
+        "catalyst": "Bitcoin has experienced a modest increase of 1.50% over the past week, driven by steady institutional interest and a stable macroeconomic backdrop."
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": -1.13,
+        "catalyst": "Ethereum has seen a decline of 1.13% this week, largely attributed to profit-taking and a lack of significant developments in the DeFi space."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": 12.15,
+        "catalyst": "Solana has surged by 12.15% this week, fueled by increased adoption in decentralized applications and positive sentiment surrounding its scalability."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Macro context shows cautious optimism",
+        "body": "The cryptocurrency market is currently experiencing a transition phase, characterized by a total market capitalization of $2.784 trillion. This marks a slight increase from the previous week, indicating a stabilization in market sentiment. The Fear & Greed Index, now at 48, suggests that investors are adopting a neutral stance, neither overly fearful nor greedy. This sentiment is reflected in the mixed performance of major cryptocurrencies, with Bitcoin leading the way while Ethereum faces headwinds.\n\nGlobal economic conditions remain a significant factor influencing market dynamics. Investors are closely monitoring macroeconomic indicators, including inflation rates and interest rate policies, which could impact risk appetite in the crypto space. The current environment is marked by cautious optimism as institutional interest in Bitcoin persists, providing a foundation for its dominance in the market.\n\nDespite the overall positive trend, volatility remains a constant in the cryptocurrency landscape. Traders are advised to remain vigilant as external factors could quickly shift sentiment. The market's ability to maintain its current trajectory will depend on continued institutional support and the resolution of regulatory uncertainties that have plagued the sector.\n\nIn summary, the macro context suggests a cautious yet optimistic outlook for the cryptocurrency market as it navigates through a transition phase.",
+        "highlights": [
+          "The total cryptocurrency market cap has increased to $2.784 trillion.",
+          "The Fear & Greed Index reflects a neutral sentiment at 48.",
+          "Bitcoin continues to dominate the market with a 58.22% share.",
+          "Investor caution remains prevalent amid mixed asset performance."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum show contrasting trends",
+        "body": "Bitcoin has recorded a 1.50% increase over the past week, maintaining its position as the market leader. The recent price action has been supported by ongoing institutional interest and a relatively stable macroeconomic environment. Bitcoin's current price of $80,911 reflects a strong support level, which could attract further buying interest if maintained.\n\nIn contrast, Ethereum has experienced a decline of 1.13%, now trading at $2,336. This downturn can be attributed to profit-taking behavior among investors and a lack of significant catalysts to drive demand. The Ethereum network continues to face challenges in scaling solutions, which may hinder its price recovery in the short term.\n\nSolana's impressive 12.15% surge this week highlights the growing interest in alternative Layer 1 solutions, as developers and users flock to its ecosystem for decentralized applications. This trend may indicate a shift in investor focus towards platforms that offer scalability and lower transaction costs.\n\nOverall, the contrasting performance of Bitcoin and Ethereum underscores the dynamic nature of the cryptocurrency market, where investor sentiment and technological developments play crucial roles in price movements.",
+        "highlights": [
+          "Bitcoin has increased by 1.50%, supported by institutional interest.",
+          "Ethereum has declined by 1.13%, facing profit-taking pressures.",
+          "Solana's 12.15% surge reflects growing interest in its ecosystem.",
+          "The contrasting trends highlight the market's dynamic nature."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Forward outlook remains cautiously optimistic",
+        "body": "Looking ahead, the cryptocurrency market is positioned in a transition regime, with potential for both upward and downward movements. The current market dynamics suggest that Bitcoin may continue to attract institutional interest, which could support its price in the coming weeks. However, the overall market sentiment remains fragile, and external factors such as regulatory developments could introduce volatility.\n\nInvestors should remain aware of the risks associated with a transitioning market. While Bitcoin's dominance provides a level of stability, the performance of altcoins like Ethereum and Solana may be more susceptible to market fluctuations. The potential for profit-taking and shifts in investor sentiment could lead to increased volatility in the short term.\n\nScenarios to consider include a sustained rally in Bitcoin, which could lift the overall market, or a downturn driven by negative news or regulatory actions. The balance between these scenarios will largely depend on macroeconomic indicators and the broader acceptance of cryptocurrencies.\n\nIn conclusion, the forward outlook for the cryptocurrency market is cautiously optimistic, with key risks and opportunities to monitor as the landscape evolves.",
+        "highlights": [
+          "The market is in a transition regime with potential for volatility.",
+          "Bitcoin may continue to attract institutional interest.",
+          "Altcoins like Ethereum could be more susceptible to fluctuations.",
+          "Regulatory developments will play a crucial role in market direction."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Bitcoin's institutional support may drive further price stability.",
+        "Ethereum's recovery will depend on technological advancements.",
+        "Solana's growth could attract more developers and users.",
+        "Market sentiment remains fragile, requiring cautious positioning."
+      ],
+      "riskChecklist": [
+        "Regulatory changes could impact market dynamics.",
+        "Profit-taking may lead to increased volatility.",
+        "Global economic indicators could affect investor sentiment.",
+        "Technological challenges may hinder Ethereum's performance.",
+        "Market sentiment could shift rapidly based on news events."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$80,000",
+          "context": "A key support level that could attract buying interest."
+        },
+        {
+          "asset": "ETH",
+          "level": "$2,300",
+          "context": "A critical level to monitor for potential recovery or further decline."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market capitalization has increased from $2.724 trillion to $2.784 trillion.",
+        "Bitcoin's dominance has slightly decreased from 58.51% to 58.22%.",
+        "Ethereum's price has shifted from a positive trend to a slight decline.",
+        "Solana has shown significant growth, contrasting with Ethereum's performance."
+      ]
+    }
+  }
+}
