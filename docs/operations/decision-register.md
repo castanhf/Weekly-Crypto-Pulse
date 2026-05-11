@@ -119,3 +119,22 @@ Retry/backoff policy unchanged: 60s/180s/540s exponential backoff on retryable e
 **Threat model review trigger:** The threat model is reviewed whenever any new persistent state, authentication system, or third-party integration is added. Such additions are explicitly not planned (the architecture constitution prohibits them), but each would change the threat surface materially.
 
 **Constraint:** Do not add commercial SAST scanners (Snyk, Sonarqube, etc.) beyond CodeQL. They add operational cost and complexity without proportionate benefit for this architecture.
+
+---
+
+## Free/Pro content boundary (locked R2.1)
+
+### No content gating — Pro is additive
+
+**Decision (WCP-134, locked):** Free weekly and daily reports are fully readable on the site. No content is hidden, blurred, truncated, or gated mid-article.
+
+**Pro is additive:** The Pro Pack contains content that does not appear on the free site at all — decision memo, thesis checklist, risk review, and watchlist levels. There is no "preview of Pro content followed by a paywall." Free readers see a complete report; Pro buyers receive additional depth by email.
+
+**The conversion surface is end-of-page:** The paid block appears after the full report content on both weekly and daily pages. Readers complete the free report before seeing any conversion prompt. This is deliberate: the free product must feel complete and respected.
+
+**What is forbidden (enforced by test):**
+- Blurred or obscured content in any field of any artifact JSON
+- Strings that imply gating: "gated", "paywall", "locked content", "preview only"
+- Mid-article CTAs that interrupt the reading experience
+
+**Editorial reasoning:** Readers upgrade because they trust what they've been getting for free, not because they were teased. The free product's quality is the conversion mechanism.
