@@ -53,13 +53,18 @@ Check the "Worth knowing" section with special attention — this section is par
 
 ### Checklist Item 3 — Winners-and-Losers Check
 
-**Question**: When the researcher's `movers.winners` or `movers.losers` arrays are non-empty, does the draft include the relevant assets in the "What moved" section?
+**Question**: When the researcher's `movers.winners` or `movers.losers` arrays contain eligible assets (non-stablecoin, non-wrapped/derivative), do those assets appear in the draft's `whatMoved` arrays?
 
-**How to evaluate**: Read `movers.winners` and `movers.losers` from the researcher's input. If either array has entries, verify that the corresponding assets appear in the draft's `whatMoved` section. A quiet-day exception applies: if the researcher returned empty arrays (no assets met the ≥5% / ≤-5% threshold), the omission is correct and this check PASSes.
+**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. For each array:
+1. Filter out any asset whose symbol is in the stablecoin or wrapped/derivative registry (`lib/markets/asset-categories.ts` — USDT, USDC, DAI, BUSD, FDUSD, TUSD, USDE, USDS, WBTC, WETH, STETH, WSTETH, and others in the registry).
+2. If the filtered list is non-empty, verify that the draft's corresponding `whatMoved.winners` or `whatMoved.losers` array is also non-empty.
+3. A quiet-day exception applies only when the researcher's arrays are genuinely empty after filtering — meaning no eligible top-50 asset moved >5%.
 
-**PASS criteria**: If `movers.winners` is non-empty, winners appear in the draft. If `movers.losers` is non-empty, losers appear in the draft. If both are empty, the check passes automatically.
+An empty `whatMoved.winners` or `whatMoved.losers` in the draft when the researcher had eligible movers is a data omission, not editorial discretion. This is the single most common quality failure in daily artifacts and must be caught here.
 
-**FAIL action**: Note which assets from the researcher's data are missing from the draft.
+**PASS criteria**: `whatMoved.winners` is non-empty when the researcher had eligible winners; `whatMoved.losers` is non-empty when the researcher had eligible losers; both may be empty only when the researcher had no eligible movers.
+
+**FAIL action**: Quote the researcher's missing movers (symbol + changePct24h) and state that they are absent from the corresponding draft array. Do not accept "no significant movers" as a revision response if the researcher data shows otherwise.
 
 ### Checklist Item 4 — Stablecoin and Derivative Narration Check
 
