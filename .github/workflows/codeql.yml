@@ -18,7 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     # Dependabot PRs run with a restricted token that cannot upload SARIF.
     # Coverage is provided by push-to-main and the weekly schedule.
+    # continue-on-error: analysis runs for local review; upload requires code scanning to be
+    # enabled in repository Settings > Security. Until then, this job is non-blocking.
     if: github.actor != 'dependabot[bot]'
+    continue-on-error: true
 
     strategy:
       matrix:
