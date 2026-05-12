@@ -1,61 +1,162 @@
-# R2 Release Notes
+# R2 Release — Crypto Pulse 2.1.0
 
-This document tracks all merged PRs across the R2 release phases.
+## R2.0 — Infrastructure (released 2026-05-06 as v2.0.0)
 
-## Release plan
+Schema versioning, unified repository layer, daily pipeline agent definitions, LLM client
+abstraction (GitHub Models primary + fallback), chart infrastructure, brand simplification,
+plainspoken accessibility pass, security baseline (Next.js CVE fixes, Dependabot, CSP, CodeQL).
 
-R2 ships in two phases:
+PRs: #102, #103, #104, #105, #106, #107, #108, #109, #110.
 
-- **R2.0** — Invisible-to-readers infrastructure. Schema versioning, repository unification, agent additions, security baseline, brand simplification, plainspoken pass on chrome, build-time chart computation infrastructure.
-- **R2.1** — Reader-visible launch. Daily pipeline activation, unified archive, charts on weeklies, merged paid block, /pro restructure, email list, Pro-pack updates.
+---
 
-## Architectural exceptions noted in R2
+## R2.1 — Reader-visible launch (this release, v2.1.0)
 
-Two deliberate exceptions to the original "four env vars" line in the architectural constitution:
+### Daily editorial pipeline
 
-- `OPENAI_API_KEY` — added as a fallback LLM provider for pipeline reliability when GitHub Models is unavailable. Hard usage cap set in OpenAI dashboard.
-- Beehiiv API key — added for email distribution via Beehiiv (newsletter signup and daily/weekly digest emails).
+- Multi-stage agent flow: researcher (CoinGecko + DeFiLlama + RSS news) → writer (LLM,
+  self-correction) → editor (14-item LLM checklist, up to 2 revision rounds, auto-approve on
+  round 3) → promoter (commits artifact to `data/dailies/`)
+- LLM provider abstraction with retry/backoff; Anthropic Claude Sonnet 4.6 fallback (replacing
+  OpenAI)
+- Top-50 asset coverage with stablecoin/wrapped exclusion list (24 stablecoins, 23 derivatives)
+- DeFiLlama TVL integration for capital-flow detection
+- Multi-source RSS aggregation across 6 outlets (CoinDesk, The Block, Decrypt, CoinTelegraph,
+  Bloomberg Crypto, Ethereum Foundation Blog) — reactive replacement for CryptoPanic after free
+  tier was discontinued
+- Schema versioning: `daily@1.0` → `daily@1.1` (`plainspokenOpening` field added); weekly
+  schema at `weekly@1.2` (`capitalFlows` optional field)
+- Drift-tracking discipline: agent specs in `.claude/agents/` and pipeline script system prompts
+  kept in sync manually (both must be updated together)
+- Build-time winners/losers validator enforcing that `whatMoved` is populated when eligible
+  movers exist in researcher input
+- GitHub Actions `daily-pipeline.yml` on 06:00 UTC cron + `workflow_dispatch` fallback
 
-The Decision Register language updates from strict "four env vars" to "minimal env vars, justified additions only."
+### Content surface expansion
 
-## R2.0 — Merged PRs
+- Daily reports rendered at `/reports/[slug]` with dedicated `DailyReportPage` component
+- Unified `/reports` archive with mixed weekly/daily cards, chronological order, regime badges
+  on weeklies, compact daily cards
+- Interactive charts on weekly pages: snapshot trend (12-week Recharts line chart) + regime
+  history (Recharts bar chart)
+- Programmatic OG images per report via Next.js file-based convention (`opengraph-image.tsx`)
+- Two RSS feeds (`/rss.xml` weekly, `/rss/daily.xml` daily) with `<atom:link>` self-links and
+  `<link rel="alternate">` auto-discovery headers in `<head>`
+- Sitemap at `/sitemap.xml` covering all weekly reports + last 30 dailies
 
-- **WCP-102** — Schema versioning policy adopted (semver, `schemaVersion` field on artifacts). Daily schema v1.0 introduced (`domain/daily.ts`). Weekly schema bumped to v1.1 (additive, optional `plainspokenOpening` field). Validator dispatches per version; legacy `"1.0"` string treated as `weekly@1.0`. PR: #102
-- **WCP-103** — Unified repository layer added. New `lib/reports/daily-repository.ts` and `lib/reports/artifact-repository.ts` provide a discriminated-union view over weekly + daily artifacts for surfaces that mix them. Existing weekly repository unchanged. `data/dailies/` directory created (empty until R2.1). PR: #103
-- **WCP-104** — Daily pipeline agent definitions added: `daily_researcher.md`, `daily_writer.md`, `daily_editor.md`. Pipeline Runner extended for daily cadence orchestration. Drift-tracking note added to both researchers per decision 22a. Permission for DeFiLlama added to settings. No daily generation scripts yet — those ship in R2.1. PR: #104
-- **WCP-105** — LLM client abstraction added at `lib/llm/`. Supports GitHub Models (primary) and OpenAI (fallback) with retry-on-delay, exponential backoff, and provider failover. Existing weekly pipeline refactored to consume the new client (behavior unchanged). `OPENAI_API_KEY` added as 5th env var. Decision Register (`docs/operations/decision-register.md`) created with env var policy, schema versioning policy, and two-provider architecture decision. PR: #105
-- **WCP-106** — Chart infrastructure added at `lib/charts/`. Time-series window helpers (as-of-date semantics per locked decision 25c). Static SVG chart rendering for snapshot trend and regime history. PNG export via `sharp` for Pro-pack deliverables. `recharts` dependency added for R2.1 website chart components. Regime color tokens added to Tailwind config. No charts rendered on pages yet — R2.1 wires components and Pro-pack consumption. PR: #106
-- **WCP-107** — Brand simplification: "Crypto Pulse" is now the master brand for all site chrome (header wordmark, footer, X share text, email footer signatures, RSS `<title>`, `README.md`). "Weekly Crypto Pulse" / "Daily Crypto Pulse" retained as cadence prefixes in per-artifact metadata and product names. `SITE_NAME`, `WEEKLY_TITLE_PREFIX`, and `DAILY_TITLE_PREFIX` constants exported from `lib/site.ts`. Decision D-04 added to Decision Register. PR: #107
-- **WCP-108** — Plainspoken accessibility pass applied to site chrome copy: homepage, methodology, disclaimer, archive page header, /pro explainer prose, SEO meta descriptions, tier-differentiation component, and product prose in `domain/pro-product.ts`. Methodology expanded with named data sources (CoinGecko, Alternative.me), plain-language regime definitions, and AI-assisted drafting disclosure. Editorial decisions documented in Decision Register under "Editorial decisions." Report bodies and Pro signals untouched per decision 12b. /pro structural restructure (15b) deferred to R2.1. PR: #108
-- **WCP-109** — Security baseline established: Next.js upgraded 14.2.5 → 14.2.35 (critical vuln fix; remaining high-severity advisories require Next.js 15.x, deferred); Dependabot added for weekly npm + GitHub Actions scanning; CI hardened with SHA-pinned actions, `contents: read` permission scope, and `--audit-level=critical` npm audit step; full CSP + five additional security headers added to `next.config.mjs`; prompt injection defense sections added to `market_researcher.md` and `daily_researcher.md`; CodeQL SAST workflow added (push/PR/weekly schedule); `docs/operations/security.md` created documenting the full posture; security decisions block added to Decision Register. 11 new unit tests (security-headers + actions-sha-pinning suites). PR: #109
-- **WCP-110** — R2.0 final cleanup: CI audit threshold annotated with R2.1 restoration TODO in both `ci.yml` and `security.md`; `security.md` corrected (was incorrectly describing `--audit-level=high`); manual CSP verification across all five chrome pages confirmed clean; OG image situation documented (no image exists — text-only OG metadata; not blocking). Final commit before R2.0 → main merge. PR: #110
+### Conversion and distribution
 
-## R2.0 — Phase complete
+- Single paid block per report page (below charts on weeklies; bottom of section grid on
+  dailies); all other scattered CTAs removed
+- `/pro` page restructured with six-section value proposition
+- Content gating policy locked: no paywalls, no teasing, no truncation — the paid block is the
+  only conversion surface
+- Beehiiv email integration: subscriber API client, homepage and footer signup forms,
+  `/api/subscribe` route, tiered subscriptions (Monday weekly + Sunday digest; optional daily
+  opt-in via tag)
+- Weekly email composition wired into `generate-local-report.ts`
+- Sunday digest pipeline (`run-sunday-digest-pipeline.ts`) with LLM framing paragraph
+- Daily digest email wired into `run-daily-pipeline.ts` (skipped on Sundays)
+- Pro pack deliverables now include embedded market snapshot trend and regime history chart PNGs
+  (12-week visual context, rendered server-side via `sharp`)
 
-Phase merged to `main` on 2026-05-06 as `v2.0.0`. See merged-PRs list above.
+### Brand and editorial
 
-R2.1 (reader-visible launch) begins. First work unit: Next.js 14 → 16 upgrade.
+- "Crypto Pulse" master brand on all site chrome; "Weekly/Daily Crypto Pulse" as cadence
+  prefixes on per-artifact metadata and product names
+- Title metadata format: `Weekly Crypto Pulse — {headline}` / `Daily Crypto Pulse — {headline}`
+- Plainspoken voice rules locked in `daily_writer.md` and `daily_editor.md`: forbidden headline
+  patterns, causal attribution rules, tag specificity, summary editorial rules
+- Data correctness fixes: `snapshot` and `topTracked.marketCapUsd` overridden from researcher
+  data (not LLM output); market cap units handled as USD billions
+- Nav active state visibility fix
 
-## R2.1 — Merged PRs
+### Public showcase preparation
 
-- **WCP-121** — Synced `release/r2.1` with main (6 interim commits: CodeQL Dependabot fix, 5 Dependabot updates) and upgraded Next.js 14.2.35 → 16.2.5. Resolves 5 high-severity advisories: GHSA-9g9p-9gw9-jx7f, GHSA-h25m-26qc-wcjf, GHSA-ggv3-7p47-pfv8, GHSA-3x4c-7xq6-9pq8, GHSA-q4gf-8mx6-v5v3. ESLint 8 → 9 (required peer dep). Async params/searchParams migration applied to 3 route files. CI audit threshold restored to `--audit-level=high`. Turbopack is now the default build bundler. Bundle size metric format changed (Turbopack does not report webpack-style "First Load JS"). PR: #121
-- **WCP-122** — Daily pipeline scripts and GitHub Actions workflow. Implements researcher (`generate-daily-input.ts`; calls CoinGecko Markets + Global, Fear & Greed Index, DeFiLlama chains via 30-min file cache; LLM for catalysts + news items), writer (`generate-daily-report.ts`; LLM → `daily@1.0` draft, self-correction pass, weekly footer appended as last `worthKnowing` item — Option A), editor (`review-daily-report.ts`; 9-item LLM checklist, max 2 revision rounds, auto-approve on round 3), promoter (`promote-daily-artifact.ts`), placeholder (`generate-daily-placeholder.ts`), orchestrator (`run-daily-pipeline.ts`), and validator (`validate-daily-artifacts.ts`). File cache at `lib/cache/file-cache.ts` (30-min TTL, stale fallback). GitHub Actions workflow `daily-pipeline.yml` fires at 06:00 UTC with `workflow_dispatch` fallback (cron activates on merge to main). 242 unit tests all passing. PR: #122
-- **WCP-123** — Data-layer expansion: shared asset registry, DeFiLlama TVL integration, CryptoPanic real news. Three work units: (WU1) `lib/markets/asset-categories.ts` — canonical stablecoin/wrapped Sets (24 stablecoins, 23 wrapped/derivative tokens) shared between daily and weekly researchers via predicates. (WU2) `lib/markets/defi-llama.ts` — extracted DeFiLlama fetch + notable movement detection; `domain/market-data.ts` gains `ChainTvlEntry`, `NotableTvlMovement`, `CapitalFlows` types; weekly schema bumped to `weekly@1.2` (optional `capitalFlows` field). (WU3) `lib/news/crypto-panic.ts` — CryptoPanic news fetch with 30-min cache, importance scoring (votes.positive > 50 → high), and empty-array-on-failure semantics; `lib/llm/prompt-helpers.ts` adds `wrapNewsItemsForPrompt()` for prompt-injection-safe XML wrapping. Weekly researcher (`generate-report-input.ts`) expanded from BTC/ETH/SOL-only to top-15 by market cap with stablecoin/wrapped flags, DeFiLlama TVL, and CryptoPanic news; hard-coded mover constraint removed. `generate-local-report.ts` passes through `capitalFlows` + emits `weekly@1.2`. Agent specs, decision register, security.md, `.env.example` updated with `CRYPTOPANIC_API_KEY` (7th env var). 325 tests passing (83 new across 5 new test files). PR: #123
-- **WCP-124** — News source swap: CryptoPanic → multi-source RSS aggregation. Reactive insert prompted by CryptoPanic discontinuing their free API tier on 2026-04-01. Removes `lib/news/crypto-panic.ts` and all `CRYPTOPANIC_API_KEY` references. Replaces with `lib/news/sources.ts` (6 RSS feed definitions: CoinDesk, The Block, Decrypt, CoinTelegraph, Bloomberg Crypto, Ethereum Foundation Blog) and `lib/news/rss-aggregator.ts` (`fast-xml-parser` dependency; `Promise.allSettled` parallel fetch; RSS 2.0 + Atom format support; per-source cap; Jaccard dedup threshold 0.6; importance scored by cross-source coverage breadth: 3+ sources → high, 2 → medium, 1 → low; 30-min cache; `fetchRecentNewsWithFallback` returns `[]` on total failure). Both researchers updated to call `fetchRecentNewsWithFallback`. No API key required. Env var count drops from 7 → 6. Agent specs, decision register, security.md updated. 334 tests passing (28 new across 2 new test files). PR: #124
-- **WCP-125** — Quality fixes and agent tuning. Reactive insert addressing bugs and editorial weaknesses surfaced by live validation of the 2026-05-11 daily artifact. Three work units: (WU1) Data correctness: `assembleDraft` in `generate-daily-report.ts` now overrides `snapshot` and `topTracked.marketCapUsd` from researcher data instead of trusting LLM output, which misinterpreted "$2.807T" as 2807000000 (billion) and left all marketCapUsd values as 0. (WU2) Brand strings: `SITE_URL` added to `lib/site.ts` as canonical domain source; `generate-daily-report.ts` imports from there instead of hardcoding `weekly-crypto-pulse.com`; footer prose changed from "Weekly Pulse" to "Crypto Pulse"; all remaining stale `weekly-crypto-pulse.com` references in scripts, test fixtures, and agent specs fixed. (WU3) Agent tuning: forbidden headline patterns, summary editorial rules, causal attribution rules, and tag specificity rules added to `daily_writer.md` Hard Validation section. New checklist items 10-14 added to `daily_editor.md`. Both pipeline LLM system prompts (`generate-daily-report.ts` and `review-daily-report.ts`) updated in parallel to enforce the same rules (agent spec alone was insufficient — scripts have independent prompts). `--env-file=.env.local` applied to all weekly pipeline scripts for consistency. 336 tests passing (2 new). Re-validation artifact headline: "Ripple raises $200 million as stablecoin regulations loom ahead of Senate vote." PR: #125
-- **WCP-132** — Reader-visible launch. Anthropic Sonnet 4.6 as LLM fallback (replacing OpenAI). Daily schema v1.1 (`plainspokenOpening` additive field). Daily report pages at `/reports/[slug]`. Unified `/reports` archive with mixed weekly/daily cards. PR: #132
-- **WCP-133** — Charts on weekly pages: snapshot trend (Recharts), regime history. PR: #133
-- **WCP-134** — Conversion surface: paid block on weekly and daily pages, /pro restructure. PR: #134
-- **WCP-135** — Title metadata, RSS feeds, sitemap, programmatic OG images. Weekly title format uses em-dash separator per decision 18b. Two RSS feeds (`/rss.xml`, `/rss/daily.xml`) with atom self-link and auto-discovery headers. Sitemap includes all weeklies + last 30 dailies. Per-report branded OG images via Next.js file-based convention. next@16.2.6 (GHSA-26hh-7cqf-hhc6). PR: #135
-- **WCP-136** — Beehiiv email integration with tiered subscriptions. Beehiiv API client (`lib/email/beehiiv.ts`; subscribe, broadcast, list; retry on 429). Footer + homepage newsletter signup forms. API route at `/api/subscribe`. Weekly email composition and send wired into `generate-local-report.ts`. Sunday digest pipeline (`run-sunday-digest-pipeline.ts`; LLM framing paragraph via `sunday_digest_writer.md` agent). Daily digest email composition wired into `run-daily-pipeline.ts` (skipped on Sundays). `daily-pipeline.yml` fixed: `OPENAI_API_KEY` → `ANTHROPIC_API_KEY`, Sunday digest step added. Env var count: 5 → 7 (`BEEHIIV_API_KEY`, `BEEHIIV_PUBLICATION_ID`). D-01 reconciled. PR: #136
+- AGPL-3.0 license (full `LICENSE` file; `"license"` field in `package.json`)
+- Public-facing `README.md` rewritten: architecture narrative, tech stack table, local dev
+  instructions, pipeline commands, project structure directory map
+- `CONTRIBUTING.md`: scope (in/out), process, code style, test requirements
+- `SECURITY.md`: email contact, 48h response SLA, in/out scope, responsible disclosure policy
+- Pre-public security audit: secret scan clean, PII check clean, gitignore gaps patched
 
-## R2.1.1 — Follow-up items (post-launch review)
+---
 
-The following items were deliberately deferred from R2.1 for post-launch review:
+## Operational improvements
 
-1. **Email template polish** — HTML emails ship with basic inline styles. Review rendered output across Gmail, Outlook, Apple Mail after first sends and refine if needed.
-2. **Custom sending domain** — Deferred until production domain is acquired post-R2.1. Configure DKIM/SPF/DMARC once the domain is live.
-3. **Deliverability tuning** — First 2–4 weeks of sending run on Beehiiv's default sending reputation. Review open/bounce/complaint rates and tune if needed.
-4. **Subscriber management edge cases** — Re-subscriptions, tag changes, bounced/complained subscribers. Beehiiv handles most automatically; verify the workflows behave correctly after first real subscriber volume.
-5. **Signup placement A/B testing** — The homepage block's "most readers don't" framing is editorial intuition, not data-tested. R2.1.1 can test variations once subscriber baseline is established.
-6. **Daily opt-in analytics** — Track what percentage of signups choose daily opt-in vs. default tier. Currently no analytics layer in place; add once subscriber volume justifies it.
+- Test suite grew from 242 (R2.0 close) to 422 (R2.1 close); 15 new tests added in final PRs
+- 17 sub-PRs across WCP-121 through WCP-137, plus WCP-138 (closeout)
+- Two reactive inserts: CryptoPanic free-tier discontinuation (WCP-124), quality fixes after
+  live artifact validation (WCP-125)
+- Bundle size monitoring temporarily paused pending Turbopack-native baseline (Next.js 16
+  changed bundler format)
+- Env var set evolved from 4 → 7 (added `ANTHROPIC_API_KEY`, `BEEHIIV_API_KEY`,
+  `BEEHIIV_PUBLICATION_ID`; removed `CRYPTOPANIC_API_KEY`; `OPENAI_API_KEY` swapped for
+  `ANTHROPIC_API_KEY`)
+
+---
+
+## R2.1 — Detailed PR log
+
+- **WCP-121** — Next.js 14.2.35 → 16.2.5. Resolves 5 high-severity CVEs. ESLint 8 → 9.
+  Async params/searchParams migration. Turbopack becomes default. PR: #121
+- **WCP-122** — Daily pipeline scripts and GitHub Actions workflow. Researcher, writer, editor,
+  promoter, placeholder, orchestrator, validator. File cache at `lib/cache/file-cache.ts`
+  (30-min TTL). PR: #122
+- **WCP-123** — Shared asset registry, DeFiLlama TVL integration, CryptoPanic news (later
+  replaced). Weekly schema → `weekly@1.2`. PR: #123
+- **WCP-124** — News source swap: CryptoPanic → multi-source RSS (`lib/news/rss-aggregator.ts`,
+  `fast-xml-parser`, Jaccard dedup). `CRYPTOPANIC_API_KEY` removed. PR: #124
+- **WCP-125** — Quality fixes: data correctness (market cap units), brand strings (`SITE_URL`
+  from `lib/site.ts`), agent prompt tuning (headlines, summaries, causal attribution, tags).
+  Script system prompts updated in sync with agent specs. PR: #125
+- **WCP-132** — Reader-visible launch: Anthropic Sonnet 4.6 fallback. `daily@1.1` schema.
+  Daily report pages. Unified `/reports` archive. PR: #132
+- **WCP-133** — Charts on weekly pages (Recharts snapshot trend + regime history). PR: #133
+- **WCP-134** — Conversion surface: paid block, gating policy locked, nav fix, /pro restructure.
+  PR: #134
+- **WCP-135** — Title metadata format, two RSS feeds, sitemap, programmatic OG images. PR: #135
+- **WCP-136** — Beehiiv email integration: tiered subscriptions, weekly/daily/Sunday digest
+  sends, signup forms, `/api/subscribe`. PR: #136
+- **WCP-137** — Pro pack chart embedding, winners/losers enforcement, public showcase prep
+  (AGPL-3.0, README, CONTRIBUTING, SECURITY, security audit). PR: #137
+- **WCP-138** — R2.1 closeout: repo audit, release notes consolidation, version bump. PR: #138
+
+---
+
+## R2.1.1 — Follow-up items (post-launch backlog)
+
+Carry this list forward as the starting backlog for R2.1.1.
+
+1. **React 18 → 19 upgrade** — blocked on downstream ecosystem readiness
+2. **ESLint 9 flat config migration** — current ESLint 9 runs in legacy compat mode
+3. **CRLF line-ending normalization** — add `.gitattributes` for consistent line endings
+4. **Bundle size monitoring reactivation** — establish Turbopack-native baseline, then re-wire
+   the CI budget check
+5. **Component render testing** — jsdom or happy-dom setup for React component tests (currently
+   unit + integration only, no DOM)
+6. **Live API smoke tests for LLM client** — verify provider failover behavior against real
+   endpoints in a non-CI environment
+7. **Agent spec vs. script prompt deduplication** — the parallel maintenance burden is high;
+   evaluate whether scripts can import from agent spec files at runtime
+8. **`parseAndValidateLlmJson` hardcoded provider field** — investigate the hardcoded fallback
+   and replace with dynamic provider detection
+9. **Email template polish** — review rendered output across Gmail, Outlook, Apple Mail after
+   first sends
+10. **Custom sending domain** — configure DKIM/SPF/DMARC once production domain is acquired
+11. **Deliverability tuning** — monitor open/bounce/complaint rates for first 2-4 weeks
+12. **Subscriber management edge cases** — re-subscriptions, tag changes, bounce handling
+13. **A/B testing of signup placement and copy** — once subscriber baseline is established
+14. **Multi-tier signup analytics instrumentation** — daily opt-in conversion rate tracking
+15. **Sunday digest writer prompt tuning** — after first live run
+16. **Unsubscribe flow / preference centre link in email footers** — currently relies on
+    Beehiiv's auto-appended footer
+17. **Beehiiv webhook for delivery confirmation** — currently fire-and-forget
+18. **Email open/click analytics integration**
+19. **Enable GitHub Code Scanning in repo settings** — CodeQL Action is in place; Settings →
+    Code Security → Code Scanning must be enabled manually in the private → public transition
+20. **Live Beehiiv integration test** — full end-to-end subscriber + send flow verification
+21. **Pro pack smoke run** — generate a pack for a recent weekly, convert to PDF with pandoc,
+    verify chart images render
+22. **Stripe Payment Link wiring** — replace placeholders with real URLs once Stripe account
+    is configured for production
