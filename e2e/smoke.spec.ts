@@ -90,13 +90,9 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
     'page'
   );
 
-  const singleIssueCtas = page.getByRole('link', { name: 'Buy Single Issue' });
-  const monthlyBundleCtas = page.getByRole('link', { name: 'Buy Monthly Bundle' });
-
-  await expect(singleIssueCtas).toHaveCount(2);
-  await expect(monthlyBundleCtas).toHaveCount(2);
-  await expect(singleIssueCtas.first()).toBeVisible();
-  await expect(monthlyBundleCtas.first()).toBeVisible();
+  const proPackCta = page.getByRole('link', { name: "Buy this week's Pro Pack" });
+  await expect(proPackCta).toHaveCount(1);
+  await expect(proPackCta).toBeVisible();
 });
 
 test('/pro renders and includes primary CTAs', async ({ page }) => {
@@ -109,16 +105,16 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
       name: /the decision layer on top of the free weekly\./i
     })
   ).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 3, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 3, name: 'Weekly Crypto Pulse Pro — Monthly Bundle' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Pro' })).toHaveAttribute(
     'aria-current',
     'page'
   );
-  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(1);
-  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(1);
-  await expect(page.getByRole('heading', { level: 2, name: 'Before you buy' })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: 'Plan comparison' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Buy Single Issue' })).toHaveCount(3);
+  await expect(page.getByRole('link', { name: 'Buy Monthly Bundle' })).toHaveCount(3);
+  await expect(page.getByRole('heading', { level: 2, name: 'Choose your coverage' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'How it works' })).toBeVisible();
 });
 
 test('single-page navigation items only activate on their exact routes', async ({ page }) => {
