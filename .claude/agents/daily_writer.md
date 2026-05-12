@@ -257,6 +257,7 @@ Before writing the output file, verify each of these. If a check fails, attempt 
 8. Do not include a `weeklyFooter` field in your draft — it is injected by the pipeline script after assembly.
 9. The headline must not contain forbidden patterns: "mixed results", "modest", "slight", "minor" as sole descriptor, or generic "Crypto market shows X" constructions.
 10. Tags must not include generic terms: "crypto", "daily", "market", "news", "update".
+11. **Winners and losers populating (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST contain entries when the researcher's corresponding arrays are non-empty (after excluding stablecoins and wrapped/derivative tokens). Empty arrays are acceptable only when the researcher returned empty arrays — meaning no eligible top-50 asset moved >5% in that direction. If the researcher supplied winners or losers data but your output arrays are empty, you have omitted data — this is a check failure that requires a self-correction pass.
 
 ## Failure Handling
 
