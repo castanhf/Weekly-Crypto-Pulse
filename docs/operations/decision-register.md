@@ -8,7 +8,7 @@ This file records architectural and operational decisions that shaped the projec
 
 **Decision:** Minimal env vars; justified additions only.
 
-**Current set (6 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST):**
+**Current set (7 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST):**
 
 | Variable | Purpose | When added |
 |---|---|---|
@@ -17,7 +17,10 @@ This file records architectural and operational decisions that shaped the projec
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL for metadata and share links | R1 |
 | `NEXT_PUBLIC_X_HANDLE` | Optional X/Twitter handle for Open Graph metadata | R1 |
 | `ANTHROPIC_API_KEY` | Anthropic API key for LLM fallback when GitHub Models is unavailable | R2.0 (WCP-105), swapped R2.1 (WCP-132) |
-| `BEEHIIV_API_KEY` | Beehiiv email distribution API key _(planned R2.1)_ | — |
+| `BEEHIIV_API_KEY` | Beehiiv API key for email list management and broadcast sends | R2.1 (WCP-136) |
+| `BEEHIIV_PUBLICATION_ID` | Beehiiv publication ID scoping all API calls to the Crypto Pulse publication | R2.1 (WCP-136) |
+
+**R2.1 audit note (WCP-136):** Reconciled actual env var count with documentation. Previous D-01 listed `BEEHIIV_API_KEY` as "planned" and omitted `BEEHIIV_PUBLICATION_ID`. Both are now live. The daily-pipeline.yml workflow was also corrected to use `ANTHROPIC_API_KEY` instead of the legacy `OPENAI_API_KEY` reference (the OpenAI→Anthropic swap happened in WCP-132 but the workflow env var was not updated).
 
 **Original constraint (R1):** "no more than four env vars." Enforced strictly through R1.
 

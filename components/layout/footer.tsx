@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { NewsletterSignup } from '@/components/email/newsletter-signup';
 import { pageContainerClassName } from '@/components/layout/page-shell';
 
 const primaryFooterLinks = [
@@ -19,6 +20,10 @@ export function Footer(): JSX.Element {
             <p className="max-w-2xl text-base leading-8 text-muted">
               Static-first weekly crypto research with a clear editorial ladder from free orientation to paid decision and continuity.
             </p>
+            <div className="space-y-2 pt-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Get it in your inbox</p>
+              <NewsletterSignup />
+            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:justify-items-end">

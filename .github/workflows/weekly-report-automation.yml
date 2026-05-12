@@ -35,6 +35,9 @@ jobs:
 
       - name: Generate weekly report artifact
         run: npm run generate:local-report
+        env:
+          BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
+          BEEHIIV_PUBLICATION_ID: ${{ secrets.BEEHIIV_PUBLICATION_ID }}
 
       - name: Validate generated report artifacts
         run: npm run validate:reports

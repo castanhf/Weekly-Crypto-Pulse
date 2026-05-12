@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { NewsletterSignup } from '@/components/email/newsletter-signup';
 import { ContentWidth, PageHeader, PageSection, PageShell, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { editorialLabelClassName, getCtaClassName, getSectionTileClassName } from '@/components/layout/ui-primitives';
 import { ProCta } from '@/components/pro/pro-cta';
@@ -198,6 +199,19 @@ export default function HomePage(): JSX.Element {
         description="Free explains what's happening. Weekly Pro adds what to watch and how to think about it, for one week. Monthly Bundle does that for four weeks running."
         title="How each tier is meant to be used"
       />
+
+      <PageSection aria-labelledby="newsletter-heading">
+        <SurfaceCard className="space-y-5">
+          <h2 className="text-xl font-semibold tracking-tight" id="newsletter-heading">
+            Get Crypto Pulse in your inbox
+          </h2>
+          <p className="text-base leading-8 text-muted">
+            Weekly anchor reports on Mondays. Sunday digest of the week&apos;s daily coverage. Opt in for daily emails if you
+            want them — most readers don&apos;t.
+          </p>
+          <NewsletterSignup />
+        </SurfaceCard>
+      </PageSection>
     </PageShell>
   );
 }

@@ -21,12 +21,46 @@ import { generateDailyReport } from './generate-daily-report';
 import { reviewDailyReport } from './review-daily-report';
 import { promoteDailyArtifact } from './promote-daily-artifact';
 import { generateDailyPlaceholder } from './generate-daily-placeholder';
+import { loadDailyBySlug } from '../lib/reports/daily-repository';
+import { composeDailyDigest } from '../lib/email/compose-daily-digest';
+import { sendBroadcast } from '../lib/email/beehiiv';
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
 const DAILY_INPUT_DIR = path.resolve(process.cwd(), 'data/daily-inputs');
+
+const isSundayDate = (isoDate: string): boolean => new Date(isoDate).getDay() === 0;
+
+const sendDailyDigestIfConfigured = async (slug: string, targetDate: string): Promise<void> => {
+  if (!process.env.BEEHIIV_API_KEY || !process.env.BEEHIIV_PUBLICATION_ID) {
+    console.log('[pipeline] Beehiiv not configured — skipping daily digest send.');
+    return;
+  }
+
+  if (isSundayDate(targetDate)) {
+    console.log('[pipeline] Sunday — skipping daily digest (Sunday digest handles this day).');
+    return;
+  }
+
+  const record = loadDailyBySlug(slug);
+  if (!record) {
+    console.warn(`[pipeline] Could not find promoted artifact for slug "${slug}" — skipping email.`);
+    return;
+  }
+
+  const { subject, htmlBody, plaintextBody } = composeDailyDigest(record.daily);
+  const { broadcastId } = await sendBroadcast({
+    subject,
+    htmlBody,
+    plaintextBody,
+    segment: 'daily_digest_opt_in'
+  });
+
+  console.log(`[pipeline] Daily digest sent: ${broadcastId}`);
+  console.log(`[pipeline] Subject: ${subject}`);
+};
 
 const failureSentinelExists = async (targetDate: string): Promise<boolean> => {
   const sentinelPath = path.join(DAILY_INPUT_DIR, `.failure-${targetDate}.json`);
@@ -92,6 +126,11 @@ const main = async (): Promise<void> => {
   // Step 4: Promotion
   console.log('\n--- Promotion ---');
   const outputPath = await promoteDailyArtifact(targetDate);
+  const slug = path.basename(outputPath, '.json');
+
+  // Step 5: Daily digest email (skipped on Sundays — Sunday digest handles that day)
+  console.log('\n--- Daily digest email ---');
+  await sendDailyDigestIfConfigured(slug, targetDate);
 
   console.log(`\n=== Daily Pipeline — COMPLETE ===`);
   console.log(`Artifact: ${path.relative(process.cwd(), outputPath)}\n`);
