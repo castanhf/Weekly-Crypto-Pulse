@@ -123,7 +123,8 @@ npm run generate:pro -- --product monthlyBundle --month <YYYY-MM>
 │   ├── charts/              # SVG renderer + PNG export (server-side, no browser)
 │   ├── email/               # Beehiiv client + email composition
 │   ├── llm/                 # LLM client with GitHub Models / Anthropic failover
-│   ├── markets/             # CoinGecko + DeFiLlama data fetchers, asset registry
+│   ├── market-data/         # CoinGecko provider + data ingestion abstraction
+│   ├── markets/             # DeFiLlama TVL client + asset category registry
 │   ├── news/                # RSS aggregator (multi-source)
 │   └── reports/             # Artifact repository, validator, distribution logic
 ├── scripts/                 # Pipeline scripts (research, write, review, generate)
