@@ -39,10 +39,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Determine if today is Sunday
+        id: day-check
+        run: echo "is_sunday=$([ $(date +%u) -eq 7 ] && echo true || echo false)" >> $GITHUB_OUTPUT
+
       - name: Run daily pipeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
+          BEEHIIV_PUBLICATION_ID: ${{ secrets.BEEHIIV_PUBLICATION_ID }}
           DAILY_TARGET_DATE: ${{ inputs.target_date }}
         run: npm run run:daily-pipeline
 
@@ -59,3 +65,12 @@ jobs:
           COMMIT_DATE="${DATE_LABEL:-auto}"
           git commit -m "chore: daily report ${COMMIT_DATE}"
           git push
+
+      - name: Run Sunday digest (Sundays only)
+        if: steps.day-check.outputs.is_sunday == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
+          BEEHIIV_PUBLICATION_ID: ${{ secrets.BEEHIIV_PUBLICATION_ID }}
+        run: npm run run:sunday-digest

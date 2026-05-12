@@ -1,6 +1,9 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import { composeWeeklyEmail } from '../lib/email/compose-weekly-email';
+import { sendBroadcast } from '../lib/email/beehiiv';
+
 import { WEEKLY_SCHEMA_V1_2 } from '../domain/schema-version';
 import {
   type CapitalFlows,
@@ -284,6 +287,18 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
   };
 };
 
+const sendWeeklyEmailIfConfigured = async (artifact: ReportArtifact): Promise<void> => {
+  if (!process.env.BEEHIIV_API_KEY || !process.env.BEEHIIV_PUBLICATION_ID) {
+    console.log('[generate-local-report] Beehiiv not configured — skipping weekly email send.');
+    return;
+  }
+
+  const { subject, htmlBody, plaintextBody } = composeWeeklyEmail(artifact.report);
+  const { broadcastId } = await sendBroadcast({ subject, htmlBody, plaintextBody, segment: 'all' });
+  console.log(`[generate-local-report] Weekly email sent: ${broadcastId}`);
+  console.log(`[generate-local-report] Subject: ${subject}`);
+};
+
 const main = async (): Promise<void> => {
   const rawInput = await readFile(REPORT_INPUT_PATH, 'utf-8');
   const input = parseInput(rawInput);
@@ -294,6 +309,8 @@ const main = async (): Promise<void> => {
   await writeFile(outputPath, `${JSON.stringify(artifact, null, 2)}\n`, 'utf-8');
 
   console.log(`Generated report: ${path.relative(process.cwd(), outputPath)}`);
+
+  await sendWeeklyEmailIfConfigured(artifact);
 };
 
 main().catch((error: unknown) => {
