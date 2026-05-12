@@ -21,7 +21,8 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
       'One Pro weekly report for the selected issue',
       'Decision memo for that week: posture, scenario framing, and invalidation',
       'Signals package: thesis bullets, risk checklist, and watchlist levels for the current decision cycle',
-      'Single-week decision scorecard that makes the current setup actionable without requiring month-long tracking'
+      'Single-week decision scorecard that makes the current setup actionable without requiring month-long tracking',
+      'Embedded market snapshot trend and regime history charts (12-week visual context, the same data shown on the free weekly page)'
     ],
     excludes: [
       'No subscription billing',
@@ -38,7 +39,7 @@ export const PRO_PRODUCTS: Readonly<Record<ProProductId, ProProductDefinition>> 
     shortDescription: 'The better-value option when you want four weeks connected, not four separate reads.',
     audience: 'You want to follow the market week by week, with a wrap-up at the end of the month that shows what shifted.',
     includes: [
-      'Four Pro weekly issues for the active month',
+      'Four Pro weekly issues for the active month, each with embedded market snapshot and regime history charts',
       'Cross-issue continuity ledger showing what persisted, changed, and failed week to week',
       'One month-end synthesis artifact that reconciles recurring thesis points, regime distribution, key movers, and decision carry-forward',
       'Better per-issue value than buying each issue individually when continuity matters'
