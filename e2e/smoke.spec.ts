@@ -84,7 +84,7 @@ test('/reports/[slug] renders report headings', async ({ page }) => {
 
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /executive summary/i })).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: /market snapshot/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Market Snapshot', exact: true })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' }).getByRole('link', { name: 'Reports' })).toHaveAttribute(
     'aria-current',
     'page'
@@ -106,7 +106,7 @@ test('/pro renders and includes primary CTAs', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /one issue or the full month\./i
+      name: /the decision layer on top of the free weekly\./i
     })
   ).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: 'Weekly Crypto Pulse Pro — Single Issue' })).toBeVisible();
