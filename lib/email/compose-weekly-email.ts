@@ -1,5 +1,5 @@
-import type { Report } from '@/domain/report';
-import { SITE_NAME, SITE_URL, WEEKLY_TITLE_PREFIX } from '@/lib/site';
+import type { Report } from '../../domain/report';
+import { SITE_NAME, SITE_URL, WEEKLY_TITLE_PREFIX } from '../site';
 
 const ACCENT = '#F7931A';
 const CANVAS = '#0d1b2e';

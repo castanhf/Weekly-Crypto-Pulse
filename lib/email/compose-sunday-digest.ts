@@ -1,5 +1,5 @@
-import type { DailyArtifact } from '@/domain/daily';
-import { SITE_NAME, SITE_URL } from '@/lib/site';
+import type { DailyArtifact } from '../../domain/daily';
+import { SITE_NAME, SITE_URL } from '../site';
 
 const ACCENT = '#F7931A';
 const CANVAS = '#0d1b2e';

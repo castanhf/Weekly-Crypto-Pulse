@@ -1,5 +1,5 @@
-import type { Mover, Report } from '@/domain/report';
-import { siteConfig } from '@/lib/site';
+import type { Mover, Report } from '../../domain/report';
+import { siteConfig } from '../site';
 
 type DistributionContext = Readonly<{
   siteOrigin: string;

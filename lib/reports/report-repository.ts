@@ -1,8 +1,8 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { Report } from '@/domain/report';
-import { parseReportArtifactJson } from '@/lib/reports/report-parser';
+import type { Report } from '../../domain/report';
+import { parseReportArtifactJson } from './report-parser';
 
 export const REPORTS_DIRECTORY_PATH = join(process.cwd(), 'data', 'reports');
 

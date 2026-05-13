@@ -48,6 +48,17 @@ npm run test  # Vitest unit + integration tests
 
 New code should include tests where applicable. Bug fixes should include a regression test.
 
+## Import conventions
+
+This project has two import styles depending on where the file lives:
+
+- **Next.js components (under `app/`, `components/`):** use the `@/` path alias for clarity (e.g., `import { foo } from '@/lib/site'`).
+- **Library code consumed by Node scripts (`lib/reports/`, `lib/email/`, `lib/market-data/`, `lib/markets/`, `lib/news/`, `lib/llm/`, `lib/charts/`, `lib/cache/`):** use relative imports (e.g., `import { foo } from '../../domain/schema-version'`).
+
+Why: pipeline scripts compile via `tsconfig.scripts.json` and run via plain Node, which cannot resolve TypeScript path aliases. Files in script-consumed directories must use relative imports to remain importable from compiled scripts.
+
+`npm run test` includes a static check (`lib/import-convention.test.ts`) that fails if any `@/` import appears in a source file under those directories.
+
 ## Communication
 
 Discussions happen via GitHub Issues. Email contact is for security issues only — see [SECURITY.md](SECURITY.md).

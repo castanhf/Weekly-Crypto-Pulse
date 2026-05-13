@@ -1,4 +1,4 @@
-import type { AssetId, FiatCurrency, MarketDataSnapshot } from '@/domain/market-data';
+import type { AssetId, FiatCurrency, MarketDataSnapshot } from '../../domain/market-data';
 
 export interface MarketDataProviderRequest {
   readonly assetIds: ReadonlyArray<AssetId>;

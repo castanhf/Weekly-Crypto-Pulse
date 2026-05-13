@@ -1,6 +1,6 @@
-import type { AssetId, FiatCurrency, MarketAssetSnapshot, MarketDataSnapshot } from '@/domain/market-data';
-import { MarketDataProviderResponseError } from '@/lib/market-data/errors';
-import type { MarketDataProvider, MarketDataProviderRequest } from '@/lib/market-data/provider';
+import type { AssetId, FiatCurrency, MarketAssetSnapshot, MarketDataSnapshot } from '../../domain/market-data';
+import { MarketDataProviderResponseError } from './errors';
+import type { MarketDataProvider, MarketDataProviderRequest } from './provider';
 
 type FetchFn = (input: string | URL | globalThis.Request, init?: RequestInit) => Promise<Response>;
 
