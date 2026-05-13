@@ -44,6 +44,13 @@ describe('POST /api/subscribe', () => {
     expect(json.error).toBeTruthy();
   });
 
+  it('returns 400 for an email exceeding 320 characters (ReDoS guard)', async () => {
+    const longEmail = 'a'.repeat(310) + '@example.com';
+    expect(longEmail.length).toBeGreaterThan(320);
+    const response = await POST(makeRequest({ email: longEmail, dailyDigestOptIn: false }));
+    expect(response.status).toBe(400);
+  });
+
   it('returns 400 for missing email field', async () => {
     const response = await POST(makeRequest({ dailyDigestOptIn: false }));
     expect(response.status).toBe(400);

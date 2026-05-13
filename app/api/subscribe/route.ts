@@ -1,5 +1,8 @@
 import { subscribeToList } from '@/lib/email/beehiiv';
 
+// RFC 5321 maximum total email address length.
+// Checked before the regex to bound input size and prevent ReDoS.
+const MAX_EMAIL_LENGTH = 320;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request): Promise<Response> {
@@ -16,7 +19,7 @@ export async function POST(request: Request): Promise<Response> {
 
   const { email, dailyDigestOptIn } = body as Record<string, unknown>;
 
-  if (typeof email !== 'string' || !EMAIL_PATTERN.test(email)) {
+  if (typeof email !== 'string' || email.length > MAX_EMAIL_LENGTH || !EMAIL_PATTERN.test(email)) {
     return Response.json({ error: 'Invalid email' }, { status: 400 });
   }
 
