@@ -23,7 +23,7 @@ If the researcher's findings file does not exist, write the sentinel with messag
 
 ## How to Run the Editorial Review
 
-Work through the nine checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
+Work through the fourteen checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
 
 Do not make subjective editorial improvements — you are checking compliance with specific documented rules, not optimizing prose style. "This sentence could flow better" is not a valid reason to request a revision. "This sentence contains 'we recommend'" is.
 
@@ -53,13 +53,18 @@ Check the "Worth knowing" section with special attention — this section is par
 
 ### Checklist Item 3 — Winners-and-Losers Check
 
-**Question**: When the researcher's `movers.winners` or `movers.losers` arrays are non-empty, does the draft include the relevant assets in the "What moved" section?
+**Question**: When the researcher's `movers.winners` or `movers.losers` arrays contain eligible assets (non-stablecoin, non-wrapped/derivative), do those assets appear in the draft's `whatMoved` arrays?
 
-**How to evaluate**: Read `movers.winners` and `movers.losers` from the researcher's input. If either array has entries, verify that the corresponding assets appear in the draft's `whatMoved` section. A quiet-day exception applies: if the researcher returned empty arrays (no assets met the ≥5% / ≤-5% threshold), the omission is correct and this check PASSes.
+**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. For each array:
+1. Filter out any asset whose symbol is in the stablecoin or wrapped/derivative registry (`lib/markets/asset-categories.ts` — USDT, USDC, DAI, BUSD, FDUSD, TUSD, USDE, USDS, WBTC, WETH, STETH, WSTETH, and others in the registry).
+2. If the filtered list is non-empty, verify that the draft's corresponding `whatMoved.winners` or `whatMoved.losers` array is also non-empty.
+3. A quiet-day exception applies only when the researcher's arrays are genuinely empty after filtering — meaning no eligible top-50 asset moved >5%.
 
-**PASS criteria**: If `movers.winners` is non-empty, winners appear in the draft. If `movers.losers` is non-empty, losers appear in the draft. If both are empty, the check passes automatically.
+An empty `whatMoved.winners` or `whatMoved.losers` in the draft when the researcher had eligible movers is a data omission, not editorial discretion. This is the single most common quality failure in daily artifacts and must be caught here.
 
-**FAIL action**: Note which assets from the researcher's data are missing from the draft.
+**PASS criteria**: `whatMoved.winners` is non-empty when the researcher had eligible winners; `whatMoved.losers` is non-empty when the researcher had eligible losers; both may be empty only when the researcher had no eligible movers.
+
+**FAIL action**: Quote the researcher's missing movers (symbol + changePct24h) and state that they are absent from the corresponding draft array. Do not accept "no significant movers" as a revision response if the researcher data shows otherwise.
 
 ### Checklist Item 4 — Stablecoin and Derivative Narration Check
 
@@ -98,7 +103,7 @@ Note: quiet-day reports that are honest about having thin content may fall below
 **Question**: Does the draft validate against the `daily@1.0` schema?
 
 **How to evaluate**: Verify the following structural requirements manually:
-- `schemaVersion` equals `"daily@1.0"`
+- `schemaVersion` equals `"daily@1.1"`
 - `generatedAt` is a non-empty string (ISO timestamp format)
 - `publishedAt` is a non-empty string in `YYYY-MM-DD` format
 - `slug` is a non-empty string
@@ -107,6 +112,7 @@ Note: quiet-day reports that are honest about having thin content may fall below
 - `worthKnowing` is an array with 0–4 entries
 - `snapshot.totalMarketCapUsd`, `snapshot.btcDominancePct`, `snapshot.ethDominancePct`, `snapshot.fearGreedIndex` are all numbers
 - `tags` is an array of non-empty strings
+- `weeklyFooter` is **optional**; if present, it must be an object with non-empty `text` (string) and `weeklySlug` (string) fields
 
 **PASS criteria**: All structural requirements satisfied.
 
@@ -122,16 +128,84 @@ Do not verify every table cell — verify claims in prose sections (`summary`, `
 
 **FAIL action**: Quote the prose claim, the section it appears in, and the actual value from the researcher's data.
 
-### Checklist Item 9 — Footer Check
+### Checklist Item 9 — Weekly Footer Check
 
-**Question**: Is the weekly footer link present in the draft?
+**Question**: If `weeklyFooter` is present in the draft, is it structurally valid?
 
-The footer must contain a link to the most recent weekly report. The exact format per `daily_writer.md`:
-> For deeper context, see this week's [Weekly Pulse](...) or the fallback [Weekly Pulse archive](...).
+`weeklyFooter` is an optional field injected by the pipeline script (not produced by the writer). The pipeline adds it when a weekly slug is available; it is absent on days when no weekly has been published yet.
 
-**How to evaluate**: Check the end of the draft for this footer. It may appear as a text string appended after the last section, or as a dedicated field — the writer defines its placement. If present in any form that includes a link to `/reports`, PASS.
+**How to evaluate**:
+- If `weeklyFooter` is **absent**: PASS. The writer is not responsible for it.
+- If `weeklyFooter` is **present**: verify it has a non-empty `text` string and a non-empty `weeklySlug` string. Do **not** check URL formatting — the rendering layer handles linking.
 
-**PASS criteria**: A footer with a link to the weekly is present.
+**PASS criteria**: `weeklyFooter` is absent, or if present it has valid `text` and `weeklySlug` strings.
+
+**FAIL action**: If `weeklyFooter` is present but structurally invalid, flag the specific missing or empty field.
+
+### Checklist Item 10 — Headline Specificity Check
+
+**Question**: Does the headline name a *specific* story?
+
+**How to evaluate**: Apply the headline quality bar from `daily_writer.md`. Reject if:
+- The headline contains "mixed results", "mixed", "modest", or "slight" as its only descriptor
+- A reader cannot tell from the headline alone what actually mattered today
+- The headline is a pure restatement of price action with no story ("Bitcoin up, Ethereum down")
+- The headline is a generic filler pattern ("Crypto market sees X")
+
+**PASS criteria**: The headline names a specific event, catalyst, level, or absence-of-story — not generic price action.
+
+**FAIL action**: Quote the headline and identify why it fails. Suggest the type of headline that would pass (e.g., "Name the pending Senate vote", "Reference the Circle/Ripple raises").
+
+### Checklist Item 11 — Summary Editorial Check
+
+**Question**: Does the 60-second read tell the story, or does it restate prices?
+
+**How to evaluate**: Read the `summary` field. FAIL if:
+- The primary content is "BTC went up X%, ETH went down Y%"
+- The summary uses generic phrases: "Overall, the market experienced...", "The day was characterized by...", "Investors saw..."
+- The summary is a price table disguised as prose
+
+**PASS criteria**: The summary identifies the day's main story, provides at least one piece of context explaining why that story is the day's story, and positions the rest of the report.
+
+**FAIL action**: Quote the offending sentence(s) and identify what the summary should have said instead based on the researcher's data.
+
+### Checklist Item 12 — Causal Attribution Check
+
+**Question**: Does the "why it moved" prose contain empty causal attributions?
+
+**How to evaluate**: Read `whyItMoved`. FAIL if any of the following patterns appear:
+- "ongoing interest in the asset" or "continues to hold a dominant position" as a cause
+- "market sentiment appears to be stabilizing" or similar vague sentiment attribution
+- "investor caution as the market awaits developments" (without specifying what developments)
+- "could have significant implications" without quantifying the implications
+
+For each asset that moved >3% in the top 15 or >5% in rank 16-50: verify the prose either cites a specific cause from the researcher's news items or honestly states "no clear catalyst."
+
+**PASS criteria**: Every causal claim in `whyItMoved` either (a) references a specific named event from the researcher's data, or (b) honestly acknowledges the absence of a clear catalyst.
+
+**FAIL action**: Quote the empty attribution and note what specific evidence (if any) exists in the researcher data that should have been cited instead.
+
+### Checklist Item 13 — Tag Specificity Check
+
+**Question**: Are the tags specific to the day's content?
+
+**How to evaluate**: Check the `tags` array. FAIL if any tag is from the generic list: "crypto", "daily", "market", "news", "update". These tags apply to every daily and create no navigable value.
+
+**PASS criteria**: All tags name specific subjects from the day's content — companies, regulatory events, market themes, or assets that moved on a real catalyst.
+
+**FAIL action**: List the generic tags and note what specific tags the day's content supports.
+
+### Checklist Item 14 — Quiet-Day Honesty Check
+
+**Question**: If the day's content is genuinely thin, is the writer being honest about it or padding with filler?
+
+**How to evaluate**: Check if the day had no major movers (all top-15 assets within ±1%) and no high-relevance news. If so: is the `whyItMoved` section short and honest, or padded with manufactured explanation?
+
+A short, honest "Markets drifted sideways on light volume; no clear catalyst drove the session" is a PASS. A 300-word section inventing causal explanations for noise is a FAIL.
+
+**PASS criteria**: On quiet days, the prose is proportionally brief and honest. On active days, this check passes automatically.
+
+**FAIL action**: Quote the padded section and request a condensed honest version.
 
 ## Outputs
 

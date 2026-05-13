@@ -1,6 +1,6 @@
-import type { AssetId, MarketDataSnapshot } from '@/domain/market-data';
-import { MarketDataIngestionError } from '@/lib/market-data/errors';
-import type { MarketDataProvider } from '@/lib/market-data/provider';
+import type { AssetId, MarketDataSnapshot } from '../../domain/market-data';
+import { MarketDataIngestionError } from './errors';
+import type { MarketDataProvider } from './provider';
 
 const DEFAULT_ASSET_IDS: ReadonlyArray<AssetId> = ['bitcoin', 'ethereum', 'solana'];
 

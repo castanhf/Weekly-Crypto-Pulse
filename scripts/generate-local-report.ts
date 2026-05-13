@@ -1,10 +1,15 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { WEEKLY_SCHEMA_V1_1 } from '../domain/schema-version';
+import { composeWeeklyEmail } from '../lib/email/compose-weekly-email';
+import { sendBroadcast } from '../lib/email/beehiiv';
+
+import { WEEKLY_SCHEMA_V1_2 } from '../domain/schema-version';
 import {
+  type CapitalFlows,
   type MarketSnapshot,
   type Mover,
+  type PlainspokenOpening,
   type Regime,
   type ReportArtifact,
   type ReportSection,
@@ -35,6 +40,8 @@ type LocalReportInput = Readonly<{
   movers: ReadonlyArray<Mover>;
   sections: ReadonlyArray<ReportSection>;
   signals: ReportSignals;
+  plainspokenOpening?: PlainspokenOpening;
+  capitalFlows?: CapitalFlows;
 }>;
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
@@ -181,6 +188,46 @@ const parseSignals = (value: unknown): ReportSignals => {
   };
 };
 
+const parseCapitalFlows = (value: unknown): CapitalFlows | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const flows = assertRecord(value, 'capitalFlows');
+  const topChainsTvl = assertArray(flows.topChainsTvl, 'capitalFlows.topChainsTvl').map((entry, i) => {
+    const chain = assertRecord(entry, `capitalFlows.topChainsTvl[${i}]`);
+    return {
+      chain: assertString(chain.chain, `capitalFlows.topChainsTvl[${i}].chain`),
+      tvlUsd: assertNumber(chain.tvlUsd, `capitalFlows.topChainsTvl[${i}].tvlUsd`),
+      changePct24h: assertNumber(chain.changePct24h, `capitalFlows.topChainsTvl[${i}].changePct24h`),
+      changeUsd24h: assertNumber(chain.changeUsd24h, `capitalFlows.topChainsTvl[${i}].changeUsd24h`)
+    };
+  });
+  const notableMovements = assertArray(flows.notableMovements, 'capitalFlows.notableMovements').map((entry, i) => {
+    const mov = assertRecord(entry, `capitalFlows.notableMovements[${i}]`);
+    const trigger = assertString(mov.trigger, `capitalFlows.notableMovements[${i}].trigger`);
+    if (trigger !== 'percent_threshold' && trigger !== 'absolute_threshold') {
+      throw new Error(
+        `Invalid input at "capitalFlows.notableMovements[${i}].trigger": expected "percent_threshold" or "absolute_threshold".`
+      );
+    }
+    return {
+      chain: assertString(mov.chain, `capitalFlows.notableMovements[${i}].chain`),
+      tvlUsd: assertNumber(mov.tvlUsd, `capitalFlows.notableMovements[${i}].tvlUsd`),
+      changePct24h: assertNumber(mov.changePct24h, `capitalFlows.notableMovements[${i}].changePct24h`),
+      changeUsd24h: assertNumber(mov.changeUsd24h, `capitalFlows.notableMovements[${i}].changeUsd24h`),
+      trigger: trigger as 'percent_threshold' | 'absolute_threshold'
+    };
+  });
+  return { topChainsTvl, notableMovements };
+};
+
+const parsePlainspokenOpening = (value: unknown): PlainspokenOpening | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const opening = assertRecord(value, 'plainspokenOpening');
+  return {
+    headline: assertString(opening.headline, 'plainspokenOpening.headline'),
+    body: assertString(opening.body, 'plainspokenOpening.body')
+  };
+};
+
 const parseInput = (rawInput: string): LocalReportInput => {
   const parsed = JSON.parse(rawInput) as unknown;
   const root = assertRecord(parsed, 'root');
@@ -195,7 +242,9 @@ const parseInput = (rawInput: string): LocalReportInput => {
     snapshot: parseSnapshot(root.snapshot),
     movers: parseMovers(root.movers),
     sections: parseSections(root.sections),
-    signals: parseSignals(root.signals)
+    signals: parseSignals(root.signals),
+    plainspokenOpening: parsePlainspokenOpening(root.plainspokenOpening),
+    capitalFlows: parseCapitalFlows(root.capitalFlows)
   };
 };
 
@@ -216,7 +265,7 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
   const slug = toSlug(publishedAt, input.headline);
 
   return {
-    schemaVersion: WEEKLY_SCHEMA_V1_1,
+    schemaVersion: WEEKLY_SCHEMA_V1_2,
     generatedAt: buildGeneratedAt(publishedAt),
     report: {
       metadata: {
@@ -231,9 +280,23 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
       marketSnapshot: input.snapshot,
       movers: input.movers,
       sections: input.sections,
-      signals: input.signals
+      signals: input.signals,
+      ...(input.plainspokenOpening !== undefined ? { plainspokenOpening: input.plainspokenOpening } : {}),
+      ...(input.capitalFlows !== undefined ? { capitalFlows: input.capitalFlows } : {})
     }
   };
+};
+
+const sendWeeklyEmailIfConfigured = async (artifact: ReportArtifact): Promise<void> => {
+  if (!process.env.BEEHIIV_API_KEY || !process.env.BEEHIIV_PUBLICATION_ID) {
+    console.log('[generate-local-report] Beehiiv not configured — skipping weekly email send.');
+    return;
+  }
+
+  const { subject, htmlBody, plaintextBody } = composeWeeklyEmail(artifact.report);
+  const { broadcastId } = await sendBroadcast({ subject, htmlBody, plaintextBody, segment: 'all' });
+  console.log(`[generate-local-report] Weekly email sent: ${broadcastId}`);
+  console.log(`[generate-local-report] Subject: ${subject}`);
 };
 
 const main = async (): Promise<void> => {
@@ -246,6 +309,8 @@ const main = async (): Promise<void> => {
   await writeFile(outputPath, `${JSON.stringify(artifact, null, 2)}\n`, 'utf-8');
 
   console.log(`Generated report: ${path.relative(process.cwd(), outputPath)}`);
+
+  await sendWeeklyEmailIfConfigured(artifact);
 };
 
 main().catch((error: unknown) => {

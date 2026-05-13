@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
+import type { DailyArtifact } from '@/domain/daily';
 import type { Report } from '@/domain/report';
-import { siteConfig } from '@/lib/site';
+import { DAILY_TITLE_PREFIX, WEEKLY_TITLE_PREFIX, siteConfig } from '@/lib/site';
 
 const DEFAULT_OG_IMAGE_PATH = '/og-default.png';
 
@@ -115,8 +116,13 @@ export const createProMetadata = (): Metadata =>
   });
 
 export const createReportMetadata = (report: Report): Metadata => {
+  const rawTitle = report.metadata.title;
+  const colonIndex = rawTitle.indexOf(':');
+  const headline = colonIndex >= 0 ? rawTitle.slice(colonIndex + 1).trim() : rawTitle;
+  const title = `${WEEKLY_TITLE_PREFIX} — ${headline}`;
+
   const metadata = createPageMetadata({
-    title: report.metadata.title,
+    title,
     description: report.metadata.summary,
     path: `/reports/${report.metadata.slug}`
   });
@@ -128,6 +134,25 @@ export const createReportMetadata = (report: Report): Metadata => {
       type: 'article',
       publishedTime: report.metadata.publishedAt,
       tags: [...report.metadata.tags]
+    }
+  };
+};
+
+export const createDailyMetadata = (daily: DailyArtifact): Metadata => {
+  const title = `${DAILY_TITLE_PREFIX} — ${daily.headline}`;
+  const metadata = createPageMetadata({
+    title,
+    description: daily.summary,
+    path: `/reports/${daily.slug}`
+  });
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: 'article',
+      publishedTime: daily.publishedAt,
+      tags: [...daily.tags]
     }
   };
 };

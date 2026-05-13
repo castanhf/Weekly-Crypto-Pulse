@@ -1,6 +1,6 @@
-import type { DailyArtifact, WeeklyArtifact, Artifact } from '@/lib/reports/artifact-types';
-import { getAllReportArtifacts, type ReportArtifactRecord } from '@/lib/reports/report-repository';
-import { loadAllDailies, type DailyArtifactRecord } from '@/lib/reports/daily-repository';
+import type { DailyArtifact, WeeklyArtifact, Artifact } from './artifact-types';
+import { getAllReportArtifacts, type ReportArtifactRecord } from './report-repository';
+import { loadAllDailies, type DailyArtifactRecord } from './daily-repository';
 
 const toWeeklyArtifact = (record: ReportArtifactRecord): WeeklyArtifact => ({
   kind: 'weekly',
@@ -38,3 +38,6 @@ export const loadArtifactsByDateRange = (startIso: string, endIso: string): Read
 
 export const loadLatestArtifacts = (limit: number): ReadonlyArray<Artifact> =>
   loadAllArtifacts().slice(0, limit);
+
+export const loadArtifactBySlug = (slug: string): Artifact | undefined =>
+  loadAllArtifacts().find((artifact) => artifact.slug === slug);

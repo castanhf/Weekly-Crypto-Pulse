@@ -26,11 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # TODO(R2.1): restore --audit-level=high after Next.js 14 → 16 upgrade lands
-      # (R2.1 Prompt 1). The lowered threshold is a temporary risk acceptance
-      # documented in docs/operations/security.md.
       - name: Audit production dependencies
-        run: npm audit --production --audit-level=critical
+        run: npm audit --production --audit-level=high
 
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium

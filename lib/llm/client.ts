@@ -1,9 +1,9 @@
+import { callAnthropic } from './providers/anthropic';
 import { callGithubModels } from './providers/github-models';
-import { callOpenAI } from './providers/openai';
 import { LlmCallOptions, LlmError, LlmProvider, LlmRequest, LlmResponse } from './types';
 
 const DEFAULT_PRIMARY: LlmProvider = 'github-models';
-const DEFAULT_SECONDARY: LlmProvider = 'openai';
+const DEFAULT_SECONDARY: LlmProvider = 'anthropic';
 const DEFAULT_RETRIES = 3;
 const DEFAULT_BACKOFF_MS = [60_000, 180_000, 540_000] as const;
 
@@ -11,7 +11,7 @@ const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout
 
 const callProvider = (provider: LlmProvider, request: LlmRequest, requestId?: string): Promise<LlmResponse> => {
   if (provider === 'github-models') return callGithubModels(request, requestId);
-  return callOpenAI(request, requestId);
+  return callAnthropic(request, requestId);
 };
 
 const callWithRetry = async (

@@ -8,7 +8,7 @@ This file records architectural and operational decisions that shaped the projec
 
 **Decision:** Minimal env vars; justified additions only.
 
-**Current set (6 planned, 5 live):**
+**Current set (7 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST and NEXT_PUBLIC_ANALYTICS_ENABLED):**
 
 | Variable | Purpose | When added |
 |---|---|---|
@@ -16,14 +16,23 @@ This file records architectural and operational decisions that shaped the projec
 | `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE` | Stripe Payment Link for Monthly Bundle CTA | R1 |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL for metadata and share links | R1 |
 | `NEXT_PUBLIC_X_HANDLE` | Optional X/Twitter handle for Open Graph metadata | R1 |
-| `OPENAI_API_KEY` | OpenAI API key for LLM fallback when GitHub Models is unavailable | R2.0 (WCP-105) |
-| `BEEHIIV_API_KEY` | Beehiiv email distribution API key _(planned R2.1)_ | — |
+| `ANTHROPIC_API_KEY` | Anthropic API key for LLM fallback when GitHub Models is unavailable | R2.0 (WCP-105), swapped R2.1 (WCP-132) |
+| `BEEHIIV_API_KEY` | Beehiiv API key for email list management and broadcast sends | R2.1 (WCP-136) |
+| `BEEHIIV_PUBLICATION_ID` | Beehiiv publication ID scoping all API calls to the Crypto Pulse publication | R2.1 (WCP-136) |
+
+**R2.1 audit note (WCP-136):** Reconciled actual env var count with documentation. Previous D-01 listed `BEEHIIV_API_KEY` as "planned" and omitted `BEEHIIV_PUBLICATION_ID`. Both are now live. The daily-pipeline.yml workflow was also corrected to use `ANTHROPIC_API_KEY` instead of the legacy `OPENAI_API_KEY` reference (the OpenAI→Anthropic swap happened in WCP-132 but the workflow env var was not updated).
+
+**R2.1 pre-merge audit (WCP-139):** The Stripe Payment Link env vars (`STRIPE_PAYMENT_LINK_WEEKLY_PRO`, `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`) were confirmed intentional — the env-var-driven approach was introduced in R1 and is documented in `.env.example`. The "/pro page shows checkout unavailable" behavior is by design when the env vars are not set. Fix is operator-side: populate the vars in Vercel with actual Stripe Payment Link URLs. `NEXT_PUBLIC_ANALYTICS_ENABLED` added to `.env.example` as a dev-only optional var (not counted in live total).
 
 **Original constraint (R1):** "no more than four env vars." Enforced strictly through R1.
 
 **Updated constraint (R2.0):** Minimal env vars; justified additions only. Each addition requires a documented reason in this register.
 
-**Justification for OPENAI_API_KEY (added WCP-105):** Pipeline reliability. GitHub Models (the primary LLM provider) is a free tier with rate limits and occasional availability gaps. The weekly pipeline is time-critical (Monday 06:00 UTC automation). OpenAI serves as a fallback provider in `lib/llm/client.ts` — the client retries on the primary, then falls back automatically. A hard usage cap is required in the OpenAI dashboard to prevent runaway costs. The key is optional at runtime (the pipeline attempts GitHub Models first), but strongly recommended.
+**Justification for ANTHROPIC_API_KEY (added WCP-105 as OPENAI_API_KEY, swapped to Anthropic in WCP-132):** Pipeline reliability. GitHub Models (the primary LLM provider) is a free tier with rate limits and occasional availability gaps. The weekly pipeline is time-critical (Monday 06:00 UTC automation). Anthropic serves as a fallback provider in `lib/llm/client.ts` — the client retries on the primary, then falls back automatically. A hard usage cap via prepaid credit is set at console.anthropic.com to prevent runaway costs. The key is optional at runtime (the pipeline attempts GitHub Models first), but strongly recommended.
+
+**R2.1 swap: OpenAI → Anthropic Sonnet 4.6 as fallback (WCP-132).** Operator chose Anthropic for editorial quality preference and ecosystem alignment. When fallback fires, output quality must match or exceed primary. Sonnet 4.6 is materially better at editorial writing and instruction-following than Haiku at our small fallback-only usage volume; cost difference is negligible at 100% fallback rate.
+
+**Note on CRYPTOPANIC_API_KEY (added WCP-123, removed WCP-124):** CryptoPanic discontinued their free API tier on 2026-04-01. The integration was removed in WCP-124 and replaced with a multi-source RSS aggregator (`lib/news/rss-aggregator.ts`) requiring no API key. News now comes from public RSS feeds (CoinDesk, The Block, Decrypt, CoinTelegraph, Bloomberg Crypto, Ethereum Foundation Blog). The aggregator uses Jaccard dedup and cross-source coverage to score importance.
 
 ---
 
@@ -37,8 +46,8 @@ This file records architectural and operational decisions that shaped the projec
 
 | Artifact type | Current version | Notes |
 |---|---|---|
-| Weekly report | `weekly@1.1` | Introduced in WCP-102. `weekly@1.0` = alias for legacy `"1.0"` |
-| Daily report | `daily@1.0` | Introduced in WCP-102 |
+| Weekly report | `weekly@1.2` | Introduced in WCP-123. Adds optional `capitalFlows` (DeFiLlama TVL). `weekly@1.1` = plain spoken opening. `weekly@1.0` = legacy |
+| Daily report | `daily@1.1` | `daily@1.0` introduced WCP-102; bumped to `daily@1.1` in WCP-132 (additive `plainspokenOpening` field) |
 
 **Bump rules:** Minor bumps for additive optional fields. Major bumps for breaking structural changes. A major bump requires a migration plan (new validator branch + documentation update here).
 
@@ -46,13 +55,22 @@ This file records architectural and operational decisions that shaped the projec
 
 ## D-03 — Two-provider LLM architecture
 
-**Decision:** GitHub Models is the primary LLM provider; OpenAI is the sole fallback. No third provider.
+**Decision:** GitHub Models is the primary LLM provider; Anthropic is the sole fallback. No third provider.
 
-**Rationale:** GitHub Models is free and uses `GITHUB_TOKEN` (auto-injected in every Actions workflow), making it zero-marginal-cost for the pipeline. OpenAI adds cost but provides reliability when GitHub Models hits rate limits or is unavailable. Adding a third provider would add complexity without proportionate reliability gain — the bottleneck is prompt quality, not provider diversity.
+**Rationale:** GitHub Models is free and uses `GITHUB_TOKEN` (auto-injected in every Actions workflow), making it zero-marginal-cost for the pipeline. Anthropic adds cost but provides reliability when GitHub Models hits rate limits or is unavailable. Adding a third provider would add complexity without proportionate reliability gain — the bottleneck is prompt quality, not provider diversity.
 
-**Implementation:** `lib/llm/client.ts` with `callGithubModels` and `callOpenAI` as provider functions. Retry policy: 3 retries with exponential backoff (1m, 3m, 9m) on retryable errors before falling back. Both providers use identical request/response types (`LlmRequest`, `LlmResponse` in `lib/llm/types.ts`).
+**Implementation:** `lib/llm/client.ts` with `callGithubModels` and `callAnthropic` as provider functions. Retry policy: 3 retries with exponential backoff (1m, 3m, 9m) on retryable errors before falling back. Both providers use identical request/response types (`LlmRequest`, `LlmResponse` in `lib/llm/types.ts`).
 
-**Constraint:** Do not add an Anthropic provider, a third fallback, or speculative providers without revisiting this decision.
+### LLM provider stack (R2.1)
+
+Primary: **GitHub Models** with `gpt-4o-mini`. Free with GITHUB_TOKEN auth.
+Fallback: **Anthropic API** with `claude-sonnet-4-6`. Pay-as-you-go with prepaid credit.
+
+Rationale for Sonnet 4.6 over Haiku 4.5 as fallback model: when fallback fires, output quality must match or exceed primary. Haiku may produce noticeably different (lower-quality) editorial output than gpt-4o-mini on GitHub Models. Sonnet is materially better at editorial writing and instruction-following at our small fallback-only usage volume; cost difference is negligible ($30-40/year worst case at 100% fallback rate).
+
+Retry/backoff policy unchanged: 60s/180s/540s exponential backoff on retryable errors, fall through to secondary on persistent or non-retryable failures.
+
+**Constraint:** Do not add a third fallback or speculative providers without revisiting this decision.
 
 ---
 
@@ -106,3 +124,22 @@ This file records architectural and operational decisions that shaped the projec
 **Threat model review trigger:** The threat model is reviewed whenever any new persistent state, authentication system, or third-party integration is added. Such additions are explicitly not planned (the architecture constitution prohibits them), but each would change the threat surface materially.
 
 **Constraint:** Do not add commercial SAST scanners (Snyk, Sonarqube, etc.) beyond CodeQL. They add operational cost and complexity without proportionate benefit for this architecture.
+
+---
+
+## Free/Pro content boundary (locked R2.1)
+
+### No content gating — Pro is additive
+
+**Decision (WCP-134, locked):** Free weekly and daily reports are fully readable on the site. No content is hidden, blurred, truncated, or gated mid-article.
+
+**Pro is additive:** The Pro Pack contains content that does not appear on the free site at all — decision memo, thesis checklist, risk review, and watchlist levels. There is no "preview of Pro content followed by a paywall." Free readers see a complete report; Pro buyers receive additional depth by email.
+
+**The conversion surface is end-of-page:** The paid block appears after the full report content on both weekly and daily pages. Readers complete the free report before seeing any conversion prompt. This is deliberate: the free product must feel complete and respected.
+
+**What is forbidden (enforced by test):**
+- Blurred or obscured content in any field of any artifact JSON
+- Strings that imply gating: "gated", "paywall", "locked content", "preview only"
+- Mid-article CTAs that interrupt the reading experience
+
+**Editorial reasoning:** Readers upgrade because they trust what they've been getting for free, not because they were teased. The free product's quality is the conversion mechanism.

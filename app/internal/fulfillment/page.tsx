@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   }
 };
 
-export default function FulfillmentAssistPage({ searchParams }: FulfillmentAssistPageProps): JSX.Element {
+export default async function FulfillmentAssistPage(props: FulfillmentAssistPageProps): Promise<JSX.Element> {
+  const searchParams = await props.searchParams;
   if (!isFulfillmentAssistEnabled()) {
     notFound();
   }

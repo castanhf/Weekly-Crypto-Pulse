@@ -1,4 +1,4 @@
-import { WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, type SchemaVersion } from '@/domain/schema-version';
+import { WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, type SchemaVersion } from '../../domain/schema-version';
 import {
   type MarketSnapshot,
   type Mover,
@@ -10,8 +10,8 @@ import {
   type ReportSection,
   type ReportSignals,
   type WatchlistLevel
-} from '@/domain/report';
-import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
+} from '../../domain/report';
+import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from './json-assertions';
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
 

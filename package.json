@@ -1,7 +1,8 @@
 {
   "name": "weekly-crypto-pulse",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,20 +11,29 @@
     "typecheck": "tsc --noEmit",
     "verify": "npm run lint && npm run typecheck && npm run build",
     "test": "vitest run",
-    "generate:local-report": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-local-report.js",
+    "generate:local-report": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node --env-file=.env.local .generated/scripts/scripts/generate-local-report.js",
     "generate:market-data": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-market-data-snapshot.js",
-    "validate:reports": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-reports.js",
+    "validate:reports": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node --env-file=.env.local .generated/scripts/scripts/validate-reports.js",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:premium": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/sync-premium-artifacts.js",
-    "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-report-input.js",
-    "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js"
+    "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node --env-file=.env.local .generated/scripts/scripts/generate-report-input.js",
+    "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js",
+    "generate:daily-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-daily-input.js",
+    "generate:daily-report": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-daily-report.js",
+    "review:daily-report": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/review-daily-report.js",
+    "promote:daily-artifact": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/promote-daily-artifact.js",
+    "generate:daily-placeholder": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-daily-placeholder.js",
+    "run:daily-pipeline": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node --env-file=.env.local .generated/scripts/scripts/run-daily-pipeline.js",
+    "validate:daily-artifacts": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-daily-artifacts.js",
+    "run:sunday-digest": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node --env-file=.env.local .generated/scripts/scripts/run-sunday-digest-pipeline.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "next": "14.2.35",
+    "fast-xml-parser": "^5.7.3",
+    "next": "^16.2.6",
     "openai": "^6.36.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -36,14 +46,14 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.5.0",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.5",
     "postcss": "8.5.14",
     "tailwindcss": "3.4.6",
     "typescript": "5.5.3",
     "vitest": "^4.1.5"
   },
   "engines": {
-    "node": ">=20.14.0 <21"
+    "node": ">=20.14.0"
   }
 }

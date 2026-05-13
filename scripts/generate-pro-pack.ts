@@ -4,6 +4,7 @@ import path from 'node:path';
 import { PRO_PRODUCT_IDS, type ProProductId } from '../domain/pro-product';
 import type { Report } from '../domain/report';
 import { assertBuyerEmail, toBuyerWatermarkLine, type BuyerWatermark } from '../lib/pro-pack-watermark';
+import { exportSnapshotTrendPng, exportRegimeHistoryPng } from '../lib/charts/png-export';
 
 type BaseCliArgs = Readonly<{
   product: ProProductId;
@@ -45,6 +46,10 @@ type MonthlySummary = Readonly<{
 
 const REPORTS_DIRECTORY_PATH = path.resolve(process.cwd(), 'data/reports');
 const OUTPUT_DIRECTORY_PATH = path.resolve(process.cwd(), 'data/pro-packs');
+const CHART_WIDTH = 1200;
+const CHART_HEIGHT_SNAPSHOT = 600;
+const CHART_HEIGHT_REGIME = 300;
+const CHART_WINDOW_SIZE = 12;
 
 const formatUsd = (value: number): string =>
   new Intl.NumberFormat('en-US', {
@@ -111,7 +116,7 @@ const formatReportHeader = (report: Report, watermark?: BuyerWatermark): string 
   );
 };
 
-const toSingleIssueMarkdown = (report: Report, watermark?: BuyerWatermark): string => {
+const toSingleIssueMarkdown = (report: Report, chartSection: string, watermark?: BuyerWatermark): string => {
   const { metadata, marketSnapshot, movers, sections, signals } = report;
 
   const moversBlock = movers
@@ -162,7 +167,9 @@ const toSingleIssueMarkdown = (report: Report, watermark?: BuyerWatermark): stri
       'Fulfillment note',
       'This markdown is deterministic for a given report slug and input watermark and is suitable for direct delivery or PDF conversion.',
       watermark
-    )
+    ),
+    '',
+    chartSection
   ].join('\n');
 };
 
@@ -417,6 +424,7 @@ const toMonthlyBundleAssemblyMarkdown = (
   month: string,
   weeklyReports: ReadonlyArray<Report>,
   monthlySummaryFileName: string,
+  chartSection: string,
   watermark?: BuyerWatermark
 ): string => {
   const references = weeklyReports
@@ -447,9 +455,116 @@ const toMonthlyBundleAssemblyMarkdown = (
     '',
     formatWatermarkSection(watermark),
     '',
-    createMarkdownSection('Fulfillment note', 'This assembly is deterministic for a given month and ordered weekly report slug set.', watermark)
+    createMarkdownSection('Fulfillment note', 'This assembly is deterministic for a given month and ordered weekly report slug set.', watermark),
+    '',
+    chartSection
   ].join('\n');
 };
+
+// ---------------------------------------------------------------------------
+// Chart data helpers (mirrors lib/charts/window.ts without the @/ alias)
+// ---------------------------------------------------------------------------
+
+const SHORT_LABEL_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC'
+});
+
+const toShortWeekLabel = (publishedAt: string): string =>
+  SHORT_LABEL_FORMATTER.format(new Date(`${publishedAt}T00:00:00.000Z`));
+
+type SnapshotTrendPoint = {
+  publishedAt: string;
+  weekLabel: string;
+  totalMarketCapUsd: number;
+  btcDominancePct: number;
+  ethDominancePct: number;
+  fearGreedIndex: number;
+};
+
+type RegimeHistoryPoint = {
+  publishedAt: string;
+  weekLabel: string;
+  regime: Report['regime'];
+};
+
+const computeChartWindow = (asOfDate: string, allReports: ReadonlyArray<Report>): ReadonlyArray<Report> =>
+  allReports
+    .filter((r) => r.metadata.publishedAt <= asOfDate)
+    .slice()
+    .sort((a, b) => b.metadata.publishedAt.localeCompare(a.metadata.publishedAt))
+    .slice(0, CHART_WINDOW_SIZE)
+    .reverse();
+
+const toSnapshotTrendData = (reports: ReadonlyArray<Report>): SnapshotTrendPoint[] =>
+  reports.map((r) => ({
+    publishedAt: r.metadata.publishedAt,
+    weekLabel: toShortWeekLabel(r.metadata.publishedAt),
+    totalMarketCapUsd: r.marketSnapshot.totalMarketCapUsd,
+    btcDominancePct: r.marketSnapshot.btcDominancePct,
+    ethDominancePct: r.marketSnapshot.ethDominancePct,
+    fearGreedIndex: r.marketSnapshot.fearGreedIndex
+  }));
+
+const toRegimeHistoryData = (reports: ReadonlyArray<Report>): RegimeHistoryPoint[] =>
+  reports.map((r) => ({
+    publishedAt: r.metadata.publishedAt,
+    weekLabel: toShortWeekLabel(r.metadata.publishedAt),
+    regime: r.regime
+  }));
+
+const generateCharts = async (
+  chartsDir: string,
+  chartPrefix: string,
+  windowReports: ReadonlyArray<Report>
+): Promise<{ snapshotTrendFile: string; regimeHistoryFile: string }> => {
+  await mkdir(chartsDir, { recursive: true });
+
+  const snapshotTrendFile = `${chartPrefix}-snapshot-trend.png`;
+  const regimeHistoryFile = `${chartPrefix}-regime-history.png`;
+
+  await exportSnapshotTrendPng(
+    {
+      data: toSnapshotTrendData(windowReports),
+      width: CHART_WIDTH,
+      height: CHART_HEIGHT_SNAPSHOT,
+      title: 'Market snapshot — 12-week context'
+    },
+    path.join(chartsDir, snapshotTrendFile)
+  );
+
+  await exportRegimeHistoryPng(
+    {
+      data: toRegimeHistoryData(windowReports),
+      width: CHART_WIDTH,
+      height: CHART_HEIGHT_REGIME,
+      title: 'Regime history — 12 weeks'
+    },
+    path.join(chartsDir, regimeHistoryFile)
+  );
+
+  return { snapshotTrendFile, regimeHistoryFile };
+};
+
+const renderChartSection = (snapshotTrendFile: string, regimeHistoryFile: string): string =>
+  [
+    '## Chart visualizations',
+    '',
+    'These charts show the 12-week historical context for the report week.',
+    '',
+    '### Market snapshot — 12-week context',
+    '',
+    `![Market snapshot trend](./charts/${snapshotTrendFile})`,
+    '',
+    '### Regime history — 12 weeks',
+    '',
+    `![Regime history](./charts/${regimeHistoryFile})`
+  ].join('\n');
+
+// ---------------------------------------------------------------------------
+// Report parsing
+// ---------------------------------------------------------------------------
 
 const parseArtifact = (rawJson: string, sourceFile: string): Report => {
   let parsed: unknown;
@@ -491,16 +606,6 @@ const readAllReports = async (): Promise<ReadonlyArray<Report>> => {
   return reports;
 };
 
-const readReportBySlug = async (slug: string): Promise<Report> => {
-  const reports = await readAllReports();
-  const matched = reports.find((report) => report.metadata.slug === slug);
-
-  if (!matched) {
-    throw new Error(`Report not found for slug "${slug}".`);
-  }
-
-  return matched;
-};
 
 const selectMonthlyReports = (month: string, reports: ReadonlyArray<Report>, slugs?: ReadonlyArray<string>): ReadonlyArray<Report> => {
   if (slugs && slugs.length > 0) {
@@ -628,13 +733,25 @@ const writeArtifact = async (outputPath: string, contents: string): Promise<void
 };
 
 const runSingleIssueGeneration = async (args: SingleIssueCliArgs): Promise<void> => {
-  const report = await readReportBySlug(args.slug);
-  const markdown = toSingleIssueMarkdown(report, args.watermark);
+  const allReports = await readAllReports();
+  const report = allReports.find((r) => r.metadata.slug === args.slug);
+
+  if (!report) {
+    throw new Error(`Report not found for slug "${args.slug}".`);
+  }
+
+  const chartsDir = path.join(OUTPUT_DIRECTORY_PATH, 'charts');
+  const windowReports = computeChartWindow(report.metadata.publishedAt, allReports);
+  const { snapshotTrendFile, regimeHistoryFile } = await generateCharts(chartsDir, args.slug, windowReports);
+  const chartSection = renderChartSection(snapshotTrendFile, regimeHistoryFile);
+
+  const markdown = toSingleIssueMarkdown(report, chartSection, args.watermark);
   const outputPath = path.join(OUTPUT_DIRECTORY_PATH, `${args.slug}.md`);
 
   await writeArtifact(outputPath, markdown);
 
   console.log(`Generated Pro single-issue pack: ${path.relative(process.cwd(), outputPath)}`);
+  console.log(`Generated charts: ${path.relative(process.cwd(), path.join(chartsDir, snapshotTrendFile))}, ${path.relative(process.cwd(), path.join(chartsDir, regimeHistoryFile))}`);
 };
 
 const runMonthlyBundleGeneration = async (args: MonthlyBundleCliArgs): Promise<void> => {
@@ -645,8 +762,15 @@ const runMonthlyBundleGeneration = async (args: MonthlyBundleCliArgs): Promise<v
   const summaryFileName = `${args.month}-summary.md`;
   const bundleFileName = `${args.month}-bundle.md`;
 
+  // Generate charts using the last report in the bundle as the context anchor
+  const lastReport = weeklyReports[weeklyReports.length - 1] as Report;
+  const chartsDir = path.join(OUTPUT_DIRECTORY_PATH, 'monthly-bundles', 'charts');
+  const windowReports = computeChartWindow(lastReport.metadata.publishedAt, allReports);
+  const { snapshotTrendFile, regimeHistoryFile } = await generateCharts(chartsDir, args.month, windowReports);
+  const chartSection = renderChartSection(snapshotTrendFile, regimeHistoryFile);
+
   const summaryMarkdown = toMonthlySummaryMarkdown(summary, args.watermark);
-  const assemblyMarkdown = toMonthlyBundleAssemblyMarkdown(args.month, weeklyReports, summaryFileName, args.watermark);
+  const assemblyMarkdown = toMonthlyBundleAssemblyMarkdown(args.month, weeklyReports, summaryFileName, chartSection, args.watermark);
 
   const summaryPath = path.join(OUTPUT_DIRECTORY_PATH, 'monthly-summaries', summaryFileName);
   const bundlePath = path.join(OUTPUT_DIRECTORY_PATH, 'monthly-bundles', bundleFileName);
@@ -656,6 +780,7 @@ const runMonthlyBundleGeneration = async (args: MonthlyBundleCliArgs): Promise<v
 
   console.log(`Generated Pro monthly bundle assembly: ${path.relative(process.cwd(), bundlePath)}`);
   console.log(`Generated Pro monthly summary: ${path.relative(process.cwd(), summaryPath)}`);
+  console.log(`Generated charts: ${path.relative(process.cwd(), path.join(chartsDir, snapshotTrendFile))}, ${path.relative(process.cwd(), path.join(chartsDir, regimeHistoryFile))}`);
 };
 
 const main = async (): Promise<void> => {
