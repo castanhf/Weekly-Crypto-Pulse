@@ -1,10 +1,10 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { DailyArtifact, MoverEntry, TrackedAssetEntry, WeeklyFooter } from '@/domain/daily';
-import { DAILY_SCHEMA_V1_0, DAILY_SCHEMA_V1_1 } from '@/domain/schema-version';
-import type { SchemaVersion } from '@/domain/schema-version';
-import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from '@/lib/reports/json-assertions';
+import type { DailyArtifact, MoverEntry, TrackedAssetEntry, WeeklyFooter } from '../../domain/daily';
+import { DAILY_SCHEMA_V1_0, DAILY_SCHEMA_V1_1 } from '../../domain/schema-version';
+import type { SchemaVersion } from '../../domain/schema-version';
+import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from './json-assertions';
 
 export const DAILIES_DIRECTORY_PATH = join(process.cwd(), 'data', 'dailies');
 

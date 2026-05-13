@@ -1,6 +1,6 @@
-import type { DailyArtifact as RawDailyArtifact } from '@/domain/daily';
-import type { Report } from '@/domain/report';
-import type { SchemaVersion } from '@/domain/schema-version';
+import type { DailyArtifact as RawDailyArtifact } from '../../domain/daily';
+import type { Report } from '../../domain/report';
+import type { SchemaVersion } from '../../domain/schema-version';
 
 export type WeeklyArtifact = Readonly<{
   kind: 'weekly';

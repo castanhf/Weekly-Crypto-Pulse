@@ -1,5 +1,5 @@
-import type { DailyArtifact } from '@/domain/daily';
-import { isExcludedFromMovers } from '@/lib/markets/asset-categories';
+import type { DailyArtifact } from '../../domain/daily';
+import { isExcludedFromMovers } from '../markets/asset-categories';
 
 /** Minimal researcher movers shape the validator needs — avoids coupling to script types. */
 export type ResearcherMoversInput = Readonly<{

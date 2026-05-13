@@ -1,6 +1,6 @@
-import type { DailyArtifact, WeeklyArtifact, Artifact } from '@/lib/reports/artifact-types';
-import { getAllReportArtifacts, type ReportArtifactRecord } from '@/lib/reports/report-repository';
-import { loadAllDailies, type DailyArtifactRecord } from '@/lib/reports/daily-repository';
+import type { DailyArtifact, WeeklyArtifact, Artifact } from './artifact-types';
+import { getAllReportArtifacts, type ReportArtifactRecord } from './report-repository';
+import { loadAllDailies, type DailyArtifactRecord } from './daily-repository';
 
 const toWeeklyArtifact = (record: ReportArtifactRecord): WeeklyArtifact => ({
   kind: 'weekly',

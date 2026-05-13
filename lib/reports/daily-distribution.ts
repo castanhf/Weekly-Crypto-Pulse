@@ -1,5 +1,5 @@
-import type { DailyArtifact } from '@/domain/daily';
-import { DAILY_TITLE_PREFIX, SITE_NAME } from '@/lib/site';
+import type { DailyArtifact } from '../../domain/daily';
+import { DAILY_TITLE_PREFIX, SITE_NAME } from '../site';
 
 const SITE_DESCRIPTION = 'Daily crypto market reports from Crypto Pulse.';
 

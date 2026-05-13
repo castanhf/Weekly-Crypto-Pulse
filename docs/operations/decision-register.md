@@ -8,7 +8,7 @@ This file records architectural and operational decisions that shaped the projec
 
 **Decision:** Minimal env vars; justified additions only.
 
-**Current set (7 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST):**
+**Current set (7 live, excluding auto-injected GITHUB_TOKEN and dev-only ENABLE_FULFILLMENT_ASSIST and NEXT_PUBLIC_ANALYTICS_ENABLED):**
 
 | Variable | Purpose | When added |
 |---|---|---|
@@ -21,6 +21,8 @@ This file records architectural and operational decisions that shaped the projec
 | `BEEHIIV_PUBLICATION_ID` | Beehiiv publication ID scoping all API calls to the Crypto Pulse publication | R2.1 (WCP-136) |
 
 **R2.1 audit note (WCP-136):** Reconciled actual env var count with documentation. Previous D-01 listed `BEEHIIV_API_KEY` as "planned" and omitted `BEEHIIV_PUBLICATION_ID`. Both are now live. The daily-pipeline.yml workflow was also corrected to use `ANTHROPIC_API_KEY` instead of the legacy `OPENAI_API_KEY` reference (the OpenAI→Anthropic swap happened in WCP-132 but the workflow env var was not updated).
+
+**R2.1 pre-merge audit (WCP-139):** The Stripe Payment Link env vars (`STRIPE_PAYMENT_LINK_WEEKLY_PRO`, `STRIPE_PAYMENT_LINK_MONTHLY_BUNDLE`) were confirmed intentional — the env-var-driven approach was introduced in R1 and is documented in `.env.example`. The "/pro page shows checkout unavailable" behavior is by design when the env vars are not set. Fix is operator-side: populate the vars in Vercel with actual Stripe Payment Link URLs. `NEXT_PUBLIC_ANALYTICS_ENABLED` added to `.env.example` as a dev-only optional var (not counted in live total).
 
 **Original constraint (R1):** "no more than four env vars." Enforced strictly through R1.
 
@@ -45,7 +47,7 @@ This file records architectural and operational decisions that shaped the projec
 | Artifact type | Current version | Notes |
 |---|---|---|
 | Weekly report | `weekly@1.2` | Introduced in WCP-123. Adds optional `capitalFlows` (DeFiLlama TVL). `weekly@1.1` = plain spoken opening. `weekly@1.0` = legacy |
-| Daily report | `daily@1.0` | Introduced in WCP-102 |
+| Daily report | `daily@1.1` | `daily@1.0` introduced WCP-102; bumped to `daily@1.1` in WCP-132 (additive `plainspokenOpening` field) |
 
 **Bump rules:** Minor bumps for additive optional fields. Major bumps for breaking structural changes. A major bump requires a migration plan (new validator branch + documentation update here).
 
