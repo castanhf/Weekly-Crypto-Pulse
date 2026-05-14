@@ -59,6 +59,25 @@ Why: pipeline scripts compile via `tsconfig.scripts.json` and run via plain Node
 
 `npm run test` includes a static check (`lib/import-convention.test.ts`) that fails if any `@/` import appears in a source file under those directories.
 
+## Environment variables
+
+Pipeline scripts load environment variables via `dotenv` at the script entry point. This means:
+
+- **Local development:** create a `.env.local` file in the repo root with required vars (see `.env.example`). Scripts load it automatically at startup via `dotenv.config({ path: '.env.local' })`.
+- **CI (GitHub Actions):** secrets are injected into the runner's environment via the workflow's `env:` block. Scripts read them directly from `process.env`; no file is needed, and `dotenv` silently skips the missing file.
+
+When adding a new pipeline script entry point that reads env vars, add the following at the very top of the file, before any other imports:
+
+```typescript
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+```
+
+Do **not** use Node's `--env-file` flag in npm scripts — it requires the file to exist and breaks in CI with exit code 9.
+
+`npm run test` includes a static check (`lib/env-loading.test.ts`) that fails if a listed entry-point script is missing the dotenv import, or if any npm script reintroduces `--env-file`.
+
 ## Communication
 
 Discussions happen via GitHub Issues. Email contact is for security issues only — see [SECURITY.md](SECURITY.md).
