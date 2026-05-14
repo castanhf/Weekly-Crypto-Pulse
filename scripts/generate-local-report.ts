@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 

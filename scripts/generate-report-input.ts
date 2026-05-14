@@ -14,6 +14,10 @@
  * Actions), OPENAI_API_KEY (fallback LLM provider, strongly recommended).
  */
 
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 

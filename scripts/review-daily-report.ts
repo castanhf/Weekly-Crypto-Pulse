@@ -10,6 +10,10 @@
  * EDITOR_ROUND env var controls which round this is (1, 2, or 3).
  */
 
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 

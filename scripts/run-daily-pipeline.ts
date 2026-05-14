@@ -13,6 +13,10 @@
  * `npm run run:daily-pipeline` for local testing.
  */
 
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { access } from 'node:fs/promises';
 import path from 'node:path';
 

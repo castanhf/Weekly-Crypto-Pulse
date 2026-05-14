@@ -22,6 +22,10 @@
  * to BOTH scripts via these shared modules. Last drift-check: 2026-05-10.
  */
 
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 

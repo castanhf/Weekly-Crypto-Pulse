@@ -8,6 +8,10 @@
  * Also callable locally: npm run run:sunday-digest
  */
 
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { loadAllArtifacts } from '../lib/reports/artifact-repository';
 import { callLlm } from '../lib/llm/client';
 import { composeSundayDigest } from '../lib/email/compose-sunday-digest';
