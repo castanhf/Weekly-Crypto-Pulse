@@ -192,8 +192,9 @@ export const sendBroadcast = async (broadcast: BeehiivBroadcast): Promise<{ broa
     // WU1: 'confirmed' sends immediately; 'draft' saves without sending.
     status: 'confirmed',
     ...(broadcast.scheduledFor ? { scheduled_at: broadcast.scheduledFor } : {}),
-    // WU1: segment targeting uses recipients.email.include_segment_ids, not top-level segment_id.
-    ...(includeSegmentIds.length > 0 ? { recipients: { email: { include_segment_ids: includeSegmentIds } } } : {})
+    // Beehiiv /posts requires both `email` and `web` when `recipients` is provided.
+    // `web: {}` means no web-page publication (email-only delivery).
+    ...(includeSegmentIds.length > 0 ? { recipients: { email: { include_segment_ids: includeSegmentIds }, web: {} } } : {})
   };
 
   // WU1: correct endpoint is /posts, not /broadcasts (which does not exist in Beehiiv v2).

@@ -80,12 +80,15 @@ Segment targeting:
   "recipients": {
     "email": {
       "include_segment_ids": ["seg_xxxxx"]
-    }
+    },
+    "web": {}
   }
 }
 ```
 
 **Not** `segment_id` as a top-level field — that caused production 404 errors.
+
+Both `email` and `web` are required by the Beehiiv `postrecipients` schema when `recipients` is provided. An empty `web: {}` means email-only delivery with no Beehiiv web-page publication.
 
 ---
 
