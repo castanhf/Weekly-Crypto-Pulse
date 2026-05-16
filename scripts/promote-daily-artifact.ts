@@ -95,8 +95,13 @@ const main = async (): Promise<void> => {
   await promoteDailyArtifact(targetDate);
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-promote] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when imported by the orchestrator.
+// Without this, promote attempted to run at import time (before any approval
+// marker existed), causing spurious "Failed: No approval marker" startup log lines.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-promote] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}

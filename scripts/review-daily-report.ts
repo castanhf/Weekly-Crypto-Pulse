@@ -309,8 +309,13 @@ const main = async (): Promise<void> => {
   }
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-review] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when imported by the orchestrator.
+// Without this, the reviewer attempted to run at import time (before any draft
+// existed), causing spurious "Failed: Draft not found" startup log lines.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-review] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}

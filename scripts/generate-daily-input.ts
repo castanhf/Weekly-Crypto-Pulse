@@ -566,8 +566,13 @@ const main = async (): Promise<void> => {
   await generateDailyInput(targetDate);
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-input] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when the module is imported by the
+// orchestrator (run-daily-pipeline.ts), which caused the researcher to execute
+// twice per pipeline run and produced spurious "Failed" startup log lines.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-input] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}

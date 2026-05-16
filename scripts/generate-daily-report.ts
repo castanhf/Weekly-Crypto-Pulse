@@ -454,8 +454,13 @@ const main = async (): Promise<void> => {
   await generateDailyReport(targetDate);
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-report] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when imported by the orchestrator.
+// Without this, the writer attempted to run at import time (before the researcher
+// had produced input), causing spurious "Failed: ENOENT" startup log lines.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-report] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}
