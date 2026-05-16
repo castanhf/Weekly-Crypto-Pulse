@@ -40,6 +40,13 @@ const errorResponse = (status: number, body = ''): Partial<Response> => ({
   text: () => Promise.resolve(body)
 });
 
+const jsonErrorResponse = (status: number, body: Record<string, unknown>): Partial<Response> => ({
+  ok: false,
+  status,
+  json: () => Promise.resolve(body),
+  text: () => Promise.resolve(JSON.stringify(body))
+});
+
 describe('Beehiiv client', () => {
   beforeEach(() => {
     setEnv();
@@ -68,15 +75,62 @@ describe('Beehiiv client', () => {
       expect(body.tags).toBeUndefined();
     });
 
-    it('includes daily_digest_opt_in tag when opted in', async () => {
-      const fetcher = vi.fn().mockResolvedValue(okResponse({ data: { id: 'sub-2' } }));
+    it('applies daily_digest_opt_in tag via separate tags endpoint when opted in', async () => {
+      // WU2: two-step subscribe+tag — subscription body has no tags field.
+      const fetcher = vi
+        .fn()
+        // First call: POST subscribe → returns subscription with ID
+        .mockResolvedValueOnce(okResponse({ data: { id: 'sub-2' } }))
+        // Second call: POST tags endpoint
+        .mockResolvedValueOnce(okResponse({ data: { id: 'sub-2', tags: ['daily_digest_opt_in'] } }));
       vi.stubGlobal('fetch', fetcher);
 
       await subscribeToList({ email: 'daily@example.com', dailyDigestOptIn: true });
 
-      const [, init] = fetcher.mock.calls[0] as [string, RequestInit];
-      const body = JSON.parse(init.body as string) as Record<string, unknown>;
-      expect(body.tags).toEqual(['daily_digest_opt_in']);
+      expect(fetcher).toHaveBeenCalledTimes(2);
+
+      // First call: subscribe without tags
+      const [subUrl, subInit] = fetcher.mock.calls[0] as [string, RequestInit];
+      expect(subUrl).toContain(`/publications/${PUB_ID}/subscriptions`);
+      expect(subUrl).not.toContain('/tags');
+      const subBody = JSON.parse(subInit.body as string) as Record<string, unknown>;
+      expect(subBody.tags).toBeUndefined();
+
+      // Second call: POST to tags endpoint
+      const [tagsUrl, tagsInit] = fetcher.mock.calls[1] as [string, RequestInit];
+      expect(tagsUrl).toContain(`/publications/${PUB_ID}/subscriptions/sub-2/tags`);
+      const tagsBody = JSON.parse(tagsInit.body as string) as Record<string, unknown>;
+      expect(tagsBody.tags).toEqual(['daily_digest_opt_in']);
+    });
+
+    it('logs a warning and does not throw when tag application fails', async () => {
+      // WU2: tag failure is non-fatal — subscriber gets created, tag application degrades gracefully.
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+      const fetcher = vi
+        .fn()
+        .mockResolvedValueOnce(okResponse({ data: { id: 'sub-3' } }))
+        .mockResolvedValueOnce(errorResponse(422, 'tag error'));
+      vi.stubGlobal('fetch', fetcher);
+
+      await expect(
+        subscribeToList({ email: 'daily2@example.com', dailyDigestOptIn: true })
+      ).resolves.toBeUndefined();
+
+      expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('WARNING'));
+      expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('daily_digest_opt_in'));
+      warnSpy.mockRestore();
+    });
+
+    it('logs a warning when subscription response has no ID and skips tagging', async () => {
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+      const fetcher = vi.fn().mockResolvedValueOnce(okResponse({ data: {} }));
+      vi.stubGlobal('fetch', fetcher);
+
+      await subscribeToList({ email: 'noid@example.com', dailyDigestOptIn: true });
+
+      expect(fetcher).toHaveBeenCalledOnce();
+      expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('WARNING'));
+      warnSpy.mockRestore();
     });
 
     it('throws on missing credentials', async () => {
@@ -93,7 +147,7 @@ describe('Beehiiv client', () => {
   });
 
   describe('sendBroadcast', () => {
-    it('sends broadcast to all subscribers without segment_id', async () => {
+    it('sends broadcast to all subscribers without segment recipients', async () => {
       const fetcher = vi.fn().mockResolvedValue(okResponse({ data: { id: 'bc-1' } }));
       vi.stubGlobal('fetch', fetcher);
 
@@ -105,19 +159,44 @@ describe('Beehiiv client', () => {
       });
 
       expect(result.broadcastId).toBe('bc-1');
-      const [, init] = fetcher.mock.calls[0] as [string, RequestInit];
+      const [url, init] = fetcher.mock.calls[0] as [string, RequestInit];
+      // WU1: correct endpoint is /posts
+      expect(url).toContain(`/publications/${PUB_ID}/posts`);
       const body = JSON.parse(init.body as string) as Record<string, unknown>;
-      expect(body.segment_id).toBeUndefined();
+      expect(body.recipients).toBeUndefined();
     });
 
-    it('resolves segment_id when targeting daily_digest_opt_in', async () => {
+    it('uses body_content and confirmed status (not rendered_html/draft)', async () => {
+      const fetcher = vi.fn().mockResolvedValue(okResponse({ data: { id: 'bc-x' } }));
+      vi.stubGlobal('fetch', fetcher);
+
+      await sendBroadcast({
+        subject: 'Test subject',
+        htmlBody: '<p>body html</p>',
+        plaintextBody: 'body text',
+        segment: 'all'
+      });
+
+      const [, init] = fetcher.mock.calls[0] as [string, RequestInit];
+      const body = JSON.parse(init.body as string) as Record<string, unknown>;
+      // WU1: body_content replaces content.rendered_html
+      expect(body.body_content).toBe('<p>body html</p>');
+      expect(body.content).toBeUndefined();
+      // WU1: status must be 'confirmed' to actually send
+      expect(body.status).toBe('confirmed');
+      // WU1: title is required by Beehiiv Posts API
+      expect(body.title).toBe('Test subject');
+    });
+
+    it('resolves segment_id and uses include_segment_ids in recipients when targeting daily_digest_opt_in', async () => {
+      // WU1: segment targeting uses recipients.email.include_segment_ids
       const fetcher = vi
         .fn()
         // First call: GET segments list
         .mockResolvedValueOnce(
           okResponse({ data: [{ id: 'seg-daily-123', name: 'daily_digest_opt_in' }] })
         )
-        // Second call: POST broadcast
+        // Second call: POST post
         .mockResolvedValueOnce(okResponse({ data: { id: 'bc-2' } }));
 
       vi.stubGlobal('fetch', fetcher);
@@ -131,19 +210,53 @@ describe('Beehiiv client', () => {
 
       expect(result.broadcastId).toBe('bc-2');
       expect(fetcher).toHaveBeenCalledTimes(2);
-      const [, broadcastInit] = fetcher.mock.calls[1] as [string, RequestInit];
+
+      const [postUrl, broadcastInit] = fetcher.mock.calls[1] as [string, RequestInit];
+      expect(postUrl).toContain(`/publications/${PUB_ID}/posts`);
+
       const body = JSON.parse(broadcastInit.body as string) as Record<string, unknown>;
-      expect(body.segment_id).toBe('seg-daily-123');
+      // WU1: segment_id top-level is gone; segment is in recipients.email.include_segment_ids
+      expect(body.segment_id).toBeUndefined();
+      expect(body.recipients).toEqual({ email: { include_segment_ids: ['seg-daily-123'] } });
     });
 
     it('throws when daily_digest_opt_in segment is not found', async () => {
-      // segments endpoint returns empty list
       const fetcher = vi.fn().mockResolvedValue(okResponse({ data: [] }));
       vi.stubGlobal('fetch', fetcher);
 
       await expect(
         sendBroadcast({ subject: 'x', htmlBody: '', plaintextBody: '', segment: 'daily_digest_opt_in' })
       ).rejects.toThrow('daily_digest_opt_in');
+    });
+  });
+
+  describe('error surfacing (WU3)', () => {
+    it('includes JSON message field in client error when API returns JSON error body', async () => {
+      mockFetch([jsonErrorResponse(400, { message: 'Invalid publication ID' })]);
+
+      await expect(subscribeToList({ email: 'x@y.com', dailyDigestOptIn: false }))
+        .rejects.toThrow('Invalid publication ID');
+    });
+
+    it('includes JSON error field in client error when API returns error key', async () => {
+      mockFetch([jsonErrorResponse(422, { error: 'Segment not found' })]);
+
+      await expect(subscribeToList({ email: 'x@y.com', dailyDigestOptIn: false }))
+        .rejects.toThrow('Segment not found');
+    });
+
+    it('falls back to raw text when error body is not JSON', async () => {
+      mockFetch([errorResponse(400, 'plain text error')]);
+
+      await expect(subscribeToList({ email: 'x@y.com', dailyDigestOptIn: false }))
+        .rejects.toThrow('plain text error');
+    });
+
+    it('surfaces (no body) when error response body is empty', async () => {
+      mockFetch([errorResponse(404, '')]);
+
+      await expect(subscribeToList({ email: 'x@y.com', dailyDigestOptIn: false }))
+        .rejects.toThrow('(no body)');
     });
   });
 
