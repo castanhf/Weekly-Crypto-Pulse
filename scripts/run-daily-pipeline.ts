@@ -132,9 +132,17 @@ const main = async (): Promise<void> => {
   const outputPath = await promoteDailyArtifact(targetDate);
   const slug = path.basename(outputPath, '.json');
 
-  // Step 5: Daily digest email (skipped on Sundays — Sunday digest handles that day)
+  // Step 5: Daily digest email — non-fatal: email failure must not prevent artifact from being committed.
   console.log('\n--- Daily digest email ---');
-  await sendDailyDigestIfConfigured(slug, targetDate);
+  try {
+    await sendDailyDigestIfConfigured(slug, targetDate);
+  } catch (emailErr) {
+    const emailMsg = emailErr instanceof Error ? emailErr.message : String(emailErr);
+    // GitHub Actions warning annotation — surfaces as yellow warning in workflow UI without failing the job.
+    console.log(`::warning::Daily digest email failed: ${emailMsg}`);
+    console.warn(`[pipeline] WARNING: Daily digest email failed: ${emailMsg}`);
+    console.warn('[pipeline] The artifact has been published. Email failure does not block artifact commit.');
+  }
 
   console.log(`\n=== Daily Pipeline — COMPLETE ===`);
   console.log(`Artifact: ${path.relative(process.cwd(), outputPath)}\n`);
