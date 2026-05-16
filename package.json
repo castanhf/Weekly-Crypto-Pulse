@@ -28,7 +28,8 @@
     "generate:daily-placeholder": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-daily-placeholder.js",
     "run:daily-pipeline": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/run-daily-pipeline.js",
     "validate:daily-artifacts": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-daily-artifacts.js",
-    "run:sunday-digest": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/run-sunday-digest-pipeline.js"
+    "run:sunday-digest": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/run-sunday-digest-pipeline.js",
+    "smoke:beehiiv": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/smoke-beehiiv.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

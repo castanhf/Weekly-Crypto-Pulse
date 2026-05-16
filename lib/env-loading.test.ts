@@ -10,6 +10,7 @@ const ENTRY_POINTS_REQUIRING_DOTENV = [
   'scripts/generate-daily-input.ts',
   'scripts/generate-daily-report.ts',
   'scripts/review-daily-report.ts',
+  'scripts/smoke-beehiiv.ts',
 ] as const;
 
 test('entry-point scripts import and call dotenv', () => {
