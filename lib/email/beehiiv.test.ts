@@ -216,8 +216,31 @@ describe('Beehiiv client', () => {
 
       const body = JSON.parse(broadcastInit.body as string) as Record<string, unknown>;
       // WU1: segment_id top-level is gone; segment is in recipients.email.include_segment_ids
+      // WU3: recipients.web is required by Beehiiv schema; {} = no web publication
       expect(body.segment_id).toBeUndefined();
-      expect(body.recipients).toEqual({ email: { include_segment_ids: ['seg-daily-123'] } });
+      expect(body.recipients).toEqual({ email: { include_segment_ids: ['seg-daily-123'] }, web: {} });
+    });
+
+    it('includes recipients.web in broadcast request when targeting a segment', async () => {
+      // Beehiiv /posts schema requires both email and web when recipients is provided.
+      const fetcher = vi
+        .fn()
+        .mockResolvedValueOnce(okResponse({ data: [{ id: 'seg-web-test', name: 'daily_digest_opt_in' }] }))
+        .mockResolvedValueOnce(okResponse({ data: { id: 'bc-web' } }));
+      vi.stubGlobal('fetch', fetcher);
+
+      await sendBroadcast({
+        subject: 'Web field test',
+        htmlBody: '<p>test</p>',
+        plaintextBody: 'test',
+        segment: 'daily_digest_opt_in'
+      });
+
+      const [, broadcastInit] = fetcher.mock.calls[1] as [string, RequestInit];
+      const body = JSON.parse(broadcastInit.body as string) as Record<string, unknown>;
+      const recipients = body.recipients as Record<string, unknown>;
+      expect(recipients).toHaveProperty('web');
+      expect(recipients['web']).toEqual({});
     });
 
     it('throws when daily_digest_opt_in segment is not found', async () => {
