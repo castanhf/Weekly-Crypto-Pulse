@@ -2,7 +2,7 @@
  * run-sunday-digest-pipeline.ts
  *
  * Loads the past week's daily artifacts (Mon–Sat), calls the LLM to produce a framing
- * paragraph, composes the Sunday digest email, and sends it to all subscribers via Beehiiv.
+ * paragraph, composes the Sunday digest email, and sends it to all subscribers via EmailSender.
  *
  * Run by the daily-pipeline.yml workflow on Sundays after the daily artifact is committed.
  * Also callable locally: npm run run:sunday-digest
@@ -14,8 +14,7 @@ dotenv.config({ path: '.env' });
 
 import { loadAllArtifacts } from '../lib/reports/artifact-repository';
 import { callLlm } from '../lib/llm/client';
-import { composeSundayDigest } from '../lib/email/compose-sunday-digest';
-import { sendBroadcast } from '../lib/email/beehiiv';
+import { createEmailSender } from '../lib/email/email-sender-factory';
 import type { DailyArtifact as RawDailyArtifact } from '../domain/daily';
 
 // ---------------------------------------------------------------------------
@@ -112,17 +111,9 @@ const main = async (): Promise<void> => {
   const framing = await generateFramingParagraph(weekDailies);
   console.log(`[sunday-digest] Framing paragraph generated (${framing.split(/\s+/).length} words).`);
 
-  const { subject, htmlBody, plaintextBody } = composeSundayDigest({ weekDailies, framing });
+  const emailSender = createEmailSender();
+  await emailSender.sendSundayDigest(weekDailies, framing);
 
-  const { broadcastId } = await sendBroadcast({
-    subject,
-    htmlBody,
-    plaintextBody,
-    segment: 'all'
-  });
-
-  console.log(`[sunday-digest] Broadcast sent: ${broadcastId}`);
-  console.log(`[sunday-digest] Subject: ${subject}`);
   console.log('\n=== Sunday Digest Pipeline — COMPLETE ===\n');
 };
 
