@@ -9,6 +9,8 @@ Crypto Pulse uses Beehiiv's v2 API for email distribution:
 
 The Beehiiv client lives in `lib/email/beehiiv.ts`.
 
+> **Status (R2.1.1):** Email distribution is currently **deferred**. Beehiiv's Send API (`POST /posts`) requires the Enterprise tier, which is not available on the current plan. Pipelines run cleanly with email disabled via `NoOpEmailSender`. See [`docs/operations/email-distribution.md`](./email-distribution.md) for the full rationale and re-enabling paths.
+
 ---
 
 ## Required environment variables
