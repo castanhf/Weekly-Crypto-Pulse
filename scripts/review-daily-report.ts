@@ -4,10 +4,11 @@
  * Reads the writer's draft and researcher input, runs the 9-item editorial
  * checklist via LLM, and either approves or writes revision notes.
  *
- * Called as step 3 in the daily pipeline (possibly multiple times — up to 3).
- * On round 3, auto-approves regardless of LLM verdict.
+ * Called as step 3 in the daily pipeline (possibly multiple times — up to 5).
+ * On round 5, auto-approves regardless of LLM verdict.
+ * Orchestrator may also trigger early exit via stuck-loop detection before round 5.
  *
- * EDITOR_ROUND env var controls which round this is (1, 2, or 3).
+ * EDITOR_ROUND env var controls which round this is (1–5).
  */
 
 import dotenv from 'dotenv';
@@ -19,7 +20,6 @@ import path from 'node:path';
 
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
-import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { DailyResearcherInput } from './generate-daily-input';
 
 // ---------------------------------------------------------------------------
@@ -95,16 +95,12 @@ If all 15 items PASS, verdict is "APPROVED" and failedItems is [].
 If any item FAILS, verdict is "REVISION_REQUESTED".
 Do not rewrite the report. Flag exact offenses only. Return raw JSON with no markdown fences.`;
 
-const EDITOR_API_NOTE = `
-
-## API Invocation Note
-
-When called via the pipeline API (not as an interactive Claude agent), do not write files directly. Return your editorial verdict as raw JSON in your response. The calling script writes approval markers and revision requests.
-
-Return ONLY the JSON structure described above — no markdown fences, no preamble.`;
-
-const specBody = loadAgentSpec('daily_editor');
-const SYSTEM_PROMPT = specBody !== null ? `${specBody}${EDITOR_API_NOTE}` : INLINE_SYSTEM_PROMPT;
+// The editor receives draft + researcher data in addition to the system prompt, making
+// the total context too large when loading the full agent spec (~400 lines). The condensed
+// inline prompt already contains all 15 checklist items and is the stable choice here.
+// Note: INLINE_SYSTEM_PROMPT IS kept in sync with daily_editor.md; edits to the spec
+// must be mirrored here until a token-budget-aware spec loading strategy is implemented.
+const SYSTEM_PROMPT = INLINE_SYSTEM_PROMPT;
 
 const buildReviewPrompt = (
   draft: string,
@@ -293,7 +289,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
         { role: 'user', content: buildReviewPrompt(draftContent, researcherSummary, errorsContent, revisionRound) }
       ],
       jsonMode: true,
-      maxTokens: 2048
+      maxTokens: 4096
     },
     { primary: 'github-models', secondary: 'anthropic', requestId: `daily-review-${targetDate}-r${revisionRound}` }
   );
