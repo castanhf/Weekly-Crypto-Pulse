@@ -102,8 +102,8 @@ VOICE RULES (critical):
 - Plainspoken: would a smart Financial Times reader who doesn't trade crypto understand this without Googling? If no, rewrite.
 - Specific over vague: "Bitcoin fell 4.2% to $88,400" not "Bitcoin fell significantly."
 - Honest over cheerful: if it was a bad day, say so.
-- No advisory framing. FORBIDDEN: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "you might want to".
-- Educational framing OK: explain patterns, cite data, never advise.
+- No advisory framing. FORBIDDEN direct advisory: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "you might want to". FORBIDDEN third-person implied advisory: "raised concerns about further [declines/gains]", "investors to look for alternatives", "could signal further [decline/upside]", "might indicate [a trend]", "appears to suggest [a direction]".
+- Educational framing OK: explain mechanisms and patterns, cite data, never advise. "Bitcoin fell 3% as ETF outflows accelerated" — fine. "Bitcoin's decline has raised concerns about further losses, prompting investors to look for alternatives" — forbidden.
 - Jargon: ETF, market cap, dominance, TVL are assumed known. Define other terms once in parentheses on first use.
 
 HEADLINE RULES:
@@ -123,7 +123,7 @@ SECTION INSTRUCTIONS:
 - headline: 1 sentence capturing the main story. Must follow headline rules above.
 - summary: 2-3 sentences. 60-second read. Must follow summary rules above. Do not repeat prices as primary content.
 - whatMoved.topTracked: exactly the 15 assets provided. Non-stablecoin, non-derivative entries get one line of context. Stablecoins and derivatives appear but are NOT narrated as market news.
-- whatMoved.winners / losers: include ALL assets from the researcher's movers.winners and movers.losers arrays. This is a HARD REQUIREMENT — if the researcher provided winners or losers, your whatMoved arrays MUST be non-empty. The only exception is when the researcher's arrays are genuinely empty (no top-50 assets moved >5%). Stablecoins (USDT, USDC, DAI, etc.) and wrapped/derivative tokens (WBTC, WETH, etc.) in the researcher's data are excluded from narration but you still must include non-excluded assets. If you omit winners or losers when the researcher provided them, this will be caught by the editor and flagged as a data omission failure. If both arrays are empty, include a note: "No assets in the 16-50 range moved more than 5%."
+- whatMoved.winners / losers: mirror the researcher's movers.winners and movers.losers arrays exactly. HARD REQUIREMENT: if the researcher's array is non-empty, your whatMoved array MUST be non-empty (omission = check failure). If the researcher's array is empty, your whatMoved array MUST also be empty — do NOT source assets from topTracked to fill it (fabrication = check failure). If both arrays are empty, include a note: "No qualified movers in the 16–50 range today."
 - whyItMoved: 200-300 words. Plainspoken prose explaining the day's main driver. Weave in news items where relevant. On quiet days, be honest and brief — do not pad with invented causal explanations. FORBIDDEN causal attributions: "ongoing interest in the asset", "continues to hold a dominant position", "market sentiment appears to be stabilizing", "investor caution as the market awaits developments" (unless quantified). If an asset moved <1%, say it didn't move meaningfully — don't manufacture an explanation.
 - worthKnowing: up to 4 bullets of actual news content. Each bullet is one plain-English sentence. Priority: TVL movements first, then regulatory, then protocol events. May be empty on a quiet day.
 - snapshot: pass through the 4 numeric fields from researcher data. No prose — just the numbers.
@@ -176,11 +176,11 @@ MARKET SNAPSHOT
 TOP 15 TRACKED ASSETS:
 ${trackedLines.join('\n')}
 
-WINNERS (rank 16-50, ≥+5% 24h):
-${winnerLines.length > 0 ? winnerLines.join('\n') : '  (none)'}
+WINNERS (from researcher movers.winners — use these exactly, add nothing from topTracked):
+${winnerLines.length > 0 ? winnerLines.join('\n') : '  (none — whatMoved.winners MUST be [] empty array)'}
 
-LOSERS (rank 16-50, ≤-5% 24h):
-${loserLines.length > 0 ? loserLines.join('\n') : '  (none)'}
+LOSERS (from researcher movers.losers — use these exactly, add nothing from topTracked):
+${loserLines.length > 0 ? loserLines.join('\n') : '  (none — whatMoved.losers MUST be [] empty array)'}
 
 NOTABLE TVL MOVEMENTS (DeFiLlama):
 ${tvlLines.length > 0 ? tvlLines.join('\n') : '  (none)'}

@@ -81,8 +81,15 @@ The daily must never give financial advice, explicitly or implicitly. The follow
 | "Be careful with" | Implied caution-advice |
 | "Don't panic" | Implied behavioral advice |
 | "Stay long" / "Stay short" | Position advice |
+| "raised concerns about further [declines/gains]" | Third-person implied advisory — implies the reader should be worried |
+| "investors to look for alternatives" | Describes investor behavior in a way that implies the reader should too |
+| "could signal further [decline/upside]" | Speculative direction with implied actionability |
+| "might indicate [a trend]" | Soft speculation that reads as a recommendation |
+| "appears to be a [good/bad] sign" | Soft evaluation implying action |
 
-Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "looking at", "might want to", "worth adding". Each match must be manually reviewed. Educational uses ("this is the kind of level traders watch because…") are fine; advisory uses are not.
+Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "looking at", "might want to", "worth adding", "raised concerns about further", "look for alternatives", "could signal", "might indicate". Each match must be manually reviewed. Educational uses ("this is the kind of level traders watch because…") are fine; advisory uses are not.
+
+The test for third-person implied advisory: does the sentence describe an investor reaction in a way that implies the reader should have the same reaction? "Bitcoin fell 3% as ETF outflows accelerated" — fine, plain fact. "Bitcoin's decline has raised concerns about further losses, prompting investors to look for alternatives" — forbidden, implies the reader should also be concerned and seek alternatives.
 
 ### Educational framing — ACCEPTABLE constructions
 
@@ -168,6 +175,11 @@ The 60-second read is not a numerical restatement. It is the editorial answer to
 **Good example for a quiet-news day:**
 > Bitcoin and Ethereum drifted today on light volume — neither moved meaningfully. The story isn't price action; it's the Senate vote on stablecoin rules due this week, which has the market waiting. Meanwhile, Circle and Ripple both closed nine-figure fundraises, signaling that institutional money is still flowing in even on quiet days.
 
+**Good example for a small-move day driven by a mechanism (ETF outflows, funding rates, etc.):**
+> ETF outflows pushed Bitcoin lower for a third consecutive session — the -0.24% slip understates the pressure; cumulative fund redemptions over the week have exceeded $800M. XRP and NEAR moved against the trend, attracting fresh capital as traders rotated out of large-cap BTC exposure. Ethereum drifted with the broader market.
+
+Why it works: the summary leads with the mechanism (ETF outflows), not the price. The price is subordinate context. The rotation story is stated as a plain fact, not as investment advice.
+
 **Forbidden example (do not produce this):**
 > Bitcoin rose by 0.68% to $81,823, while Ethereum fell by 0.53% to $2,335.01. Overall, the market is experiencing a quiet day with some assets showing modest gains and others declining.
 
@@ -177,7 +189,7 @@ Render the researcher's `topTracked`, `movers.winners`, and `movers.losers`.
 
 **Top 15 (topTracked):** Present as a compact table or structured list. For each non-stablecoin, non-derivative entry, include one line of context explaining its move (flat statement: "up 3.2%", "down 1.8%"). For stablecoins and wrapped/derivative assets, show the asset name and price for completeness but do not narrate price movement — their price movement is not news.
 
-**Winners and Losers (rank 16–50):** Present the `movers.winners` and `movers.losers` arrays. Include the researcher's `catalyst` if non-null. If `movers.winners` and `movers.losers` are both empty, omit this sub-section and note in-line: "No assets in the 16–50 range moved more than 5% in either direction today."
+**Winners and Losers (rank 16–50):** Present the `movers.winners` and `movers.losers` arrays exactly as supplied by the researcher — do not add assets from `topTracked`. Include the researcher's `catalyst` if non-null. If `movers.winners` and `movers.losers` are both empty, omit this sub-section and note in-line: "No qualified movers in the 16–50 range today."
 
 **Quiet-day handling:** On days with thin movers data, the top 15 table alone is a complete and acceptable section. Do not invent movement stories.
 
@@ -307,8 +319,8 @@ If the editor flagged a specific phrase, quote that phrase in your mental model 
 
 The editor runs these specific checks. Write to satisfy them on the first pass:
 
-1. **Advisory Framing** — zero uses of "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", or any behavioral prescription.
-2. **Winners and Losers** — if the researcher provided eligible movers (non-stablecoin, non-wrapped/derivative assets), your `whatMoved.winners` and `whatMoved.losers` must be non-empty.
+1. **Advisory Framing** — zero uses of direct advisory ("you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should") AND zero uses of third-person implied advisory ("raised concerns about further declines/gains", "investors to look for alternatives", "could signal further decline/upside", "might indicate a trend").
+2. **Winners and Losers** — `whatMoved.winners` and `whatMoved.losers` MUST mirror `movers.winners` and `movers.losers` from the researcher exactly. If the researcher's array is empty, your array must be empty — do not fill it from `topTracked`.
 3. **Headline Specificity** — the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement.
 4. **Summary Editorial** — the summary leads with the main story, not prices. No "Overall, the market experienced…" or "The day was characterized by…"
 5. **Causal Attribution** — every causal claim in `whyItMoved` references a specific named event, data point, or entity. "Ongoing interest", "market sentiment", and "investor caution" alone are not causes.
@@ -328,7 +340,7 @@ Before writing the output file, verify each of these. If a check fails, attempt 
 8. Do not include a `weeklyFooter` field in your draft — it is injected by the pipeline script after assembly.
 9. The headline must not contain forbidden patterns: "mixed results", "modest", "slight", "minor" as sole descriptor, or generic "Crypto market shows X" constructions.
 10. Tags must not include generic terms: "crypto", "daily", "market", "news", "update".
-11. **Winners and losers populating (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST contain entries when the researcher's corresponding arrays are non-empty (after excluding stablecoins and wrapped/derivative tokens). Empty arrays are acceptable only when the researcher returned empty arrays — meaning no eligible top-50 asset moved >5% in that direction. If the researcher supplied winners or losers data but your output arrays are empty, you have omitted data — this is a check failure that requires a self-correction pass.
+11. **Winners and losers populating (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST mirror the researcher's `movers.winners` and `movers.losers` arrays exactly. If the researcher's array is non-empty, your output array must be non-empty (data omission). If the researcher's array is empty, your output array MUST be empty — do not source assets from `topTracked` to fill it (data fabrication). Both violations are check failures that require a self-correction pass.
 
 ## Failure Handling
 
