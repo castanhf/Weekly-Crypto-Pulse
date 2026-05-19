@@ -408,7 +408,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   let writerOutput: WriterLlmOutput | null = null;
   let firstParseError: string | null = null;
   try {
-    writerOutput = parseAndValidateLlmJson(llmResponse.content, validateWriterOutput);
+    writerOutput = parseAndValidateLlmJson(llmResponse.content, validateWriterOutput, llmResponse.provider);
   } catch (err) {
     firstParseError = err instanceof Error ? err.message : String(err);
   }
@@ -439,7 +439,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
       },
       { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, requestId: `daily-report-correction-${targetDate}` }
     );
-    writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput);
+    writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput, correctionResponse.provider);
     draft = assembleDraft(targetDate, writerOutput, researcherInput, weeklySlug);
     validationErrors = validateDraft(draft);
   }

@@ -327,7 +327,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
-  const editorOutput = parseAndValidateLlmJson(llmResponse.content, validateEditorResponse);
+  const editorOutput = parseAndValidateLlmJson(llmResponse.content, validateEditorResponse, llmResponse.provider);
   const draftParsed = JSON.parse(draftContent) as { headline?: string };
   const headline = draftParsed.headline ?? '';
 

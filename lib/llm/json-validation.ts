@@ -1,4 +1,4 @@
-import { LlmError } from './types';
+import { LlmError, type LlmProvider } from './types';
 
 const stripMarkdownFences = (raw: string): string =>
   raw
@@ -9,7 +9,8 @@ const stripMarkdownFences = (raw: string): string =>
 
 export const parseAndValidateLlmJson = <T>(
   rawContent: string,
-  validator: (parsed: unknown) => T
+  validator: (parsed: unknown) => T,
+  provider: LlmProvider
 ): T => {
   const stripped = stripMarkdownFences(rawContent);
 
@@ -20,7 +21,7 @@ export const parseAndValidateLlmJson = <T>(
     const underlying = err instanceof Error ? err : new Error(String(err));
     throw new LlmError({
       kind: 'schema-validation',
-      provider: 'github-models',
+      provider,
       retryable: true,
       underlying,
       message: `LLM returned invalid JSON: ${underlying.message}`
@@ -33,7 +34,7 @@ export const parseAndValidateLlmJson = <T>(
     const underlying = err instanceof Error ? err : new Error(String(err));
     throw new LlmError({
       kind: 'schema-validation',
-      provider: 'github-models',
+      provider,
       retryable: true,
       underlying,
       message: `LLM JSON failed validation: ${underlying.message}`

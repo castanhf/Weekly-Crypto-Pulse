@@ -50,7 +50,7 @@ const parseTrackedAssetEntry = (entry: unknown, prefix: string): TrackedAssetEnt
   };
 };
 
-const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifactRecord => {
+export const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifactRecord => {
   let parsed: unknown;
 
   try {
