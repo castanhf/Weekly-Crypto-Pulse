@@ -45,7 +45,7 @@ const getNavItemClassName = (item: NavItem, isActive: boolean): string => {
     // Full brightness when active (you're on /pro); dimmed accent border when inactive.
     if (isActive) {
       return getCtaClassName({
-        className: 'whitespace-nowrap py-2.5',
+        className: 'whitespace-nowrap py-2.5 ring-2 ring-accent/50 ring-offset-1 ring-offset-surface',
         tone: 'primary'
       });
     }
