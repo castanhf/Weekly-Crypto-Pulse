@@ -89,7 +89,9 @@ describe('reviewDailyReport', () => {
 
     const result = await reviewDailyReport(TARGET_DATE, 1);
 
-    expect(result).toBe('approved');
+    expect(result.verdict).toBe('approved');
+    expect(result.headline).toBe('Bitcoin holds above $95,000 as markets drift sideways.');
+    expect(result.failedCheckIds).toHaveLength(0);
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;
     const approvalCall = writeCalls.find(([p]) => typeof p === 'string' && p.includes(`.approved-${TARGET_DATE}`));
@@ -103,7 +105,9 @@ describe('reviewDailyReport', () => {
 
     const result = await reviewDailyReport(TARGET_DATE, 1);
 
-    expect(result).toBe('revision-requested');
+    expect(result.verdict).toBe('revision-requested');
+    expect(result.headline).toBe('Bitcoin holds above $95,000 as markets drift sideways.');
+    expect(result.failedCheckIds).toEqual(['2 — Advisory Framing Check']);
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;
     const revisionsCall = writeCalls.find(([p]) => typeof p === 'string' && p.includes(`.revisions-${TARGET_DATE}`));
@@ -113,10 +117,11 @@ describe('reviewDailyReport', () => {
     expect(revisionsContent.failedItems).toHaveLength(1);
   });
 
-  it('auto-approves on round 3 without LLM call', async () => {
-    const result = await reviewDailyReport(TARGET_DATE, 3);
+  it('auto-approves on round 5 without LLM call', async () => {
+    const result = await reviewDailyReport(TARGET_DATE, 5);
 
-    expect(result).toBe('approved');
+    expect(result.verdict).toBe('approved');
+    expect(result.failedCheckIds).toHaveLength(0);
     expect(vi.mocked(callLlm)).not.toHaveBeenCalled();
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;

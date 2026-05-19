@@ -29,6 +29,7 @@ import { reviewDailyReport } from './review-daily-report';
 import { promoteDailyArtifact } from './promote-daily-artifact';
 import { generateDailyPlaceholder } from './generate-daily-placeholder';
 import { createEmailSender } from '../lib/email/email-sender-factory';
+import { isStuckLoop } from '../lib/agents/stuck-loop';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -74,7 +75,10 @@ const main = async (): Promise<void> => {
   // always has a published artifact in data/dailies/.
   let outputPath: string;
   try {
-    const MAX_ROUNDS = 3;
+    const MAX_ROUNDS = 5;
+
+    let prevHeadline: string | null = null;
+    let prevFailedCheckIds: ReadonlyArray<string> | null = null;
 
     for (let round = 1; round <= MAX_ROUNDS; round++) {
       console.log(`\n--- Writer pass (round ${round}) ---`);
@@ -89,9 +93,28 @@ const main = async (): Promise<void> => {
       }
 
       console.log(`\n--- Editor review (round ${round}) ---`);
-      const editorResult = await reviewDailyReport(targetDate, round);
+      const reviewResult = await reviewDailyReport(targetDate, round);
 
-      if (editorResult === 'approved') break;
+      if (reviewResult.verdict === 'approved') break;
+
+      // Stuck-loop detection: if the headline and failed check IDs are identical to the
+      // previous round, the writer is not making substantive progress — auto-approve early.
+      if (
+        round >= 2 &&
+        prevHeadline !== null &&
+        prevFailedCheckIds !== null &&
+        isStuckLoop(reviewResult.headline, prevHeadline, reviewResult.failedCheckIds, prevFailedCheckIds)
+      ) {
+        console.warn(`\n[pipeline] WARNING: Writer appears stuck — round ${round} reproduces round ${round - 1}'s`);
+        console.warn(`[pipeline]   headline and editor concerns. Halting iteration and auto-approving.`);
+        console.warn(`[pipeline]   Repeated headline: "${reviewResult.headline}"`);
+        console.warn(`[pipeline]   Repeated concerns: ${reviewResult.failedCheckIds.join(', ')}`);
+        console.warn('[pipeline]   Operator review recommended.');
+        break;
+      }
+
+      prevHeadline = reviewResult.headline;
+      prevFailedCheckIds = reviewResult.failedCheckIds;
 
       if (round < MAX_ROUNDS) {
         console.log(`[pipeline] Editor requested revisions (round ${round}). Re-running writer…`);

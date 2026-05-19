@@ -14,6 +14,7 @@ import { describe, expect, it } from 'vitest';
  */
 
 const SCRIPT_CONSUMED_DIRS = [
+  'lib/agents',
   'lib/reports',
   'lib/email',
   'lib/market-data',
