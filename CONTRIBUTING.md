@@ -53,7 +53,7 @@ New code should include tests where applicable. Bug fixes should include a regre
 This project has two import styles depending on where the file lives:
 
 - **Next.js components (under `app/`, `components/`):** use the `@/` path alias for clarity (e.g., `import { foo } from '@/lib/site'`).
-- **Library code consumed by Node scripts (`lib/reports/`, `lib/email/`, `lib/market-data/`, `lib/markets/`, `lib/news/`, `lib/llm/`, `lib/charts/`, `lib/cache/`):** use relative imports (e.g., `import { foo } from '../../domain/schema-version'`).
+- **Library code consumed by Node scripts (`lib/agents/`, `lib/reports/`, `lib/email/`, `lib/market-data/`, `lib/markets/`, `lib/news/`, `lib/llm/`, `lib/charts/`, `lib/cache/`):** use relative imports (e.g., `import { foo } from '../../domain/schema-version'`).
 
 Why: pipeline scripts compile via `tsconfig.scripts.json` and run via plain Node, which cannot resolve TypeScript path aliases. Files in script-consumed directories must use relative imports to remain importable from compiled scripts.
 
@@ -77,6 +77,23 @@ dotenv.config({ path: '.env' });
 Do **not** use Node's `--env-file` flag in npm scripts — it requires the file to exist and breaks in CI with exit code 9.
 
 `npm run test` includes a static check (`lib/env-loading.test.ts`) that fails if a listed entry-point script is missing the dotenv import, or if any npm script reintroduces `--env-file`.
+
+## Agent specifications
+
+All editorial agent prompts are defined in `.claude/agents/*.md` files. These files are the **single source of truth** for agent behavior (voice rules, checklist items, output format, examples).
+
+Pipeline scripts that use these agents load the spec at startup via:
+
+```typescript
+import { loadAgentSpec } from '../lib/agents/load-spec';
+
+const specBody = loadAgentSpec('daily_writer');
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}\n\n${API_NOTE}` : INLINE_FALLBACK;
+```
+
+The `API_NOTE` appended to each spec tells the model to return JSON (not write files) since it is called via API, not as an interactive Claude agent. The inline fallback is kept to prevent pipeline failure if the spec file is somehow missing.
+
+**Do not** duplicate spec content as inline constants in scripts. The drift between agent spec files and inline constants caused editorial quality issues in R2.1.1; this convention prevents recurrence.
 
 ## Communication
 
