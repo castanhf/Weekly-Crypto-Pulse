@@ -142,4 +142,39 @@ describe('reviewDailyReport', () => {
     const userMessage = llmCall[0].messages.find((m) => m.role === 'user');
     expect(userMessage?.content).toContain('round 2');
   });
+
+  it('calls Anthropic as primary provider', async () => {
+    vi.mocked(callLlm).mockResolvedValue(APPROVED_RESPONSE);
+
+    await reviewDailyReport(TARGET_DATE, 1);
+
+    const llmCall = vi.mocked(callLlm).mock.calls[0];
+    expect(llmCall[1]?.primary).toBe('anthropic');
+    expect(llmCall[1]?.secondary).toBe('github-models');
+  });
+
+  it('ReviewOutcome includes passCount equal to passingItems length on approval', async () => {
+    vi.mocked(callLlm).mockResolvedValue(APPROVED_RESPONSE);
+
+    const result = await reviewDailyReport(TARGET_DATE, 1);
+
+    const passingItemsCount = (JSON.parse(APPROVED_RESPONSE.content) as { passingItems: string[] }).passingItems.length;
+    expect(result.passCount).toBe(passingItemsCount);
+  });
+
+  it('ReviewOutcome includes passCount equal to passingItems length on revision-requested', async () => {
+    vi.mocked(callLlm).mockResolvedValue(REVISION_RESPONSE);
+
+    const result = await reviewDailyReport(TARGET_DATE, 1);
+
+    const passingItemsCount = (JSON.parse(REVISION_RESPONSE.content) as { passingItems: string[] }).passingItems.length;
+    expect(result.passCount).toBe(passingItemsCount);
+  });
+
+  it('ReviewOutcome passCount is 0 on auto-approve (round 5)', async () => {
+    const result = await reviewDailyReport(TARGET_DATE, 5);
+
+    expect(result.verdict).toBe('approved');
+    expect(result.passCount).toBe(0);
+  });
 });

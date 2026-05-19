@@ -74,17 +74,23 @@ Tags: ${d.tags.join(', ')}`
   return `Write the framing paragraph for this week's Sunday digest. Here are the daily reports from this week:\n\n${entries}`;
 };
 
+const SUNDAY_DIGEST_LLM = {
+  model: 'gpt-4o-mini' as const, // used only by github-models fallback; anthropic always uses Sonnet 4.6
+  primary: 'anthropic' as const,
+  secondary: 'github-models' as const
+} as const;
+
 const generateFramingParagraph = async (dailies: ReadonlyArray<RawDailyArtifact>): Promise<string> => {
   const response = await callLlm(
     {
-      model: 'claude-sonnet-4-6',
+      model: SUNDAY_DIGEST_LLM.model,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: buildUserPrompt(dailies) }
       ],
       maxTokens: 400
     },
-    { requestId: 'sunday-digest-framing' }
+    { primary: SUNDAY_DIGEST_LLM.primary, secondary: SUNDAY_DIGEST_LLM.secondary, requestId: 'sunday-digest-framing' }
   );
 
   const text = response.content;

@@ -20,7 +20,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: '.env.local' });
 dotenv.config({ path: '.env' });
 
-import { access } from 'node:fs/promises';
+import { access, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 import { generateDailyInput, resolveTargetDate } from './generate-daily-input';
@@ -45,6 +45,18 @@ const failureSentinelExists = async (targetDate: string): Promise<boolean> => {
   } catch {
     return false;
   }
+};
+
+const DRAFTS_DIR = path.resolve(process.cwd(), 'data/daily-drafts');
+
+// Overwrites only the headline field in the draft JSON, leaving all other fields intact.
+// Used when the best-scoring round's headline differs from the final round's headline.
+const patchDraftHeadline = async (targetDate: string, headline: string): Promise<void> => {
+  const draftPath = path.join(DRAFTS_DIR, `draft-${targetDate}.json`);
+  const raw = await readFile(draftPath, 'utf-8');
+  const draft = JSON.parse(raw) as Record<string, unknown>;
+  draft['headline'] = headline;
+  await writeFile(draftPath, `${JSON.stringify(draft, null, 2)}\n`, 'utf-8');
 };
 
 // ---------------------------------------------------------------------------
@@ -80,7 +92,13 @@ const main = async (): Promise<void> => {
     let prevHeadline: string | null = null;
     let prevFailedCheckIds: ReadonlyArray<string> | null = null;
 
+    type BestRound = { headline: string; passCount: number; round: number };
+    let bestRound: BestRound | null = null;
+    let cleanApproval = false;
+    let finalRound = 1;
+
     for (let round = 1; round <= MAX_ROUNDS; round++) {
+      finalRound = round;
       console.log(`\n--- Writer pass (round ${round}) ---`);
       try {
         await generateDailyReport(targetDate);
@@ -95,7 +113,15 @@ const main = async (): Promise<void> => {
       console.log(`\n--- Editor review (round ${round}) ---`);
       const reviewResult = await reviewDailyReport(targetDate, round);
 
-      if (reviewResult.verdict === 'approved') break;
+      // Track the round with the highest passCount as a candidate for best headline.
+      if (bestRound === null || reviewResult.passCount > bestRound.passCount) {
+        bestRound = { headline: reviewResult.headline, passCount: reviewResult.passCount, round };
+      }
+
+      if (reviewResult.verdict === 'approved') {
+        cleanApproval = true;
+        break;
+      }
 
       // Stuck-loop detection: if the headline and failed check IDs are identical to the
       // previous round, the writer is not making substantive progress — auto-approve early.
@@ -119,6 +145,13 @@ const main = async (): Promise<void> => {
       if (round < MAX_ROUNDS) {
         console.log(`[pipeline] Editor requested revisions (round ${round}). Re-running writer…`);
       }
+    }
+
+    // When auto-approving (not a clean pass), restore the headline from the round that
+    // scored the most passing checks — the final round may have regressed on quality.
+    if (!cleanApproval && bestRound !== null && bestRound.round !== finalRound) {
+      console.log(`\n[pipeline] Restoring best-round headline (round ${bestRound.round}, ${bestRound.passCount} passes): "${bestRound.headline}"`);
+      await patchDraftHeadline(targetDate, bestRound.headline);
     }
 
     console.log('\n--- Promotion ---');

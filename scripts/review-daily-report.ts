@@ -20,7 +20,18 @@ import path from 'node:path';
 
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
+import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { DailyResearcherInput } from './generate-daily-input';
+
+// ---------------------------------------------------------------------------
+// LLM config
+// ---------------------------------------------------------------------------
+
+const EDITOR_LLM = {
+  model: 'gpt-4o-mini' as const, // used only by github-models fallback; anthropic always uses Sonnet 4.6
+  primary: 'anthropic' as const,
+  secondary: 'github-models' as const
+} as const;
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -51,6 +62,7 @@ export type ReviewOutcome = {
   verdict: 'approved' | 'revision-requested';
   headline: string;
   failedCheckIds: ReadonlyArray<string>;
+  passCount: number;
 };
 
 // ---------------------------------------------------------------------------
@@ -95,12 +107,32 @@ If all 15 items PASS, verdict is "APPROVED" and failedItems is [].
 If any item FAILS, verdict is "REVISION_REQUESTED".
 Do not rewrite the report. Flag exact offenses only. Return raw JSON with no markdown fences.`;
 
-// The editor receives draft + researcher data in addition to the system prompt, making
-// the total context too large when loading the full agent spec (~400 lines). The condensed
-// inline prompt already contains all 15 checklist items and is the stable choice here.
-// Note: INLINE_SYSTEM_PROMPT IS kept in sync with daily_editor.md; edits to the spec
-// must be mirrored here until a token-budget-aware spec loading strategy is implemented.
-const SYSTEM_PROMPT = INLINE_SYSTEM_PROMPT;
+// Appended after the spec body to override the ## Outputs section, which describes
+// file writing for interactive agent use (not applicable in API mode).
+const EDITOR_API_NOTE = `
+## API Mode Output (overrides ## Outputs above)
+Return ONLY the following JSON — no markdown fences, no preamble:
+{
+  "verdict": "APPROVED" | "REVISION_REQUESTED",
+  "failedItems": [
+    {
+      "checkItem": "2 — Advisory Framing Check",
+      "verdict": "FAIL",
+      "detail": "The phrase 'you should consider' appears in whyItMoved.",
+      "quotedText": "you should consider"
+    }
+  ],
+  "passingItems": ["1 — Register Check", "3 — Winners-and-Losers Check"],
+  "summary": "optional one-sentence summary of overall verdict"
+}
+If all items PASS, verdict is "APPROVED" and failedItems is [].
+If any item FAILS, verdict is "REVISION_REQUESTED".
+Do not rewrite the report. Flag exact offenses only. Return raw JSON with no markdown fences.`;
+
+// With Anthropic (200K context) as primary, full spec loading is safe.
+// Fall back to the condensed inline prompt if the spec file cannot be found.
+const specBody = loadAgentSpec('daily_editor');
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}${EDITOR_API_NOTE}` : INLINE_SYSTEM_PROMPT;
 
 const buildReviewPrompt = (
   draft: string,
@@ -266,7 +298,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
     await writeApprovalMarker(targetDate, false, true, unresolvedIssues);
     await writeAutoApprovalLog(targetDate, unresolvedIssues);
     console.log('[daily-review] Auto-approved (round 5 reached). See auto-approval log.');
-    return { verdict: 'approved', headline, failedCheckIds: [] };
+    return { verdict: 'approved', headline, failedCheckIds: [], passCount: 0 };
   }
 
   // Format inputs for LLM (truncate researcher for prompt size)
@@ -283,7 +315,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
   console.log('  Calling LLM (editor)…');
   const llmResponse = await callLlm(
     {
-      model: 'gpt-4o-mini',
+      model: EDITOR_LLM.model,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: buildReviewPrompt(draftContent, researcherSummary, errorsContent, revisionRound) }
@@ -291,7 +323,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
       jsonMode: true,
       maxTokens: 4096
     },
-    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-review-${targetDate}-r${revisionRound}` }
+    { primary: EDITOR_LLM.primary, secondary: EDITOR_LLM.secondary, requestId: `daily-review-${targetDate}-r${revisionRound}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
@@ -302,7 +334,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
   if (editorOutput.verdict === 'APPROVED') {
     await writeApprovalMarker(targetDate, true, false, []);
     console.log(`[daily-review] APPROVED: ${targetDate}`);
-    return { verdict: 'approved', headline, failedCheckIds: [] };
+    return { verdict: 'approved', headline, failedCheckIds: [], passCount: editorOutput.passingItems.length };
   }
 
   // Revision requested
@@ -312,7 +344,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
     console.log(`  FAIL: ${item.checkItem} — ${item.detail}`);
   }
   await writeRevisionRequest(targetDate, revisionRound, editorOutput.failedItems, editorOutput.passingItems);
-  return { verdict: 'revision-requested', headline, failedCheckIds };
+  return { verdict: 'revision-requested', headline, failedCheckIds, passCount: editorOutput.passingItems.length };
 };
 
 // ---------------------------------------------------------------------------

@@ -30,6 +30,16 @@ import type { JsonRecord } from '../lib/reports/json-assertions';
 import type { DailyResearcherInput } from './generate-daily-input';
 
 // ---------------------------------------------------------------------------
+// LLM config
+// ---------------------------------------------------------------------------
+
+const WRITER_LLM = {
+  model: 'gpt-4o-mini' as const, // used only by github-models fallback; anthropic always uses Sonnet 4.6
+  primary: 'anthropic' as const,
+  secondary: 'github-models' as const
+} as const;
+
+// ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
 
@@ -370,7 +380,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   console.log('  Calling LLM (writer)…');
   const llmResponse = await callLlm(
     {
-      model: 'gpt-4o-mini',
+      model: WRITER_LLM.model,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: buildUserPrompt(researcherInput, revisionNotes) }
@@ -378,7 +388,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
       jsonMode: true,
       maxTokens: 4096
     },
-    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-${targetDate}` }
+    { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, requestId: `daily-report-${targetDate}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
@@ -405,7 +415,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
     const correctionPrompt = `Your previous output failed validation:\n${validationErrors.join('\n')}\n\nFix these issues and produce a corrected JSON output.`;
     const correctionResponse = await callLlm(
       {
-        model: 'gpt-4o-mini',
+        model: WRITER_LLM.model,
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: buildUserPrompt(researcherInput, revisionNotes) },
@@ -415,7 +425,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
         jsonMode: true,
         maxTokens: 4096
       },
-      { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-correction-${targetDate}` }
+      { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, requestId: `daily-report-correction-${targetDate}` }
     );
     writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput);
     draft = assembleDraft(targetDate, writerOutput, researcherInput, weeklySlug);

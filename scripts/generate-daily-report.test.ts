@@ -311,6 +311,21 @@ describe('generateDailyReport', () => {
     expect(btc!.marketCapUsd).toBe(1_880_000_000_000);
   });
 
+  it('calls Anthropic as primary provider', async () => {
+    vi.mocked(fs.readFile).mockImplementation(async (filePath) => {
+      if (typeof filePath === 'string' && filePath.includes('local-daily-input')) {
+        return MOCK_RESEARCHER_INPUT as ReturnType<typeof fs.readFile> extends Promise<infer T> ? T : never;
+      }
+      throw { code: 'ENOENT' };
+    });
+
+    await generateDailyReport(TARGET_DATE);
+
+    const llmCall = vi.mocked(callLlm).mock.calls[0];
+    expect(llmCall[1]?.primary).toBe('anthropic');
+    expect(llmCall[1]?.secondary).toBe('github-models');
+  });
+
   it('attempts self-correction when first LLM response fails validation', async () => {
     const invalidOutput = { ...MOCK_WRITER_OUTPUT, whatMoved: { ...MOCK_WRITER_OUTPUT.whatMoved, topTracked: [] } };
 

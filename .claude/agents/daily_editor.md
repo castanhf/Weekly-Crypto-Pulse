@@ -23,7 +23,7 @@ If the researcher's findings file does not exist, write the sentinel with messag
 
 ## How to Run the Editorial Review
 
-Work through the fourteen checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
+Work through the fifteen checklist items below in order. For each item, make an explicit PASS or FAIL decision and note why. At the end, if all items PASS, write the approval marker. If any item FAILS, write a revision request.
 
 Do not make subjective editorial improvements — you are checking compliance with specific documented rules, not optimizing prose style. "This sentence could flow better" is not a valid reason to request a revision. "This sentence contains 'we recommend'" is.
 
@@ -43,22 +43,30 @@ Also check the opposite: is any basic concept over-explained to the point of con
 
 **Question**: Does the daily anywhere state or imply a recommendation to buy, sell, or take a particular position? This is a **hard reject**.
 
-**How to evaluate**: Search the draft text for these strings (case-insensitive): "you should", "we recommend", "we'd", "consider adding", "consider selling", "buying opportunity", "selling opportunity", "be careful", "smart play", "don't panic", "stay long", "stay short", "worth adding exposure", "might want to". Every match must be examined. Educational uses ("traders watch this level because…") are acceptable. Behavioral prescriptions are not.
+**How to evaluate**: Apply the following rules in order. The test is whether phrasing implies the READER should act — not merely whether it describes investor behavior.
+
+**(A) ALWAYS FORBIDDEN — direct advisory**: "you should", "we recommend", "we'd", "consider adding/selling", "buying/selling opportunity", "be careful", "smart play", "don't panic", "stay long", "stay short", "investors should". Every match in this category is an automatic FAIL.
+
+**(B) FORBIDDEN — prescriptive implied advisory**: second-person or future-tense suggestions that imply a reader action ("now might be a good time to", "investors may want to"), and forward-looking speculation framed as a prompt to act ("this could signal further decline" when the clear purpose is to warn the reader to be cautious).
+
+**(C) ACCEPTABLE — capital flow descriptions**: factual accounts of what market participants did. These are NOT advisory, even if they mention investor behavior. PASS examples: "traders rotated into XRP", "capital shifted from Bitcoin to altcoins", "investors moved funds into smaller-cap assets", "ETF outflows accelerated as Bitcoin fell", "investors sought alternatives in XRP and NEAR". These describe market mechanics, not reader prescriptions.
+
+**(D) BORDERLINE — "raised concerns about further declines"**: PASS if paired with measurable data (Fear & Greed reading, derivative positioning) that supports the claim; FAIL if the sentence's clear purpose is to warn the reader to be cautious without data support.
 
 Check the "Worth knowing" section with special attention — this section is particularly prone to advisory framing slipping in via implications ("a major exchange paused withdrawals — be careful" vs. "a major exchange paused withdrawals").
 
-**PASS criteria**: Zero advisory phrasings anywhere in the draft.
+**PASS criteria**: Zero category-A or category-B phrasings. Category-C language is acceptable. Category-D passes when data-backed.
 
-**FAIL action**: Quote the exact offending phrase and its location (section name). State the rule it violates. Do not rewrite — let the writer fix.
+**FAIL action**: Quote the exact offending phrase, its location (section name), and which category (A or B) it violates. Do not rewrite — let the writer fix.
 
 ### Checklist Item 3 — Winners-and-Losers Check
 
 **Question**: When the researcher's `movers.winners` or `movers.losers` arrays contain eligible assets (non-stablecoin, non-wrapped/derivative), do those assets appear in the draft's `whatMoved` arrays?
 
-**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. For each array:
+**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. These arrays are the researcher's pre-filtered, authoritative lists of notable movers. Do NOT scan `topTracked` to derive expected movers — use ONLY `movers.winners` and `movers.losers`. For each array:
 1. Filter out any asset whose symbol is in the stablecoin or wrapped/derivative registry (`lib/markets/asset-categories.ts` — USDT, USDC, DAI, BUSD, FDUSD, TUSD, USDE, USDS, WBTC, WETH, STETH, WSTETH, and others in the registry).
 2. If the filtered list is non-empty, verify that the draft's corresponding `whatMoved.winners` or `whatMoved.losers` array is also non-empty.
-3. A quiet-day exception applies only when the researcher's arrays are genuinely empty after filtering — meaning no eligible top-50 asset moved >5%.
+3. A quiet-day exception applies only when the researcher's arrays are genuinely empty after filtering.
 
 An empty `whatMoved.winners` or `whatMoved.losers` in the draft when the researcher had eligible movers is a data omission, not editorial discretion. This is the single most common quality failure in daily artifacts and must be caught here.
 
@@ -204,6 +212,18 @@ For each asset that moved >3% in the top 15 or >5% in rank 16-50: verify the pro
 
 **FAIL action**: List the generic tags and note what specific tags the day's content supports.
 
+### Checklist Item 14 — Quiet-Day Honesty Check
+
+**Question**: If the day's content is genuinely thin, is the writer being honest about it or padding with filler?
+
+**How to evaluate**: Check if the day had no major movers (all top-15 assets within ±1%) and no high-relevance news. If so: is the `whyItMoved` section short and honest, or padded with manufactured explanation?
+
+A short, honest "Markets drifted sideways on light volume; no clear catalyst drove the session" is a PASS. A 300-word section inventing causal explanations for noise is a FAIL.
+
+**PASS criteria**: On quiet days, the prose is proportionally brief and honest. On active days, this check passes automatically.
+
+**FAIL action**: Quote the padded section and request a condensed honest version.
+
 ### Checklist Item 15 — Substantive Revision Check (Rounds 2+)
 
 **Applies only when**: this is a revision round (round ≥ 2) and the writer has been given specific revision notes from the previous round.
@@ -223,23 +243,11 @@ For each asset that moved >3% in the top 15 or >5% in rank 16-50: verify the pro
 
 **FAIL action**: Quote the original flagged passage (from the previous revision notes) alongside the new passage and identify the non-substantive change. Example: "Round 1 flagged 'due to market sentiment' in whyItMoved; round 2 shows 'amid shifting investor sentiment' — synonym swap, not a substantive revision."
 
-### Checklist Item 14 — Quiet-Day Honesty Check
-
-**Question**: If the day's content is genuinely thin, is the writer being honest about it or padding with filler?
-
-**How to evaluate**: Check if the day had no major movers (all top-15 assets within ±1%) and no high-relevance news. If so: is the `whyItMoved` section short and honest, or padded with manufactured explanation?
-
-A short, honest "Markets drifted sideways on light volume; no clear catalyst drove the session" is a PASS. A 300-word section inventing causal explanations for noise is a FAIL.
-
-**PASS criteria**: On quiet days, the prose is proportionally brief and honest. On active days, this check passes automatically.
-
-**FAIL action**: Quote the padded section and request a condensed honest version.
-
 ## Outputs
 
 ### Approval
 
-When all nine checklist items PASS, write a small approval marker:
+When all fifteen checklist items PASS, write a small approval marker:
 
 ```
 data/daily-drafts/.approved-{targetDate}

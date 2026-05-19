@@ -82,18 +82,43 @@ Do **not** use Node's `--env-file` flag in npm scripts — it requires the file 
 
 All editorial agent prompts are defined in `.claude/agents/*.md` files. These files are the **single source of truth** for agent behavior (voice rules, checklist items, output format, examples).
 
-Pipeline scripts that use these agents load the spec at startup via:
+### Pattern 1 — Full spec loading (writer and editor)
+
+Pipeline scripts that use editorial agents (writer, editor) load the full spec at startup via `loadAgentSpec`, then append an API note that overrides the `## Outputs` section (which describes file writing — not applicable in API mode):
 
 ```typescript
 import { loadAgentSpec } from '../lib/agents/load-spec';
 
+const WRITER_API_NOTE = `\n\n## API Mode Output (overrides ## Outputs above)\n...return JSON instead of writing files...`;
+
 const specBody = loadAgentSpec('daily_writer');
-const SYSTEM_PROMPT = specBody !== null ? `${specBody}\n\n${API_NOTE}` : INLINE_FALLBACK;
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}${WRITER_API_NOTE}` : INLINE_SYSTEM_PROMPT;
 ```
 
-The `API_NOTE` appended to each spec tells the model to return JSON (not write files) since it is called via API, not as an interactive Claude agent. The inline fallback is kept to prevent pipeline failure if the spec file is somehow missing.
+The inline fallback (`INLINE_SYSTEM_PROMPT`) is kept to prevent pipeline failure if the spec file is somehow missing. With Anthropic (200K context) as primary for writer and editor, full spec loading is safe — no context budget concern.
 
-**Do not** duplicate spec content as inline constants in scripts. The drift between agent spec files and inline constants caused editorial quality issues in R2.1.1; this convention prevents recurrence.
+**Do not** duplicate spec content as inline constants in scripts as the primary source. The drift between agent spec files and inline constants caused editorial quality issues in R2.1.1; the `.claude/agents/*.md` files are authoritative.
+
+### Pattern 2 — Researcher (no spec file)
+
+Researcher scripts (`generate-daily-input.ts`, `generate-report-input.ts`) use inline `SYSTEM_PROMPT` constants directly with no spec file. These agents do structured data gathering, not prose generation, so the prompt is short and stable enough not to warrant a separate spec file.
+
+### Per-agent LLM config
+
+Each content-generating script defines its own `*_LLM` constant to make provider routing explicit:
+
+```typescript
+const WRITER_LLM = {
+  model: 'gpt-4o-mini' as const, // used only by github-models fallback; anthropic ignores this
+  primary: 'anthropic' as const,
+  secondary: 'github-models' as const
+} as const;
+
+// callsite:
+await callLlm({ model: WRITER_LLM.model, ... }, { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, ... });
+```
+
+Writer, editor, and Sunday digest use `primary: 'anthropic'`. Researchers use `primary: 'github-models'`. See `docs/operations/model-configuration.md` for the full routing table and rationale.
 
 ## Communication
 
