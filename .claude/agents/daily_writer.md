@@ -293,6 +293,46 @@ Why it fails: prices are the primary content, not the story. "Overall, the marke
 
 Why it works: leads with the actual story (pending vote), explains why the quiet matters, adds a genuine news item.
 
+---
+
+**Forbidden example (price-leading with no catalyst):**
+> Bitcoin fell 3.2% to $74,500, while Ethereum dropped 4.1% to $1,820. Overall, the market experienced downward pressure as investors showed caution.
+
+Why it fails: two sentences of raw prices, then a forbidden generic phrase. No catalyst, no story.
+
+**Good example for the same data (major exploit as catalyst):**
+> A $65 million exploit on Bybit triggered a broad risk-off move — Bitcoin fell 3.2% to $74,500 and Ethereum slid 4.1%, with DeFi tokens taking a harder hit as traders unwound leveraged positions. This is the largest exchange hack since Ronin Network in 2022.
+
+Why it works: exploit named and quantified first, prices are evidence not headline, historical context lands the significance.
+
+---
+
+**Forbidden example (regulatory event buried after prices):**
+> Solana rose 8.4% to $182, XRP gained 6.1% to $0.61, and Cardano climbed 5.2% to $0.48. The crypto market showed strength as positive sentiment spread following the Senate vote.
+
+Why it fails: three lines of prices before any story. "Positive sentiment" is empty attribution. Senate vote mentioned vaguely with no specifics.
+
+**Good example for the same data:**
+> The Senate Banking Committee's 14-9 vote advancing the Clarity Act sent a clear signal that US stablecoin regulation is moving forward — and altcoins with direct regulatory exposure responded. Solana jumped 8.4%, XRP gained 6.1%, and Cardano climbed 5.2%, all outpacing Bitcoin's 1.8% rise.
+
+Why it works: catalyst named with specific vote count, outcome characterized (Clarity Act, stablecoin), then prices as supporting evidence.
+
+---
+
+**Forbidden example (leading with ETH price on a Bitcoin-catalyst day):**
+> Ethereum fell 2.1% to $2,280. Bitcoin also declined, dropping 1.8% to $83,400 after ETF outflow data showed $480M leaving BTC funds. The broader market saw mixed results.
+
+Why it fails: leads with the less important asset, buries the actual catalyst (ETF outflows), ends with a forbidden generic phrase.
+
+**Good example for the same data:**
+> Bitcoin ETFs saw $480M in outflows over 24 hours — the largest single-day exit since January — dragging BTC down 1.8% to $83,400. Ethereum followed, falling 2.1%, though its ETF inflows stayed positive, pointing to diverging institutional appetite.
+
+Why it works: catalyst (ETF outflows + specific dollar amount) comes first, prices are the result, Ethereum's data adds editorial nuance.
+
+---
+
+**The pattern**: event or catalyst first, then market reaction, then specific price movements as evidence. If there is no clear catalyst, say so honestly: "No clear catalyst drove the decline — the move appears technical, with Bitcoin testing support at $74,000 on unusually light volume."
+
 ### Why It Moved examples
 
 **Forbidden example (do not produce this):**
