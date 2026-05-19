@@ -61,7 +61,7 @@ Check the "Worth knowing" section with special attention — this section is par
 
 ### Checklist Item 3 — Winners-and-Losers Check
 
-**Question**: Do the draft's `whatMoved.winners` and `whatMoved.losers` each contain exactly 1 entry, matching the researcher's `movers.winners[0]` and `movers.losers[0]`?
++**Question**: Do the draft's `whatMoved.winners` and `whatMoved.losers` each contain exactly 1 entry, matching the researcher's `movers.winners[0]` and `movers.losers[0]`?
 
 **How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. These arrays are the researcher's authoritative top-1-by-percent-change selection (already filtered for stablecoins and wrapped/derivative tokens). Do NOT scan `topTracked` to derive expected movers — use ONLY `movers.winners` and `movers.losers`. Check:
 1. `whatMoved.winners` must have exactly 1 entry whose symbol matches `movers.winners[0].symbol`.
@@ -106,10 +106,10 @@ Note: quiet-day reports that are honest about having thin content may fall below
 
 ### Checklist Item 7 — Schema Check
 
-**Question**: Does the draft validate against the `daily@1.0` schema?
+**Question**: Does the draft satisfy the current daily schema structure?
 
 **How to evaluate**: Verify the following structural requirements manually:
-- `schemaVersion` equals `"daily@1.1"`
+- `schemaVersion` is `"daily@1.2"` (current) or `"daily@1.1"` (legacy — still valid for backward compatibility; do **not** require the writer to revert to an older version)
 - `generatedAt` is a non-empty string (ISO timestamp format)
 - `publishedAt` is a non-empty string in `YYYY-MM-DD` format
 - `slug` is a non-empty string
@@ -127,6 +127,14 @@ Note: quiet-day reports that are honest about having thin content may fall below
 **Question**: Do all numerical claims in the prose trace to values in the researcher's findings? Does the writer appear to have invented or significantly misrepresented any number?
 
 **How to evaluate**: For each price, percentage, or index value mentioned in the draft's prose, find the corresponding value in `local-daily-input.json`. They should agree within reasonable rounding (e.g., "fell 4.2%" when the researcher's value is `-4.23%` is acceptable; "fell 7%" when the value is `-4.23%` is not).
+
+Acceptable sources for cross-referencing a prose claim:
+- `movers.winners[].priceUsd`, `movers.winners[].changePct24h`
+- `movers.losers[].priceUsd`, `movers.losers[].changePct24h`
+- `topTracked[].priceUsd`, `topTracked[].marketCapUsd`, `topTracked[].changePct24h`
+- `snapshot` fields (`totalMarketCapUsd`, `btcDominancePct`, `ethDominancePct`, `fearGreedIndex`)
+
+A price figure that appears in **any** of these fields counts as traceable researcher data — do not mark it untraceable just because it appears in `topTracked` rather than in `movers`.
 
 Do not verify every table cell — verify claims in prose sections (`summary`, `whyItMoved`, `worthKnowing` bullets).
 
