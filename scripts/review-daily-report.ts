@@ -19,6 +19,7 @@ import path from 'node:path';
 
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
+import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { DailyResearcherInput } from './generate-daily-input';
 
 // ---------------------------------------------------------------------------
@@ -46,11 +47,17 @@ type EditorLlmOutput = {
   summary?: string;
 };
 
+export type ReviewOutcome = {
+  verdict: 'approved' | 'revision-requested';
+  headline: string;
+  failedCheckIds: ReadonlyArray<string>;
+};
+
 // ---------------------------------------------------------------------------
 // LLM prompt
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are the final editorial gatekeeper for the Crypto Pulse daily report. Review the writer's draft against the 14-item editorial checklist below. For each item, make an explicit PASS or FAIL decision.
+const INLINE_SYSTEM_PROMPT = `You are the final editorial gatekeeper for the Crypto Pulse daily report. Review the writer's draft against the 14-item editorial checklist below. For each item, make an explicit PASS or FAIL decision.
 
 CHECKLIST:
 1 — Register Check: Is the prose plainspoken throughout? Does any jargon appear without definition? Is any content condescending (over-explaining ETF, market cap, dominance, TVL — which are assumed known)?
@@ -59,14 +66,15 @@ CHECKLIST:
 4 — Stablecoin/Derivative Narration Check: Does the draft narrate the price movement of any stablecoin or wrapped/derivative token as market news? (FAIL example: "USDT gained 0.02%, reflecting safe-haven demand." PASS: USDT appears in table but is not narrated.)
 5 — Length Check: Is total prose word count within 600-900 words? Count: headline, summary, whyItMoved, each worthKnowing item, inline prose in whatMoved. Note: quiet-day reports ≥510 words may pass with editorial judgment.
 6 — Section Completeness: Are all 6 sections present and non-empty? (headline, summary, whatMoved, whyItMoved, worthKnowing, snapshot). worthKnowing is allowed to be empty on quiet days.
-7 — Schema Check: Does the draft satisfy daily@1.0 structure? (schemaVersion, generatedAt, publishedAt, slug, headline, summary, whyItMoved as non-empty strings; whatMoved with 3 sub-arrays; worthKnowing array ≤4 items; snapshot with 4 numeric fields; tags array)
+7 — Schema Check: Does the draft satisfy daily@1.1 structure? (schemaVersion, generatedAt, publishedAt, slug, headline, summary, whyItMoved as non-empty strings; whatMoved with 3 sub-arrays; worthKnowing array ≤4 items; snapshot with 4 numeric fields; tags array)
 8 — Factual Traceability Check: Do all prose numerical claims trace to the researcher's data? Tolerance: ±0.5 percentage points for percentages, ±2% for USD prices. (Do not verify table cells — only prose in summary, whyItMoved, worthKnowing.)
 9 — Footer Check: Does the draft include a link to the weekly report in worthKnowing or elsewhere? (Look for /reports link or "Crypto Pulse" reference in a footer context.)
-10 — Headline Specificity Check (NEW): Does the headline name a specific story? FAIL if the headline contains "mixed results", "modest", "slight", "minor" as the only descriptor, or is a generic "Crypto market sees/shows X" pattern. FAIL if a reader cannot tell from the headline alone what mattered today. A quiet-day headline like "A quiet day in crypto, with regulation on deck" PASSES. "Crypto market sees mixed results with Bitcoin slightly up and Ethereum down" FAILS.
-11 — Summary Editorial Check (NEW): Does the 60-second read tell the story rather than restate prices? FAIL if the summary's primary content is "BTC went up X%, ETH went down Y%". FAIL if the summary uses generic phrases: "Overall, the market experienced...", "The day was characterized by...", "Investors saw...". The summary must answer: what happened, and why does it matter?
-12 — Causal Attribution Check (NEW): Does whyItMoved contain empty causal attributions? FAIL if any of these patterns appear: "ongoing interest in the asset" as a cause, "continues to hold a dominant position" as a cause, "market sentiment appears to be stabilizing" without evidence, "investor caution as the market awaits developments" without specifying what. If an asset moved <1%, the prose should not manufacture an explanation.
-13 — Tag Specificity Check (NEW): Are the tags specific to the day's content? FAIL if the tag list contains any of: "crypto", "daily", "market", "news", "update". These generic tags apply to every daily and must not appear. Tags must name specific subjects from this day's content.
-14 — Quiet-Day Honesty Check (NEW): If the day had no major movers (all top-15 within ±1%) and no high-relevance news, is the whyItMoved section short and honest, or padded with invented explanations? A brief honest section PASSES. A 200+ word section of manufactured causal attributions for noise FAILS.
+10 — Headline Specificity Check: Does the headline name a specific story? PASS if the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement. The headline does NOT need to explain full significance. FAIL if the headline uses only generic terms ("crypto market", "digital assets"), uses empty descriptors ("mixed results", "modest") as its only content, or is pure price restatement ("Bitcoin slightly up, Ethereum down"). Do NOT fail a headline that names a specific asset, legislation, or event merely because it doesn't explain its full significance.
+11 — Summary Editorial Check: Does the 60-second read tell the story rather than restate prices? FAIL if the summary's primary content is "BTC went up X%, ETH went down Y%". FAIL if the summary uses generic phrases: "Overall, the market experienced...", "The day was characterized by...", "Investors saw...". The summary must answer: what happened, and why does it matter?
+12 — Causal Attribution Check: Does whyItMoved contain empty causal attributions? FAIL if any of these patterns appear: "ongoing interest in the asset" as a cause, "continues to hold a dominant position" as a cause, "market sentiment appears to be stabilizing" without evidence, "investor caution as the market awaits developments" without specifying what. If an asset moved <1%, the prose should not manufacture an explanation.
+13 — Tag Specificity Check: Are the tags specific to the day's content? FAIL if the tag list contains any of: "crypto", "daily", "market", "news", "update". These generic tags apply to every daily and must not appear. Tags must name specific subjects from this day's content.
+14 — Quiet-Day Honesty Check: If the day had no major movers (all top-15 within ±1%) and no high-relevance news, is the whyItMoved section short and honest, or padded with invented explanations? A brief honest section PASSES. A 200+ word section of manufactured causal attributions for noise FAILS.
+15 — Substantive Revision Check (Rounds 2+): If this is round 1, auto-PASS this check. On rounds 2+, has the writer substantively addressed the concerns from the previous revision? A substantive revision rewrites the offending passage — it does not merely swap a synonym or rearrange the same words. FAIL if the previous revision's flagged headline is unchanged or only superficially reworded, or if a flagged advisory phrase was replaced with a near-synonym rather than rewritten.
 
 OUTPUT FORMAT — return only this JSON:
 {
@@ -83,9 +91,20 @@ OUTPUT FORMAT — return only this JSON:
   "summary": "optional one-sentence summary of overall verdict"
 }
 
-If all 14 items PASS, verdict is "APPROVED" and failedItems is [].
+If all 15 items PASS, verdict is "APPROVED" and failedItems is [].
 If any item FAILS, verdict is "REVISION_REQUESTED".
-Do not rewrite the report. Flag exact offenses only.`;
+Do not rewrite the report. Flag exact offenses only. Return raw JSON with no markdown fences.`;
+
+const EDITOR_API_NOTE = `
+
+## API Invocation Note
+
+When called via the pipeline API (not as an interactive Claude agent), do not write files directly. Return your editorial verdict as raw JSON in your response. The calling script writes approval markers and revision requests.
+
+Return ONLY the JSON structure described above — no markdown fences, no preamble.`;
+
+const specBody = loadAgentSpec('daily_editor');
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}${EDITOR_API_NOTE}` : INLINE_SYSTEM_PROMPT;
 
 const buildReviewPrompt = (
   draft: string,
@@ -196,7 +215,7 @@ const validateEditorResponse = (parsed: unknown): EditorLlmOutput => {
 // Main export
 // ---------------------------------------------------------------------------
 
-export const reviewDailyReport = async (targetDate: string, revisionRound: number): Promise<'approved' | 'revision-requested'> => {
+export const reviewDailyReport = async (targetDate: string, revisionRound: number): Promise<ReviewOutcome> => {
   console.log(`[daily-review] Reviewing draft for ${targetDate} (round ${revisionRound})…`);
 
   // Check for researcher failure sentinel — editor should not run in this case
@@ -209,7 +228,7 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
     if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
   }
 
-  // Read draft
+  // Read draft — needed for headline extraction in all paths
   const draftPath = path.join(DRAFTS_DIR, `draft-${targetDate}.json`);
   let draftContent: string;
   try {
@@ -242,15 +261,16 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
     // No errors file — that's fine
   }
 
-  // Round 3: auto-approve without LLM call
-  if (revisionRound >= 3) {
+  // Round 5: auto-approve without LLM call (stuck-loop detection in orchestrator may fire earlier)
+  if (revisionRound >= 5) {
     const draft = JSON.parse(draftContent) as { headline?: string };
-    console.error(`[AUTO-APPROVED WITH ISSUES] ${targetDate} — round ${revisionRound} reached, auto-approving draft: "${draft.headline}"`);
-    const unresolvedIssues = ['Auto-approved after 2 revision rounds; operator review recommended'];
+    const headline = draft.headline ?? '';
+    console.error(`[AUTO-APPROVED WITH ISSUES] ${targetDate} — round ${revisionRound} reached, auto-approving draft: "${headline}"`);
+    const unresolvedIssues = ['Auto-approved after 4 revision rounds; operator review recommended'];
     await writeApprovalMarker(targetDate, false, true, unresolvedIssues);
     await writeAutoApprovalLog(targetDate, unresolvedIssues);
-    console.log('[daily-review] Auto-approved (round 3 reached). See auto-approval log.');
-    return 'approved';
+    console.log('[daily-review] Auto-approved (round 5 reached). See auto-approval log.');
+    return { verdict: 'approved', headline, failedCheckIds: [] };
   }
 
   // Format inputs for LLM (truncate researcher for prompt size)
@@ -280,20 +300,23 @@ export const reviewDailyReport = async (targetDate: string, revisionRound: numbe
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
   const editorOutput = parseAndValidateLlmJson(llmResponse.content, validateEditorResponse);
+  const draftParsed = JSON.parse(draftContent) as { headline?: string };
+  const headline = draftParsed.headline ?? '';
 
   if (editorOutput.verdict === 'APPROVED') {
     await writeApprovalMarker(targetDate, true, false, []);
     console.log(`[daily-review] APPROVED: ${targetDate}`);
-    return 'approved';
+    return { verdict: 'approved', headline, failedCheckIds: [] };
   }
 
   // Revision requested
+  const failedCheckIds = editorOutput.failedItems.map((item) => item.checkItem);
   console.log(`[daily-review] REVISION REQUESTED: ${targetDate} — ${editorOutput.failedItems.length} failed check(s)`);
   for (const item of editorOutput.failedItems) {
     console.log(`  FAIL: ${item.checkItem} — ${item.detail}`);
   }
   await writeRevisionRequest(targetDate, revisionRound, editorOutput.failedItems, editorOutput.passingItems);
-  return 'revision-requested';
+  return { verdict: 'revision-requested', headline, failedCheckIds };
 };
 
 // ---------------------------------------------------------------------------
@@ -304,7 +327,7 @@ const main = async (): Promise<void> => {
   const targetDate = process.env['DAILY_TARGET_DATE'] ?? new Date().toISOString().slice(0, 10);
   const revisionRound = Number(process.env['EDITOR_ROUND'] ?? '1');
   const result = await reviewDailyReport(targetDate, revisionRound);
-  if (result === 'revision-requested') {
+  if (result.verdict === 'revision-requested') {
     process.exitCode = 1;
   }
 };
