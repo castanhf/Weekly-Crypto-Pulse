@@ -197,9 +197,9 @@ Render the researcher's `topTracked`, `movers.winners`, and `movers.losers`.
 
 **Top 15 (topTracked):** Present as a compact table or structured list. For each non-stablecoin, non-derivative entry, include one line of context explaining its move (flat statement: "up 3.2%", "down 1.8%"). For stablecoins and wrapped/derivative assets, show the asset name and price for completeness but do not narrate price movement — their price movement is not news.
 
-**Winners and Losers (rank 16–50):** Present the `movers.winners` and `movers.losers` arrays exactly as supplied by the researcher — do not add assets from `topTracked`. Include the researcher's `catalyst` if non-null. If `movers.winners` and `movers.losers` are both empty, omit this sub-section and note in-line: "No qualified movers in the 16–50 range today."
+**Winners and Losers (top-1):** Present the `movers.winners` and `movers.losers` arrays exactly as supplied by the researcher — do not add assets from `topTracked`. Include the researcher's `catalyst` if non-null. The researcher always provides exactly 1 winner and 1 loser (the top and bottom asset by 24h percent change across all non-stablecoin assets). Both arrays are always populated — there is no empty-array case. The section heading labels come from `movers.sectionLabels` (e.g. "Smallest losses" / "Losers" on all-down days).
 
-**Quiet-day handling:** On days with thin movers data, the top 15 table alone is a complete and acceptable section. Do not invent movement stories.
+**Quiet-day handling:** On days where both the winner and loser moved less than 1%, acknowledge the quiet market tone honestly in `whyItMoved`. Do not invent movement stories.
 
 ### Why It Moved
 
@@ -220,7 +220,7 @@ The "why it moved" section must trace claims to evidence. Empty causal attributi
 - "could have significant implications" — forbidden unless you quantify what the implications are.
 
 **Required behavior:**
-- If an asset moved meaningfully (>3% on a top-15 asset, >5% on a rank 16-50 asset), the prose should reference a specific cause from the researcher's news input or honestly state "no clear catalyst — possibly technical movement."
+- If an asset moved meaningfully (>3% on a top-15 asset, or the researcher's winner/loser showed a notable move), the prose should reference a specific cause from the researcher's news input or honestly state "no clear catalyst — possibly technical movement."
 - If an asset moved <1%, say it didn't meaningfully move. Don't manufacture explanations for noise.
 
 **Quiet-day honesty:** On days with no major movement, the "why it moved" section should be **shorter, not longer**. A confident "Markets drifted sideways on light volume; the day's story is the pending Senate vote and a pair of funding announcements" is editorially stronger than 300 words of padding.
@@ -368,7 +368,7 @@ If the editor flagged a specific phrase, quote that phrase in your mental model 
 The editor runs these specific checks. Write to satisfy them on the first pass:
 
 1. **Advisory Framing** — zero uses of direct advisory ("you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should") and zero uses of prescriptive implied advisory ("now might be a good time to", "investors may want to", future-tense prompts to act). Capital flow descriptions are acceptable: "traders rotated into XRP", "investors sought alternatives in NEAR", "ETF outflows accelerated" are all PASS.
-2. **Winners and Losers** — `whatMoved.winners` and `whatMoved.losers` MUST mirror `movers.winners` and `movers.losers` from the researcher exactly. If the researcher's array is empty, your array must be empty — do not fill it from `topTracked`.
+2. **Winners and Losers** — `whatMoved.winners` and `whatMoved.losers` MUST mirror `movers.winners` and `movers.losers` from the researcher exactly. The researcher always provides exactly 1 winner and 1 loser — your arrays MUST each have exactly 1 entry. Do not fill from `topTracked`.
 3. **Headline Specificity** — the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement.
 4. **Summary Editorial** — the summary leads with the main story, not prices. No "Overall, the market experienced…" or "The day was characterized by…"
 5. **Causal Attribution** — every causal claim in `whyItMoved` references a specific named event, data point, or entity. "Ongoing interest", "market sentiment", and "investor caution" alone are not causes.
@@ -388,7 +388,7 @@ Before writing the output file, verify each of these. If a check fails, attempt 
 8. Do not include a `weeklyFooter` field in your draft — it is injected by the pipeline script after assembly.
 9. The headline must not contain forbidden patterns: "mixed results", "modest", "slight", "minor" as sole descriptor, or generic "Crypto market shows X" constructions.
 10. Tags must not include generic terms: "crypto", "daily", "market", "news", "update".
-11. **Winners and losers populating (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST mirror the researcher's `movers.winners` and `movers.losers` arrays exactly. If the researcher's array is non-empty, your output array must be non-empty (data omission). If the researcher's array is empty, your output array MUST be empty — do not source assets from `topTracked` to fill it (data fabrication). Both violations are check failures that require a self-correction pass.
+11. **Winners and losers (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST each have exactly 1 entry, mirroring the researcher's `movers.winners[0]` and `movers.losers[0]`. Adding extra entries (fabrication) or returning empty arrays (omission) are both check failures requiring a self-correction pass. Do not source assets from `topTracked`.
 
 ## Failure Handling
 

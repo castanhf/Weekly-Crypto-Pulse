@@ -33,7 +33,9 @@ import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
 import { wrapNewsItemsForPrompt } from '../lib/llm/prompt-helpers';
 import { getCached } from '../lib/cache/file-cache';
-import { isStablecoin, isWrappedOrDerivative } from '../lib/markets/asset-categories';
+import { isExcludedFromMovers, isStablecoin, isWrappedOrDerivative } from '../lib/markets/asset-categories';
+import { computeMovers, DAILY_TOP_N } from '../lib/markets/winners-losers';
+import type { ComputedMover, MarketRegime, SectionLabels } from '../lib/markets/winners-losers';
 import { fetchTopChainsTvl, detectNotableTvlMovements } from '../lib/markets/defi-llama';
 import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 
@@ -68,6 +70,7 @@ type ResearcherMover = {
   marketCapRank: number;
   priceUsd: number;
   changePct24h: number;
+  priceChange24hUsd: number;
   marketCapUsd: number;
   catalyst: string | null;
 };
@@ -110,6 +113,8 @@ export type DailyResearcherInput = {
   movers: {
     winners: ResearcherMover[];
     losers: ResearcherMover[];
+    sectionLabels: SectionLabels;
+    marketRegime: MarketRegime;
   };
   capitalFlows: {
     notableTvlMovements: ResearcherTvlMovement[];
@@ -238,13 +243,11 @@ const buildUserPrompt = (
   fearGreedIndex: number,
   tvlMovements: ResearcherTvlMovement[],
   priorContext: string,
-  wrappedNews: string
+  wrappedNews: string,
+  preComputedWinners: ReadonlyArray<ComputedMover>,
+  preComputedLosers: ReadonlyArray<ComputedMover>
 ): string => {
   const top15 = markets.slice(0, 15);
-  const rank16to50 = markets.slice(15, 50);
-  const winners = rank16to50.filter((m) => (m.price_change_percentage_24h_in_currency ?? 0) >= 5);
-  const losers = rank16to50.filter((m) => (m.price_change_percentage_24h_in_currency ?? 0) <= -5);
-  const movers = [...winners, ...losers];
 
   const totalMarketCap = globalData.data.total_market_cap['usd'] ?? 0;
   const btcDom = globalData.data.market_cap_percentage['btc'] ?? 0;
@@ -254,9 +257,13 @@ const buildUserPrompt = (
     `  Rank ${m.market_cap_rank}: ${m.symbol.toUpperCase()} ${m.name} — $${m.current_price.toLocaleString('en-US', { maximumFractionDigits: 2 })} (${(m.price_change_percentage_24h_in_currency ?? 0).toFixed(2)}% 24h)`
   );
 
-  const moverLines = movers.map((m) =>
-    `  Rank ${m.market_cap_rank}: ${m.symbol.toUpperCase()} ${m.name} — ${(m.price_change_percentage_24h_in_currency ?? 0).toFixed(2)}% 24h`
+  const winnerLines = preComputedWinners.map(
+    (m) => `  W ${m.symbol}: ${m.name} — +${m.changePct24h.toFixed(2)}% ($${m.priceUsd.toLocaleString('en-US', { maximumFractionDigits: 4 })})`
   );
+  const loserLines = preComputedLosers.map(
+    (m) => `  L ${m.symbol}: ${m.name} — ${m.changePct24h.toFixed(2)}% ($${m.priceUsd.toLocaleString('en-US', { maximumFractionDigits: 4 })})`
+  );
+  const moverLines = [...winnerLines, ...loserLines];
 
   const tvlLines =
     tvlMovements.length > 0
@@ -278,8 +285,8 @@ MARKET SNAPSHOT
 TOP 15 BY MARKET CAP (for classification):
 ${top15Lines.join('\n')}
 
-MOVERS IN RANK 16-50 (>5% or <-5% 24h change):
-${moverLines.length > 0 ? moverLines.join('\n') : '  None meeting ±5% threshold'}
+TOP MOVERS (top-1 winner and top-1 loser from all non-stablecoin assets):
+${moverLines.join('\n')}
 
 NOTABLE TVL MOVEMENTS (DeFiLlama):
 ${tvlLines.join('\n')}
@@ -338,12 +345,12 @@ const validateResearcherOutput = (output: DailyResearcherInput): void => {
     throw new Error(`topTracked must have exactly 15 entries, got ${output.topTracked.length}`);
   }
 
-  if (output.movers.winners.length > 5) {
-    throw new Error(`movers.winners must have at most 5 entries, got ${output.movers.winners.length}`);
+  if (output.movers.winners.length !== DAILY_TOP_N) {
+    throw new Error(`movers.winners must have exactly ${DAILY_TOP_N} entry, got ${output.movers.winners.length}`);
   }
 
-  if (output.movers.losers.length > 5) {
-    throw new Error(`movers.losers must have at most 5 entries, got ${output.movers.losers.length}`);
+  if (output.movers.losers.length !== DAILY_TOP_N) {
+    throw new Error(`movers.losers must have exactly ${DAILY_TOP_N} entry, got ${output.movers.losers.length}`);
   }
 
   if (output.newsItems.length > 6) {
@@ -457,7 +464,6 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
   const safeGlobalData: CoinGeckoGlobalData = globalData;
   const top50 = markets.slice(0, 50);
   const top15 = top50.slice(0, 15);
-  const rank16to50 = top50.slice(15);
 
   const totalMarketCap = safeGlobalData.data.total_market_cap['usd'] ?? 0;
   const btcDom = safeGlobalData.data.market_cap_percentage['btc'] ?? 0;
@@ -469,16 +475,17 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
   // 6. Prepare news for LLM prompt
   const wrappedNews = wrapNewsItemsForPrompt(newsItems);
 
-  // 7. Extract structured movers
-  const rawWinners = rank16to50
-    .filter((m) => (m.price_change_percentage_24h_in_currency ?? 0) >= 5)
-    .sort((a, b) => (b.price_change_percentage_24h_in_currency ?? 0) - (a.price_change_percentage_24h_in_currency ?? 0))
-    .slice(0, 5);
-
-  const rawLosers = rank16to50
-    .filter((m) => (m.price_change_percentage_24h_in_currency ?? 0) <= -5)
-    .sort((a, b) => (a.price_change_percentage_24h_in_currency ?? 0) - (b.price_change_percentage_24h_in_currency ?? 0))
-    .slice(0, 5);
+  // 7. Extract structured movers (top-N rule: always 1 winner + 1 loser)
+  const moverCandidates = top50
+    .filter((m) => !isExcludedFromMovers(m.symbol))
+    .map((m) => ({
+      symbol: m.symbol.toUpperCase(),
+      name: m.name,
+      changePct24h: m.price_change_percentage_24h_in_currency ?? 0,
+      priceUsd: m.current_price,
+      marketCapUsd: m.market_cap
+    }));
+  const computedMovers = computeMovers(moverCandidates, 'daily');
 
   // 8. Call LLM for catalysts and curated news summary
   console.log('  Calling LLM for catalysts and news curation…');
@@ -487,7 +494,20 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
-        { role: 'user', content: buildUserPrompt(targetDate, top50, safeGlobalData, fearGreedIndex, tvlMovements, priorContext, wrappedNews) }
+        {
+          role: 'user',
+          content: buildUserPrompt(
+            targetDate,
+            top50,
+            safeGlobalData,
+            fearGreedIndex,
+            tvlMovements,
+            priorContext,
+            wrappedNews,
+            computedMovers.winners,
+            computedMovers.losers
+          )
+        }
       ],
       jsonMode: true,
       maxTokens: 2048
@@ -510,24 +530,26 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
     isWrappedOrDerivative: isWrappedOrDerivative(m.symbol)
   }));
 
-  const winners: ResearcherMover[] = rawWinners.map((m) => ({
-    symbol: m.symbol.toUpperCase(),
+  const winners: ResearcherMover[] = computedMovers.winners.map((m) => ({
+    symbol: m.symbol,
     name: m.name,
-    marketCapRank: m.market_cap_rank,
-    priceUsd: m.current_price,
-    changePct24h: Number((m.price_change_percentage_24h_in_currency ?? 0).toFixed(4)),
-    marketCapUsd: Math.round(m.market_cap),
-    catalyst: llmData.catalysts[m.symbol.toUpperCase()] ?? llmData.catalysts[m.symbol] ?? null
+    marketCapRank: top50.find((e) => e.symbol.toUpperCase() === m.symbol)?.market_cap_rank ?? 0,
+    priceUsd: m.priceUsd,
+    changePct24h: Number(m.changePct24h.toFixed(4)),
+    priceChange24hUsd: m.priceChange24hUsd,
+    marketCapUsd: Math.round(m.marketCapUsd),
+    catalyst: llmData.catalysts[m.symbol] ?? null
   }));
 
-  const losers: ResearcherMover[] = rawLosers.map((m) => ({
-    symbol: m.symbol.toUpperCase(),
+  const losers: ResearcherMover[] = computedMovers.losers.map((m) => ({
+    symbol: m.symbol,
     name: m.name,
-    marketCapRank: m.market_cap_rank,
-    priceUsd: m.current_price,
-    changePct24h: Number((m.price_change_percentage_24h_in_currency ?? 0).toFixed(4)),
-    marketCapUsd: Math.round(m.market_cap),
-    catalyst: llmData.catalysts[m.symbol.toUpperCase()] ?? llmData.catalysts[m.symbol] ?? null
+    marketCapRank: top50.find((e) => e.symbol.toUpperCase() === m.symbol)?.market_cap_rank ?? 0,
+    priceUsd: m.priceUsd,
+    changePct24h: Number(m.changePct24h.toFixed(4)),
+    priceChange24hUsd: m.priceChange24hUsd,
+    marketCapUsd: Math.round(m.marketCapUsd),
+    catalyst: llmData.catalysts[m.symbol] ?? null
   }));
 
   const output: DailyResearcherInput = {
@@ -540,7 +562,7 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
       fearGreedIndex: Math.round(fearGreedIndex)
     },
     topTracked,
-    movers: { winners, losers },
+    movers: { winners, losers, sectionLabels: computedMovers.sectionLabels, marketRegime: computedMovers.marketRegime },
     capitalFlows: { notableTvlMovements: tvlMovements },
     newsItems: llmData.newsItems
   };
@@ -554,7 +576,7 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
   await mkdir(DAILY_INPUT_DIR, { recursive: true });
   await writeFile(DAILY_INPUT_PATH, `${JSON.stringify(output, null, 2)}\n`, 'utf-8');
   console.log(`[daily-input] Written to ${path.relative(process.cwd(), DAILY_INPUT_PATH)}`);
-  console.log(`  Winners: ${winners.length} | Losers: ${losers.length} | TVL movements: ${tvlMovements.length} | News: ${output.newsItems.length}`);
+  console.log(`  Winner: ${winners[0]?.symbol ?? '—'} | Loser: ${losers[0]?.symbol ?? '—'} | Regime: ${computedMovers.marketRegime} | TVL movements: ${tvlMovements.length} | News: ${output.newsItems.length}`);
 };
 
 // ---------------------------------------------------------------------------

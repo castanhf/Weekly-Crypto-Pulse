@@ -5,6 +5,10 @@ export type MoverEntry = Readonly<{
   name: string;
   changePct24h: number;
   catalyst: string;
+  /** daily@1.2 additive field. Present on v1.2+ artifacts; absent on v1.0/v1.1. */
+  priceUsd?: number;
+  /** daily@1.2 additive field. Approximate 24h USD price change (priceUsd * changePct24h / 100). */
+  priceChange24hUsd?: number;
 }>;
 
 /** Always-tracked top-15 assets. Stablecoins appear here for snapshot context
@@ -39,6 +43,9 @@ export type DailyArtifact = Readonly<{
     losers: ReadonlyArray<MoverEntry>;
     /** Top-15 tracked assets including stablecoins. */
     topTracked: ReadonlyArray<TrackedAssetEntry>;
+    /** daily@1.2 additive field. Adaptive labels based on market regime. Falls back to
+     *  "Winners"/"Losers" at render time if absent (backward compat for v1.0/v1.1 artifacts). */
+    sectionLabels?: Readonly<{ winners: string; losers: string }>;
   }>;
   /** Plainspoken prose, 200–300 words, main driver of the day. */
   whyItMoved: string;

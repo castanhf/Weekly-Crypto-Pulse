@@ -5,6 +5,7 @@ import { SectionCard } from '@/components/reports/section-card';
 
 type WinnersLosersProps = {
   movers: ReadonlyArray<Mover>;
+  sectionLabels?: Readonly<{ winners: string; losers: string }>;
 };
 
 type MoverTrend = 'winner' | 'loser';
@@ -21,6 +22,13 @@ const isMoverByTrend = (mover: Mover, trend: MoverTrend): boolean => {
 
 const getMoversByTrend = (movers: ReadonlyArray<Mover>, trend: MoverTrend): ReadonlyArray<Mover> =>
   movers.filter((mover) => isMoverByTrend(mover, trend)).sort(byPerformanceDesc);
+
+const deriveSectionLabels = (movers: ReadonlyArray<Mover>): Readonly<{ winners: string; losers: string }> => {
+  if (movers.length === 0) return { winners: 'Winners', losers: 'Losers' };
+  if (movers.every((m) => m.changePct7d > 0)) return { winners: 'Winners', losers: 'Weakest gainers' };
+  if (movers.every((m) => m.changePct7d < 0)) return { winners: 'Smallest losses', losers: 'Losers' };
+  return { winners: 'Winners', losers: 'Losers' };
+};
 
 const MoverList = ({ items, emptyMessage }: { items: ReadonlyArray<Mover>; emptyMessage: string }): JSX.Element => {
   if (items.length === 0) {
@@ -44,19 +52,20 @@ const MoverList = ({ items, emptyMessage }: { items: ReadonlyArray<Mover>; empty
   );
 };
 
-export function WinnersAndLosers({ movers }: WinnersLosersProps): JSX.Element {
+export function WinnersAndLosers({ movers, sectionLabels }: WinnersLosersProps): JSX.Element {
   const winners = getMoversByTrend(movers, 'winner');
   const losers = getMoversByTrend(movers, 'loser');
+  const labels = sectionLabels ?? deriveSectionLabels(movers);
 
   return (
     <SectionCard title="Winners & Losers (7D)">
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
-          <h3 className="text-base font-semibold">Winners</h3>
+          <h3 className="text-base font-semibold">{labels.winners}</h3>
           <MoverList emptyMessage="No winners for this period." items={winners} />
         </div>
         <div className="space-y-3">
-          <h3 className="text-base font-semibold">Losers</h3>
+          <h3 className="text-base font-semibold">{labels.losers}</h3>
           <MoverList emptyMessage="No losers for this period." items={losers} />
         </div>
       </div>
