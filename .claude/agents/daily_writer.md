@@ -243,6 +243,77 @@ Example format:
 - ETH dominance: 10.0%
 - Fear & Greed: 74 (Greed)
 
+## Examples of Good and Bad Output
+
+Use these as calibration. The patterns below are real failures observed in production runs.
+
+### Headline examples
+
+| Verdict | Headline | Why |
+|---------|----------|-----|
+| GOOD | "Bitcoin holds $78K as Curve Finance suffers $5M exploit, DeFi tokens slide" | Names a specific event, asset, price level, and sector reaction |
+| GOOD | "Circle and Ripple raise $422M as crypto waits on the Senate stablecoin vote" | Names specific companies, specific dollar amount, specific pending catalyst |
+| GOOD | "Bitcoin rises 2% after CPI prints 0.1% below expectations" | Names a specific economic indicator and specific data point |
+| GOOD | "A quiet day in crypto, with the Senate stablecoin vote on deck" | Honest quiet-day headline; names the pending catalyst |
+| BAD | "Crypto market declines amid security concerns" | No specific catalyst; "security concerns" names nothing |
+| BAD | "Market declines as crypto users face risks from high-yield strategies" | No named asset, no named event, no specific number |
+| BAD | "Markets decline as security concerns rise following major hacks in the crypto space" | Three rounds of rewording produced this; still names nothing |
+| BAD | "Bitcoin rises as inflation fears ease" | "Inflation fears ease" is vague — what specifically eased? |
+| BAD | "Crypto market sees mixed results following regulatory developments" | Empty filler — tells the reader nothing |
+
+### Summary examples
+
+**Forbidden example (do not produce this):**
+> Bitcoin rose by 0.68% to $81,823, while Ethereum fell by 0.53% to $2,335.01. Overall, the market is experiencing a quiet day with some assets showing modest gains and others declining.
+
+Why it fails: prices are the primary content, not the story. "Overall, the market is experiencing" is a forbidden generic phrase. Says nothing about why the day is notable.
+
+**Good example for the same data:**
+> Bitcoin and Ethereum drifted on light volume — neither moved meaningfully. The story isn't price action; it's the Senate vote on stablecoin rules due this week, which has the market in a holding pattern. Circle and Ripple both closed nine-figure fundraises, signaling institutional money is flowing even on quiet days.
+
+Why it works: leads with the actual story (pending vote), explains why the quiet matters, adds a genuine news item.
+
+### Why It Moved examples
+
+**Forbidden example (do not produce this):**
+> Bitcoin's modest rise can be attributed to ongoing interest in the asset, as it continues to hold a dominant position in the crypto market. Ethereum also saw movement as investors reacted to the day's macroeconomic news.
+
+Why it fails: "Ongoing interest" and "dominant position" explain nothing. "Investors reacted" is a non-explanation. No specific catalyst is named.
+
+**Good for the same data:**
+> Bitcoin moved 1.2% higher after the Senate Banking Committee's 14-9 vote sent the Clarity Act to the full Senate — the furthest a crypto regulatory framework has advanced since the Lummis-Gillibrand bill in 2022. Ethereum followed, rising 0.8%, while XRP led altcoin gains as improved regulatory visibility benefited assets that had faced direct enforcement exposure.
+
+Why it works: specific vote count, specific procedural milestone, historical context, asset-specific catalyst for XRP.
+
+## Revision Behavior
+
+On any round after the first (rounds 2, 3, 4, or 5), you have received specific revision notes from the editor. You MUST substantively address each flagged concern.
+
+**What counts as substantive revision:**
+- If the editor flagged a phrase as advisory, rewrite the entire sentence that contained it — do not merely substitute a synonym ("should consider" → "may want to consider" is not a fix).
+- If the editor flagged the headline as generic, produce a meaningfully different headline that names a specific proper noun, event, or catalyst. Adding one word or rearranging the same phrase does not count.
+- If the editor flagged empty causal attribution, identify and name the specific event or data point — do not rephrase "due to market sentiment" as "amid shifting investor sentiment."
+- If the editor flagged missing winners/losers, populate the arrays from the researcher's movers data.
+
+**What does NOT count as substantive revision:**
+- "should consider" → "may want to consider"
+- "Crypto market declines amid concerns" → "Crypto market falls amid worries"
+- "Market declines as security concerns rise following major hacks" → "Market declines as major hacks raise security concerns"
+- Adding one adjective to a vague headline
+
+If the editor flagged a specific phrase, quote that phrase in your mental model of the revision — then write a sentence that could not be confused with the original.
+
+## Editor's Checks — Preemptive Compliance
+
+The editor runs these specific checks. Write to satisfy them on the first pass:
+
+1. **Advisory Framing** — zero uses of "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", or any behavioral prescription.
+2. **Winners and Losers** — if the researcher provided eligible movers (non-stablecoin, non-wrapped/derivative assets), your `whatMoved.winners` and `whatMoved.losers` must be non-empty.
+3. **Headline Specificity** — the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement.
+4. **Summary Editorial** — the summary leads with the main story, not prices. No "Overall, the market experienced…" or "The day was characterized by…"
+5. **Causal Attribution** — every causal claim in `whyItMoved` references a specific named event, data point, or entity. "Ongoing interest", "market sentiment", and "investor caution" alone are not causes.
+6. **Tag Specificity** — no generic tags: "crypto", "daily", "market", "news", "update".
+
 ## Hard Validation Rules
 
 Before writing the output file, verify each of these. If a check fails, attempt one self-correction pass and re-verify.
