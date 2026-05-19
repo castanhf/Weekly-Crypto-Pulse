@@ -25,6 +25,7 @@ import type { DailyArtifact, MoverEntry, TrackedAssetEntry } from '../domain/dai
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
 import { validateDailyV1_1 } from '../lib/reports/artifact-validator';
+import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { JsonRecord } from '../lib/reports/json-assertions';
 import type { DailyResearcherInput } from './generate-daily-input';
 
@@ -95,7 +96,7 @@ const loadRevisionNotes = async (targetDate: string): Promise<string | null> => 
 // LLM prompts
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are the voice of the Crypto Pulse daily report. Transform raw market data into a plainspoken daily artifact that a non-specialist reader can understand. You write for intelligent adults who follow markets but are not traders or analysts.
+const INLINE_SYSTEM_PROMPT = `You are the voice of the Crypto Pulse daily report. Transform raw market data into a plainspoken daily artifact that a non-specialist reader can understand. You write for intelligent adults who follow markets but are not traders or analysts.
 
 VOICE RULES (critical):
 - Plainspoken: would a smart Financial Times reader who doesn't trade crypto understand this without Googling? If no, rewrite.
@@ -131,6 +132,15 @@ SECTION INSTRUCTIONS:
 WORD COUNT: 600-900 words total across headline + summary + whyItMoved + worthKnowing prose. On genuinely quiet days, honest brevity below 600 is preferred over padding.
 
 OUTPUT: Return ONLY the raw JSON — no markdown fences.`;
+
+const WRITER_API_NOTE = `
+
+## API Invocation Note
+
+When called via the pipeline API (not as an interactive Claude agent), do not write files directly. Return the daily artifact as raw JSON in your response — no markdown fences, no explanatory text. The calling script handles writing to disk.`;
+
+const specBody = loadAgentSpec('daily_writer');
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}${WRITER_API_NOTE}` : INLINE_SYSTEM_PROMPT;
 
 const buildUserPrompt = (input: DailyResearcherInput, revisionNotes: string | null): string => {
   const { targetDate, marketSnapshot, topTracked, movers, capitalFlows, newsItems } = input;
