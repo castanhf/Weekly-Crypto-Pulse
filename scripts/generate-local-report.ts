@@ -7,7 +7,7 @@ import path from 'node:path';
 
 import { createEmailSender } from '../lib/email/email-sender-factory';
 
-import { WEEKLY_SCHEMA_V1_2 } from '../domain/schema-version';
+import { WEEKLY_SCHEMA_V1_3 } from '../domain/schema-version';
 import {
   type CapitalFlows,
   type MarketSnapshot,
@@ -45,6 +45,7 @@ type LocalReportInput = Readonly<{
   signals: ReportSignals;
   plainspokenOpening?: PlainspokenOpening;
   capitalFlows?: CapitalFlows;
+  sectionLabels?: Readonly<{ winners: string; losers: string }>;
 }>;
 
 const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'range-bound', 'transition']);
@@ -231,6 +232,15 @@ const parsePlainspokenOpening = (value: unknown): PlainspokenOpening | undefined
   };
 };
 
+const parseSectionLabels = (value: unknown): Readonly<{ winners: string; losers: string }> | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const labels = assertRecord(value, 'sectionLabels');
+  return {
+    winners: assertString(labels.winners, 'sectionLabels.winners'),
+    losers: assertString(labels.losers, 'sectionLabels.losers')
+  };
+};
+
 const parseInput = (rawInput: string): LocalReportInput => {
   const parsed = JSON.parse(rawInput) as unknown;
   const root = assertRecord(parsed, 'root');
@@ -247,7 +257,8 @@ const parseInput = (rawInput: string): LocalReportInput => {
     sections: parseSections(root.sections),
     signals: parseSignals(root.signals),
     plainspokenOpening: parsePlainspokenOpening(root.plainspokenOpening),
-    capitalFlows: parseCapitalFlows(root.capitalFlows)
+    capitalFlows: parseCapitalFlows(root.capitalFlows),
+    sectionLabels: parseSectionLabels(root.sectionLabels)
   };
 };
 
@@ -268,7 +279,7 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
   const slug = toSlug(publishedAt, input.headline);
 
   return {
-    schemaVersion: WEEKLY_SCHEMA_V1_2,
+    schemaVersion: WEEKLY_SCHEMA_V1_3,
     generatedAt: buildGeneratedAt(publishedAt),
     report: {
       metadata: {
@@ -285,7 +296,8 @@ const buildArtifact = (input: LocalReportInput): ReportArtifact => {
       sections: input.sections,
       signals: input.signals,
       ...(input.plainspokenOpening !== undefined ? { plainspokenOpening: input.plainspokenOpening } : {}),
-      ...(input.capitalFlows !== undefined ? { capitalFlows: input.capitalFlows } : {})
+      ...(input.capitalFlows !== undefined ? { capitalFlows: input.capitalFlows } : {}),
+      ...(input.sectionLabels !== undefined ? { sectionLabels: input.sectionLabels } : {})
     }
   };
 };

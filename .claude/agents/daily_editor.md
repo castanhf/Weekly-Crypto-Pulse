@@ -61,18 +61,16 @@ Check the "Worth knowing" section with special attention — this section is par
 
 ### Checklist Item 3 — Winners-and-Losers Check
 
-**Question**: When the researcher's `movers.winners` or `movers.losers` arrays contain eligible assets (non-stablecoin, non-wrapped/derivative), do those assets appear in the draft's `whatMoved` arrays?
+**Question**: Do the draft's `whatMoved.winners` and `whatMoved.losers` each contain exactly 1 entry, matching the researcher's `movers.winners[0]` and `movers.losers[0]`?
 
-**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. These arrays are the researcher's pre-filtered, authoritative lists of notable movers. Do NOT scan `topTracked` to derive expected movers — use ONLY `movers.winners` and `movers.losers`. For each array:
-1. Filter out any asset whose symbol is in the stablecoin or wrapped/derivative registry (`lib/markets/asset-categories.ts` — USDT, USDC, DAI, BUSD, FDUSD, TUSD, USDE, USDS, WBTC, WETH, STETH, WSTETH, and others in the registry).
-2. If the filtered list is non-empty, verify that the draft's corresponding `whatMoved.winners` or `whatMoved.losers` array is also non-empty.
-3. A quiet-day exception applies only when the researcher's arrays are genuinely empty after filtering.
+**How to evaluate**: Read `movers.winners` and `movers.losers` from `local-daily-input.json`. These arrays are the researcher's authoritative top-1-by-percent-change selection (already filtered for stablecoins and wrapped/derivative tokens). Do NOT scan `topTracked` to derive expected movers — use ONLY `movers.winners` and `movers.losers`. Check:
+1. `whatMoved.winners` must have exactly 1 entry whose symbol matches `movers.winners[0].symbol`.
+2. `whatMoved.losers` must have exactly 1 entry whose symbol matches `movers.losers[0].symbol`.
+3. There is no quiet-day exception — the researcher always provides 1 winner and 1 loser. Empty arrays in the draft are always a data omission.
 
-An empty `whatMoved.winners` or `whatMoved.losers` in the draft when the researcher had eligible movers is a data omission, not editorial discretion. This is the single most common quality failure in daily artifacts and must be caught here.
+**PASS criteria**: Both `whatMoved.winners` and `whatMoved.losers` have exactly 1 entry each, with symbols matching the researcher's movers.
 
-**PASS criteria**: `whatMoved.winners` is non-empty when the researcher had eligible winners; `whatMoved.losers` is non-empty when the researcher had eligible losers; both may be empty only when the researcher had no eligible movers.
-
-**FAIL action**: Quote the researcher's missing movers (symbol + changePct24h) and state that they are absent from the corresponding draft array. Do not accept "no significant movers" as a revision response if the researcher data shows otherwise.
+**FAIL action**: Quote the researcher's movers (symbol + changePct24h) and state which array is wrong (empty, wrong symbol, or extra entries). Do not accept "no significant movers" as a revision response.
 
 ### Checklist Item 4 — Stablecoin and Derivative Narration Check
 
@@ -196,7 +194,7 @@ Examples that PASS:
 - "investor caution as the market awaits developments" (without specifying what developments)
 - "could have significant implications" without quantifying the implications
 
-For each asset that moved >3% in the top 15 or >5% in rank 16-50: verify the prose either cites a specific cause from the researcher's news items or honestly states "no clear catalyst."
+For each asset that moved >3% in the top 15, or for the researcher's winner/loser: verify the prose either cites a specific cause from the researcher's news items or honestly states "no clear catalyst."
 
 **PASS criteria**: Every causal claim in `whyItMoved` either (a) references a specific named event from the researcher's data, or (b) honestly acknowledges the absence of a clear catalyst.
 

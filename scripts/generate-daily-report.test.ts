@@ -38,7 +38,12 @@ const MOCK_RESEARCHER_INPUT = JSON.stringify({
     isStablecoin: false,
     isWrappedOrDerivative: false
   })),
-  movers: { winners: [], losers: [] },
+  movers: {
+    winners: [{ symbol: 'SOL', name: 'Solana', marketCapRank: 5, priceUsd: 180, changePct24h: 5.2, priceChange24hUsd: 9.36, marketCapUsd: 80_000_000_000, catalyst: 'Network activity surge.' }],
+    losers: [{ symbol: 'XRP', name: 'XRP', marketCapRank: 6, priceUsd: 0.55, changePct24h: -3.1, priceChange24hUsd: -0.02, marketCapUsd: 60_000_000_000, catalyst: 'Profit taking.' }],
+    sectionLabels: { winners: 'Winners', losers: 'Losers' },
+    marketRegime: 'mixed'
+  },
   capitalFlows: { notableTvlMovements: [] },
   newsItems: []
 });
@@ -47,8 +52,8 @@ const MOCK_WRITER_OUTPUT = {
   headline: 'Bitcoin holds above $95,000 as markets drift sideways.',
   summary: 'Bitcoin held steady above $95,000 on Wednesday, with most top-20 assets trading within 2% of Tuesday\'s close. The Fear & Greed Index remained in Greed territory at 72, reflecting continued optimism despite light trading volume.',
   whatMoved: {
-    winners: [],
-    losers: [],
+    winners: [{ symbol: 'SOL', name: 'Solana', changePct24h: 5.2, catalyst: 'Network activity surge.' }],
+    losers: [{ symbol: 'XRP', name: 'XRP', changePct24h: -3.1, catalyst: 'Profit taking.' }],
     topTracked: Array.from({ length: 15 }, (_, i) => ({
       symbol: i === 0 ? 'BTC' : `TK${i}`,
       name: i === 0 ? 'Bitcoin' : `Token${i}`,
@@ -118,7 +123,7 @@ describe('generateDailyReport', () => {
       whatMoved: { topTracked: unknown[] };
     };
 
-    expect(draft.schemaVersion).toBe('daily@1.1');
+    expect(draft.schemaVersion).toBe('daily@1.2');
     expect(draft.publishedAt).toBe(TARGET_DATE);
     expect(draft.slug).toMatch(new RegExp(`^${TARGET_DATE}-`));
     expect(draft.headline).toBeTruthy();

@@ -8,9 +8,8 @@
  * Called as step 2 in the daily pipeline, after generate-daily-input.ts and
  * before review-daily-report.ts.
  *
- * Schema: daily@1.1. The weeklyFooter field replaces the worthKnowing[3] hack
- * from daily@1.0. worthKnowing now holds up to 4 editorial bullets; the footer
- * link lives in its own structured field.
+ * Schema: daily@1.2. Adds priceUsd + priceChange24hUsd to MoverEntry and
+ * sectionLabels to whatMoved. weeklyFooter added in daily@1.1.
  */
 
 import dotenv from 'dotenv';
@@ -20,11 +19,11 @@ dotenv.config({ path: '.env' });
 import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { DAILY_SCHEMA_V1_1 } from '../domain/schema-version';
+import { DAILY_SCHEMA_V1_2 } from '../domain/schema-version';
 import type { DailyArtifact, MoverEntry, TrackedAssetEntry } from '../domain/daily';
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
-import { validateDailyV1_1 } from '../lib/reports/artifact-validator';
+import { validateDailyV1_2 } from '../lib/reports/artifact-validator';
 import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { JsonRecord } from '../lib/reports/json-assertions';
 import type { DailyResearcherInput } from './generate-daily-input';
@@ -132,7 +131,7 @@ SECTION INSTRUCTIONS:
 - headline: 1 sentence capturing the main story. Must follow headline rules above.
 - summary: 2-3 sentences. 60-second read. Must follow summary rules above. Do not repeat prices as primary content.
 - whatMoved.topTracked: exactly the 15 assets provided. Non-stablecoin, non-derivative entries get one line of context. Stablecoins and derivatives appear but are NOT narrated as market news.
-- whatMoved.winners / losers: mirror the researcher's movers.winners and movers.losers arrays exactly. HARD REQUIREMENT: if the researcher's array is non-empty, your whatMoved array MUST be non-empty (omission = check failure). If the researcher's array is empty, your whatMoved array MUST also be empty — do NOT source assets from topTracked to fill it (fabrication = check failure). If both arrays are empty, include a note: "No qualified movers in the 16–50 range today."
+- whatMoved.winners / losers: mirror the researcher's movers.winners and movers.losers arrays exactly. HARD REQUIREMENT: the researcher always provides exactly 1 winner and 1 loser (top-1 by percent change from all non-stablecoin assets). Your whatMoved arrays MUST match — 1 winner and 1 loser, no additions or omissions. Do NOT source assets from topTracked.
 - whyItMoved: 200-300 words. Plainspoken prose explaining the day's main driver. Weave in news items where relevant. On quiet days, be honest and brief — do not pad with invented causal explanations. FORBIDDEN causal attributions: "ongoing interest in the asset", "continues to hold a dominant position", "market sentiment appears to be stabilizing", "investor caution as the market awaits developments" (unless quantified). If an asset moved <1%, say it didn't move meaningfully — don't manufacture an explanation.
 - worthKnowing: up to 4 bullets of actual news content. Each bullet is one plain-English sentence. Priority: TVL movements first, then regulatory, then protocol events. May be empty on a quiet day.
 - snapshot: pass through the 4 numeric fields from researcher data. No prose — just the numbers.
@@ -270,26 +269,39 @@ const assembleDraft = (
 ): DailyArtifact => {
   const slug = buildArtifactSlug(targetDate, writerOutput.headline);
 
-  // Build lookup from researcher's topTracked for authoritative numeric values.
+  // Build lookups from researcher's authoritative numeric values.
   // The LLM misinterprets large numbers (e.g. reads "$2.807T" → outputs 2807000000
   // instead of 2807000000000). Always use researcher data for market cap fields.
   const researcherCapBySymbol = new Map<string, number>(
     researcherInput.topTracked.map((a) => [a.symbol.toUpperCase(), a.marketCapUsd])
   );
 
-  const winners: MoverEntry[] = writerOutput.whatMoved.winners.map((w) => ({
-    symbol: w.symbol,
-    name: w.name,
-    changePct24h: w.changePct24h,
-    catalyst: w.catalyst || 'Market movement noted.'
-  }));
+  // Build mover lookup to inject priceUsd + priceChange24hUsd from researcher.
+  const researcherMoverBySymbol = new Map(
+    [...researcherInput.movers.winners, ...researcherInput.movers.losers].map((m) => [m.symbol.toUpperCase(), m])
+  );
 
-  const losers: MoverEntry[] = writerOutput.whatMoved.losers.map((l) => ({
-    symbol: l.symbol,
-    name: l.name,
-    changePct24h: l.changePct24h,
-    catalyst: l.catalyst || 'Market movement noted.'
-  }));
+  const winners: MoverEntry[] = writerOutput.whatMoved.winners.map((w) => {
+    const r = researcherMoverBySymbol.get(w.symbol.toUpperCase());
+    return {
+      symbol: w.symbol,
+      name: w.name,
+      changePct24h: w.changePct24h,
+      catalyst: w.catalyst || 'Market movement noted.',
+      ...(r ? { priceUsd: r.priceUsd, priceChange24hUsd: r.priceChange24hUsd } : {})
+    };
+  });
+
+  const losers: MoverEntry[] = writerOutput.whatMoved.losers.map((l) => {
+    const r = researcherMoverBySymbol.get(l.symbol.toUpperCase());
+    return {
+      symbol: l.symbol,
+      name: l.name,
+      changePct24h: l.changePct24h,
+      catalyst: l.catalyst || 'Market movement noted.',
+      ...(r ? { priceUsd: r.priceUsd, priceChange24hUsd: r.priceChange24hUsd } : {})
+    };
+  });
 
   const topTracked: TrackedAssetEntry[] = writerOutput.whatMoved.topTracked.map((a) => ({
     symbol: a.symbol,
@@ -314,13 +326,13 @@ const assembleDraft = (
     : undefined;
 
   return {
-    schemaVersion: DAILY_SCHEMA_V1_1,
+    schemaVersion: DAILY_SCHEMA_V1_2,
     generatedAt: new Date().toISOString(),
     publishedAt: targetDate,
     slug,
     headline: writerOutput.headline,
     summary: writerOutput.summary,
-    whatMoved: { winners, losers, topTracked },
+    whatMoved: { winners, losers, topTracked, sectionLabels: researcherInput.movers.sectionLabels },
     whyItMoved: writerOutput.whyItMoved,
     worthKnowing: writerOutput.worthKnowing,
     snapshot,
@@ -336,7 +348,7 @@ const assembleDraft = (
 const validateDraft = (draft: DailyArtifact): string[] => {
   const errors: string[] = [];
   try {
-    validateDailyV1_1(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
+    validateDailyV1_2(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
   } catch (err) {
     errors.push(err instanceof Error ? err.message : String(err));
   }
