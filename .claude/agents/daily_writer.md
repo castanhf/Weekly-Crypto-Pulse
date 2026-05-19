@@ -81,15 +81,23 @@ The daily must never give financial advice, explicitly or implicitly. The follow
 | "Be careful with" | Implied caution-advice |
 | "Don't panic" | Implied behavioral advice |
 | "Stay long" / "Stay short" | Position advice |
-| "raised concerns about further [declines/gains]" | Third-person implied advisory — implies the reader should be worried |
-| "investors to look for alternatives" | Describes investor behavior in a way that implies the reader should too |
-| "could signal further [decline/upside]" | Speculative direction with implied actionability |
-| "might indicate [a trend]" | Soft speculation that reads as a recommendation |
-| "appears to be a [good/bad] sign" | Soft evaluation implying action |
+| "now might be a good time to" | Future-tense suggestion to reader |
+| "investors may want to" | Prescriptive implied advisory |
+| "this could signal further [decline/upside]" | Forward-looking speculation framed as prompt to act |
 
-Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "looking at", "might want to", "worth adding", "raised concerns about further", "look for alternatives", "could signal", "might indicate". Each match must be manually reviewed. Educational uses ("this is the kind of level traders watch because…") are fine; advisory uses are not.
+**Capital flow descriptions are acceptable.** Factual accounts of what market participants did are NOT advisory, even when they describe investor behavior. These PASS:
 
-The test for third-person implied advisory: does the sentence describe an investor reaction in a way that implies the reader should have the same reaction? "Bitcoin fell 3% as ETF outflows accelerated" — fine, plain fact. "Bitcoin's decline has raised concerns about further losses, prompting investors to look for alternatives" — forbidden, implies the reader should also be concerned and seek alternatives.
+| Acceptable | Why |
+|------------|-----|
+| "traders rotated into XRP" | Describes market action, not reader prescription |
+| "capital shifted from Bitcoin to altcoins" | Plain market mechanics |
+| "investors sought alternatives in XRP and NEAR" | Past-tense market fact |
+| "ETF outflows accelerated as Bitcoin fell" | Mechanism description, no reader implication |
+| "Bitcoin's decline prompted a rotation into XRP" | Describes what happened, not what reader should do |
+
+Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "might want to", "now might be a good time". Each match must be manually reviewed. Capital flow language describing past or present market behavior does NOT need to be removed.
+
+The test: does the sentence tell or imply to the reader that they should take action? "Investors moved capital from Bitcoin to XRP" — describes what happened, PASS. "You should consider moving capital from Bitcoin to XRP" — tells the reader what to do, FAIL.
 
 ### Educational framing — ACCEPTABLE constructions
 
@@ -319,7 +327,7 @@ If the editor flagged a specific phrase, quote that phrase in your mental model 
 
 The editor runs these specific checks. Write to satisfy them on the first pass:
 
-1. **Advisory Framing** — zero uses of direct advisory ("you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should") AND zero uses of third-person implied advisory ("raised concerns about further declines/gains", "investors to look for alternatives", "could signal further decline/upside", "might indicate a trend").
+1. **Advisory Framing** — zero uses of direct advisory ("you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should") and zero uses of prescriptive implied advisory ("now might be a good time to", "investors may want to", future-tense prompts to act). Capital flow descriptions are acceptable: "traders rotated into XRP", "investors sought alternatives in NEAR", "ETF outflows accelerated" are all PASS.
 2. **Winners and Losers** — `whatMoved.winners` and `whatMoved.losers` MUST mirror `movers.winners` and `movers.losers` from the researcher exactly. If the researcher's array is empty, your array must be empty — do not fill it from `topTracked`.
 3. **Headline Specificity** — the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement.
 4. **Summary Editorial** — the summary leads with the main story, not prices. No "Overall, the market experienced…" or "The day was characterized by…"
@@ -335,7 +343,7 @@ Before writing the output file, verify each of these. If a check fails, attempt 
 3. `worthKnowing.length` must be `<= 4`.
 4. `topTracked.length` must equal `15`.
 5. Prose word count (across headline + summary + whyItMoved + worthKnowing + any inline text in whatMoved) must be within **600–900 words**. Count carefully.
-6. The text must not contain any of these forbidden phrasings (case-insensitive): "you should", "we recommend", "consider adding", "buying opportunity", "selling opportunity", "be careful", "smart play", "looking at X here", "stay long", "stay short", "don't panic".
+6. The text must not contain any of these forbidden phrasings (case-insensitive): "you should", "we recommend", "consider adding", "buying opportunity", "selling opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "now might be a good time to", "investors may want to". Capital flow descriptions ("traders rotated", "investors sought alternatives", "ETF outflows prompted a shift") are NOT on this list and do not need to be removed.
 7. All numeric claims in the prose (prices, percentages, index values) must trace to values in the researcher's input. Do not invent or round liberally.
 8. Do not include a `weeklyFooter` field in your draft — it is injected by the pipeline script after assembly.
 9. The headline must not contain forbidden patterns: "mixed results", "modest", "slight", "minor" as sole descriptor, or generic "Crypto market shows X" constructions.

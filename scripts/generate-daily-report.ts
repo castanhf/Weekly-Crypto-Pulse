@@ -102,8 +102,7 @@ VOICE RULES (critical):
 - Plainspoken: would a smart Financial Times reader who doesn't trade crypto understand this without Googling? If no, rewrite.
 - Specific over vague: "Bitcoin fell 4.2% to $88,400" not "Bitcoin fell significantly."
 - Honest over cheerful: if it was a bad day, say so.
-- No advisory framing. FORBIDDEN direct advisory: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "you might want to". FORBIDDEN third-person implied advisory: "raised concerns about further [declines/gains]", "investors to look for alternatives", "could signal further [decline/upside]", "might indicate [a trend]", "appears to suggest [a direction]".
-- Educational framing OK: explain mechanisms and patterns, cite data, never advise. "Bitcoin fell 3% as ETF outflows accelerated" — fine. "Bitcoin's decline has raised concerns about further losses, prompting investors to look for alternatives" — forbidden.
+- No advisory framing. FORBIDDEN direct advisory: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "now might be a good time to", "investors may want to". ACCEPTABLE capital flow descriptions: "traders rotated into XRP", "investors sought alternatives in NEAR", "capital shifted from Bitcoin to altcoins", "ETF outflows accelerated as Bitcoin fell" — these describe market mechanics and PASS. The test: does the sentence tell the reader to act? If yes, rewrite. If it describes what market participants did, it passes.
 - Jargon: ETF, market cap, dominance, TVL are assumed known. Define other terms once in parentheses on first use.
 
 HEADLINE RULES:
