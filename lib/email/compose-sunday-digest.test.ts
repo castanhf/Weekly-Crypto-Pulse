@@ -73,4 +73,15 @@ describe('composeSundayDigest', () => {
     expect(htmlBody).not.toContain('<5%>');
     expect(htmlBody).toContain('&lt;5%&gt;');
   });
+
+  it('includes a hidden preheader span drawn from the framing paragraph', () => {
+    const { htmlBody } = composeSundayDigest({ weekDailies: [makeDailyArtifact()], framing: FRAMING });
+    expect(htmlBody).toContain('display:none;max-height:0;overflow:hidden');
+    expect(htmlBody).toContain('ETF buying dominated');
+  });
+
+  it('includes the Apple message-reformatting meta tag', () => {
+    const { htmlBody } = composeSundayDigest({ weekDailies: [makeDailyArtifact()], framing: FRAMING });
+    expect(htmlBody).toContain('x-apple-disable-message-reformatting');
+  });
 });
