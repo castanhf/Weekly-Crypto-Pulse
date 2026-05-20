@@ -46,10 +46,12 @@ This file records architectural and operational decisions that shaped the projec
 
 | Artifact type | Current version | Notes |
 |---|---|---|
-| Weekly report | `weekly@1.2` | Introduced in WCP-123. Adds optional `capitalFlows` (DeFiLlama TVL). `weekly@1.1` = plain spoken opening. `weekly@1.0` = legacy |
-| Daily report | `daily@1.1` | `daily@1.0` introduced WCP-102; bumped to `daily@1.1` in WCP-132 (additive `plainspokenOpening` field) |
+| Weekly report | `weekly@1.3` | Introduced in WCP-153. Adds optional `sectionLabels` field. `weekly@1.2` = capitalFlows (WCP-123). `weekly@1.1` = plainspokenOpening. `weekly@1.0` = legacy. |
+| Daily report | `daily@1.2` | Introduced in WCP-153. Top-N winners/losers (N=1); `MoverEntry` gains `priceUsd`+`priceChange24hUsd`; `whatMoved` gains `sectionLabels`. `daily@1.1` = weeklyFooter (WCP-132). `daily@1.0` = initial (WCP-102). |
 
 **Bump rules:** Minor bumps for additive optional fields. Major bumps for breaking structural changes. A major bump requires a migration plan (new validator branch + documentation update here).
+
+**Coordination checklist:** See `docs/operations/schema-bumps.md` for the full layer-by-layer checklist. The automated guard is `lib/reports/schema-bump-coverage.test.ts` — it walks `VALID_DAILY_SCHEMA_VERSIONS` and `VALID_WEEKLY_SCHEMA_VERSIONS` and verifies that both the artifact validator and repository parser support every listed version.
 
 ---
 

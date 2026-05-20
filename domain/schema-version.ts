@@ -23,14 +23,22 @@ export const DAILY_SCHEMA_V1_1 = 'daily@1.1' as const;
  *  whatMoved gains sectionLabels. Replaces >5% threshold from WCP-137. Introduced in WCP-153. */
 export const DAILY_SCHEMA_V1_2 = 'daily@1.2' as const;
 
-const VALID_SCHEMA_VERSIONS: ReadonlySet<string> = new Set([
+export const VALID_WEEKLY_SCHEMA_VERSIONS = [
   WEEKLY_SCHEMA_V1_0,
   WEEKLY_SCHEMA_V1_1,
   WEEKLY_SCHEMA_V1_2,
-  WEEKLY_SCHEMA_V1_3,
+  WEEKLY_SCHEMA_V1_3
+] as const;
+
+export const VALID_DAILY_SCHEMA_VERSIONS = [
   DAILY_SCHEMA_V1_0,
   DAILY_SCHEMA_V1_1,
   DAILY_SCHEMA_V1_2
+] as const;
+
+const VALID_SCHEMA_VERSIONS: ReadonlySet<string> = new Set([
+  ...VALID_WEEKLY_SCHEMA_VERSIONS,
+  ...VALID_DAILY_SCHEMA_VERSIONS
 ]);
 
 export const isValidSchemaVersion = (value: unknown): value is SchemaVersion =>

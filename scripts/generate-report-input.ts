@@ -443,7 +443,7 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
   );
 
   // 5. Parse and validate LLM output
-  const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput);
+  const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput, llmResponse.provider);
 
   // 6. Append script-populated fields (capitalFlows, sectionLabels not produced by LLM)
   const moverCandidates = reportInput.movers.map((m) => ({

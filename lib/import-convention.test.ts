@@ -22,7 +22,8 @@ const SCRIPT_CONSUMED_DIRS = [
   'lib/news',
   'lib/llm',
   'lib/charts',
-  'lib/cache'
+  'lib/cache',
+  'scripts'
 ] as const;
 
 const ROOT = join(import.meta.dirname, '..');
@@ -56,7 +57,7 @@ const collectViolations = (): ReadonlyArray<{ file: string; line: number; text: 
 };
 
 describe('import convention', () => {
-  it('script-consumed lib/ source files use relative imports, not @/ aliases', () => {
+  it('script-consumed lib/ and scripts/ source files use relative imports, not @/ aliases', () => {
     const violations = collectViolations();
 
     if (violations.length > 0) {

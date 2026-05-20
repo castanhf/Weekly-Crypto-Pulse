@@ -516,7 +516,7 @@ export const generateDailyInput = async (targetDate: string): Promise<void> => {
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
-  const llmData = parseAndValidateLlmJson(llmResponse.content, validateLlmResponse);
+  const llmData = parseAndValidateLlmJson(llmResponse.content, validateLlmResponse, llmResponse.provider);
 
   // 9. Assemble researcher output
   const topTracked: ResearcherTrackedAsset[] = top15.map((m) => ({
