@@ -49,7 +49,7 @@ const AGENT_REQUIREMENTS: ReadonlyMap<string, AgentRequirement> = new Map([
         '## Mission',
         '## Editorial Checklist',
         '## Outputs',
-        '## Auto-Approval After Two Rejections'
+        '## Auto-Approval After Maximum Rejections'
       ],
       requiresFrontmatter: true
     }

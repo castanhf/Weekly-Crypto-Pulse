@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type { DailyArtifact, MoverEntry, TrackedAssetEntry, WeeklyFooter } from '../../domain/daily';
-import { DAILY_SCHEMA_V1_0, DAILY_SCHEMA_V1_1 } from '../../domain/schema-version';
+import { DAILY_SCHEMA_V1_0, DAILY_SCHEMA_V1_1, DAILY_SCHEMA_V1_2 } from '../../domain/schema-version';
 import type { SchemaVersion } from '../../domain/schema-version';
 import { assertArray, assertNumber, assertRecord, assertString, assertStringArray } from './json-assertions';
 
@@ -27,7 +27,9 @@ const parseMoverEntry = (entry: unknown, prefix: string): MoverEntry => {
     symbol: assertString(mover.symbol, `${prefix}.symbol`),
     name: assertString(mover.name, `${prefix}.name`),
     changePct24h: assertNumber(mover.changePct24h, `${prefix}.changePct24h`),
-    catalyst: assertString(mover.catalyst, `${prefix}.catalyst`)
+    catalyst: assertString(mover.catalyst, `${prefix}.catalyst`),
+    ...(mover.priceUsd !== undefined ? { priceUsd: assertNumber(mover.priceUsd, `${prefix}.priceUsd`) } : {}),
+    ...(mover.priceChange24hUsd !== undefined ? { priceChange24hUsd: assertNumber(mover.priceChange24hUsd, `${prefix}.priceChange24hUsd`) } : {})
   };
 };
 
@@ -48,7 +50,7 @@ const parseTrackedAssetEntry = (entry: unknown, prefix: string): TrackedAssetEnt
   };
 };
 
-const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifactRecord => {
+export const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifactRecord => {
   let parsed: unknown;
 
   try {
@@ -60,7 +62,7 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
   const root = assertRecord(parsed, fileName);
   const schemaVersion = assertString(root.schemaVersion, 'schemaVersion');
 
-  if (schemaVersion !== DAILY_SCHEMA_V1_0 && schemaVersion !== DAILY_SCHEMA_V1_1) {
+  if (schemaVersion !== DAILY_SCHEMA_V1_0 && schemaVersion !== DAILY_SCHEMA_V1_1 && schemaVersion !== DAILY_SCHEMA_V1_2) {
     throw new Error(`${fileName}: unsupported daily schemaVersion "${schemaVersion}".`);
   }
 
@@ -85,8 +87,20 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
   const winners = assertArray(whatMovedRecord.winners, 'whatMoved.winners').map((e, i) => parseMoverEntry(e, `whatMoved.winners[${i}]`));
   const losers = assertArray(whatMovedRecord.losers, 'whatMoved.losers').map((e, i) => parseMoverEntry(e, `whatMoved.losers[${i}]`));
   const topTracked = assertArray(whatMovedRecord.topTracked, 'whatMoved.topTracked').map((e, i) => parseTrackedAssetEntry(e, `whatMoved.topTracked[${i}]`));
+  let sectionLabels: Readonly<{ winners: string; losers: string }> | undefined;
+  if (whatMovedRecord.sectionLabels !== undefined) {
+    const sl = assertRecord(whatMovedRecord.sectionLabels, 'whatMoved.sectionLabels');
+    sectionLabels = {
+      winners: assertString(sl.winners, 'whatMoved.sectionLabels.winners'),
+      losers: assertString(sl.losers, 'whatMoved.sectionLabels.losers')
+    };
+  }
 
-  const parsedSchemaVersion = (schemaVersion === DAILY_SCHEMA_V1_1 ? DAILY_SCHEMA_V1_1 : DAILY_SCHEMA_V1_0) as typeof DAILY_SCHEMA_V1_0 | typeof DAILY_SCHEMA_V1_1;
+  const parsedSchemaVersion = (
+    schemaVersion === DAILY_SCHEMA_V1_2 ? DAILY_SCHEMA_V1_2
+    : schemaVersion === DAILY_SCHEMA_V1_1 ? DAILY_SCHEMA_V1_1
+    : DAILY_SCHEMA_V1_0
+  ) as typeof DAILY_SCHEMA_V1_0 | typeof DAILY_SCHEMA_V1_1 | typeof DAILY_SCHEMA_V1_2;
 
   let weeklyFooter: WeeklyFooter | undefined;
 
@@ -105,7 +119,7 @@ const parseDailyArtifactJson = (rawJson: string, fileName: string): DailyArtifac
     slug,
     headline,
     summary,
-    whatMoved: { winners, losers, topTracked },
+    whatMoved: { winners, losers, topTracked, ...(sectionLabels !== undefined ? { sectionLabels } : {}) },
     whyItMoved,
     worthKnowing: worthKnowing as ReadonlyArray<string>,
     snapshot: {

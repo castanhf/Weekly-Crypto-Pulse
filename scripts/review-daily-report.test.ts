@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 
 vi.mock('../lib/llm/client', () => ({ callLlm: vi.fn() }));
@@ -89,7 +90,9 @@ describe('reviewDailyReport', () => {
 
     const result = await reviewDailyReport(TARGET_DATE, 1);
 
-    expect(result).toBe('approved');
+    expect(result.verdict).toBe('approved');
+    expect(result.headline).toBe('Bitcoin holds above $95,000 as markets drift sideways.');
+    expect(result.failedCheckIds).toHaveLength(0);
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;
     const approvalCall = writeCalls.find(([p]) => typeof p === 'string' && p.includes(`.approved-${TARGET_DATE}`));
@@ -103,7 +106,9 @@ describe('reviewDailyReport', () => {
 
     const result = await reviewDailyReport(TARGET_DATE, 1);
 
-    expect(result).toBe('revision-requested');
+    expect(result.verdict).toBe('revision-requested');
+    expect(result.headline).toBe('Bitcoin holds above $95,000 as markets drift sideways.');
+    expect(result.failedCheckIds).toEqual(['2 — Advisory Framing Check']);
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;
     const revisionsCall = writeCalls.find(([p]) => typeof p === 'string' && p.includes(`.revisions-${TARGET_DATE}`));
@@ -113,10 +118,11 @@ describe('reviewDailyReport', () => {
     expect(revisionsContent.failedItems).toHaveLength(1);
   });
 
-  it('auto-approves on round 3 without LLM call', async () => {
-    const result = await reviewDailyReport(TARGET_DATE, 3);
+  it('auto-approves on round 5 without LLM call', async () => {
+    const result = await reviewDailyReport(TARGET_DATE, 5);
 
-    expect(result).toBe('approved');
+    expect(result.verdict).toBe('approved');
+    expect(result.failedCheckIds).toHaveLength(0);
     expect(vi.mocked(callLlm)).not.toHaveBeenCalled();
 
     const writeCalls = vi.mocked(fs.writeFile).mock.calls;
@@ -136,5 +142,40 @@ describe('reviewDailyReport', () => {
     const llmCall = vi.mocked(callLlm).mock.calls[0];
     const userMessage = llmCall[0].messages.find((m) => m.role === 'user');
     expect(userMessage?.content).toContain('round 2');
+  });
+
+  it('calls Anthropic as primary provider', async () => {
+    vi.mocked(callLlm).mockResolvedValue(APPROVED_RESPONSE);
+
+    await reviewDailyReport(TARGET_DATE, 1);
+
+    const llmCall = vi.mocked(callLlm).mock.calls[0];
+    expect(llmCall[1]?.primary).toBe('anthropic');
+    expect(llmCall[1]?.secondary).toBe('github-models');
+  });
+
+  it('ReviewOutcome includes passCount equal to passingItems length on approval', async () => {
+    vi.mocked(callLlm).mockResolvedValue(APPROVED_RESPONSE);
+
+    const result = await reviewDailyReport(TARGET_DATE, 1);
+
+    const passingItemsCount = (JSON.parse(APPROVED_RESPONSE.content) as { passingItems: string[] }).passingItems.length;
+    expect(result.passCount).toBe(passingItemsCount);
+  });
+
+  it('ReviewOutcome includes passCount equal to passingItems length on revision-requested', async () => {
+    vi.mocked(callLlm).mockResolvedValue(REVISION_RESPONSE);
+
+    const result = await reviewDailyReport(TARGET_DATE, 1);
+
+    const passingItemsCount = (JSON.parse(REVISION_RESPONSE.content) as { passingItems: string[] }).passingItems.length;
+    expect(result.passCount).toBe(passingItemsCount);
+  });
+
+  it('ReviewOutcome passCount is 0 on auto-approve (round 5)', async () => {
+    const result = await reviewDailyReport(TARGET_DATE, 5);
+
+    expect(result.verdict).toBe('approved');
+    expect(result.passCount).toBe(0);
   });
 });

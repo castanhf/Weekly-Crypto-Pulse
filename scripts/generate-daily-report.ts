@@ -8,9 +8,8 @@
  * Called as step 2 in the daily pipeline, after generate-daily-input.ts and
  * before review-daily-report.ts.
  *
- * Schema: daily@1.1. The weeklyFooter field replaces the worthKnowing[3] hack
- * from daily@1.0. worthKnowing now holds up to 4 editorial bullets; the footer
- * link lives in its own structured field.
+ * Schema: daily@1.2. Adds priceUsd + priceChange24hUsd to MoverEntry and
+ * sectionLabels to whatMoved. weeklyFooter added in daily@1.1.
  */
 
 import dotenv from 'dotenv';
@@ -20,13 +19,24 @@ dotenv.config({ path: '.env' });
 import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { DAILY_SCHEMA_V1_1 } from '../domain/schema-version';
+import { DAILY_SCHEMA_V1_2 } from '../domain/schema-version';
 import type { DailyArtifact, MoverEntry, TrackedAssetEntry } from '../domain/daily';
 import { callLlm } from '../lib/llm/client';
 import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
-import { validateDailyV1_1 } from '../lib/reports/artifact-validator';
+import { validateDailyV1_2 } from '../lib/reports/artifact-validator';
+import { loadAgentSpec } from '../lib/agents/load-spec';
 import type { JsonRecord } from '../lib/reports/json-assertions';
 import type { DailyResearcherInput } from './generate-daily-input';
+
+// ---------------------------------------------------------------------------
+// LLM config
+// ---------------------------------------------------------------------------
+
+const WRITER_LLM = {
+  model: 'gpt-4o-mini' as const, // used only by github-models fallback; anthropic always uses Sonnet 4.6
+  primary: 'anthropic' as const,
+  secondary: 'github-models' as const
+} as const;
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -95,14 +105,13 @@ const loadRevisionNotes = async (targetDate: string): Promise<string | null> => 
 // LLM prompts
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are the voice of the Crypto Pulse daily report. Transform raw market data into a plainspoken daily artifact that a non-specialist reader can understand. You write for intelligent adults who follow markets but are not traders or analysts.
+const INLINE_SYSTEM_PROMPT = `You are the voice of the Crypto Pulse daily report. Transform raw market data into a plainspoken daily artifact that a non-specialist reader can understand. You write for intelligent adults who follow markets but are not traders or analysts.
 
 VOICE RULES (critical):
 - Plainspoken: would a smart Financial Times reader who doesn't trade crypto understand this without Googling? If no, rewrite.
 - Specific over vague: "Bitcoin fell 4.2% to $88,400" not "Bitcoin fell significantly."
 - Honest over cheerful: if it was a bad day, say so.
-- No advisory framing. FORBIDDEN: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "you might want to".
-- Educational framing OK: explain patterns, cite data, never advise.
+- No advisory framing. FORBIDDEN direct advisory: "you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should", "now might be a good time to", "investors may want to". ACCEPTABLE capital flow descriptions: "traders rotated into XRP", "investors sought alternatives in NEAR", "capital shifted from Bitcoin to altcoins", "ETF outflows accelerated as Bitcoin fell" — these describe market mechanics and PASS. The test: does the sentence tell the reader to act? If yes, rewrite. If it describes what market participants did, it passes.
 - Jargon: ETF, market cap, dominance, TVL are assumed known. Define other terms once in parentheses on first use.
 
 HEADLINE RULES:
@@ -122,7 +131,7 @@ SECTION INSTRUCTIONS:
 - headline: 1 sentence capturing the main story. Must follow headline rules above.
 - summary: 2-3 sentences. 60-second read. Must follow summary rules above. Do not repeat prices as primary content.
 - whatMoved.topTracked: exactly the 15 assets provided. Non-stablecoin, non-derivative entries get one line of context. Stablecoins and derivatives appear but are NOT narrated as market news.
-- whatMoved.winners / losers: include ALL assets from the researcher's movers.winners and movers.losers arrays. This is a HARD REQUIREMENT — if the researcher provided winners or losers, your whatMoved arrays MUST be non-empty. The only exception is when the researcher's arrays are genuinely empty (no top-50 assets moved >5%). Stablecoins (USDT, USDC, DAI, etc.) and wrapped/derivative tokens (WBTC, WETH, etc.) in the researcher's data are excluded from narration but you still must include non-excluded assets. If you omit winners or losers when the researcher provided them, this will be caught by the editor and flagged as a data omission failure. If both arrays are empty, include a note: "No assets in the 16-50 range moved more than 5%."
+- whatMoved.winners / losers: mirror the researcher's movers.winners and movers.losers arrays exactly. HARD REQUIREMENT: the researcher always provides exactly 1 winner and 1 loser (top-1 by percent change from all non-stablecoin assets). Your whatMoved arrays MUST match — 1 winner and 1 loser, no additions or omissions. Do NOT source assets from topTracked.
 - whyItMoved: 200-300 words. Plainspoken prose explaining the day's main driver. Weave in news items where relevant. On quiet days, be honest and brief — do not pad with invented causal explanations. FORBIDDEN causal attributions: "ongoing interest in the asset", "continues to hold a dominant position", "market sentiment appears to be stabilizing", "investor caution as the market awaits developments" (unless quantified). If an asset moved <1%, say it didn't move meaningfully — don't manufacture an explanation.
 - worthKnowing: up to 4 bullets of actual news content. Each bullet is one plain-English sentence. Priority: TVL movements first, then regulatory, then protocol events. May be empty on a quiet day.
 - snapshot: pass through the 4 numeric fields from researcher data. No prose — just the numbers.
@@ -131,6 +140,15 @@ SECTION INSTRUCTIONS:
 WORD COUNT: 600-900 words total across headline + summary + whyItMoved + worthKnowing prose. On genuinely quiet days, honest brevity below 600 is preferred over padding.
 
 OUTPUT: Return ONLY the raw JSON — no markdown fences.`;
+
+const WRITER_API_NOTE = `
+
+## API Invocation Note
+
+When called via the pipeline API (not as an interactive Claude agent), do not write files directly. Return the daily artifact as raw JSON in your response — no markdown fences, no explanatory text. The calling script handles writing to disk.`;
+
+const specBody = loadAgentSpec('daily_writer');
+const SYSTEM_PROMPT = specBody !== null ? `${specBody}${WRITER_API_NOTE}` : INLINE_SYSTEM_PROMPT;
 
 const buildUserPrompt = (input: DailyResearcherInput, revisionNotes: string | null): string => {
   const { targetDate, marketSnapshot, topTracked, movers, capitalFlows, newsItems } = input;
@@ -166,11 +184,11 @@ MARKET SNAPSHOT
 TOP 15 TRACKED ASSETS:
 ${trackedLines.join('\n')}
 
-WINNERS (rank 16-50, ≥+5% 24h):
-${winnerLines.length > 0 ? winnerLines.join('\n') : '  (none)'}
+WINNERS (from researcher movers.winners — use these exactly, add nothing from topTracked):
+${winnerLines.length > 0 ? winnerLines.join('\n') : '  (none — whatMoved.winners MUST be [] empty array)'}
 
-LOSERS (rank 16-50, ≤-5% 24h):
-${loserLines.length > 0 ? loserLines.join('\n') : '  (none)'}
+LOSERS (from researcher movers.losers — use these exactly, add nothing from topTracked):
+${loserLines.length > 0 ? loserLines.join('\n') : '  (none — whatMoved.losers MUST be [] empty array)'}
 
 NOTABLE TVL MOVEMENTS (DeFiLlama):
 ${tvlLines.length > 0 ? tvlLines.join('\n') : '  (none)'}
@@ -251,26 +269,39 @@ const assembleDraft = (
 ): DailyArtifact => {
   const slug = buildArtifactSlug(targetDate, writerOutput.headline);
 
-  // Build lookup from researcher's topTracked for authoritative numeric values.
+  // Build lookups from researcher's authoritative numeric values.
   // The LLM misinterprets large numbers (e.g. reads "$2.807T" → outputs 2807000000
   // instead of 2807000000000). Always use researcher data for market cap fields.
   const researcherCapBySymbol = new Map<string, number>(
     researcherInput.topTracked.map((a) => [a.symbol.toUpperCase(), a.marketCapUsd])
   );
 
-  const winners: MoverEntry[] = writerOutput.whatMoved.winners.map((w) => ({
-    symbol: w.symbol,
-    name: w.name,
-    changePct24h: w.changePct24h,
-    catalyst: w.catalyst || 'Market movement noted.'
-  }));
+  // Build mover lookup to inject priceUsd + priceChange24hUsd from researcher.
+  const researcherMoverBySymbol = new Map(
+    [...researcherInput.movers.winners, ...researcherInput.movers.losers].map((m) => [m.symbol.toUpperCase(), m])
+  );
 
-  const losers: MoverEntry[] = writerOutput.whatMoved.losers.map((l) => ({
-    symbol: l.symbol,
-    name: l.name,
-    changePct24h: l.changePct24h,
-    catalyst: l.catalyst || 'Market movement noted.'
-  }));
+  const winners: MoverEntry[] = writerOutput.whatMoved.winners.map((w) => {
+    const r = researcherMoverBySymbol.get(w.symbol.toUpperCase());
+    return {
+      symbol: w.symbol,
+      name: w.name,
+      changePct24h: w.changePct24h,
+      catalyst: w.catalyst || 'Market movement noted.',
+      ...(r ? { priceUsd: r.priceUsd, priceChange24hUsd: r.priceChange24hUsd } : {})
+    };
+  });
+
+  const losers: MoverEntry[] = writerOutput.whatMoved.losers.map((l) => {
+    const r = researcherMoverBySymbol.get(l.symbol.toUpperCase());
+    return {
+      symbol: l.symbol,
+      name: l.name,
+      changePct24h: l.changePct24h,
+      catalyst: l.catalyst || 'Market movement noted.',
+      ...(r ? { priceUsd: r.priceUsd, priceChange24hUsd: r.priceChange24hUsd } : {})
+    };
+  });
 
   const topTracked: TrackedAssetEntry[] = writerOutput.whatMoved.topTracked.map((a) => ({
     symbol: a.symbol,
@@ -295,13 +326,13 @@ const assembleDraft = (
     : undefined;
 
   return {
-    schemaVersion: DAILY_SCHEMA_V1_1,
+    schemaVersion: DAILY_SCHEMA_V1_2,
     generatedAt: new Date().toISOString(),
     publishedAt: targetDate,
     slug,
     headline: writerOutput.headline,
     summary: writerOutput.summary,
-    whatMoved: { winners, losers, topTracked },
+    whatMoved: { winners, losers, topTracked, sectionLabels: researcherInput.movers.sectionLabels },
     whyItMoved: writerOutput.whyItMoved,
     worthKnowing: writerOutput.worthKnowing,
     snapshot,
@@ -317,7 +348,7 @@ const assembleDraft = (
 const validateDraft = (draft: DailyArtifact): string[] => {
   const errors: string[] = [];
   try {
-    validateDailyV1_1(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
+    validateDailyV1_2(draft as unknown as JsonRecord, `draft-${draft.publishedAt}.json`);
   } catch (err) {
     errors.push(err instanceof Error ? err.message : String(err));
   }
@@ -361,7 +392,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   console.log('  Calling LLM (writer)…');
   const llmResponse = await callLlm(
     {
-      model: 'gpt-4o-mini',
+      model: WRITER_LLM.model,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: buildUserPrompt(researcherInput, revisionNotes) }
@@ -369,7 +400,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
       jsonMode: true,
       maxTokens: 4096
     },
-    { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-${targetDate}` }
+    { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, requestId: `daily-report-${targetDate}` }
   );
   console.log(`  LLM: ${llmResponse.provider} | ${llmResponse.usage.inputTokens}in / ${llmResponse.usage.outputTokens}out`);
 
@@ -377,7 +408,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
   let writerOutput: WriterLlmOutput | null = null;
   let firstParseError: string | null = null;
   try {
-    writerOutput = parseAndValidateLlmJson(llmResponse.content, validateWriterOutput);
+    writerOutput = parseAndValidateLlmJson(llmResponse.content, validateWriterOutput, llmResponse.provider);
   } catch (err) {
     firstParseError = err instanceof Error ? err.message : String(err);
   }
@@ -396,7 +427,7 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
     const correctionPrompt = `Your previous output failed validation:\n${validationErrors.join('\n')}\n\nFix these issues and produce a corrected JSON output.`;
     const correctionResponse = await callLlm(
       {
-        model: 'gpt-4o-mini',
+        model: WRITER_LLM.model,
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: buildUserPrompt(researcherInput, revisionNotes) },
@@ -406,9 +437,9 @@ export const generateDailyReport = async (targetDate: string): Promise<void> => 
         jsonMode: true,
         maxTokens: 4096
       },
-      { primary: 'github-models', secondary: 'anthropic', requestId: `daily-report-correction-${targetDate}` }
+      { primary: WRITER_LLM.primary, secondary: WRITER_LLM.secondary, requestId: `daily-report-correction-${targetDate}` }
     );
-    writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput);
+    writerOutput = parseAndValidateLlmJson(correctionResponse.content, validateWriterOutput, correctionResponse.provider);
     draft = assembleDraft(targetDate, writerOutput, researcherInput, weeklySlug);
     validationErrors = validateDraft(draft);
   }
@@ -454,8 +485,13 @@ const main = async (): Promise<void> => {
   await generateDailyReport(targetDate);
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-report] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when imported by the orchestrator.
+// Without this, the writer attempted to run at import time (before the researcher
+// had produced input), causing spurious "Failed: ENOENT" startup log lines.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-report] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}

@@ -1,5 +1,5 @@
 import type { DailyArtifact } from '../../domain/daily';
-import { isExcludedFromMovers } from '../markets/asset-categories';
+import { DAILY_TOP_N } from '../markets/winners-losers';
 
 /** Minimal researcher movers shape the validator needs — avoids coupling to script types. */
 export type ResearcherMoversInput = Readonly<{
@@ -13,13 +13,12 @@ export type WinnersLosersValidationResult = Readonly<{
 }>;
 
 /**
- * Validates that a daily artifact's whatMoved arrays are populated whenever
- * the researcher identified qualifying movers.
+ * Validates that a daily artifact's whatMoved arrays match the researcher's
+ * always-populated top-N selection (introduced in WCP-153, daily@1.2).
  *
- * A violation occurs when the researcher found eligible movers (rank 16–50,
- * >5% move, excluding stablecoins and wrapped/derivative tokens) but the
- * artifact's corresponding array is empty — indicating LLM omission rather
- * than a genuinely quiet day.
+ * Rule: the researcher always provides exactly DAILY_TOP_N winners and DAILY_TOP_N
+ * losers. The artifact must mirror them exactly — any deviation (omission, addition,
+ * symbol mismatch) is a violation.
  */
 export const validateWinnersLosers = (
   artifact: DailyArtifact,
@@ -27,21 +26,33 @@ export const validateWinnersLosers = (
 ): WinnersLosersValidationResult => {
   const violations: string[] = [];
 
-  const eligibleWinners = researcherMovers.winners.filter(
-    (a) => !isExcludedFromMovers(a.symbol)
-  );
-  const eligibleLosers = researcherMovers.losers.filter(
-    (a) => !isExcludedFromMovers(a.symbol)
-  );
-
-  if (eligibleWinners.length > 0 && artifact.whatMoved.winners.length === 0) {
-    const missing = eligibleWinners.map((a) => a.symbol).join(', ');
-    violations.push(`Missing winners: ${missing}`);
+  if (artifact.whatMoved.winners.length !== DAILY_TOP_N) {
+    violations.push(
+      `whatMoved.winners must have exactly ${DAILY_TOP_N} entry, got ${artifact.whatMoved.winners.length}`
+    );
   }
 
-  if (eligibleLosers.length > 0 && artifact.whatMoved.losers.length === 0) {
-    const missing = eligibleLosers.map((a) => a.symbol).join(', ');
-    violations.push(`Missing losers: ${missing}`);
+  if (artifact.whatMoved.losers.length !== DAILY_TOP_N) {
+    violations.push(
+      `whatMoved.losers must have exactly ${DAILY_TOP_N} entry, got ${artifact.whatMoved.losers.length}`
+    );
+  }
+
+  // Verify symbols match researcher
+  const researcherWinnerSymbols = researcherMovers.winners.map((m) => m.symbol.toUpperCase());
+  const artifactWinnerSymbols = artifact.whatMoved.winners.map((m) => m.symbol.toUpperCase());
+  for (const sym of researcherWinnerSymbols) {
+    if (!artifactWinnerSymbols.includes(sym)) {
+      violations.push(`Winner ${sym} from researcher is missing from artifact`);
+    }
+  }
+
+  const researcherLoserSymbols = researcherMovers.losers.map((m) => m.symbol.toUpperCase());
+  const artifactLoserSymbols = artifact.whatMoved.losers.map((m) => m.symbol.toUpperCase());
+  for (const sym of researcherLoserSymbols) {
+    if (!artifactLoserSymbols.includes(sym)) {
+      violations.push(`Loser ${sym} from researcher is missing from artifact`);
+    }
   }
 
   return { valid: violations.length === 0, violations };

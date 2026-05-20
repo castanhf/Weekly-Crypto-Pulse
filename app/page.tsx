@@ -168,7 +168,7 @@ export default function HomePage(): JSX.Element {
               );
             })}
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
             <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
             <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle — Best value" checkoutTarget={monthlyBundleCheckoutTarget} />
             <Link className={secondaryCtaClassName} href="/pro">
@@ -178,7 +178,7 @@ export default function HomePage(): JSX.Element {
         </SurfaceCard>
       </PageSection>
 
-      <PageSection aria-labelledby="measures-heading" className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+      <PageSection aria-labelledby="measures-heading">
         <SectionIntro
           description="Same sequence every week so you can compare issues side by side."
           id="measures-heading"

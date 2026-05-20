@@ -20,7 +20,7 @@ This is a portfolio project that demonstrates an unusual combination: sophistica
 
 **Stateless content pipeline.** Every report is a JSON artifact committed to the repo. The website has zero runtime dependencies beyond the files it was built with. Vercel builds the site; the pipeline commits data; nothing coordinates them at runtime.
 
-**Multi-agent editorial pipeline.** A Daily Researcher fetches live data (CoinGecko, DeFiLlama, RSS feeds). A Daily Writer transforms it into a plainspoken artifact via LLM. A Daily Editor runs a 14-item editorial checklist — also via LLM — and either approves or sends specific revision notes back to the writer. The pipeline retries up to three rounds before auto-approving with a logged issue list.
+**Multi-agent editorial pipeline.** A Daily Researcher fetches live data (CoinGecko, DeFiLlama, RSS feeds). A Daily Writer transforms it into a plainspoken artifact via LLM. A Daily Editor runs a 15-item editorial checklist — also via LLM — and either approves or sends specific revision notes back to the writer. The pipeline retries up to three rounds before auto-approving with a logged issue list.
 
 **LLM provider abstraction with automatic failover.** GitHub Models is the primary LLM provider (free tier, fast). Anthropic Claude is the fallback. The client is a thin abstraction layer that switches transparently — neither the writer nor the editor knows which provider answered.
 
@@ -28,14 +28,14 @@ This is a portfolio project that demonstrates an unusual combination: sophistica
 
 **Per-artifact OG images.** Every report page gets a programmatically generated Open Graph image via Next.js's image generation API, built at request time using the report's metadata.
 
-**Schema-versioned artifacts.** Report artifacts carry an explicit `schemaVersion` field (`weekly@1.2`, `daily@1.1`). The validator rejects artifacts that don't match the expected schema, preventing silently broken deployments.
+**Schema-versioned artifacts.** Report artifacts carry an explicit `schemaVersion` field (`weekly@1.3`, `daily@1.2`). The validator rejects artifacts that don't match the expected schema, preventing silently broken deployments.
 
 ---
 
 ## Tech stack
 
 - **Framework:** Next.js 16 (App Router, static export)
-- **Rendering:** React 18, Tailwind CSS, Recharts (interactive charts on weekly pages)
+- **Rendering:** React 19, Tailwind CSS v4, Recharts (interactive charts on weekly pages)
 - **Charts (server-side):** Custom SVG renderer + `sharp` for PNG export
 - **LLM:** GitHub Models (primary), Anthropic Claude Sonnet 4.6 (fallback)
 - **Email:** Beehiiv (subscriber management + broadcast delivery)
@@ -43,7 +43,7 @@ This is a portfolio project that demonstrates an unusual combination: sophistica
 - **Deployment:** Vercel (static pages + serverless API routes for subscription forms)
 - **CI:** GitHub Actions (daily pipeline, weekly pipeline, CodeQL, smoke e2e via Playwright)
 - **Testing:** Vitest (unit + integration), Playwright (smoke e2e)
-- **Language:** TypeScript throughout, strict mode
+- **Language:** TypeScript 6, strict mode
 
 ---
 

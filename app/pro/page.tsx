@@ -165,7 +165,7 @@ export default function ProPage(): JSX.Element {
       {/* 2 — What Pro delivers */}
       <PageSection aria-labelledby="what-pro-delivers-heading">
         <SectionIntro
-          description="These are the four things you get with every Pro issue. They're not on the free site."
+          description="Five deliverables with every Pro issue — none of them on the free site."
           id="what-pro-delivers-heading"
           title="What the Pro Pack includes"
         />
@@ -259,7 +259,7 @@ export default function ProPage(): JSX.Element {
           id="approach-heading"
           title="The Crypto Pulse approach"
         />
-        <div className="mt-6 max-w-3xl space-y-6 text-base leading-8 text-muted">
+        <div className="mx-auto mt-6 max-w-3xl space-y-6 text-base leading-8 text-muted">
           <p>
             Crypto Pulse publishes every Monday, regardless of whether the market did anything interesting. If it was a
             quiet week, the free report says so directly. If there was a real move, the free report explains it without

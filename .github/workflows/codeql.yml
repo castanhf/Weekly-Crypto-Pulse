@@ -2,7 +2,7 @@ name: CodeQL
 
 on:
   push:
-    branches: [main, release/r2.0, release/r2.1]
+    branches: [main, release/r2.0, release/r2.1, release/r2.1.1]
   schedule:
     - cron: '23 14 * * 1'  # Mondays at 14:23 UTC
 
@@ -17,9 +17,8 @@ jobs:
     # Dependabot PRs run with a restricted token that cannot upload SARIF.
     # Coverage is provided by push-to-main and the weekly schedule.
     if: github.actor != 'dependabot[bot]'
-    # continue-on-error: analysis runs for local review; upload requires code scanning to be
-    # enabled in repository Settings > Security. Until then, this job is non-blocking.
-    continue-on-error: true
+    # Code scanning is enabled in repository Settings > Security.
+    # This job is blocking — CodeQL findings must be resolved before merge.
 
     strategy:
       matrix:

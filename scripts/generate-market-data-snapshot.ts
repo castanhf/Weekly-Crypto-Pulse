@@ -1,8 +1,8 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { CoinGeckoMarketDataProvider } from '@/lib/market-data/coingecko-market-data-provider';
-import { BatchMarketDataIngestion } from '@/lib/market-data/market-data-ingestion';
+import { CoinGeckoMarketDataProvider } from '../lib/market-data/coingecko-market-data-provider';
+import { BatchMarketDataIngestion } from '../lib/market-data/market-data-ingestion';
 
 const OUTPUT_DIRECTORY = join(process.cwd(), 'data', 'market-data');
 
