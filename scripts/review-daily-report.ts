@@ -1,7 +1,7 @@
 /**
  * review-daily-report.ts
  *
- * Reads the writer's draft and researcher input, runs the 9-item editorial
+ * Reads the writer's draft and researcher input, runs the 15-item editorial
  * checklist via LLM, and either approves or writes revision notes.
  *
  * Called as step 3 in the daily pipeline (possibly multiple times — up to 5).
@@ -69,7 +69,7 @@ export type ReviewOutcome = {
 // LLM prompt
 // ---------------------------------------------------------------------------
 
-const INLINE_SYSTEM_PROMPT = `You are the final editorial gatekeeper for the Crypto Pulse daily report. Review the writer's draft against the 14-item editorial checklist below. For each item, make an explicit PASS or FAIL decision.
+const INLINE_SYSTEM_PROMPT = `You are the final editorial gatekeeper for the Crypto Pulse daily report. Review the writer's draft against the 15-item editorial checklist below. For each item, make an explicit PASS or FAIL decision.
 
 CHECKLIST:
 1 — Register Check: Is the prose plainspoken throughout? Does any jargon appear without definition? Is any content condescending (over-explaining ETF, market cap, dominance, TVL — which are assumed known)?
@@ -80,7 +80,7 @@ CHECKLIST:
 6 — Section Completeness: Are all 6 sections present and non-empty? (headline, summary, whatMoved, whyItMoved, worthKnowing, snapshot). worthKnowing is allowed to be empty on quiet days.
 7 — Schema Check: Does the draft satisfy the current daily schema structure? schemaVersion must be "daily@1.2" (current) or "daily@1.1" (legacy, still valid — do NOT require the writer to revert to an older version). Also verify: generatedAt, publishedAt, slug, headline, summary, whyItMoved as non-empty strings; whatMoved with 3 sub-arrays; worthKnowing array ≤4 items; snapshot with 4 numeric fields; tags array.
 8 — Factual Traceability Check: Do all prose numerical claims trace to the researcher's data? Tolerance: ±0.5 percentage points for percentages, ±2% for USD prices. Acceptable sources: movers.winners[].priceUsd, movers.losers[].priceUsd, topTracked[].priceUsd, topTracked[].marketCapUsd, topTracked[].changePct24h, and snapshot fields. A price found in ANY of these fields is traceable — do not mark it untraceable just because it comes from topTracked rather than movers. (Do not verify table cells — only prose in summary, whyItMoved, worthKnowing.)
-9 — Footer Check: Does the draft include a link to the weekly report in worthKnowing or elsewhere? (Look for /reports link or "Crypto Pulse" reference in a footer context.)
+9 — Weekly Footer Check: Is the optional weeklyFooter field valid? If weeklyFooter is absent: auto-PASS. If weeklyFooter is present: it must have a non-empty text string and a non-empty weeklySlug string — FAIL if either is missing or empty. Do NOT check for a link in the prose or worthKnowing; this check is structural only.
 10 — Headline Specificity Check: Does the headline name a specific story? PASS if the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement. The headline does NOT need to explain full significance. FAIL if the headline uses only generic terms ("crypto market", "digital assets"), uses empty descriptors ("mixed results", "modest") as its only content, or is pure price restatement ("Bitcoin slightly up, Ethereum down"). Do NOT fail a headline that names a specific asset, legislation, or event merely because it doesn't explain its full significance.
 11 — Summary Editorial Check: Does the 60-second read tell the story rather than restate prices? FAIL if the summary's primary content is "BTC went up X%, ETH went down Y%". FAIL if the summary uses generic phrases: "Overall, the market experienced...", "The day was characterized by...", "Investors saw...". The summary must answer: what happened, and why does it matter?
 12 — Causal Attribution Check: Does whyItMoved contain empty causal attributions? FAIL if any of these patterns appear: "ongoing interest in the asset" as a cause, "continues to hold a dominant position" as a cause, "market sentiment appears to be stabilizing" without evidence, "investor caution as the market awaits developments" without specifying what. If an asset moved <1%, the prose should not manufacture an explanation.

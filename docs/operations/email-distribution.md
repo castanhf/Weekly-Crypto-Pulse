@@ -95,3 +95,22 @@ Each pipeline logs:
 ```
 
 The pipeline exits 0 and the artifact is committed normally.
+
+---
+
+## Email template considerations
+
+The HTML email templates (`lib/email/compose-*.ts`) produce complete HTML documents, not partial fragments. Each template follows these conventions:
+
+### What's in place
+
+- **Inline styles only** — no external CSS. Required for broad email client compatibility.
+- **Preheader text** — a hidden `<span style="display:none;max-height:0;overflow:hidden;mso-hide:all">` immediately after `<body>` open, populated from the content summary (first 140 chars). Controls the preview snippet shown in most inbox clients.
+- **Apple message-reformatting guard** — `<meta name="x-apple-disable-message-reformatting">` prevents Apple Mail from resizing or recoloring text.
+- **HTML escaping** — all user-supplied strings are run through `escapeHtml()` before interpolation.
+
+### Known limitations (deferred)
+
+- **No `<table>` layout** — templates use `<div>`/`<main>` with `max-width`. Outlook 2016 and earlier requires table-based layout for reliable rendering. Given the current platform (Beehiiv handles final delivery), Beehiiv may apply its own wrapper. If direct SMTP delivery is added, evaluate converting to a table skeleton at that point.
+- **No dark-mode `@media` query** — templates hard-code the dark canvas background. Apple Mail and a few other clients support `@media (prefers-color-scheme)` in `<style>` tags, but this is speculative optimization. Deferred.
+- **No unsubscribe link in template** — the unsubscribe mechanism is Beehiiv-managed. If a different ESP is adopted, add a one-click unsubscribe header and footer link to comply with CAN-SPAM / GDPR requirements at that time.

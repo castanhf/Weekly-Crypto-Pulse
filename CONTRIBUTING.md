@@ -112,6 +112,12 @@ The inline fallback (`INLINE_SYSTEM_PROMPT`) is kept to prevent pipeline failure
 
 **Do not** duplicate spec content as inline constants in scripts as the primary source. The drift between agent spec files and inline constants caused editorial quality issues in R2.1.1; the `.claude/agents/*.md` files are authoritative.
 
+**Keeping the inline fallback in sync.** Scripts that use full spec loading still carry an `INLINE_SYSTEM_PROMPT` constant as a fallback. When you update a checklist in the markdown spec (add, remove, or rename an item), you must update the inline fallback too — including the item count in the header. The automated guard is `lib/agents/editor-spec-consistency.test.ts`: it parses both the markdown spec and the inline fallback and asserts that all check numbers and key names match. Run it before committing spec changes:
+
+```bash
+npx vitest run lib/agents/editor-spec-consistency.test.ts
+```
+
 ### Pattern 2 — Researcher (no spec file)
 
 Researcher scripts (`generate-daily-input.ts`, `generate-report-input.ts`) use inline `SYSTEM_PROMPT` constants directly with no spec file. These agents do structured data gathering, not prose generation, so the prompt is short and stable enough not to warrant a separate spec file.

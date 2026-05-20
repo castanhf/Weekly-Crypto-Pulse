@@ -90,4 +90,15 @@ describe('composeWeeklyEmail', () => {
     expect(htmlBody).not.toContain('<5%>');
     expect(htmlBody).toContain('&lt;5%&gt;');
   });
+
+  it('includes a hidden preheader span drawn from the report summary', () => {
+    const { htmlBody } = composeWeeklyEmail(baseReport);
+    expect(htmlBody).toContain('display:none;max-height:0;overflow:hidden');
+    expect(htmlBody).toContain('Bitcoin broke $100K');
+  });
+
+  it('includes the Apple message-reformatting meta tag', () => {
+    const { htmlBody } = composeWeeklyEmail(baseReport);
+    expect(htmlBody).toContain('x-apple-disable-message-reformatting');
+  });
 });

@@ -21,7 +21,7 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 | `NEXT_PUBLIC_SITE_URL` | Vercel env | Yes (NEXT_PUBLIC_) | Canonical URL — not sensitive |
 | `NEXT_PUBLIC_X_HANDLE` | Vercel env | Yes (NEXT_PUBLIC_) | Twitter handle — not sensitive |
 | `ENABLE_FULFILLMENT_ASSIST` | Local dev only | No | Enables internal fulfillment page locally; must not be set in production |
-| `BEEHIIV_API_KEY` | Planned R2.1 | No | Not yet live |
+| `BEEHIIV_API_KEY` | GitHub Actions secret (local: `.env`) | No | Live R2.1 (WCP-136) |
 
 ### NEXT_PUBLIC_ review
 
