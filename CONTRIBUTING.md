@@ -139,6 +139,44 @@ await callLlm({ model: WRITER_LLM.model, ... }, { primary: WRITER_LLM.primary, s
 
 Writer, editor, and Sunday digest use `primary: 'anthropic'`. Researchers use `primary: 'github-models'`. See `docs/operations/model-configuration.md` for the full routing table and rationale.
 
+## Schema bumps
+
+When you add or change the shape of a report artifact, bump the schema version. The process is an 8-layer checklist documented at `docs/operations/schema-bumps.md`. The automated guard is:
+
+```bash
+npm run test  # lib/reports/schema-bump-coverage.test.ts fails if a new version is listed in VALID_*_SCHEMA_VERSIONS but not supported by the validator or repository parser
+```
+
+Checklist summary: domain constant → TypeScript type → validator → repository parser → agent spec (writer) → agent spec (editor) → React component → test.
+
+## Bundle size
+
+Monitor bundle size after any significant dependency change (new library, framework upgrade):
+
+```bash
+npm run build:analyze   # opens .next/analyze/client.html and nodejs.html
+```
+
+Soft budgets (from `docs/operations/bundle-size-baseline.md`):
+
+| Chunk | Soft budget |
+|---|---|
+| Any single chunk | 400 KB uncompressed |
+| Total static JS | 1.5 MB uncompressed |
+
+Current baseline: 1.1 MB / 11 chunks (post-Tailwind v4). If a chunk grows >20% beyond baseline, investigate and document before merging.
+
+## Smoke tests
+
+Two smoke tests validate environment configuration without spending significant tokens or API quota:
+
+```bash
+npm run smoke:llm      # validates GitHub Models + Anthropic credentials; ~30 seconds
+npm run smoke:beehiiv  # validates Beehiiv connectivity (informational; email distribution is currently disabled)
+```
+
+Run `smoke:llm` after any LLM provider config change. Run `smoke:beehiiv` after any Beehiiv credentials rotation.
+
 ## Communication
 
 Discussions happen via GitHub Issues. Email contact is for security issues only — see [SECURITY.md](SECURITY.md).
