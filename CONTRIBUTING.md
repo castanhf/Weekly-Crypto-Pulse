@@ -48,6 +48,18 @@ npm run test  # Vitest unit + integration tests
 
 New code should include tests where applicable. Bug fixes should include a regression test.
 
+### Component rendering tests
+
+React components are tested with `@testing-library/react` under a `happy-dom` environment (configured globally in `vitest.config.ts`). Test files use the `.test.tsx` extension and live alongside the component they test.
+
+Key patterns:
+- Mock `next/link` as a plain `<a>` tag so links render without the Next.js router
+- Mock `next/navigation` hooks (e.g. `usePathname`) using `vi.hoisted(() => vi.fn())` to avoid temporal-dead-zone issues with hoisted `vi.mock`
+- Mock side-effectful modules (`@/lib/analytics/events`, etc.) when testing components that use them
+- `@testing-library/jest-dom/vitest` matchers (`toBeInTheDocument`, `toHaveAttribute`, etc.) are available globally via `vitest.setup.ts`
+
+Tests that mock `node:fs` or other Node.js internals require `// @vitest-environment node` at the top of the file (the global environment is `happy-dom`).
+
 ## Import conventions
 
 This project has two import styles depending on where the file lives:
