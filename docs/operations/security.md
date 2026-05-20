@@ -21,7 +21,7 @@ There is no SQL injection surface, no XSS via user-generated content, no IDOR, a
 | `NEXT_PUBLIC_SITE_URL` | Vercel env | Yes (NEXT_PUBLIC_) | Canonical URL — not sensitive |
 | `NEXT_PUBLIC_X_HANDLE` | Vercel env | Yes (NEXT_PUBLIC_) | Twitter handle — not sensitive |
 | `ENABLE_FULFILLMENT_ASSIST` | Local dev only | No | Enables internal fulfillment page locally; must not be set in production |
-| `BEEHIIV_API_KEY` | Planned R2.1 | No | Not yet live |
+| `BEEHIIV_API_KEY` | GitHub Actions secret (local: `.env`) | No | Live R2.1 (WCP-136) |
 
 ### NEXT_PUBLIC_ review
 
@@ -173,9 +173,11 @@ Tighter permissions should be reconsidered if:
 
 ## SAST
 
-CodeQL analysis is configured in `.github/workflows/codeql.yml`. It runs on push and pull request to `main`, `release/r2.0`, and `release/r2.1`, and on a weekly schedule (Mondays 14:23 UTC).
+CodeQL analysis is configured in `.github/workflows/codeql.yml`. It runs on push to `main`, `release/r2.0`, `release/r2.1`, `release/r2.1.1`, and on a weekly schedule (Mondays 14:23 UTC).
 
 Language: `javascript-typescript`. CodeQL natively understands TypeScript and Next.js patterns.
+
+The CodeQL job is **blocking** — `continue-on-error` was removed in WCP-156 once code scanning was confirmed enabled in repository Settings > Security. Findings must be resolved before a branch can merge. If a real finding cannot be quickly addressed, document it in the **Accepted residual advisories** section above with reasoning, and decide whether to proceed.
 
 Findings appear in the repository's Security tab (GitHub Advanced Security). Review cadence: weekly. High-severity findings are blocking for the next release.
 

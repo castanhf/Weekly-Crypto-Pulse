@@ -103,13 +103,22 @@ export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element
             <section className="grid gap-4 sm:grid-cols-2">
               {whatMoved.winners.length > 0 && (
                 <div className="space-y-3">
-                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-green-400">Winners (rank 16–50)</h2>
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-green-400">
+                    {whatMoved.sectionLabels?.winners ?? 'Winners'}
+                  </h2>
                   <ul className="space-y-2">
                     {whatMoved.winners.map((mover) => (
                       <li className="rounded-xl border border-white/10 bg-surface px-4 py-3" key={mover.symbol}>
                         <div className="flex items-center justify-between gap-2">
                           <span className="font-medium text-paper">{mover.symbol}</span>
-                          <span className="font-mono text-sm text-green-400">{formatChangePct(mover.changePct24h)}</span>
+                          <span className="font-mono text-sm text-green-400">
+                            {formatChangePct(mover.changePct24h)}
+                            {mover.priceChange24hUsd !== undefined && (
+                              <span className="ml-1.5 text-xs text-muted">
+                                / {mover.priceChange24hUsd >= 0 ? '+' : ''}{formatCompactUsd(mover.priceChange24hUsd)}
+                              </span>
+                            )}
+                          </span>
                         </div>
                         <p className="mt-0.5 text-xs text-muted">{mover.catalyst}</p>
                       </li>
@@ -119,13 +128,22 @@ export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element
               )}
               {whatMoved.losers.length > 0 && (
                 <div className="space-y-3">
-                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-red-400">Losers (rank 16–50)</h2>
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-red-400">
+                    {whatMoved.sectionLabels?.losers ?? 'Losers'}
+                  </h2>
                   <ul className="space-y-2">
                     {whatMoved.losers.map((mover) => (
                       <li className="rounded-xl border border-white/10 bg-surface px-4 py-3" key={mover.symbol}>
                         <div className="flex items-center justify-between gap-2">
                           <span className="font-medium text-paper">{mover.symbol}</span>
-                          <span className="font-mono text-sm text-red-400">{formatChangePct(mover.changePct24h)}</span>
+                          <span className="font-mono text-sm text-red-400">
+                            {formatChangePct(mover.changePct24h)}
+                            {mover.priceChange24hUsd !== undefined && (
+                              <span className="ml-1.5 text-xs text-muted">
+                                / {mover.priceChange24hUsd >= 0 ? '+' : ''}{formatCompactUsd(mover.priceChange24hUsd)}
+                              </span>
+                            )}
+                          </span>
                         </div>
                         <p className="mt-0.5 text-xs text-muted">{mover.catalyst}</p>
                       </li>

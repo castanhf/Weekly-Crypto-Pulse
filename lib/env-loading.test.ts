@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { test, expect } from 'vitest';
@@ -10,6 +11,8 @@ const ENTRY_POINTS_REQUIRING_DOTENV = [
   'scripts/generate-daily-input.ts',
   'scripts/generate-daily-report.ts',
   'scripts/review-daily-report.ts',
+  'scripts/smoke-beehiiv.ts',
+  'scripts/smoke-llm.ts',
 ] as const;
 
 test('entry-point scripts import and call dotenv', () => {

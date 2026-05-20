@@ -27,6 +27,8 @@ import { parseAndValidateLlmJson } from '../lib/llm/json-validation';
 import { wrapNewsItemsForPrompt } from '../lib/llm/prompt-helpers';
 import { getCached } from '../lib/cache/file-cache';
 import { isExcludedFromMovers, isStablecoin, isWrappedOrDerivative } from '../lib/markets/asset-categories';
+import { computeMovers } from '../lib/markets/winners-losers';
+import type { SectionLabels } from '../lib/markets/winners-losers';
 import { detectNotableTvlMovements, fetchTopChainsTvl } from '../lib/markets/defi-llama';
 import { fetchRecentNewsWithFallback } from '../lib/news/rss-aggregator';
 
@@ -98,6 +100,7 @@ type RawReportInput = {
     body: string;
   };
   capitalFlows?: CapitalFlows;
+  sectionLabels?: SectionLabels;
 };
 
 // ---------------------------------------------------------------------------
@@ -440,10 +443,18 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
   );
 
   // 5. Parse and validate LLM output
-  const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput);
+  const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput, llmResponse.provider);
 
-  // 6. Append script-populated fields (capitalFlows not produced by LLM)
-  const finalOutput: RawReportInput = { ...reportInput, capitalFlows };
+  // 6. Append script-populated fields (capitalFlows, sectionLabels not produced by LLM)
+  const moverCandidates = reportInput.movers.map((m) => ({
+    symbol: m.symbol,
+    name: m.name,
+    changePct24h: m.changePct7d,
+    priceUsd: 0,
+    marketCapUsd: 0
+  }));
+  const { sectionLabels } = computeMovers(moverCandidates, 'weekly');
+  const finalOutput: RawReportInput = { ...reportInput, capitalFlows, sectionLabels };
 
   // 7. Write output
   await writeFile(REPORT_INPUT_PATH, `${JSON.stringify(finalOutput, null, 2)}\n`, 'utf-8');

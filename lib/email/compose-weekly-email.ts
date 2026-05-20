@@ -24,15 +24,18 @@ const renderWeeklyEmailHtml = (report: Report, reportUrl: string): string => {
   const body = report.plainspokenOpening?.body ?? report.metadata.summary;
   const escapedHeadline = escapeHtml(headline);
   const escapedBody = escapeHtml(body);
+  const preheader = escapeHtml(report.metadata.summary.slice(0, 140));
 
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="x-apple-disable-message-reformatting" />
 <title>${escapeHtml(SITE_NAME)} — Weekly</title>
 </head>
 <body style="margin:0;padding:16px;background:${CANVAS};color:${PAPER};font-family:Arial,Helvetica,sans-serif;line-height:1.6">
+<span style="display:none;max-height:0;overflow:hidden;mso-hide:all">${preheader}</span>
 <main style="max-width:640px;margin:0 auto">
 <header style="border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:16px;margin-bottom:24px">
 <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:${ACCENT};margin:0 0 4px">${escapeHtml(SITE_NAME)}</p>

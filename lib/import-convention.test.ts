@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -14,6 +15,7 @@ import { describe, expect, it } from 'vitest';
  */
 
 const SCRIPT_CONSUMED_DIRS = [
+  'lib/agents',
   'lib/reports',
   'lib/email',
   'lib/market-data',
@@ -21,7 +23,8 @@ const SCRIPT_CONSUMED_DIRS = [
   'lib/news',
   'lib/llm',
   'lib/charts',
-  'lib/cache'
+  'lib/cache',
+  'scripts'
 ] as const;
 
 const ROOT = join(import.meta.dirname, '..');
@@ -55,7 +58,7 @@ const collectViolations = (): ReadonlyArray<{ file: string; line: number; text: 
 };
 
 describe('import convention', () => {
-  it('script-consumed lib/ source files use relative imports, not @/ aliases', () => {
+  it('script-consumed lib/ and scripts/ source files use relative imports, not @/ aliases', () => {
     const violations = collectViolations();
 
     if (violations.length > 0) {

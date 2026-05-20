@@ -8,7 +8,7 @@ import type { ResearcherMoversInput } from '@/lib/reports/winners-losers-validat
 // Fixtures
 // ---------------------------------------------------------------------------
 
-const SCHEMA_VERSION = 'daily@1.1' as const;
+const SCHEMA_VERSION = 'daily@1.2' as const;
 
 const makeArtifact = (
   winners: MoverEntry[],
@@ -50,31 +50,19 @@ const makeResearcherMover = (symbol: string, name: string, changePct24h: number)
 });
 
 // ---------------------------------------------------------------------------
-// Tests
+// Tests — new top-N rule (daily@1.2): always exactly 1 winner + 1 loser
 // ---------------------------------------------------------------------------
 
 describe('validateWinnersLosers', () => {
-  describe('both arrays empty when no movers', () => {
-    it('passes when researcher has no winners and no losers', () => {
-      const artifact = makeArtifact([], []);
-      const movers: ResearcherMoversInput = { winners: [], losers: [] };
-
-      const result = validateWinnersLosers(artifact, movers);
-
-      expect(result.valid).toBe(true);
-      expect(result.violations).toHaveLength(0);
-    });
-  });
-
-  describe('winners present in researcher and artifact', () => {
-    it('passes when researcher winners match artifact winners', () => {
+  describe('correct artifact', () => {
+    it('passes when artifact has exactly 1 winner and 1 loser matching researcher', () => {
       const artifact = makeArtifact(
-        [makeMover('LINK', 'Chainlink', 12.5)],
-        []
+        [makeMover('SOL', 'Solana', 5.2)],
+        [makeMover('XRP', 'XRP', -3.1)]
       );
       const movers: ResearcherMoversInput = {
-        winners: [makeResearcherMover('LINK', 'Chainlink', 12.5)],
-        losers: []
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
@@ -85,126 +73,125 @@ describe('validateWinnersLosers', () => {
   });
 
   describe('missing winners in artifact', () => {
-    it('fails when researcher has winners but artifact has none', () => {
-      const artifact = makeArtifact([], []);
+    it('fails when artifact winners array is empty', () => {
+      const artifact = makeArtifact(
+        [],
+        [makeMover('XRP', 'XRP', -3.1)]
+      );
       const movers: ResearcherMoversInput = {
-        winners: [makeResearcherMover('LINK', 'Chainlink', 12.5)],
-        losers: []
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
 
       expect(result.valid).toBe(false);
-      expect(result.violations).toHaveLength(1);
-      expect(result.violations[0]).toContain('LINK');
-      expect(result.violations[0]).toContain('Missing winners');
+      expect(result.violations.some((v) => v.includes('winners'))).toBe(true);
     });
 
-    it('lists all missing winner symbols in the violation message', () => {
-      const artifact = makeArtifact([], []);
+    it('reports the missing winner symbol', () => {
+      const artifact = makeArtifact([], [makeMover('XRP', 'XRP', -3.1)]);
       const movers: ResearcherMoversInput = {
-        winners: [
-          makeResearcherMover('LINK', 'Chainlink', 12.5),
-          makeResearcherMover('DOT', 'Polkadot', 8.3)
-        ],
-        losers: []
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
 
-      expect(result.violations[0]).toContain('LINK');
-      expect(result.violations[0]).toContain('DOT');
+      expect(result.violations.some((v) => v.includes('SOL'))).toBe(true);
     });
   });
 
   describe('missing losers in artifact', () => {
-    it('fails when researcher has losers but artifact has none', () => {
-      const artifact = makeArtifact([], []);
+    it('fails when artifact losers array is empty', () => {
+      const artifact = makeArtifact([makeMover('SOL', 'Solana', 5.2)], []);
       const movers: ResearcherMoversInput = {
-        winners: [],
-        losers: [makeResearcherMover('ATOM', 'Cosmos', -9.1)]
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
 
       expect(result.valid).toBe(false);
-      expect(result.violations).toHaveLength(1);
-      expect(result.violations[0]).toContain('ATOM');
-      expect(result.violations[0]).toContain('Missing losers');
+      expect(result.violations.some((v) => v.includes('losers'))).toBe(true);
+    });
+
+    it('reports the missing loser symbol', () => {
+      const artifact = makeArtifact([makeMover('SOL', 'Solana', 5.2)], []);
+      const movers: ResearcherMoversInput = {
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
+      };
+
+      const result = validateWinnersLosers(artifact, movers);
+
+      expect(result.violations.some((v) => v.includes('XRP'))).toBe(true);
     });
   });
 
   describe('missing both winners and losers', () => {
-    it('reports two violations when both arrays are empty despite researcher data', () => {
+    it('reports violations for both arrays when both are empty', () => {
       const artifact = makeArtifact([], []);
       const movers: ResearcherMoversInput = {
-        winners: [makeResearcherMover('LINK', 'Chainlink', 7.2)],
-        losers: [makeResearcherMover('ATOM', 'Cosmos', -6.4)]
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
 
       expect(result.valid).toBe(false);
-      expect(result.violations).toHaveLength(2);
+      expect(result.violations.length).toBeGreaterThanOrEqual(2);
     });
   });
 
-  describe('stablecoin exclusion', () => {
-    it('passes when the only researcher winner is a stablecoin', () => {
-      const artifact = makeArtifact([], []);
+  describe('wrong symbol in artifact', () => {
+    it('fails when artifact winner symbol does not match researcher', () => {
+      const artifact = makeArtifact(
+        [makeMover('ETH', 'Ethereum', 2.0)], // wrong — researcher says SOL
+        [makeMover('XRP', 'XRP', -3.1)]
+      );
       const movers: ResearcherMoversInput = {
-        // USDT is a stablecoin — should be excluded from winners/losers check
-        winners: [makeResearcherMover('USDT', 'Tether', 5.2)],
-        losers: []
-      };
-
-      const result = validateWinnersLosers(artifact, movers);
-
-      expect(result.valid).toBe(true);
-    });
-
-    it('passes when the only researcher loser is a wrapped/derivative token', () => {
-      const artifact = makeArtifact([], []);
-      const movers: ResearcherMoversInput = {
-        winners: [],
-        // WBTC is a wrapped token — excluded
-        losers: [makeResearcherMover('WBTC', 'Wrapped Bitcoin', -6.8)]
-      };
-
-      const result = validateWinnersLosers(artifact, movers);
-
-      expect(result.valid).toBe(true);
-    });
-
-    it('fails when a non-stablecoin winner is missing despite stablecoin in researcher data', () => {
-      const artifact = makeArtifact([], []);
-      const movers: ResearcherMoversInput = {
-        winners: [
-          makeResearcherMover('USDT', 'Tether', 5.1), // excluded (stablecoin)
-          makeResearcherMover('LINK', 'Chainlink', 11.2) // should appear in artifact
-        ],
-        losers: []
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
       };
 
       const result = validateWinnersLosers(artifact, movers);
 
       expect(result.valid).toBe(false);
-      expect(result.violations[0]).toContain('LINK');
-      expect(result.violations[0]).not.toContain('USDT');
+      expect(result.violations.some((v) => v.includes('SOL'))).toBe(true);
     });
 
-    it('covers multiple stablecoin symbols from the registry', () => {
-      const stablecoins = ['USDC', 'DAI', 'BUSD', 'FDUSD'];
-      for (const symbol of stablecoins) {
-        const artifact = makeArtifact([], []);
-        const movers: ResearcherMoversInput = {
-          winners: [makeResearcherMover(symbol, symbol, 6.0)],
-          losers: []
-        };
+    it('fails when artifact loser symbol does not match researcher', () => {
+      const artifact = makeArtifact(
+        [makeMover('SOL', 'Solana', 5.2)],
+        [makeMover('BTC', 'Bitcoin', -0.5)] // wrong — researcher says XRP
+      );
+      const movers: ResearcherMoversInput = {
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
+      };
 
-        const result = validateWinnersLosers(artifact, movers);
-        expect(result.valid).toBe(true);
-      }
+      const result = validateWinnersLosers(artifact, movers);
+
+      expect(result.valid).toBe(false);
+      expect(result.violations.some((v) => v.includes('XRP'))).toBe(true);
+    });
+  });
+
+  describe('extra entries in artifact', () => {
+    it('fails when artifact has more winners than expected', () => {
+      const artifact = makeArtifact(
+        [makeMover('SOL', 'Solana', 5.2), makeMover('ADA', 'Cardano', 4.1)],
+        [makeMover('XRP', 'XRP', -3.1)]
+      );
+      const movers: ResearcherMoversInput = {
+        winners: [makeResearcherMover('SOL', 'Solana', 5.2)],
+        losers: [makeResearcherMover('XRP', 'XRP', -3.1)]
+      };
+
+      const result = validateWinnersLosers(artifact, movers);
+
+      expect(result.valid).toBe(false);
     });
   });
 });

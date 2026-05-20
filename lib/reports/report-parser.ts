@@ -1,4 +1,5 @@
-import { WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, type SchemaVersion } from '../../domain/schema-version';
+import { WEEKLY_SCHEMA_V1_0, WEEKLY_SCHEMA_V1_1, WEEKLY_SCHEMA_V1_2, WEEKLY_SCHEMA_V1_3, type SchemaVersion } from '../../domain/schema-version';
+import type { CapitalFlows, ChainTvlEntry, NotableTvlMovement } from '../../domain/market-data';
 import {
   type MarketSnapshot,
   type Mover,
@@ -19,7 +20,9 @@ const VALID_REGIMES: ReadonlySet<Regime> = new Set(['risk-on', 'risk-off', 'rang
 const SUPPORTED_SCHEMA_VERSIONS: ReadonlySet<string> = new Set([
   '1.0',            // legacy format produced before the weekly@* prefix was introduced
   WEEKLY_SCHEMA_V1_0,
-  WEEKLY_SCHEMA_V1_1
+  WEEKLY_SCHEMA_V1_1,
+  WEEKLY_SCHEMA_V1_2,
+  WEEKLY_SCHEMA_V1_3
 ]);
 
 const parseMetadata = (value: unknown): ReportMetadata => {
@@ -140,6 +143,44 @@ const parsePlainspokenOpening = (value: unknown): PlainspokenOpening | undefined
   };
 };
 
+const parseChainTvlEntry = (entry: unknown, prefix: string): ChainTvlEntry => {
+  const chain = assertRecord(entry, prefix);
+  return {
+    chain: assertString(chain.chain, `${prefix}.chain`),
+    tvlUsd: assertNumber(chain.tvlUsd, `${prefix}.tvlUsd`),
+    changePct24h: assertNumber(chain.changePct24h, `${prefix}.changePct24h`),
+    changeUsd24h: assertNumber(chain.changeUsd24h, `${prefix}.changeUsd24h`)
+  };
+};
+
+const parseCapitalFlows = (value: unknown): CapitalFlows | undefined => {
+  if (value === undefined || value === null) return undefined;
+
+  const flows = assertRecord(value, 'capitalFlows');
+  const topChainsTvl = assertArray(flows.topChainsTvl, 'capitalFlows.topChainsTvl').map((e, i) =>
+    parseChainTvlEntry(e, `capitalFlows.topChainsTvl[${i}]`)
+  );
+  const notableMovements: ReadonlyArray<NotableTvlMovement> = assertArray(flows.notableMovements, 'capitalFlows.notableMovements').map((e, i) => {
+    const base = parseChainTvlEntry(e, `capitalFlows.notableMovements[${i}]`);
+    const raw = assertRecord(e, `capitalFlows.notableMovements[${i}]`);
+    const trigger = assertString(raw.trigger, `capitalFlows.notableMovements[${i}].trigger`);
+    if (trigger !== 'percent_threshold' && trigger !== 'absolute_threshold') {
+      throw new Error(`Invalid value at "capitalFlows.notableMovements[${i}].trigger": "${trigger}".`);
+    }
+    return { ...base, trigger: trigger as 'percent_threshold' | 'absolute_threshold' };
+  });
+  return { topChainsTvl, notableMovements };
+};
+
+const parseSectionLabels = (value: unknown): Readonly<{ winners: string; losers: string }> | undefined => {
+  if (value === undefined || value === null) return undefined;
+  const labels = assertRecord(value, 'sectionLabels');
+  return {
+    winners: assertString(labels.winners, 'sectionLabels.winners'),
+    losers: assertString(labels.losers, 'sectionLabels.losers')
+  };
+};
+
 const parseReportShape = (rawReport: unknown): Report => {
   const report = assertRecord(rawReport, 'report');
 
@@ -150,7 +191,9 @@ const parseReportShape = (rawReport: unknown): Report => {
     movers: parseMovers(report.movers),
     sections: parseSections(report.sections),
     signals: parseSignals(report.signals),
-    plainspokenOpening: parsePlainspokenOpening(report.plainspokenOpening)
+    plainspokenOpening: parsePlainspokenOpening(report.plainspokenOpening),
+    ...(report.capitalFlows !== undefined ? { capitalFlows: parseCapitalFlows(report.capitalFlows) } : {}),
+    ...(report.sectionLabels !== undefined ? { sectionLabels: parseSectionLabels(report.sectionLabels) } : {})
   };
 };
 

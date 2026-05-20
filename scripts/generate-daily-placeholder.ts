@@ -76,8 +76,11 @@ const main = async (): Promise<void> => {
   await generateDailyPlaceholder(targetDate);
 };
 
-main().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error.';
-  console.error(`[daily-placeholder] Failed: ${message}`);
-  process.exitCode = 1;
-});
+// Guard prevents this entry-point from firing when imported by the orchestrator.
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : 'Unknown error.';
+    console.error(`[daily-placeholder] Error: ${message}`);
+    process.exitCode = 1;
+  });
+}

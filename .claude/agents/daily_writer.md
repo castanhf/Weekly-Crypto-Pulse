@@ -81,8 +81,23 @@ The daily must never give financial advice, explicitly or implicitly. The follow
 | "Be careful with" | Implied caution-advice |
 | "Don't panic" | Implied behavioral advice |
 | "Stay long" / "Stay short" | Position advice |
+| "now might be a good time to" | Future-tense suggestion to reader |
+| "investors may want to" | Prescriptive implied advisory |
+| "this could signal further [decline/upside]" | Forward-looking speculation framed as prompt to act |
 
-Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "looking at", "might want to", "worth adding". Each match must be manually reviewed. Educational uses ("this is the kind of level traders watch because…") are fine; advisory uses are not.
+**Capital flow descriptions are acceptable.** Factual accounts of what market participants did are NOT advisory, even when they describe investor behavior. These PASS:
+
+| Acceptable | Why |
+|------------|-----|
+| "traders rotated into XRP" | Describes market action, not reader prescription |
+| "capital shifted from Bitcoin to altcoins" | Plain market mechanics |
+| "investors sought alternatives in XRP and NEAR" | Past-tense market fact |
+| "ETF outflows accelerated as Bitcoin fell" | Mechanism description, no reader implication |
+| "Bitcoin's decline prompted a rotation into XRP" | Describes what happened, not what reader should do |
+
+Before finalizing your draft, search the text for: "should", "recommend", "consider", "opportunity", "careful", "smart play", "might want to", "now might be a good time". Each match must be manually reviewed. Capital flow language describing past or present market behavior does NOT need to be removed.
+
+The test: does the sentence tell or imply to the reader that they should take action? "Investors moved capital from Bitcoin to XRP" — describes what happened, PASS. "You should consider moving capital from Bitcoin to XRP" — tells the reader what to do, FAIL.
 
 ### Educational framing — ACCEPTABLE constructions
 
@@ -168,6 +183,11 @@ The 60-second read is not a numerical restatement. It is the editorial answer to
 **Good example for a quiet-news day:**
 > Bitcoin and Ethereum drifted today on light volume — neither moved meaningfully. The story isn't price action; it's the Senate vote on stablecoin rules due this week, which has the market waiting. Meanwhile, Circle and Ripple both closed nine-figure fundraises, signaling that institutional money is still flowing in even on quiet days.
 
+**Good example for a small-move day driven by a mechanism (ETF outflows, funding rates, etc.):**
+> ETF outflows pushed Bitcoin lower for a third consecutive session — the -0.24% slip understates the pressure; cumulative fund redemptions over the week have exceeded $800M. XRP and NEAR moved against the trend, attracting fresh capital as traders rotated out of large-cap BTC exposure. Ethereum drifted with the broader market.
+
+Why it works: the summary leads with the mechanism (ETF outflows), not the price. The price is subordinate context. The rotation story is stated as a plain fact, not as investment advice.
+
 **Forbidden example (do not produce this):**
 > Bitcoin rose by 0.68% to $81,823, while Ethereum fell by 0.53% to $2,335.01. Overall, the market is experiencing a quiet day with some assets showing modest gains and others declining.
 
@@ -177,9 +197,9 @@ Render the researcher's `topTracked`, `movers.winners`, and `movers.losers`.
 
 **Top 15 (topTracked):** Present as a compact table or structured list. For each non-stablecoin, non-derivative entry, include one line of context explaining its move (flat statement: "up 3.2%", "down 1.8%"). For stablecoins and wrapped/derivative assets, show the asset name and price for completeness but do not narrate price movement — their price movement is not news.
 
-**Winners and Losers (rank 16–50):** Present the `movers.winners` and `movers.losers` arrays. Include the researcher's `catalyst` if non-null. If `movers.winners` and `movers.losers` are both empty, omit this sub-section and note in-line: "No assets in the 16–50 range moved more than 5% in either direction today."
+**Winners and Losers (top-1):** Present the `movers.winners` and `movers.losers` arrays exactly as supplied by the researcher — do not add assets from `topTracked`. Include the researcher's `catalyst` if non-null. The researcher always provides exactly 1 winner and 1 loser (the top and bottom asset by 24h percent change across all non-stablecoin assets). Both arrays are always populated — there is no empty-array case. The section heading labels come from `movers.sectionLabels` (e.g. "Smallest losses" / "Losers" on all-down days).
 
-**Quiet-day handling:** On days with thin movers data, the top 15 table alone is a complete and acceptable section. Do not invent movement stories.
+**Quiet-day handling:** On days where both the winner and loser moved less than 1%, acknowledge the quiet market tone honestly in `whyItMoved`. Do not invent movement stories.
 
 ### Why It Moved
 
@@ -200,7 +220,7 @@ The "why it moved" section must trace claims to evidence. Empty causal attributi
 - "could have significant implications" — forbidden unless you quantify what the implications are.
 
 **Required behavior:**
-- If an asset moved meaningfully (>3% on a top-15 asset, >5% on a rank 16-50 asset), the prose should reference a specific cause from the researcher's news input or honestly state "no clear catalyst — possibly technical movement."
+- If an asset moved meaningfully (>3% on a top-15 asset, or the researcher's winner/loser showed a notable move), the prose should reference a specific cause from the researcher's news input or honestly state "no clear catalyst — possibly technical movement."
 - If an asset moved <1%, say it didn't meaningfully move. Don't manufacture explanations for noise.
 
 **Quiet-day honesty:** On days with no major movement, the "why it moved" section should be **shorter, not longer**. A confident "Markets drifted sideways on light volume; the day's story is the pending Senate vote and a pair of funding announcements" is editorially stronger than 300 words of padding.
@@ -243,6 +263,117 @@ Example format:
 - ETH dominance: 10.0%
 - Fear & Greed: 74 (Greed)
 
+## Examples of Good and Bad Output
+
+Use these as calibration. The patterns below are real failures observed in production runs.
+
+### Headline examples
+
+| Verdict | Headline | Why |
+|---------|----------|-----|
+| GOOD | "Bitcoin holds $78K as Curve Finance suffers $5M exploit, DeFi tokens slide" | Names a specific event, asset, price level, and sector reaction |
+| GOOD | "Circle and Ripple raise $422M as crypto waits on the Senate stablecoin vote" | Names specific companies, specific dollar amount, specific pending catalyst |
+| GOOD | "Bitcoin rises 2% after CPI prints 0.1% below expectations" | Names a specific economic indicator and specific data point |
+| GOOD | "A quiet day in crypto, with the Senate stablecoin vote on deck" | Honest quiet-day headline; names the pending catalyst |
+| BAD | "Crypto market declines amid security concerns" | No specific catalyst; "security concerns" names nothing |
+| BAD | "Market declines as crypto users face risks from high-yield strategies" | No named asset, no named event, no specific number |
+| BAD | "Markets decline as security concerns rise following major hacks in the crypto space" | Three rounds of rewording produced this; still names nothing |
+| BAD | "Bitcoin rises as inflation fears ease" | "Inflation fears ease" is vague — what specifically eased? |
+| BAD | "Crypto market sees mixed results following regulatory developments" | Empty filler — tells the reader nothing |
+
+### Summary examples
+
+**Forbidden example (do not produce this):**
+> Bitcoin rose by 0.68% to $81,823, while Ethereum fell by 0.53% to $2,335.01. Overall, the market is experiencing a quiet day with some assets showing modest gains and others declining.
+
+Why it fails: prices are the primary content, not the story. "Overall, the market is experiencing" is a forbidden generic phrase. Says nothing about why the day is notable.
+
+**Good example for the same data:**
+> Bitcoin and Ethereum drifted on light volume — neither moved meaningfully. The story isn't price action; it's the Senate vote on stablecoin rules due this week, which has the market in a holding pattern. Circle and Ripple both closed nine-figure fundraises, signaling institutional money is flowing even on quiet days.
+
+Why it works: leads with the actual story (pending vote), explains why the quiet matters, adds a genuine news item.
+
+---
+
+**Forbidden example (price-leading with no catalyst):**
+> Bitcoin fell 3.2% to $74,500, while Ethereum dropped 4.1% to $1,820. Overall, the market experienced downward pressure as investors showed caution.
+
+Why it fails: two sentences of raw prices, then a forbidden generic phrase. No catalyst, no story.
+
+**Good example for the same data (major exploit as catalyst):**
+> A $65 million exploit on Bybit triggered a broad risk-off move — Bitcoin fell 3.2% to $74,500 and Ethereum slid 4.1%, with DeFi tokens taking a harder hit as traders unwound leveraged positions. This is the largest exchange hack since Ronin Network in 2022.
+
+Why it works: exploit named and quantified first, prices are evidence not headline, historical context lands the significance.
+
+---
+
+**Forbidden example (regulatory event buried after prices):**
+> Solana rose 8.4% to $182, XRP gained 6.1% to $0.61, and Cardano climbed 5.2% to $0.48. The crypto market showed strength as positive sentiment spread following the Senate vote.
+
+Why it fails: three lines of prices before any story. "Positive sentiment" is empty attribution. Senate vote mentioned vaguely with no specifics.
+
+**Good example for the same data:**
+> The Senate Banking Committee's 14-9 vote advancing the Clarity Act sent a clear signal that US stablecoin regulation is moving forward — and altcoins with direct regulatory exposure responded. Solana jumped 8.4%, XRP gained 6.1%, and Cardano climbed 5.2%, all outpacing Bitcoin's 1.8% rise.
+
+Why it works: catalyst named with specific vote count, outcome characterized (Clarity Act, stablecoin), then prices as supporting evidence.
+
+---
+
+**Forbidden example (leading with ETH price on a Bitcoin-catalyst day):**
+> Ethereum fell 2.1% to $2,280. Bitcoin also declined, dropping 1.8% to $83,400 after ETF outflow data showed $480M leaving BTC funds. The broader market saw mixed results.
+
+Why it fails: leads with the less important asset, buries the actual catalyst (ETF outflows), ends with a forbidden generic phrase.
+
+**Good example for the same data:**
+> Bitcoin ETFs saw $480M in outflows over 24 hours — the largest single-day exit since January — dragging BTC down 1.8% to $83,400. Ethereum followed, falling 2.1%, though its ETF inflows stayed positive, pointing to diverging institutional appetite.
+
+Why it works: catalyst (ETF outflows + specific dollar amount) comes first, prices are the result, Ethereum's data adds editorial nuance.
+
+---
+
+**The pattern**: event or catalyst first, then market reaction, then specific price movements as evidence. If there is no clear catalyst, say so honestly: "No clear catalyst drove the decline — the move appears technical, with Bitcoin testing support at $74,000 on unusually light volume."
+
+### Why It Moved examples
+
+**Forbidden example (do not produce this):**
+> Bitcoin's modest rise can be attributed to ongoing interest in the asset, as it continues to hold a dominant position in the crypto market. Ethereum also saw movement as investors reacted to the day's macroeconomic news.
+
+Why it fails: "Ongoing interest" and "dominant position" explain nothing. "Investors reacted" is a non-explanation. No specific catalyst is named.
+
+**Good for the same data:**
+> Bitcoin moved 1.2% higher after the Senate Banking Committee's 14-9 vote sent the Clarity Act to the full Senate — the furthest a crypto regulatory framework has advanced since the Lummis-Gillibrand bill in 2022. Ethereum followed, rising 0.8%, while XRP led altcoin gains as improved regulatory visibility benefited assets that had faced direct enforcement exposure.
+
+Why it works: specific vote count, specific procedural milestone, historical context, asset-specific catalyst for XRP.
+
+## Revision Behavior
+
+On any round after the first (rounds 2, 3, 4, or 5), you have received specific revision notes from the editor. You MUST substantively address each flagged concern.
+
+**What counts as substantive revision:**
+- If the editor flagged a phrase as advisory, rewrite the entire sentence that contained it — do not merely substitute a synonym ("should consider" → "may want to consider" is not a fix).
+- If the editor flagged the headline as generic, produce a meaningfully different headline that names a specific proper noun, event, or catalyst. Adding one word or rearranging the same phrase does not count.
+- If the editor flagged empty causal attribution, identify and name the specific event or data point — do not rephrase "due to market sentiment" as "amid shifting investor sentiment."
+- If the editor flagged missing winners/losers, populate the arrays from the researcher's movers data.
+
+**What does NOT count as substantive revision:**
+- "should consider" → "may want to consider"
+- "Crypto market declines amid concerns" → "Crypto market falls amid worries"
+- "Market declines as security concerns rise following major hacks" → "Market declines as major hacks raise security concerns"
+- Adding one adjective to a vague headline
+
+If the editor flagged a specific phrase, quote that phrase in your mental model of the revision — then write a sentence that could not be confused with the original.
+
+## Editor's Checks — Preemptive Compliance
+
+The editor runs these specific checks. Write to satisfy them on the first pass:
+
+1. **Advisory Framing** — zero uses of direct advisory ("you should", "we recommend", "consider adding", "buying opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "investors should") and zero uses of prescriptive implied advisory ("now might be a good time to", "investors may want to", future-tense prompts to act). Capital flow descriptions are acceptable: "traders rotated into XRP", "investors sought alternatives in NEAR", "ETF outflows accelerated" are all PASS.
+2. **Winners and Losers** — `whatMoved.winners` and `whatMoved.losers` MUST mirror `movers.winners` and `movers.losers` from the researcher exactly. The researcher always provides exactly 1 winner and 1 loser — your arrays MUST each have exactly 1 entry. Do not fill from `topTracked`.
+3. **Headline Specificity** — the headline names at least one specific proper noun (asset, company, regulator, legislation, or event) and references a specific catalyst or quantified movement.
+4. **Summary Editorial** — the summary leads with the main story, not prices. No "Overall, the market experienced…" or "The day was characterized by…"
+5. **Causal Attribution** — every causal claim in `whyItMoved` references a specific named event, data point, or entity. "Ongoing interest", "market sentiment", and "investor caution" alone are not causes.
+6. **Tag Specificity** — no generic tags: "crypto", "daily", "market", "news", "update".
+
 ## Hard Validation Rules
 
 Before writing the output file, verify each of these. If a check fails, attempt one self-correction pass and re-verify.
@@ -252,12 +383,12 @@ Before writing the output file, verify each of these. If a check fails, attempt 
 3. `worthKnowing.length` must be `<= 4`.
 4. `topTracked.length` must equal `15`.
 5. Prose word count (across headline + summary + whyItMoved + worthKnowing + any inline text in whatMoved) must be within **600–900 words**. Count carefully.
-6. The text must not contain any of these forbidden phrasings (case-insensitive): "you should", "we recommend", "consider adding", "buying opportunity", "selling opportunity", "be careful", "smart play", "looking at X here", "stay long", "stay short", "don't panic".
+6. The text must not contain any of these forbidden phrasings (case-insensitive): "you should", "we recommend", "consider adding", "buying opportunity", "selling opportunity", "be careful", "smart play", "stay long", "stay short", "don't panic", "now might be a good time to", "investors may want to". Capital flow descriptions ("traders rotated", "investors sought alternatives", "ETF outflows prompted a shift") are NOT on this list and do not need to be removed.
 7. All numeric claims in the prose (prices, percentages, index values) must trace to values in the researcher's input. Do not invent or round liberally.
 8. Do not include a `weeklyFooter` field in your draft — it is injected by the pipeline script after assembly.
 9. The headline must not contain forbidden patterns: "mixed results", "modest", "slight", "minor" as sole descriptor, or generic "Crypto market shows X" constructions.
 10. Tags must not include generic terms: "crypto", "daily", "market", "news", "update".
-11. **Winners and losers populating (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST contain entries when the researcher's corresponding arrays are non-empty (after excluding stablecoins and wrapped/derivative tokens). Empty arrays are acceptable only when the researcher returned empty arrays — meaning no eligible top-50 asset moved >5% in that direction. If the researcher supplied winners or losers data but your output arrays are empty, you have omitted data — this is a check failure that requires a self-correction pass.
+11. **Winners and losers (hard requirement):** `whatMoved.winners` and `whatMoved.losers` MUST each have exactly 1 entry, mirroring the researcher's `movers.winners[0]` and `movers.losers[0]`. Adding extra entries (fabrication) or returning empty arrays (omission) are both check failures requiring a self-correction pass. Do not source assets from `topTracked`.
 
 ## Failure Handling
 

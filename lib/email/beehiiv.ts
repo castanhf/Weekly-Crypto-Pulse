@@ -39,6 +39,19 @@ const getCredentials = (): { apiKey: string; pubId: string } => {
   return { apiKey, pubId };
 };
 
+// WU3: try JSON body first so error messages are human-readable, not raw JSON strings.
+const extractErrorBody = (text: string): string => {
+  if (!text) return '(no body)';
+  try {
+    const parsed = JSON.parse(text) as Record<string, unknown>;
+    if (typeof parsed.message === 'string') return parsed.message;
+    if (typeof parsed.error === 'string') return parsed.error;
+    return text;
+  } catch {
+    return text;
+  }
+};
+
 const beehiivFetch = async (url: string, init: RequestInit, apiKey: string): Promise<Response> => {
   const headers = {
     Authorization: `Bearer ${apiKey}`,
@@ -71,7 +84,7 @@ const beehiivFetch = async (url: string, init: RequestInit, apiKey: string): Pro
 
     if (response.status >= 500) {
       const text = await response.text().catch(() => '');
-      lastErr = new BeehiivError(`Beehiiv server error (${response.status}): ${text}`, response.status, true);
+      lastErr = new BeehiivError(`Beehiiv server error (${response.status}): ${extractErrorBody(text)}`, response.status, true);
       if (attempt < BACKOFF_MS.length) {
         const delay = BACKOFF_MS[attempt] ?? BACKOFF_MS[BACKOFF_MS.length - 1];
         console.error(`[beehiiv] Server error. Retrying in ${delay / 1000}s…`);
@@ -81,8 +94,9 @@ const beehiivFetch = async (url: string, init: RequestInit, apiKey: string): Pro
       throw lastErr;
     }
 
+    // WU3: include response body in all client errors so future debugging isn't blind.
     const text = await response.text().catch(() => '');
-    throw new BeehiivError(`Beehiiv client error (${response.status}): ${text}`, response.status, false);
+    throw new BeehiivError(`Beehiiv client error (${response.status}): ${extractErrorBody(text)}`, response.status, false);
   }
 
   throw lastErr ?? new BeehiivError('Beehiiv fetch failed.', 0, false);
@@ -120,8 +134,6 @@ const resolveDailyDigestSegmentId = async (apiKey: string, pubId: string): Promi
 export const subscribeToList = async (subscriber: BeehiivSubscriber): Promise<void> => {
   const { apiKey, pubId } = getCredentials();
 
-  const tags: string[] = subscriber.dailyDigestOptIn ? ['daily_digest_opt_in'] : [];
-
   const customFields = subscriber.customFields
     ? Object.entries(subscriber.customFields).map(([name, value]) => ({ name, value }))
     : [];
@@ -131,34 +143,62 @@ export const subscribeToList = async (subscriber: BeehiivSubscriber): Promise<vo
     reactivate_existing: true,
     send_welcome_email: true,
     utm_source: 'crypto-pulse-website',
-    custom_fields: customFields,
-    ...(tags.length > 0 ? { tags } : {})
+    custom_fields: customFields
+    // WU2: Beehiiv v2 subscriptions endpoint does not accept a `tags` field.
+    // Tags are applied via a separate POST /subscriptions/{id}/tags call below.
   };
 
   const url = `${BEEHIIV_BASE}/publications/${pubId}/subscriptions`;
-  await beehiivFetch(url, { method: 'POST', body: JSON.stringify(body) }, apiKey);
+  const subResponse = await beehiivFetch(url, { method: 'POST', body: JSON.stringify(body) }, apiKey);
+
+  if (!subscriber.dailyDigestOptIn) return;
+
+  // WU2: apply tag via dedicated tags endpoint (two-step subscribe+tag).
+  const subJson = (await subResponse.json()) as { data?: { id?: string } };
+  const subId = subJson.data?.id;
+
+  if (!subId) {
+    console.warn('[beehiiv] WARNING: Subscription response did not include an ID — cannot apply daily_digest_opt_in tag.');
+    return;
+  }
+
+  try {
+    const tagsUrl = `${BEEHIIV_BASE}/publications/${pubId}/subscriptions/${subId}/tags`;
+    await beehiivFetch(tagsUrl, { method: 'POST', body: JSON.stringify({ tags: ['daily_digest_opt_in'] }) }, apiKey);
+  } catch (err) {
+    // Tagging failure is non-fatal: subscriber is created, but won't receive daily digests.
+    console.warn(
+      `[beehiiv] WARNING: Failed to apply daily_digest_opt_in tag to subscription ${subId}: ${err instanceof Error ? err.message : String(err)}`
+    );
+  }
 };
 
 export const sendBroadcast = async (broadcast: BeehiivBroadcast): Promise<{ broadcastId: string }> => {
   const { apiKey, pubId } = getCredentials();
 
-  let segmentId: string | undefined;
+  // WU1: resolve segment ID only when targeting daily_digest_opt_in.
+  let includeSegmentIds: string[] = [];
   if (broadcast.segment === 'daily_digest_opt_in') {
-    segmentId = await resolveDailyDigestSegmentId(apiKey, pubId);
+    const segmentId = await resolveDailyDigestSegmentId(apiKey, pubId);
+    includeSegmentIds = [segmentId];
   }
 
   const body: Record<string, unknown> = {
+    // WU1: title is required by Beehiiv Posts API; use the email subject.
+    title: broadcast.subject,
     subject: broadcast.subject,
-    content: {
-      rendered_html: broadcast.htmlBody,
-      plaintext: broadcast.plaintextBody
-    },
-    status: broadcast.scheduledFor ? 'scheduled' : 'draft',
-    ...(broadcast.scheduledFor ? { send_at: broadcast.scheduledFor } : {}),
-    ...(segmentId !== undefined ? { segment_id: segmentId } : {})
+    // WU1: body_content replaces content.rendered_html (Beehiiv Posts API structure).
+    body_content: broadcast.htmlBody,
+    // WU1: 'confirmed' sends immediately; 'draft' saves without sending.
+    status: 'confirmed',
+    ...(broadcast.scheduledFor ? { scheduled_at: broadcast.scheduledFor } : {}),
+    // Beehiiv /posts requires both `email` and `web` when `recipients` is provided.
+    // `web: {}` means no web-page publication (email-only delivery).
+    ...(includeSegmentIds.length > 0 ? { recipients: { email: { include_segment_ids: includeSegmentIds }, web: {} } } : {})
   };
 
-  const url = `${BEEHIIV_BASE}/publications/${pubId}/broadcasts`;
+  // WU1: correct endpoint is /posts, not /broadcasts (which does not exist in Beehiiv v2).
+  const url = `${BEEHIIV_BASE}/publications/${pubId}/posts`;
   const response = await beehiivFetch(url, { method: 'POST', body: JSON.stringify(body) }, apiKey);
   const json = (await response.json()) as { data?: { id?: string } };
 

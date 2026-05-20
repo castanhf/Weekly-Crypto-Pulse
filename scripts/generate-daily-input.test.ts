@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 
 vi.mock('../lib/llm/client', () => ({ callLlm: vi.fn() }));
@@ -223,7 +224,7 @@ describe('generateDailyInput', () => {
     expect(userMessage?.content).toContain('No real news available');
   });
 
-  it('handles quiet day with no movers meeting threshold', async () => {
+  it('always produces exactly 1 winner and 1 loser (top-N rule)', async () => {
     const quietMarkets = MOCK_TOP50.map((m) => ({
       ...m,
       price_change_percentage_24h_in_currency: m.market_cap_rank <= 15 ? m.price_change_percentage_24h_in_currency : 1.0
@@ -244,11 +245,13 @@ describe('generateDailyInput', () => {
     await generateDailyInput(TARGET_DATE);
 
     const output = JSON.parse(writtenJson!) as {
-      movers: { winners: unknown[]; losers: unknown[] };
+      movers: { winners: unknown[]; losers: unknown[]; sectionLabels: { winners: string; losers: string }; marketRegime: string };
     };
 
-    expect(output.movers.winners).toHaveLength(0);
-    expect(output.movers.losers).toHaveLength(0);
+    expect(output.movers.winners).toHaveLength(1);
+    expect(output.movers.losers).toHaveLength(1);
+    expect(output.movers.sectionLabels).toBeDefined();
+    expect(output.movers.marketRegime).toBeDefined();
   });
 
   it('writes failure sentinel and throws on critical source failure', async () => {

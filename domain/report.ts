@@ -66,6 +66,8 @@ export type Report = Readonly<{
   plainspokenOpening?: PlainspokenOpening;
   /** Weekly v1.2 additive field. DeFiLlama TVL data. Absent on v1.0/v1.1 artifacts. */
   capitalFlows?: CapitalFlows;
+  /** Weekly v1.3 additive field. Adaptive labels based on market regime (all-positive/all-negative/mixed). */
+  sectionLabels?: Readonly<{ winners: string; losers: string }>;
 }>;
 
 export type ReportArtifact = Readonly<{

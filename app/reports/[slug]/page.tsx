@@ -75,7 +75,7 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
         <div className="order-first space-y-8 xl:space-y-10">
           <ExecutiveSummary summary={report.metadata.summary} />
           <MarketSnapshotCards snapshot={report.marketSnapshot} />
-          <WinnersAndLosers movers={report.movers} />
+          <WinnersAndLosers movers={report.movers} sectionLabels={report.sectionLabels} />
           <RegimeSection regime={report.regime} />
           <ReportSections sections={report.sections} />
           <MethodologyNote />
