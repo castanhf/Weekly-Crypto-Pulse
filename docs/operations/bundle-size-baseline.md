@@ -1,6 +1,6 @@
 # Bundle Size Baseline
 
-Captured from branch `WCP-156/test-infrastructure-and-observability` (2026-05-20) via `npm run build`.
+Captured from `release/r2.1.1` after WCP-129 (Tailwind v4) + WCP-158 (React 19) + WCP-149 (TS 6) merges (2026-05-20) via `npm run build`.
 
 ## How to run the analyzer
 
