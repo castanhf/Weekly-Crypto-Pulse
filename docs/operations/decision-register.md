@@ -145,3 +145,46 @@ Retry/backoff policy unchanged: 60s/180s/540s exponential backoff on retryable e
 - Mid-article CTAs that interrupt the reading experience
 
 **Editorial reasoning:** Readers upgrade because they trust what they've been getting for free, not because they were teased. The free product's quality is the conversion mechanism.
+
+---
+
+## D-05 — Email distribution deferred (Option B1 minimal abstraction) (R2.1.1)
+
+**Decision (WCP-150):** Email distribution is disabled via `BEEHIIV_BROADCAST_ENABLED=false`. Pipeline orchestrators are decoupled from any specific ESP via the `EmailSender` interface in `lib/email/email-sender.ts`. Beehiiv-specific code is preserved at `lib/email/beehiiv-email-sender.ts` for future reuse.
+
+**Root cause:** Beehiiv's Send API (programmatic broadcast trigger) is restricted to Enterprise tier. The free/Creator tier supports subscriber management and Beehiiv's own editorial UI, but not API-driven broadcast sends. This was not documented in Beehiiv's public API docs and was only discoverable via a 403 in production.
+
+**Re-enablement options (in order of operator preference):**
+1. Upgrade Beehiiv to Enterprise (custom pricing)
+2. Migrate to an alternative ESP with a Send API on affordable plans (Resend, Buttondown)
+3. Continue deferral indefinitely (current state)
+
+**Architecture constraint:** Do not add ESP-specific send calls directly to pipeline orchestrators. All send calls go through the `EmailSender` interface so the ESP can be swapped without touching orchestration.
+
+**Full checklist:** See `docs/operations/email-distribution.md`.
+
+---
+
+## D-06 — Winners/losers: top-N rule with adaptive section labels (R2.1.1)
+
+**Decision (WCP-153):** Replace the pre-R2.1.1 >5% threshold for including an asset in the winners/losers section with a top-N-by-percent-change rule:
+- Daily reports: N=1 (exactly 1 winner + 1 loser, always)
+- Weekly reports: N=3 (3+3, always)
+
+Adaptive section labels: on all-positive days (all-loser candidates have positive change), the loser section is labeled "Weakest gainers"; on all-negative days (all-winner candidates have negative change), the winner section is labeled "Smallest losses". Default labels are "Top gainers" and "Biggest losers".
+
+**Rationale:** The threshold rule produced structurally inconsistent output — on quiet days, winners/losers were empty, forcing prose padding and editorial confusion. Top-N always provides context and is editorially honest: the section adapts its label to match the actual market character.
+
+**Single source of truth:** `lib/markets/winners-losers.ts` (`computeMovers`). Schema bump: `daily@1.1 → 1.2`, `weekly@1.2 → 1.3`. Backward compat preserved via validator dispatch.
+
+---
+
+## D-07 — Per-agent LLM configuration (R2.1.1)
+
+**Decision (WCP-152):** Each pipeline script defines its own `*_LLM` constant specifying primary and secondary providers. The writer, editor, and Sunday digest writer use `primary: 'anthropic'` (Sonnet 4.6); the researcher uses `primary: 'github-models'` (gpt-4o-mini).
+
+**Rationale:** Editorial quality requires Sonnet 4.6. Researcher tasks are structured data gathering, where gpt-4o-mini is sufficient and free (via GITHUB_TOKEN). Separating the config per script makes provider routing explicit and auditable.
+
+**Constraint:** Do not create a global LLM config. Each script's routing must be visible at the call site. If a script's requirements change, update its `*_LLM` constant and document the change here.
+
+**Full routing table and cost projections:** See `docs/operations/model-configuration.md`.
