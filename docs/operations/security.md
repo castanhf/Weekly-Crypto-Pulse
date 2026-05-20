@@ -192,3 +192,15 @@ Findings appear in the repository's Security tab (GitHub Advanced Security). Rev
 | **Annually** | Full secret rotation (ANTHROPIC_API_KEY on 1 January) |
 | **On trigger** | Any new third-party integration, auth surface, or database added → re-assess threat model |
 | **On compromise** | Rotate affected secrets immediately; audit access logs |
+
+---
+
+## Security advisory triage
+
+Security advisory PRs follow the standard Saturday weekly review pattern with one exception: severity matters.
+
+- **Critical/High severity** advisories should be merged within 48 hours of PR opening, even if it requires a major version bump. The risk of leaving a known vulnerability open exceeds the risk of breakage from a major version upgrade.
+- **Medium severity** advisories can follow normal weekly triage timing.
+- **Low severity** advisories can be batched with other Dependabot work.
+
+For Critical/High severity in major version dependencies, treat as a small interstitial PR rather than waiting for a coordinated batch (like Prompt 8).
