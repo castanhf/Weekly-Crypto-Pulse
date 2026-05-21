@@ -58,13 +58,20 @@ jobs:
       - name: Commit and push artifact
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/dailies/ data/daily-inputs/ data/daily-drafts/
-          git diff --quiet --staged && echo "No changes to commit." && exit 0
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dailies/
+
+          if git diff --cached --quiet; then
+            echo "No daily artifact changes to commit."
+            exit 0
+          fi
+
           DATE_LABEL="${{ inputs.target_date }}"
-          COMMIT_DATE="${DATE_LABEL:-auto}"
-          git commit -m "chore: daily report ${COMMIT_DATE}"
+          COMMIT_DATE="${DATE_LABEL:-$(date +%Y-%m-%d)}"
+          git commit -m "chore: add daily artifact ${COMMIT_DATE}"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Sunday digest (Sundays only)
         if: steps.day-check.outputs.is_sunday == 'true'
