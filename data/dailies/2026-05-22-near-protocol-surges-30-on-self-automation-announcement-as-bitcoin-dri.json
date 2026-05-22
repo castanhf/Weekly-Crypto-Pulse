@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-22T09:39:20.909Z",
+  "publishedAt": "2026-05-22",
+  "slug": "2026-05-22-near-protocol-surges-30-on-self-automation-announcement-as-bitcoin-dri",
+  "headline": "NEAR Protocol surges 30% on self-automation announcement as Bitcoin drifts near $77K",
+  "summary": "NEAR Protocol jumped nearly 30% after announcing plans to automate its own network growth — the sharpest single-day move among tracked assets and a rare burst of energy on an otherwise quiet Friday. Bitcoin slipped 0.68% to $77,141 and Ethereum edged down 0.50% to $2,118, with the Fear & Greed index sitting at 28 — deep in fear territory. The broader market held a holding pattern, but the NEAR story and a divergence in ETF flows between XRP and Bitcoin are worth watching.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 29.64,
+        "catalyst": "NEAR Protocol announced plans to automate its own network growth, drawing a surge of investor interest that sent the token up nearly 30% in 24 hours.",
+        "priceUsd": 2.27,
+        "priceChange24hUsd": 0.67
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -4.49,
+        "catalyst": "Monero fell 4.49% amid broader market softness and continued negative sentiment around privacy-focused coins, which have faced persistent regulatory scrutiny.",
+        "priceUsd": 384.62,
+        "priceChange24hUsd": -17.26
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77141,
+        "changePct24h": -0.68,
+        "marketCapUsd": 1545193776418,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2118.43,
+        "changePct24h": -0.5,
+        "marketCapUsd": 255623663785,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": -0.02,
+        "marketCapUsd": 189630443151,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 655.74,
+        "changePct24h": 0.46,
+        "marketCapUsd": 88392357626,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": -1.15,
+        "marketCapUsd": 84058364158,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 76881127953,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 87.04,
+        "changePct24h": 0.55,
+        "marketCapUsd": 50305995066,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3648,
+        "changePct24h": 1.25,
+        "marketCapUsd": 34578188529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.026,
+        "changePct24h": -0.89,
+        "marketCapUsd": 18456950376,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1056,
+        "changePct24h": 0.22,
+        "marketCapUsd": 16293020252,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 59.27,
+        "changePct24h": 0.99,
+        "marketCapUsd": 14164264235,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 642.99,
+        "changePct24h": -3.16,
+        "marketCapUsd": 10730285096,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.02,
+        "marketCapUsd": 10569554762,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2512,
+        "changePct24h": 0.78,
+        "marketCapUsd": 9294750055,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.01,
+        "changePct24h": -0.56,
+        "marketCapUsd": 9212091675,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's standout story was NEAR Protocol, which jumped 29.64% after announcing a plan to automate its own network growth — essentially using AI-driven processes to expand the protocol without manual intervention. The announcement attracted fresh capital and put NEAR among the top single-day movers in the broader market. Outside of NEAR, the session was subdued. Bitcoin drifted 0.68% lower to $77,141, and Ethereum slipped 0.50% to $2,118. Neither move had a clear catalyst; both look like low-conviction drift in a market where the Fear & Greed index sits at 28 — a reading that reflects genuine caution, not panic, but not confidence either.\n\nZcash fell 3.16% and Monero dropped 4.49%, continuing a pattern of pressure on privacy-focused coins that has persisted through recent months as regulatory scrutiny of anonymous transactions remains elevated.\n\nOne notable divergence: XRP ETFs attracted fresh inflows even as Bitcoin and Ethereum ETFs continued to struggle with redemptions. XRP's spot price still fell 1.15% on the day, but the ETF flow data points to institutional interest holding up in a corner of the market where Bitcoin funds are losing ground. Bitcoin's implied volatility also hit a seven-month low — an unusual reading given the macro backdrop, suggesting that options traders are not pricing in a near-term large move even as sentiment remains cautious.",
+  "worthKnowing": [
+    "XRP ETFs drew fresh inflows while Bitcoin and Ethereum funds continued to see outflows, marking a notable split in institutional appetite across the three largest crypto ETF categories.",
+    "Bitcoin's implied volatility (a measure of how large a price swing options traders expect) fell to a seven-month low, an unusually calm reading given ongoing macroeconomic uncertainty.",
+    "Billionaire Mark Cuban said he sold most of his Bitcoin after the narrative that BTC acts as a hedge against inflation or dollar weakness failed to play out to his satisfaction."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2660031075458,
+    "btcDominancePct": 58.102,
+    "ethDominancePct": 9.6098,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "near-protocol",
+    "etf-flows",
+    "xrp-etf",
+    "privacy-coins",
+    "bitcoin-volatility",
+    "mark-cuban"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
