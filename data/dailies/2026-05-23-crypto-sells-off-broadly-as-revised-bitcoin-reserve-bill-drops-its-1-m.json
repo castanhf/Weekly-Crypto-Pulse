@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-23T08:29:23.934Z",
+  "publishedAt": "2026-05-23",
+  "slug": "2026-05-23-crypto-sells-off-broadly-as-revised-bitcoin-reserve-bill-drops-its-1-m",
+  "headline": "Crypto sells off broadly as revised Bitcoin reserve bill drops its 1-million-BTC purchase target",
+  "summary": "A revised US strategic Bitcoin reserve bill — one that dropped its original 1-million-BTC purchase target and introduced a 20-year lockup requirement for government-held coins — landed as the day's main catalyst for a broad selloff. Bitcoin fell 3.6% to $74,610 and Ethereum dropped 4.7% to $2,027.98, with Toncoin leading all losses at -12% and Zcash not far behind at -11.4%. The Fear & Greed index sits at 28, firmly in fear territory, as regulatory headlines and an executive departure at Robinhood added to the cautious tone.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": 0.14,
+        "catalyst": "No specific catalyst — Canton edged up 0.14% on a broadly red day, the only tracked asset to finish in positive territory.",
+        "priceUsd": 0.154915,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "TON",
+        "name": "Toncoin",
+        "changePct24h": -12.05,
+        "catalyst": "No clear project-specific trigger — Toncoin led all losses at -12%, likely amplifying the broad market selloff given its recent volatility profile.",
+        "priceUsd": 1.77,
+        "priceChange24hUsd": -0.21
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 74610,
+        "changePct24h": -3.58,
+        "marketCapUsd": 1493706234244,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2027.98,
+        "changePct24h": -4.73,
+        "marketCapUsd": 244722383554,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": 0,
+        "marketCapUsd": 189501195538,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 639.28,
+        "changePct24h": -3.07,
+        "marketCapUsd": 86164992384,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.31,
+        "changePct24h": -3.9,
+        "marketCapUsd": 81187115605,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 76500479336,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 82.14,
+        "changePct24h": -5.92,
+        "marketCapUsd": 47473901404,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3601,
+        "changePct24h": -1.08,
+        "marketCapUsd": 34137811316,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.022,
+        "changePct24h": -0.47,
+        "marketCapUsd": 18400243945,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0995,
+        "changePct24h": -5.95,
+        "marketCapUsd": 15351111593,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.49,
+        "changePct24h": -4.93,
+        "marketCapUsd": 13229094763,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 11131315270,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 578.15,
+        "changePct24h": -11.41,
+        "marketCapUsd": 9648375321,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.92,
+        "changePct24h": -0.82,
+        "marketCapUsd": 9131234420,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2384,
+        "changePct24h": -5.39,
+        "marketCapUsd": 8820277743,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest catalyst was a revised US strategic Bitcoin reserve bill that surfaced in Congress. The updated version dropped its original target of purchasing 1 million BTC — a figure that had been cited as a potential source of sustained government buying pressure — and introduced a 20-year lockup period for any Bitcoin the government holds. Markets read the revision as a meaningful step back from aggressive accumulation. The original bill had implied a large, price-supportive buyer entering the market; the revised version removes that expectation entirely.\n\nBitcoin fell 3.6% to $74,610, pulling most of the top 20 assets lower with it. Ethereum dropped 4.7% to $2,027.98. Solana and Dogecoin each fell roughly 6%, and Cardano slid 5.4%. Zcash was the hardest hit among the top 15, falling 11.4% to $578.15 — no specific project-level catalyst was apparent for that move beyond the broader risk-off tone. Toncoin, the day's biggest loser across all tracked assets, dropped 12% with no clear project-specific trigger.\n\nAdding to the cautious mood, Congress launched a large-scale insider trading investigation into prediction markets Polymarket and Kalshi. While neither is a crypto exchange, both operate in the crypto-adjacent space and rely on similar regulatory goodwill. The probe signals that congressional scrutiny of crypto-adjacent platforms is widening beyond exchanges and token issuers.\n\nRobinhood's Crypto COO Tanya Denisova also announced her departure amid a revenue slowdown at the firm — executive turnover during a revenue dip adds to the day's cautious backdrop without being a direct market-moving event on its own.\n\nThe Fear & Greed index at 28 reflects the session's mood: fear territory, not panic. BTC dominance held at 58.1%, suggesting the selloff was broad rather than a rotation out of Bitcoin specifically — everything fell together.",
+  "worthKnowing": [
+    "SEC Commissioner Hester Peirce pushed back on concerns that a new crypto rule would encourage the creation of synthetic tokens, arguing the regulation is narrower in scope than critics have suggested.",
+    "F2Pool's founder, who controls roughly 11% of Bitcoin's total mining hashrate, is set to lead the first crewed SpaceX mission to Mars — an unusual intersection of crypto infrastructure and space exploration."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2575390124343,
+    "btcDominancePct": 58.0615,
+    "ethDominancePct": 9.5142,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "bitcoin-reserve-bill",
+    "toncoin",
+    "robinhood-crypto",
+    "polymarket-kalshi",
+    "sec-peirce",
+    "broad-selloff"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
