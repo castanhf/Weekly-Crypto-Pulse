@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-24T08:37:37.964Z",
+  "publishedAt": "2026-05-24",
+  "slug": "2026-05-24-trumps-iran-peace-deal-sparks-a-broad-crypto-rally-with-bitcoin-up-3-a",
+  "headline": "Trump's Iran peace deal sparks a broad crypto rally, with Bitcoin up 3% and Solana up 5%",
+  "summary": "President Trump's announcement of a peace agreement with Iran lifted risk assets broadly on May 24, sending Bitcoin up 3.1% to $76,699 and Ethereum up 4.8% to $2,118. Solana and Hyperliquid led the charge among larger names, while NEAR Protocol jumped nearly 16% to top the day's movers. The rally came despite a rough week for Bitcoin ETFs, which shed $1.26 billion — their worst outflow week since late January.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 15.74,
+        "catalyst": "NEAR Protocol surged 15.74% as market sentiment improved following President Trump's announcement of an Iran peace agreement, boosting crypto prices broadly.",
+        "priceUsd": 2.37,
+        "priceChange24hUsd": 0.37
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -1.05,
+        "catalyst": "Bitcoin Cash declined 1.05% amid ongoing concerns over spot Bitcoin ETF outflows, which have seen significant redemptions in recent weeks.",
+        "priceUsd": 352.67,
+        "priceChange24hUsd": -3.69
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76699,
+        "changePct24h": 3.13,
+        "marketCapUsd": 1536931987557,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2118.29,
+        "changePct24h": 4.78,
+        "marketCapUsd": 255782667682,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.01,
+        "marketCapUsd": 189487152186,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 657.52,
+        "changePct24h": 3.06,
+        "marketCapUsd": 88645118514,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": 3.77,
+        "marketCapUsd": 84041093393,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 76431516074,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 86.19,
+        "changePct24h": 5.13,
+        "marketCapUsd": 49845241876,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3623,
+        "changePct24h": 0.73,
+        "marketCapUsd": 34349526480,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 0.83,
+        "marketCapUsd": 18627042084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1027,
+        "changePct24h": 3.46,
+        "marketCapUsd": 15853954703,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.61,
+        "changePct24h": 12.58,
+        "marketCapUsd": 14918364049,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 11116746351,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 626.49,
+        "changePct24h": 7.86,
+        "marketCapUsd": 10452685926,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.08,
+        "changePct24h": 1.6,
+        "marketCapUsd": 9279118729,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2454,
+        "changePct24h": 3.22,
+        "marketCapUsd": 9080037329,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was geopolitical: President Trump announced a peace agreement with Iran, easing tensions that had weighed on risk assets. Crypto markets responded quickly — Bitcoin climbed 3.1%, Ethereum 4.8%, and Solana 5.1%, with smaller assets posting even larger gains. NEAR Protocol jumped nearly 16%, and Hyperliquid rose 12.6%, as traders rotated into higher-beta names once the macro signal turned positive.\n\nThe Iran news mattered because crypto has increasingly traded alongside other risk assets — when geopolitical uncertainty drops, capital tends to flow back in. The Fear & Greed index sits at 25 (Fear), meaning the market was already priced for anxiety; a positive surprise like a peace deal can produce outsized moves from that starting point.\n\nThe rally happened against a complicated backdrop. Spot Bitcoin ETFs — funds that hold actual Bitcoin and trade on stock exchanges — recorded $1.26 billion in outflows last week, their worst week since late January. Ethereum ETFs extended their own outflow streak to ten consecutive days. That kind of sustained institutional selling had been a headwind. Today's geopolitical catalyst was strong enough to push prices higher anyway, but the ETF data is a reminder that not all institutional money is moving in the same direction.\n\nZcash's 7.9% gain stood out among the top 15 tracked assets; no specific catalyst was identified beyond the broad risk-on tone. Bitcoin Cash was the lone decliner in the top 15, slipping 1.1% — the only asset that couldn't catch the day's tailwind.",
+  "worthKnowing": [
+    "The SEC approved Nasdaq to list Bitcoin index options — a step that could make it easier for institutional investors to hedge or gain exposure to Bitcoin without holding the asset directly.",
+    "Spot Bitcoin ETFs shed $1.26 billion last week, their worst outflow week since late January, while Ethereum ETFs recorded a tenth consecutive day of net redemptions.",
+    "Analysts at several firms published notes suggesting Bitcoin may be positioned to outperform traditional stocks and bonds after a period of underperformance relative to Wall Street benchmarks."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2647655912420,
+    "btcDominancePct": 58.0741,
+    "ethDominancePct": 9.665,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "iran-peace-deal",
+    "btc-etf-outflows",
+    "sec-bitcoin-options",
+    "near-protocol",
+    "hyperliquid",
+    "solana"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
