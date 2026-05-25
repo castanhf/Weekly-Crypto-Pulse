@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-25T10:20:37.820Z",
+  "publishedAt": "2026-05-25",
+  "slug": "2026-05-25-bitcoin-holds-above-77k-as-etf-six-day-loss-streak-weighs-on-defi-conf",
+  "headline": "Bitcoin holds above $77K as ETF six-day loss streak weighs on DeFi confidence",
+  "summary": "Bitcoin climbed 0.90% to $77,582, buoyed by a 5% drop in oil prices that lifted Asian equity markets and pulled some risk appetite back into crypto. The bigger story is what's happening beneath the surface: Bitcoin ETFs have now posted losses for six consecutive days, pushing cumulative 2026 flows closer to net negative territory and dampening confidence in DeFi tokens like Uniswap. Nasdaq's announcement that it will list Bitcoin options adds a longer-term institutional angle worth watching.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 4.65,
+        "catalyst": "No clear fundamental catalyst — MemeCore led the day's gainers with a 4.65% move on no specific news, likely driven by speculative trading activity.",
+        "priceUsd": 3,
+        "priceChange24hUsd": 0.14
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -2.13,
+        "catalyst": "Uniswap's 2.13% decline tracks the broader loss of confidence in DeFi assets as Bitcoin ETFs extended their losing streak to six days, reducing appetite for higher-risk crypto positions.",
+        "priceUsd": 3.38,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77582,
+        "changePct24h": 0.9,
+        "marketCapUsd": 1553523873660,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2118.23,
+        "changePct24h": -0.01,
+        "marketCapUsd": 255440105819,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": 0.01,
+        "marketCapUsd": 189408570551,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 661.64,
+        "changePct24h": 0.42,
+        "marketCapUsd": 89106671542,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": -0.29,
+        "marketCapUsd": 84059372180,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 76388666026,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 85.96,
+        "changePct24h": -0.3,
+        "marketCapUsd": 49674459076,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3664,
+        "changePct24h": 0.76,
+        "marketCapUsd": 34746492558,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 0,
+        "marketCapUsd": 18622163653,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1028,
+        "changePct24h": -0.32,
+        "marketCapUsd": 15859949260,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.53,
+        "changePct24h": 0.56,
+        "marketCapUsd": 14125976280,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 668.17,
+        "changePct24h": 4.03,
+        "marketCapUsd": 11113823509,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 11107328942,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.06,
+        "changePct24h": -0.21,
+        "marketCapUsd": 9275417037,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2452,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9064495675,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's 0.90% gain to $77,582 came on the back of a macro tailwind: oil prices fell roughly 5%, which lifted Asian equity markets and nudged investors toward riskier assets, including crypto. That external lift was the clearest single catalyst for the day's positive tone at the top of the market.\n\nThe more consequential story is the Bitcoin ETF loss streak. Spot Bitcoin ETFs — the funds that allow traditional investors to hold BTC without a crypto wallet — have now recorded outflows for six consecutive days, bringing 2026's cumulative ETF flows close to net negative. That sustained redemption pressure is a meaningful signal: institutional money that entered through ETFs earlier this year is pulling back, and the Fear & Greed index sitting at 30 (in \"Fear\" territory) reflects that caution.\n\nDeFi tokens felt the pressure most directly. Uniswap fell 2.13% as reduced ETF confidence rippled into higher-risk corners of the market. Zcash was the notable outlier among the top 15, rising 4.03% with no clear news catalyst — likely a technical move on thin volume.\n\nEthereum was essentially flat at $2,118, down just 0.01%, which is less a sign of strength than a sign that neither buyers nor sellers had conviction. Most of the top 15 moved less than 1% in either direction, consistent with a market in a holding pattern.",
+  "worthKnowing": [
+    "Nasdaq will begin listing Bitcoin options — standardized contracts that let investors bet on or hedge against Bitcoin's price — marking a significant step toward deeper institutional market infrastructure.",
+    "Security researchers identified a malware campaign called TrapDoor targeting developer environments for Aptos, Sui, and Solana projects, raising supply-chain security concerns for those ecosystems.",
+    "Hyperliquid, a decentralized trading platform, is drawing attention from institutional broker FalconX as a credible challenger to both traditional crypto exchanges and prediction markets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2664517286732,
+    "btcDominancePct": 58.2987,
+    "ethDominancePct": 9.5822,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "nasdaq-bitcoin-options",
+    "uniswap",
+    "trapdoor-malware",
+    "hyperliquid",
+    "zcash"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
