@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-26T10:08:50.254Z",
+  "publishedAt": "2026-05-26",
+  "slug": "2026-05-26-bitcoin-etp-outflows-hit-worst-week-of-2026-as-okb-surges-127-against-",
+  "headline": "Bitcoin ETP outflows hit worst week of 2026 as OKB surges 12.7% against a broad market slide",
+  "summary": "Crypto ETPs bled $1.5 billion in net outflows last week — the heaviest redemptions Bitcoin products have seen all year — and prices reflected the pressure, with BTC slipping 1.3% and most of the top 15 finishing in the red. OKB was the clear outlier, jumping 12.7% on no confirmed single catalyst, while Zcash fell 8.4% as geopolitical tensions hit privacy tokens hard. The session's story is institutional money moving out, not in.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": 12.72,
+        "catalyst": "OKB surged 12.72% as market participants reacted positively to recent OKX platform developments and broader altcoin sentiment, though no single confirmed catalyst has been identified.",
+        "priceUsd": 94.14,
+        "priceChange24hUsd": 11.98
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -8.42,
+        "catalyst": "Zcash fell 8.42% as ongoing market pressure and negative sentiment toward privacy tokens intensified following US strikes on Iran, which rattled risk appetite across the sector.",
+        "priceUsd": 603.45,
+        "priceChange24hUsd": -50.78
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76531,
+        "changePct24h": -1.27,
+        "marketCapUsd": 1533264729159,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2093.29,
+        "changePct24h": -1.06,
+        "marketCapUsd": 252629755349,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.01,
+        "marketCapUsd": 189396217072,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 656.08,
+        "changePct24h": -0.76,
+        "marketCapUsd": 88429940637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.34,
+        "changePct24h": -1.43,
+        "marketCapUsd": 82876675671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 76287513826,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 84.34,
+        "changePct24h": -1.74,
+        "marketCapUsd": 48774427500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3725,
+        "changePct24h": 1.63,
+        "marketCapUsd": 35319758087,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 0,
+        "marketCapUsd": 18619225593,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.101,
+        "changePct24h": -1.56,
+        "marketCapUsd": 15592477644,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 59.68,
+        "changePct24h": -5.68,
+        "marketCapUsd": 13276067084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.01,
+        "marketCapUsd": 11116923482,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 603.45,
+        "changePct24h": -8.42,
+        "marketCapUsd": 10070496652,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.99,
+        "changePct24h": -0.68,
+        "marketCapUsd": 9195184638,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2418,
+        "changePct24h": -1.19,
+        "marketCapUsd": 8947053227,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant story today is institutional money leaving. Crypto ETPs — exchange-traded products that let traditional investors hold crypto exposure without owning coins directly — saw $1.5 billion in net outflows last week, the worst weekly redemption figure for Bitcoin products in all of 2026. That kind of sustained selling from fund investors creates persistent downward pressure, and it showed: BTC fell 1.3%, ETH dropped 1.1%, SOL slid 1.7%, and XRP lost 1.4%. Almost nothing in the top 15 escaped.\n\nAdding to the pressure, Bitcoin is sitting at a technically sensitive level. Analysts are watching an upcoming options expiration that could amplify volatility in either direction — large options positions expiring can force traders to buy or sell the underlying asset to manage their exposure, which sometimes produces sharp short-term moves.\n\nGeopolitics added a sector-specific hit. US strikes on Iran rattled markets broadly, and privacy-focused tokens — coins designed to obscure transaction details — took a disproportionate beating. Zcash fell 8.4%, the session's worst performer among tracked assets. Hyperliquid dropped 5.7% in the same move.\n\nOKB was the session's anomaly, jumping 12.7% while nearly everything else fell. The researcher's data attributes the move to positive reaction to recent OKX platform developments and altcoin sentiment, but no specific confirmed catalyst has been identified — this appears to be a case where the move outpaced any clearly named news.\n\nTRON was the only other top-15 asset to finish green, gaining 1.6%, with no specific catalyst identified. The Fear & Greed index sits at 34 — firmly in Fear territory — consistent with the week's redemption data.",
+  "worthKnowing": [
+    "The XRP Ledger is rolling out an upgrade that removes accumulated NFT junk data and patches several bugs, a housekeeping move aimed at improving network performance.",
+    "Hyperliquid briefly overtook Dogecoin in market performance during the session before pulling back, ending the day down 5.7% as geopolitical risk weighed on speculative assets.",
+    "Ondo Finance founder Nathan Allman died unexpectedly; the firm has not yet commented publicly on leadership or operational continuity."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2639271072532,
+    "btcDominancePct": 58.2008,
+    "ethDominancePct": 9.5822,
+    "fearGreedIndex": 34
+  },
+  "tags": [
+    "etp-outflows",
+    "okb-okx",
+    "zcash-privacy-tokens",
+    "bitcoin-options-expiry",
+    "geopolitical-risk",
+    "hyperliquid"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
