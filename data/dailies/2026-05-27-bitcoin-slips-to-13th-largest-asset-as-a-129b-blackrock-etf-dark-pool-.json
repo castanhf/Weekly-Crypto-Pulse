@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-27T10:06:58.775Z",
+  "publishedAt": "2026-05-27",
+  "slug": "2026-05-27-bitcoin-slips-to-13th-largest-asset-as-a-129b-blackrock-etf-dark-pool-",
+  "headline": "Bitcoin slips to 13th-largest asset as a $1.29B BlackRock ETF dark-pool dump weighs on sentiment",
+  "summary": "A whale unloaded $1.29 billion worth of BlackRock's Bitcoin ETF in a single dark-pool trade — the kind of off-exchange block transaction used to move large positions without immediately moving the market — and Bitcoin fell 1% to around $75,771, briefly ceding its spot as the world's 12th-largest asset to AI-linked stocks and gold. RAIN, a smaller token, surged 64.6% on the day with no clear catalyst, while NEAR Protocol dropped 8.9% as the broader market softened. The rest of the top 15 drifted lower in a session defined more by what left the market than what entered it.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 64.5908,
+        "catalyst": "No direct news was identified for the surge; the move appears to be unattributed to any specific announcement or development.",
+        "priceUsd": 0.01327627,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -8.8911,
+        "catalyst": "NEAR declined as Bitcoin's broader market weakness dragged altcoins lower, with no NEAR-specific catalyst identified.",
+        "priceUsd": 2.46,
+        "priceChange24hUsd": -0.22
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75771,
+        "changePct24h": -1.02,
+        "marketCapUsd": 1518550290118,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2078.92,
+        "changePct24h": -0.7,
+        "marketCapUsd": 251092272855,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": -0.02,
+        "marketCapUsd": 189304226934,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 652.74,
+        "changePct24h": -0.51,
+        "marketCapUsd": 88023682493,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.33,
+        "changePct24h": -0.78,
+        "marketCapUsd": 82148207693,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 76413296135,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 83.58,
+        "changePct24h": -0.92,
+        "marketCapUsd": 48358078878,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3725,
+        "changePct24h": -0.02,
+        "marketCapUsd": 35323586367,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.026,
+        "changePct24h": 1.08,
+        "marketCapUsd": 18545954496,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1017,
+        "changePct24h": 0.71,
+        "marketCapUsd": 15720456500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.79,
+        "changePct24h": 5.2,
+        "marketCapUsd": 13990212409,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 11113198340,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 565.54,
+        "changePct24h": -6.28,
+        "marketCapUsd": 9430985646,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.06,
+        "changePct24h": 0.71,
+        "marketCapUsd": 9260985012,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2389,
+        "changePct24h": -1.17,
+        "marketCapUsd": 8846083862,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest story was a single large trade: someone sold $1.29 billion of BlackRock's iShares Bitcoin ETF through a dark pool — an off-exchange venue used to execute massive orders without telegraphing intent to the broader market. A transaction that size moving through a dark pool still registers in post-trade reporting, and when it did, it reinforced a narrative that has been building: large holders are reducing Bitcoin exposure. Bitcoin fell 1.02% to $75,771, and the drop was enough to push it out of the top 12 largest assets globally, behind AI semiconductor stocks and precious metals that have attracted capital as Bitcoin's momentum has stalled.\n\nZcash fell 6.28% to $565.54, and traders were also watching Bitcoin's approach to a technical level called the \"golden cross\" — a point where a short-term price average crosses above a long-term one, which some traders treat as a bullish signal. The proximity to that level, combined with the broader sell pressure, kept the session tense.\n\nRAIN surged 64.59% on the day, the largest percentage move across all tracked assets. No specific news or announcement was identified to explain the move — it may reflect thin liquidity in a smaller token amplifying a relatively modest volume of buying. NEAR Protocol fell 8.89%, pulled lower by the general market weakness with no NEAR-specific catalyst.\n\nHyperliquid gained 5.20% to $62.79, also without a clear reported catalyst. The Fear & Greed index sits at 25, in \"Fear\" territory, consistent with a market that is selling into uncertainty rather than buying into it.",
+  "worthKnowing": [
+    "Bitcoin's slide pushed it to 13th place among the world's largest assets by market cap, behind gold, several AI-linked stocks, and major equity indices — a ranking it has not held in recent memory.",
+    "The OpenZeppelin CEO warned publicly that DeFi is no longer safe, citing over $1 billion hacked from decentralized finance protocols in the past year and flagging AI-assisted attacks as an emerging threat.",
+    "Crypto political action committees spent $9 million in Texas state races and reported wins across both parties, extending a pattern of crypto-industry electoral engagement beyond federal races."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2619675781310,
+    "btcDominancePct": 57.9623,
+    "ethDominancePct": 9.5865,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "blackrock-btc-etf",
+    "dark-pool",
+    "bitcoin-dominance",
+    "defi-security",
+    "golden-cross",
+    "rain-token"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
