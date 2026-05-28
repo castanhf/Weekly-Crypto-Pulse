@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-28T10:15:20.492Z",
+  "publishedAt": "2026-05-28",
+  "slug": "2026-05-28-bitcoin-drops-below-73000-as-us-strikes-on-iran-trigger-1-billion-in-l",
+  "headline": "Bitcoin drops below $73,000 as U.S. strikes on Iran trigger $1 billion in liquidations",
+  "summary": "A geopolitical shock drove the day's action: U.S. strikes on Iran sent Bitcoin tumbling below $73,000, triggering over $1 billion in forced liquidations across the market. That selling pressure was compounded by a near-record $528 million single-day outflow from BlackRock's Bitcoin ETF — the second-largest daily exit on record. Ethereum fell harder than Bitcoin, slipping below $2,000, while Stellar bucked the selloff with an 18% surge that had no clear identifiable catalyst.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": 18.27,
+        "catalyst": "Stellar surged 18.27% against a broadly falling market. No specific news event or named catalyst has been identified for the move — it appears to be idiosyncratic price action on a day when most assets sold off sharply.",
+        "priceUsd": 0.173425,
+        "priceChange24hUsd": 0.03
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -8.72,
+        "catalyst": "Hyperliquid fell 8.72%, the steepest decline among tracked assets, amid broad market selling and negative sentiment following significant outflows from major Bitcoin ETFs.",
+        "priceUsd": 57.29,
+        "priceChange24hUsd": -5
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 73463,
+        "changePct24h": -3.06,
+        "marketCapUsd": 1470755575231,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1993.34,
+        "changePct24h": -4.23,
+        "marketCapUsd": 240414229843,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9983,
+        "changePct24h": -0.02,
+        "marketCapUsd": 189249226322,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 633.88,
+        "changePct24h": -2.91,
+        "marketCapUsd": 85377769202,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.29,
+        "changePct24h": -2.74,
+        "marketCapUsd": 79935961284,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.02,
+        "marketCapUsd": 76304708998,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 81.11,
+        "changePct24h": -3.07,
+        "marketCapUsd": 46902846479,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3534,
+        "changePct24h": -5.12,
+        "marketCapUsd": 33485331073,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 0.9,
+        "marketCapUsd": 18775346407,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0986,
+        "changePct24h": -3.1,
+        "marketCapUsd": 15215667583,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.29,
+        "changePct24h": -8.72,
+        "marketCapUsd": 12742372939,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 11126447949,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.03,
+        "changePct24h": -0.26,
+        "marketCapUsd": 9258284272,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 532.9,
+        "changePct24h": -5.72,
+        "marketCapUsd": 8906338391,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0143,
+        "changePct24h": 7.82,
+        "marketCapUsd": 8894883820,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces hit the market simultaneously today, and together they produced one of the sharper single-day drops in recent months.\n\nThe immediate trigger was geopolitical: U.S. military strikes on Iran rattled risk assets broadly, and crypto was no exception. Bitcoin fell below $73,000 as the news broke, and the move cascaded through leveraged positions — over $1 billion in crypto positions were forcibly liquidated within 24 hours as traders who had borrowed to amplify their bets were wiped out. Liquidations of that scale tend to accelerate selling, as exchanges automatically close positions to cover losses, pushing prices lower still.\n\nLayered on top was a structural signal from institutional markets: BlackRock's Bitcoin ETF (the largest spot Bitcoin fund in the U.S.) recorded $528 million in single-day outflows — the second-largest daily exit since the fund launched. When large institutional investors pull money from ETFs at that pace, it reflects a deliberate decision to reduce exposure, not just noise.\n\nEthereum fell harder than Bitcoin, dropping 4.23% to just under $2,000. One notable data point: Ethereum futures open interest (the total value of outstanding contracts) hit a record 16 million ETH even as the price fell, suggesting that speculative positioning in ETH derivatives is unusually elevated. The Fear & Greed index sits at 22 — deep in Fear territory — consistent with the day's tone.\n\nStellar was the session's anomaly, rising 18.27% while everything else fell. No specific news event has been identified to explain the move.",
+  "worthKnowing": [
+    "BlackRock's Bitcoin ETF shed $528 million in a single day — the second-largest daily outflow since the fund's launch — signaling a sharp pullback in institutional demand.",
+    "Ethereum futures open interest hit a record 16 million ETH even as ETH's price fell below $2,000, pointing to unusually high speculative positioning in derivatives markets.",
+    "The White House is reviewing a CFTC rule on prediction markets as the Trump administration signals support for federal oversight — a development that could reshape how crypto-linked prediction platforms operate in the U.S."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2544362547358,
+    "btcDominancePct": 57.8033,
+    "ethDominancePct": 9.4483,
+    "fearGreedIndex": 22
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "blackrock",
+    "geopolitical-risk",
+    "liquidations",
+    "ethereum-futures",
+    "cftc"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
