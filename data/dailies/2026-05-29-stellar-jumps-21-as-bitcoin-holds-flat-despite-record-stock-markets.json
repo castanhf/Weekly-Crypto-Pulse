@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-29T10:04:32.147Z",
+  "publishedAt": "2026-05-29",
+  "slug": "2026-05-29-stellar-jumps-21-as-bitcoin-holds-flat-despite-record-stock-markets",
+  "headline": "Stellar jumps 21% as Bitcoin holds flat despite record stock markets",
+  "summary": "Bitcoin barely moved Friday, holding near its recent range despite record highs in equities and easing geopolitical tensions — a disconnect that CryptoQuant attributes to a shortage of new buyers even as long-term holders sit tight. The day's real action was in altcoins: Stellar surged 21.4% on renewed momentum, Hyperliquid climbed 9.2%, and XRP recovered above $1.30. Bitcoin Cash was the notable loser, sliding 7%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": 21.44,
+        "catalyst": "Renewed market momentum drove Stellar sharply higher; no single specific announcement was identified as the trigger.",
+        "priceUsd": 0.209763,
+        "priceChange24hUsd": 0.04
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -6.96,
+        "catalyst": "Bitcoin Cash declined on no identified asset-specific catalyst; the move appears to reflect thin buying activity in lower-liquidity large-caps on a flat-volume day.",
+        "priceUsd": 301.7,
+        "priceChange24hUsd": -21.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 73619,
+        "changePct24h": 0.3,
+        "marketCapUsd": 1475291067296,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2011.14,
+        "changePct24h": 0.97,
+        "marketCapUsd": 242792268780,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": 0.03,
+        "marketCapUsd": 189310569566,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 639.94,
+        "changePct24h": 1.05,
+        "marketCapUsd": 86208262266,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.32,
+        "changePct24h": 2.35,
+        "marketCapUsd": 81914808047,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.01,
+        "marketCapUsd": 76071609965,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 82.31,
+        "changePct24h": 1.46,
+        "marketCapUsd": 47609950713,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3428,
+        "changePct24h": -3.02,
+        "marketCapUsd": 32508123131,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.032,
+        "changePct24h": -0.33,
+        "marketCapUsd": 18796308492,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0996,
+        "changePct24h": 1.04,
+        "marketCapUsd": 15383982382,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.63,
+        "changePct24h": 9.18,
+        "marketCapUsd": 13960861118,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.01,
+        "marketCapUsd": 11092407935,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.96,
+        "changePct24h": -1.03,
+        "marketCapUsd": 9152367916,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0147,
+        "changePct24h": 2.59,
+        "marketCapUsd": 9135983147,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 541.93,
+        "changePct24h": 1.7,
+        "marketCapUsd": 9038707001,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The headline story today isn't a big move — it's the absence of one. Bitcoin ended the day up just 0.3% even as US stock indices hit record highs, oil prices fell, and war-related tensions eased. Under normal conditions, that macro backdrop would be a tailwind for risk assets including crypto. The disconnect is explained, at least in part, by a CryptoQuant analysis published Friday: Bitcoin's supply is increasingly concentrated among long-term holders who aren't selling, but new buyers aren't stepping in to replace them. Record holder supply sounds bullish on the surface, but without fresh demand, it creates a ceiling rather than a floor. The Fear & Greed index sits at 23 — deep in Fear territory — which is consistent with a market where existing holders are patient but new capital is staying on the sidelines.\n\nAmid that flat backdrop, altcoins found more movement. Stellar surged 21.4% with no clearly identified catalyst — the move appears to be momentum-driven. Hyperliquid climbed 9.2%, continuing a run that has made it one of the stronger performers in the top 15 this week. XRP recovered above $1.30 after a volume surge, though the weekly chart still shows sellers in control according to the CoinDesk report on the move. TRON was the notable decliner among the top 15, falling 3%.",
+  "worthKnowing": [
+    "XRP climbed 2.4% after a volume surge pushed it back above $1.30, though the broader weekly trend still shows selling pressure outweighing buying.",
+    "OKX Ventures acquired a $53 million stake in South Korea's Coinone exchange, the latest sign of consolidation activity among major crypto trading platforms.",
+    "Prediction market platform Kalshi sued the state of Minnesota after the state passed a law criminalizing prediction markets — a case that could affect how crypto-adjacent prediction platforms operate in the US."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2558681253156,
+    "btcDominancePct": 57.6679,
+    "ethDominancePct": 9.4872,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "stellar-xlm",
+    "hyperliquid",
+    "cryptoquant-buyer-drought",
+    "okx-coinone",
+    "kalshi-prediction-markets",
+    "xrp"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
