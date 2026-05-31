@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-05-31T08:54:08.381Z",
+  "publishedAt": "2026-05-31",
+  "slug": "2026-05-31-bnb-jumps-7-and-xrp-ledger-proposes-a-flash-loan-fix-as-bitcoin-sentim",
+  "headline": "BNB jumps 7% and XRP Ledger proposes a flash loan fix as Bitcoin sentiment hits its most bullish reading of 2026",
+  "summary": "BNB was the standout mover in an otherwise quiet session, climbing 7.34% to $722 without a single clear catalyst — the kind of move that often reflects thin weekend liquidity amplifying existing demand. The bigger story may be off the price tape: the XRP Ledger published a proposal to block flash loan attacks, a class of exploit that has cost DeFi protocols hundreds of millions of dollars. Meanwhile, Santiment reported that Bitcoin's sentiment ratio is the most lopsided positive it has been all year, even as the Fear & Greed index sits at 28 — a tension worth watching.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 25.73,
+        "catalyst": "LAB surged 25.73%, likely driven by positive ecosystem developments and speculative momentum in a thin-volume session.",
+        "priceUsd": 8.62,
+        "priceChange24hUsd": 2.22
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -8.21,
+        "catalyst": "Monero fell 8.21% amid broader market softness and persistent regulatory scrutiny of privacy-focused coins.",
+        "priceUsd": 367.12,
+        "priceChange24hUsd": -30.14
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 73761,
+        "changePct24h": 0.44,
+        "marketCapUsd": 1477878093535,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2021.73,
+        "changePct24h": 0.47,
+        "marketCapUsd": 243870324717,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": -0.02,
+        "marketCapUsd": 188195431499,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 722.41,
+        "changePct24h": 7.34,
+        "marketCapUsd": 97217899671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.34,
+        "changePct24h": -0.32,
+        "marketCapUsd": 82787918536,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 75839926180,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 82.53,
+        "changePct24h": 0.49,
+        "marketCapUsd": 47745677237,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3477,
+        "changePct24h": 1.72,
+        "marketCapUsd": 32969216363,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.017,
+        "changePct24h": -1.4,
+        "marketCapUsd": 18600687670,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1004,
+        "changePct24h": -0.42,
+        "marketCapUsd": 15500951610,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 68.97,
+        "changePct24h": 4.53,
+        "marketCapUsd": 15340519290,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.01,
+        "marketCapUsd": 11032619494,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.06,
+        "changePct24h": -0.06,
+        "marketCapUsd": 9256198834,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 546.22,
+        "changePct24h": 5.55,
+        "marketCapUsd": 9105227562,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0143,
+        "changePct24h": -1.04,
+        "marketCapUsd": 8917266599,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Most of the top 15 assets barely moved — Bitcoin gained 0.44% to $73,761 and Ethereum added 0.47% to $2,021, both well within noise range. The session's real action was concentrated in a handful of names. BNB climbed 7.34% to $722 with no single announced catalyst; moves of this size on thin volume often reflect a combination of exchange-native demand (BNB is Binance's utility token) and momentum traders piling in once a threshold is crossed. Hyperliquid rose 4.53% to $68.97, likely benefiting from a Grayscale research note calling it a potential 'financial services juggernaut' as DeFi activity expands — analyst coverage from a firm of that profile tends to move smaller-cap assets. Zcash gained 5.55% to $546, though no specific catalyst was identified; the move may be technical. The macro sentiment picture is contradictory. Santiment's data shows Bitcoin's positive-to-negative sentiment ratio at its most lopsided level of 2026 — meaning retail and social media chatter is heavily bullish. Yet the Fear & Greed index sits at 28, squarely in 'Fear' territory, which typically reflects institutional or options-market caution. These two readings pointing in opposite directions is unusual and worth tracking over the next few sessions. Monero's 8.21% drop stands out on the downside. Privacy coins have faced sustained regulatory pressure, and with the U.S. government announcing a $1 billion seizure of Iranian crypto this week, enforcement headlines are not helping assets that regulators associate with obfuscation.",
+  "worthKnowing": [
+    "The XRP Ledger published a proposal to block flash loan attacks — a type of exploit where an attacker borrows, manipulates, and repays funds within a single transaction — which have drained hundreds of millions from DeFi protocols industry-wide.",
+    "The U.S. government seized approximately $1 billion in cryptocurrency linked to Iran, one of the largest state-level crypto enforcement actions on record.",
+    "The SEC sued a Texas man over an alleged $12.3 million fraud built on fake AI-powered trading bots, the latest in a string of enforcement actions targeting AI-themed crypto schemes.",
+    "Grayscale published a research note arguing that Hyperliquid could become a major DeFi financial services platform, citing the protocol's expanding product suite."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2580475882185,
+    "btcDominancePct": 57.2767,
+    "ethDominancePct": 9.4503,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "bnb-surge",
+    "xrp-ledger-flash-loan",
+    "monero-regulatory-pressure",
+    "hyperliquid",
+    "bitcoin-sentiment",
+    "sec-enforcement"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-05-11-market-sentiment-stabilizes-as-bitcoin-leads-modest-gains"
+  }
+}
