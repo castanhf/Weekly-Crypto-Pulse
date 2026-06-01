@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-01T11:47:35.296Z",
+  "publishedAt": "2026-06-01",
+  "slug": "2026-06-01-bitcoin-and-ethereum-open-june-in-the-red-as-congress-returns-with-gen",
+  "headline": "Bitcoin and Ethereum open June in the red as Congress returns with GENIUS Act on the agenda",
+  "summary": "Crypto started June on the back foot, with Bitcoin slipping 1.6% to $72,634 and Ethereum falling 1.8% to $1,983 — both assets now below key round numbers. The broader market followed suit, with BNB and XRP each dropping more than 2%. The day's real story is what comes next: U.S. Congress is back in session with the GENIUS Act stablecoin bill's comment period closing and a jobs report due later this week, two events that could set the tone for June.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 79.95,
+        "catalyst": "LAB surged nearly 80% with no clear publicly identified catalyst — the move appears to be driven by thin liquidity rather than a named event or announcement.",
+        "priceUsd": 13.11,
+        "priceChange24hUsd": 10.48
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -7.93,
+        "catalyst": "Bitcoin Cash fell nearly 8%, the steepest drop among major assets on the day, with no specific BCH-related catalyst identified — the decline extended losses already present in Bitcoin and Ethereum but at roughly five times the magnitude.",
+        "priceUsd": 280.89,
+        "priceChange24hUsd": -22.27
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 72634,
+        "changePct24h": -1.6,
+        "marketCapUsd": 1455206716385,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1983.4,
+        "changePct24h": -1.77,
+        "marketCapUsd": 239299188687,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": 0.02,
+        "marketCapUsd": 187998008757,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 699.92,
+        "changePct24h": -2.98,
+        "marketCapUsd": 94331691095,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": -2.52,
+        "marketCapUsd": 80861088742,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 75843154620,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 81.02,
+        "changePct24h": -1.94,
+        "marketCapUsd": 46876885626,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3499,
+        "changePct24h": 0.42,
+        "marketCapUsd": 33181767144,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.017,
+        "changePct24h": 0,
+        "marketCapUsd": 18597393007,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 73.45,
+        "changePct24h": 8.56,
+        "marketCapUsd": 16335352958,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.1,
+        "changePct24h": -0.71,
+        "marketCapUsd": 15447582687,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.03,
+        "marketCapUsd": 11044995074,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.98,
+        "changePct24h": -0.73,
+        "marketCapUsd": 9190453819,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 545.7,
+        "changePct24h": -0.2,
+        "marketCapUsd": 9099824220,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.261,
+        "changePct24h": 1.04,
+        "marketCapUsd": 8775528517,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Crypto opened June with broad losses, and the Fear & Greed index sitting at 29 — in \"Fear\" territory — reflects the mood. Bitcoin dipped 1.6% to $72,634, breaking back below the psychologically significant $75,000 level, while Ethereum fell 1.8% to $1,983, slipping under $2,000. BNB and XRP each lost more than 2.5%, and Solana dropped nearly 2%.\n\nThe session had no single dramatic catalyst. The CoinDesk headline framing it as a cautious open to the month is accurate: this looks like a market in a holding pattern ahead of two near-term events. First, the U.S. Congress returned from recess with the GENIUS Act — the Senate's stablecoin regulatory framework — entering its final comment period. Second, the monthly U.S. jobs report is due later this week; a stronger-than-expected number would likely reinforce the Federal Reserve's current stance of holding interest rates higher for longer, which has historically weighed on risk assets.\n\nAgainst the red backdrop, Hyperliquid stood out, gaining 8.6% to $73.45 with no single named catalyst in the researcher data — the move may reflect platform-specific activity or derivatives market flows. Stellar also edged up 1%, and TRON gained 0.4%, suggesting selective appetite for certain assets even as the broader market retreated.\n\nBitcoin Cash was the day's notable underperformer among major assets, falling nearly 8% — roughly five times the decline of Bitcoin itself — with no BCH-specific news to explain the divergence. The outsized drop relative to BTC suggests either technical selling or thin order books amplifying the broader market move.",
+  "worthKnowing": [
+    "Citi published a forecast projecting the tokenized securities market — financial assets like bonds and equities represented on a blockchain — will reach $5.5 trillion by 2030, up from a small base today.",
+    "The Cardano Summit 2026 was canceled after the Cardano community voted against a proposal to fund it through the Cardano Foundation, a rare instance of on-chain governance directly blocking a major ecosystem event.",
+    "Sui's mainnet halted three times in 48 hours, with developers tracing the outages to a bug introduced in a recent upgrade — the network has since resumed, but the repeated failures raised reliability questions."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2549355661210,
+    "btcDominancePct": 57.085,
+    "ethDominancePct": 9.3872,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "bitcoin",
+    "ethereum",
+    "genius-act",
+    "stablecoin-regulation",
+    "hyperliquid",
+    "sui-outage",
+    "tokenized-securities",
+    "cardano"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
