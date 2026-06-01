@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-06-01T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Bitcoin and Ethereum decline as market sentiment weakens",
+      "slug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens",
+      "publishedAt": "2026-06-01",
+      "weekLabel": "Week of Jun 1, 2026",
+      "summary": "The total cryptocurrency market capitalization decreased to $2.549 trillion, with Bitcoin dominance at 57.07% and Ethereum at 9.38%. The Fear & Greed Index fell to 29, indicating a shift towards fear among investors.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "risk-off",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2549000000,
+      "btcDominancePct": 57.07,
+      "ethDominancePct": 9.38,
+      "fearGreedIndex": 29
+    },
+    "movers": [
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "changePct7d": 6.63,
+        "catalyst": "BNB experienced a notable increase of 6.63% over the week, driven by positive sentiment around Binance's expansion into U.S. stocks and ETFs."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment shifts as fear prevails",
+        "body": "This week, the cryptocurrency market faced a significant downturn, with the total market capitalization dropping to $2.549 trillion. The Fear & Greed Index fell to 29, reflecting a heightened sense of fear among investors. This shift in sentiment can be attributed to a combination of factors, including record outflows from Bitcoin spot ETFs and broader market concerns regarding regulatory scrutiny and macroeconomic conditions. The decline in Bitcoin and Ethereum prices has further exacerbated this fear, leading to a cautious approach from investors. As a result, many are reevaluating their positions in light of the current market dynamics.",
+        "highlights": [
+          "The total cryptocurrency market cap decreased to $2.549 trillion.",
+          "Bitcoin dominance fell to 57.07%, while Ethereum's dominance is at 9.38%.",
+          "The Fear & Greed Index indicates a fearful market sentiment at 29."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum under pressure",
+        "body": "Bitcoin and Ethereum both started June in the red, with Bitcoin dropping 6.28% to $72,604 and Ethereum falling 6.30% to $1,982. The pressure on these leading cryptocurrencies is largely due to increased selling pressure and the impact of significant ETF outflows. As Bitcoin extended its slide, the market is closely monitoring the potential for further declines, especially as the macroeconomic landscape remains uncertain. The recent performance of altcoins, particularly BNB, which gained 6.63%, suggests that some investors are seeking opportunities outside of the top two cryptocurrencies amid this downturn.",
+        "highlights": [
+          "Bitcoin fell 6.28% to $72,604, while Ethereum dropped 6.30% to $1,982.",
+          "Both cryptocurrencies are facing significant selling pressure and ETF outflows.",
+          "BNB's 6.63% increase indicates a shift in investor interest towards altcoins."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Cautious outlook as risks loom",
+        "body": "Looking ahead, the cryptocurrency market is likely to remain in a risk-off regime as investors grapple with the implications of recent price declines and regulatory developments. The current fear sentiment may lead to further volatility, particularly if Bitcoin and Ethereum continue to struggle. Key risks include ongoing ETF outflows, potential regulatory actions, and macroeconomic pressures that could influence investor confidence. However, the resilience shown by certain altcoins, like BNB, may offer some opportunities for diversification. Investors should remain vigilant and prepared for a range of scenarios as the market navigates this challenging environment.",
+        "highlights": [
+          "The market is expected to remain in a risk-off regime amid ongoing volatility.",
+          "Key risks include ETF outflows and regulatory scrutiny.",
+          "Opportunities may arise in altcoins as investors seek diversification."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "The cryptocurrency market is experiencing a risk-off sentiment as fear prevails.",
+        "Bitcoin and Ethereum face significant selling pressure, impacting overall market dynamics.",
+        "Investors may look towards altcoins for potential opportunities amid the downturn.",
+        "Regulatory developments and macroeconomic factors will play a crucial role in shaping market sentiment."
+      ],
+      "riskChecklist": [
+        "Continued ETF outflows could exacerbate price declines.",
+        "Regulatory scrutiny may impact investor confidence.",
+        "Macroeconomic pressures could lead to further volatility.",
+        "Market sentiment remains fearful, indicating potential for panic selling.",
+        "Liquidity concerns may arise as trading volumes decline."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$70,000",
+          "context": "A critical support level that may determine the next price action for Bitcoin."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,900",
+          "context": "A key psychological level for Ethereum that could influence investor sentiment."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market capitalization decreased from $2.784 trillion to $2.549 trillion.",
+        "Bitcoin dominance fell from 58.22% to 57.07%.",
+        "The Fear & Greed Index dropped from 48 to 29, indicating increased fear."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin and Ethereum struggle as market sentiment turns negative",
+      "body": "This week, Bitcoin and Ethereum both saw significant declines, starting June on a negative note. Bitcoin dropped to $72,604, down 6.28%, while Ethereum fell to $1,982, down 6.30%. The overall cryptocurrency market cap also decreased to $2.549 trillion, reflecting a shift in investor sentiment towards fear, as indicated by the Fear & Greed Index, which now stands at 29. This change in mood comes amid record outflows from Bitcoin ETFs and ongoing regulatory concerns. In contrast, some altcoins like BNB showed resilience, gaining 6.63% over the week, suggesting that investors may be looking for opportunities beyond the major cryptocurrencies."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 41894233118,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 5671496505,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 5307047660,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4868110607,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 4764488679,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4349419156,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1752017591,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1505505548,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1477593523,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 1120492687,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 793794943,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 597332375,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 513332226,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 381792207,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "OP Mainnet",
+          "tvlUsd": 313679745,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}
