@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-02T10:47:09.756Z",
+  "publishedAt": "2026-06-02",
+  "slug": "2026-06-02-bitcoin-drops-toward-69k-as-record-34b-etf-selloff-spooks-the-market",
+  "headline": "Bitcoin drops toward $69K as record $3.4B ETF selloff spooks the market",
+  "summary": "A record $3.4 billion single-day outflow from Bitcoin ETFs sent BTC down 4.5% to around $69,000, dragging most major assets lower and pushing the Fear & Greed index to 23 — deep into fear territory. Concerns about MicroStrategy founder Michael Saylor offloading holdings added to the pressure. XRP, BNB, and Solana all fell in Bitcoin's wake, while Stellar dropped more than 10% to lead losses among tracked assets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 18.08,
+        "catalyst": "No clear catalyst identified for LAB's 18% gain; the move occurred against the broader market decline with no specific named event in available data.",
+        "priceUsd": 19.16,
+        "priceChange24hUsd": 3.46
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": -10.68,
+        "catalyst": "XLM fell 10.68% amid broader market weakness led by Bitcoin's significant drop and negative sentiment from the record $3.4B Bitcoin ETF selloff.",
+        "priceUsd": 0.232176,
+        "priceChange24hUsd": -0.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 69386,
+        "changePct24h": -4.5,
+        "marketCapUsd": 1390415857452,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1973.52,
+        "changePct24h": -0.47,
+        "marketCapUsd": 238210917789,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": -0.03,
+        "marketCapUsd": 187967907415,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 677.56,
+        "changePct24h": -3.04,
+        "marketCapUsd": 91371324306,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.26,
+        "changePct24h": -3.07,
+        "marketCapUsd": 78212354527,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 75785785109,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 79.16,
+        "changePct24h": -2.02,
+        "marketCapUsd": 45779943847,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3404,
+        "changePct24h": -2.9,
+        "marketCapUsd": 32278549672,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.042,
+        "changePct24h": 2.12,
+        "marketCapUsd": 19042193407,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 71.14,
+        "changePct24h": -2.29,
+        "marketCapUsd": 15824664880,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0989,
+        "changePct24h": -0.95,
+        "marketCapUsd": 15287665582,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.04,
+        "marketCapUsd": 11009455939,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 565.45,
+        "changePct24h": 3.52,
+        "marketCapUsd": 9445443988,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.09,
+        "changePct24h": 1.08,
+        "marketCapUsd": 9289622447,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.014,
+        "changePct24h": -1.01,
+        "marketCapUsd": 8725224348,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two converging forces hit Bitcoin today. First, ETF data showed a record $3.4 billion leaving Bitcoin funds in a single session — the largest single-day outflow since spot Bitcoin ETFs launched in the US. When institutional money exits at that scale, it creates direct selling pressure on BTC's price. Second, reports that Michael Saylor — the MicroStrategy founder whose company holds more Bitcoin than any other public firm — had sold a portion of his holdings rattled confidence further. Saylor has been one of the most visible long-term Bitcoin advocates, so any signal of selling from that camp carries outsized psychological weight.\n\nBitcoin fell 4.5% to around $69,000 as a result. Most of the top assets followed: BNB dropped 3%, XRP fell 3.1% and slipped below $1.30, and Solana declined 2%. Ethereum was the notable exception, losing less than 0.5% — a relatively resilient session that may reflect its different institutional ownership profile compared to BTC.\n\nStellar's 10.7% decline stood out even against this backdrop. The broader selloff amplified existing weakness in smaller-cap assets, and Stellar had no specific positive catalyst to offset the pressure.\n\nThe Fear & Greed index sits at 23, firmly in fear territory, reflecting the market's current mood. Mt. Gox's movement of 10,422 BTC — worth roughly $739 million — to a new wallet added a secondary layer of concern: those coins are part of a long-running creditor repayment process, and large wallet movements from that address historically prompt speculation about imminent selling.",
+  "worthKnowing": [
+    "Mt. Gox moved 10,422 BTC (approximately $739 million) to a new wallet as the deadline for creditor claims approaches, renewing market concern about potential large-scale selling.",
+    "MoneyGram launched a stablecoin on the Stellar network, joining a growing list of financial firms building digital dollar payment infrastructure — notable timing given Stellar's sharp price decline today.",
+    "XRP fell more than 4% and dropped below $1.30, with CoinDesk attributing the move directly to Bitcoin-led market weakness rather than any XRP-specific development."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2473123691290,
+    "btcDominancePct": 56.2276,
+    "ethDominancePct": 9.6254,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "saylor-sale",
+    "mt-gox",
+    "stellar",
+    "moneygram-stablecoin",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
