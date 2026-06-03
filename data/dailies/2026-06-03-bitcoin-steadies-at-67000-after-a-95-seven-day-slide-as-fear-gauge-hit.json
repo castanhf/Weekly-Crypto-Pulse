@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-03T11:11:29.182Z",
+  "publishedAt": "2026-06-03",
+  "slug": "2026-06-03-bitcoin-steadies-at-67000-after-a-95-seven-day-slide-as-fear-gauge-hit",
+  "headline": "Bitcoin steadies at $67,000 after a 9.5% seven-day slide as fear gauge hits its highest spike since February",
+  "summary": "Bitcoin has lost 9.5% over the past week and found a tentative floor near $67,000, but the session offered little relief — most major assets fell, with Ethereum and BNB each dropping close to 5%. The day's clearest signal came from options markets, where a measure of expected Bitcoin price turbulence posted its sharpest single-day rise since the February 5 crash, according to CoinDesk. Ondo was a rare bright spot, surging nearly 18% as traders rotated into alternatives amid the broader selloff.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ONDO",
+        "name": "Ondo",
+        "changePct24h": 17.76,
+        "catalyst": "Traders rotated into Ondo as an alternative amid broad market declines, driving an outsized 17.76% gain on a day when most assets fell.",
+        "priceUsd": 0.423619,
+        "priceChange24hUsd": 0.08
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -11.31,
+        "catalyst": "Bitcoin Cash fell 11.31%, amplifying Bitcoin's broader selloff — smaller-cap assets in Bitcoin's orbit tend to absorb heavier losses when BTC leads a decline.",
+        "priceUsd": 252.87,
+        "priceChange24hUsd": -28.59
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 67142,
+        "changePct24h": -3.38,
+        "marketCapUsd": 1345418194880,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1881.75,
+        "changePct24h": -4.92,
+        "marketCapUsd": 227070308885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": 0,
+        "marketCapUsd": 187833812836,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 640.94,
+        "changePct24h": -5.58,
+        "marketCapUsd": 86390660974,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.24,
+        "changePct24h": -1.84,
+        "marketCapUsd": 76925868719,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 75924984096,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.46,
+        "changePct24h": -4.78,
+        "marketCapUsd": 43653650264,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3321,
+        "changePct24h": -2.47,
+        "marketCapUsd": 31483092999,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": -0.62,
+        "marketCapUsd": 19027637349,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 72.87,
+        "changePct24h": 0.98,
+        "marketCapUsd": 16208169871,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0942,
+        "changePct24h": -4.9,
+        "marketCapUsd": 14557736483,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 10964408989,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 603.4,
+        "changePct24h": 4.49,
+        "marketCapUsd": 10064550495,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 10.07,
+        "changePct24h": 0.38,
+        "marketCapUsd": 9271640120,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0141,
+        "changePct24h": 1.01,
+        "marketCapUsd": 8793944899,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin has shed 9.5% over the past seven days and found a tentative pause near $67,000 today — but the session's data offered little comfort. Two separate anxiety readings both pointed in the same direction. The Fear & Greed index sits at 11 out of 100, deep in Extreme Fear territory. Separately, Bitcoin's implied volatility index — a different instrument that measures how much turbulence options traders are pricing into near-term contracts — posted its sharpest single-day rise since the February 5 crash, surging nearly 20% according to CoinDesk reporting. These are distinct metrics: one tracks crowd sentiment surveys and search trends, the other reflects what professional traders are paying to hedge against price swings. Both are flashing the same signal.\n\nThe broader market followed Bitcoin lower. Ethereum fell 4.92% to $1,881.75, BNB dropped 5.58%, and Solana slid 4.78% to $75.46. XRP held up relatively better, losing 1.84%. Prediction market traders are currently pricing in further Bitcoin declines, adding to the cautious tone across the market.\n\nZcash gained 4.49% despite an apparent block production issue earlier in the day — infrastructure providers attributed the disruption to a block explorer problem rather than a network fault, and the price recovered. Ondo's 17.76% surge stood out as traders rotated into alternatives while large-cap assets fell.",
+  "worthKnowing": [
+    "The UK's Financial Conduct Authority is taking enforcement action against Premier League clubs over crypto sponsorship deals, a move that could reshape how crypto brands advertise in European sports.",
+    "Zcash's apparent block production outage was attributed to a block explorer error rather than a network failure, according to infrastructure providers — the Zcash network itself continued operating normally.",
+    "Prediction market traders are currently pricing in further Bitcoin price declines, according to CoinDesk, reflecting bearish short-term positioning in that corner of the market."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2406522637016,
+    "btcDominancePct": 55.9093,
+    "ethDominancePct": 9.4356,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-selloff",
+    "implied-volatility",
+    "fear-greed",
+    "fca-enforcement",
+    "premier-league-crypto",
+    "ondo"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
