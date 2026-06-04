@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-04T10:04:53.083Z",
+  "publishedAt": "2026-06-04",
+  "slug": "2026-06-04-bitcoin-drops-below-62000-as-15-billion-in-longs-get-wiped-out-and-etf",
+  "headline": "Bitcoin drops below $62,000 as $1.5 billion in longs get wiped out and ETF outflows hit $4.4 billion",
+  "summary": "A brutal 24 hours for crypto: $1.5 billion in leveraged long positions were liquidated as Bitcoin slid to $63,102, down 5.85%, with nearly every major asset following it lower. ETFs tracking Bitcoin, Ethereum, Solana, and XRP have now bled $4.4 billion over 13 consecutive sessions — only Hyperliquid's ETF stayed in the green. The Fear & Greed index sits at 12, deep in Extreme Fear territory, reflecting how quickly sentiment has deteriorated.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": 7.35,
+        "catalyst": "Worldcoin's price surged by 7.35% as investors reacted positively to recent developments in its ecosystem.",
+        "priceUsd": 0.510743,
+        "priceChange24hUsd": 0.04
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -17.26,
+        "catalyst": "NEAR Protocol's price plummeted by 17.26% following a significant warning from its founder about potential ecosystem failures.",
+        "priceUsd": 2.36,
+        "priceChange24hUsd": -0.41
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63102,
+        "changePct24h": -5.85,
+        "marketCapUsd": 1264611788249,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1761.99,
+        "changePct24h": -6.06,
+        "marketCapUsd": 212667690293,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": 0.02,
+        "marketCapUsd": 187292035584,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 596.3,
+        "changePct24h": -7,
+        "marketCapUsd": 80422323398,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.02,
+        "marketCapUsd": 75875666983,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.16,
+        "changePct24h": -6.36,
+        "marketCapUsd": 71767177662,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 68.68,
+        "changePct24h": -8.45,
+        "marketCapUsd": 39689851439,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3275,
+        "changePct24h": -1.39,
+        "marketCapUsd": 31054190691,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -3.31,
+        "marketCapUsd": 18455449424,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 66.84,
+        "changePct24h": -7.21,
+        "marketCapUsd": 14868701061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0877,
+        "changePct24h": -6.38,
+        "marketCapUsd": 13545782681,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10955852365,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.94,
+        "changePct24h": -0.6,
+        "marketCapUsd": 9149788311,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 541.42,
+        "changePct24h": -11.46,
+        "marketCapUsd": 9033803226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0141,
+        "changePct24h": -0.2,
+        "marketCapUsd": 8756645647,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The immediate trigger was a cascade of forced selling: $1.5 billion in leveraged long positions — bets that prices would rise — were liquidated in 24 hours as Bitcoin broke below $62,000. When traders borrow to buy and prices fall sharply, exchanges automatically close those positions, which pushes prices down further and triggers more liquidations. That self-reinforcing loop explains why the drop was so broad and so fast.\n\nUnderneath the liquidation event, a longer-running pressure has been building. ETFs tracking Bitcoin, Ethereum, Solana, and XRP have now seen net outflows for 13 straight sessions, totaling $4.4 billion withdrawn. That sustained institutional selling removes a consistent source of buying pressure that had supported prices earlier in the year. Hyperliquid's ETF was the lone exception, staying in positive territory — a detail that stands out given how uniformly negative the rest of the flow picture has been.\n\nSolana was among the hardest hit in the top 15, falling 8.45%, while Zcash dropped 11.46% — both moves consistent with smaller-cap assets amplifying Bitcoin's direction in a risk-off session. NEAR Protocol led all losers with a 17.26% drop after its founder issued a public warning about potential ecosystem failures, adding a project-specific catalyst on top of the broader market pressure. The Fear & Greed index at 12 — Extreme Fear — reflects how thoroughly sentiment has shifted from the optimism of earlier months.",
+  "worthKnowing": [
+    "Cardano fell below $0.20 after founder Charles Hoskinson announced he is taking a break, citing concerns about potential ecosystem failures — echoing the founder-driven selloff seen in NEAR Protocol on the same day.",
+    "Hyperliquid's ETF was the only major crypto ETF to stay in positive flow territory across the 13-session outflow streak that drained $4.4 billion from BTC, ETH, SOL, and XRP funds.",
+    "Worldcoin bucked the market-wide selloff with a 7.35% gain, the strongest move among tracked assets, on positive ecosystem news — though no specific product announcement was cited."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2275387878592,
+    "btcDominancePct": 55.5566,
+    "ethDominancePct": 9.3358,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "liquidation-cascade",
+    "etf-outflows",
+    "near-protocol",
+    "worldcoin",
+    "extreme-fear",
+    "bitcoin-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
