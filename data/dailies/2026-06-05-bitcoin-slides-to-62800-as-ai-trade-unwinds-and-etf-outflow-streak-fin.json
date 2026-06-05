@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-05T10:02:04.992Z",
+  "publishedAt": "2026-06-05",
+  "slug": "2026-06-05-bitcoin-slides-to-62800-as-ai-trade-unwinds-and-etf-outflow-streak-fin",
+  "headline": "Bitcoin slides to $62,800 as AI trade unwinds and ETF outflow streak finally breaks",
+  "summary": "Bitcoin fell to near $62,800 and Ethereum dropped 4.4% as the unwinding of leveraged AI-linked positions dragged crypto lower — Hyperliquid, one of the assets most tied to that trade, fell nearly 8%. The one piece of relief: a multi-billion-dollar outflow streak from Bitcoin and Ethereum ETFs came to an end, suggesting institutional selling pressure may be easing. Meanwhile, JPMorgan, Bank of America, and Citi announced a shared tokenized network, the clearest sign yet that Wall Street is moving from blockchain curiosity to blockchain infrastructure.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": 8.77,
+        "catalyst": "Worldcoin surged 8.77%, bucking the broader market selloff as renewed interest in its identity-verification model drew buyers despite wider volatility.",
+        "priceUsd": 0.556362,
+        "priceChange24hUsd": 0.05
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -40.01,
+        "catalyst": "LAB fell 40% on negative news flow and deteriorating sentiment, with no specific public announcement to anchor the move — likely a combination of thin liquidity and forced selling.",
+        "priceUsd": 10.9,
+        "priceChange24hUsd": -4.36
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62815,
+        "changePct24h": -0.36,
+        "marketCapUsd": 1258669894226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1681.51,
+        "changePct24h": -4.44,
+        "marketCapUsd": 202764561860,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.05,
+        "marketCapUsd": 187365829220,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 595.68,
+        "changePct24h": -0.02,
+        "marketCapUsd": 80260300674,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 75527044268,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": -1.87,
+        "marketCapUsd": 70271330842,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 66.45,
+        "changePct24h": -3.19,
+        "marketCapUsd": 38434833273,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3261,
+        "changePct24h": -0.41,
+        "marketCapUsd": 30918402981,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.019,
+        "changePct24h": 1.81,
+        "marketCapUsd": 18837689415,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 61.6,
+        "changePct24h": -7.68,
+        "marketCapUsd": 13708432266,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0848,
+        "changePct24h": -3.24,
+        "marketCapUsd": 13082800313,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 10889405890,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.9,
+        "changePct24h": -0.45,
+        "marketCapUsd": 9081447025,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0136,
+        "changePct24h": -3.28,
+        "marketCapUsd": 8471799064,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.1932,
+        "changePct24h": -7.42,
+        "marketCapUsd": 6505984452,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was the unwinding of leveraged positions tied to the AI trade — a pattern where capital had flowed into crypto assets perceived as connected to artificial intelligence themes. As those positions came off, assets with the strongest AI-adjacent narratives took the hardest hits: Hyperliquid fell 7.68% and Stellar dropped 7.42%, while Ethereum slid 4.44% to $1,681. Bitcoin held up comparatively well, losing only 0.36% to close near $62,815, which explains why BTC dominance remained elevated at 56.1% even as the broader market sold off.\n\nThe Fear & Greed index sits at 12 out of 100 — deep in Extreme Fear territory — reflecting how much sentiment has deteriorated. That reading alone doesn't cause selling, but it confirms that the market is not finding buyers willing to step in at current levels.\n\nThe one constructive data point: Bitcoin and Ethereum ETFs ended a record multi-billion-dollar outflow streak. That streak had been a consistent headwind, with institutional fund redemptions amplifying every dip. Its end doesn't mean inflows have returned, but it removes one source of mechanical selling pressure that had been weighing on prices for several sessions.",
+  "worthKnowing": [
+    "JPMorgan, Bank of America, and Citi announced a shared tokenized network — the first time three of the largest US banks have jointly committed to a common blockchain infrastructure for financial transactions.",
+    "Zcash fell roughly 30% after a developer disclosed a major protocol bug that went undetected for four years; the bug has since been patched, but the disclosure rattled confidence in the project's security audit processes.",
+    "Bitcoin and Ethereum ETFs ended what had been a record multi-session outflow streak, according to CoinDesk — the cumulative redemptions had exceeded several billion dollars before the streak broke."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2242978915398,
+    "btcDominancePct": 56.1186,
+    "ethDominancePct": 9.0425,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "ai-trade-unwind",
+    "etf-outflows",
+    "hyperliquid",
+    "ethereum-selloff",
+    "bank-tokenization",
+    "zcash-bug"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
