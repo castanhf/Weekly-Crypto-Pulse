@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-06T08:41:49.630Z",
+  "publishedAt": "2026-06-06",
+  "slug": "2026-06-06-bitcoin-recovers-above-61k-after-16-billion-in-liquidations-sweep-the-",
+  "headline": "Bitcoin recovers above $61K after $1.6 billion in liquidations sweep the market",
+  "summary": "A sharp intraday rout wiped out $1.6 billion in leveraged positions before Bitcoin clawed back above $61,000 — the kind of cascade where forced selling feeds more forced selling. Ethereum took the harder hit, falling nearly 5% to $1,584. Zcash, which had been battered earlier in the week by a bug disclosure, bounced 17% as a treasury firm signaled continued accumulation.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 17.38,
+        "catalyst": "Cypherpunk, a treasury company, reaffirmed its commitment to accumulating 5% of ZEC's total supply, providing a floor of institutional demand after the asset's earlier selloff.",
+        "priceUsd": 376.36,
+        "priceChange24hUsd": 65.4
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -22.01,
+        "catalyst": "LAB dropped 22% with no positive news to offset the broader market downturn, making it one of the session's hardest-hit assets.",
+        "priceUsd": 8.86,
+        "priceChange24hUsd": -1.95
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61315,
+        "changePct24h": -1.93,
+        "marketCapUsd": 1228326056455,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1584.92,
+        "changePct24h": -4.92,
+        "marketCapUsd": 191174878006,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.03,
+        "marketCapUsd": 187012970180,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 581.9,
+        "changePct24h": -0.76,
+        "marketCapUsd": 78477872005,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 75555722064,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.1,
+        "changePct24h": -2.38,
+        "marketCapUsd": 68256048285,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 63.28,
+        "changePct24h": -3.9,
+        "marketCapUsd": 36626096576,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3197,
+        "changePct24h": -1.73,
+        "marketCapUsd": 30319909159,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.029,
+        "changePct24h": 0.95,
+        "marketCapUsd": 19049304530,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.48,
+        "changePct24h": -2.06,
+        "marketCapUsd": 13456975269,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0821,
+        "changePct24h": -2.07,
+        "marketCapUsd": 12688165809,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10829142229,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.64,
+        "changePct24h": -1.35,
+        "marketCapUsd": 8869853642,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0132,
+        "changePct24h": -2.93,
+        "marketCapUsd": 8189473123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.2014,
+        "changePct24h": 6.78,
+        "marketCapUsd": 6793121704,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's defining event was a liquidation cascade — when leveraged positions get forcibly closed, the resulting sell pressure pushes prices lower, which triggers more closures in a chain reaction. That process wiped out $1.6 billion in positions across the market before Bitcoin stabilized and recovered above $61,000. Ethereum bore the brunt among large-cap assets, falling nearly 5% to $1,584, while Solana dropped 3.9% and XRP fell 2.4%.\n\nThe backdrop made the cascade easier to trigger: the Fear & Greed index sits at 12 out of 100, deep in Extreme Fear territory, meaning the market had already been in a defensive posture before today's move. At that level, even moderate selling can accelerate quickly because fewer participants are willing to step in as buyers.\n\nStellar was a notable exception, rising 6.8% to $0.2014 against the broader selloff — the researcher's data does not identify a specific catalyst, suggesting the move may be technical. Zcash's 17% rebound came on a clearer story: treasury firm Cypherpunk reaffirmed its plan to accumulate 5% of ZEC's total supply, providing a demand signal after the asset had been hammered earlier in the week by a separate bug disclosure.",
+  "worthKnowing": [
+    "Worldcoin's WLD token fell 20% after its founder Arthur Hayes sold his holdings a day after publicly stating he would continue holding — the reversal triggered a sharp selloff.",
+    "Cardano's ADA dropped below $0.20 for the first time in four years, even as social media activity around the project surged.",
+    "Zcash suffered a software bug disclosure earlier in the week that triggered over $100 million in liquidations and a selloff exceeding 50% in ZEC before today's partial recovery."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2188806552167,
+    "btcDominancePct": 56.1804,
+    "ethDominancePct": 8.7437,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "liquidation-cascade",
+    "bitcoin-recovery",
+    "zcash-bug",
+    "worldcoin-wld",
+    "cardano-ada",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
