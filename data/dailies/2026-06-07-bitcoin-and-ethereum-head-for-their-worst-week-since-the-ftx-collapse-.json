@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-07T09:25:12.483Z",
+  "publishedAt": "2026-06-07",
+  "slug": "2026-06-07-bitcoin-and-ethereum-head-for-their-worst-week-since-the-ftx-collapse-",
+  "headline": "Bitcoin and Ethereum head for their worst week since the FTX collapse as the crypto market sheds $390 billion.",
+  "summary": "A $390 billion wipeout across the crypto market this week has put Bitcoin and Ethereum on track for their worst weekly performance since the FTX collapse in late 2022. Sunday brought some relief — Bitcoin climbed 2.6% to $62,714 and Ethereum gained 4.0% to $1,641 — but those moves come against a backdrop of deep weekly losses. The Fear & Greed index sits at 12, deep in Extreme Fear territory, reflecting how badly sentiment has deteriorated.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 44.5,
+        "catalyst": "LAB surged 44.5% with no specific catalyst identified — no named protocol announcement, partnership, or on-chain event was reported to explain the move.",
+        "priceUsd": 13.02,
+        "priceChange24hUsd": 5.79
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LTC",
+        "name": "Litecoin",
+        "changePct24h": -1.63,
+        "catalyst": "Litecoin fell 1.63% amid the week's broad market sell-off, which has hit Bitcoin and Ethereum hardest but dragged most assets lower.",
+        "priceUsd": 42.58,
+        "priceChange24hUsd": -0.69
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62714,
+        "changePct24h": 2.58,
+        "marketCapUsd": 1256737421860,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1641.23,
+        "changePct24h": 4,
+        "marketCapUsd": 198075384311,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.01,
+        "marketCapUsd": 186867417913,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 596.6,
+        "changePct24h": 2.85,
+        "marketCapUsd": 80413086114,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 75475182742,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.16,
+        "changePct24h": 6.16,
+        "marketCapUsd": 72190736239,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 65.85,
+        "changePct24h": 4.27,
+        "marketCapUsd": 38157752471,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.329,
+        "changePct24h": 2.86,
+        "marketCapUsd": 31200343465,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 0.46,
+        "marketCapUsd": 19182640930,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.15,
+        "changePct24h": -0.01,
+        "marketCapUsd": 13408071731,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0858,
+        "changePct24h": 4.53,
+        "marketCapUsd": 13257226448,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10798937952,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.58,
+        "changePct24h": -0.36,
+        "marketCapUsd": 8820507695,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0135,
+        "changePct24h": 2.66,
+        "marketCapUsd": 8387919968,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.2061,
+        "changePct24h": 2.61,
+        "marketCapUsd": 6958485403,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The week's story is a $390 billion drawdown across the crypto market — the steepest weekly loss since the FTX collapse in November 2022. Sunday's partial recovery, with Bitcoin up 2.6% and Ethereum up 4.0%, looks more like a bounce within a downtrend than a reversal, given that the Fear & Greed index has fallen to 12 — a reading that historically accompanies capitulation-level selling rather than the start of a new rally. XRP led the top-15 with a 6.2% gain, followed by Solana at 4.3% and Dogecoin at 4.5%. Whether those moves represent genuine demand or a technical bounce after heavy weekly losses is unclear — no specific flow data or volume figures were available to confirm a directional shift. Analysts cited by CoinTelegraph note that Bitcoin is the most oversold it has been since the March 2020 crash. That is a factual observation about where price sits relative to recent history, not a prediction of what comes next. The broader macro backdrop — including major U.S. banks reportedly building a joint digital currency network to address deposit outflows — adds a layer of structural uncertainty to an already stressed market.",
+  "worthKnowing": [
+    "America's largest banks are reportedly collaborating on a shared digital currency network aimed at stemming deposit outflows — a development that could reshape how institutional money interacts with blockchain-based payment rails.",
+    "Bitcoin is the most oversold it has been since the March 2020 crash, according to analysts cited by CoinTelegraph — a factual measure of where price sits relative to recent trading history.",
+    "LAB surged 44.5% on Sunday with no specific catalyst reported — no named announcement or on-chain event was identified to explain the move."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2240471111097,
+    "btcDominancePct": 56.1379,
+    "ethDominancePct": 8.819,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "ftx-collapse-comparison",
+    "fear-greed-extreme",
+    "xrp",
+    "bank-digital-currency",
+    "bitcoin-oversold"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-01-bitcoin-and-ethereum-decline-as-market-sentiment-weakens"
+  }
+}
