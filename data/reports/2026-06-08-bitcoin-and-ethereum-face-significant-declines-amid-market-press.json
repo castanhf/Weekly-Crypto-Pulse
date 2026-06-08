@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-06-08T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Bitcoin and Ethereum face significant declines amid market pressures",
+      "slug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press",
+      "publishedAt": "2026-06-08",
+      "weekLabel": "Week of Jun 8, 2026",
+      "summary": "The cryptocurrency market experienced a downturn this week, with a total market cap of $2.257 trillion. Bitcoin fell by 13.13% to $63,233, while Ethereum declined by 15.90% to $1,666, reflecting a broader risk-off sentiment among investors as indicated by the Fear & Greed Index dropping to 8.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "risk-off",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2257000000000,
+      "btcDominancePct": 56.26,
+      "ethDominancePct": 8.92,
+      "fearGreedIndex": 8
+    },
+    "movers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct7d": -21.55,
+        "catalyst": "Zcash saw a significant decline of 21.55% this week, despite a proposed upgrade that initially sparked interest."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment shifts towards fear as inflation concerns rise",
+        "body": "This week, the cryptocurrency market faced considerable pressure, with the Fear & Greed Index plummeting to 8, indicating extreme fear among investors. The total market cap decreased to $2.257 trillion, reflecting a broader risk-off sentiment. The decline in Bitcoin and Ethereum prices can be attributed to various macroeconomic factors, including rising inflation concerns and geopolitical tensions, particularly surrounding the Iran-Israel trade situation. Additionally, the recent spike in oil prices has contributed to market unease, further exacerbating the downward trend in crypto assets. Investors are closely monitoring upcoming economic indicators, such as U.S. inflation data and decisions from the European Central Bank, which could influence market dynamics in the near term.",
+        "highlights": [
+          "The Fear & Greed Index has dropped to 8, signaling extreme fear in the market.",
+          "Total cryptocurrency market capitalization has decreased to $2.257 trillion.",
+          "Geopolitical tensions and inflation concerns are weighing heavily on investor sentiment."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum experience sharp declines amidst market turbulence",
+        "body": "Bitcoin fell by 13.13% this week, closing at $63,233, while Ethereum saw a more significant decline of 15.90%, ending at $1,666. The price movements were influenced by a combination of short liquidations and broader market pressures, including a notable drop in spot bitcoin ETF inflows, which recorded $1.7 billion in weekly outflows, the largest since February 2025. Despite a brief rally that saw Bitcoin spike to $63,700, it quickly retreated below the $63,000 mark as bearish sentiment prevailed. Analysts are assessing the potential for further downside as market participants react to macroeconomic signals and the ongoing volatility in traditional markets.",
+        "highlights": [
+          "Bitcoin closed at $63,233 after a 13.13% decline over the week.",
+          "Ethereum's price fell to $1,666, marking a 15.90% decrease.",
+          "Spot bitcoin ETFs experienced significant outflows, indicating waning investor interest."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Market outlook remains cautious as risks persist",
+        "body": "Looking ahead, the cryptocurrency market is likely to remain in a risk-off regime as investors navigate ongoing macroeconomic uncertainties. The extreme fear reflected in the Fear & Greed Index suggests that many participants are hesitant to enter the market until clearer signals emerge. Potential catalysts for a shift in sentiment could include positive developments in inflation data or stabilization in traditional markets. However, the current climate of fear and uncertainty may lead to further price declines in major cryptocurrencies. Investors should remain vigilant and prepared for continued volatility as the market reacts to external pressures and evolving economic conditions.",
+        "highlights": [
+          "The market is expected to remain in a risk-off regime amid ongoing uncertainties.",
+          "Investors are cautious, reflecting extreme fear in the current sentiment.",
+          "Potential positive economic signals could shift market dynamics in the coming weeks."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "The extreme fear in the market suggests a potential for further downside in major cryptocurrencies.",
+        "Upcoming economic indicators will be crucial in shaping market sentiment.",
+        "The decline in ETF inflows indicates waning institutional interest in cryptocurrencies.",
+        "Geopolitical tensions and inflation concerns will continue to weigh on investor confidence."
+      ],
+      "riskChecklist": [
+        "Geopolitical tensions could escalate, impacting market stability.",
+        "Inflation data may surprise to the upside, leading to further risk-off sentiment.",
+        "Continued outflows from ETFs could signal a lack of institutional confidence.",
+        "Market volatility may increase as traders react to macroeconomic news.",
+        "Short liquidations could lead to rapid price swings in the near term."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$60,000",
+          "context": "A critical support level that, if breached, could lead to further declines."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,500",
+          "context": "A significant psychological level that may attract buying interest if reached."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "The total market cap has decreased from $2.549 trillion to $2.257 trillion.",
+        "Bitcoin dominance has fallen from 57.07% to 56.26%.",
+        "The Fear & Greed Index has dropped significantly from 29 to 8."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin drops below $63,000 as market fears escalate.",
+      "body": "This week, Bitcoin and Ethereum faced significant declines, with Bitcoin falling to $63,233 and Ethereum dropping to $1,666. The overall cryptocurrency market cap decreased to $2.257 trillion, reflecting a shift towards fear among investors, as indicated by the Fear & Greed Index, which fell to 8. Factors contributing to this downturn include rising inflation concerns and geopolitical tensions, particularly in the Middle East. Additionally, spot bitcoin ETFs experienced their largest outflows since February 2025, signaling waning interest from institutional investors. As the market grapples with these pressures, many are watching for upcoming economic indicators that could influence future price movements."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 37530636430,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 5176551856,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4866940497,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4381005836,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 4162722367,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 3959084071,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1580069081,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1555361674,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1271336800,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 1038576728,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 804917646,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 478033933,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 440136791,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 355516590,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "ENI",
+          "tvlUsd": 319305408,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Smallest losses",
+      "losers": "Losers"
+    }
+  }
+}
