@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-08T11:08:55.141Z",
+  "publishedAt": "2026-06-08",
+  "slug": "2026-06-08-bitcoin-steadies-near-63000-after-sundays-rally-liquidates-504m-in-sho",
+  "headline": "Bitcoin steadies near $63,000 after Sunday's rally liquidates $504M in short positions",
+  "summary": "Bitcoin held ground Monday after a weekend surge to $63,700 forced $504 million in losses on traders who had bet against it — the largest short liquidation since late April. The rally lifted most of the top 20, with Ethereum gaining 2.65% and Hyperliquid up 4.2%. The bigger story is what comes next: analysts say a full market reversal from the months-long downtrend will take longer than one strong weekend.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 11.38,
+        "catalyst": "NEAR Protocol surged by 11.38% as market sentiment improved following Bitcoin's rally, indicating a potential shift in investor confidence.",
+        "priceUsd": 2.11,
+        "priceChange24hUsd": 0.24
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -9.07,
+        "catalyst": "Bitcoin Cash dropped by 9.07% amid a broader market downturn and negative sentiment following significant ETF outflows.",
+        "priceUsd": 204,
+        "priceChange24hUsd": -18.51
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63069,
+        "changePct24h": 1.05,
+        "marketCapUsd": 1263203838860,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1667.4,
+        "changePct24h": 2.65,
+        "marketCapUsd": 201282712503,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.03,
+        "marketCapUsd": 186812565077,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 596.95,
+        "changePct24h": 0.46,
+        "marketCapUsd": 80469810606,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 75606406984,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": 0.68,
+        "marketCapUsd": 70949573674,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 66.04,
+        "changePct24h": 2.12,
+        "marketCapUsd": 38269812766,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3259,
+        "changePct24h": -0.89,
+        "marketCapUsd": 30901107439,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 0,
+        "marketCapUsd": 19178199785,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 61.23,
+        "changePct24h": 4.21,
+        "marketCapUsd": 13620357876,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0855,
+        "changePct24h": 1.42,
+        "marketCapUsd": 13217479255,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 10703895491,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.6,
+        "changePct24h": 0.5,
+        "marketCapUsd": 8838114892,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0133,
+        "changePct24h": -0.83,
+        "marketCapUsd": 8249141069,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 426.23,
+        "changePct24h": 6,
+        "marketCapUsd": 7146608839,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Sunday's Bitcoin rally to $63,700 set the tone for Monday's session. The surge caught a large number of short sellers — traders who had placed bets that Bitcoin's price would fall — badly offside, forcing $504 million in liquidations, the most since late April. That kind of forced buying tends to amplify upward moves, which helps explain why the rally carried further than the underlying news alone might have justified.\n\nThe broader market followed Bitcoin's lead. Ethereum gained 2.65%, Solana rose 2.12%, and Hyperliquid climbed 4.21%. NEAR Protocol was the standout, jumping 11.38% as improved sentiment around Bitcoin drew capital into higher-risk altcoins. Bitcoin Cash moved in the opposite direction, falling 9.07% — a reminder that not every asset benefits equally from a Bitcoin-led rally, particularly when ETF outflow data weighs on sentiment.\n\nThe Fear & Greed index sits at 8 out of 100, deep in Extreme Fear territory, which means the market's mood remains fragile despite the weekend's gains. Analysts quoted in Monday's coverage noted that a sustained reversal from the broader downtrend will take longer than a single strong session — the rally stabilized prices but did not resolve the underlying uncertainty. Gold slipping below its 200-day moving average (a widely watched technical level) was flagged by some observers as a potential positive signal for Bitcoin, on the theory that investors rotating out of gold sometimes move into crypto.",
+  "worthKnowing": [
+    "Bitcoin's weekend rally to $63,700 forced $504 million in losses on short sellers — the largest single-session short liquidation since late April.",
+    "CME Group launched a new product allowing traders to bet on Bitcoin's price volatility rather than its direction, with two firms already placing positions — a sign of growing institutional appetite for crypto derivatives.",
+    "Zcash gained about 6% in the past 24 hours; a news headline cited a larger 45% move, which appears to reflect a longer multi-day window rather than the 24-hour change — the catalyst was a developer proposal for a new network upgrade called 'Ironwood'.",
+    "Gold fell below its 200-day moving average on Monday, a technical threshold some analysts watch as a potential indicator of capital rotation toward Bitcoin."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2248790146593,
+    "btcDominancePct": 56.1688,
+    "ethDominancePct": 8.9496,
+    "fearGreedIndex": 8
+  },
+  "tags": [
+    "bitcoin-rally",
+    "short-liquidations",
+    "near-protocol",
+    "zcash-ironwood",
+    "cme-volatility-product",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
