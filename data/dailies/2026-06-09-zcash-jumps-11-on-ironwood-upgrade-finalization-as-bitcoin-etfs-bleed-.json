@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-09T09:59:02.391Z",
+  "publishedAt": "2026-06-09",
+  "slug": "2026-06-09-zcash-jumps-11-on-ironwood-upgrade-finalization-as-bitcoin-etfs-bleed-",
+  "headline": "Zcash jumps 11% on Ironwood upgrade finalization as Bitcoin ETFs bleed outflows and Fear & Greed hits 10",
+  "summary": "Zcash was the day's standout mover, surging 10.85% after the privacy-focused network finalized its Ironwood upgrade plan targeting a July activation. Bitcoin slipped 1.2% to $62,670 as US ETF outflows continued for another session, though analysts noted the selling pressure may be easing. The broader market is deep in fear territory — the Fear & Greed index sits at 10 out of 100, its lowest reading in months — with most top assets flat or slightly lower.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 10.85,
+        "catalyst": "Zcash finalized its Ironwood upgrade plan, targeting a July network activation — a concrete development milestone that drove fresh buying interest.",
+        "priceUsd": 472.57,
+        "priceChange24hUsd": 51.26
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -18.07,
+        "catalyst": "No clear catalyst identified; the sharp decline appears to reflect thin liquidity and selling pressure with no accompanying news.",
+        "priceUsd": 10.77,
+        "priceChange24hUsd": -1.95
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62670,
+        "changePct24h": -1.2,
+        "marketCapUsd": 1255476574921,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1669.94,
+        "changePct24h": 0.04,
+        "marketCapUsd": 201501224445,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": 0.02,
+        "marketCapUsd": 186848948526,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 599.81,
+        "changePct24h": 0.09,
+        "marketCapUsd": 80825152286,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 75968082326,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.16,
+        "changePct24h": 1.06,
+        "marketCapUsd": 71980210973,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 66.13,
+        "changePct24h": -0.1,
+        "marketCapUsd": 38317119422,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3215,
+        "changePct24h": -1.48,
+        "marketCapUsd": 30489948387,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": 2.19,
+        "marketCapUsd": 19056426645,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.17,
+        "changePct24h": 1.21,
+        "marketCapUsd": 13822515118,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0853,
+        "changePct24h": -0.54,
+        "marketCapUsd": 13186278954,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10641187620,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.46,
+        "changePct24h": -2.18,
+        "marketCapUsd": 8710961932,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.013,
+        "changePct24h": -2.02,
+        "marketCapUsd": 8078241520,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 472.57,
+        "changePct24h": 10.85,
+        "marketCapUsd": 7907252707,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest story was Zcash. The network finalized its Ironwood upgrade plan — a privacy and performance improvement targeting July activation — and the market responded with a 10.85% price jump. Protocol upgrades with firm timelines tend to attract fresh buying as they reduce uncertainty about a network's development roadmap.\n\nBitcoin's 1.2% decline to $62,670 continued a pattern of ETF-driven selling pressure. US spot Bitcoin ETFs logged further outflows for the session, though analysts noted the pace of redemptions appears to be slowing — cumulative outflows have weighed on BTC for several consecutive days. Ethereum barely moved, up 0.04%, reflecting the broader market's lack of directional conviction.\n\nThe Fear & Greed index reading of 10 — deep in \"Extreme Fear\" territory — is the most striking number of the day. This level typically reflects a market where recent losses have shaken confidence broadly, and participants are holding back rather than deploying capital. It does not predict what happens next, but it does describe the current mood accurately: cautious and defensive.\n\nXRP gained 1.06% and Hyperliquid rose 1.21%, both outperforming the flat-to-down majority without a specific catalyst — likely routine rotation into assets that have held up relatively better during the recent drawdown. The Humanity Protocol token's 80%-plus collapse following a $32 million private-key hack was a sharp reminder of security risk in smaller projects, though it did not appear to drag on the broader top-15 assets.",
+  "worthKnowing": [
+    "The Humanity Protocol token crashed more than 80% after attackers exploited a private-key vulnerability to steal $32 million — one of the larger hacks of the year so far.",
+    "Coinbase and Cardless launched a credit card backed by stablecoins, a step toward making crypto-denominated spending usable for everyday purchases.",
+    "Some traders are pointing to a potential SpaceX IPO as the next macro catalyst for Bitcoin, though no IPO date has been announced."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2241518029622,
+    "btcDominancePct": 56.0246,
+    "ethDominancePct": 8.991,
+    "fearGreedIndex": 10
+  },
+  "tags": [
+    "zcash-ironwood-upgrade",
+    "btc-etf-outflows",
+    "fear-greed-extreme",
+    "humanity-protocol-hack",
+    "coinbase-stablecoin-card"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
