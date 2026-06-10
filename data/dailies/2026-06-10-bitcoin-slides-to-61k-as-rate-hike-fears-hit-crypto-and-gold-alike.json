@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-10T10:13:43.234Z",
+  "publishedAt": "2026-06-10",
+  "slug": "2026-06-10-bitcoin-slides-to-61k-as-rate-hike-fears-hit-crypto-and-gold-alike",
+  "headline": "Bitcoin slides to $61K as rate-hike fears hit crypto and gold alike",
+  "summary": "A broad selloff swept through crypto on Wednesday, with Bitcoin falling 2.4% to $61,154 and Ethereum dropping 3% to $1,619 as investors priced in a higher-for-longer rate environment. The Fear & Greed index sits at 9 — deep in Extreme Fear territory — reflecting how far sentiment has deteriorated. XRP led large-cap losses, down 4.3%, as on-chain data showed holders selling at a loss. The rest of this report covers what drove the move, which assets held up, and a notable stablecoin development out of Japan.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "changePct24h": 13.07,
+        "catalyst": "No clear catalyst identified — WBT's 13% gain occurred against the broader market selloff with no specific announcement or event in the researcher's data to explain the move.",
+        "priceUsd": 50.41,
+        "priceChange24hUsd": 6.59
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -15,
+        "catalyst": "No clear catalyst identified — LAB fell 15% with no specific event or announcement in the researcher's data; the move coincided with broad market weakness but no named driver.",
+        "priceUsd": 9.16,
+        "priceChange24hUsd": -1.37
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61154,
+        "changePct24h": -2.42,
+        "marketCapUsd": 1226936868816,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1619.21,
+        "changePct24h": -3.01,
+        "marketCapUsd": 195655436281,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.01,
+        "marketCapUsd": 186822434715,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 583.47,
+        "changePct24h": -2.32,
+        "marketCapUsd": 78682707219,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 75009600581,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.11,
+        "changePct24h": -4.3,
+        "marketCapUsd": 68767147088,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 63.4,
+        "changePct24h": -4.06,
+        "marketCapUsd": 36796591677,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3226,
+        "changePct24h": 0.57,
+        "marketCapUsd": 30605203359,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 0.54,
+        "marketCapUsd": 19249759964,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0834,
+        "changePct24h": -2.29,
+        "marketCapUsd": 12900861658,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.71,
+        "changePct24h": -10.45,
+        "marketCapUsd": 12401212764,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 10586538499,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.53,
+        "changePct24h": 0.76,
+        "marketCapUsd": 8666513531,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0131,
+        "changePct24h": 0.96,
+        "marketCapUsd": 8153342633,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 418.6,
+        "changePct24h": -11.55,
+        "marketCapUsd": 7062471693,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a renewed bet on interest rate hikes — investors repriced the likelihood that the Federal Reserve will keep rates elevated longer than expected, and that repricing hit both Bitcoin and gold simultaneously. When both assets fall together, it undercuts the narrative that Bitcoin serves as a hedge against traditional financial stress; on days like this, it trades more like a risk asset than a store of value.\n\nXRP was the hardest-hit large-cap, falling 4.3% to $1.11. On-chain data showed XRP holders selling at a loss — a pattern that reflects genuine capitulation rather than routine profit-taking. Solana dropped 4.1% to $63.40, tracking the broader altcoin weakness.\n\nHyperliquid fell 10.5% and Zcash dropped 11.6%, two of the steeper single-day moves in the top 15. Neither had a named catalyst in the researcher's data beyond the macro pressure affecting the whole market.\n\nThe Fear & Greed index reading of 9 — the lowest end of Extreme Fear — reflects how broadly negative sentiment has become. Bitcoin faces additional headwinds flagged in today's news cycle: pressure from SpaceX-related selling, the Fed rate environment, and uncertainty around the Mythos ecosystem. Total market cap sits at $2.20 trillion, with BTC dominance at 55.96%, meaning Bitcoin is holding its relative share even as prices fall across the board.",
+  "worthKnowing": [
+    "Japan's three largest banks are collaborating on a joint stablecoin issuance targeting a March launch — one of the most significant moves by traditional financial institutions into digital currency infrastructure in Asia.",
+    "XRP on-chain data showed holders selling at a loss at a notable rate today, according to CoinDesk, reflecting the depth of the current drawdown among retail participants.",
+    "Bitcoin and gold fell in tandem today — a correlation that tends to appear when rate-hike expectations dominate, overriding both assets' typical roles as inflation or uncertainty hedges."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2200421050242,
+    "btcDominancePct": 55.9625,
+    "ethDominancePct": 8.9478,
+    "fearGreedIndex": 9
+  },
+  "tags": [
+    "rate-hike-fears",
+    "xrp-capitulation",
+    "japan-stablecoin",
+    "btc-gold-correlation",
+    "extreme-fear",
+    "hyperliquid"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
