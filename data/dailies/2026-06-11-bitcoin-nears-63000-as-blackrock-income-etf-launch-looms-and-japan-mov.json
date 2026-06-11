@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-11T10:47:15.604Z",
+  "publishedAt": "2026-06-11",
+  "slug": "2026-06-11-bitcoin-nears-63000-as-blackrock-income-etf-launch-looms-and-japan-mov",
+  "headline": "Bitcoin nears $63,000 as BlackRock income ETF launch looms and Japan moves to regulate crypto like stocks",
+  "summary": "Bitcoin climbed 2.6% to nearly $63,000 Thursday, leading a broad but cautious recovery across the top assets — all against a backdrop of extreme fear (Fear & Greed: 12). The day's real story is institutional infrastructure: BlackRock is set to launch an income-paying Bitcoin ETF at a fee designed to undercut rivals, and Japan's parliament is on the verge of passing a sweeping crypto regulatory framework that would treat digital assets more like traditional securities. Both developments point toward deeper mainstream integration even as sentiment remains deeply negative.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BEAT",
+        "name": "Audiera",
+        "changePct24h": 53.79,
+        "catalyst": "No clear catalyst identified — the move appears to be driven by low-liquidity trading activity in a small-cap asset.",
+        "priceUsd": 8.37,
+        "priceChange24hUsd": 4.5
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -12.2,
+        "catalyst": "No clear catalyst identified — the decline appears to reflect thin liquidity and selling pressure in a small-cap token.",
+        "priceUsd": 7.99,
+        "priceChange24hUsd": -0.97
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62867,
+        "changePct24h": 2.62,
+        "marketCapUsd": 1259571265565,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1655.46,
+        "changePct24h": 1.88,
+        "marketCapUsd": 199789205238,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9989,
+        "changePct24h": -0.03,
+        "marketCapUsd": 186732106956,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 599.08,
+        "changePct24h": 2.56,
+        "marketCapUsd": 80738536951,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74948540319,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.12,
+        "changePct24h": 0.73,
+        "marketCapUsd": 69342640123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 65.42,
+        "changePct24h": 3.05,
+        "marketCapUsd": 37931986492,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3215,
+        "changePct24h": -0.25,
+        "marketCapUsd": 30487512256,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.024,
+        "changePct24h": -0.79,
+        "marketCapUsd": 19151952752,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.085,
+        "changePct24h": 1.67,
+        "marketCapUsd": 13138353739,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.69,
+        "changePct24h": -0.28,
+        "marketCapUsd": 12388689603,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10564276954,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.39,
+        "changePct24h": -1.23,
+        "marketCapUsd": 8644798565,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0133,
+        "changePct24h": 1.17,
+        "marketCapUsd": 8261974755,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 430.78,
+        "changePct24h": 2.41,
+        "marketCapUsd": 7221794094,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's gains were broad but uneven. Bitcoin led with a 2.62% rise to $62,867, holding above a technical level that Ethereum and Solana have so far failed to reclaim — a dynamic that reinforced Bitcoin's relative strength in the current environment. Solana was the top performer among the large caps, up 3.05% to $65.42, while Ethereum gained 1.88% to $1,655. BNB tracked Bitcoin closely, rising 2.56%.\n\nTwo institutional developments provided the backdrop. BlackRock is preparing to launch an income-paying Bitcoin ETF — a product that distributes yield to holders — at a fee designed to undercut existing rivals. That kind of competitive pricing from the world's largest asset manager signals sustained institutional appetite for Bitcoin exposure even as retail sentiment sits at extreme fear levels. Separately, Japan's parliament is on the verge of passing a bill that would regulate cryptocurrencies under a framework similar to traditional securities law. If enacted, it would be one of the most significant national regulatory moves in years, potentially opening the door to broader institutional participation in Japanese markets.\n\nXRP held above $1.10 and gained 0.73%, supported by rising ETF inflows, though the move was smaller than Bitcoin's — traders appear to be waiting for clearer signals before adding to positions. The Fear & Greed index at 12 (Extreme Fear) is a reminder that the price recovery is happening against a backdrop of deeply negative sentiment, not broad enthusiasm.",
+  "worthKnowing": [
+    "Japan's parliament is poised to pass a bill that would regulate cryptocurrencies under a framework similar to stocks and securities — one of the most significant national regulatory moves in the asset class in years.",
+    "BlackRock's income-paying Bitcoin ETF is nearing launch at a fee that undercuts existing rivals, adding a yield-distribution product to the growing menu of institutional Bitcoin vehicles.",
+    "XRP ETF inflows rose on the day, helping the token hold above $1.10, though traders remained cautious and the gain of 0.73% lagged Bitcoin's advance.",
+    "Bitcoin is trading near $63,000 ahead of the anticipated SpaceX IPO, which some market participants are watching as a potential signal for broader risk appetite."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2237191701575,
+    "btcDominancePct": 56.2913,
+    "ethDominancePct": 8.9322,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "blackrock-btc-etf",
+    "japan-crypto-regulation",
+    "bitcoin-technical-levels",
+    "xrp-etf-flows",
+    "spacex-ipo",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
