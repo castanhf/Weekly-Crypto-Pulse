@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-12T10:22:47.629Z",
+  "publishedAt": "2026-06-12",
+  "slug": "2026-06-12-blackrock-files-to-list-a-bitcoin-income-etf-as-markets-inch-higher-on",
+  "headline": "BlackRock files to list a Bitcoin income ETF as markets inch higher on extreme fear",
+  "summary": "BlackRock moved to list a new Bitcoin income ETF, expected to debut next week — the latest sign that institutional infrastructure around crypto keeps expanding even as the Fear & Greed index sits at a deeply fearful 12. Bitcoin rose 1.46% to $63,684 and most of the top 15 tracked assets gained ground, though the moves were modest. The day's standout story is less about price and more about product: a new ETF filing from the world's largest asset manager and a Coinbase tool that lets AI agents trade on users' behalf.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 28.12,
+        "catalyst": "LAB surged 28.12% as Coinbase launched a tool allowing AI agents to trade crypto and make payments, drawing fresh attention to projects tied to AI-driven trading infrastructure.",
+        "priceUsd": 9.94,
+        "priceChange24hUsd": 2.8
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "changePct24h": -3.16,
+        "catalyst": "TRON fell 3.16%, underperforming the broader market as Bitcoin's recent volatility and lingering regulatory uncertainty weighed on sentiment around the asset.",
+        "priceUsd": 0.312155,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63684,
+        "changePct24h": 1.46,
+        "marketCapUsd": 1276333413196,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1676.54,
+        "changePct24h": 1.37,
+        "marketCapUsd": 202334798853,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186671686799,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 605.34,
+        "changePct24h": 1.17,
+        "marketCapUsd": 81611582318,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 74852029082,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": 2.63,
+        "marketCapUsd": 71005953691,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 67.02,
+        "changePct24h": 2.57,
+        "marketCapUsd": 38862454476,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3122,
+        "changePct24h": -3.16,
+        "marketCapUsd": 29600693604,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 0.58,
+        "marketCapUsd": 19315499105,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0867,
+        "changePct24h": 1.93,
+        "marketCapUsd": 13400662346,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.99,
+        "changePct24h": 5.19,
+        "marketCapUsd": 13125100435,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10506887744,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.5,
+        "changePct24h": 0.21,
+        "marketCapUsd": 8747806640,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0132,
+        "changePct24h": -0.68,
+        "marketCapUsd": 8202967670,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 437.29,
+        "changePct24h": 2.19,
+        "marketCapUsd": 7337964883,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's price action was broadly positive but unspectacular — Bitcoin added 1.46% to reach $63,684, Ethereum gained 1.37% to $1,676.54, and most of the top 15 tracked assets closed in the green. That said, the Fear & Greed index at 12 out of 100 signals that the market remains deeply fearful, and the gains feel more like stabilization than a genuine recovery.\n\nThe clearest catalyst for the day came from BlackRock, which filed to list a Bitcoin income ETF with an expected debut next week. BlackRock is the world's largest asset manager, and its continued product expansion into Bitcoin signals that institutional demand for regulated crypto exposure is not slowing down — even at current prices. Bitcoin's brief dip earlier in the week had been partly attributed to geopolitical uncertainty, and a report that Trump signaled an end to the Iran conflict appeared to help sentiment recover.\n\nXRP was among the stronger performers in the top 15, rising 2.63% to $1.14, with reports pointing to institutional buying at a key price level. Hyperliquid (HYPE) led the tracked group with a 5.19% gain, though no single news item explained the move — it may reflect rotation into decentralized exchange tokens. TRON was the notable underperformer, slipping 3.16% against the broader uptrend; no specific catalyst emerged beyond general market caution.\n\nMetaplanet's acquisition of Siiibo Securities — a Japanese bond platform — to build out a Bitcoin financial ecosystem added to the day's institutional narrative, reinforcing that corporate Bitcoin strategies are evolving beyond simple treasury holdings.",
+  "worthKnowing": [
+    "BlackRock filed to list a Bitcoin income ETF, with the product expected to begin trading next week — the firm's latest expansion of its regulated crypto product lineup.",
+    "Coinbase launched a tool that allows AI agents to trade crypto and make payments autonomously on behalf of users, a development that drew significant attention from traders in AI-adjacent tokens.",
+    "Metaplanet, a Japanese company pursuing a Bitcoin treasury strategy, acquired Siiibo Securities — a bond issuance platform — to accelerate its plans for a broader Bitcoin financial ecosystem.",
+    "Trump signaled an end to the Iran conflict, which news reports linked to a partial recovery in Bitcoin's price after earlier weakness."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2265106779379,
+    "btcDominancePct": 56.327,
+    "ethDominancePct": 8.9356,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "blackrock-bitcoin-etf",
+    "coinbase-ai-trading",
+    "metaplanet",
+    "xrp-institutional",
+    "hyperliquid",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
