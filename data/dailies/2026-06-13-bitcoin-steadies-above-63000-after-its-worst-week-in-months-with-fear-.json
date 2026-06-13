@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-13T09:25:00.461Z",
+  "publishedAt": "2026-06-13",
+  "slug": "2026-06-13-bitcoin-steadies-above-63000-after-its-worst-week-in-months-with-fear-",
+  "headline": "Bitcoin steadies above $63,000 after its worst week in months, with Fear & Greed at extreme fear",
+  "summary": "Bitcoin clawed back to $63,802 after touching $59,000 earlier this week — a late macro reprieve helped arrest what had been the sharpest weekly decline in months. The broader market remains deeply unsettled: the Fear & Greed index sits at 13, deep in extreme-fear territory. Most top assets barely moved, but Bittensor surged 13.8% and Monero dropped 7.5%, showing that even in a frozen market, individual assets can swing hard.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "TAO",
+        "name": "Bittensor",
+        "changePct24h": 13.8,
+        "catalyst": "Bittensor surged 13.8% as Bitcoin's stabilization above $63,000 lifted sentiment around AI-adjacent tokens that had been hit hard during the week's selloff.",
+        "priceUsd": 243.2,
+        "priceChange24hUsd": 33.56
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -7.46,
+        "catalyst": "Monero fell 7.5% as extreme fear across the market — Fear & Greed at 13 — weighed on privacy-focused assets, which tend to attract less defensive buying during risk-off periods.",
+        "priceUsd": 339.27,
+        "priceChange24hUsd": -25.29
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63802,
+        "changePct24h": 0.34,
+        "marketCapUsd": 1278844620832,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1673.97,
+        "changePct24h": -0.09,
+        "marketCapUsd": 202064288426,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": 0.08,
+        "marketCapUsd": 186471602770,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 603.46,
+        "changePct24h": -0.31,
+        "marketCapUsd": 81348964740,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 74799049690,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": -0.06,
+        "marketCapUsd": 70965051171,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 67.45,
+        "changePct24h": 0.58,
+        "marketCapUsd": 39112148957,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3159,
+        "changePct24h": 1.04,
+        "marketCapUsd": 29957922694,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.031,
+        "changePct24h": 0.07,
+        "marketCapUsd": 19375299297,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0873,
+        "changePct24h": 0.84,
+        "marketCapUsd": 13508311679,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.76,
+        "changePct24h": 0.38,
+        "marketCapUsd": 13075891741,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10607339140,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.56,
+        "changePct24h": 0.49,
+        "marketCapUsd": 8799072628,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.013,
+        "changePct24h": -1.33,
+        "marketCapUsd": 8085665979,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 414.45,
+        "changePct24h": -4.57,
+        "marketCapUsd": 6949385670,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's week was rough — it hit a low of $59,000 before recovering to close around $63,800 today, a 0.34% gain that understates the turbulence underneath. The recovery came partly from a macro tailwind that arrived late in the week, though the researcher's data doesn't specify which data point triggered it; the pattern is consistent with traders covering short positions after a sharp drawdown rather than fresh buying. The Fear & Greed index at 13 — deep in extreme-fear territory — confirms that sentiment has not recovered alongside price. Readings this low typically reflect capitulation-level anxiety, not optimism.\n\nStandard Chartered's analysts publicly called $59,000 the cycle bottom, which may have contributed to the stabilization: institutional commentary of that kind can slow selling by giving holders a narrative anchor. That said, one analyst's call is not a market catalyst on its own.\n\nZcash fell 4.57% and Rain dropped 1.33%, continuing a pattern where smaller privacy and low-liquidity assets absorb outsized selling pressure when fear dominates. Solana held up relatively well at +0.58%, and TRON gained 1.04%, suggesting some rotation into assets with active on-chain ecosystems. The broader picture is a market that stopped falling but has not yet found a reason to move higher.",
+  "worthKnowing": [
+    "Standard Chartered analysts publicly stated that Bitcoin's $59,000 low this week marked the end of the current crypto winter — a call that, if accurate, would represent the cycle trough.",
+    "A debate is underway among cryptographers about whether Bitcoin's encryption could eventually be broken by quantum computers; no consensus has emerged, and no timeline for risk has been established.",
+    "Zcash fell 4.57% today, the largest decline among the top 15 tracked assets, with no specific catalyst beyond the broad risk-off environment."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2265658786496,
+    "btcDominancePct": 56.4171,
+    "ethDominancePct": 8.9191,
+    "fearGreedIndex": 13
+  },
+  "tags": [
+    "bitcoin-recovery",
+    "extreme-fear",
+    "standard-chartered",
+    "bittensor",
+    "quantum-security",
+    "zcash"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
