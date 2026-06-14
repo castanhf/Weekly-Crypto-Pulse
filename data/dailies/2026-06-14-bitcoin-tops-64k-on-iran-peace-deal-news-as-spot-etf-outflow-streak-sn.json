@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-14T09:45:47.018Z",
+  "publishedAt": "2026-06-14",
+  "slug": "2026-06-14-bitcoin-tops-64k-on-iran-peace-deal-news-as-spot-etf-outflow-streak-sn",
+  "headline": "Bitcoin tops $64K on Iran peace deal news as spot ETF outflow streak snaps",
+  "summary": "Bitcoin climbed above $64,000 after Pakistan's prime minister signaled an Iran peace deal may be near — geopolitical de-escalation gave markets a lift after days of outflows from Bitcoin ETFs. Friday's $85.8 million inflow into spot Bitcoin funds ended a five-day redemption streak, adding a second tailwind. Ethereum barely moved, and the broader market stayed cautious: the Fear & Greed index sits at 18, deep in Extreme Fear territory.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "TAO",
+        "name": "Bittensor",
+        "changePct24h": 9.24,
+        "catalyst": "No clear catalyst identified — the researcher's data does not point to a specific event, announcement, or on-chain development driving the move.",
+        "priceUsd": 266.01,
+        "priceChange24hUsd": 24.59
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BEAT",
+        "name": "Audiera",
+        "changePct24h": -32.72,
+        "catalyst": "No clear catalyst identified — the researcher's data cites general AI-sector sentiment and unspecified regulatory scrutiny but names no specific ruling, body, or enforcement action.",
+        "priceUsd": 6.32,
+        "priceChange24hUsd": -2.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64503,
+        "changePct24h": 1.16,
+        "marketCapUsd": 1292032075000,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1675.38,
+        "changePct24h": 0.12,
+        "marketCapUsd": 202102941277,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": 0,
+        "marketCapUsd": 186476474010,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 612.13,
+        "changePct24h": 1.5,
+        "marketCapUsd": 82445935584,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74831205698,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.15,
+        "changePct24h": 0.36,
+        "marketCapUsd": 71091414885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 68.32,
+        "changePct24h": 1.42,
+        "marketCapUsd": 39584414425,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3173,
+        "changePct24h": 0.32,
+        "marketCapUsd": 30089643087,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.018,
+        "changePct24h": -1.29,
+        "marketCapUsd": 19162760760,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0872,
+        "changePct24h": 0.01,
+        "marketCapUsd": 13475100634,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.3,
+        "changePct24h": 2.86,
+        "marketCapUsd": 13405899747,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10561077698,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.72,
+        "changePct24h": 2.62,
+        "marketCapUsd": 8944382281,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0131,
+        "changePct24h": 0.65,
+        "marketCapUsd": 8137599797,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 427.37,
+        "changePct24h": 3.32,
+        "marketCapUsd": 7149201293,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two specific events drove Bitcoin's 1.16% gain to $64,503. First, Pakistan's prime minister publicly stated that an Iran peace deal is near — geopolitical de-escalation in the Middle East tends to reduce the risk premium baked into global assets, and Bitcoin has increasingly tracked that dynamic. Second, spot Bitcoin ETFs recorded $85.8 million in net inflows on Friday, snapping a five-day outflow streak. Consecutive days of fund redemptions had been a quiet headwind; Friday's reversal removed it.\n\nEthereum barely moved — up just 0.12% to $1,675 — and its ETF products continued to see outflows, a divergence from Bitcoin's fund flow picture. BNB (+1.50%), Solana (+1.42%), and Hyperliquid (+2.86%) all outpaced Bitcoin on the day, suggesting some appetite for risk further down the cap scale, though the Fear & Greed index at 18 (Extreme Fear) indicates the broader market mood remains defensive.\n\nBittensor (TAO) jumped 9.24% — the day's biggest gain among tracked assets — but no specific announcement, protocol event, or on-chain development has been identified as the driver. The move appears technical or driven by flows not captured in available data. Audiera (BEAT) fell 32.72% with similarly unclear causation; the researcher's data references general AI-sector sentiment and unspecified regulatory scrutiny, but names no specific ruling or enforcement action.",
+  "worthKnowing": [
+    "SpaceX is reportedly moving toward an IPO, which would put its $1.3 billion Bitcoin reserve under public company disclosure requirements for the first time.",
+    "The founder of Etherealize told reporters that Wall Street firms are moving past crypto pilot programs and deepening direct engagement with Ethereum's network.",
+    "A CoinDesk analysis flagged that the next major crypto hack could exploit AI-assisted attack methods capable of moving faster than human security teams can respond."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2281386631094,
+    "btcDominancePct": 56.5986,
+    "ethDominancePct": 8.854,
+    "fearGreedIndex": 18
+  },
+  "tags": [
+    "bitcoin-etf-flows",
+    "iran-peace-deal",
+    "spacex-ipo",
+    "bittensor",
+    "ethereum-institutional",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-08-bitcoin-and-ethereum-face-significant-declines-amid-market-press"
+  }
+}
