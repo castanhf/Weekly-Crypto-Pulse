@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-15T12:28:04.283Z",
+  "publishedAt": "2026-06-15",
+  "slug": "2026-06-15-us-iran-peace-deal-sends-bitcoin-to-a-two-week-high-above-65500-with-z",
+  "headline": "U.S.-Iran peace deal sends Bitcoin to a two-week high above $65,500, with Zcash surging 26%",
+  "summary": "A surprise U.S.-Iran peace agreement eased geopolitical fears and sent risk assets higher across the board — Bitcoin climbed 2.82% to $66,257, its best level in two weeks, while Ethereum jumped 5.45% and Solana gained 6.49%. Zcash was the day's standout, surging 26% as privacy-focused assets caught a bid alongside the broader relief rally. The Fear & Greed index sits at 20 (Extreme Fear), a reminder that the market's mood remains fragile even as prices recover.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 26.39,
+        "catalyst": "Zcash surged 26.39% as market optimism increased following the U.S.-Iran peace deal, which eased geopolitical tensions and sent risk appetite higher across crypto.",
+        "priceUsd": 532.61,
+        "priceChange24hUsd": 140.53
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -2.43,
+        "catalyst": "No clear catalyst identified; LAB declined 2.43% against the broader market's upward move, likely reflecting thin liquidity and lack of buying interest in the token.",
+        "priceUsd": 9.75,
+        "priceChange24hUsd": -0.24
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 66257,
+        "changePct24h": 2.82,
+        "marketCapUsd": 1326583233556,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1763.31,
+        "changePct24h": 5.45,
+        "marketCapUsd": 212472876973,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": 0,
+        "marketCapUsd": 186430191264,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 620.02,
+        "changePct24h": 1.42,
+        "marketCapUsd": 83514964625,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.23,
+        "changePct24h": 8.03,
+        "marketCapUsd": 76358220667,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74803356887,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 72.47,
+        "changePct24h": 6.49,
+        "marketCapUsd": 41959823883,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3207,
+        "changePct24h": 0.82,
+        "marketCapUsd": 30412133337,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.018,
+        "changePct24h": 0,
+        "marketCapUsd": 19159318509,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 68,
+        "changePct24h": 11.31,
+        "marketCapUsd": 15093744246,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0897,
+        "changePct24h": 3.2,
+        "marketCapUsd": 13853757640,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10564419260,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.79,
+        "changePct24h": 0.42,
+        "marketCapUsd": 9011752987,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 532.61,
+        "changePct24h": 26.39,
+        "marketCapUsd": 8942379125,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0136,
+        "changePct24h": 3.82,
+        "marketCapUsd": 8433661074,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The main driver today was a U.S.-Iran peace agreement that caught markets off guard. When geopolitical risk drops sharply, oil typically falls and risk assets — equities, crypto, commodities with speculative demand — tend to rise together. That's exactly what happened: oil slid while Bitcoin pushed above $65,500 for the first time in two weeks, eventually closing around $66,257.\n\nThe rally was broad but not uniform. Ethereum gained 5.45% and Solana jumped 6.49%, both outpacing Bitcoin's 2.82% move — a pattern that often appears when a macro catalyst lifts the whole market and traders rotate some capital into higher-beta assets (assets that tend to move more than Bitcoin in percentage terms). XRP gained 8.03% and Hyperliquid surged 11.31%, extending the altcoin outperformance. Zcash's 26% spike stands apart — privacy coins sometimes attract outsized flows when geopolitical uncertainty resolves, as the same dynamics that drove demand for censorship-resistant assets unwind into profit-taking and fresh speculative interest.\n\nOne counterweight worth noting: the Fear & Greed index sits at 20, squarely in Extreme Fear territory. That reading means the broader market mood has not caught up with today's price action. Traders are also keeping one eye on the Federal Reserve — the U.S.-Iran deal removes one source of uncertainty, but Fed rate policy remains unresolved. Tuesday's Bank of Japan rate decision adds another variable, as yen short positions are at a nine-year high and a surprise BOJ move could ripple into global liquidity conditions.",
+  "worthKnowing": [
+    "Michael Saylor's Strategy purchased an additional 1,587 Bitcoin for roughly $100 million, continuing its pattern of large institutional accumulation even as the Fear & Greed index sits at Extreme Fear.",
+    "Markets are watching Tuesday's Bank of Japan rate decision closely — yen short positions are at a nine-year high, and an unexpected rate move could shift global liquidity conditions in ways that affect crypto.",
+    "Despite today's relief rally, the Fear & Greed index remains at 20 (Extreme Fear), suggesting the broader market has not yet shifted its underlying sentiment."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2348099966233,
+    "btcDominancePct": 56.4852,
+    "ethDominancePct": 9.0544,
+    "fearGreedIndex": 20
+  },
+  "tags": [
+    "us-iran-deal",
+    "geopolitical-catalyst",
+    "zcash-privacy",
+    "strategy-btc-acquisition",
+    "boj-rate-decision",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
