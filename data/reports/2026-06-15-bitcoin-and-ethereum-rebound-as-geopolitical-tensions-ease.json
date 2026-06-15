@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-06-15T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Bitcoin and Ethereum rebound as geopolitical tensions ease",
+      "slug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease",
+      "publishedAt": "2026-06-15",
+      "weekLabel": "Week of Jun 15, 2026",
+      "summary": "The cryptocurrency market has seen a resurgence this week, with a total market cap of $2.347 trillion. Bitcoin rose by 4.27% to $66,140, while Ethereum gained 5.62% to $1,763, driven by easing geopolitical tensions following a U.S.-Iran deal.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2347000000,
+      "btcDominancePct": 56.48,
+      "ethDominancePct": 9.06,
+      "fearGreedIndex": 20
+    },
+    "movers": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 4.27,
+        "catalyst": "Bitcoin's price increased as traders reacted positively to the U.S.-Iran peace deal, which alleviated some geopolitical fears."
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 5.62,
+        "catalyst": "Ethereum's rise was supported by the overall positive sentiment in the market as Bitcoin led the recovery."
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "changePct7d": 7.02,
+        "catalyst": "XRP climbed as traders tested resistance levels, buoyed by the broader market recovery."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": 9.72,
+        "catalyst": "Solana's price surged amid increased interest in altcoins as Bitcoin and Ethereum rebounded."
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct7d": 25.38,
+        "catalyst": "Zcash experienced significant gains, likely driven by speculative trading and market momentum."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Geopolitical developments influence market sentiment",
+        "body": "This week, the cryptocurrency market witnessed a notable recovery, attributed to easing geopolitical tensions following a U.S.-Iran deal. The total market capitalization increased to $2.347 trillion, reflecting a shift in investor sentiment from the previous week's risk-off posture. The Fear & Greed Index rose to 20, indicating a cautious yet improving outlook among traders. The broader financial markets reacted positively, with equities gaining ground, while oil prices declined, suggesting a shift in risk appetite that also benefited cryptocurrencies.",
+        "highlights": [
+          "The total crypto market cap rose to $2.347 trillion this week.",
+          "Investor sentiment improved as geopolitical tensions eased.",
+          "The Fear & Greed Index increased to 20, reflecting a cautious recovery."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum lead the recovery",
+        "body": "Bitcoin's price climbed to $66,140, marking a 4.27% increase over the week. This rise was primarily driven by a short squeeze as traders reacted to the positive news surrounding the U.S.-Iran deal. Ethereum also saw a significant uptick, closing at $1,763, up 5.62%. Both assets benefitted from increased trading volumes and a shift in market sentiment that favored riskier assets. The recent price movements suggest that both Bitcoin and Ethereum are attempting to establish new support levels after last week's declines.",
+        "highlights": [
+          "Bitcoin rose to $66,140, reflecting a 4.27% increase.",
+          "Ethereum gained 5.62%, closing at $1,763.",
+          "Both assets are showing signs of establishing new support levels."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Market outlook remains cautious but optimistic",
+        "body": "Looking ahead, the cryptocurrency market appears to be in a transition phase. While the recent geopolitical developments have provided a temporary boost, traders remain wary of potential volatility. The upcoming Federal Reserve interest rate decision could further influence market dynamics. Additionally, historical patterns suggest that Bitcoin could face significant resistance if it attempts to break above $70,000. Investors should remain vigilant as the market digests these developments and assess the sustainability of the current rally.",
+        "highlights": [
+          "The market is in a transition phase with cautious optimism.",
+          "The upcoming Fed interest rate decision could impact market dynamics.",
+          "Traders should be aware of potential resistance levels for Bitcoin."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Geopolitical developments can significantly influence cryptocurrency prices.",
+        "Bitcoin and Ethereum are attempting to establish new support levels.",
+        "Market sentiment is cautiously optimistic, but volatility remains a concern.",
+        "Traders should monitor upcoming economic indicators for potential impacts."
+      ],
+      "riskChecklist": [
+        "Geopolitical tensions could resurface, impacting market stability.",
+        "Federal Reserve decisions may lead to increased volatility.",
+        "Market sentiment can shift rapidly, affecting asset prices.",
+        "Technical resistance levels may hinder further price increases.",
+        "Regulatory developments could introduce new risks for investors."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$70,000",
+          "context": "A critical resistance level that Bitcoin may struggle to surpass."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,800",
+          "context": "Ethereum's next resistance level as it seeks to gain further momentum."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "The total market cap increased from $2.26 trillion to $2.347 trillion.",
+        "Bitcoin rose from $63,233 to $66,140, recovering from last week's decline.",
+        "Ethereum's price improved from $1,666 to $1,763, reflecting a positive market shift."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin tops $66,000 as market sentiment improves",
+      "body": "This week, Bitcoin surged above $66,000, marking a significant recovery from last week's losses. The rise was largely driven by a peace deal between the U.S. and Iran, which eased geopolitical tensions and encouraged investors to re-enter the market. Bitcoin's price increased by 4.27%, while Ethereum also saw gains of 5.62%, closing at $1,763. The total cryptocurrency market cap rose to $2.347 trillion, reflecting a renewed interest in digital assets. Despite this positive momentum, the Fear & Greed Index remains low at 20, indicating that caution still prevails among traders."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 38533726739,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 5331953242,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4877050155,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4537309810,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 4333132541,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4201267278,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1673970168,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1555693171,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1284310113,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 1025647855,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 729306698,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 472809017,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 458071526,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 346498933,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "ENI",
+          "tvlUsd": 312989880,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}
