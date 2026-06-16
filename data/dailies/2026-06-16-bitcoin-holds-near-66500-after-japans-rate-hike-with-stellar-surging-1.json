@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-16T11:22:36.696Z",
+  "publishedAt": "2026-06-16",
+  "slug": "2026-06-16-bitcoin-holds-near-66500-after-japans-rate-hike-with-stellar-surging-1",
+  "headline": "Bitcoin holds near $66,500 after Japan's rate hike, with Stellar surging 16% and Hyperliquid jumping 11%",
+  "summary": "Japan's central bank raised interest rates, and rather than spooking crypto markets, the move appeared to lift Bitcoin — which held near $66,500 as on-chain data showed buyers accumulating more than 250,000 BTC in the $59,000–$67,000 range. Altcoins with momentum caught the biggest bid: Stellar jumped 16%, Hyperliquid climbed 11%, and Solana rose 3.4%. The Fear & Greed index sits at 23 — deep in fear territory — suggesting the accumulation is happening against a backdrop of broader caution, not euphoria.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": 16.42,
+        "catalyst": "XLM surged after Bitcoin rallied following the Bank of Japan's rate increase, with positive market sentiment spilling into altcoins with recent momentum.",
+        "priceUsd": 0.224971,
+        "priceChange24hUsd": 0.04
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "changePct24h": -6.49,
+        "catalyst": "GRAM fell as traders took profits following recent gains, a typical pullback after a run-up.",
+        "priceUsd": 1.67,
+        "priceChange24hUsd": -0.11
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 66523,
+        "changePct24h": 0.41,
+        "marketCapUsd": 1332659454367,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1796.32,
+        "changePct24h": 2.54,
+        "marketCapUsd": 216605933196,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186419570026,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 614.13,
+        "changePct24h": -0.96,
+        "marketCapUsd": 82739481650,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.24,
+        "changePct24h": 1.94,
+        "marketCapUsd": 76942557420,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74996996477,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.74,
+        "changePct24h": 3.35,
+        "marketCapUsd": 43328711743,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3173,
+        "changePct24h": -0.95,
+        "marketCapUsd": 30094706828,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": 1.27,
+        "marketCapUsd": 19330310285,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 75.75,
+        "changePct24h": 11.41,
+        "marketCapUsd": 16842412193,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0882,
+        "changePct24h": -1.56,
+        "marketCapUsd": 13639406972,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 10564782960,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.73,
+        "changePct24h": -0.71,
+        "marketCapUsd": 8953753357,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 517.88,
+        "changePct24h": -0.95,
+        "marketCapUsd": 8685965167,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0139,
+        "changePct24h": 3.09,
+        "marketCapUsd": 8673449945,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was an unexpected one: the Bank of Japan raised interest rates, and crypto markets took it as a positive signal rather than a risk-off trigger. Bitcoin held near $66,500, up a modest 0.41%, while on-chain data showed buyers had accumulated more than 250,000 BTC in the $59,000–$67,000 range — a sign of renewed institutional confidence at these levels rather than speculative froth.\n\nAltcoins with recent momentum caught the bigger moves. Stellar jumped 16.4%, Hyperliquid climbed 11.4%, and Solana rose 3.35%, all outpacing Bitcoin. Ethereum gained 2.54%, continuing a quiet recovery from its recent lows. XRP added 1.94% but gave back some ground after a 10% rally earlier in the week, as traders locked in profits near $1.25.\n\nA secondary thread running through the session: traders were also watching geopolitical developments, specifically a pending Iran-related diplomatic signing, which prompted some profit-taking in Bitcoin, Ethereum, and Solana as participants waited for clarity. That caution is consistent with the Fear & Greed index reading of 23 — well into fear territory — which means the day's gains came despite, not because of, broad market confidence. The accumulation data and the altcoin moves suggest a subset of buyers is stepping in at these levels while the broader crowd remains wary.",
+  "worthKnowing": [
+    "On-chain data shows buyers accumulated more than 250,000 BTC between $59,000 and $67,000 over recent sessions, one of the larger accumulation clusters recorded this year.",
+    "BlackRock launched a new Bitcoin ETF structure that allows institutions to earn returns from Bitcoin's price volatility — the product comes with constraints on how that exposure is structured.",
+    "XRP pulled back after a 10% rally earlier in the week, with traders taking profits near the $1.25 level.",
+    "Traders cited a pending Iran diplomatic signing as a reason for caution in Bitcoin, Ethereum, and Solana positions heading into the close."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2360804846299,
+    "btcDominancePct": 56.4456,
+    "ethDominancePct": 9.1751,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "bank-of-japan",
+    "btc-accumulation",
+    "stellar-xlm",
+    "hyperliquid",
+    "blackrock-etf",
+    "xrp-profit-taking"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
