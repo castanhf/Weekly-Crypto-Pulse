@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-17T11:08:09.647Z",
+  "publishedAt": "2026-06-17",
+  "slug": "2026-06-17-bitcoin-slides-27-as-crypto-waits-on-the-fed-with-altcoins-taking-the-",
+  "headline": "Bitcoin slides 2.7% as crypto waits on the Fed, with altcoins taking the harder hit",
+  "summary": "Crypto sold off broadly on Wednesday as traders positioned ahead of Federal Reserve guidance expected to shape near-term rate expectations. Bitcoin fell 2.73% to $64,628 and Ethereum dropped 1.81% to $1,762, but the sharpest losses landed in mid-cap altcoins — Solana fell 3.86%, XRP 3.81%, and Hyperliquid 5.44%. The Fear & Greed index sits at 22, deep in fear territory, reflecting how cautious the market has become ahead of the Fed.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 16.99,
+        "catalyst": "LAB surged 16.99% with no clearly identified catalyst in the researcher's data — the move appears driven by speculative interest rather than any announced development.",
+        "priceUsd": 12.95,
+        "priceChange24hUsd": 2.2
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -8.3,
+        "catalyst": "NEAR Protocol dropped 8.30% as selling pressure intensified across altcoins ahead of anticipated Federal Reserve guidance.",
+        "priceUsd": 2.26,
+        "priceChange24hUsd": -0.19
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64628,
+        "changePct24h": -2.73,
+        "marketCapUsd": 1296779951097,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1762.17,
+        "changePct24h": -1.81,
+        "marketCapUsd": 212957484956,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.02,
+        "marketCapUsd": 186375807168,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 600.86,
+        "changePct24h": -2.07,
+        "marketCapUsd": 81047538892,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74831839807,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.19,
+        "changePct24h": -3.81,
+        "marketCapUsd": 74052813460,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 71.92,
+        "changePct24h": -3.86,
+        "marketCapUsd": 41741425596,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3196,
+        "changePct24h": 0.63,
+        "marketCapUsd": 30307611733,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 0.76,
+        "marketCapUsd": 19545803751,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 71.75,
+        "changePct24h": -5.44,
+        "marketCapUsd": 16044628768,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0858,
+        "changePct24h": -2.86,
+        "marketCapUsd": 13283050765,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10592159830,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.68,
+        "changePct24h": -0.73,
+        "marketCapUsd": 8905524159,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.014,
+        "changePct24h": 0.82,
+        "marketCapUsd": 8751384184,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 502.88,
+        "changePct24h": -3.05,
+        "marketCapUsd": 8491560496,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant theme today was pre-Fed positioning. The Federal Reserve is expected to issue guidance shortly, and traders across crypto pulled back rather than hold risk through the announcement. That dynamic explains why the losses were broadest in higher-beta altcoins — assets that tend to move more sharply than Bitcoin when sentiment shifts. Hyperliquid fell 5.44%, Solana 3.86%, and XRP 3.81%, all outpacing Bitcoin's 2.73% decline. NEAR Protocol's 8.30% drop, the steepest in the researcher's tracked universe, fits the same pattern: smaller-cap assets with less liquidity absorb selling pressure more acutely.\n\nThe Fear & Greed index at 22 — well into fear territory — reflects how the market has been trending ahead of this decision. Oil returning to pre-war price levels, noted in market coverage today, adds a broader macro backdrop of uncertainty rather than providing any direct crypto catalyst.\n\nOn the other side of the ledger, LAB posted a 16.99% gain with no clearly identified catalyst in the available data. The researcher's input notes only vague ecosystem sentiment as a possible driver; no specific announcement or development was identified. The move stands as an outlier against the day's broad selloff, and without a traceable cause it is best read as speculative activity in a low-liquidity asset. A news report cited by CoinDesk noted Uniswap as a notable gainer on the day alongside broader altcoin activity, though no verified price data for UNI appeared in the researcher's tracked assets.",
+  "worthKnowing": [
+    "BitGo announced a program to help European crypto firms meet MiCA compliance requirements ahead of the regulatory deadline — a potential lifeline for smaller operators without in-house legal resources.",
+    "Barry Moore, a crypto-backed candidate supported by a $12 million PAC, won the Alabama Republican Senate primary, adding another pro-crypto voice to the pipeline of potential U.S. legislators.",
+    "Markets are also watching oil prices, which have returned to pre-war levels — a signal of easing geopolitical risk premium that has historically correlated with broader risk-asset sentiment."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2315996263543,
+    "btcDominancePct": 56.1235,
+    "ethDominancePct": 9.2316,
+    "fearGreedIndex": 22
+  },
+  "tags": [
+    "federal-reserve",
+    "altcoin-selloff",
+    "near-protocol",
+    "mica-compliance",
+    "bitgo",
+    "crypto-pac"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
