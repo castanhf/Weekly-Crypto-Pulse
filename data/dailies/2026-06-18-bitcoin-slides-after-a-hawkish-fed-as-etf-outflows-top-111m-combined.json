@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-18T10:39:47.197Z",
+  "publishedAt": "2026-06-18",
+  "slug": "2026-06-18-bitcoin-slides-after-a-hawkish-fed-as-etf-outflows-top-111m-combined",
+  "headline": "Bitcoin slides after a hawkish Fed as ETF outflows top $111M combined",
+  "summary": "The Federal Reserve signaled it is in no hurry to cut interest rates, and crypto took the hit — Bitcoin fell 1.42% to $63,946 and Ethereum dropped 1.74% to $1,740. Combined ETF outflows for both assets reached $111 million in a single session, the clearest sign yet that institutional holders are pulling back as rate-cut expectations fade. Stellar was the day's outlier, gaining nearly 10% with no obvious macro catalyst.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 25.15,
+        "catalyst": "No clear catalyst identified — LAB surged 25.15% with no specific named event in the researcher's data.",
+        "priceUsd": 16.02,
+        "priceChange24hUsd": 4.03
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -13.41,
+        "catalyst": "Uniswap fell 13.41% following the Fed's hawkish tone, which hit DeFi tokens particularly hard as rate-cut hopes evaporated.",
+        "priceUsd": 3.16,
+        "priceChange24hUsd": -0.42
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63946,
+        "changePct24h": -1.42,
+        "marketCapUsd": 1282067006875,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1740.36,
+        "changePct24h": -1.74,
+        "marketCapUsd": 210078402811,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0.01,
+        "marketCapUsd": 186311578000,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 588.88,
+        "changePct24h": -2.12,
+        "marketCapUsd": 79367012774,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 74646830042,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.17,
+        "changePct24h": -2.23,
+        "marketCapUsd": 72513543773,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 71.18,
+        "changePct24h": -1.55,
+        "marketCapUsd": 41300950549,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3207,
+        "changePct24h": 0.23,
+        "marketCapUsd": 30408786598,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.02,
+        "changePct24h": -1.42,
+        "marketCapUsd": 19323006866,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 71.63,
+        "changePct24h": -0.89,
+        "marketCapUsd": 15957098776,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0847,
+        "changePct24h": -1.51,
+        "marketCapUsd": 13105251960,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10256732202,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0145,
+        "changePct24h": 3.32,
+        "marketCapUsd": 9054472519,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.63,
+        "changePct24h": -0.05,
+        "marketCapUsd": 8873167299,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.2412,
+        "changePct24h": 9.92,
+        "marketCapUsd": 8169218088,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The Federal Reserve delivered a hawkish signal — indicating it sees no near-term path to rate cuts — and crypto markets responded with broad selling. Bitcoin fell 1.42% to $63,946 and Ethereum dropped 1.74% to $1,740, with most of the top 15 assets closing in the red. The Fear & Greed index sits at 15, deep in Extreme Fear territory, reflecting how quickly sentiment has shifted.\n\nThe most concrete measure of the damage was in ETF flows. Bitcoin and Ethereum ETFs shed a combined $111 million in a single session — the direct result of institutional holders reducing exposure as the prospect of cheaper money receded. When rate cuts look less likely, yield-bearing alternatives become more attractive relative to crypto, and fund managers adjust accordingly.\n\nUniswap bore the sharpest losses among named assets, falling 13.41%. DeFi tokens (decentralized finance — crypto protocols that replicate banking functions without intermediaries) tend to be more sensitive to risk-off moves than Bitcoin or Ethereum, and the Fed's tone hit them harder. XRP slipped 2.23% on the day. Stellar was the session's notable exception, gaining 9.92% with no clear macro catalyst — an isolated move against the broader trend.\n\nTRX and Hyperliquid were the only other top-15 non-stablecoin assets to avoid losses, each moving less than 1% in either direction.",
+  "worthKnowing": [
+    "Bitcoin and Ether ETFs recorded combined outflows of $111 million in a single session as rate-cut expectations faded following the Fed's hawkish announcement.",
+    "XRP fell 2.23% on the day after a recent breakout rally stalled near a key resistance level, according to CoinDesk.",
+    "A defendant known as 'Bitcoin Rodney' pleaded guilty in a $1.8 billion crypto fraud case — one of the larger fraud convictions in the industry's history."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2287408737467,
+    "btcDominancePct": 56.0282,
+    "ethDominancePct": 9.1873,
+    "fearGreedIndex": 15
+  },
+  "tags": [
+    "federal-reserve",
+    "etf-outflows",
+    "uniswap",
+    "stellar",
+    "rate-cuts",
+    "defi"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
