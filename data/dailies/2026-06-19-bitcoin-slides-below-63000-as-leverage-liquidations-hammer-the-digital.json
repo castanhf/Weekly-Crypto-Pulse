@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-19T10:46:27.158Z",
+  "publishedAt": "2026-06-19",
+  "slug": "2026-06-19-bitcoin-slides-below-63000-as-leverage-liquidations-hammer-the-digital",
+  "headline": "Bitcoin slides below $63,000 as leverage liquidations hammer the digital credit market",
+  "summary": "A wave of forced selling swept through crypto on Friday, with leverage liquidations in the digital credit market dragging Bitcoin below $63,000 and pulling most major assets sharply lower. Stellar fell nearly 10% — the hardest hit among tracked assets — while Hyperliquid dropped 7% and Solana shed more than 4%. The Fear & Greed index sits at 14, deep in Extreme Fear territory, as the week's brief recovery fades.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "USDY",
+        "name": "Ondo US Dollar Yield",
+        "changePct24h": 0.46,
+        "catalyst": "Ondo US Dollar Yield gained 0.46% amid the broader selloff, as traders moved toward yield-bearing stable assets during a risk-off session.",
+        "priceUsd": 1.14,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": -9.47,
+        "catalyst": "Stellar dropped 9.47% as the digital credit market suffered a record selloff driven by leverage liquidations, with XLM caught in the crossfire as leveraged positions were forcibly closed.",
+        "priceUsd": 0.217135,
+        "priceChange24hUsd": -0.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62382,
+        "changePct24h": -2.51,
+        "marketCapUsd": 1250325818541,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1687.22,
+        "changePct24h": -3.05,
+        "marketCapUsd": 203599886778,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 186300710759,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 571.53,
+        "changePct24h": -3,
+        "marketCapUsd": 77013155946,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74914450530,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.12,
+        "changePct24h": -4.05,
+        "marketCapUsd": 69566438181,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 68.09,
+        "changePct24h": -4.27,
+        "marketCapUsd": 39499227223,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3214,
+        "changePct24h": 0.19,
+        "marketCapUsd": 30492856172,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.012,
+        "changePct24h": -0.76,
+        "marketCapUsd": 19243480022,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 66.57,
+        "changePct24h": -7.07,
+        "marketCapUsd": 14809610070,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0821,
+        "changePct24h": -3.03,
+        "marketCapUsd": 12705285950,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 10251195844,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": -0.79,
+        "marketCapUsd": 8982155834,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.53,
+        "changePct24h": -1.11,
+        "marketCapUsd": 8752270717,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 446.66,
+        "changePct24h": -4.96,
+        "marketCapUsd": 7497093703,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a record selloff in the digital credit market, triggered by leverage liquidations — forced closures of borrowed positions that cascade into broader selling as prices fall and margin calls mount. Strive CEO Matt Cole publicly attributed the move to this mechanism, and the damage was visible across the board: Stellar fell 9.47%, Hyperliquid dropped 7.07%, and Zcash shed nearly 5%. Bitcoin broke below $63,000, erasing the week's recovery, while Ethereum fell 3.05% to $1,687.\n\nThe broader context is a risk-off environment. When leveraged positions unwind in size, traders sell whatever they can — not just the assets at the center of the problem. That dynamic explains why assets with no direct connection to digital credit markets still fell 3–5% today. The Fear & Greed index at 14 reflects how quickly sentiment has deteriorated; readings below 20 are rare and typically mark periods of genuine market stress.\n\nThe one notable exception was TRON, which edged up 0.19% — a rounding-error move, but enough to stand out on a day when almost nothing held its ground. Ondo US Dollar Yield, a tokenized yield product, also gained fractionally as some traders rotated toward assets that carry a yield component rather than pure price exposure.",
+  "worthKnowing": [
+    "Franklin Templeton filed for ETFs that would automatically reinvest stock dividends into Bitcoin — a structure that, if approved, would create a steady institutional buying channel tied to dividend payouts.",
+    "Microsoft identified malware that hijacks crypto wallets and spreads via USB drives, a reminder that hardware-based attack vectors remain active threats to self-custody users.",
+    "A former Ethereum Foundation contributor warned that Ethereum's core development could face a funding crisis within nine months, raising questions about the protocol's long-term maintenance capacity."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2234222582777,
+    "btcDominancePct": 55.9659,
+    "ethDominancePct": 9.114,
+    "fearGreedIndex": 14
+  },
+  "tags": [
+    "leverage-liquidations",
+    "digital-credit-selloff",
+    "bitcoin-etf",
+    "franklin-templeton",
+    "ethereum-funding",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
