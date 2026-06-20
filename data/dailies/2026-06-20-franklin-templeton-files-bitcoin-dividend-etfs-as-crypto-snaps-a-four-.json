@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-20T09:27:10.763Z",
+  "publishedAt": "2026-06-20",
+  "slug": "2026-06-20-franklin-templeton-files-bitcoin-dividend-etfs-as-crypto-snaps-a-four-",
+  "headline": "Franklin Templeton files Bitcoin dividend ETFs as crypto snaps a four-day losing streak",
+  "summary": "After four consecutive down sessions, Bitcoin and the broader market found footing on Saturday — BTC gained 1.9% to $63,502 and Solana led the top 15 with a 4.4% rise. The catalyst was a pair of ETF filings from Franklin Templeton that would reinvest stock dividends directly into Bitcoin, a structure that, if approved, would funnel a new stream of institutional capital into the asset. Fear & Greed remains deep in Extreme Fear territory at 23, so the bounce is tentative rather than a trend reversal.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 4.84,
+        "catalyst": "Zcash led the top-15 gainers, rising 4.84% alongside broader market strength. No single Zcash-specific catalyst was identified; the move appears to reflect renewed interest in privacy-focused assets as institutional ETF filings from Franklin Templeton lifted sentiment across smaller-cap coins.",
+        "priceUsd": 471.1,
+        "priceChange24hUsd": 22.8
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -19.99,
+        "catalyst": "No specific catalyst was identified for LAB's 19.99% decline. The drop occurred against a day of broad market gains, suggesting asset-specific selling pressure rather than a macro driver.",
+        "priceUsd": 12.38,
+        "priceChange24hUsd": -2.47
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63502,
+        "changePct24h": 1.88,
+        "marketCapUsd": 1272220286825,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1723.25,
+        "changePct24h": 1.96,
+        "marketCapUsd": 207946542269,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0,
+        "marketCapUsd": 186271333171,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 585.71,
+        "changePct24h": 2.52,
+        "marketCapUsd": 78924151773,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74811723928,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.15,
+        "changePct24h": 2.24,
+        "marketCapUsd": 71221036537,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 71.28,
+        "changePct24h": 4.42,
+        "marketCapUsd": 41337305158,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3222,
+        "changePct24h": 0.48,
+        "marketCapUsd": 30558045661,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 2.13,
+        "marketCapUsd": 19683753229,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 70.37,
+        "changePct24h": 4.65,
+        "marketCapUsd": 15639232285,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.084,
+        "changePct24h": 2.26,
+        "marketCapUsd": 12994661250,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10261297055,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": 0.05,
+        "marketCapUsd": 8994102437,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.56,
+        "changePct24h": 0.24,
+        "marketCapUsd": 8860113373,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 471.1,
+        "changePct24h": 4.84,
+        "marketCapUsd": 7880720209,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin had fallen for four straight sessions heading into Saturday, dragging smart-contract tokens and DeFi assets down with it — a pattern that tends to hit smaller, higher-beta coins harder than BTC itself. Today's bounce, with BTC up 1.9% and Ethereum up 2.0%, coincided with Franklin Templeton filing for ETFs that would automatically reinvest stock dividends into Bitcoin. The structure is novel: rather than investors buying Bitcoin directly, the ETF would channel dividend income from equity holdings into BTC on their behalf. If approved by the SEC, it would represent a passive, recurring source of institutional Bitcoin demand — which is why the filing drew attention even though approval is months away at minimum.\n\nSolana (+4.4%) and Hyperliquid (+4.7%) outpaced the broader market, consistent with the pattern of higher-risk assets recovering more sharply after a multi-day selloff. Zcash (+4.8%) was the top gainer across all tracked assets, though no Zcash-specific news explained the move — it appears to have caught a bid alongside the broader recovery.\n\nDespite the green day, the Fear & Greed index sits at 23 — deep in Extreme Fear territory — which reflects how much damage the prior four sessions did to sentiment. A single up day does not reset that reading. The total market cap stands at $2.27 trillion, with Bitcoin holding 56.1% dominance.",
+  "worthKnowing": [
+    "A former Ethereum Foundation contributor warned that Ethereum could face a core development funding crisis within nine months, raising questions about how the protocol's ongoing research and maintenance gets paid for.",
+    "GoMining launched a Bitcoin-native payments system aimed at competing with Jack Dorsey's Square, positioning Bitcoin as a medium for everyday transactions rather than just a store of value.",
+    "Smart-contract and DeFi tokens bore the brunt of Bitcoin's four-day slide, according to CoinDesk — a reminder that assets in those categories tend to amplify BTC's moves in both directions."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2270355482179,
+    "btcDominancePct": 56.0726,
+    "ethDominancePct": 9.1615,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "franklin-templeton",
+    "bitcoin-etf",
+    "solana",
+    "zcash",
+    "ethereum-funding",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-15-bitcoin-and-ethereum-rebound-as-geopolitical-tensions-ease"
+  }
+}
