@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-06-22T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Ethereum gains while Bitcoin struggles near $64,000",
+      "slug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000",
+      "publishedAt": "2026-06-22",
+      "weekLabel": "Week of Jun 22, 2026",
+      "summary": "The cryptocurrency market cap decreased to $2.303 trillion this week, with Bitcoin's dominance at 56.24% and Ethereum's at 9.22%. Bitcoin fell by 1.93%, while Ethereum rose by 2.51%, amidst ongoing ETF outflows and geopolitical tensions.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "bitcoin",
+        "ethereum",
+        "market analysis"
+      ]
+    },
+    "regime": "risk-off",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2303000000,
+      "btcDominancePct": 56.24,
+      "ethDominancePct": 9.22,
+      "fearGreedIndex": 20
+    },
+    "movers": [
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 2.51,
+        "catalyst": "Ethereum's price increased as the market reacted positively to the Bank of England's easing of stablecoin regulations."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": 4.36,
+        "catalyst": "Solana's price benefited from positive developments in blockchain infrastructure and partnerships."
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "changePct7d": 3.54,
+        "catalyst": "TRON's price rose as market sentiment improved, despite Bitcoin's struggles."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment remains cautious amid regulatory developments",
+        "body": "This week, the cryptocurrency market experienced a decline in total market capitalization, dropping to $2.303 trillion. The Fear & Greed Index remains firmly in the 'fear' territory at 20, indicating a cautious sentiment among investors. The recent easing of stablecoin regulations by the Bank of England has provided some relief, yet the ongoing outflows from Bitcoin ETFs continue to weigh on market confidence. Analysts suggest that the selling pressure from these outflows may be exhausting, but skepticism remains regarding a sustained rally in the near term.",
+        "highlights": [
+          "The total market cap fell to $2.303 trillion this week.",
+          "Bitcoin dominance decreased slightly to 56.24%.",
+          "The Fear & Greed Index indicates a strong fear sentiment at 20."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin struggles while Ethereum shows resilience",
+        "body": "Bitcoin's price fell by 1.93% this week, closing at $64,590. The cryptocurrency faced headwinds from persistent ETF outflows, marking the sixth consecutive week of net outflows. In contrast, Ethereum's price increased by 2.51% to $1,760, driven by positive regulatory news and a growing interest in its ecosystem. The divergence in performance between Bitcoin and Ethereum highlights the market's current risk-off sentiment, with investors favoring altcoins amid Bitcoin's stagnation. Furthermore, derivatives markets indicate skepticism about a sustained rally for Bitcoin, suggesting that traders are cautious about future price movements.",
+        "highlights": [
+          "Bitcoin's price closed at $64,590, down 1.93% this week.",
+          "Ethereum's price increased to $1,760, up 2.51%.",
+          "Derivatives markets show skepticism about Bitcoin's ability to rally."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Future scenarios hinge on regulatory clarity and market sentiment",
+        "body": "Looking ahead, the cryptocurrency market faces a complex landscape influenced by regulatory developments and market sentiment. The recent easing of stablecoin regulations may provide a supportive backdrop for altcoins, particularly Ethereum. However, Bitcoin's ongoing struggles and the potential for further ETF outflows pose risks to its recovery. Analysts suggest that if Bitcoin can hold above key support levels, it may stabilize, but failure to do so could lead to further declines. Overall, the market appears to be in a risk-off regime, with investors closely monitoring geopolitical developments and regulatory actions.",
+        "highlights": [
+          "Regulatory clarity could support altcoins like Ethereum.",
+          "Bitcoin's ability to hold key support levels will be crucial.",
+          "The market remains in a risk-off regime, influenced by external factors."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Bitcoin's price action suggests a potential for further declines if support levels are breached.",
+        "Ethereum's recent gains indicate a shift in investor interest towards altcoins.",
+        "Regulatory developments will play a critical role in shaping market sentiment.",
+        "Skepticism in derivatives markets may limit the potential for a sustained Bitcoin rally."
+      ],
+      "riskChecklist": [
+        "Ongoing ETF outflows could pressure Bitcoin's price further.",
+        "Geopolitical tensions may impact market stability.",
+        "Regulatory changes could create uncertainty for stablecoins.",
+        "Market sentiment remains fearful, limiting investor appetite.",
+        "Potential for increased volatility as traders react to news."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$60,000",
+          "context": "A critical support level that, if breached, could signal further downside."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,800",
+          "context": "A resistance level that, if surpassed, may indicate bullish momentum."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Bitcoin's price has declined from $66,140 to $64,590.",
+        "Ethereum's price has shown resilience, increasing from $1,763 to $1,760.",
+        "The total market cap has decreased from $2.347 trillion to $2.303 trillion."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin struggles as Ethereum finds footing amid regulatory shifts",
+      "body": "This week, Bitcoin faced challenges, falling to $64,590, a decline of nearly 2%. The ongoing outflows from Bitcoin ETFs have continued for six weeks, raising concerns about future price stability. In contrast, Ethereum managed to rise by 2.51%, closing at $1,760, buoyed by positive news regarding stablecoin regulations from the Bank of England. The overall cryptocurrency market cap decreased to $2.303 trillion, reflecting a cautious sentiment among investors, as indicated by a Fear & Greed Index score of 20. As the market navigates these developments, the divergence between Bitcoin and Ethereum highlights shifting investor preferences."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 39122882478,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 5139500362,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4936626850,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4650977685,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4235584718,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 4213560527,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1525753626,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1317230083,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1305745409,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 1025890593,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 779518429,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 476116612,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 435231941,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 355016213,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "OP Mainnet",
+          "tvlUsd": 298523763,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}
