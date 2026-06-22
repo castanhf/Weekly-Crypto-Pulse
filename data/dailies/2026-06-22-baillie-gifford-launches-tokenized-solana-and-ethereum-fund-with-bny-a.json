@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-22T12:14:48.630Z",
+  "publishedAt": "2026-06-22",
+  "slug": "2026-06-22-baillie-gifford-launches-tokenized-solana-and-ethereum-fund-with-bny-a",
+  "headline": "Baillie Gifford launches tokenized Solana and Ethereum fund with BNY as markets inch higher",
+  "summary": "A major traditional asset manager, Baillie Gifford, partnered with BNY to launch a tokenized fund holding Solana and Ethereum — one of the clearest signals yet that institutional money is building infrastructure around crypto assets rather than just trading them. The broader market edged up on the news, with Ethereum gaining 2.5% and Bitcoin rising 1% to $64,671, though derivatives markets are flashing skepticism about whether this rally has legs. The Fear & Greed index sits at 20 — deep in fear territory — suggesting most participants aren't convinced.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": 6.7,
+        "catalyst": "OKB surged as institutional interest in tokenized funds — particularly those involving Solana and Ethereum — lifted sentiment around exchange tokens with exposure to those ecosystems.",
+        "priceUsd": 80.96,
+        "priceChange24hUsd": 5.42
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -6.34,
+        "catalyst": "LAB fell amid broad market skepticism, with derivatives markets signaling doubts about whether recent price gains can be sustained.",
+        "priceUsd": 14.96,
+        "priceChange24hUsd": -0.95
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64671,
+        "changePct24h": 1,
+        "marketCapUsd": 1296188897523,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1763.96,
+        "changePct24h": 2.51,
+        "marketCapUsd": 212844130250,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 186241509681,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 596.95,
+        "changePct24h": 1.82,
+        "marketCapUsd": 80467014844,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.03,
+        "marketCapUsd": 74813495688,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.15,
+        "changePct24h": 0.34,
+        "marketCapUsd": 71123005348,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.04,
+        "changePct24h": 1.22,
+        "marketCapUsd": 42977604914,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3311,
+        "changePct24h": 1.48,
+        "marketCapUsd": 31407474962,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 0,
+        "marketCapUsd": 19677001621,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.9,
+        "changePct24h": 0.56,
+        "marketCapUsd": 15111273909,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0842,
+        "changePct24h": 1.37,
+        "marketCapUsd": 13024056568,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10324686931,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": 0.07,
+        "marketCapUsd": 8980846060,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.5,
+        "changePct24h": -0.27,
+        "marketCapUsd": 8773076551,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 456.72,
+        "changePct24h": 1.19,
+        "marketCapUsd": 7665047360,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main catalyst was Baillie Gifford — a Scottish asset manager with over $200 billion under management, best known for early bets on Amazon and Tesla — announcing a tokenized fund holding Solana and Ethereum, built in partnership with BNY (formerly Bank of New York Mellon). Tokenized funds work by representing traditional fund ownership on a blockchain, making settlement faster and administration cheaper. The announcement lifted Ethereum 2.51% and gave Solana a 1.22% nudge, with OKB jumping 6.7% as exchange tokens caught some of the institutional-sentiment tailwind.\n\nBitcoin's 1% gain to $64,671 came with a separate piece of context: ETF outflows — which had been a persistent drag on BTC price over recent weeks — appear to be easing. Strategy (Michael Saylor's firm) added another 520 BTC for $35 million, a signal that at least one major corporate buyer is still accumulating at current prices.\n\nThe tension in today's session is the gap between spot prices and derivatives. Despite the green across the board, options and futures markets are pricing in skepticism — traders are not yet convinced this move extends. The Fear & Greed index at 20 confirms the mood: the market is technically rising, but participants are not feeling confident about it. On days like this, the price action and the sentiment data are telling different stories, and that divergence is worth watching.",
+  "worthKnowing": [
+    "The Bank of England backed away from proposed strict limits on stablecoin holdings, instead setting a $50 billion issuance cap — a more permissive framework than the industry had feared.",
+    "Strategy (formerly MicroStrategy) purchased 520 BTC for approximately $35 million, continuing its accumulation despite a slide in its STRC preferred stock.",
+    "Bitcoin ETF outflows, which had been a consistent headwind for BTC price in recent weeks, showed signs of slowing — though analysts note new pressures may be forming."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2306697442736,
+    "btcDominancePct": 56.2155,
+    "ethDominancePct": 9.2531,
+    "fearGreedIndex": 20
+  },
+  "tags": [
+    "baillie-gifford",
+    "tokenized-funds",
+    "btc-etf-flows",
+    "strategy-accumulation",
+    "bank-of-england-stablecoin",
+    "institutional-adoption"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
