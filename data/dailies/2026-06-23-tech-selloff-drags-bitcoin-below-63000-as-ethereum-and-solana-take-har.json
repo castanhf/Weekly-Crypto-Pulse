@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-23T09:53:13.946Z",
+  "publishedAt": "2026-06-23",
+  "slug": "2026-06-23-tech-selloff-drags-bitcoin-below-63000-as-ethereum-and-solana-take-har",
+  "headline": "Tech selloff drags Bitcoin below $63,000 as Ethereum and Solana take harder hits",
+  "summary": "A broad selloff in tech stocks pulled crypto lower across the board, with Bitcoin falling 2.7% to $62,314 and Ethereum dropping 5.5% to $1,649. Solana and Hyperliquid each shed more than 6%, reflecting the sharper pain in higher-risk assets when institutional money retreats. The Fear & Greed index sits at 23 — deep in Fear territory — though some analysts are reading that extreme as a contrarian signal that Bitcoin may be near a floor.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 9.6,
+        "catalyst": "Rain bucked the broader selloff with a 9.60% gain; no single confirmed catalyst, though the move coincided with speculation that Bitcoin may be nearing a bottom, drawing some capital into smaller altcoins.",
+        "priceUsd": 0.0157822,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": -8.99,
+        "catalyst": "Worldcoin fell 8.99%, the steepest drop among tracked assets, as the broader tech selloff hit risk assets hardest — Worldcoin's AI and biometric identity positioning makes it particularly sensitive to tech-sector sentiment swings.",
+        "priceUsd": 0.564376,
+        "priceChange24hUsd": -0.05
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62314,
+        "changePct24h": -2.73,
+        "marketCapUsd": 1249149812082,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1649.3,
+        "changePct24h": -5.49,
+        "marketCapUsd": 199054798884,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": 0,
+        "marketCapUsd": 186111584326,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 571.56,
+        "changePct24h": -3.53,
+        "marketCapUsd": 77035179082,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74428304830,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.1,
+        "changePct24h": -2.68,
+        "marketCapUsd": 68429009063,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 68.83,
+        "changePct24h": -6.6,
+        "marketCapUsd": 39946566369,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3294,
+        "changePct24h": -0.35,
+        "marketCapUsd": 31233258081,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 1.48,
+        "marketCapUsd": 19695502837,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.94,
+        "changePct24h": -6.72,
+        "marketCapUsd": 13989518999,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0789,
+        "changePct24h": -5.63,
+        "marketCapUsd": 12216850872,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10319816583,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0158,
+        "changePct24h": 9.6,
+        "marketCapUsd": 9826358952,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.57,
+        "changePct24h": -0.11,
+        "marketCapUsd": 8804417914,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 423.02,
+        "changePct24h": -6.41,
+        "marketCapUsd": 7098527801,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's driver was a sharp selloff in US tech stocks that spilled into crypto. When large-cap tech names fall hard, crypto tends to follow — institutional portfolios that hold both asset classes often reduce risk across the board simultaneously, and Bitcoin has traded with a meaningful correlation to the Nasdaq in recent years.\n\nThe steeper losses in Ethereum (-5.5%), Solana (-6.6%), Hyperliquid (-6.7%), and Zcash (-6.4%) compared to Bitcoin (-2.7%) reflect a familiar pattern: when sentiment sours, capital tends to retreat toward the largest and most liquid asset first, leaving smaller names to absorb proportionally larger losses. BTC dominance at 56.2% reflects that dynamic — Bitcoin is holding a larger share of a shrinking pie.\n\nOne data point worth noting: the Fear & Greed index has dropped to 23, which sits firmly in Fear territory. Some analysts cited by CoinDesk are reading this as a contrarian signal — historically, extreme fear readings have sometimes preceded recoveries rather than further declines. That said, the same session also saw an \"altcoin season\" signal flash, which was immediately overshadowed by Bitcoin's slide. A SpaceX valuation drop equivalent to roughly half of Bitcoin's total market cap in three days added to the macro pressure, underscoring how large-scale moves in adjacent risk assets can ripple into crypto pricing.",
+  "worthKnowing": [
+    "The US Senate passed a housing bill that includes a four-year ban on the Federal Reserve developing a retail CBDC (central bank digital currency — a government-issued digital dollar), a provision that crypto advocates have generally supported as a check on state-issued digital money.",
+    "An \"altcoin season\" indicator — which tracks whether a majority of the top 50 altcoins are outperforming Bitcoin over a rolling period — flashed a signal today, though the broader market decline made it difficult to see any rotation in practice.",
+    "SpaceX's private valuation fell by roughly $600 billion over three days, a drop equivalent to nearly half of Bitcoin's entire market cap, illustrating how large moves in high-profile private tech companies can weigh on risk appetite across asset classes."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2222802446114,
+    "btcDominancePct": 56.201,
+    "ethDominancePct": 8.9538,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "tech-selloff",
+    "bitcoin-bottom-signal",
+    "fed-cbdc-ban",
+    "altcoin-season",
+    "fear-greed",
+    "spacex-valuation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
