@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-24T09:40:19.934Z",
+  "publishedAt": "2026-06-24",
+  "slug": "2026-06-24-bitcoin-slides-toward-62k-as-a-two-day-chip-stock-selloff-weighs-on-cr",
+  "headline": "Bitcoin slides toward $62K as a two-day chip stock selloff weighs on crypto",
+  "summary": "A deepening selloff in semiconductor stocks pulled Bitcoin down toward $62,000 for a second consecutive session, keeping the broader crypto market under pressure. The Fear & Greed index sits at 17 — deep in Extreme Fear territory — though one potential stabilizing signal emerged: long-term Bitcoin holders have meaningfully slowed their selling. Most top-15 assets ended the day near flat, with Zcash the notable decliner and Monero the standout gainer.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 3.67,
+        "catalyst": "Long-term Bitcoin holders slowing their selling appears to have lifted sentiment across privacy-focused assets; Monero gained 3.67% with no single on-chain catalyst identified.",
+        "priceUsd": 328.37,
+        "priceChange24hUsd": 12.05
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": -6.66,
+        "catalyst": "Worldcoin fell 6.66%, caught in the broader tech-driven risk-off move as the chip stock selloff deepened and negative sentiment spread to higher-beta crypto assets.",
+        "priceUsd": 0.528545,
+        "priceChange24hUsd": -0.04
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62592,
+        "changePct24h": 0.3,
+        "marketCapUsd": 1254647285639,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1664.46,
+        "changePct24h": 0.82,
+        "marketCapUsd": 200867879952,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186097104759,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 575.69,
+        "changePct24h": 0.67,
+        "marketCapUsd": 77589500904,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74062551830,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.097,
+        "changePct24h": -0.54,
+        "marketCapUsd": 68053681266,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 69.21,
+        "changePct24h": 0.53,
+        "marketCapUsd": 40181835514,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3306,
+        "changePct24h": 0.2,
+        "marketCapUsd": 31358098557,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": -0.15,
+        "marketCapUsd": 19748929275,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.21,
+        "changePct24h": -0.8,
+        "marketCapUsd": 13845072488,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0787,
+        "changePct24h": -0.44,
+        "marketCapUsd": 12183009849,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10299232583,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0156,
+        "changePct24h": -1.06,
+        "marketCapUsd": 9736701025,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.54,
+        "changePct24h": -0.27,
+        "marketCapUsd": 8774465157,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 413.61,
+        "changePct24h": -2.11,
+        "marketCapUsd": 6942321850,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The main driver today was a spillover from equity markets, where semiconductor stocks fell for a second straight session. Chip companies are closely watched in crypto because they supply the hardware that powers Bitcoin mining — when chip stocks sell off sharply, it tends to drag crypto sentiment down with it, and that pattern held today with Bitcoin dipping toward $62,000.\n\nAgainst that backdrop, one piece of data offered a counterweight: on-chain analytics show that long-term Bitcoin holders — sometimes called 'OG' investors, meaning people who have held BTC for years — have significantly slowed their selling. When this cohort stops distributing coins, it typically reduces the supply pressure that can push prices lower. It doesn't guarantee a recovery, but it removes one headwind.\n\nThe Fear & Greed index reading of 17 places the market firmly in Extreme Fear territory, reflecting how cautious participants have become. Most top-15 assets moved less than 1% in either direction, which is consistent with a market waiting rather than acting. Zcash was the sharpest decliner in the tracked group, falling 2.11%, while Ethereum edged up 0.82% — a small outperformance relative to Bitcoin that kept ETH dominance roughly steady at 9.01%.",
+  "worthKnowing": [
+    "On-chain analytics firm CryptoQuant published a note arguing that Michael Saylor's Strategy — the company that has accumulated more Bitcoin than any other public firm — should pause its BTC purchases, citing market absorption concerns.",
+    "The US Senate opened an inquiry into a reported $500 million investment by UAE interests in a crypto venture linked to President Trump, raising questions about conflicts of interest in crypto policymaking.",
+    "Zcash fell 2.11% to $413.61, the steepest decline among the top 15 tracked assets, with no specific catalyst identified beyond the broader risk-off tone."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2233607715646,
+    "btcDominancePct": 56.2205,
+    "ethDominancePct": 9.0076,
+    "fearGreedIndex": 17
+  },
+  "tags": [
+    "bitcoin-og-holders",
+    "chip-selloff",
+    "fear-greed-extreme",
+    "strategy-saylor",
+    "trump-uae-crypto",
+    "monero"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
