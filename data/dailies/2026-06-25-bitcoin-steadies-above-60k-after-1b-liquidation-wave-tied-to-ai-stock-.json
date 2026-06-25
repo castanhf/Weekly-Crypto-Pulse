@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-25T09:32:58.841Z",
+  "publishedAt": "2026-06-25",
+  "slug": "2026-06-25-bitcoin-steadies-above-60k-after-1b-liquidation-wave-tied-to-ai-stock-",
+  "headline": "Bitcoin steadies above $60K after $1B liquidation wave tied to AI stock swings",
+  "summary": "A sharp $1 billion liquidation event swept through Bitcoin and Ethereum positions as leveraged traders got caught in a volatile session tied to AI stock momentum. Bitcoin clawed back above $60,000 after briefly dipping below, while the Fear & Greed index sits at 12 — deep in Extreme Fear territory. The session's clearest bright spot was Ripple's RLUSD stablecoin going live in Japan following regulatory approval, a concrete step forward for Ripple's international ambitions.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 4.83,
+        "catalyst": "LAB rose 4.83% as a rebound in AI-related stocks lifted sentiment around AI-adjacent crypto projects.",
+        "priceUsd": 16.97,
+        "priceChange24hUsd": 0.82
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HBAR",
+        "name": "Hedera",
+        "changePct24h": -4.14,
+        "catalyst": "HBAR fell 4.14% amid broad market weakness with no positive news to offset selling pressure.",
+        "priceUsd": 0.073698,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61630,
+        "changePct24h": -1.55,
+        "marketCapUsd": 1235280892532,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1646.88,
+        "changePct24h": -1.1,
+        "marketCapUsd": 198692956249,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186073146477,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 567.96,
+        "changePct24h": -1.34,
+        "marketCapUsd": 76549577543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73779711728,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.08,
+        "changePct24h": -1.52,
+        "marketCapUsd": 67036800455,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 68.85,
+        "changePct24h": -0.55,
+        "marketCapUsd": 39965864367,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3285,
+        "changePct24h": -0.64,
+        "marketCapUsd": 31157503530,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": -0.65,
+        "marketCapUsd": 19678593993,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.3,
+        "changePct24h": 1.74,
+        "marketCapUsd": 14080665667,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0769,
+        "changePct24h": -2.4,
+        "marketCapUsd": 11897286972,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 10325095253,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0159,
+        "changePct24h": 1.39,
+        "marketCapUsd": 9879867997,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.35,
+        "changePct24h": -2.06,
+        "marketCapUsd": 8602012280,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 415.81,
+        "changePct24h": 0.52,
+        "marketCapUsd": 6979280279,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's main story was a $1 billion liquidation event that swept through leveraged Bitcoin and Ethereum positions, briefly pushing Bitcoin below $60,000 before it recovered to $61,630. The trigger was volatility in AI stocks — a sector that has drawn heavy speculative capital in recent months — which spilled over into crypto as traders unwound correlated positions across both markets.\n\nBitcoin's recovery above $60,000 is notable given the backdrop: a $10 billion options expiry is approaching, and Bitcoin is sitting well below the $72,000 level that options market watchers had flagged as a gravitational price point. That gap suggests the options expiry could add further turbulence in the near term.\n\nXRP slid 2.8% at its worst point in the session, with the $1.00 level drawing attention as a support floor traders are watching. The broader top-15 was almost uniformly red, with Dogecoin down 2.4% and LEO Token off 2.1%. Hyperliquid bucked the trend, rising 1.74%, though no specific catalyst was identified for the move.\n\nThe Fear & Greed index reading of 12 — deep in Extreme Fear territory — reflects how far sentiment has deteriorated. Extreme Fear readings at this level have historically marked periods of elevated selling pressure rather than immediate recovery, though they do not predict direction on their own.",
+  "worthKnowing": [
+    "Ripple's RLUSD stablecoin launched in Japan following regulatory approval, marking the first major regulated stablecoin rollout in the Japanese market and a concrete expansion of Ripple's footprint outside the US.",
+    "Bitcoin is positioned roughly $10,000 below the $72,000 level that options market analysts had identified as a key price magnet ahead of a $10 billion options expiry — a gap that could amplify volatility as expiry approaches.",
+    "XRP's $1.00 price level is in focus after the asset slid 2.8% intraday; traders are watching whether that level holds as a support floor given the broader market weakness."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2202450300881,
+    "btcDominancePct": 56.0745,
+    "ethDominancePct": 9.0288,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "bitcoin-liquidations",
+    "ripple-rlusd",
+    "ai-stocks-correlation",
+    "options-expiry",
+    "extreme-fear",
+    "xrp-support"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
