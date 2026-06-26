@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-26T09:38:24.872Z",
+  "publishedAt": "2026-06-26",
+  "slug": "2026-06-26-tech-stock-selloff-drags-ether-down-5-and-xrp-down-4-as-fear-greed-hit",
+  "headline": "Tech stock selloff drags Ether down 5% and XRP down 4% as Fear & Greed hits 13",
+  "summary": "A sharp drop in tech stocks pulled crypto lower across the board on June 26, with Ethereum falling 5.2% to $1,560.66 and XRP sliding 4.2% to $1.035. Bitcoin held up relatively better, dropping 2.7% to $60,000. The Fear & Greed index sits at 13 — deep in Extreme Fear territory — reflecting how quickly sentiment has soured. Solana was a rare exception, edging up 1.1%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 7.55,
+        "catalyst": "LAB bucked the broader selloff with a 7.55% gain; no specific fundamental catalyst was identified, and the move appears to be idiosyncratic against the day's downward trend.",
+        "priceUsd": 18.37,
+        "priceChange24hUsd": 1.39
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": -8.15,
+        "catalyst": "Worldcoin fell 8.15%, the steepest drop among tracked assets, as the broader selloff in large-cap tokens like Ether and XRP weighed on altcoins with elevated risk profiles.",
+        "priceUsd": 0.471092,
+        "priceChange24hUsd": -0.04
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60000,
+        "changePct24h": -2.7029,
+        "marketCapUsd": 1202756173750,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1560.66,
+        "changePct24h": -5.24,
+        "marketCapUsd": 188206427013,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186056878484,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 566.12,
+        "changePct24h": -0.34,
+        "marketCapUsd": 76277845717,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 73637184336,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.035,
+        "changePct24h": -4.18,
+        "marketCapUsd": 64401533352,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 69.63,
+        "changePct24h": 1.11,
+        "marketCapUsd": 40430968403,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.322,
+        "changePct24h": -2,
+        "marketCapUsd": 30536671033,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 0.61,
+        "marketCapUsd": 19859752741,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.3,
+        "changePct24h": -0.12,
+        "marketCapUsd": 14082935021,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0743,
+        "changePct24h": -3.28,
+        "marketCapUsd": 11496049633,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0156,
+        "changePct24h": -1.39,
+        "marketCapUsd": 10352160124,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.04,
+        "marketCapUsd": 10351679537,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.31,
+        "changePct24h": -0.41,
+        "marketCapUsd": 8563787200,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 402.33,
+        "changePct24h": -3.27,
+        "marketCapUsd": 6753241468,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's driver was a broad selloff in tech stocks that spilled directly into crypto. Ethereum and XRP led the decline among large caps — ETH fell 5.2% and XRP dropped 4.2% — while Dogecoin slid 3.3% and Bitcoin lost 2.7%. The correlation between tech equities and crypto has been a recurring pattern in 2025: when growth stocks face selling pressure, traders tend to reduce risk across the board, and crypto — still treated as a high-beta asset class by many institutional desks — gets caught in the same wave.\n\nBitcoin's relative resilience (down 2.7% versus ETH's 5.2%) pushed BTC dominance to 55.94%, as capital rotated toward the largest and most liquid asset in the space. The Fear & Greed index reading of 13 — deep in Extreme Fear territory — reflects how sharply sentiment has shifted. Readings this low have historically coincided with capitulation-style selling, though the index measures current sentiment, not future direction.\n\nSolana was the notable exception, gaining 1.1% to $69.63. No specific catalyst was identified for SOL's divergence; it may reflect technical buying at support or simply lighter selling pressure relative to ETH and XRP.\n\nStrategy's reported $13 billion paper loss on its Bitcoin holdings — highlighted in today's news — underscores the scale of institutional exposure to BTC price swings, though the company has not signaled any change to its accumulation strategy.",
+  "worthKnowing": [
+    "Japanese financial services giant SBI Holdings agreed to acquire crypto exchange Bitbank for $289 million, one of the larger institutional crypto deals in Japan's history.",
+    "Strategy's Bitcoin position is sitting on a reported $13 billion paper loss — a figure that alone exceeds the market cap of hundreds of prominent crypto tokens.",
+    "Investor Grant Cardone said he will continue buying Bitcoin using cash flows from his real estate portfolio, adding to a pattern of high-profile individuals treating BTC as a treasury asset."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2143007173807,
+    "btcDominancePct": 55.935,
+    "ethDominancePct": 8.7113,
+    "fearGreedIndex": 13
+  },
+  "tags": [
+    "tech-stock-correlation",
+    "ethereum-selloff",
+    "fear-greed-extreme",
+    "sbi-bitbank-acquisition",
+    "strategy-paper-loss",
+    "btc-dominance"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
