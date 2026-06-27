@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-27T08:44:22.044Z",
+  "publishedAt": "2026-06-27",
+  "slug": "2026-06-27-ripples-ceo-says-saylors-bitcoin-strategy-has-hurt-crypto-as-fear-gree",
+  "headline": "Ripple's CEO says Saylor's Bitcoin strategy has hurt crypto, as Fear & Greed hits 15",
+  "summary": "The day's sharpest story wasn't price action — it was Ripple CEO Brad Garlinghouse publicly criticizing Michael Saylor's Bitcoin-maximalist approach, arguing it has damaged the broader crypto market. Bitcoin itself barely moved, holding near $60,316, while Solana was the standout gainer in the top 15, up 3.15%. The Fear & Greed index sits at 15 — deep in Extreme Fear territory — reflecting a market that has been under sustained selling pressure for weeks.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 5.73,
+        "catalyst": "No specific catalyst identified for LAB's 5.73% gain — the move appears to be technical, with no named event or announcement driving it.",
+        "priceUsd": 19.57,
+        "priceChange24hUsd": 1.12
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": -2.85,
+        "catalyst": "Worldcoin fell 2.85% as investor interest rotated toward AI stocks, pulling capital away from AI-adjacent crypto projects.",
+        "priceUsd": 0.462677,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60316,
+        "changePct24h": 0.3,
+        "marketCapUsd": 1209264281083,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1580.26,
+        "changePct24h": 0.95,
+        "marketCapUsd": 190702632615,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": 0.01,
+        "marketCapUsd": 186072701485,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 564.11,
+        "changePct24h": -0.67,
+        "marketCapUsd": 76025467044,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73782314878,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.055,
+        "changePct24h": 1.64,
+        "marketCapUsd": 65645348706,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 71.94,
+        "changePct24h": 3.15,
+        "marketCapUsd": 41773374819,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3206,
+        "changePct24h": -0.44,
+        "marketCapUsd": 30408537596,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.028,
+        "changePct24h": -0.47,
+        "marketCapUsd": 19816213173,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.52,
+        "changePct24h": -1.16,
+        "marketCapUsd": 14130028436,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0755,
+        "changePct24h": 1.49,
+        "marketCapUsd": 11683607270,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0157,
+        "changePct24h": -0.12,
+        "marketCapUsd": 10375814531,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 10338380417,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.32,
+        "changePct24h": 0.7,
+        "marketCapUsd": 8573150583,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 408.45,
+        "changePct24h": -0.13,
+        "marketCapUsd": 6856686127,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Price action was quiet across the board today — Bitcoin gained 0.30%, Ethereum 0.95%, and most top-15 assets moved less than 1% in either direction. The real story was off-chain. Ripple CEO Brad Garlinghouse publicly criticized Michael Saylor's Bitcoin-maximalist strategy, arguing that Saylor's approach — which involves MicroStrategy accumulating Bitcoin at scale and advocating that institutions hold only BTC — has actively hurt the broader crypto market by crowding out altcoins and narrowing institutional attention. Garlinghouse said he remains bullish on Bitcoin itself, but the criticism landed as a notable public split between two prominent figures in the industry.\n\nSolana was the standout mover in the top 15, up 3.15% on the day. According to a report from The Block, SOL climbed roughly 9% over the past week — that figure comes from the news report rather than verified 24-hour price data, but it aligns with the broader momentum visible in Solana-linked equities, which gained double digits over the same period.\n\nWorldcoin's 2.85% decline fits a pattern noted this week: investor interest has been rotating toward AI stocks, pulling capital away from AI-adjacent crypto projects like WLD. Dogecoin and Hyperliquid were also cited as weekly underperformers for the same reason.\n\nThe Fear & Greed index reading of 15 reflects sustained selling pressure accumulated over recent weeks — a level consistent with prolonged drawdown periods rather than a single-session shock.",
+  "worthKnowing": [
+    "Spain's financial regulator told Binance and other crypto firms there will be no exceptions or deadline extensions for MiCA compliance — the EU's crypto regulatory framework — with the deadline now imminent.",
+    "A U.S. House Democrat who may soon chair a key financial committee publicly condemned the inclusion of crypto in 401(k) retirement plans, a stance that could shape the legislative environment for crypto in workplace savings accounts.",
+    "Dogecoin and Hyperliquid's HYPE were among the week's worst performers in the top tier, with analysts pointing to capital rotating into AI equities as the proximate cause."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2168382044340,
+    "btcDominancePct": 55.8154,
+    "ethDominancePct": 8.8011,
+    "fearGreedIndex": 15
+  },
+  "tags": [
+    "ripple",
+    "michael-saylor",
+    "bitcoin-maximalism",
+    "solana",
+    "mica-compliance",
+    "fear-greed",
+    "worldcoin",
+    "401k-crypto"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
