@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-28T09:19:02.684Z",
+  "publishedAt": "2026-06-28",
+  "slug": "2026-06-28-bitcoin-slips-below-60000-on-track-for-a-second-straight-quarterly-los",
+  "headline": "Bitcoin slips below $60,000, on track for a second straight quarterly loss",
+  "summary": "Bitcoin dipped under $60,000 on Sunday, putting it on course for back-to-back quarterly losses — a rare occurrence that underscores how difficult 2026 has been for crypto. The drag isn't coming from crypto alone: a simultaneous selloff in gold and silver has pulled Bitcoin lower alongside traditional safe-haven assets. The Fear & Greed index sits at 18 — deep in 'Extreme Fear' territory — and the average investor in BlackRock's Bitcoin ETF (IBIT) is now down roughly 40%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 5.08,
+        "catalyst": "NEAR Protocol surged 5.08% as sentiment improved slightly; no single fundamental catalyst was identified, and the move stood out against a broadly declining market.",
+        "priceUsd": 1.88,
+        "priceChange24hUsd": 0.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -8.38,
+        "catalyst": "LAB dropped 8.38%, with the decline attributed to broad bearish conditions and negative sentiment surrounding major cryptocurrencies rather than any asset-specific news.",
+        "priceUsd": 17.88,
+        "priceChange24hUsd": -1.5
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60298,
+        "changePct24h": 0.1,
+        "marketCapUsd": 1208901142600,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1580.47,
+        "changePct24h": 0.16,
+        "marketCapUsd": 190732354311,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": 0,
+        "marketCapUsd": 186073526486,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 556.48,
+        "changePct24h": -1.28,
+        "marketCapUsd": 75005018396,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73730466350,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.052,
+        "changePct24h": -0.2,
+        "marketCapUsd": 65473195353,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 71.68,
+        "changePct24h": -0.12,
+        "marketCapUsd": 41626856939,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3215,
+        "changePct24h": 0.25,
+        "marketCapUsd": 30489245645,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.044,
+        "changePct24h": 1.52,
+        "marketCapUsd": 20163932936,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.84,
+        "changePct24h": -0.23,
+        "marketCapUsd": 13978210872,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.074,
+        "changePct24h": -1.69,
+        "marketCapUsd": 11465830507,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.02,
+        "marketCapUsd": 10343434371,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0156,
+        "changePct24h": -0.38,
+        "marketCapUsd": 10295086449,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.41,
+        "changePct24h": 0.98,
+        "marketCapUsd": 8658898969,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 389.69,
+        "changePct24h": -4.02,
+        "marketCapUsd": 6543230512,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces combined to keep Bitcoin pinned below $60,000 today. First, gold and silver sold off sharply in traditional markets — and Bitcoin, which often trades alongside precious metals when investors are reducing risk broadly, followed them down. That correlation has been a recurring theme in 2026: when macro investors exit hard assets, Bitcoin gets caught in the same wave. Second, Bitcoin ETF outflows have been relentless. IBIT — BlackRock's spot Bitcoin fund — just wrapped one of its worst weeks on record, and the average investor in that fund is now sitting on a roughly 40% loss. That kind of drawdown tends to suppress fresh buying, as sidelined investors wait for clearer footing before committing new capital.\n\nBinance founder Changpeng Zhao offered his read on the year: a combination of AI capturing investor attention away from crypto, rising global geopolitical tensions, and the natural downswing of Bitcoin's four-year market cycle. Whether or not that framing is complete, it captures the mood. The Fear & Greed index at 18 — deep in 'Extreme Fear' — reflects a market that is not panicking in a single dramatic moment but grinding lower under sustained pressure.\n\nThe rest of the top 15 moved in a narrow band. BNB fell 1.28%, Dogecoin dropped 1.69%, and Zcash slid 4.02% — the sharpest decline among tracked large-caps. NEAR Protocol was the standout on the upside, gaining 5.08%, though no specific fundamental catalyst drove that move.",
+  "worthKnowing": [
+    "Grayscale's research head Matthew Pandl has publicly floated the idea that Strategy (formerly MicroStrategy) selling $3 billion in Bitcoin could paradoxically restore market confidence by demonstrating institutional liquidity — a view that reflects how unusual current conditions are.",
+    "IBIT, BlackRock's spot Bitcoin ETF, just closed one of its two worst weeks since launch, with cumulative outflows putting the average investor down approximately 40% from their entry price.",
+    "Zcash fell 4.02% today, the steepest single-day drop among the top 15 tracked assets, with no specific catalyst identified beyond broad market pressure."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2163966202738,
+    "btcDominancePct": 55.8633,
+    "ethDominancePct": 8.8108,
+    "fearGreedIndex": 18
+  },
+  "tags": [
+    "bitcoin-quarterly-loss",
+    "ibit-etf-outflows",
+    "fear-greed-extreme",
+    "gold-silver-correlation",
+    "near-protocol",
+    "binance-cz"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-22-ethereum-gains-while-bitcoin-struggles-near-64-000"
+  }
+}
