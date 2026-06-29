@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-06-29T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Bitcoin and Ethereum face significant declines amid regulatory pressures",
+      "slug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p",
+      "publishedAt": "2026-06-29",
+      "weekLabel": "Week of Jun 29, 2026",
+      "summary": "The cryptocurrency market experienced notable declines this week, with Bitcoin falling 6.13% to $60,130 and Ethereum down 9.48% to $1,579. The total market capitalization decreased to $2.163 trillion, reflecting a shift in sentiment as regulatory developments in Europe and ongoing ETF outflows weigh heavily on prices.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "risk-off",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2163000000000,
+      "btcDominancePct": 55.83,
+      "ethDominancePct": 8.83,
+      "fearGreedIndex": 12
+    },
+    "movers": [
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": -9.48,
+        "catalyst": "Ethereum's price decline was driven by broader market weakness and regulatory concerns, particularly the upcoming MiCA regulations in Europe."
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "changePct7d": -12.81,
+        "catalyst": "Dogecoin's significant drop can be attributed to the overall bearish sentiment in the crypto market and lack of strong buying interest."
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct7d": -14.67,
+        "catalyst": "Zcash faced a steep decline as investors reacted to the negative sentiment surrounding privacy coins amid regulatory scrutiny."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment shifts as regulatory pressures mount",
+        "body": "This week, the cryptocurrency market saw a significant downturn, with the total market capitalization falling to $2.163 trillion. The Fear & Greed Index dropped to 12, indicating extreme fear among investors. Regulatory developments in Europe, particularly the impending MiCA regulations, have created uncertainty for many crypto firms, leading to a cautious approach from investors. Additionally, the ongoing outflows from Bitcoin ETFs have further exacerbated the bearish sentiment, contributing to the overall decline in prices. The market appears to be reacting to a combination of regulatory pressures and a lack of positive catalysts to drive prices higher.",
+        "highlights": [
+          "The total cryptocurrency market cap decreased to $2.163 trillion.",
+          "The Fear & Greed Index fell to 12, signaling extreme fear.",
+          "Regulatory developments in Europe are causing uncertainty for crypto firms.",
+          "Ongoing Bitcoin ETF outflows are contributing to market weakness."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum struggle amid market pressures",
+        "body": "Bitcoin's price fell 6.13% this week, closing at $60,130, while Ethereum experienced a more pronounced decline of 9.48%, ending the week at $1,579. Both assets are facing significant selling pressure, with Bitcoin now trading below key support levels. Analysts note that Bitcoin has entered a 'technical no man's land,' where major support levels are far away, increasing the risk of further declines. Ethereum's struggles are compounded by the overall market sentiment and regulatory concerns, particularly with the upcoming MiCA regulations in Europe that could impact its adoption and use in the region.",
+        "highlights": [
+          "Bitcoin closed the week at $60,130 after a 6.13% decline.",
+          "Ethereum fell to $1,579, down 9.48% for the week.",
+          "Both assets are under significant selling pressure.",
+          "Bitcoin is trading below key support levels, raising risks of further declines."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Looking ahead: Risks and potential scenarios for crypto",
+        "body": "The current market regime is classified as risk-off, with significant risks looming over the cryptocurrency landscape. Regulatory developments, particularly in Europe, are likely to continue influencing market sentiment. Investors are advised to monitor the outcomes of the MiCA regulations and any potential impacts on major cryptocurrencies. Additionally, the performance of Bitcoin ETFs will be critical in determining investor confidence moving forward. If the bearish trend persists, we may see further declines in prices, but any positive regulatory news could provide a catalyst for recovery. The market remains highly sensitive to macroeconomic factors and regulatory announcements, which will be pivotal in shaping the near-term outlook.",
+        "highlights": [
+          "The market is currently in a risk-off regime, with significant risks ahead.",
+          "Regulatory developments will continue to impact market sentiment.",
+          "The performance of Bitcoin ETFs will be critical for investor confidence.",
+          "Positive regulatory news could serve as a catalyst for market recovery."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Regulatory pressures are likely to continue impacting market sentiment negatively.",
+        "Bitcoin's technical position suggests potential for further declines if support levels are not reclaimed.",
+        "Ethereum's struggles may persist until clearer regulatory frameworks are established.",
+        "Investor confidence is heavily tied to the performance of Bitcoin ETFs and macroeconomic factors."
+      ],
+      "riskChecklist": [
+        "Regulatory uncertainty in Europe may lead to further market declines.",
+        "Ongoing outflows from Bitcoin ETFs could erode investor confidence.",
+        "Technical indicators suggest Bitcoin is vulnerable to additional selling pressure.",
+        "Market sentiment remains extremely fearful, indicating potential for panic selling.",
+        "Geopolitical tensions may further complicate the crypto landscape."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$58,000",
+          "context": "A critical support level that, if breached, could lead to further declines."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,500",
+          "context": "A key psychological level that may attract buying interest if reached."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market cap decreased from $2.303 trillion to $2.163 trillion.",
+        "Bitcoin dominance fell from 56.24% to 55.83%.",
+        "Ethereum's dominance decreased from 9.22% to 8.83%.",
+        "The Fear & Greed Index dropped from 20 to 12, indicating increased fear."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin and Ethereum drop sharply as regulatory concerns mount",
+      "body": "This week, the cryptocurrency market faced significant challenges, with Bitcoin falling to $60,130, a decline of 6.13%, and Ethereum dropping 9.48% to $1,579. The total market capitalization shrank to $2.163 trillion, reflecting a broader trend of investor caution. The Fear & Greed Index fell to 12, indicating extreme fear among market participants. Regulatory pressures, particularly from upcoming rules in Europe, have created uncertainty, leading to a lack of buying interest. As Bitcoin struggles to hold key support levels, analysts are closely watching for potential further declines in the coming weeks."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 37335110043,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 4851345960,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4840795379,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4444023301,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4103486607,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 3919129562,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1390075630,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1347023949,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1207368241,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 980403981,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 802971436,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 469705553,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 413692951,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 367480722,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "OP Mainnet",
+          "tvlUsd": 279694202,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Smallest losses",
+      "losers": "Losers"
+    }
+  }
+}
