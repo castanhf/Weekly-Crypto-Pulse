@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-02T09:22:00.001Z",
+  "publishedAt": "2026-07-02",
+  "slug": "2026-07-02-warsh-comments-push-bitcoin-above-60000-as-metaplanet-adds-170m-to-its",
+  "headline": "Warsh comments push Bitcoin above $60,000 as Metaplanet adds $170M to its treasury",
+  "summary": "Bitcoin crossed $60,000 for the first time in weeks after Federal Reserve Governor Kevin Warsh made remarks that traders read as favorable for risk assets — pulling Solana, Ethereum, and Dogecoin higher alongside it. Metaplanet, a Japanese investment firm, added another $170 million in Bitcoin to bring its total holdings to 43,000 BTC, one of the largest corporate treasuries outside the US. The Fear & Greed Index sits at 19 (Extreme Fear), a reminder that the broader mood remains cautious even as prices tick up.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 68.85,
+        "catalyst": "MemeCore surged 68.85% with no clear fundamental catalyst — the move appears speculative, consistent with the outsized volatility typical of low-cap memecoin assets.",
+        "priceUsd": 1.29,
+        "priceChange24hUsd": 0.89
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -6.85,
+        "catalyst": "LAB fell 6.85% amid broadly cautious sentiment, with the Fear & Greed Index sitting at 19 (Extreme Fear) weighing on smaller, less liquid assets.",
+        "priceUsd": 9.03,
+        "priceChange24hUsd": -0.62
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60389,
+        "changePct24h": 2.61,
+        "marketCapUsd": 1210824285541,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1621.92,
+        "changePct24h": 2.74,
+        "marketCapUsd": 195676151076,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184429137628,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 549.86,
+        "changePct24h": 0.68,
+        "marketCapUsd": 74109182152,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 73217215124,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.063,
+        "changePct24h": 1.66,
+        "marketCapUsd": 66145642250,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 78.34,
+        "changePct24h": 4.24,
+        "marketCapUsd": 45514762024,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.317,
+        "changePct24h": 0.21,
+        "marketCapUsd": 30071162612,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.036,
+        "changePct24h": 2.21,
+        "marketCapUsd": 20097694375,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.44,
+        "changePct24h": -0.94,
+        "marketCapUsd": 14114864722,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0728,
+        "changePct24h": 2.01,
+        "marketCapUsd": 11272274951,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0154,
+        "changePct24h": -1.28,
+        "marketCapUsd": 10204950549,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10005514568,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.15,
+        "changePct24h": -0.84,
+        "marketCapUsd": 8422152998,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 419.72,
+        "changePct24h": 4.62,
+        "marketCapUsd": 7045842941,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main catalyst was a set of public remarks from Kevin Warsh, a former Federal Reserve governor and widely watched commentator on monetary policy. Traders interpreted his comments as supportive of looser financial conditions — the kind of signal that tends to lift risk assets including crypto. Bitcoin responded by crossing $60,000, a level it had been struggling to hold in recent sessions, rising 2.61% on the day.\n\nSolana was the standout among large-caps, gaining 4.24% to $78.34. Zcash also moved sharply, up 4.62% to $419.72, though with no specific news catalyst — the move looks more like a spillover from the broader rally than a Zcash-specific story. Ethereum gained 2.74% to $1,621.92, broadly in line with Bitcoin's move.\n\nLayered on top of the Warsh catalyst was Metaplanet's announcement that it purchased another $170 million in Bitcoin, expanding its treasury to 43,000 BTC. Corporate treasury buying of this scale reinforces a demand narrative that long-term Bitcoin holders appear to share — on-chain data shows that cohort has returned to net accumulation after months of distribution.\n\nDespite the green across the board, the Fear & Greed Index at 19 (Extreme Fear) signals that the market's underlying mood has not shifted. Single-day rallies in fear territory often reflect short-covering or macro-driven pops rather than a sustained change in sentiment. XRP edged up 1.66%, with whale wallet activity picking up even as retail participation stayed muted.",
+  "worthKnowing": [
+    "Solana launched on-chain governance today, requiring 100,000 SOL staked to participate — a structural step toward decentralizing protocol decisions that had previously been made off-chain.",
+    "XRP's 1.66% gain came alongside a reported rise in large-wallet (whale) activity, while retail trading volumes remained subdued.",
+    "Bitcoin's long-term holders — wallets that have not moved coins in over 155 days — returned to net accumulation this week, according to on-chain data cited by CoinDesk."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2173894180366,
+    "btcDominancePct": 55.7218,
+    "ethDominancePct": 9.002,
+    "fearGreedIndex": 19
+  },
+  "tags": [
+    "bitcoin-treasury",
+    "metaplanet",
+    "warsh-fed-comments",
+    "solana-governance",
+    "long-term-holders",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}
