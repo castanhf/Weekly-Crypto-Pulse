@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-03T09:27:38.271Z",
+  "publishedAt": "2026-07-03",
+  "slug": "2026-07-03-bitcoin-etfs-snap-a-10-day-outflow-streak-with-221m-in-fresh-inflows-a",
+  "headline": "Bitcoin ETFs snap a 10-day outflow streak with $221M in fresh inflows as a short squeeze lifts ETH 6%",
+  "summary": "After ten consecutive days of redemptions, Bitcoin ETFs pulled in $221 million on July 3 — a meaningful reversal that helped push BTC toward $62,000. A short squeeze amplified gains across the board, with Ethereum jumping 6.1% and Hyperliquid surging 6.7%. The backdrop is still cautious: more Bitcoin is now held at a loss than at a profit, and the Fear & Greed index sits at 21 (Extreme Fear). Read on for what drove the moves and what else is worth tracking.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 38.96,
+        "catalyst": "No specific catalyst identified — the move appears to be speculative, consistent with high-volatility memecoin trading patterns on a day when broader risk appetite improved.",
+        "priceUsd": 1.77,
+        "priceChange24hUsd": 0.69
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -12.12,
+        "catalyst": "LAB declined over 12% amid broader market volatility and negative sentiment tied to on-chain data showing more Bitcoin is now held at a loss than at a profit.",
+        "priceUsd": 7.87,
+        "priceChange24hUsd": -0.95
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61617,
+        "changePct24h": 1.8,
+        "marketCapUsd": 1235506789012,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1725.65,
+        "changePct24h": 6.12,
+        "marketCapUsd": 208267282239,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9989,
+        "changePct24h": 0.02,
+        "marketCapUsd": 184088479757,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 562.85,
+        "changePct24h": 2.21,
+        "marketCapUsd": 75868183637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 73133195738,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.1,
+        "changePct24h": 3.36,
+        "marketCapUsd": 68544803519,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 80.87,
+        "changePct24h": 2.89,
+        "marketCapUsd": 46988538297,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3195,
+        "changePct24h": 0.77,
+        "marketCapUsd": 30300675061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 0.26,
+        "marketCapUsd": 20256532811,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.88,
+        "changePct24h": 6.7,
+        "marketCapUsd": 15112093515,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0749,
+        "changePct24h": 2.83,
+        "marketCapUsd": 11605015973,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0156,
+        "changePct24h": 0.98,
+        "marketCapUsd": 10318876707,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10113956126,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.12,
+        "changePct24h": -0.32,
+        "marketCapUsd": 8393420708,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 444.73,
+        "changePct24h": 5.63,
+        "marketCapUsd": 7469339830,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest catalyst was a $221 million inflow into Bitcoin spot ETFs — the first net positive day after a 10-session outflow streak that had weighed on sentiment. That reversal gave traders a reason to cover short positions, and the resulting short squeeze rippled outward: Bitcoin climbed toward $62,000, Ethereum jumped 6.1%, and Solana gained 2.9%.\n\nHyperliquid led the top-15 with a 6.7% gain, consistent with the broader pattern of higher-beta assets outperforming when a squeeze unwinds. Zcash added 5.6%, XRP rose 3.4%, and BNB gained 2.2% — the rally was broad, not concentrated.\n\nThe optimism is real but sits against a sobering backdrop. On-chain data now shows more Bitcoin held at a loss than at a profit, meaning the average holder who bought in recent months is underwater. That reading historically reflects a market still working through distribution, not one that has fully reset. The Fear & Greed index at 21 — deep in Extreme Fear territory — reinforces that the mood remains fragile despite today's bounce.\n\nThe ETF inflow is the headline number, but one day does not confirm a trend. The prior 10-day outflow streak pulled significant capital out of BTC funds; today's $221 million partially offsets that. Whether institutional buyers are returning or this is a one-session blip will become clearer over the next few trading days.",
+  "worthKnowing": [
+    "More Bitcoin is now held at a loss than at a profit, an on-chain signal that reflects the pressure on holders who bought during recent higher-price periods.",
+    "Russia's central bank governor said 'everything is ready' for a widespread digital ruble rollout, with a September launch date now on the calendar.",
+    "MemeCore (M) surged nearly 39% in 24 hours, making it the day's standout mover outside the top 15, though no specific catalyst was identified.",
+    "LAB fell 12.1%, with negative sentiment around the Bitcoin loss-holder data cited as a contributing factor to the decline."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2222589374092,
+    "btcDominancePct": 55.592,
+    "ethDominancePct": 9.37,
+    "fearGreedIndex": 21
+  },
+  "tags": [
+    "bitcoin-etf-inflows",
+    "short-squeeze",
+    "ethereum",
+    "hyperliquid",
+    "digital-ruble",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}
