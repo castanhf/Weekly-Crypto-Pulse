@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-04T08:45:51.158Z",
+  "publishedAt": "2026-07-04",
+  "slug": "2026-07-04-bitcoin-holds-61k-on-soft-jobs-data-as-xrp-jumps-38-and-hyperliquid-le",
+  "headline": "Bitcoin holds $61K on soft jobs data as XRP jumps 3.8% and Hyperliquid leads the top 15",
+  "summary": "A US Independence Day session saw crypto markets find steady footing after recent turbulence. Soft jobs data eased fears of further Federal Reserve rate hikes, helping Bitcoin hold above $61,000 and giving the broader market room to recover. XRP was the standout in the top 15, rising 3.8%, while Hyperliquid gained 5.3% — both outpacing Bitcoin's 1.2% rise. The Fear & Greed index sits at 22, firmly in 'Extreme Fear' territory, suggesting the market's mood remains cautious despite today's green session.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 29.46,
+        "catalyst": "LAB surged 29.46% with no specific catalyst identified — the move appears to be driven by thin liquidity rather than a named event or announcement.",
+        "priceUsd": 9.3,
+        "priceChange24hUsd": 2.74
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -10.78,
+        "catalyst": "MemeCore dropped 10.78% as negative sentiment weighed on the memecoin segment, with no specific on-chain event or announcement identified as the trigger.",
+        "priceUsd": 1.58,
+        "priceChange24hUsd": -0.17
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62537,
+        "changePct24h": 1.23,
+        "marketCapUsd": 1253882793946,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1759.37,
+        "changePct24h": 1.91,
+        "marketCapUsd": 212328425075,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0.02,
+        "marketCapUsd": 184120604343,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 572.05,
+        "changePct24h": 1.7,
+        "marketCapUsd": 77049336795,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 72971909008,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": 3.81,
+        "marketCapUsd": 71220896210,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 82.46,
+        "changePct24h": 1.58,
+        "marketCapUsd": 47918507195,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3238,
+        "changePct24h": 1.51,
+        "marketCapUsd": 30711847910,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.009,
+        "changePct24h": -2.9,
+        "marketCapUsd": 19699726735,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 71.22,
+        "changePct24h": 5.28,
+        "marketCapUsd": 15840661737,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0769,
+        "changePct24h": 2.45,
+        "marketCapUsd": 11908001297,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0155,
+        "changePct24h": -0.42,
+        "marketCapUsd": 10233907929,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10157995599,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.16,
+        "changePct24h": 0.48,
+        "marketCapUsd": 8433079846,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 460.81,
+        "changePct24h": 2.9,
+        "marketCapUsd": 7738691139,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The main driver today was a softer-than-expected US jobs report, which reduced pressure on the Federal Reserve to keep rates elevated. Lower rate expectations tend to benefit risk assets — crypto included — and Bitcoin's ability to hold above $61,000 through a holiday-shortened session was read as a constructive sign after weeks of selling pressure.\n\nXRP was the clearest beneficiary in the top 15, rising 3.81% to $1.14. Analysts at CoinDesk noted that a record proportion of XRP holders are currently sitting on unrealized losses — a condition that has historically preceded recoveries, as it reduces the pool of holders likely to sell into strength. That data point drew fresh attention to XRP today. Hyperliquid gained 5.28% to $71.22 with no specific catalyst identified — the move appears technical, consistent with a broader altcoin recovery on light holiday volume.\n\nZcash added 2.90% to $460.81, likely reflecting anticipation around the approaching Ironwood upgrade, which developers are positioning as a confidence-rebuilding milestone after a sharp price decline earlier this year.\n\nThe Fear & Greed index reading of 22 — deep in 'Extreme Fear' — is worth noting as context. Today's green session happened against a backdrop of still-cautious sentiment, not euphoria. Separately, analysts flagged that Bitcoin's next major leg higher may require roughly $1 trillion in fresh capital inflows, a reminder of how much buying pressure would be needed to sustain a significant rally from current levels.",
+  "worthKnowing": [
+    "Bitcoin whale wallets accumulated $16.7 billion worth of BTC over two weeks even as Bitcoin ETFs recorded a record $4 billion in outflows — a split between large holders buying and fund investors selling.",
+    "The Zcash Ironwood upgrade is nearing completion; developers say it is designed to restore confidence following a significant ZEC price decline.",
+    "Analysts estimate Bitcoin would need approximately $1 trillion in new capital to fuel its next major parabolic run, based on current market structure."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2254482891152,
+    "btcDominancePct": 55.6324,
+    "ethDominancePct": 9.4225,
+    "fearGreedIndex": 22
+  },
+  "tags": [
+    "xrp-recovery",
+    "bitcoin-etf-outflows",
+    "zcash-ironwood",
+    "hyperliquid",
+    "fed-rate-expectations",
+    "whale-accumulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}
