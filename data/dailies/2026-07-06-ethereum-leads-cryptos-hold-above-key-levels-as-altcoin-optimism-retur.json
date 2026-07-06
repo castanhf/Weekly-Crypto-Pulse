@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-06T10:48:36.587Z",
+  "publishedAt": "2026-07-06",
+  "slug": "2026-07-06-ethereum-leads-cryptos-hold-above-key-levels-as-altcoin-optimism-retur",
+  "headline": "Ethereum leads crypto's hold above key levels as altcoin optimism returns",
+  "summary": "Crypto markets steadied on Monday, with Ethereum outpacing Bitcoin on a day when smaller altcoins caught a fresh bid. The broader story is one of recovery from recent weakness — Fear & Greed sits at 24 (Extreme Fear), yet most top assets closed in the green. Vitalik Buterin's announcement of Ethereum's biggest rebuild since the Merge added a concrete catalyst to ETH's relative strength.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 11.87,
+        "catalyst": "Altcoin optimism returned to the broader market, drawing fresh capital into smaller-cap assets and lifting LAB by nearly 12%.",
+        "priceUsd": 17.94,
+        "priceChange24hUsd": 2.13
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -7.9,
+        "catalyst": "No specific catalyst identified — the move appears to reflect profit-taking or thin liquidity in a low-volume memecoin.",
+        "priceUsd": 1.3,
+        "priceChange24hUsd": -0.1
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62859,
+        "changePct24h": 0.28,
+        "marketCapUsd": 1260522003808,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1770.26,
+        "changePct24h": 0.64,
+        "marketCapUsd": 213647905860,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184154328079,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 579.73,
+        "changePct24h": 0.76,
+        "marketCapUsd": 78137463856,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 72886515119,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": 1.2,
+        "marketCapUsd": 71086230655,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 80.52,
+        "changePct24h": 0.32,
+        "marketCapUsd": 46801898903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3268,
+        "changePct24h": 0.51,
+        "marketCapUsd": 31001889855,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.009,
+        "changePct24h": 0,
+        "marketCapUsd": 19691240001,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 70.4,
+        "changePct24h": 2.04,
+        "marketCapUsd": 15659956706,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.077,
+        "changePct24h": 1.56,
+        "marketCapUsd": 11933102217,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 10136421841,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0151,
+        "changePct24h": -1.79,
+        "marketCapUsd": 9966575964,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.36,
+        "changePct24h": 2.28,
+        "marketCapUsd": 8612754773,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 446.97,
+        "changePct24h": -1.95,
+        "marketCapUsd": 7505024537,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's clearest story was Ethereum's relative outperformance. ETH gained 0.64% while Bitcoin added just 0.28%, and the gap widened further down the cap scale — Hyperliquid rose 2.04%, LEO Token climbed 2.28%, and Dogecoin added 1.56%. The proximate catalyst for ETH was Vitalik Buterin's statement that Ethereum is preparing its biggest protocol rebuild since the Merge — the network upgrade that shifted Ethereum from energy-intensive mining to a proof-of-stake model in 2022. Buterin's comments gave traders a concrete reason to favor ETH over Bitcoin on a day when both were otherwise drifting.\n\nXRP's 1.20% gain had its own driver: the $1.14 price level, which had previously acted as resistance, is now being tested as support — a technical development that traders were watching closely. Ripple's regulatory news out of Europe (see Worth Knowing) added a secondary tailwind.\n\nThe broader backdrop remains cautious. The Fear & Greed index sits at 24, deep in Extreme Fear territory, meaning the market's overall mood is still defensive despite today's green candles. Bitcoin held above $63,000 throughout the session, which market participants have been treating as a near-term floor. The day's gains were real but narrow — most top-15 assets moved less than 1%, and Zcash slipped 1.95% with no clear catalyst. The recovery from recent weakness looks tentative rather than decisive.",
+  "worthKnowing": [
+    "Vitalik Buterin announced that Ethereum is preparing its biggest protocol rebuild since the 2022 Merge, though no timeline was given for the changes.",
+    "Ripple's crypto asset provider license in Luxembourg was upgraded from preliminary to fully compliant, expanding its ability to operate across the European Union.",
+    "XRP's $1.14 price level, which had previously acted as a ceiling, is now being tested as a floor — a technical shift traders are watching closely."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2265331118561,
+    "btcDominancePct": 55.7136,
+    "ethDominancePct": 9.43,
+    "fearGreedIndex": 24
+  },
+  "tags": [
+    "ethereum-rebuild",
+    "ripple-luxembourg-license",
+    "xrp-support-level",
+    "altcoin-recovery",
+    "fear-greed-extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}
