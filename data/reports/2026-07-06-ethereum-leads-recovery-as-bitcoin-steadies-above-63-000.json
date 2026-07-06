@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-07-06T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Ethereum leads recovery as Bitcoin steadies above $63,000",
+      "slug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000",
+      "publishedAt": "2026-07-06",
+      "weekLabel": "Week of Jul 6, 2026",
+      "summary": "The cryptocurrency market rebounded this week, with a total market capitalization of $2.254 trillion. Bitcoin rose 4.82% to $62,644, while Ethereum surged 11.91% to $1,758, reflecting a shift in sentiment following regulatory developments and market stabilization efforts.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2254000000000,
+      "btcDominancePct": 55.69,
+      "ethDominancePct": 9.41,
+      "fearGreedIndex": 24
+    },
+    "movers": [
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 11.91,
+        "catalyst": "Ethereum's price increase is attributed to positive sentiment around its upcoming major rebuild, as noted by Vitalik Buterin."
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "changePct7d": 8.81,
+        "catalyst": "XRP's rise followed a breakout above $1.14, which has now turned into a support level."
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct7d": 10.14,
+        "catalyst": "Solana's price increase reflects a broader recovery in the altcoin market as investor sentiment improves."
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct7d": 15.81,
+        "catalyst": "Zcash's significant increase is linked to the upcoming Ironwood upgrade, which aims to restore confidence after recent price declines."
+      },
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "changePct7d": 4.82,
+        "catalyst": "Bitcoin's stabilization above $63,000 has provided a foundation for market recovery, despite ongoing ETF outflows."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment shifts as recovery takes hold",
+        "body": "This week, the cryptocurrency market experienced a notable recovery, with total market capitalization rising to $2.254 trillion. The Fear & Greed Index improved to 24, indicating a shift from extreme fear to a more neutral sentiment. Bitcoin dominance slightly decreased to 55.69%, while Ethereum's dominance increased to 9.41%. Positive developments in regulatory clarity and technological advancements have contributed to this shift, with investors showing renewed interest in altcoins as well.\n\nThe broader macroeconomic environment remains challenging, with ongoing concerns about regulatory scrutiny and potential impacts on market liquidity. However, the recent upgrades and developments in major cryptocurrencies have provided a glimmer of hope for investors. The market appears to be in a transition phase, moving away from the risk-off sentiment that characterized the previous weeks.\n\nAs the market stabilizes, analysts are closely monitoring the impact of upcoming regulatory decisions and technological advancements on investor sentiment. The overall recovery could be further supported by positive news from major players in the industry, which may help to bolster confidence in the market.",
+        "highlights": [
+          "The total cryptocurrency market cap rose to $2.254 trillion this week.",
+          "The Fear & Greed Index improved to 24, indicating a shift in sentiment.",
+          "Bitcoin dominance decreased slightly to 55.69%, while Ethereum's dominance increased."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum show signs of recovery",
+        "body": "Bitcoin's price stabilized above $63,000 after a brief dip earlier in the week, closing at $62,644 with a 4.82% increase over the past seven days. This stability is crucial as it provides a psychological support level for investors. Meanwhile, Ethereum outperformed Bitcoin with an impressive 11.91% increase, closing at $1,758. Vitalik Buterin's announcement regarding Ethereum's upcoming major rebuild has generated excitement among investors, contributing to the price surge.\n\nBoth assets are currently navigating through a transition phase, with Bitcoin's price action suggesting a potential consolidation pattern. Ethereum's recent performance indicates strong buying interest, particularly as it approaches key technical levels. The market's focus on Ethereum's developments may also attract new investors looking for growth opportunities.\n\nOverall, the price action of both Bitcoin and Ethereum reflects a cautious optimism among market participants, as they respond to both technical signals and fundamental developments. The coming weeks will be critical in determining whether this recovery can be sustained, especially in light of ongoing regulatory scrutiny and market volatility.",
+        "highlights": [
+          "Bitcoin stabilized above $63,000, closing at $62,644.",
+          "Ethereum surged to $1,758, driven by positive sentiment around its upcoming rebuild.",
+          "Both assets are showing signs of a potential consolidation pattern."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Market outlook remains cautiously optimistic",
+        "body": "Looking ahead, the cryptocurrency market is in a transition phase, characterized by a recovery in major assets like Bitcoin and Ethereum. However, several risks remain, including regulatory uncertainties and potential market volatility. Analysts are closely monitoring the impact of upcoming regulatory decisions, particularly those affecting Bitcoin ETFs, which have faced significant outflows in recent weeks.\n\nThe market's ability to maintain its upward momentum will depend on investor sentiment and the broader economic environment. If Bitcoin can hold above $63,000 and Ethereum continues to attract interest, there may be further upside potential. Conversely, any negative news regarding regulation or market liquidity could quickly reverse gains.\n\nInvestors should remain vigilant, as the market dynamics can shift rapidly. The focus will likely remain on technological advancements and regulatory developments, which will play a crucial role in shaping the market's trajectory in the coming weeks.",
+        "highlights": [
+          "The market is in a transition phase with a cautious recovery.",
+          "Regulatory uncertainties pose ongoing risks to market stability.",
+          "Investor sentiment will be critical in determining future price movements."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "The cryptocurrency market is experiencing a transition towards recovery.",
+        "Ethereum's upcoming rebuild could attract significant investor interest.",
+        "Bitcoin's ability to hold above $63,000 is crucial for market confidence.",
+        "Regulatory developments will play a key role in shaping market dynamics."
+      ],
+      "riskChecklist": [
+        "Regulatory uncertainties may impact market stability.",
+        "Potential volatility from ETF outflows could affect prices.",
+        "Technological challenges could hinder asset performance.",
+        "Market sentiment remains fragile and can shift quickly.",
+        "Global economic conditions may influence investor behavior."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$63,000",
+          "context": "Holding above this level is critical for maintaining bullish sentiment."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,800",
+          "context": "A breakthrough above this level could signal further upside potential."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "The total market cap increased from $2.16 trillion to $2.254 trillion.",
+        "Bitcoin's price rose from $60,130 to $62,644.",
+        "Ethereum's price increased from $1,579 to $1,758."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin steadies above $63,000 as Ethereum leads the charge",
+      "body": "This week saw a notable recovery in the cryptocurrency market, with Bitcoin holding steady above $63,000 and closing at $62,644, up 4.82% over the past week. Ethereum outperformed with a significant 11.91% rise, closing at $1,758, driven by excitement over its upcoming major rebuild. The total market capitalization increased to $2.254 trillion, reflecting a shift in sentiment as investors respond positively to recent developments. Despite lingering regulatory concerns, the overall mood appears cautiously optimistic, setting the stage for potential further gains in the coming weeks."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 39908621280,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 5075227887,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 4985446157,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4770261054,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4375313560,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 3605421661,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1488924672,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1407641764,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1239258493,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 916678642,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 750673989,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 479673157,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 472222489,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 434663230,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "OP Mainnet",
+          "tvlUsd": 293713068,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}
