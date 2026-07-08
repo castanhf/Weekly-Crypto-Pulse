@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-08T08:37:30.882Z",
+  "publishedAt": "2026-07-08",
+  "slug": "2026-07-08-bitcoin-slides-below-62k-as-us-iran-tensions-push-oil-higher-and-crypt",
+  "headline": "Bitcoin slides below $62K as U.S.-Iran tensions push oil higher and crypto lower",
+  "summary": "Geopolitical pressure from escalating U.S.-Iran tensions drove oil prices up and risk assets down, pulling Bitcoin to $61,992 — a 1.66% drop — while Solana and XRP fell harder, losing 5.1% and 4% respectively. The Fear & Greed index sits at 20, deep in Extreme Fear territory. One bright spot: Zcash jumped nearly 4% on the back of a significant cryptographic security milestone, and a separate story out of Japan shows the yen's collapse is pushing companies toward Bitcoin and XRP as alternatives.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 6.71,
+        "catalyst": "MemeCore bucked the broader selloff with a 6.71% gain; no specific catalyst was identified, likely technical buying in a low-liquidity asset.",
+        "priceUsd": 1.44,
+        "priceChange24hUsd": 0.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "changePct24h": -7.08,
+        "catalyst": "Cardano fell 7.08% under broad market pressure amplified by geopolitical tensions between the U.S. and Iran, which weighed on crypto sentiment across the board.",
+        "priceUsd": 0.166494,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61992,
+        "changePct24h": -1.66,
+        "marketCapUsd": 1243676214656,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1732.36,
+        "changePct24h": -2.06,
+        "marketCapUsd": 209092984680,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 184206401946,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 562.06,
+        "changePct24h": -2.6,
+        "marketCapUsd": 75757406296,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 73240684231,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.08,
+        "changePct24h": -4.02,
+        "marketCapUsd": 67436713643,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77.14,
+        "changePct24h": -5.11,
+        "marketCapUsd": 44880309865,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3281,
+        "changePct24h": -0.3,
+        "marketCapUsd": 31120285557,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.025,
+        "changePct24h": -0.91,
+        "marketCapUsd": 20087481494,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.85,
+        "changePct24h": -3.97,
+        "marketCapUsd": 15087330577,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0714,
+        "changePct24h": -4.55,
+        "marketCapUsd": 11060375592,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10984026837,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0148,
+        "changePct24h": -1.78,
+        "marketCapUsd": 9772055671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.42,
+        "changePct24h": 0.07,
+        "marketCapUsd": 8666211917,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 469.45,
+        "changePct24h": 3.99,
+        "marketCapUsd": 7881871818,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two geopolitical and macro forces converged to push crypto lower today. First, escalating tensions between the U.S. and Iran sent oil prices higher — a classic risk-off signal that historically pulls speculative assets like crypto down alongside equities. Bitcoin, already under pressure, slipped 1.66% to $61,992. Altcoins felt it harder: Solana dropped 5.11%, XRP fell 4.02%, DOGE lost 4.55%, and Cardano led the losers at -7.08%. The Fear & Greed index at 20 — deep in Extreme Fear — reflects how broadly the anxiety has spread.\n\nThe second thread is more structural: Japan's yen has been weakening sharply, and Japanese companies are reportedly moving capital into Bitcoin and XRP as a hedge against further currency depreciation. That dynamic adds a longer-term demand story underneath the short-term geopolitical noise, though it wasn't enough to offset today's selling pressure.\n\nZcash was the notable exception in the top 15, gaining 3.99% after news that the network is close to deploying a mathematical proof designed to detect hidden counterfeit bugs — a meaningful security upgrade for a privacy-focused chain. The broader selloff made the gain stand out further. LEO Token also held flat (+0.07%), consistent with its pattern of low correlation to daily market swings.",
+  "worthKnowing": [
+    "Zcash rose nearly 4% after developers announced the network is approaching deployment of a cryptographic proof that can detect hidden vulnerabilities allowing counterfeit token creation — a significant security milestone for the privacy coin.",
+    "The U.S. SEC is expected to propose new crypto rules as soon as this month that would ease fundraising restrictions for crypto startups, a potential shift in the agency's posture toward the industry.",
+    "Kraken won a $22 million arbitration award against auditing firm Mazars, which dropped Kraken as a client during the U.S. government's Operation Choke Point 2.0 pressure campaign against crypto businesses."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2222144196357,
+    "btcDominancePct": 55.9325,
+    "ethDominancePct": 9.3975,
+    "fearGreedIndex": 20
+  },
+  "tags": [
+    "us-iran-tensions",
+    "yen-depreciation",
+    "zcash-security-upgrade",
+    "sec-crypto-rulemaking",
+    "kraken-mazars-arbitration",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}
