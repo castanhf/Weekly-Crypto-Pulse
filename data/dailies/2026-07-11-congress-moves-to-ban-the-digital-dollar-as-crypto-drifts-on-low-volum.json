@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-11T08:04:32.663Z",
+  "publishedAt": "2026-07-11",
+  "slug": "2026-07-11-congress-moves-to-ban-the-digital-dollar-as-crypto-drifts-on-low-volum",
+  "headline": "Congress moves to ban the digital dollar as crypto drifts on low volume",
+  "summary": "A provision in a housing bill set to ban the U.S. government from issuing a central bank digital currency (CBDC) passed tonight, removing a long-debated policy threat from the table. Markets barely moved on the news — Bitcoin edged up 0.23% to $64,113 and Ethereum gained 1.50% to $1,798.86 — but the Fear & Greed index sits at 26, deep in fear territory, suggesting the broader mood remains cautious. The real action was in the headlines: Circle won approval to open a national trust bank, and Japan unveiled a domestic investment push that analysts say could channel fresh capital into Bitcoin and gold.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 7.95,
+        "catalyst": "No clear catalyst identified — the move appears technical on thin volume.",
+        "priceUsd": 1.31,
+        "priceChange24hUsd": 0.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -2.6,
+        "catalyst": "Hyperliquid dropped 2.60%, likely pressured by negative sentiment surrounding the impending U.S. government digital dollar ban, which created broader uncertainty around government-adjacent financial infrastructure.",
+        "priceUsd": 66.46,
+        "priceChange24hUsd": -1.73
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64113,
+        "changePct24h": 0.23,
+        "marketCapUsd": 1285726502583,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1798.86,
+        "changePct24h": 1.5,
+        "marketCapUsd": 217094017970,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184170774615,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 576.51,
+        "changePct24h": 0.49,
+        "marketCapUsd": 77700418343,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73303997096,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.11,
+        "changePct24h": 0.19,
+        "marketCapUsd": 69147992952,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77.94,
+        "changePct24h": -1.08,
+        "marketCapUsd": 45371222114,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3294,
+        "changePct24h": -0.26,
+        "marketCapUsd": 31250295430,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 3.05,
+        "marketCapUsd": 20475221162,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 66.46,
+        "changePct24h": -2.6,
+        "marketCapUsd": 14783041156,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0742,
+        "changePct24h": 0.67,
+        "marketCapUsd": 11506349050,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10957582779,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": -0.04,
+        "marketCapUsd": 9519784902,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.5,
+        "changePct24h": -1.29,
+        "marketCapUsd": 8744118003,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 498.81,
+        "changePct24h": -0.24,
+        "marketCapUsd": 8376853209,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main story was regulatory, not price-driven. A provision embedded in a U.S. housing bill is set to ban the federal government from issuing a central bank digital currency — a so-called digital dollar — effectively closing off a policy path that the crypto industry had long viewed as a competitive threat. The ban passed tonight. Markets absorbed the news without a strong directional move: Bitcoin added 0.23% to $64,113 and Ethereum gained 1.50% to $1,798.86, but the Fear & Greed index at 26 signals that the broader market mood remains firmly in fear territory, and volume was light across the board.\n\nHyperliquid was the notable decliner among tracked assets, falling 2.60%. The CBDC ban news appears to have stirred uncertainty around government-adjacent financial infrastructure, and Hyperliquid — a decentralized perpetuals exchange — caught some of that sentiment spillover. Solana slid 1.08% with no specific catalyst, consistent with the cautious tone across mid-cap assets.\n\nEthereum's relative outperformance — up 1.50% against Bitcoin's near-flat session — is worth noting. ETH dominance sits at 9.50%, still compressed, but the day's move suggests some rotation toward Ethereum on light volume. Figure Heloc gained 3.05%, though no specific news drove the move.",
+  "worthKnowing": [
+    "Circle received approval from U.S. regulators to open a national trust bank, a significant step that would let it hold customer deposits and operate more like a traditional financial institution.",
+    "Japan's government unveiled a domestic investment initiative that economists say is likely to increase demand for assets including Bitcoin and gold, as households are encouraged to deploy savings locally.",
+    "Hyundai became the first major South Korean company to introduce internal stablecoin transfers, using blockchain rails for payments between subsidiaries."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2283555022394,
+    "btcDominancePct": 56.3068,
+    "ethDominancePct": 9.5027,
+    "fearGreedIndex": 26
+  },
+  "tags": [
+    "cbdc-ban",
+    "circle-trust-bank",
+    "hyperliquid",
+    "japan-bitcoin-demand",
+    "stablecoin-regulation",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}
