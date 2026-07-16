@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-16T08:22:23.532Z",
+  "publishedAt": "2026-07-16",
+  "slug": "2026-07-16-ethereum-outpaces-bitcoin-as-blackrocks-etf-drives-fresh-inflows-while",
+  "headline": "Ethereum outpaces Bitcoin as BlackRock's ETF drives fresh inflows, while the Senate blocks clemency for SBF",
+  "summary": "Ethereum rose 0.34% while Bitcoin slipped 0.98% to around $63,900 — a small but meaningful divergence explained by a surge of ETF money flowing into Ether funds, almost entirely from BlackRock. The Senate's unanimous vote against clemency for FTX founder Sam Bankman-Fried landed as a reminder that crypto's legal reckoning is still playing out. Fear and Greed sits at 25, deep in fear territory, and most of the top 15 assets closed in the red.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ONDO",
+        "name": "Ondo",
+        "changePct24h": 15.72,
+        "catalyst": "Ondo surged 15.72% as ETF inflow momentum across the broader market appeared to lift real-world asset tokens, with traders rotating into Ondo on renewed interest in tokenized finance.",
+        "priceUsd": 0.367392,
+        "priceChange24hUsd": 0.06
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -6.51,
+        "catalyst": "Canton fell 6.51% amid broader market weakness and negative sentiment tied to regulatory uncertainty in the institutional blockchain space.",
+        "priceUsd": 0.133164,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63905,
+        "changePct24h": -0.98,
+        "marketCapUsd": 1282088832517,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1878.12,
+        "changePct24h": 0.34,
+        "marketCapUsd": 226974812643,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184197407287,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 574.84,
+        "changePct24h": -0.14,
+        "marketCapUsd": 76564136074,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 73105829623,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.1,
+        "changePct24h": -0.36,
+        "marketCapUsd": 68759993758,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.75,
+        "changePct24h": -2.11,
+        "marketCapUsd": 44132695968,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3234,
+        "changePct24h": -1.24,
+        "marketCapUsd": 30684954360,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.037,
+        "changePct24h": 0.05,
+        "marketCapUsd": 20719387051,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 65.66,
+        "changePct24h": -1.96,
+        "marketCapUsd": 14609508500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0727,
+        "changePct24h": -1.85,
+        "marketCapUsd": 11275672520,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 9917139704,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": -2,
+        "marketCapUsd": 9523769242,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 558.86,
+        "changePct24h": 1.12,
+        "marketCapUsd": 9424574442,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.8,
+        "changePct24h": -0.18,
+        "marketCapUsd": 9015179990,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The headline story today is the divergence between Ethereum and Bitcoin — and the mechanism behind it is ETF flows. Ether ETFs attracted significant fresh capital, with BlackRock's fund accounting for nearly all of it. That institutional buying pushed ETH up 0.34% even as the broader market drifted lower. Bitcoin, by contrast, slipped 0.98% to around $63,900 as some investors sold into the price rise — a pattern consistent with the medium-relevance report that two groups of long-term BTC holders were distributing into strength as U.S. inflation data nudged prices toward $65,000.\n\nAdding to the day's texture: a Bitcoin wallet dormant since the 2017 market peak moved $383 million. Wallets that have sat untouched for years moving large sums can signal that long-term holders are reassessing their positions, though the destination of those funds is not yet clear.\n\nSolana was the notable decliner in the top 15, falling 2.11% to $75.75, with no specific catalyst — the move looks like broader risk-off pressure reflected in a Fear & Greed reading of 25, which sits firmly in fear territory. Most of the top 15 closed in the red, with only Ethereum, Figure Heloc, and Zcash posting gains. The overall market cap stands at $2.28 trillion, with Bitcoin holding 56.1% dominance.",
+  "worthKnowing": [
+    "The U.S. Senate voted unanimously against clemency for FTX founder Sam Bankman-Fried, signaling that lawmakers across party lines view leniency as off the table.",
+    "A Bitcoin wallet that last moved during the 2017 market peak transferred $383 million — one of the larger dormant-wallet movements in recent memory.",
+    "ZachXBT, a well-known on-chain investigator, publicly criticized hardware wallets as unreliable; the comments sparked debate in security-focused crypto communities."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2283240778836,
+    "btcDominancePct": 56.1403,
+    "ethDominancePct": 9.9604,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "ethereum-etf",
+    "blackrock",
+    "sam-bankman-fried",
+    "btc-dormant-wallet",
+    "ondo",
+    "etf-flows"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}
