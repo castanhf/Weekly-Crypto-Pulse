@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-20T09:24:47.755Z",
+  "publishedAt": "2026-07-20",
+  "slug": "2026-07-20-bitcoin-slips-under-64000-as-oil-rebound-and-ai-selloff-weigh-on-risk-",
+  "headline": "Bitcoin slips under $64,000 as oil rebound and AI selloff weigh on risk assets",
+  "summary": "Bitcoin dipped below $64,000 on Sunday as a bounce in oil prices and a broad selloff in AI-related stocks pulled capital away from risk assets. The move was modest — BTC fell less than 1% — but it landed against a backdrop of Fear & Greed at 29, deep in \"Fear\" territory, and Bitcoin ETF inflows that remain a fraction of recent outflows. The week ahead brings U.S. regulatory developments and an ECB rate decision that could set the tone for crypto markets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 1.48,
+        "catalyst": "MemeCore posted the day's top gain at +1.48%, bucking the broader market drift with no specific catalyst identified — likely technical buying on light volume.",
+        "priceUsd": 1.26,
+        "priceChange24hUsd": 0.02
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -5.3,
+        "catalyst": "Zcash fell 5.30%, the sharpest drop in the top 15, as negative sentiment tied to Bitcoin's slide hit lower-liquidity assets harder than large caps.",
+        "priceUsd": 529.13,
+        "priceChange24hUsd": -28.03
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64097,
+        "changePct24h": -0.66,
+        "marketCapUsd": 1285709782257,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1861.21,
+        "changePct24h": -0.29,
+        "marketCapUsd": 224613730253,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": -0.03,
+        "marketCapUsd": 184039536349,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 565.78,
+        "changePct24h": -0.26,
+        "marketCapUsd": 75340582364,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 73175956062,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.088,
+        "changePct24h": -0.62,
+        "marketCapUsd": 67973299597,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.26,
+        "changePct24h": 0.42,
+        "marketCapUsd": 44430826171,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3256,
+        "changePct24h": -0.13,
+        "marketCapUsd": 30890440450,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.042,
+        "changePct24h": 0,
+        "marketCapUsd": 20948213929,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.63,
+        "changePct24h": -0.79,
+        "marketCapUsd": 13484598226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0719,
+        "changePct24h": -0.86,
+        "marketCapUsd": 11152585274,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9985217709,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0142,
+        "changePct24h": -2.53,
+        "marketCapUsd": 9400510183,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.68,
+        "changePct24h": -1.33,
+        "marketCapUsd": 8887182109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 529.13,
+        "changePct24h": -5.3,
+        "marketCapUsd": 8884640858,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Sunday's session was quiet but not directionless. Bitcoin slipped 0.66% to $64,097, pulled lower by two forces outside the crypto market: a rebound in oil prices and a continued selloff in AI-related stocks. Both shifts drew capital toward traditional risk hedges and away from speculative assets, crypto included. The move was small in percentage terms, but it reinforced a market already sitting at a Fear & Greed reading of 29 — well into \"Fear\" territory — where even modest external pressure can tip sentiment further negative.\n\nEthereum held up marginally better, falling just 0.29% to $1,861. Solana was the only large-cap asset to close in the green, edging up 0.42% to $76.26 with no specific catalyst — likely a reflection of its lower correlation to macro noise on low-volume weekend sessions.\n\nZcash was the day's notable outlier, dropping 5.30% to $529.13. Lower-liquidity assets tend to absorb broader market negativity more sharply than large caps, and with no specific news driving the move, this looks like sentiment spillover rather than a Zcash-specific event.\n\nBitcoin ETF data added a layer of context: new inflows returned this week, but the amounts are small relative to the outflows that preceded them. That gap between fresh buying and recent redemptions helps explain why BTC has struggled to reclaim higher ground — the institutional bid is present but not yet strong enough to reverse the trend. The week ahead carries real catalysts: U.S. regulatory developments and an ECB rate decision, both of which could shift the macro backdrop that has been quietly weighing on crypto.",
+  "worthKnowing": [
+    "U.S. crypto regulatory developments and an ECB rate decision are both due this week, making it a potentially significant stretch for market direction.",
+    "Bitcoin ETFs recorded new inflows recently, but the amounts remain small relative to the large outflows seen in prior weeks.",
+    "Amazon Japan supplier AZ-Com Maruwa announced it will adopt the yen-pegged stablecoin JPYC for payments — a sign of stablecoin adoption expanding into mainstream commerce in Asia."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2278495773171,
+    "btcDominancePct": 56.4067,
+    "ethDominancePct": 9.8564,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "bitcoin-etf-flows",
+    "ecb-rate-decision",
+    "zcash",
+    "jpyc-stablecoin",
+    "fear-and-greed",
+    "macro-pressure"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
