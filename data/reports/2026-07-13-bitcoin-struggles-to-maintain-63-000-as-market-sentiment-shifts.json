@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-07-13T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Bitcoin struggles to maintain $63,000 as market sentiment shifts",
+      "slug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts",
+      "publishedAt": "2026-07-13",
+      "weekLabel": "Week of Jul 13, 2026",
+      "summary": "The cryptocurrency market cap reached $2.258 trillion this week, with Bitcoin's dominance at 56.11%. Ethereum saw a modest increase of 1.23%, while Bitcoin experienced a slight rise of 0.18%, reflecting a mixed sentiment amid geopolitical tensions and regulatory scrutiny.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "bitcoin",
+        "ethereum",
+        "market analysis"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2258000000000,
+      "btcDominancePct": 56.11,
+      "ethDominancePct": 9.57,
+      "fearGreedIndex": 28
+    },
+    "movers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct7d": 14.42,
+        "catalyst": "Zcash surged 14.42% this week, driven by increased interest in privacy-focused assets amidst broader market uncertainty."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Geopolitical tensions weigh on market sentiment",
+        "body": "This week, the cryptocurrency market faced pressure from ongoing geopolitical tensions, particularly related to military actions in the Middle East. The Fear & Greed Index remains in the 'fear' territory at 28, indicating cautious sentiment among investors. Despite the overall market cap increase, the dominance of Bitcoin has risen slightly, suggesting that investors may be seeking refuge in more established assets. Analysts have noted a significant decline in stablecoin market capitalization, which has decreased by $10 billion since May, raising concerns about liquidity in the market. However, some experts argue that this should not be a cause for panic, as the market adjusts to new regulatory landscapes and investor behaviors.",
+        "highlights": [
+          "Geopolitical tensions are impacting market sentiment negatively.",
+          "The Fear & Greed Index indicates a cautious outlook among investors.",
+          "Stablecoin market cap has shrunk significantly, reflecting liquidity concerns.",
+          "Bitcoin's dominance has increased slightly amidst market volatility."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Bitcoin and Ethereum show resilience amid market fluctuations",
+        "body": "Bitcoin has maintained a price around $63,149, reflecting a modest increase of 0.18% over the week. This stability comes despite a leverage flush in Asian markets that briefly pushed Bitcoin below the $63,000 mark. Ethereum, on the other hand, has seen a 1.23% increase, trading at $1,790. Both assets have shown resilience, particularly as Bitcoin approaches a power law support line that Fidelity has tracked since 2015. Additionally, the recent inflow into Bitcoin and Ethereum ETFs, totaling $282 million, marks a potential shift in investor sentiment, indicating renewed interest in these leading cryptocurrencies after an extended period of outflows.",
+        "highlights": [
+          "Bitcoin has shown resilience, maintaining a price around $63,149.",
+          "Ethereum has experienced a slight increase, trading at $1,790.",
+          "Recent ETF inflows suggest renewed interest in Bitcoin and Ethereum.",
+          "Bitcoin is nearing a significant power law support line."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Market outlook remains cautious with potential for volatility",
+        "body": "Looking ahead, the cryptocurrency market is likely to remain in a transition phase as investors navigate geopolitical uncertainties and regulatory developments. The current regime suggests a cautious approach, with risks stemming from potential further military escalations and their impact on market liquidity. Traders should monitor key support levels for Bitcoin and Ethereum, as breaks below these could trigger increased selling pressure. Conversely, if the market stabilizes and sentiment improves, there could be opportunities for recovery in the coming weeks. Overall, the market appears poised for continued fluctuations as it adapts to the evolving macroeconomic landscape.",
+        "highlights": [
+          "The market is expected to remain in a cautious transition phase.",
+          "Geopolitical risks could lead to increased volatility.",
+          "Key support levels for Bitcoin and Ethereum will be crucial to watch.",
+          "Potential for recovery exists if market sentiment improves."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Market sentiment remains cautious amid geopolitical tensions.",
+        "Stablecoin liquidity issues may impact overall market dynamics.",
+        "Bitcoin's support levels are critical for future price stability.",
+        "Increased ETF inflows could signal a shift in investor confidence."
+      ],
+      "riskChecklist": [
+        "Geopolitical tensions may escalate, impacting market stability.",
+        "Regulatory developments could create uncertainty for investors.",
+        "Liquidity concerns in stablecoins may affect trading volumes.",
+        "Market sentiment remains bearish, reflected in the Fear & Greed Index.",
+        "Potential for significant price fluctuations as traders react to news."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$62,000",
+          "context": "A critical support level that, if breached, could lead to further downside."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,750",
+          "context": "A key level to watch; a drop below could signal weakness."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Bitcoin's price has stabilized around $63,000 after previous volatility.",
+        "Ethereum has shown a modest increase compared to last week's performance.",
+        "The Fear & Greed Index has risen slightly, indicating a shift in sentiment.",
+        "Stablecoin market cap has decreased further, raising liquidity concerns."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Bitcoin holds steady around $63,000 despite market pressures.",
+      "body": "This week, Bitcoin has managed to stay close to the $63,000 mark, trading at $63,149, a slight increase of 0.18%. Ethereum also saw a modest rise of 1.23%, reaching $1,790. The overall cryptocurrency market cap increased to $2.258 trillion, with Bitcoin's dominance at 56.11%. However, the market remains cautious due to ongoing geopolitical tensions and a significant drop in stablecoin market capitalization. Investors are closely watching key support levels for both Bitcoin and Ethereum, as any breach could lead to increased selling pressure. The market's sentiment is reflected in the Fear & Greed Index, which stands at 28, indicating a prevailing sense of fear among traders."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 39902572117,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 4912629762,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4860123100,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4753571252,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4392114263,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 3449757443,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1464348219,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1393534936,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1241419485,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 915346070,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 711198254,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 529021691,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 459775076,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 434666932,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "OP Mainnet",
+          "tvlUsd": 301403297,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}

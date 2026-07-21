@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-13T09:38:05.490Z",
+  "publishedAt": "2026-07-13",
+  "slug": "2026-07-13-bitcoin-etfs-snap-an-8-week-outflow-streak-but-a-leverage-flush-drags-",
+  "headline": "Bitcoin ETFs snap an 8-week outflow streak, but a leverage flush drags BTC below $63,000",
+  "summary": "Bitcoin ETFs pulled in $197 million on Sunday, ending two months of consecutive outflows — a meaningful shift in institutional appetite. But an Asian-session leverage flush pushed Bitcoin below $63,000 on Monday, leaving the market in an uneasy position: fresh ETF demand on one hand, forced selling on the other. The Fear & Greed index sits at 28 (Fear), and the week ahead brings U.S. inflation data that could tip sentiment either way.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": 6.81,
+        "catalyst": "DeXe gained 6.81% — the strongest move in the top 100 today. The researcher attributes the rise to positive market sentiment following Bitcoin ETF inflows of $197 million, indicating renewed investor interest, though no specific catalyst unique to DeXe has been confirmed.",
+        "priceUsd": 45.54,
+        "priceChange24hUsd": 3.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -2.8,
+        "catalyst": "Hyperliquid fell 2.80%, the steepest drop among tracked assets, coinciding with Bitcoin slipping below $63,000 during a broader Asian-session leverage flush.",
+        "priceUsd": 65.16,
+        "priceChange24hUsd": -1.82
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63046,
+        "changePct24h": -1.31,
+        "marketCapUsd": 1264472822501,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1784.86,
+        "changePct24h": -0.85,
+        "marketCapUsd": 215404174628,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.03,
+        "marketCapUsd": 184128276065,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 569.07,
+        "changePct24h": -0.77,
+        "marketCapUsd": 76709163673,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 73283782829,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.078,
+        "changePct24h": -1.18,
+        "marketCapUsd": 67366180477,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.57,
+        "changePct24h": 0.03,
+        "marketCapUsd": 44584089705,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3298,
+        "changePct24h": -0.07,
+        "marketCapUsd": 31290972500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.041,
+        "changePct24h": 0,
+        "marketCapUsd": 20671716648,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 65.16,
+        "changePct24h": -2.8,
+        "marketCapUsd": 14494738939,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0724,
+        "changePct24h": -0.74,
+        "marketCapUsd": 11221875647,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10920648818,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": -1.66,
+        "marketCapUsd": 9529731821,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.51,
+        "changePct24h": -0.24,
+        "marketCapUsd": 8753128713,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 515.57,
+        "changePct24h": -1.56,
+        "marketCapUsd": 8656565234,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces pulled in opposite directions today. On the positive side, Bitcoin ETFs recorded $197 million in net inflows — ending eight consecutive weeks of outflows. That's a notable reversal: sustained ETF outflows had been a persistent drag on BTC price since late spring, and a single session of meaningful inflows suggests at least some institutional buyers are stepping back in at current levels.\n\nOn the negative side, an Asian-session leverage flush pushed Bitcoin below $63,000. A leverage flush happens when traders who borrowed money to buy Bitcoin get automatically liquidated as prices dip — their positions are force-sold, which pushes prices lower still, triggering more liquidations. The result is a sharper, faster drop than the underlying selling pressure alone would produce. Bitcoin ended the session down 1.31% at $63,046, with most of the top 15 assets following it lower. Ethereum fell 0.85%, XRP dropped 1.18%, and Hyperliquid led losses at -2.80%.\n\nThe macro backdrop adds another layer of uncertainty. U.S. inflation data is due this week, alongside second-quarter corporate earnings reports. A lower-than-expected inflation reading tends to raise hopes for Federal Reserve rate cuts, which has historically been positive for risk assets including crypto. The current Fear & Greed index reading of 28 reflects the market's cautious posture heading into that data.",
+  "worthKnowing": [
+    "Bitcoin ETFs drew $197 million in net inflows on Sunday, snapping an eight-week streak of outflows — the longest such run since the ETFs launched in January 2024.",
+    "The Bank of Thailand announced a crackdown targeting USDT and cash flows linked to gray-market money movement, a development that could affect stablecoin trading volumes in Southeast Asia.",
+    "U.S. inflation data and second-quarter earnings reports are due this week, two macro events the crypto market has historically reacted to."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2253846294257,
+    "btcDominancePct": 56.0993,
+    "ethDominancePct": 9.5573,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "bitcoin-etf-inflows",
+    "leverage-flush",
+    "fear-greed",
+    "hyperliquid",
+    "dexe",
+    "bank-of-thailand",
+    "cpi-week"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

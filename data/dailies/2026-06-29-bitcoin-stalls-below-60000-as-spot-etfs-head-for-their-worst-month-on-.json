@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-29T11:10:53.180Z",
+  "publishedAt": "2026-06-29",
+  "slug": "2026-06-29-bitcoin-stalls-below-60000-as-spot-etfs-head-for-their-worst-month-on-",
+  "headline": "Bitcoin stalls below $60,000 as spot ETFs head for their worst month on record",
+  "summary": "Bitcoin has spent the session hovering just under $60,000 with no clear catalyst to push it either way — a technical no-man's-land where the next meaningful support levels are well below current prices. The bigger story is the cumulative damage: spot Bitcoin ETFs are on track to shed roughly $4 billion this month, the worst monthly outflow since they launched. Europe adds another layer of pressure, with unlicensed crypto firms facing a hard MiCA regulatory deadline that could force significant market exits.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": 3.92,
+        "catalyst": "Avalanche gained 3.92% as traders rotated into select altcoins ahead of what the market is treating as a pivotal week for crypto, with Avalanche attracting relative interest despite the broadly cautious backdrop.",
+        "priceUsd": 6.58,
+        "priceChange24hUsd": 0.26
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -9.17,
+        "catalyst": "LAB fell 9.17% as bearish sentiment around Bitcoin's inability to hold above $60,000 weighed on smaller-cap assets with thinner liquidity.",
+        "priceUsd": 15.7,
+        "priceChange24hUsd": -1.44
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 59938,
+        "changePct24h": -0.18,
+        "marketCapUsd": 1201739129662,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1574.25,
+        "changePct24h": -0.01,
+        "marketCapUsd": 189980009017,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": -0.01,
+        "marketCapUsd": 186063903252,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 552.45,
+        "changePct24h": -0.35,
+        "marketCapUsd": 74461000852,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 73733915962,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.049,
+        "changePct24h": 0.09,
+        "marketCapUsd": 65303631555,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 72.83,
+        "changePct24h": 1.85,
+        "marketCapUsd": 42299099327,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3232,
+        "changePct24h": 0.14,
+        "marketCapUsd": 30654967677,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.044,
+        "changePct24h": 0,
+        "marketCapUsd": 20159783790,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.27,
+        "changePct24h": 0.63,
+        "marketCapUsd": 14077939349,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0727,
+        "changePct24h": -0.99,
+        "marketCapUsd": 11260649718,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 10345033001,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0155,
+        "changePct24h": 0.05,
+        "marketCapUsd": 10278906322,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.4,
+        "changePct24h": -0.18,
+        "marketCapUsd": 8646183933,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 383.74,
+        "changePct24h": -0.29,
+        "marketCapUsd": 6443397383,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's near-flat session masks a deteriorating picture. The price has been unable to reclaim $60,000 with any conviction, and technical analysts note that the next well-defined support levels sit considerably lower — meaning there is little in the chart structure to slow a further decline if selling pressure picks up. The Fear & Greed index at 12 out of 100 reflects extreme fear, a reading that typically accompanies sustained selling rather than a single-day event.\n\nThe more concrete pressure point is the ETF data. Spot Bitcoin ETFs are tracking toward roughly $4 billion in net outflows for June — the worst monthly figure since these funds launched in early 2024. That scale of institutional redemption is not noise; it represents a meaningful withdrawal of the demand that drove Bitcoin's rally earlier this year.\n\nIn Europe, the MiCA (Markets in Crypto-Assets) regulatory framework's deadline for unlicensed firms is arriving, and exchanges or token issuers operating without a license face being forced out of the EU market. The uncertainty around which firms will comply and which will exit is adding to the cautious tone.\n\nSolana was the one notable mover in the top 15, rising 1.85% to $72.83 — a relative outperformance on a day when most large-cap assets barely moved. Avalanche's 3.92% gain, the day's top performer, came without a specific on-chain or protocol catalyst; traders rotated into it as one of the few assets showing upward momentum in an otherwise flat session.",
+  "worthKnowing": [
+    "Europe's MiCA regulatory deadline is forcing unlicensed crypto firms to either obtain a license or exit EU markets — firms that fail to comply face being effectively wiped out of the region.",
+    "Spot Bitcoin ETFs are on pace for approximately $4 billion in net outflows in June, which would make it the worst month on record for these funds since their January 2024 launch.",
+    "BitMEX lost its CEO, CFO, and head of growth in a single leadership sweep, adding operational uncertainty to one of the older centralized derivatives exchanges."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2154605558815,
+    "btcDominancePct": 55.7812,
+    "ethDominancePct": 8.8166,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "mica-deadline",
+    "bitcoin-support-levels",
+    "avalanche",
+    "bitmex-leadership",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}

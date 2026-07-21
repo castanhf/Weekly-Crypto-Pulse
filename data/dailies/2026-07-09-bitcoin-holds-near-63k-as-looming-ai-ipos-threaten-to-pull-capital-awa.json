@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-09T09:51:01.937Z",
+  "publishedAt": "2026-07-09",
+  "slug": "2026-07-09-bitcoin-holds-near-63k-as-looming-ai-ipos-threaten-to-pull-capital-awa",
+  "headline": "Bitcoin holds near $63K as looming AI IPOs threaten to pull capital away from crypto",
+  "summary": "Two high-profile AI IPOs on the horizon are raising questions about whether institutional money will rotate out of crypto and into the new listings — a concern that landed as the day's main story even as Bitcoin edged up 1.19% to $62,796. The broader market moved in the same direction, with most top assets posting small gains. Fear & Greed sits at 22, deep in fear territory, suggesting the optimism behind today's green numbers is fragile.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": 5.83,
+        "catalyst": "No clear catalyst identified in today's data — the move appears technical, with no Avalanche-specific news item driving the surge.",
+        "priceUsd": 6.74,
+        "priceChange24hUsd": 0.39
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -15.62,
+        "catalyst": "No clear catalyst identified in today's data — no MemeCore-specific news item explains the drop; the move appears to reflect thin liquidity in a small-cap asset.",
+        "priceUsd": 1.18,
+        "priceChange24hUsd": -0.18
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62796,
+        "changePct24h": 1.19,
+        "marketCapUsd": 1259014474154,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1749.81,
+        "changePct24h": 0.72,
+        "marketCapUsd": 211133131190,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184132627316,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 571.66,
+        "changePct24h": 1.75,
+        "marketCapUsd": 77049730243,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73152920737,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.094,
+        "changePct24h": 1.36,
+        "marketCapUsd": 68365206615,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 78.04,
+        "changePct24h": 1.05,
+        "marketCapUsd": 45404209521,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3307,
+        "changePct24h": 0.98,
+        "marketCapUsd": 31368837119,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 0.85,
+        "marketCapUsd": 20334764710,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.99,
+        "changePct24h": -0.16,
+        "marketCapUsd": 15123953680,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0728,
+        "changePct24h": 2.02,
+        "marketCapUsd": 11284773852,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 10893887337,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0145,
+        "changePct24h": -1.91,
+        "marketCapUsd": 9609438973,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.52,
+        "changePct24h": 0.87,
+        "marketCapUsd": 8757755226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 466.82,
+        "changePct24h": 0.73,
+        "marketCapUsd": 7838412967,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main story is not the price action — it's what might pull capital away from crypto next. Two major AI companies are reportedly preparing IPOs that analysts expect to attract significant institutional money. CoinDesk's coverage framed this directly: if those listings land, crypto could find itself competing for the same pool of risk-on capital that has supported it over the past year.\n\nBitcoin rose 1.19% to $62,796 despite a separate bearish signal: exchange reserves for BTC have been falling, which historically suggested holders were moving coins into cold storage. But analysis published today argues that dynamic no longer carries the weight it once did, as the growth of ETFs and institutional custody has changed where large BTC holdings sit.\n\nOn the macro side, a former Bank of Japan official warned that the BOJ may accelerate rate hikes, potentially pushing borrowing costs above 2%. Higher Japanese rates tend to strengthen the yen and unwind the carry trade — where investors borrow cheaply in yen to buy higher-yielding assets like crypto — a mechanism that rattled markets sharply in August 2024. That risk is back on the table.\n\nU.S.-Iran tensions escalated again today, though Bitcoin and Ethereum held steady through the news while gold slid. XRP traded near $1.10, where traders are watching for a breakout from a long-term consolidation range. The Fear & Greed index at 22 reflects how cautious the market remains despite today's broadly green session.",
+  "worthKnowing": [
+    "Bitcoin's declining exchange reserves — once a reliable bullish signal — are losing their predictive power as ETFs and institutional custodians now hold large amounts of BTC off-exchange.",
+    "A former Bank of Japan official warned the BOJ may raise rates above 2%, reviving concerns about an unwind of the yen carry trade that rattled global markets in August 2024.",
+    "U.S.-Iran tensions escalated again today; Bitcoin and Ethereum held steady while gold fell, a reversal of the typical safe-haven pattern.",
+    "XRP is holding near $1.10, a level traders are watching for a potential breakout from a multi-month consolidation range."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2242941076739,
+    "btcDominancePct": 56.1017,
+    "ethDominancePct": 9.4077,
+    "fearGreedIndex": 22
+  },
+  "tags": [
+    "ai-ipo-competition",
+    "bitcoin-exchange-reserves",
+    "bank-of-japan-rate-hike",
+    "carry-trade",
+    "xrp-breakout",
+    "avalanche",
+    "us-iran-tensions"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}

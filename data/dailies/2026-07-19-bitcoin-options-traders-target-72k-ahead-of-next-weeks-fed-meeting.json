@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-19T08:27:25.013Z",
+  "publishedAt": "2026-07-19",
+  "slug": "2026-07-19-bitcoin-options-traders-target-72k-ahead-of-next-weeks-fed-meeting",
+  "headline": "Bitcoin options traders target $72K ahead of next week's Fed meeting",
+  "summary": "Crypto drifted higher on Sunday with Bitcoin up 1% and Ethereum up 1.2%, but the real story is positioning ahead of the Federal Reserve's meeting later this month. Large options bets targeting $72,000 for Bitcoin by month-end have drawn attention, suggesting some traders expect the Fed's tone to be a catalyst. Fear & Greed sits at 28 — firmly in fear territory — so the optimism is cautious at best.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 3.42,
+        "catalyst": "No clear catalyst identified for Rain's 3.42% gain — the move appears to be technical, with no specific announcement or news event traceable to the researcher's data.",
+        "priceUsd": 0.01456543,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ONDO",
+        "name": "Ondo",
+        "changePct24h": -4.39,
+        "catalyst": "No confirmed catalyst for Ondo's 4.39% decline — no specific regulatory action targeting Ondo appeared in today's news items.",
+        "priceUsd": 0.353177,
+        "priceChange24hUsd": -0.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64610,
+        "changePct24h": 1.03,
+        "marketCapUsd": 1295621935583,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1867.15,
+        "changePct24h": 1.18,
+        "marketCapUsd": 225299839004,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 184092301823,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 568.45,
+        "changePct24h": 0.12,
+        "marketCapUsd": 75694197195,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73286909092,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.095,
+        "changePct24h": 0.51,
+        "marketCapUsd": 68415164231,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.13,
+        "changePct24h": 1.69,
+        "marketCapUsd": 44355193480,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3261,
+        "changePct24h": 1.07,
+        "marketCapUsd": 30935068639,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.042,
+        "changePct24h": 1.5,
+        "marketCapUsd": 20952499096,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.96,
+        "changePct24h": 2.67,
+        "marketCapUsd": 13559032555,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0725,
+        "changePct24h": 0.27,
+        "marketCapUsd": 11243963978,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 10031735738,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0146,
+        "changePct24h": 3.42,
+        "marketCapUsd": 9638142875,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 558.4,
+        "changePct24h": 3.36,
+        "marketCapUsd": 9375814869,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.82,
+        "changePct24h": 0.53,
+        "marketCapUsd": 9037050472,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The top-15 moved in a narrow band today — most assets gained between 0.1% and 1.7%, with nothing dramatic in either direction. The Fear & Greed index at 28 reflects a market that is cautious despite the green numbers on screen; small gains in a fear environment often reflect thin weekend volume rather than conviction buying.\n\nThe day's most notable story is not price action but positioning. Large Bitcoin call spreads — options bets structured to pay out if Bitcoin reaches $72,000 by month-end — have been placed in size, according to CoinDesk. The timing is deliberate: the Federal Reserve meets at the end of July, and some traders appear to be wagering that a dovish signal from the Fed could push Bitcoin through that level. At $64,610, Bitcoin would need to gain roughly 11% in under two weeks for those bets to pay off — a stretch, but not an unprecedented one.\n\nHyperliquid led the top-15 with a 2.67% gain; no specific catalyst was reported. Solana added 1.69%. Ondo, which does not appear in the top-15 tracked list, was the session's biggest decliner at -4.39%, though no specific news event explained the move. Rain gained 3.42% with no identifiable catalyst.",
+  "worthKnowing": [
+    "France ordered internet service providers to block Polymarket, the prediction market platform, in a move that could affect access for French users and raises questions about regulatory reach over decentralized platforms.",
+    "A survey cited by CoinDesk found that 84% of financial firms now treat tokenization — converting real-world assets like bonds or real estate into blockchain-based tokens — as a strategic priority, up from a minority position just two years ago.",
+    "Bitcoin's next governance debate is taking shape around 'DOG Mode,' a proposal that could affect how protocol changes are approved; details remain early-stage but the discussion is drawing attention from developers."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2294092169430,
+    "btcDominancePct": 56.5017,
+    "ethDominancePct": 9.8231,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "bitcoin-options",
+    "fed-meeting",
+    "polymarket-france",
+    "tokenization",
+    "hyperliquid",
+    "ondo"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

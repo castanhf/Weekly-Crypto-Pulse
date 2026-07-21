@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-15T08:23:17.412Z",
+  "publishedAt": "2026-07-15",
+  "slug": "2026-07-15-bitcoin-clears-64000-as-cooling-us-inflation-kills-the-rate-hike-trade",
+  "headline": "Bitcoin clears $64,000 as cooling U.S. inflation kills the rate-hike trade",
+  "summary": "A softer-than-expected U.S. inflation print shifted market expectations away from further Federal Reserve rate hikes, and crypto responded broadly — Bitcoin rose 3.3% to $64,552, Ethereum jumped 5.1%, and nearly every top-15 asset closed higher. Zcash led the day with a 9.4% gain, while DeXe was the notable outlier, falling 10.6% with no clear catalyst. The Fear & Greed index sits at 25 (Fear), a reminder that the market's mood hasn't fully caught up with today's price action.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 9.38,
+        "catalyst": "Zcash's price surged by 9.38% as Bitcoin's rally towards $65,000, driven by cooling U.S. inflation, positively influenced the broader market sentiment.",
+        "priceUsd": 552.66,
+        "priceChange24hUsd": 51.84
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": -10.57,
+        "catalyst": "DeXe's price dropped by 10.57% amid a lack of significant news or market catalysts impacting its performance.",
+        "priceUsd": 37.47,
+        "priceChange24hUsd": -3.96
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64552,
+        "changePct24h": 3.29,
+        "marketCapUsd": 1294796266430,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1872.17,
+        "changePct24h": 5.12,
+        "marketCapUsd": 225948609080,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.05,
+        "marketCapUsd": 184209662432,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 576.1,
+        "changePct24h": 1.08,
+        "marketCapUsd": 77651725095,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 73010166718,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.1,
+        "changePct24h": 3.46,
+        "marketCapUsd": 69010411081,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77.38,
+        "changePct24h": 3.15,
+        "marketCapUsd": 45071528416,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3275,
+        "changePct24h": 0.9,
+        "marketCapUsd": 31063457094,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.036,
+        "changePct24h": 0.34,
+        "marketCapUsd": 20638656270,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 66.97,
+        "changePct24h": 5.57,
+        "marketCapUsd": 14895320902,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0741,
+        "changePct24h": 2.81,
+        "marketCapUsd": 11485311564,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 10024183420,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0147,
+        "changePct24h": 3.04,
+        "marketCapUsd": 9719816669,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 552.66,
+        "changePct24h": 9.38,
+        "marketCapUsd": 9281868444,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.81,
+        "changePct24h": 2.69,
+        "marketCapUsd": 9031335645,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a U.S. inflation report that came in below expectations, effectively deflating the case for further Federal Reserve interest rate hikes. When inflation cools, the argument for keeping rates high weakens — and that tends to benefit risk assets like crypto, because lower rates make holding cash less attractive and reduce the cost of speculative capital.\n\nBitcoin crossed $64,000 for the first time in several weeks on the news, rising 3.3% to $64,552. Ethereum outpaced it, gaining 5.1% to $1,872 — a pattern that often appears when Bitcoin makes a decisive move higher and traders rotate into larger-cap altcoins in its wake. Hyperliquid gained 5.6%, XRP rose 3.5%, and Solana added 3.2%, all broadly tracking the macro tailwind.\n\nZcash was the standout, jumping 9.4% — the largest single-day gain in the top 15. No Zcash-specific news drove the move; it appears to have caught a stronger-than-average bid as Bitcoin's rally lifted privacy-focused assets disproportionately, a pattern seen in prior BTC breakout sessions.\n\nDeXe was the day's clear outlier, falling 10.6% with no identifiable catalyst. The researcher found no news or protocol event tied to the decline — this looks like idiosyncratic selling pressure rather than a market-wide story.\n\nThe Fear & Greed index at 25 (Fear) is worth noting: despite a broad green day, aggregate sentiment remains cautious. That gap between price action and sentiment can close in either direction.",
+  "worthKnowing": [
+    "Visa, Mastercard, and Ripple are backing x402, a protocol for stablecoin-based agent payments that currently average 32 cents per transaction — a sign that major payment networks are moving toward crypto rails for machine-to-machine commerce.",
+    "The U.S. and UK announced plans to align regulatory frameworks for tokenized finance (securities and assets represented as digital tokens on a blockchain), a step toward cross-border interoperability between the world's two largest financial markets.",
+    "The UK government plans to issue its first digital sovereign bond — a government debt instrument recorded on a blockchain — by early 2027, which would make it the first G7 nation to do so."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2299175715038,
+    "btcDominancePct": 56.2973,
+    "ethDominancePct": 9.8278,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "bitcoin-rally",
+    "fed-rate-expectations",
+    "us-inflation",
+    "zcash",
+    "tokenized-finance",
+    "stablecoin-payments"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

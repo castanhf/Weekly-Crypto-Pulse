@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-17T08:18:42.227Z",
+  "publishedAt": "2026-07-17",
+  "slug": "2026-07-17-bitcoin-slips-below-63k-as-us-strike-on-iran-rattles-markets-citadel-b",
+  "headline": "Bitcoin slips below $63K as U.S. strike on Iran rattles markets; Citadel backs Crypto.com at $20B valuation",
+  "summary": "A U.S. military strike on Iran sent a jolt through risk assets on Thursday, pushing Bitcoin down 1.83% to $62,759 and dragging most of the top 20 lower. Hyperliquid was the session's hardest hit, falling nearly 10% as geopolitical anxiety amplified selling pressure. Against that backdrop, Cronos bucked the trend — Citadel Securities' $400 million investment in Crypto.com, valuing the exchange at $20 billion, lifted confidence in the broader ecosystem and carried CRO to a 4.47% gain.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": 4.47,
+        "catalyst": "Citadel Securities announced a $400 million investment in Crypto.com, valuing the exchange at $20 billion — a vote of confidence from one of Wall Street's largest market makers that lifted the exchange's native token.",
+        "priceUsd": 0.058301,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -9.79,
+        "catalyst": "Hyperliquid fell nearly 10% as geopolitical uncertainty spiked following a U.S. military strike on Iran, with risk-off selling hitting smaller and more speculative assets hardest.",
+        "priceUsd": 59.23,
+        "priceChange24hUsd": -5.8
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62759,
+        "changePct24h": -1.83,
+        "marketCapUsd": 1259669904357,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1826.3,
+        "changePct24h": -2.93,
+        "marketCapUsd": 220490150030,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184036115123,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 564.38,
+        "changePct24h": -1.84,
+        "marketCapUsd": 75180652755,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0.03,
+        "marketCapUsd": 73165431518,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.083,
+        "changePct24h": -1.59,
+        "marketCapUsd": 67689022333,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.47,
+        "changePct24h": -1.69,
+        "marketCapUsd": 43414711119,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3223,
+        "changePct24h": -0.34,
+        "marketCapUsd": 30572714216,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.02,
+        "changePct24h": -1.68,
+        "marketCapUsd": 20432992423,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 59.23,
+        "changePct24h": -9.79,
+        "marketCapUsd": 13178777699,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0716,
+        "changePct24h": -1.52,
+        "marketCapUsd": 11106244495,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10004459500,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0143,
+        "changePct24h": -0.48,
+        "marketCapUsd": 9471851770,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.8,
+        "changePct24h": 0.06,
+        "marketCapUsd": 9020196209,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 530.71,
+        "changePct24h": -5.2,
+        "marketCapUsd": 8915623378,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was geopolitical: a U.S. military strike on Iran triggered a broad retreat from risk assets, and crypto was no exception. Bitcoin fell 1.83% to $62,759 — its lowest level in several sessions — while Ethereum dropped 2.93% to $1,826. Comments from President Trump on China added a second layer of uncertainty, keeping traders cautious through the session. The Fear & Greed index sits at 27, firmly in 'Fear' territory, reflecting how quickly sentiment has cooled.\n\nHyperliquid took the sharpest hit among tracked assets, falling 9.79%. As a leveraged trading platform, it tends to see amplified moves when broader market anxiety rises — traders unwinding positions or pulling liquidity can create outsized swings in its token price. Zcash also fell 5.2%, though no specific catalyst was identified beyond the general risk-off tone.\n\nThe one clear counterweight was Cronos. Citadel Securities — one of the largest market-making firms on Wall Street — announced a $400 million stake in Crypto.com, valuing the exchange at $20 billion. That kind of institutional commitment tends to lift the exchange's native token directly, and CRO gained 4.47% while nearly everything else fell. It also signals that major traditional finance players are still deepening their crypto exposure despite the day's turbulence.",
+  "worthKnowing": [
+    "T. Rowe Price, which manages $1.9 trillion in assets, launched its first actively managed multi-token crypto ETF — a sign that large asset managers are moving beyond simple Bitcoin exposure toward diversified crypto products.",
+    "JPMorgan said Bitcoin's outlook shows an 'encouraging sign' after Strategy (formerly MicroStrategy) boosted its cash reserves, suggesting the firm sees the current dip as consistent with a resilient longer-term picture.",
+    "Trump's comments on China, layered on top of the Iran strike news, added a second front of macro uncertainty that kept traders on edge through Thursday's session."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2246475142227,
+    "btcDominancePct": 56.0706,
+    "ethDominancePct": 9.8261,
+    "fearGreedIndex": 27
+  },
+  "tags": [
+    "citadel-securities",
+    "crypto-com",
+    "geopolitical-risk",
+    "iran-strike",
+    "hyperliquid",
+    "t-rowe-price-etf",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

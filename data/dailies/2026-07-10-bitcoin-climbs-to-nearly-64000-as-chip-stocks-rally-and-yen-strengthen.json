@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-10T09:45:15.014Z",
+  "publishedAt": "2026-07-10",
+  "slug": "2026-07-10-bitcoin-climbs-to-nearly-64000-as-chip-stocks-rally-and-yen-strengthen",
+  "headline": "Bitcoin climbs to nearly $64,000 as chip stocks rally and yen strengthens",
+  "summary": "A chip-stock rally and a stronger Japanese yen gave Bitcoin a macro tailwind on Thursday, pushing it up 2.56% to $64,371 — its highest level in this consolidation range in recent sessions. Most of the top 20 assets followed, with Ethereum gaining 2.37% and XRP breaking through the $1.10 resistance level traders had been watching. The Fear & Greed index sits at 23 (Extreme Fear), a reminder that the broader mood remains cautious even as prices tick higher.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": 16.74,
+        "catalyst": "DeXe surged 16.74% as market sentiment improved alongside Bitcoin's rise to nearly $64,000, with easing selling pressure amplifying gains in smaller-cap assets.",
+        "priceUsd": 33.46,
+        "priceChange24hUsd": 5.6
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": -3.05,
+        "catalyst": "Figure Heloc fell 3.05% with no significant news to support its price, continuing to struggle against the broader market's upward drift.",
+        "priceUsd": 1.002,
+        "priceChange24hUsd": -0.03
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64371,
+        "changePct24h": 2.56,
+        "marketCapUsd": 1290913251903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1790.39,
+        "changePct24h": 2.37,
+        "marketCapUsd": 216070102928,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184178207558,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 576.47,
+        "changePct24h": 0.72,
+        "marketCapUsd": 77697871459,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 73228851972,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.12,
+        "changePct24h": 2.09,
+        "marketCapUsd": 69720562913,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 79.24,
+        "changePct24h": 1.51,
+        "marketCapUsd": 46107365434,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3303,
+        "changePct24h": -0.25,
+        "marketCapUsd": 31328919362,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.002,
+        "changePct24h": -3.05,
+        "marketCapUsd": 19790019950,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 69.04,
+        "changePct24h": 1.75,
+        "marketCapUsd": 15350990507,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0743,
+        "changePct24h": 2.25,
+        "marketCapUsd": 11523900204,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10893598149,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0144,
+        "changePct24h": -0.86,
+        "marketCapUsd": 9542034805,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.56,
+        "changePct24h": 0.42,
+        "marketCapUsd": 8798153465,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 504.8,
+        "changePct24h": 8.13,
+        "marketCapUsd": 8475911519,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Thursday's gains trace to two macro signals that landed at the same time. First, chip stocks — led by Nvidia and its peers — rallied sharply on continued AI demand optimism, lifting risk assets broadly. Second, the Japanese yen strengthened against the dollar, a move that historically reduces pressure on carry trades (where investors borrow cheap yen to buy higher-yielding assets like crypto). When the yen rises, those trades unwind less aggressively, giving crypto a bit of breathing room.\n\nBitcoin's 2.56% gain to $64,371 fits neatly into a pattern that has been building for months: according to CoinDesk data, Bitcoin's current $60,000–$70,000 consolidation range is now the third longest in the asset's history. That's not a story about weakness — it's a story about a market that has absorbed selling pressure without breaking down, and is now testing the upper end of that range on a positive macro day.\n\nXRP's 2.09% gain had a more specific driver: buyers pushed through the $1.10 level that had acted as resistance in recent sessions. When a price clears a level that traders have been watching, it tends to attract additional buying from participants who were waiting for confirmation — which is likely what happened here.\n\nZcash's 8.13% jump stands out in the top-15 table. No specific catalyst appeared in the researcher's data, so this looks like a technical move in a lower-liquidity asset catching a bid on a broadly positive day.\n\nThe Fear & Greed index at 23 (Extreme Fear) is worth noting: prices are rising, but the crowd remains deeply cautious. That gap between price action and sentiment is one of the more interesting features of this session.",
+  "worthKnowing": [
+    "Bitcoin's current consolidation between $60,000 and $70,000 has now lasted longer than all but two prior consolidation periods in its history, according to CoinDesk.",
+    "Polymarket, the prediction market platform, has applied to U.S. regulators for approval to offer margin trading to American customers — a significant expansion if approved.",
+    "XRP cleared the $1.10 resistance level that buyers had been testing for several sessions, closing at $1.12."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2289463999489,
+    "btcDominancePct": 56.4106,
+    "ethDominancePct": 9.4404,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "bitcoin-consolidation",
+    "chip-stock-rally",
+    "xrp-resistance-break",
+    "yen-carry-trade",
+    "polymarket-margin-trading",
+    "zcash"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}

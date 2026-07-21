@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-05T09:13:13.201Z",
+  "publishedAt": "2026-07-05",
+  "slug": "2026-07-05-bitcoin-climbs-back-above-63000-as-binance-sees-12b-in-eth-withdrawals",
+  "headline": "Bitcoin climbs back above $63,000 as Binance sees $1.2B in ETH withdrawals",
+  "summary": "Bitcoin recovered past $63,000 on July 5th, reversing losses from the final days of June — a meaningful bounce given that the Fear & Greed index sits at a fearful 23. The bigger story may be off-exchange: Binance recorded $1.2 billion in outflows, with Ethereum withdrawals hitting a three-year high, suggesting holders are moving ETH off the platform in volume. Read on for what's driving the moves and what else is worth watching.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": 63.67,
+        "catalyst": "LAB surged 63.67% on apparent retail interest; no single verifiable on-chain or protocol catalyst was identified, and the move appears speculative in nature.",
+        "priceUsd": 15.88,
+        "priceChange24hUsd": 10.11
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -12.03,
+        "catalyst": "MemeCore fell 12.03%, likely reflecting profit-taking after recent gains against a backdrop of broadly cautious sentiment — Fear & Greed sits at 23.",
+        "priceUsd": 1.42,
+        "priceChange24hUsd": -0.17
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62836,
+        "changePct24h": 0.58,
+        "marketCapUsd": 1260001306572,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1764.99,
+        "changePct24h": 0.31,
+        "marketCapUsd": 213004498214,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 184121648447,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 577.02,
+        "changePct24h": 0.66,
+        "marketCapUsd": 77772686052,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 72933867974,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": -0.17,
+        "marketCapUsd": 70808267960,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 80.41,
+        "changePct24h": -1.97,
+        "marketCapUsd": 46735126619,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3249,
+        "changePct24h": 0.33,
+        "marketCapUsd": 30817730283,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.009,
+        "changePct24h": 0,
+        "marketCapUsd": 19695039332,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 68.79,
+        "changePct24h": -3.13,
+        "marketCapUsd": 15303507156,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0759,
+        "changePct24h": -1.4,
+        "marketCapUsd": 11763779184,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 10136519295,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0153,
+        "changePct24h": -1.16,
+        "marketCapUsd": 10124865826,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.16,
+        "changePct24h": 0.22,
+        "marketCapUsd": 8433901833,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 457.07,
+        "changePct24h": -0.23,
+        "marketCapUsd": 7674666079,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's recovery above $63,000 is the headline number, but the more telling data point is what's happening at Binance. The exchange recorded $1.2 billion in net outflows over 24 hours — triple the recent average — with Ethereum withdrawals reaching their highest level in three years. Large-scale exchange outflows typically mean holders are moving assets into self-custody wallets rather than selling, which can reduce near-term sell pressure. Whether that's the interpretation here or whether it reflects something more cautious — holders pulling funds ahead of anticipated volatility — is not yet clear from the data alone.\n\nBitcoin's +0.58% gain to $62,836 is real but modest. The broader top-15 picture is mixed: BNB added 0.66%, while Solana slid 1.97% and Hyperliquid fell 3.13% with no specific catalyst in the researcher's data. The Fear & Greed index at 23 — firmly in \"Fear\" territory — is the ambient backdrop. Markets are not in a confident mood; Bitcoin's recovery is happening despite sentiment, not because of it.\n\nSolana's decline to $80.41 stands out given its recent range. No specific news item explains the 1.97% drop; it appears to be broader risk-off pressure rather than a protocol-specific event. Hyperliquid's 3.13% fall similarly lacks a named catalyst in today's data.",
+  "worthKnowing": [
+    "Blockchain data shows buyers of Trump's crypto token are collectively down $3.8 billion, a stark illustration of how speculative token launches can redistribute wealth rapidly and unevenly.",
+    "Dave Portnoy (Barstool Sports founder) publicly stated he plans to hold Bitcoin to zero, citing a track record of mistimed entries — a retail sentiment signal worth noting, though his influence on price has historically been short-lived."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2260990791733,
+    "btcDominancePct": 55.7258,
+    "ethDominancePct": 9.4219,
+    "fearGreedIndex": 23
+  },
+  "tags": [
+    "bitcoin-recovery",
+    "binance-outflows",
+    "ethereum-withdrawals",
+    "fear-and-greed",
+    "trump-token",
+    "solana"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}

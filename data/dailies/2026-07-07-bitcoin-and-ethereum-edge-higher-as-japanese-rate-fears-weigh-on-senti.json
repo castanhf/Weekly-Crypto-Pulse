@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-07T09:52:04.938Z",
+  "publishedAt": "2026-07-07",
+  "slug": "2026-07-07-bitcoin-and-ethereum-edge-higher-as-japanese-rate-fears-weigh-on-senti",
+  "headline": "Bitcoin and Ethereum edge higher as Japanese rate fears weigh on sentiment",
+  "summary": "Bitcoin gained 1% to $63,246 and Ethereum rose 1.1% to $1,776.95, but the moves were cautious — the Fear & Greed index sits at 27 (Fear), and rising Japanese interest rates are casting a shadow over the macro relief rally that carried crypto higher in recent weeks. ETF inflows on Monday offered a counterweight, with institutional money still moving into both BTC and ETH funds. The bigger story today may be off-price: a governance exploit drained $20 million from the BONK treasury, and Binance launched a covered call yield product for Bitcoin holders.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 8.97,
+        "catalyst": "No clear catalyst identified — move appears speculative, consistent with memecoin volatility on light volume.",
+        "priceUsd": 1.47,
+        "priceChange24hUsd": 0.13
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -12.69,
+        "catalyst": "LAB fell amid broader market concerns as Bitcoin's recent price rally faced pressure from rising Japanese interest rates, dampening risk appetite for smaller-cap assets.",
+        "priceUsd": 14.15,
+        "priceChange24hUsd": -1.8
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63246,
+        "changePct24h": 1,
+        "marketCapUsd": 1268319835652,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1776.95,
+        "changePct24h": 1.14,
+        "marketCapUsd": 214431866251,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184203525805,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 577.65,
+        "changePct24h": 0.14,
+        "marketCapUsd": 77851670417,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 73032074281,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.12,
+        "changePct24h": -0.81,
+        "marketCapUsd": 70006142671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 81.25,
+        "changePct24h": 1.44,
+        "marketCapUsd": 47276194197,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3303,
+        "changePct24h": 1.14,
+        "marketCapUsd": 31328967037,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": -0.52,
+        "marketCapUsd": 20203768232,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 71.36,
+        "changePct24h": 2.18,
+        "marketCapUsd": 15874156495,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0749,
+        "changePct24h": -2.28,
+        "marketCapUsd": 11605597057,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 11013033528,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0151,
+        "changePct24h": 0.21,
+        "marketCapUsd": 9964220704,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.41,
+        "changePct24h": 0.96,
+        "marketCapUsd": 8660535017,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 454.35,
+        "changePct24h": 2.38,
+        "marketCapUsd": 7628713456,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The top-line numbers look constructive — Bitcoin up 1%, Ethereum up 1.1%, Solana up 1.4%, Hyperliquid up 2.2% — but the Fear & Greed index at 27 tells a more cautious story. Markets are grinding higher against a backdrop of genuine macro anxiety rather than rallying with conviction.\n\nThe specific headwind named today is Japan. Rising Japanese interest rates matter to crypto because Japanese investors have historically borrowed cheaply in yen to fund positions in higher-yielding assets globally, including crypto. When Japanese rates rise, that trade becomes less attractive and can prompt capital to flow back home — a dynamic that has rattled risk assets before. Bitcoin's recent recovery from its spring lows was partly a macro relief trade, and that relief is now being tested.\n\nOn the other side of the ledger, Monday's ETF inflow data offered a counterpoint. Both Bitcoin and Ethereum ETFs drew fresh institutional money, suggesting that the longer-term buyer base remains engaged even as short-term sentiment is cautious. ETF inflows don't move prices immediately, but they signal that institutional demand hasn't dried up.\n\nDogecoin was the notable underperformer in the top 15, slipping 2.3% with no specific catalyst — a reminder that meme-adjacent assets tend to amplify broader sentiment shifts. XRP dipped 0.8%, also without a clear driver.",
+  "worthKnowing": [
+    "An attacker spent $4 million to pass a malicious governance proposal on BONK, draining approximately $20 million from the project's treasury — one of the largest DeFi governance exploits in recent months.",
+    "Binance launched a covered call yield product for Bitcoin holders, allowing them to earn yield by effectively selling upside above a set price target — a structured product more common in traditional finance now arriving in crypto.",
+    "Bitcoin and Ethereum ETFs recorded net inflows on Monday, continuing a run of positive fund flows that has persisted even as spot prices have pulled back from their 2025 highs."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2269786950078,
+    "btcDominancePct": 55.8138,
+    "ethDominancePct": 9.4259,
+    "fearGreedIndex": 27
+  },
+  "tags": [
+    "japanese-interest-rates",
+    "btc-etf-flows",
+    "eth-etf-flows",
+    "bonk-governance-exploit",
+    "binance-yield-product",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}

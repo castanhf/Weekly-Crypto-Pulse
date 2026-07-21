@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-14T08:17:47.320Z",
+  "publishedAt": "2026-07-14",
+  "slug": "2026-07-14-bitcoin-slips-toward-62500-as-traders-raise-bets-on-a-july-fed-rate-hi",
+  "headline": "Bitcoin slips toward $62,500 as traders raise bets on a July Fed rate hike ahead of Tuesday's CPI report",
+  "summary": "A hotter-than-expected jobs market has traders pricing in a higher chance of a Fed rate hike this month, and Bitcoin is feeling it — down 0.78% to $62,476 with the Fear & Greed index sitting at 22, deep in 'Extreme Fear' territory. The bigger story is what happens Tuesday: the CPI inflation report could either confirm or deflate those rate-hike bets, making it the most watched data point of the week. Meanwhile, the U.S. government moved $288 million in seized Bitcoin and Ether to Coinbase Prime, adding a separate layer of market uncertainty.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 4.01,
+        "catalyst": "NEAR Protocol gained 4.01% as traders rotated into select altcoins even as major assets declined, with improved sentiment around the project outpacing the broader market's caution.",
+        "priceUsd": 2,
+        "priceChange24hUsd": 0.08
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": -8.35,
+        "catalyst": "DeXe fell 8.35% amid the general market downturn, with rising Fed rate-hike expectations and negative sentiment hitting smaller-cap DeFi governance tokens hardest.",
+        "priceUsd": 41.87,
+        "priceChange24hUsd": -3.49
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62476,
+        "changePct24h": -0.78,
+        "marketCapUsd": 1253019984828,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1779.5,
+        "changePct24h": -0.27,
+        "marketCapUsd": 214755596338,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.05,
+        "marketCapUsd": 184065852470,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 569.31,
+        "changePct24h": -0.04,
+        "marketCapUsd": 76733263055,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 72929600143,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.067,
+        "changePct24h": -1.1,
+        "marketCapUsd": 66652068384,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.92,
+        "changePct24h": -1.97,
+        "marketCapUsd": 43611589207,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3245,
+        "changePct24h": -1.55,
+        "marketCapUsd": 30787209529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 1.91,
+        "marketCapUsd": 20486672539,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.44,
+        "changePct24h": -3.18,
+        "marketCapUsd": 14109519644,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0721,
+        "changePct24h": -0.39,
+        "marketCapUsd": 11174496643,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.03,
+        "marketCapUsd": 10019345327,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0142,
+        "changePct24h": -0.78,
+        "marketCapUsd": 9427700248,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.56,
+        "changePct24h": 0.4,
+        "marketCapUsd": 8796051067,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 504.91,
+        "changePct24h": -3.06,
+        "marketCapUsd": 8478380639,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a shift in expectations around Federal Reserve policy. Traders have been lifting the odds of a rate hike at the July Fed meeting — meaning they think the Fed may raise borrowing costs again rather than hold steady — and that repricing hit risk assets broadly. Higher interest rates tend to make speculative assets like crypto less attractive relative to safer alternatives, so the market sold off in anticipation. Bitcoin fell 0.78% to $62,476, Solana dropped nearly 2%, and Hyperliquid and Zcash each shed more than 3%. The Fear & Greed index sits at 22, which puts sentiment firmly in 'Extreme Fear' — the market is not in a buying mood.\n\nLayered on top of the rate-hike anxiety is a geopolitical wildcard: renewed tensions involving Iran added to the cautious tone, with traders reluctant to take on fresh risk ahead of Tuesday's U.S. Consumer Price Index (CPI) report. CPI measures how fast prices are rising across the economy; a hotter-than-expected reading would likely reinforce the case for another rate hike and could push crypto lower. A cooler reading could do the opposite.\n\nSeparately, the U.S. government's transfer of $288 million in seized Bitcoin and Ether to Coinbase Prime introduced its own uncertainty. Government wallet movements of this size draw attention because they raise the question of whether those assets will eventually be sold into the market — which would add supply pressure. No sale has been confirmed, but the transfer alone was enough to weigh on sentiment.",
+  "worthKnowing": [
+    "The U.S. government moved approximately $288 million in seized Bitcoin and Ether to Coinbase Prime, a custody and trading platform used by institutional clients — no sale has been announced, but the transfer drew attention given its potential to add supply to the market.",
+    "Bitcoin held around $62,600 through the session despite the Iran conflict reigniting and traders bracing for Tuesday's CPI inflation data, which will be the next major test for the market.",
+    "A solo Bitcoin miner using roughly $150 worth of equipment successfully mined a block and collected approximately $200,000 in rewards — a rare outcome that underscores how block rewards still occasionally favor individual miners over large mining pools."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2235623427146,
+    "btcDominancePct": 56.0409,
+    "ethDominancePct": 9.6034,
+    "fearGreedIndex": 22
+  },
+  "tags": [
+    "fed-rate-hike",
+    "cpi-report",
+    "government-bitcoin-transfer",
+    "coinbase-prime",
+    "near-protocol",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-06-30T09:50:12.687Z",
+  "publishedAt": "2026-06-30",
+  "slug": "2026-06-30-blackrocks-bitcoin-etf-sheds-300m-as-btc-slides-below-60000-on-yen-pre",
+  "headline": "BlackRock's Bitcoin ETF sheds $300M as BTC slides below $60,000 on yen pressure",
+  "summary": "Two converging forces pushed Bitcoin lower on June 30: BlackRock's IBIT ETF saw $300 million in outflows — one of its largest single-day redemptions — while the Japanese yen hit a 40-year low against the dollar, rattling a market that has grown unusually sensitive to that currency pair. Strategy's announced plan to sell Bitcoin added further pressure, dragging Ether, Solana, and Dogecoin down alongside BTC. Hyperliquid bucked the trend, gaining 4.4% to stand out as the day's clearest winner in an otherwise defensive session.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": 4.44,
+        "catalyst": "Hyperliquid stood out as a top performer in a broadly declining market, gaining 4.44% as traders rotated into assets with independent momentum amid the Bitcoin-led selloff.",
+        "priceUsd": 65.21,
+        "priceChange24hUsd": 2.9
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -12.18,
+        "catalyst": "LAB fell 12.18% under heavy selling pressure as negative sentiment surrounding Bitcoin's struggle below $60,000 hit smaller-cap assets hardest.",
+        "priceUsd": 13.77,
+        "priceChange24hUsd": -1.68
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 59277,
+        "changePct24h": -1.12,
+        "marketCapUsd": 1188496994394,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1582.69,
+        "changePct24h": 0.57,
+        "marketCapUsd": 191008045344,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9984,
+        "changePct24h": -0.02,
+        "marketCapUsd": 184694945376,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 548.84,
+        "changePct24h": -0.69,
+        "marketCapUsd": 73974805121,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73538818218,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.042,
+        "changePct24h": -0.51,
+        "marketCapUsd": 64872456847,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.64,
+        "changePct24h": 1.24,
+        "marketCapUsd": 42776283635,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.318,
+        "changePct24h": -1.91,
+        "marketCapUsd": 30157694720,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.045,
+        "changePct24h": 2.6,
+        "marketCapUsd": 20181916287,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 65.21,
+        "changePct24h": 4.44,
+        "marketCapUsd": 14496018783,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0723,
+        "changePct24h": -0.62,
+        "marketCapUsd": 11199898034,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0158,
+        "changePct24h": 1.44,
+        "marketCapUsd": 10440715173,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9994,
+        "changePct24h": -0.03,
+        "marketCapUsd": 10024234156,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.51,
+        "changePct24h": 1.37,
+        "marketCapUsd": 8755797984,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 394.34,
+        "changePct24h": 2.49,
+        "marketCapUsd": 6621381767,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin spent the session pinned below $60,000, caught between two distinct pressures. The more immediate was institutional: BlackRock's IBIT — the largest Bitcoin ETF by assets — recorded roughly $300 million in outflows, a signal that large fund investors are pulling back rather than buying the dip. The second pressure came from currency markets. The Japanese yen fell to its weakest level against the US dollar in 40 years, and Bitcoin's correlation with the dollar-yen rate has reached -0.90 (meaning the two move in near-perfect opposition). When the yen weakens sharply, the carry trade — where investors borrow cheap yen to buy higher-yielding assets including crypto — tends to unwind, pulling Bitcoin lower alongside it. Adding to the pressure, Strategy (formerly MicroStrategy) announced plans to sell Bitcoin holdings, which rattled altcoin markets. Ether, Solana, and Dogecoin all slid in response, as traders interpreted the move as a sign of weakening conviction from one of Bitcoin's most prominent corporate holders. XRP held its ground near $1.04, supported by rising network activity and a reduction in leveraged positions — a cleaner balance sheet tends to make an asset more resilient when broader markets sell off. The Fear & Greed index sits at 15, deep in Extreme Fear territory, reflecting how broadly cautious the market has become.",
+  "worthKnowing": [
+    "BlackRock's IBIT Bitcoin ETF shed approximately $300 million in a single session, one of its largest outflow days on record.",
+    "Bitcoin's correlation with the dollar-yen exchange rate has reached -0.90, the strongest negative relationship on record and a sign that macro currency moves are driving crypto more than crypto-native factors right now.",
+    "XRP held above $1 as network activity rose and leveraged positions cleared out, leaving it as one of the more resilient large-cap assets in the session.",
+    "Strategy's announced plan to sell Bitcoin added selling pressure across major altcoins, with Ether, Solana, and Dogecoin all declining on the news."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2139398154190,
+    "btcDominancePct": 55.5318,
+    "ethDominancePct": 8.928,
+    "fearGreedIndex": 15
+  },
+  "tags": [
+    "blackrock-ibit",
+    "btc-etf-flows",
+    "yen-carry-trade",
+    "strategy-bitcoin-sales",
+    "extreme-fear",
+    "xrp-support"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}

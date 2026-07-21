@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-01T10:01:02.992Z",
+  "publishedAt": "2026-07-01",
+  "slug": "2026-07-01-bitcoins-worst-etf-month-on-record-45b-in-june-outflows-cap-a-20-crash",
+  "headline": "Bitcoin's worst ETF month on record: $4.5B in June outflows cap a 20% crash",
+  "summary": "June ended badly for Bitcoin — the asset fell 20% over the month, and U.S. spot Bitcoin ETFs shed $4.5 billion, their worst monthly outflow on record. On the final day of the month, Bitcoin slipped another 0.68% to $58,873, with most of the top 15 assets following it lower. Solana was the notable exception, rising 2.16%. The Fear & Greed index sits at 11 — deep in Extreme Fear territory — and Stellar surged 11% on the day, though no clear catalyst has been identified for that move.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "changePct24h": 14.08,
+        "catalyst": "WhiteBIT Coin surged 14.08% as buying interest concentrated in the asset despite the broader market decline, with no single identified external catalyst.",
+        "priceUsd": 53.8,
+        "priceChange24hUsd": 7.57
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LAB",
+        "name": "LAB",
+        "changePct24h": -31.11,
+        "catalyst": "LAB dropped 31.11% amid negative sentiment following reports of record Bitcoin ETF outflows in June, which weighed heavily on smaller, higher-risk assets.",
+        "priceUsd": 9.51,
+        "priceChange24hUsd": -2.96
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 58873,
+        "changePct24h": -0.68,
+        "marketCapUsd": 1180442653563,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1579.23,
+        "changePct24h": -0.24,
+        "marketCapUsd": 190587290338,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": 0.03,
+        "marketCapUsd": 184420330983,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 544.87,
+        "changePct24h": -0.74,
+        "marketCapUsd": 73439224903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73323571544,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.045,
+        "changePct24h": 0.22,
+        "marketCapUsd": 65022801517,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.28,
+        "changePct24h": 2.16,
+        "marketCapUsd": 43705415392,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3164,
+        "changePct24h": -0.49,
+        "marketCapUsd": 30006961137,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.014,
+        "changePct24h": -3,
+        "marketCapUsd": 19638368740,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 64.11,
+        "changePct24h": -1.77,
+        "marketCapUsd": 14261102109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0712,
+        "changePct24h": -1.75,
+        "marketCapUsd": 11024314655,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0156,
+        "changePct24h": -1.02,
+        "marketCapUsd": 10336320109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10039176063,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.18,
+        "changePct24h": -3.48,
+        "marketCapUsd": 8450929017,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "priceUsd": 0.1987,
+        "changePct24h": 11.02,
+        "marketCapUsd": 6750450512,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant story today — and for all of June — is Bitcoin ETF outflows. U.S. spot Bitcoin ETFs shed $4.5 billion in June, the worst monthly figure since those products launched. That sustained institutional selling pressure drove Bitcoin's 20% monthly decline, and the final day of the month added another 0.68% loss, closing at $58,873. Most of the top 15 tracked assets followed Bitcoin lower, with BNB (-0.74%), Dogecoin (-1.75%), and Hyperliquid (-1.77%) all posting modest declines.\n\nChart analysts have flagged the structure of Bitcoin's June decline as technically severe — the monthly candle's shape and the depth of the move have drawn attention, though the researcher's data does not specify a named indicator or a precise technical level that would define the next directional signal.\n\nSolana was the clearest exception among large-cap assets, rising 2.16% to $75.28. No catalyst was identified in the researcher's data for this move.\n\nXRP held above $1, ending the day up 0.22% at $1.045. The researcher notes that network activity on XRP improved following a leverage flush — meaning a wave of forced liquidations cleared out overleveraged positions — which left the asset on steadier footing than the broader market.\n\nStellar (XLM) surged 11.02% to $0.1987, the largest single-day move among the top 15. No catalyst was identified in the researcher's data.\n\nThe Fear & Greed index reading of 11 places the market firmly in Extreme Fear territory — the lowest end of the scale — reflecting how deeply the June selloff has weighed on sentiment.",
+  "worthKnowing": [
+    "U.S. spot Bitcoin ETFs recorded their worst month ever in June, shedding $4.5 billion in outflows — a figure that dwarfs previous monthly redemption records.",
+    "XRP held above $1 after a leverage flush cleared out overleveraged positions, with on-chain network activity improving in the aftermath.",
+    "Taiwan passed a key crypto law that removes legal uncertainty for the digital asset sector, potentially opening the market to clearer institutional participation.",
+    "WhiteBIT Coin (WBT) surged 14.08% to lead all assets on the day, while LAB fell 31.11% — the widest single-day spread in the tracked universe."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2129186203901,
+    "btcDominancePct": 55.4157,
+    "ethDominancePct": 8.9428,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "june-correction",
+    "xrp-leverage-flush",
+    "taiwan-crypto-law",
+    "extreme-fear",
+    "stellar-surge"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-06-29-bitcoin-and-ethereum-face-significant-declines-amid-regulatory-p"
+  }
+}

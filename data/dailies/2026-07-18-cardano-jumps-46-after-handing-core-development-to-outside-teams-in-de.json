@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-18T08:00:28.942Z",
+  "publishedAt": "2026-07-18",
+  "slug": "2026-07-18-cardano-jumps-46-after-handing-core-development-to-outside-teams-in-de",
+  "headline": "Cardano jumps 4.6% after handing core development to outside teams in decentralization push",
+  "summary": "Cardano was the day's standout mover, gaining 4.6% after announcing it would transfer core protocol development to external teams — a meaningful governance shift for one of the older proof-of-stake networks. Bitcoin rose 1.9% to $63,967, and most of the top 15 tracked assets ended the day in the green, though the Fear & Greed index sitting at 25 (Fear) signals the broader market remains cautious. The Senate's continued delay on the Clarity Act stablecoin bill is adding to that unease.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "changePct24h": 4.58,
+        "catalyst": "Cardano announced it is handing core protocol development to outside teams, a significant decentralization move that traders read as a positive governance signal.",
+        "priceUsd": 0.166123,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -3.04,
+        "catalyst": "No clear catalyst identified; the move appears to be technical selling on light volume.",
+        "priceUsd": 0.126526,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63967,
+        "changePct24h": 1.86,
+        "marketCapUsd": 1283038952459,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1842.94,
+        "changePct24h": 0.84,
+        "marketCapUsd": 222399964522,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184091655597,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 567.4,
+        "changePct24h": 0.28,
+        "marketCapUsd": 75554021518,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73296607940,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.088,
+        "changePct24h": 0.48,
+        "marketCapUsd": 67994698028,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.9,
+        "changePct24h": 0.4,
+        "marketCapUsd": 43631309832,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3221,
+        "changePct24h": 0.01,
+        "marketCapUsd": 30562036916,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.026,
+        "changePct24h": 0.65,
+        "marketCapUsd": 20607529790,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 59.3,
+        "changePct24h": 1.08,
+        "marketCapUsd": 13189679115,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0723,
+        "changePct24h": 0.8,
+        "marketCapUsd": 11208482615,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9939432570,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0141,
+        "changePct24h": -1.65,
+        "marketCapUsd": 9317104011,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 539.99,
+        "changePct24h": 1.39,
+        "marketCapUsd": 9066613753,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.78,
+        "changePct24h": -0.24,
+        "marketCapUsd": 8998297230,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest story was Cardano. The project announced it is transferring core protocol development to external teams — a governance shift that moves it away from the centralized foundation model that has defined most layer-1 blockchains since their founding. Traders responded positively, pushing ADA up 4.6%, the largest single-asset move in the top tracked universe today. The logic is straightforward: decentralizing development can reduce single-point-of-failure risk and signal that a protocol is mature enough to survive without its founding organization running the code.\n\nBeyond Cardano, the session was broadly constructive but subdued. Bitcoin added 1.9% to reach $63,967, and most of the top 15 assets ended in positive territory. Ethereum gained 0.84%, Hyperliquid rose 1.08%, and Zcash climbed 1.39%. None of these moves had an identifiable specific catalyst — they tracked Bitcoin's gentle upward drift.\n\nThe macro backdrop explains why the gains feel tentative. The Fear & Greed index sits at 25, firmly in Fear territory, meaning the market's mood is defensive even as prices tick higher. Adding to that caution: Polymarket traders have cut the odds of the Clarity Act — the U.S. Senate's proposed stablecoin regulatory framework — passing to a record low, as Senate delays drag on. Regulatory uncertainty tends to suppress risk appetite across the board, and that dynamic appears to be capping today's upside despite the positive price action.",
+  "worthKnowing": [
+    "Polymarket traders have cut the odds of the U.S. Senate's Clarity Act stablecoin bill passing to a record low, as the Senate continues to delay a floor vote.",
+    "Japan's SBI Group is building what it describes as Asia's first cross-border digital asset network, spanning multiple countries in the region.",
+    "Robinhood is pushing deeper into decentralized finance, aiming to bring its large base of casual retail users onto DeFi platforms — a move that could meaningfully expand the DeFi user base if it gains traction."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2274170285027,
+    "btcDominancePct": 56.4281,
+    "ethDominancePct": 9.7828,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "cardano-decentralization",
+    "clarity-act",
+    "sbi-group",
+    "robinhood-defi",
+    "fear-greed",
+    "bitcoin-recovery"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-13-bitcoin-struggles-to-maintain-63-000-as-market-sentiment-shifts"
+  }
+}

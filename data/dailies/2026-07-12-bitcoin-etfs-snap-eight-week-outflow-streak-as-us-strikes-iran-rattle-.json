@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-12T08:26:02.502Z",
+  "publishedAt": "2026-07-12",
+  "slug": "2026-07-12-bitcoin-etfs-snap-eight-week-outflow-streak-as-us-strikes-iran-rattle-",
+  "headline": "Bitcoin ETFs snap eight-week outflow streak as U.S. strikes Iran rattle broader markets",
+  "summary": "Bitcoin and Ethereum ETFs pulled in a combined $282 million this week, ending eight consecutive weeks of outflows — the clearest sign yet that institutional appetite is returning. The good news was offset by U.S. military strikes on Iran, which kept both assets nearly flat on the day: Bitcoin slipped 0.38% to $63,965 and Ethereum edged up 0.21% to $1,803. DeXe was the day's biggest single-asset mover, jumping 13.81% with no clear public catalyst, while Avalanche led the losers at -4.77% as geopolitical unease weighed on risk assets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": 13.81,
+        "catalyst": "No clear public catalyst identified — the move may reflect low-liquidity trading dynamics or undisclosed protocol activity.",
+        "priceUsd": 41.45,
+        "priceChange24hUsd": 5.73
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": -4.77,
+        "catalyst": "Avalanche fell as broader geopolitical tensions from U.S. military actions in Iran weighed on risk assets across the crypto market.",
+        "priceUsd": 6.39,
+        "priceChange24hUsd": -0.3
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63965,
+        "changePct24h": -0.38,
+        "marketCapUsd": 1282832504222,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1803.58,
+        "changePct24h": 0.21,
+        "marketCapUsd": 217661444067,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 184177486997,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 572.51,
+        "changePct24h": -0.78,
+        "marketCapUsd": 77163861053,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73391046491,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.093,
+        "changePct24h": -1.21,
+        "marketCapUsd": 68282004872,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.62,
+        "changePct24h": -1.77,
+        "marketCapUsd": 44602089903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3297,
+        "changePct24h": 0.26,
+        "marketCapUsd": 31272316046,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.041,
+        "changePct24h": 0.73,
+        "marketCapUsd": 20674649790,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.39,
+        "changePct24h": 1.18,
+        "marketCapUsd": 14991583561,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0731,
+        "changePct24h": -1.44,
+        "marketCapUsd": 11329610462,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 10956211958,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0147,
+        "changePct24h": 2.24,
+        "marketCapUsd": 9742858382,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.54,
+        "changePct24h": 0.14,
+        "marketCapUsd": 8774852403,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 522.22,
+        "changePct24h": 4.4,
+        "marketCapUsd": 8768697518,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant story today is the tension between two opposing forces: fresh ETF inflows signaling returning institutional interest, and U.S. military strikes on Iran injecting enough geopolitical uncertainty to keep prices pinned.\n\nOn the ETF side, Bitcoin and Ethereum funds recorded a combined $282 million in net inflows — ending eight straight weeks of outflows. That streak had been a persistent drag on sentiment, so its reversal is a concrete data point worth noting. The Fear & Greed index sits at 26 (Fear), which means the inflow data hasn't yet translated into broad market confidence.\n\nOn the macro side, the U.S. launched fresh strikes on Iran during the session. Historically, geopolitical shocks of this type produce a brief risk-off move in crypto — assets that had been gaining ground stall or slip as traders reduce exposure to volatile assets. That pattern appears to be playing out: Bitcoin fell 0.38%, Solana dropped 1.77%, XRP lost 1.21%, and Avalanche — the day's biggest loser among tracked assets — fell 4.77%. Ethereum was the exception, edging up 0.21%, possibly supported by its own ETF inflow data.\n\nDeXe jumped 13.81% with no clear public catalyst. The move may reflect low-liquidity conditions in a smaller-cap asset rather than a named event — no protocol announcement or governance vote was publicly reported at time of writing.\n\nZcash rose 4.40% in the top-15 tracked list, also without an obvious catalyst, consistent with technical or thin-market trading.",
+  "worthKnowing": [
+    "Ripple's CEO revealed the company once considered shutting down and distributing XRP directly to shareholders, underscoring how uncertain the project's future looked during its SEC legal battle.",
+    "Bitcoin's BIP 110 upgrade — a proposed change to the network's rules — is approaching its activation deadline with zero miner support, effectively killing the fork for now.",
+    "Empery Digital sold Bitcoin holdings to fund an AI data center project, an early example of a publicly traded company liquidating crypto to finance infrastructure in the AI sector."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2279500788664,
+    "btcDominancePct": 56.2912,
+    "ethDominancePct": 9.5559,
+    "fearGreedIndex": 26
+  },
+  "tags": [
+    "btc-etf-inflows",
+    "iran-strikes",
+    "avalanche",
+    "dexe",
+    "bip-110",
+    "ripple-xrp"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-06-ethereum-leads-recovery-as-bitcoin-steadies-above-63-000"
+  }
+}
