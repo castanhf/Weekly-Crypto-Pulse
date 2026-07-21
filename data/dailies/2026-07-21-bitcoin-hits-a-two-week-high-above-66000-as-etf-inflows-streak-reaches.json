@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-21T08:37:05.210Z",
+  "publishedAt": "2026-07-21",
+  "slug": "2026-07-21-bitcoin-hits-a-two-week-high-above-66000-as-etf-inflows-streak-reaches",
+  "headline": "Bitcoin hits a two-week high above $66,000 as ETF inflows streak reaches five days",
+  "summary": "Bitcoin climbed to a two-week high, touching $66,182, as five consecutive days of ETF inflows — the longest such streak since April — signaled renewed institutional appetite. Ethereum outpaced Bitcoin with a 4.5% gain, and XRP jumped 4% on technical momentum. The Fear & Greed index sits at 25 (Fear), a reminder that the broader market mood hasn't caught up with the price action yet.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "DEXE",
+        "name": "DeXe",
+        "changePct24h": 17.5,
+        "catalyst": "DeXe surged 17.50% as traders reacted positively to overall market momentum, particularly Bitcoin's rise to a two-week high.",
+        "priceUsd": 41.44,
+        "priceChange24hUsd": 7.25
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -6.53,
+        "catalyst": "MemeCore dropped 6.53% amid a broader correction following Bitcoin's recent price fluctuations.",
+        "priceUsd": 1.18,
+        "priceChange24hUsd": -0.08
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 66182,
+        "changePct24h": 3.58,
+        "marketCapUsd": 1327386851377,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1938.75,
+        "changePct24h": 4.5,
+        "marketCapUsd": 233877050766,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.02,
+        "marketCapUsd": 184070610396,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 576.55,
+        "changePct24h": 2.14,
+        "marketCapUsd": 76770416775,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73155203774,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.13,
+        "changePct24h": 4.09,
+        "marketCapUsd": 70781441862,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 78.37,
+        "changePct24h": 3.07,
+        "marketCapUsd": 45668722107,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3264,
+        "changePct24h": 0.22,
+        "marketCapUsd": 30962021517,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -1.68,
+        "marketCapUsd": 20123963330,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.94,
+        "changePct24h": 3.91,
+        "marketCapUsd": 14001279682,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0735,
+        "changePct24h": 2.53,
+        "marketCapUsd": 11411403620,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9901353321,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.014,
+        "changePct24h": -1.09,
+        "marketCapUsd": 9754361682,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 546.08,
+        "changePct24h": 3.27,
+        "marketCapUsd": 9173900693,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.72,
+        "changePct24h": 0.52,
+        "marketCapUsd": 8945884986,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces converged to push Bitcoin to its highest level in two weeks. First, the semiconductor sector — which had been a headwind for risk assets — turned supportive again, lifting the broader tech-adjacent trade that Bitcoin often moves with. Second, and more concretely, Bitcoin ETFs recorded a fifth straight day of net inflows, the longest unbroken streak since April. That kind of sustained institutional buying tends to reduce the available supply on exchanges and provides a floor under prices.\n\nEthereum outperformed Bitcoin on the day, rising 4.5% to $1,938.75. No single catalyst drove the gap, but Ethereum has historically caught a stronger bid when Bitcoin breaks to new short-term highs and traders rotate into larger-cap alternatives.\n\nXRP gained 4.1% to $1.13. Traders were watching a technical pattern — a price consolidation shaped like a triangle — that some read as a setup for a move toward $1.35. Whether that plays out depends on whether Bitcoin's momentum holds.\n\nOne notable tension: the Fear & Greed index sits at 25, firmly in Fear territory. That reading reflects the broader mood of the past several weeks, not just today. It means the rally is happening against a backdrop of genuine caution — which some market observers read as a healthier setup than a rally driven by euphoria, though the index alone doesn't tell you which way prices go next.",
+  "worthKnowing": [
+    "UK Parliament has opened a formal inquiry into whether banks are unfairly restricting access to financial services for crypto businesses — a process that could lead to new rules on how lenders treat the sector.",
+    "XRP traders are watching a technical triangle pattern that, if it breaks upward, would point toward a target near $1.35; the asset is up 4% today but has not yet broken through."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2341633196481,
+    "btcDominancePct": 56.6859,
+    "ethDominancePct": 9.9878,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "bitcoin-etf-inflows",
+    "btc-two-week-high",
+    "xrp-breakout",
+    "uk-crypto-banking",
+    "ethereum-rally",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
