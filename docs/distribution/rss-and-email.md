@@ -34,7 +34,7 @@ Both routes render from shared distribution helpers in `lib/reports/distribution
 Set these environment variables in Vercel:
 
 - `NEXT_PUBLIC_SITE_URL` (required for production canonical links)
-  - Example: `https://weeklycryptopulse.com`
+  - Example: `https://weekly-crypto-pulse.com`
 
 No secrets are required for RSS/email distribution.
 

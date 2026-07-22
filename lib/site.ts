@@ -11,9 +11,9 @@ const monthlyBundlePaymentLink = sanitizeOptionalEnvValue(process.env.STRIPE_PAY
 
 export const SITE_NAME = 'Crypto Pulse';
 
-// Placeholder pending domain registration post-R2.1.
-// This is the canonical source for the public URL — update here only.
-export const SITE_URL = 'https://crypto-pulse.com';
+// This is the canonical source for the public URL used in email composers — update here only.
+// Web-facing surfaces (sitemap, robots, RSS, metadata) read from NEXT_PUBLIC_SITE_URL env var via lib/seo.ts.
+export const SITE_URL = 'https://weekly-crypto-pulse.com';
 
 // Cadence prefixes for per-artifact metadata (used in R2.1 for <title> and OG title per report).
 // Not used in site chrome — site chrome uses SITE_NAME exclusively.
