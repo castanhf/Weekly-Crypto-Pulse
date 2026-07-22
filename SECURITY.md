@@ -4,7 +4,7 @@
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Email the report to: **castanhf@mail.gvsu.edu**
+Email the report to: **filcastanheiradev@gmail.com**
 
 Include:
 - A description of the vulnerability
