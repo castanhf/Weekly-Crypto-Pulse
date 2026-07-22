@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-22T08:37:32.548Z",
+  "publishedAt": "2026-07-22",
+  "slug": "2026-07-22-bitcoin-drifts-below-66000-as-movement-labs-files-for-bankruptcy-and-t",
+  "headline": "Bitcoin drifts below $66,000 as Movement Labs files for bankruptcy and traders eye Alphabet earnings",
+  "summary": "Bitcoin held just under $66,000 on Tuesday as traders waited for Alphabet's earnings report to read the health of the broader AI and tech trade. Movement Labs, a crypto project that had already faced a token scandal, filed for Chapter 11 bankruptcy — the day's clearest negative headline. Hyperliquid fell 6.47% and Zcash dropped 5.33%, while most large-cap assets slipped less than 1.5%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 5.46,
+        "catalyst": "Rain rose 5.46% with no clear catalyst identified — no specific news or on-chain event was reported to explain the move.",
+        "priceUsd": 0.0148126,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -6.47,
+        "catalyst": "Hyperliquid fell 6.47% on the same day Movement Labs filed for Chapter 11 bankruptcy. No direct operational link between the two projects was reported; the researcher attributed the move to negative sentiment following the bankruptcy news, though the specific mechanism is unconfirmed.",
+        "priceUsd": 58.87,
+        "priceChange24hUsd": -3.81
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65994,
+        "changePct24h": -0.4,
+        "marketCapUsd": 1323751587802,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1920.92,
+        "changePct24h": -0.98,
+        "marketCapUsd": 231813122568,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184087186753,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 569.84,
+        "changePct24h": -1.26,
+        "marketCapUsd": 75874452386,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73179401723,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.13,
+        "changePct24h": 0.13,
+        "marketCapUsd": 70879459128,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77.33,
+        "changePct24h": -1.32,
+        "marketCapUsd": 45064803751,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3289,
+        "changePct24h": 0.77,
+        "marketCapUsd": 31203849109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.005,
+        "changePct24h": 0.48,
+        "marketCapUsd": 20314058647,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.87,
+        "changePct24h": -6.47,
+        "marketCapUsd": 13094697542,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0724,
+        "changePct24h": -1.51,
+        "marketCapUsd": 11239373590,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0148,
+        "changePct24h": 5.46,
+        "marketCapUsd": 10287657541,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9910413670,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.72,
+        "changePct24h": -0.06,
+        "marketCapUsd": 8942650109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 517.27,
+        "changePct24h": -5.33,
+        "marketCapUsd": 8685519186,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest story was Movement Labs filing for Chapter 11 bankruptcy — a project that had already drawn scrutiny over a token scandal earlier this year. The filing added a layer of unease to a market already sitting at a Fear & Greed reading of 33 (Fear). Bitcoin drifted 0.40% lower to just under $66,000, with traders holding back ahead of Alphabet's earnings report. Alphabet's results matter to crypto because they serve as a proxy for the health of the AI trade, which has been a significant driver of risk appetite across both tech equities and digital assets in recent months. Semiconductor stocks extended their rally and the Japanese yen hit a 40-year low against the dollar — both macro signals that traders were watching alongside the crypto-specific news. Hyperliquid fell 6.47% on the same day as the Movement Labs bankruptcy. No direct operational connection between the two was reported; the timing may be coincidental or reflect a broader sentiment shift, but no specific flow data or derivative positioning was cited to confirm a causal link. Zcash dropped 5.33% with no reported catalyst. Rain gained 5.46% with no clear fundamental driver identified. Most large-cap assets — Ethereum, Solana, BNB, Dogecoin — fell between 1% and 1.5%, consistent with a cautious, low-conviction session.",
+  "worthKnowing": [
+    "Movement Labs filed for Chapter 11 bankruptcy on July 22, months after a token scandal that had already damaged the project's credibility.",
+    "The Digital Chamber, a crypto industry lobbying group, sued the state of Illinois to block a new digital asset tax — a case that could set a precedent for how US states tax crypto holdings.",
+    "Bitcoin's price near $66,000 is being watched alongside semiconductor stocks and the Japanese yen, both of which moved meaningfully on July 22 and are seen as indicators of broader risk appetite."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2331314308285,
+    "btcDominancePct": 56.7851,
+    "ethDominancePct": 9.9435,
+    "fearGreedIndex": 33
+  },
+  "tags": [
+    "movement-labs-bankruptcy",
+    "hyperliquid",
+    "alphabet-earnings",
+    "illinois-digital-asset-tax",
+    "bitcoin-price",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
