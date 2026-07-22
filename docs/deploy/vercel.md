@@ -77,7 +77,7 @@ Set variables in **Project Settings > Environment Variables**. Configure per env
 These are embedded in client bundles. Never store secrets in `NEXT_PUBLIC_*` values.
 
 - `NEXT_PUBLIC_SITE_URL`
-  - Production: canonical site URL (example: `https://weeklycryptopulse.com`)
+  - Production: canonical site URL (example: `https://weekly-crypto-pulse.com`)
   - Preview: optional preview URL if needed for preview-specific behavior
 - `STRIPE_PAYMENT_LINK_WEEKLY_PRO`
   - Stripe Payment Link URL for **Weekly Crypto Pulse Pro — Single Issue** CTA (safe public URL, not a secret key)
