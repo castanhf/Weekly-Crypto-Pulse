@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-23T08:38:07.845Z",
+  "publishedAt": "2026-07-23",
+  "slug": "2026-07-23-bitcoin-slips-as-35m-in-protocol-hacks-rattle-sentiment-and-clarity-ac",
+  "headline": "Bitcoin slips as $35M in protocol hacks rattle sentiment and Clarity Act odds fall to 38%",
+  "summary": "A rough 24 hours for crypto security: Bitcoin and Ethereum-linked protocols lost $35 million to multiple attacks, and a separate $24 million exploit drained an Arbitrum-based trading platform. Bitcoin fell 0.8% to $65,599 against that backdrop, while the Fear & Greed index sits at 31 — firmly in fear territory. The bigger macro story is the Clarity Act, the proposed US crypto regulatory framework, whose passage odds have slipped to 38% as rising oil prices and interest rates weigh on risk appetite.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLFI",
+        "name": "World Liberty Financial",
+        "changePct24h": 9.3,
+        "catalyst": "Mirae Group's acquisition of Korbit, South Korea's oldest crypto exchange, lifted sentiment around institutional crypto adoption — and World Liberty Financial caught a bid in the resulting enthusiasm.",
+        "priceUsd": 0.062847,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -7.6,
+        "catalyst": "Multiple attacks on Bitcoin and Ethereum-linked protocols within hours of each other soured sentiment broadly, and Rain bore the brunt of the selloff among smaller assets.",
+        "priceUsd": 0.01428058,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65599,
+        "changePct24h": -0.8,
+        "marketCapUsd": 1315922636053,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1922.34,
+        "changePct24h": -0.1,
+        "marketCapUsd": 231992706537,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 184064894590,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 570.84,
+        "changePct24h": 0.3,
+        "marketCapUsd": 76017025538,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 73123813877,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.14,
+        "changePct24h": 0.1,
+        "marketCapUsd": 70937416333,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77.38,
+        "changePct24h": -0.1,
+        "marketCapUsd": 45102341448,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3274,
+        "changePct24h": 0.1,
+        "marketCapUsd": 31063131994,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.003,
+        "changePct24h": -0.3,
+        "marketCapUsd": 20375160068,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 57.18,
+        "changePct24h": -0.5,
+        "marketCapUsd": 16808499654,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.96,
+        "changePct24h": 0.1,
+        "marketCapUsd": 13116068095,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0724,
+        "changePct24h": -0.2,
+        "marketCapUsd": 11239249046,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9929409329,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0143,
+        "changePct24h": -7.6,
+        "marketCapUsd": 9918186962,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.72,
+        "changePct24h": -0.1,
+        "marketCapUsd": 8942352629,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story is security, not price. Multiple attacks on Bitcoin and Ethereum-linked protocols drained roughly $35 million in a matter of hours — a reminder that DeFi (decentralized finance, meaning financial applications built on public blockchains) remains a target-rich environment. A separate exploit on AFX Trade, an Arbitrum-based platform, added another $24 million to the day's losses after attackers compromised the bridge keys that control fund transfers between networks. Together, these incidents pushed sentiment firmly into fear territory, with the Fear & Greed index reading 31 out of 100.\n\nBitcoin's 0.8% decline to $65,599 also reflects a deteriorating macro backdrop. Oil prices and interest rates both rose on the day, reducing appetite for risk assets broadly — crypto included. The Clarity Act, the proposed US framework for regulating digital assets, saw its passage odds fall to 38% according to prediction markets, removing a potential near-term catalyst that some traders had been pricing in.\n\nXRP barely moved (+0.10%), though the underlying dynamic is worth noting: large holders accumulated while smaller retail participants sold — a pattern that sometimes precedes sharper moves in either direction, though no clear directional signal emerged today. The one bright spot was World Liberty Financial, which jumped 9.3% after Mirae Group — a South Korean financial giant managing roughly $1 trillion in assets — acquired Korbit, South Korea's oldest crypto exchange, signaling that institutional appetite for the sector remains intact even on a difficult day.",
+  "worthKnowing": [
+    "Mirae Group, one of South Korea's largest financial conglomerates with about $1 trillion in assets under management, acquired Korbit — South Korea's oldest crypto exchange — marking one of the most significant institutional entries into the country's crypto market.",
+    "AFX Trade, an Arbitrum-based trading platform, lost $24 million after attackers compromised the bridge keys controlling its cross-chain fund transfers — a distinct incident from the broader $35 million in protocol attacks reported the same day.",
+    "XRP whale wallets accumulated the token while smaller holders sold, according to on-chain data — a divergence in holder behavior that analysts typically flag as a shift in market structure, though the price barely moved on the day."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2323256749089,
+    "btcDominancePct": 56.6314,
+    "ethDominancePct": 9.9872,
+    "fearGreedIndex": 31
+  },
+  "tags": [
+    "protocol-exploits",
+    "clarity-act",
+    "mirae-korbit",
+    "defi-security",
+    "xrp-whale-accumulation",
+    "bitcoin-macro"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
