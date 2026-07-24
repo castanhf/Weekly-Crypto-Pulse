@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-24T08:34:16.705Z",
+  "publishedAt": "2026-07-24",
+  "slug": "2026-07-24-bitcoin-holds-near-65k-as-ai-sector-selloff-rattles-tech-stocks-but-sp",
+  "headline": "Bitcoin holds near $65K as AI sector selloff rattles tech stocks but spares crypto",
+  "summary": "A $800 billion wipeout in AI-linked equities failed to drag Bitcoin meaningfully lower — BTC ended the day down just 0.32% near $65,366, while the broader crypto market absorbed the shock with modest losses. Ethereum and Dogecoin bore the brunt, falling 1.66% and 3.48% respectively as investors digested disappointing tech earnings. The day's story is less about crypto weakness and more about what didn't happen: a major equity selloff that left Bitcoin largely standing.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": 3.72,
+        "catalyst": "Figure Heloc gained 3.72% as it attracted buying interest even as the broader market pulled back, suggesting idiosyncratic demand rather than a macro tailwind.",
+        "priceUsd": 1.039,
+        "priceChange24hUsd": 0.04
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLFI",
+        "name": "World Liberty Financial",
+        "changePct24h": -10.28,
+        "catalyst": "World Liberty Financial dropped 10.28% as negative sentiment from disappointing tech earnings spilled into higher-risk, lower-liquidity tokens.",
+        "priceUsd": 0.056337,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65366,
+        "changePct24h": -0.32,
+        "marketCapUsd": 1311238811994,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1889.97,
+        "changePct24h": -1.66,
+        "marketCapUsd": 228044253147,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184025880781,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 568.23,
+        "changePct24h": -0.41,
+        "marketCapUsd": 75666843134,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 72964220547,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.11,
+        "changePct24h": -1.94,
+        "marketCapUsd": 69514537084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.78,
+        "changePct24h": -2,
+        "marketCapUsd": 44167246675,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3309,
+        "changePct24h": 1.11,
+        "marketCapUsd": 31396305772,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 3.72,
+        "marketCapUsd": 21226242068,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.86,
+        "changePct24h": -0.13,
+        "marketCapUsd": 13093652009,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0698,
+        "changePct24h": -3.48,
+        "marketCapUsd": 10838515149,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9868946852,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0139,
+        "changePct24h": -2.59,
+        "marketCapUsd": 9662506601,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.59,
+        "changePct24h": -1.25,
+        "marketCapUsd": 8826490679,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 510.91,
+        "changePct24h": -0.75,
+        "marketCapUsd": 8578613938,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's dominant story was a sharp selloff in AI-linked technology stocks — roughly $800 billion in equity market value erased — triggered by earnings reports that fell short of expectations from major tech companies. In past episodes of equity stress, crypto has often moved in lockstep with risk assets. Today it largely didn't. Bitcoin slipped just 0.32% to $65,366, a notably small move given the scale of the equity drawdown. That divergence is worth noting: the Fear & Greed index sits at 28 (Fear), so the market is not complacent, but BTC held its ground.\n\nEthereum and Dogecoin were the exceptions. ETH fell 1.66% to $1,889.97 and DOGE dropped 3.48% to $0.0698 — both cited directly in live market coverage as leading the pullback. Solana also slid 2.00% to $75.78 and XRP fell 1.94% to $1.11. These assets tend to carry more speculative positioning than Bitcoin, making them more sensitive to shifts in broader risk appetite when earnings disappoint.\n\nTRON bucked the trend with a 1.11% gain, though no specific catalyst was reported. World Liberty Financial, the day's biggest loser at -10.28%, is a lower-liquidity token where negative macro sentiment tends to hit harder and faster than in large-cap assets.",
+  "worthKnowing": [
+    "Ripple's RLUSD stablecoin received two new integration boosts today even as its 24-hour transfer volume fell 25%, a split signal on whether the product is gaining structural adoption or losing transactional momentum.",
+    "South Korean financial group Mirae Asset announced plans to transform crypto exchange Korbit into a broader digital asset platform, a move that could expand regulated crypto access in one of Asia's most active retail markets.",
+    "Dogecoin and Ethereum led losses among large-cap assets today, with live market coverage attributing the moves directly to investor reaction to tech earnings — a reminder that crypto's correlation with equities is selective, not constant."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2308211635329,
+    "btcDominancePct": 56.7667,
+    "ethDominancePct": 9.8716,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "ai-selloff",
+    "tech-earnings",
+    "bitcoin-resilience",
+    "dogecoin",
+    "ripple-rlusd",
+    "world-liberty-financial"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
