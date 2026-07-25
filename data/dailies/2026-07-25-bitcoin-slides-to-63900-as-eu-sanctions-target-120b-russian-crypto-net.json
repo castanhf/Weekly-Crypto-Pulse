@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-25T08:13:37.830Z",
+  "publishedAt": "2026-07-25",
+  "slug": "2026-07-25-bitcoin-slides-to-63900-as-eu-sanctions-target-120b-russian-crypto-net",
+  "headline": "Bitcoin slides to $63,900 as EU sanctions target $120B Russian crypto network",
+  "summary": "A broad market selloff pushed Bitcoin down 2.3% to $63,892 and Ethereum down 1.9% to $1,853, with the Fear & Greed index sitting at 27 — deep in fear territory. The day's clearest catalyst was the EU's 21st sanctions package, which directly targets a $120 billion Russian crypto network and raised fresh questions about regulatory reach across the industry. A $5 billion cluster in Bitcoin options is drawing attention as a potential floor signal, but it hasn't stopped the bleeding today.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 4.4,
+        "catalyst": "Growing interest in privacy-focused cryptocurrencies amid heightened regulatory scrutiny — particularly the EU's sweeping sanctions targeting crypto networks — drove traders toward assets designed to obscure transaction trails.",
+        "priceUsd": 370.01,
+        "priceChange24hUsd": 16.28
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -6.5,
+        "catalyst": "NEAR fell harder than the broader market, with no specific protocol catalyst — the decline appears to reflect amplified selling pressure as Bitcoin and Ethereum losses prompted traders to exit smaller-cap positions first.",
+        "priceUsd": 1.78,
+        "priceChange24hUsd": -0.12
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63892,
+        "changePct24h": -2.3,
+        "marketCapUsd": 1281740161384,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1853.58,
+        "changePct24h": -1.9,
+        "marketCapUsd": 223673244203,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 184012677538,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 564.11,
+        "changePct24h": -0.8,
+        "marketCapUsd": 75120544103,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 72573264222,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.086,
+        "changePct24h": -2.5,
+        "marketCapUsd": 67919605771,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.65,
+        "changePct24h": -2.8,
+        "marketCapUsd": 42929305813,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3293,
+        "changePct24h": -0.3,
+        "marketCapUsd": 31244353740,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.017,
+        "changePct24h": -2.2,
+        "marketCapUsd": 20822595075,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 55.71,
+        "changePct24h": -1.7,
+        "marketCapUsd": 16377234791,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.02,
+        "changePct24h": -2.8,
+        "marketCapUsd": 12679736898,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0692,
+        "changePct24h": -0.5,
+        "marketCapUsd": 10745859608,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9858646933,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0141,
+        "changePct24h": 0.8,
+        "marketCapUsd": 9755923686,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.7,
+        "changePct24h": 1,
+        "marketCapUsd": 8925585864,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The EU's 21st sanctions package — its most aggressive yet — directly targets a $120 billion Russian crypto network, and the announcement landed with weight across the market. Sanctions of this scale force exchanges and custodians to review counterparty exposure, and the uncertainty that follows tends to push risk-averse participants to the sidelines. Bitcoin fell 2.3% to $63,892, Solana and Hyperliquid each dropped 2.8%, and XRP shed 2.5%. The Fear & Greed index sits at 27, firmly in fear territory — a reading that reflects sustained selling pressure rather than a single-day panic.\n\nMonero was the notable exception, rising 4.4% against the trend. Privacy coins tend to attract fresh interest precisely when regulators tighten their grip on traceable networks — the EU sanctions announcement appears to have reinforced that dynamic.\n\nOne counterpoint to the bearish tone: a $5 billion cluster has formed in Bitcoin options at nearby strike prices, which options traders typically read as a sign that large participants are positioning for a floor or a bounce. That positioning hasn't reversed today's losses, but it suggests not everyone in the market is positioned for further decline. Strategy (formerly MicroStrategy) also overhauled its internal Bitcoin performance metrics this week — an acknowledgment from one of BTC's most prominent corporate holders that the bear market is real and that how they measure success needs to reflect it.",
+  "worthKnowing": [
+    "The EU's 21st sanctions package specifically names a $120 billion Russian crypto network, marking the first time a sanctions regime has targeted a crypto infrastructure cluster of this scale.",
+    "The White House urged Senate Democrats to accept the compromise reached on Trump's crypto limits, signaling the administration wants to move the stablecoin and digital asset regulatory framework forward rather than relitigate it.",
+    "Michael Saylor's Strategy overhauled its Bitcoin performance metrics this week, replacing older benchmarks with ones designed to account for a prolonged bear market — a notable shift in how the company publicly frames its BTC holdings.",
+    "Brazilian farmers tokenized dairy cows as collateral to secure loans, bypassing traditional bank lending limits — an early real-world example of blockchain-based asset tokenization reaching agricultural finance."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2266957431089,
+    "btcDominancePct": 56.5324,
+    "ethDominancePct": 9.8579,
+    "fearGreedIndex": 27
+  },
+  "tags": [
+    "eu-sanctions",
+    "russia-crypto",
+    "bitcoin-options",
+    "monero",
+    "near-protocol",
+    "strategy-bitcoin-metrics"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
