@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-26T08:33:52.281Z",
+  "publishedAt": "2026-07-26",
+  "slug": "2026-07-26-shiba-inu-surges-33-as-south-korean-traders-fuel-a-mystery-rally",
+  "headline": "Shiba Inu surges 33% as South Korean traders fuel a mystery rally",
+  "summary": "Shiba Inu was the day's standout story, jumping 33.5% on a wave of buying from South Korean exchanges — no clear fundamental catalyst has emerged, making this a classic retail-driven momentum spike. The broader market was quiet by comparison: Bitcoin edged up 0.6% to $64,347, Ethereum gained 1.2%, and most top-15 assets moved less than 2%. Fear & Greed sits at 26 (Fear), a reminder that the wider market mood remains cautious even as individual tokens catch fire.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "SHIB",
+        "name": "Shiba Inu",
+        "changePct24h": 33.5,
+        "catalyst": "South Korean traders drove a sharp, unexplained surge in SHIB volume, pushing the token up 33.5% with no clear fundamental news behind the move.",
+        "priceUsd": 0.00000566,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLFI",
+        "name": "World Liberty Financial",
+        "changePct24h": -2.5,
+        "catalyst": "No specific catalyst identified; the token drifted lower against a broadly flat market.",
+        "priceUsd": 0.055436,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64347,
+        "changePct24h": 0.6,
+        "marketCapUsd": 1290880940217,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1879.89,
+        "changePct24h": 1.2,
+        "marketCapUsd": 226867469982,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 184036685391,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 571.07,
+        "changePct24h": 1.2,
+        "marketCapUsd": 76048230808,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 72543043283,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.098,
+        "changePct24h": 0.8,
+        "marketCapUsd": 68690073399,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.85,
+        "changePct24h": 1.1,
+        "marketCapUsd": 43633653451,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3305,
+        "changePct24h": 0.5,
+        "marketCapUsd": 31353328270,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 2.9,
+        "marketCapUsd": 21189353411,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 56.15,
+        "changePct24h": 0.7,
+        "marketCapUsd": 16505484367,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.44,
+        "changePct24h": 2.4,
+        "marketCapUsd": 13000920771,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0736,
+        "changePct24h": 5.5,
+        "marketCapUsd": 11417155052,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9855456900,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0138,
+        "changePct24h": -1.2,
+        "marketCapUsd": 9608190101,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.86,
+        "changePct24h": 0.6,
+        "marketCapUsd": 9072865940,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day belonged to Shiba Inu. South Korean exchanges — historically a hotspot for retail-driven momentum trades — saw a sharp spike in SHIB volume that pushed the token up 33.5% with no identifiable fundamental trigger. This is a pattern the Korean market has produced before: concentrated retail interest amplifies a move quickly, and the absence of a clear catalyst is itself part of the story. Whether the buying sustains or reverses depends on whether broader retail participation follows; for now it reads as a localized surge.\n\nEverything else was quiet. Bitcoin added 0.6% to close around $64,347, Ethereum gained 1.2% to $1,879, and most of the top 15 moved within a 1–2% band. Dogecoin was a secondary mover, up 5.5%, which often tracks alongside SHIB during meme-token momentum episodes — the two assets share a retail audience. The Fear & Greed index at 26 (Fear) reflects the broader market's cautious posture: even with individual tokens spiking, aggregate sentiment is not enthusiastic. That disconnect — a fear-dominated market producing a 33% single-day winner — is typical of late-cycle retail pockets of activity rather than broad-based optimism.",
+  "worthKnowing": [
+    "Crypto exchange BitMart announced it will shut down after nine years of operation; its native BMX token crashed 58% on the news.",
+    "Russia's largest bank, Sberbank, plans to build crypto trading infrastructure by December, a move that would bring institutional-grade access to Russian retail investors.",
+    "North Korea arrested hackers accused of laundering funds stolen from a domestic bank through crypto — an unusual case of the country prosecuting its own cybercriminals."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2286779316481,
+    "btcDominancePct": 56.4437,
+    "ethDominancePct": 9.9186,
+    "fearGreedIndex": 26
+  },
+  "tags": [
+    "shiba-inu",
+    "korean-market",
+    "meme-tokens",
+    "bitmart-shutdown",
+    "sberbank-crypto",
+    "north-korea-crypto"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-20-ethereum-outperforms-bitcoin-as-market-sentiment-stabilizes"
+  }
+}
