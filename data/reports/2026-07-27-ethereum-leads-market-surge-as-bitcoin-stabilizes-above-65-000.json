@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "weekly@1.3",
+  "generatedAt": "2026-07-27T06:00:00.000Z",
+  "report": {
+    "metadata": {
+      "title": "Weekly Crypto Pulse: Ethereum leads market surge as Bitcoin stabilizes above $65,000",
+      "slug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000",
+      "publishedAt": "2026-07-27",
+      "weekLabel": "Week of Jul 27, 2026",
+      "summary": "This week, the total cryptocurrency market capitalization reached $2.316 trillion, with Bitcoin's dominance at 56.44% and Ethereum's at 10.21%. Ethereum outperformed Bitcoin with a 5.50% increase over the past week, while Bitcoin rose by 1.40%, reflecting a cautious optimism in the market despite ongoing regulatory challenges.",
+      "tags": [
+        "crypto",
+        "weekly",
+        "market analysis",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "regime": "transition",
+    "marketSnapshot": {
+      "totalMarketCapUsd": 2316000000,
+      "btcDominancePct": 56.44,
+      "ethDominancePct": 10.21,
+      "fearGreedIndex": 30
+    },
+    "movers": [
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "changePct7d": 5.5,
+        "catalyst": "Ethereum's price increase was driven by positive market sentiment and increased trading activity, positioning it as a leader in the current market rally."
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "changePct7d": 1.6,
+        "catalyst": "XRP's price movement was supported by ongoing developments in its legal battles and a general uptick in altcoin interest."
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "changePct7d": 1.1,
+        "catalyst": "Dogecoin saw a modest increase as retail interest in meme coins remained steady amidst broader market movements."
+      }
+    ],
+    "sections": [
+      {
+        "id": "macro",
+        "heading": "Market sentiment shows cautious optimism",
+        "body": "The cryptocurrency market has experienced a notable uptick this week, with the total market capitalization climbing to $2.316 trillion. This growth is accompanied by a slight increase in Bitcoin's dominance to 56.44%, reflecting a stable interest in the leading cryptocurrency. The Fear & Greed Index remains in the 'fear' zone at 30, indicating that while there is some optimism, caution prevails among investors. The backdrop of regulatory scrutiny continues to loom, particularly with discussions around the Clarity Act and its implications for the industry. Despite these challenges, positive developments, such as Ethereum's performance and increased trading volumes, suggest a potential shift in market dynamics.",
+        "highlights": [
+          "The total cryptocurrency market cap increased to $2.316 trillion this week.",
+          "Bitcoin's dominance rose slightly to 56.44%, indicating stable interest.",
+          "The Fear & Greed Index remains at 30, reflecting cautious sentiment.",
+          "Regulatory discussions continue to impact market perceptions."
+        ]
+      },
+      {
+        "id": "btc-eth",
+        "heading": "Ethereum outperforms Bitcoin amid market stabilization",
+        "body": "Ethereum has shown significant strength this week, rising by 5.50% and leading the market's upward momentum. In contrast, Bitcoin's price increased by 1.40%, stabilizing above the $65,000 mark. This divergence in performance highlights Ethereum's growing appeal, particularly as it benefits from increased trading activity and positive sentiment surrounding its use cases. The market appears to be reacting favorably to Ethereum's developments, while Bitcoin remains a solid anchor in the market. The recent news of Bitcoin's resilience amidst geopolitical tensions, particularly between the U.S. and Iran, has also contributed to its stability.",
+        "highlights": [
+          "Ethereum surged by 5.50%, outperforming Bitcoin this week.",
+          "Bitcoin stabilized above $65,000, reflecting investor confidence.",
+          "Increased trading activity has positively impacted Ethereum's price.",
+          "Geopolitical factors have contributed to Bitcoin's stable performance."
+        ]
+      },
+      {
+        "id": "outlook",
+        "heading": "Looking ahead: potential for continued volatility",
+        "body": "As the market transitions, investors should remain vigilant regarding potential volatility driven by regulatory developments and macroeconomic factors. The current regime is classified as 'transition', indicating that while there is optimism, the market is still susceptible to shifts in sentiment. Key risks include ongoing regulatory scrutiny and potential market reactions to geopolitical events. Investors may want to monitor Ethereum's performance closely, as its strength could signal broader market trends. Additionally, Bitcoin's ability to maintain its position above $65,000 will be crucial in determining the market's trajectory in the coming weeks.",
+        "highlights": [
+          "The market is currently in a 'transition' regime, indicating potential volatility.",
+          "Regulatory developments will continue to impact market sentiment.",
+          "Ethereum's performance may signal broader trends in the market.",
+          "Bitcoin's stability above $65,000 is critical for future market direction."
+        ]
+      }
+    ],
+    "signals": {
+      "thesis": [
+        "Ethereum's recent performance may indicate a shift in market leadership.",
+        "Investors should monitor regulatory developments closely as they could impact sentiment.",
+        "Bitcoin's ability to hold above $65,000 is crucial for maintaining bullish momentum.",
+        "Continued interest in altcoins could drive further market diversification."
+      ],
+      "riskChecklist": [
+        "Regulatory scrutiny could lead to sudden market shifts.",
+        "Geopolitical tensions may impact investor confidence.",
+        "Market sentiment remains fragile despite recent gains.",
+        "Increased volatility could arise from macroeconomic factors.",
+        "Liquidity concerns in the altcoin market could affect price stability."
+      ],
+      "watchlistLevels": [
+        {
+          "asset": "BTC",
+          "level": "$65,000",
+          "context": "Bitcoin's ability to maintain this level is essential for sustaining bullish sentiment."
+        },
+        {
+          "asset": "ETH",
+          "level": "$1,900",
+          "context": "A breakout above this level could signal further upward momentum for Ethereum."
+        }
+      ],
+      "changedSinceLastWeek": [
+        "Total market capitalization increased from $2.274 trillion to $2.316 trillion.",
+        "Ethereum's dominance rose from 9.85% to 10.21%, reflecting its strong performance.",
+        "Bitcoin's price stabilized above $65,000, contrasting with previous fluctuations."
+      ]
+    },
+    "plainspokenOpening": {
+      "headline": "Ethereum shines as Bitcoin holds steady above $65,000",
+      "body": "This week, the cryptocurrency market saw a positive shift, with total market capitalization reaching $2.316 trillion. Ethereum led the charge, rising 5.50% to $1,961, while Bitcoin increased by 1.40% to $65,210. The Fear & Greed Index remains in the 'fear' zone at 30, indicating cautious optimism among investors. Despite ongoing regulatory concerns, Bitcoin's stability above $65,000 reflects a solid foundation, while Ethereum's performance suggests a growing interest in altcoins. As the market navigates these dynamics, investors will be watching closely for any signs of volatility or shifts in sentiment."
+    },
+    "capitalFlows": {
+      "topChainsTvl": [
+        {
+          "chain": "Ethereum",
+          "tvlUsd": 42330271597,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Solana",
+          "tvlUsd": 4921837693,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Tron",
+          "tvlUsd": 4884050121,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "BSC",
+          "tvlUsd": 4882601401,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Base",
+          "tvlUsd": 4613055821,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Bitcoin",
+          "tvlUsd": 4269670579,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Provenance",
+          "tvlUsd": 1485816051,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Hyperliquid L1",
+          "tvlUsd": 1265290451,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Arbitrum",
+          "tvlUsd": 1233444590,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Polygon",
+          "tvlUsd": 857624810,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Monad",
+          "tvlUsd": 753379339,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Plasma",
+          "tvlUsd": 613512647,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Avalanche",
+          "tvlUsd": 434804288,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Sui",
+          "tvlUsd": 432843340,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        },
+        {
+          "chain": "Robinhood Chain",
+          "tvlUsd": 337714340,
+          "changePct24h": 0,
+          "changeUsd24h": 0
+        }
+      ],
+      "notableMovements": []
+    },
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Weakest gainers"
+    }
+  }
+}
