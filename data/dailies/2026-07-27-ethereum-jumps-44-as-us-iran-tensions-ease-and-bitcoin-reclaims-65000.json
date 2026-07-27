@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-27T10:00:50.737Z",
+  "publishedAt": "2026-07-27",
+  "slug": "2026-07-27-ethereum-jumps-44-as-us-iran-tensions-ease-and-bitcoin-reclaims-65000",
+  "headline": "Ethereum jumps 4.4% as U.S.-Iran tensions ease and Bitcoin reclaims $65,000",
+  "summary": "Easing geopolitical pressure between the U.S. and Iran — which sent oil down 5% — gave crypto markets room to breathe. Ethereum led the recovery with a 4.4% gain, its strongest single-day move in weeks, while Bitcoin climbed back above $65,000. The day's outlier on the downside was Shiba Inu, which shed 11% in a sharp reversal after a 33% surge the previous session.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AAVE",
+        "name": "Aave",
+        "changePct24h": 8.6,
+        "catalyst": "Aave surged 8.6% as Ethereum's strong session lifted confidence in DeFi protocols broadly, with Bitcoin's return above $65,000 adding to the risk-on tone.",
+        "priceUsd": 101.12,
+        "priceChange24hUsd": 8.7
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "SHIB",
+        "name": "Shiba Inu",
+        "changePct24h": -11,
+        "catalyst": "Shiba Inu fell 11% in a sharp reversal following a 33% rally the prior session — profit-taking after outsized gains is the most straightforward explanation.",
+        "priceUsd": 0.00000495,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65219,
+        "changePct24h": 1.2,
+        "marketCapUsd": 1308391069298,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1963.93,
+        "changePct24h": 4.4,
+        "marketCapUsd": 237018279178,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 183995776691,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 572.08,
+        "changePct24h": 0.1,
+        "marketCapUsd": 76187635858,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 72478325793,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.11,
+        "changePct24h": 0.8,
+        "marketCapUsd": 69259191801,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.44,
+        "changePct24h": 1.9,
+        "marketCapUsd": 44570014869,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3313,
+        "changePct24h": 0.2,
+        "marketCapUsd": 31435984665,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 2.9,
+        "marketCapUsd": 21189353411,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 57.22,
+        "changePct24h": 1.8,
+        "marketCapUsd": 16822271611,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.07,
+        "changePct24h": 2.6,
+        "marketCapUsd": 13364610843,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0726,
+        "changePct24h": -1,
+        "marketCapUsd": 11275813261,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 10082255612,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.014,
+        "changePct24h": 1.5,
+        "marketCapUsd": 9742840149,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.72,
+        "changePct24h": -1.5,
+        "marketCapUsd": 8944040375,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was geopolitical: reports that the U.S. and Iran stepped back from escalation sent oil prices down 5%, reducing the broader risk-off pressure that had been weighing on speculative assets. Crypto markets read that as a green light. Bitcoin climbed back above $65,000 — a level it had lost earlier in the week — finishing up 1.2%. Ethereum moved more decisively, gaining 4.4% to approach $1,964, outpacing Bitcoin by a wide margin and pulling the broader altcoin market with it. DeFi tokens were the clearest beneficiaries of Ethereum's session: Aave gained 8.6%, the day's biggest mover among tracked assets, as traders rotated into DeFi exposure on the back of ETH's strength. Solana added 1.9% and Hyperliquid rose 2.6%, both consistent with a broad risk-on tone rather than asset-specific catalysts. On the other side, Shiba Inu fell 11% — but that move reads as a hangover from the prior session's 33% spike rather than a response to today's news. Sharp reversals after outsized meme-asset rallies are common, and the Fear & Greed index sitting at 30 (Fear) suggests the broader market remains cautious despite today's recovery. The backdrop is not uniformly positive: cloud storage firm Storj filed for Chapter 11, extending what has been a difficult stretch for smaller crypto-adjacent businesses.",
+  "worthKnowing": [
+    "Cloud storage firm Storj filed for Chapter 11 bankruptcy, with its token sliding 16% — the latest in a string of crypto-sector failures this week.",
+    "Coinbase CEO Brian Armstrong highlighted Base, the company's Ethereum layer-2 network, after it processed over 100 million AI-agent payments — a milestone Armstrong framed as evidence of agentic finance gaining traction.",
+    "BitMart, a smaller exchange that announced a wind-down, saw withdrawals slow noticeably — a pattern that has historically preceded access restrictions at troubled platforms."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2318889447527,
+    "btcDominancePct": 56.4423,
+    "ethDominancePct": 10.2287,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "ethereum-rally",
+    "geopolitical-catalyst",
+    "aave",
+    "shiba-inu-reversal",
+    "storj-bankruptcy",
+    "defi",
+    "base-network"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
