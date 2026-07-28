@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-28T08:43:12.601Z",
+  "publishedAt": "2026-07-28",
+  "slug": "2026-07-28-bitcoin-slides-3-as-koreas-kospi-plunges-10-and-global-markets-sell-of",
+  "headline": "Bitcoin slides 3% as Korea's Kospi plunges 10% and global markets sell off",
+  "summary": "A sharp drop in South Korea's Kospi stock index — down 10% in a single session — rippled through crypto markets, pulling Bitcoin down 3% to $63,411 and Ethereum down 4.3% to $1,881. The sell-off was broad: nearly every major asset in the top 15 finished in the red, with Hyperliquid and NEAR Protocol among the hardest hit. The Senate's decision to shelve the Clarity Act stablecoin bill added a layer of regulatory uncertainty to an already difficult day.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLFI",
+        "name": "World Liberty Financial",
+        "changePct24h": 0.8,
+        "catalyst": "Held up against the broader sell-off with a marginal 0.80% gain; no specific catalyst identified.",
+        "priceUsd": 0.054631,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -9.5,
+        "catalyst": "NEAR Protocol's 9.50% drop reflects amplified selling pressure on mid-cap altcoins during the broader market decline, with no project-specific catalyst identified.",
+        "priceUsd": 1.68,
+        "priceChange24hUsd": -0.16
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63411,
+        "changePct24h": -3,
+        "marketCapUsd": 1271782441403,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1881.94,
+        "changePct24h": -4.3,
+        "marketCapUsd": 227037764326,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0,
+        "marketCapUsd": 183915846067,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 565.07,
+        "changePct24h": -1.7,
+        "marketCapUsd": 75228264983,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72369453084,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.055,
+        "changePct24h": -4.9,
+        "marketCapUsd": 65965874761,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.25,
+        "changePct24h": -4.5,
+        "marketCapUsd": 42700567453,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3257,
+        "changePct24h": -2.1,
+        "marketCapUsd": 30909817364,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.032,
+        "changePct24h": 0.2,
+        "marketCapUsd": 21150345744,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 55.42,
+        "changePct24h": -3.4,
+        "marketCapUsd": 16288648394,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.24,
+        "changePct24h": -8,
+        "marketCapUsd": 12272032113,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0702,
+        "changePct24h": -3.9,
+        "marketCapUsd": 10891109496,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9964868284,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0136,
+        "changePct24h": -2.8,
+        "marketCapUsd": 9472126993,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.77,
+        "changePct24h": 0.5,
+        "marketCapUsd": 8987037330,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver came from outside crypto: South Korea's Kospi stock index fell 10% in a single session, triggering a wave of risk-off selling that swept through global markets. Bitcoin had already slipped roughly 2% after the US market close, and the Asian session extended those losses. By the end of the 24-hour window, BTC was down 3% to $63,411 — its lowest level in recent weeks — while Ethereum fell harder, dropping 4.3% to $1,881.\n\nThe pattern across the top 15 was consistent: assets with higher risk profiles fell more. Hyperliquid dropped 8%, XRP lost 4.9%, and Solana shed 4.5%. NEAR Protocol, the day's biggest loser across the broader market, fell 9.5% — a move that appears to reflect the amplified selling pressure that mid-cap altcoins typically absorb when large-cap assets are already under stress. No NEAR-specific news explained the additional gap down.\n\nBitcoin did recover from its Asian session lows, which suggests some buyers stepped in at lower prices, but Nasdaq futures remained under pressure throughout the day, keeping a ceiling on any meaningful rebound. The Fear & Greed index sits at 29 — firmly in Fear territory — reflecting the cautious mood across the market. On the regulatory front, the Senate's decision to delay the Clarity Act removed a potential positive catalyst that some participants had been watching.",
+  "worthKnowing": [
+    "The US Senate has shelved the Clarity Act — a bill that would have established a framework for crypto regulation — as lawmakers prioritize other legislative business, leaving the regulatory timeline uncertain.",
+    "The CME and CFTC are in an active dispute over jurisdiction for onchain perpetual futures (contracts that let traders bet on asset prices without an expiry date), a fight that could reshape how crypto derivatives are regulated in the US.",
+    "Digital asset trading platform Uphold cut 17% of its global workforce, citing difficult market conditions — one of the more visible signs of industry contraction during the current downturn."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2254298935013,
+    "btcDominancePct": 56.382,
+    "ethDominancePct": 10.0652,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "kospi-selloff",
+    "global-risk-off",
+    "clarity-act-delayed",
+    "cftc-cme-perpetuals",
+    "uphold-layoffs",
+    "near-protocol"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
