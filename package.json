@@ -37,7 +37,7 @@
     "@vercel/analytics": "^2.0.1",
     "dotenv": "^17.4.2",
     "fast-xml-parser": "^5.10.1",
-    "next": "^16.2.10",
+    "next": "^16.2.12",
     "openai": "^6.48.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
