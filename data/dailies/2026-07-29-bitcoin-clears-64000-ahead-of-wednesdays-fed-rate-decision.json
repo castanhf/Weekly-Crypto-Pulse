@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-29T08:50:20.909Z",
+  "publishedAt": "2026-07-29",
+  "slug": "2026-07-29-bitcoin-clears-64000-ahead-of-wednesdays-fed-rate-decision",
+  "headline": "Bitcoin clears $64,000 ahead of Wednesday's Fed rate decision",
+  "summary": "Bitcoin pushed above $64,000 during Asian trading hours, pulling most of the top 20 assets higher as traders positioned ahead of a Federal Reserve decision due Wednesday. The Fed meeting is the day's real story — markets are split on whether the central bank will hold rates or hike, and that uncertainty is keeping the Fear & Greed index deep in fear territory at 29. Cardano led altcoin gains while NEAR Protocol slipped against the trend.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "changePct24h": 4.7,
+        "catalyst": "Cardano caught a bid alongside Bitcoin's move above $64,000, with altcoins broadly gaining as the larger-cap rally drew fresh capital into the market.",
+        "priceUsd": 0.164438,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -4.3,
+        "catalyst": "NEAR Protocol declined against the broader market trend, with traders pulling back from smaller-cap assets amid uncertainty over the Federal Reserve's upcoming rate decision.",
+        "priceUsd": 1.59,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64407,
+        "changePct24h": 1.4,
+        "marketCapUsd": 1291609385425,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1915.71,
+        "changePct24h": 1.7,
+        "marketCapUsd": 231079934918,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 183899235799,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 570.56,
+        "changePct24h": 1.1,
+        "marketCapUsd": 75948617493,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 72193108501,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.088,
+        "changePct24h": 2.8,
+        "marketCapUsd": 68016911060,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.11,
+        "changePct24h": 1,
+        "marketCapUsd": 42926059193,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3258,
+        "changePct24h": 0.3,
+        "marketCapUsd": 30924390467,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -3,
+        "marketCapUsd": 20590412112,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 56.31,
+        "changePct24h": 1.5,
+        "marketCapUsd": 16546819763,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 54.99,
+        "changePct24h": -0.1,
+        "marketCapUsd": 12208171919,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0708,
+        "changePct24h": 0.6,
+        "marketCapUsd": 10986447590,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9690847535,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0137,
+        "changePct24h": -0.1,
+        "marketCapUsd": 9523345671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.78,
+        "changePct24h": 0.1,
+        "marketCapUsd": 8996119574,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin crossed $64,000 during Asian trading hours, a level that has drawn attention as a near-term milestone, and the move lifted most of the top 20 assets. The immediate backdrop is Wednesday's Federal Reserve interest rate decision, which is dividing professional opinion sharply — hedge fund Citadel is positioned for a rate hike while many Bitcoin analysts expect the Fed to hold rates steady. That disagreement is visible in the Fear & Greed index sitting at 29, well into fear territory despite today's price gains; traders are moving cautiously rather than confidently.\n\nNotably, the rally held even as South Korea's chip sector suffered a significant market crash — a reminder that crypto's correlation with traditional equity markets is not constant. Bitcoin's resilience in that context drew commentary from analysts tracking cross-market flows.\n\nXRP was the strongest performer among the top 15, rising 2.8%, while Cardano led the broader altcoin field with a 4.7% gain. NEAR Protocol was the day's notable decliner, falling 4.3% as traders rotated away from smaller-cap assets ahead of the Fed announcement. The overall market cap sits at $2.28 trillion with Bitcoin holding 56.6% dominance, suggesting the rally is still concentrated in larger assets rather than spreading broadly into altcoins.",
+  "worthKnowing": [
+    "Wednesday's Federal Reserve meeting is the week's central event for crypto markets — Citadel is betting on a rate hike while most Bitcoin analysts expect a hold, and the outcome will be known before Thursday's open.",
+    "A company behind an AI-driven trade that triggered $60 million in crypto liquidations has agreed to cover all losses, according to CoinDesk — an unusual outcome that may reduce some of the residual market uncertainty from that event.",
+    "Bitcoin's climb above $64,000 came despite a record crash in South Korea's chip market, which had no measurable spillover into crypto prices."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2278426795483,
+    "btcDominancePct": 56.5731,
+    "ethDominancePct": 10.1304,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "bitcoin-64k",
+    "federal-reserve-rate-decision",
+    "cardano",
+    "near-protocol",
+    "ai-liquidations",
+    "citadel"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
