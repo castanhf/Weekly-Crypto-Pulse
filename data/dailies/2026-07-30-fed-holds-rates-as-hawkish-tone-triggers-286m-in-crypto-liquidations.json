@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-07-30T08:35:53.980Z",
+  "publishedAt": "2026-07-30",
+  "slug": "2026-07-30-fed-holds-rates-as-hawkish-tone-triggers-286m-in-crypto-liquidations",
+  "headline": "Fed holds rates as hawkish tone triggers $286M in crypto liquidations",
+  "summary": "The Federal Reserve kept interest rates steady Wednesday, but three officials pushed for a hike — and the hawkish signal was enough to whipsaw Bitcoin and Ether, wiping out $286 million in leveraged bets. Both assets ended the day nearly flat, masking the turbulence underneath. Analysts are split on what the Fed's posture means for crypto from here, and the Fear & Greed index sitting at 28 reflects that unease.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": 4.86,
+        "catalyst": "Uniswap gained 4.86% as the Fed's rate decision drove a spike in DeFi trading activity — higher uncertainty around rates tends to push traders toward decentralized exchanges, lifting volume and token demand on platforms like Uniswap.",
+        "priceUsd": 4.04,
+        "priceChange24hUsd": 0.2
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -1.32,
+        "catalyst": "Hyperliquid slipped 1.32%, reflecting the broader market's flat-to-negative tone after significant leveraged liquidations in Bitcoin and Ether dampened appetite for higher-risk perpetuals platforms.",
+        "priceUsd": 53.95,
+        "priceChange24hUsd": -0.71
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64194,
+        "changePct24h": -0.08,
+        "marketCapUsd": 1288190078965,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1912.31,
+        "changePct24h": 0.02,
+        "marketCapUsd": 230830481416,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9985,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183679683487,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 576.83,
+        "changePct24h": 1.21,
+        "marketCapUsd": 76810402307,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 72047176529,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.078,
+        "changePct24h": -0.65,
+        "marketCapUsd": 67389951443,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.64,
+        "changePct24h": -0.09,
+        "marketCapUsd": 42671051048,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3275,
+        "changePct24h": 0.54,
+        "marketCapUsd": 31074619880,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 20658924418,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 53.95,
+        "changePct24h": -1.32,
+        "marketCapUsd": 12002603526,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.07,
+        "changePct24h": -0.58,
+        "marketCapUsd": 10877083927,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9973468776,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0136,
+        "changePct24h": -0.69,
+        "marketCapUsd": 9459942946,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.69,
+        "changePct24h": -0.83,
+        "marketCapUsd": 8914520958,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 475.74,
+        "changePct24h": 3.21,
+        "marketCapUsd": 7991626122,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The Federal Reserve held rates steady on Wednesday, but the decision carried a hawkish edge: three of the committee's officials pushed for an outright hike. That internal dissent was enough to rattle leveraged crypto traders. Bitcoin and Ether both whipsawed during the session — swinging sharply before settling nearly unchanged — and the turbulence forced $286 million in liquidations out of leveraged positions. A liquidation happens when a leveraged trade is automatically closed because losses exceed the trader's collateral; at that scale, the forced selling adds its own downward pressure before the market stabilizes.\n\nThe closing prices look calm — Bitcoin ended down just 0.08% at $64,194, Ethereum up a rounding-error 0.02% at $1,912 — but the Fear & Greed index at 28 (in \"Fear\" territory) tells a more honest story about where sentiment sits. Analysts are divided on what the Fed's posture means next: some read three dissenting votes as a signal that hikes are back on the table if inflation data stays sticky; others argue the hold itself is the signal and the market will stabilize.\n\nZcash was the quiet standout, gaining 3.21% with no obvious catalyst — likely technical movement on thin volume. BNB added 1.21%, and Uniswap led the broader field with a 4.86% gain, benefiting from the spike in DeFi trading activity that tends to accompany macro uncertainty.",
+  "worthKnowing": [
+    "$286 million in leveraged crypto positions were liquidated during Wednesday's session as Bitcoin and Ether whipsawed following the Fed's rate decision.",
+    "Three Fed officials voted for a rate hike at Wednesday's meeting — the hold passed, but the dissent signals the committee is not uniformly dovish.",
+    "Analysts remain split on the Fed's next move: some see the three dissenting votes as a precursor to a hike if inflation stays elevated; others expect the hold to persist through the summer."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2277559855869,
+    "btcDominancePct": 56.5479,
+    "ethDominancePct": 10.1321,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "federal-reserve-rate-decision",
+    "leveraged-liquidations",
+    "uniswap",
+    "defi",
+    "bitcoin-volatility",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
