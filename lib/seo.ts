@@ -110,6 +110,20 @@ export const createDisclaimerMetadata = (): Metadata =>
     path: '/disclaimer'
   });
 
+export const createPrivacyMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Privacy Policy',
+    description: 'How Crypto Pulse collects, uses, and protects your information.',
+    path: '/privacy'
+  });
+
+export const createTermsMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Terms of Use',
+    description: 'Terms and conditions for using Crypto Pulse.',
+    path: '/terms'
+  });
+
 export const createProMetadata = (): Metadata =>
   createPageMetadata({
     title: 'Crypto Pulse Pro',
@@ -159,6 +173,6 @@ export const createDailyMetadata = (daily: DailyArtifact): Metadata => {
   };
 };
 
-export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer'];
+export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer', '/privacy', '/terms'];
 
 export const getSiteOrigin = (): string => getSiteUrl();
