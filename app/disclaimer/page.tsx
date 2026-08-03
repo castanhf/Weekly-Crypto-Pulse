@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { ContentWidth, PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { PageHeader, PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
 import { createDisclaimerMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createDisclaimerMetadata();
@@ -24,22 +24,20 @@ export default function DisclaimerPage(): JSX.Element {
       />
 
       <PageSection>
-        <ContentWidth className="mx-auto" size="content">
-          <SurfaceCard className="space-y-5">
-            <h2 className="text-[1.45rem] font-semibold tracking-tight">Important notice</h2>
-            <p className="text-base leading-8 text-muted">
-              We are not financial advisers. We do not give personalized advice. We share what we observe in the market
-              and explain what that might mean. What you do with that information is entirely your decision.
-            </p>
-            <ul className="space-y-3.5 text-base leading-8 text-muted">
-              {DISCLAIMER_POINTS.map((point) => (
-                <li className="border-l-2 border-line pl-4" key={point}>
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </SurfaceCard>
-        </ContentWidth>
+        <SurfaceCard className="space-y-5">
+          <h2 className="text-[1.45rem] font-semibold tracking-tight">Important notice</h2>
+          <p className="text-base leading-8 text-muted">
+            We are not financial advisers. We do not give personalized advice. We share what we observe in the market
+            and explain what that might mean. What you do with that information is entirely your decision.
+          </p>
+          <ul className="space-y-3.5 text-base leading-8 text-muted">
+            {DISCLAIMER_POINTS.map((point) => (
+              <li className="border-l-2 border-line pl-4" key={point}>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </SurfaceCard>
       </PageSection>
     </PageShell>
   );
