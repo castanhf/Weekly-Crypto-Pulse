@@ -81,7 +81,7 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
           <MethodologyNote />
         </div>
 
-        <div className="order-last space-y-4 xl:sticky xl:top-24">
+        <div className="order-last space-y-4 xl:sticky xl:top-36">
           <ReportShareBlock title={report.metadata.title} url={reportUrl} />
         </div>
       </PageSection>

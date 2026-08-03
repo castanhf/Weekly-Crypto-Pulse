@@ -68,7 +68,7 @@ export function Header(): JSX.Element {
   const pathname = normalizePathname(usePathname() ?? '/');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-canvas/95 backdrop-blur-xl supports-[backdrop-filter]:bg-canvas/88">
       <div className={`${pageContainerClassName} py-4 sm:py-5`}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <Link className="min-w-0 max-w-2xl" href="/">
