@@ -16,7 +16,12 @@ export function ReportHero({ metadata }: ReportHeroProps): JSX.Element {
   return (
     <header className="space-y-6 border-b border-line/80 pb-8 sm:space-y-7 sm:pb-10">
       <div className="max-w-4xl space-y-3.5 sm:space-y-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">{metadata.weekLabel}</p>
+        <div className="flex flex-wrap items-center gap-2.5">
+          <span className="rounded-full border border-brand/60 bg-brand/40 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-paper/90">
+            Weekly
+          </span>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">{metadata.weekLabel}</p>
+        </div>
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{formatReportTitle(metadata.title)}</h1>
         <p className="text-base leading-8 text-muted sm:text-lg">
           Public weekly orientation for the crypto market, structured for fast scanning before deeper paid work.

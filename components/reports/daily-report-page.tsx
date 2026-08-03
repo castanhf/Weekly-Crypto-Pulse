@@ -181,7 +181,7 @@ export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-4 xl:sticky xl:top-24">
+        <div className="space-y-4 xl:sticky xl:top-36">
           {/* Market snapshot */}
           <SurfaceCard className="space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Market snapshot</p>
