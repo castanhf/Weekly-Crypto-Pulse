@@ -445,7 +445,9 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
   // 5. Parse and validate LLM output
   const reportInput = parseAndValidateLlmJson(llmResponse.content, validateReportInput, llmResponse.provider);
 
-  // 6. Append script-populated fields (capitalFlows, sectionLabels not produced by LLM)
+  // 6. Append script-populated fields (capitalFlows, sectionLabels not produced by LLM).
+  //    Override snapshot.totalMarketCapUsd with the authoritative CoinGecko global value —
+  //    LLMs reliably misplace decimal points when converting trillion-scale numbers back to raw USD.
   const moverCandidates = reportInput.movers.map((m) => ({
     symbol: m.symbol,
     name: m.name,
@@ -454,7 +456,12 @@ export const generateReportInput = async (publishedAt: string): Promise<void> =>
     marketCapUsd: 0
   }));
   const { sectionLabels } = computeMovers(moverCandidates, 'weekly');
-  const finalOutput: RawReportInput = { ...reportInput, capitalFlows, sectionLabels };
+  const finalOutput: RawReportInput = {
+    ...reportInput,
+    snapshot: { ...reportInput.snapshot, totalMarketCapUsd: marketData.totalMarketCapUsd },
+    capitalFlows,
+    sectionLabels
+  };
 
   // 7. Write output
   await writeFile(REPORT_INPUT_PATH, `${JSON.stringify(finalOutput, null, 2)}\n`, 'utf-8');
