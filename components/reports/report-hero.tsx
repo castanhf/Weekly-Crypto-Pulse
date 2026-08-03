@@ -1,9 +1,15 @@
 import type { ReportMetadata } from '@/domain/report';
 
 import { formatIsoDate } from '@/components/reports/report-formatters';
+import { WEEKLY_TITLE_PREFIX } from '@/lib/site';
 
 type ReportHeroProps = {
   metadata: ReportMetadata;
+};
+
+const formatReportTitle = (rawTitle: string): string => {
+  const colonIndex = rawTitle.indexOf(':');
+  return colonIndex >= 0 ? `${WEEKLY_TITLE_PREFIX} — ${rawTitle.slice(colonIndex + 1).trim()}` : rawTitle;
 };
 
 export function ReportHero({ metadata }: ReportHeroProps): JSX.Element {
@@ -11,7 +17,7 @@ export function ReportHero({ metadata }: ReportHeroProps): JSX.Element {
     <header className="space-y-6 border-b border-line/80 pb-8 sm:space-y-7 sm:pb-10">
       <div className="max-w-4xl space-y-3.5 sm:space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">{metadata.weekLabel}</p>
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{metadata.title}</h1>
+        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{formatReportTitle(metadata.title)}</h1>
         <p className="text-base leading-8 text-muted sm:text-lg">
           Public weekly orientation for the crypto market, structured for fast scanning before deeper paid work.
         </p>

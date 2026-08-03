@@ -80,12 +80,14 @@ const createPageMetadata = ({ title, description, path }: PageSeoInput): Metadat
   };
 };
 
-export const createHomeMetadata = (): Metadata =>
-  createPageMetadata({
-    title: 'Crypto market reports',
+export const createHomeMetadata = (): Metadata => {
+  const base = createPageMetadata({
+    title: siteConfig.name,
     description: 'Weekly and daily crypto market reports. Free to read. We cover what happened and what it means.',
     path: '/'
   });
+  return { ...base, title: { absolute: siteConfig.name } };
+};
 
 export const createReportsArchiveMetadata = (): Metadata =>
   createPageMetadata({
