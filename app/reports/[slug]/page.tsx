@@ -6,6 +6,7 @@ import { RegimeHistoryStrip } from '@/components/charts/RegimeHistoryStrip';
 import { SnapshotTrendChart } from '@/components/charts/SnapshotTrendChart';
 import { PaidBlock } from '@/components/conversion/PaidBlock';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { ArticleNavigation } from '@/components/reports/article-navigation';
 import { DailyReportPage } from '@/components/reports/daily-report-page';
 import { ExecutiveSummary } from '@/components/reports/executive-summary';
 import { MarketSnapshotCards } from '@/components/reports/market-snapshot';
@@ -17,7 +18,7 @@ import { ReportShareBlock } from '@/components/reports/report-share-block';
 import { WinnersAndLosers } from '@/components/reports/winners-losers';
 import { computeRegimeHistoryWindow, computeSnapshotTrendWindow } from '@/lib/charts/window';
 import { loadAllArtifacts, loadArtifactBySlug } from '@/lib/reports/artifact-repository';
-import type { WeeklyArtifact } from '@/lib/reports/artifact-types';
+import type { Artifact, WeeklyArtifact } from '@/lib/reports/artifact-types';
 import { createDailyMetadata, createReportMetadata, toAbsoluteUrl } from '@/lib/seo';
 
 type ReportDetailPageProps = {
@@ -55,14 +56,19 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
     notFound();
   }
 
+  const allArtifacts = loadAllArtifacts();
+  const artifactIndex = allArtifacts.findIndex((a) => a.slug === params.slug);
+  const prevArtifact: Artifact | null = artifactIndex < allArtifacts.length - 1 ? (allArtifacts[artifactIndex + 1] ?? null) : null;
+  const nextArtifact: Artifact | null = artifactIndex > 0 ? (allArtifacts[artifactIndex - 1] ?? null) : null;
+
   if (artifact.kind === 'daily') {
-    return <DailyReportPage artifact={artifact.daily} />;
+    return <DailyReportPage artifact={artifact.daily} next={nextArtifact} prev={prevArtifact} />;
   }
 
   const report = artifact.report;
   const reportUrl = toAbsoluteUrl(`/reports/${report.metadata.slug}`);
 
-  const weeklyArtifacts = loadAllArtifacts().filter((a): a is WeeklyArtifact => a.kind === 'weekly');
+  const weeklyArtifacts = allArtifacts.filter((a): a is WeeklyArtifact => a.kind === 'weekly');
   const snapshotTrendData = computeSnapshotTrendWindow({ asOfDate: artifact.publishedAt, artifacts: weeklyArtifacts });
   const regimeHistoryData = computeRegimeHistoryWindow({ asOfDate: artifact.publishedAt, artifacts: weeklyArtifacts });
 
@@ -103,6 +109,10 @@ export default async function ReportDetailPage(props: ReportDetailPageProps): Pr
 
       <PageSection>
         <PaidBlock />
+      </PageSection>
+
+      <PageSection>
+        <ArticleNavigation next={nextArtifact} prev={prevArtifact} />
       </PageSection>
     </PageShell>
   );
