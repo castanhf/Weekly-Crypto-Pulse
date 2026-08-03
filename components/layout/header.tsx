@@ -84,7 +84,7 @@ export function Header(): JSX.Element {
           </Link>
 
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
-            <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-surface p-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:flex-wrap sm:justify-end">
+            <ul className="flex w-full flex-wrap gap-2 rounded-2xl border border-white/10 bg-surface p-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:justify-end">
               {navItems.map((item) => {
                 const isActive = isNavItemActive(item, pathname);
 
