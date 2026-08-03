@@ -1,4 +1,4 @@
-# Weekly Crypto Pulse — R1 Context Document
+# Crypto Pulse — R1 Context Document
 
 > This document is a Claude context aid for R2 planning conversations. It summarises what was built in R1, how the system works, and what gaps carry forward. Feed this into any future session before discussing new work.
 
@@ -6,7 +6,7 @@
 
 ## 1. What the Project Does
 
-**Weekly Crypto Pulse** is a static-first Next.js editorial web application that delivers weekly cryptocurrency market intelligence. It has no database, no authentication, and no server-side runtime dependencies — every page renders from committed JSON artifacts.
+**Crypto Pulse** is a static-first Next.js editorial web application that delivers weekly cryptocurrency market intelligence. It has no database, no authentication, and no server-side runtime dependencies — every page renders from committed JSON artifacts.
 
 ### Content Tiers
 

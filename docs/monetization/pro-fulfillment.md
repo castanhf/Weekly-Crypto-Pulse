@@ -1,6 +1,6 @@
 # Pro fulfillment runbook (manual)
 
-This runbook defines the manual fulfillment workflow for one-time Pro purchases while keeping Weekly Crypto Pulse static-first.
+This runbook defines the manual fulfillment workflow for one-time Pro purchases while keeping Crypto Pulse static-first.
 
 ## Scope
 

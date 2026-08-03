@@ -1,6 +1,6 @@
 # Stripe test drill (Payment Links, test mode)
 
-This runbook makes Stripe Payment Link testing practical and repeatable while keeping Weekly Crypto Pulse static-first.
+This runbook makes Stripe Payment Link testing practical and repeatable while keeping Crypto Pulse static-first.
 
 ## Scope
 

@@ -31,7 +31,7 @@ If you have any issue opening the file or need the report resent, reply to this 
 Personal use only. Redistribution is not permitted.
 
 Best regards,  
-Weekly Crypto Pulse
+Crypto Pulse
 
 ---
 
@@ -52,7 +52,7 @@ Each delivery will be sent manually to this email address after the relevant rep
 Personal use only. Redistribution is not permitted.
 
 Best regards,  
-Weekly Crypto Pulse
+Crypto Pulse
 
 ---
 
@@ -69,7 +69,7 @@ If you also need any weekly report from this bundle resent, reply to this email 
 Personal use only. Redistribution is not permitted.
 
 Best regards,  
-Weekly Crypto Pulse
+Crypto Pulse
 
 ---
 
@@ -86,4 +86,4 @@ Please reply if you need the files in another format or if anything is missing.
 Personal use only. Redistribution is not permitted.
 
 Best regards,  
-Weekly Crypto Pulse
+Crypto Pulse
