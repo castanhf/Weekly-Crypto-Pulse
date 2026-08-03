@@ -1,6 +1,6 @@
 # Analytics operations
 
-Weekly Crypto Pulse uses [Vercel Web Analytics](https://vercel.com/docs/analytics) with custom funnel events.
+Crypto Pulse uses [Vercel Web Analytics](https://vercel.com/docs/analytics) with custom funnel events.
 
 ## Why this provider
 

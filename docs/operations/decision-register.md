@@ -188,3 +188,26 @@ Adaptive section labels: on all-positive days (all-loser candidates have positiv
 **Constraint:** Do not create a global LLM config. Each script's routing must be visible at the call site. If a script's requirements change, update its `*_LLM` constant and document the change here.
 
 **Full routing table and cost projections:** See `docs/operations/model-configuration.md`.
+
+---
+
+## D-08 — LLM numeric override for trillion-scale USD values (R2.2)
+
+**Decision (WCP-207):** After LLM output is parsed in `generateReportInput()`, `snapshot.totalMarketCapUsd` is unconditionally overridden with the raw value from the authoritative CoinGecko `/global` endpoint — the LLM's value is discarded.
+
+**Root cause:** LLMs consistently misplace the decimal point when converting trillion-scale numbers from formatted prompt context (e.g. `"$2.316T"`) back to raw USD integers. The LLM produced `2316000000` (2.3 billion) instead of `2316000000000` (2.3 trillion) — a 1000× error that propagated to the homepage widget, the email broadcast, and the stored artifact.
+
+**Implementation:** `scripts/generate-report-input.ts` — after `parseAndValidate(llmOutput)`, the final output object is constructed as:
+```typescript
+const finalOutput = {
+  ...reportInput,
+  snapshot: { ...reportInput.snapshot, totalMarketCapUsd: marketData.totalMarketCapUsd },
+  capitalFlows,
+  sectionLabels
+};
+```
+`marketData.totalMarketCapUsd` is the raw value fetched from `https://api.coingecko.com/api/v3/global` earlier in the same function — never touched by the LLM.
+
+**Regression test:** `scripts/generate-report-input.test.ts` — "overrides totalMarketCapUsd with CoinGecko global value even when LLM returns a wrong-scale number".
+
+**Constraint:** Never trust LLM output for raw numeric values that represent large-scale financial figures. Any field that requires a trillion-scale integer must be sourced from the authoritative data fetch, not from LLM JSON output. Extend this pattern to any new snapshot fields of the same scale.

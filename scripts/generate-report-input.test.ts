@@ -401,4 +401,32 @@ describe('generateReportInput', () => {
     };
     expect(output.snapshot.fearGreedIndex).toBe(65);
   });
+
+  it('overrides totalMarketCapUsd with CoinGecko global value even when LLM returns a wrong-scale number', async () => {
+    // Regression: LLMs misplace decimal points when converting trillion-scale USD back to raw numbers.
+    // e.g. given "$2.316T" in the prompt, the LLM may write 2316000000 (billions) instead of 2316000000000.
+    // The script must always use the authoritative CoinGecko value, not the LLM's conversion.
+    const llmWithWrongScale = {
+      ...VALID_REPORT_INPUT,
+      snapshot: {
+        ...VALID_REPORT_INPUT.snapshot,
+        totalMarketCapUsd: 3_200_000 // wildly wrong — millions instead of trillions
+      }
+    };
+    mockedCallLlm.mockResolvedValue({
+      ...MOCK_LLM_RESPONSE,
+      content: JSON.stringify(llmWithWrongScale)
+    });
+
+    let writtenJson: string | undefined;
+    vi.mocked(fs.writeFile).mockImplementation(async (_path, content) => {
+      writtenJson = content as string;
+    });
+
+    await generateReportInput(PUBLISHED_AT);
+
+    const output = JSON.parse(writtenJson!) as { snapshot: { totalMarketCapUsd: number } };
+    // MOCK_GLOBAL has total_market_cap.usd = 3_200_000_000_000
+    expect(output.snapshot.totalMarketCapUsd).toBe(3_200_000_000_000);
+  });
 });

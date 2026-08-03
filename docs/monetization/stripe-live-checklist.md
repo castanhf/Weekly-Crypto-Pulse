@@ -1,6 +1,6 @@
 # Stripe live go-live checklist
 
-This checklist is for Weekly Crypto Pulse's current monetization setup only: two one-time products, two Stripe Payment Links, no subscriptions, no accounts, no database, and no runtime checkout logic beyond outbound CTA links.
+This checklist is for Crypto Pulse's current monetization setup only: two one-time products, two Stripe Payment Links, no subscriptions, no accounts, no database, and no runtime checkout logic beyond outbound CTA links.
 
 ## 1) Live account readiness
 
