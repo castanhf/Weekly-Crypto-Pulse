@@ -88,7 +88,7 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
         <SurfaceCard className="space-y-5 bg-gradient-to-br from-surface via-surface to-canvas/50">
-          <p className={editorialLabelClassName}>Latest report</p>
+          <p className={editorialLabelClassName}>Latest weekly report</p>
           <div className="space-y-3">
             <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.25rem]" id="focus-heading">
               {latestReport.metadata.title}
