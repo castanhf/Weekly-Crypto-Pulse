@@ -23,14 +23,17 @@ const METRICS = [
 const EDITORIAL_PATH = [
   {
     label: 'Free',
+    price: null as string | null,
     description: 'The public layer. Weekly reports every Monday, plus shorter daily updates in between. All free.'
   },
   {
     label: 'Weekly Pro',
+    price: '$29 one-time' as string | null,
     description: 'Go deeper on one specific week when the free read is not enough.'
   },
   {
     label: 'Monthly Bundle',
+    price: '$79 one-time' as string | null,
     description: 'Follow four Pro weeks in a row, with a summary at the end of the month.'
   }
 ] as const;
@@ -108,12 +111,15 @@ export default function HomePage(): JSX.Element {
           <div className="space-y-4">
             {EDITORIAL_PATH.map((step) => (
               <div className="space-y-1 border-l-2 border-ink/20 pl-3" key={step.label}>
-                <p className="text-base font-semibold text-ink">{step.label}</p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-base font-semibold text-ink">{step.label}</p>
+                  {step.price ? <p className="text-sm font-medium text-ink/50">{step.price}</p> : null}
+                </div>
                 <p className="text-base leading-8 text-ink/65">{step.description}</p>
               </div>
             ))}
           </div>
-          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
         </SurfaceCard>
       </PageSection>
 
@@ -169,8 +175,8 @@ export default function HomePage(): JSX.Element {
             })}
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
-            <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
-            <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle — Best value" checkoutTarget={monthlyBundleCheckoutTarget} />
+            <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
+            <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle" checkoutTarget={monthlyBundleCheckoutTarget} />
             <Link className={secondaryCtaClassName} href="/pro">
               View full comparison
             </Link>
