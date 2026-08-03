@@ -3,10 +3,14 @@ import Link from 'next/link';
 import type { DailyArtifact } from '@/domain/daily';
 import { PaidBlock } from '@/components/conversion/PaidBlock';
 import { PageSection, PageShell, SurfaceCard } from '@/components/layout/page-shell';
+import { ArticleNavigation } from '@/components/reports/article-navigation';
 import { formatCompactUsd, formatIsoDate, formatPercent } from '@/components/reports/report-formatters';
+import type { Artifact } from '@/lib/reports/artifact-types';
 
 type DailyReportPageProps = {
   artifact: DailyArtifact;
+  prev?: Artifact | null;
+  next?: Artifact | null;
 };
 
 const changePctClass = (value: number): string =>
@@ -24,7 +28,7 @@ function SnapshotItem({ label, value }: { label: string; value: string }): JSX.E
   );
 }
 
-export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element {
+export function DailyReportPage({ artifact, prev = null, next = null }: DailyReportPageProps): JSX.Element {
   const { headline, summary, whatMoved, whyItMoved, worthKnowing, snapshot, tags, publishedAt, weeklyFooter } = artifact;
 
   return (
@@ -210,6 +214,10 @@ export function DailyReportPage({ artifact }: DailyReportPageProps): JSX.Element
 
       <PageSection>
         <PaidBlock />
+      </PageSection>
+
+      <PageSection>
+        <ArticleNavigation next={next} prev={prev} />
       </PageSection>
     </PageShell>
   );
