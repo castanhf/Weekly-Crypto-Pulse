@@ -58,15 +58,15 @@ export function WinnersAndLosers({ movers, sectionLabels }: WinnersLosersProps):
   const labels = sectionLabels ?? deriveSectionLabels(movers);
 
   return (
-    <SectionCard title="Winners & Losers (7D)">
+    <SectionCard title="Top movers (7D)">
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
           <h3 className="text-base font-semibold">{labels.winners}</h3>
-          <MoverList emptyMessage="No winners for this period." items={winners} />
+          <MoverList emptyMessage="None for this period." items={winners} />
         </div>
         <div className="space-y-3">
           <h3 className="text-base font-semibold">{labels.losers}</h3>
-          <MoverList emptyMessage="No losers for this period." items={losers} />
+          <MoverList emptyMessage="None for this period." items={losers} />
         </div>
       </div>
     </SectionCard>
