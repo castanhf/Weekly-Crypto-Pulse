@@ -98,11 +98,24 @@ function OfferCard({ offer }: Readonly<{ offer: ProOfferCard }>): JSX.Element {
         <div className="space-y-5">
           <div>
             <h4 className="text-base font-semibold text-current">Included</h4>
-            <ul className={`mt-4 list-disc space-y-3 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
-              {product.includes.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            {offer.id === 'monthlyBundle' ? (
+              <>
+                <p className={`mt-3 text-sm leading-7 ${offerMutedTextClassNames[pricing.tier]}`}>
+                  Everything in Weekly Pro Single Issue, plus:
+                </p>
+                <ul className={`mt-2 list-disc space-y-3 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+                  {product.includes.slice(1).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <ul className={`mt-4 list-disc space-y-3 pl-5 text-base leading-8 ${offerListClassNames[pricing.tier]}`}>
+                {product.includes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div>

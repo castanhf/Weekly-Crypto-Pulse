@@ -61,7 +61,7 @@ function InlinePaidBlock(): JSX.Element {
 function StandalonePaidBlock(): JSX.Element {
   const singleIssueTarget = getProCheckoutTarget('singleIssue');
   const monthlyBundleTarget = getProCheckoutTarget('monthlyBundle');
-  const { includes, deliveryModel } = getProProductDefinition('singleIssue');
+  const { deliveryModel } = getProProductDefinition('singleIssue');
 
   return (
     <div className="space-y-7">
@@ -75,20 +75,11 @@ function StandalonePaidBlock(): JSX.Element {
         </p>
       </div>
 
-      <ul className="grid gap-3 sm:grid-cols-2">
-        {includes.map((item) => (
-          <li className="flex gap-3 text-base leading-7 text-muted" key={item}>
-            <span className="mt-0.5 shrink-0 font-semibold text-accent">✓</span>
-            {item}
-          </li>
-        ))}
-      </ul>
-
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <ProCta checkoutTarget={singleIssueTarget} label="Buy Single Issue" />
+        <ProCta checkoutTarget={singleIssueTarget} label="Buy Single Issue — $29" />
         <ProCta
           checkoutTarget={monthlyBundleTarget}
-          label="Buy Monthly Bundle"
+          label="Buy Monthly Bundle — $79"
           className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/20 px-4 py-3 text-sm font-medium text-paper transition hover:border-white/40 hover:bg-white/5"
         />
       </div>
