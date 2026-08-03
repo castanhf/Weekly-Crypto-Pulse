@@ -18,7 +18,7 @@
     },
     "regime": "transition",
     "marketSnapshot": {
-      "totalMarketCapUsd": 2316000000,
+      "totalMarketCapUsd": 2316000000000,
       "btcDominancePct": 56.44,
       "ethDominancePct": 10.21,
       "fearGreedIndex": 30
