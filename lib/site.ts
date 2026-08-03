@@ -22,7 +22,7 @@ export const DAILY_TITLE_PREFIX = 'Daily Crypto Pulse';
 
 export const siteConfig = {
   name: SITE_NAME,
-  description: 'Editorial crypto market summaries and recurring reports.',
+  description: 'Weekly and daily crypto market reports — macro analysis, price action, and key signals. Free to read. Pro-depth coverage available.',
   pro: {
     weeklyProPaymentLink,
     monthlyBundlePaymentLink

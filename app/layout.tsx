@@ -26,7 +26,8 @@ export const metadata: Metadata = {
         { url: `${siteOrigin}/rss/daily.xml`, title: `${SITE_NAME} — Daily` }
       ]
     }
-  }
+  },
+  verification: { other: { 'msvalidate.01': '6DD2D23734CE5A78D3D6F34927BD62B3' } }
 };
 
 type RootLayoutProps = {
