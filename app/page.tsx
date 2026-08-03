@@ -104,12 +104,12 @@ export default function HomePage(): JSX.Element {
         </SurfaceCard>
 
         <SurfaceCard className="space-y-5 border-ink/10 bg-paper/70">
-          <p className={editorialLabelClassName}>Path to Pro</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink/50">Path to Pro</p>
           <div className="space-y-4">
             {EDITORIAL_PATH.map((step) => (
-              <div className="space-y-1 border-l-2 border-line pl-3" key={step.label}>
+              <div className="space-y-1 border-l-2 border-ink/20 pl-3" key={step.label}>
                 <p className="text-base font-semibold text-ink">{step.label}</p>
-                <p className="text-base leading-8 text-muted">{step.description}</p>
+                <p className="text-base leading-8 text-ink/65">{step.description}</p>
               </div>
             ))}
           </div>
