@@ -19,6 +19,7 @@
     "test:e2e:headed": "playwright test --headed",
     "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
+    "preview:pro": "node scripts/preview-pro.mjs",
     "generate:premium": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/sync-premium-artifacts.js",
     "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-report-input.js",
     "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js",
