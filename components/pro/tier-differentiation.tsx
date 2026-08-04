@@ -9,7 +9,6 @@ type TierDifferentiationProps = Readonly<{
 type TierPresentation = Readonly<{
   badgeClassName: string;
   cardClassName: string;
-  icon: string;
   railClassName: string;
   toneLabel: string;
 }>;
@@ -18,25 +17,43 @@ const TIER_PRESENTATIONS: Readonly<Record<ContentTierId, TierPresentation>> = {
   free: {
     badgeClassName: 'border-white/10 bg-surface text-paper',
     cardClassName: 'border-white/10 bg-surface',
-    icon: '◎',
     railClassName: 'border-white/20',
     toneLabel: 'Orientation layer'
   },
   weeklyPro: {
     badgeClassName: 'border-accent/30 bg-brand text-paper',
     cardClassName: 'border-accent/30 bg-gradient-to-br from-brand to-canvas text-paper',
-    icon: '◉',
     railClassName: 'border-paper/35',
     toneLabel: 'Decision layer'
   },
   monthlyBundle: {
     badgeClassName: 'border-accent/20 bg-accent/10 text-accent',
     cardClassName: 'border-accent/20 bg-gradient-to-br from-accent/15 via-surface to-surface',
-    icon: '◆',
     railClassName: 'border-accent/30',
     toneLabel: 'Continuity layer'
   }
 } as const;
+
+const TIER_ICONS: Readonly<Record<ContentTierId, JSX.Element>> = {
+  free: (
+    <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  ),
+  weeklyPro: (
+    <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" strokeWidth="2" />
+      <circle cx="16" cy="16" r="3.5" fill="var(--tier-icon-accent, currentColor)" />
+    </svg>
+  ),
+  monthlyBundle: (
+    <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="11" r="6" fill="var(--tier-icon-accent, currentColor)" />
+      <circle cx="10" cy="21" r="6" fill="none" stroke="currentColor" strokeWidth="1.75" />
+      <circle cx="22" cy="21" r="6" fill="none" stroke="currentColor" strokeWidth="1.75" />
+    </svg>
+  )
+};
 
 const mutedClassByTierId: Readonly<Record<ContentTierId, string>> = {
   free: 'text-muted',
@@ -90,9 +107,12 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
                   <p className={`text-xs font-semibold uppercase tracking-[0.14em] ${mutedClassName}`}>{presentation.toneLabel}</p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold tracking-tight">
-                    <span className="mr-2" aria-hidden="true">
-                      {presentation.icon}
+                  <h3 className="flex items-center text-xl font-semibold tracking-tight">
+                    <span
+                      className="mr-2 inline-flex"
+                      style={{ '--tier-icon-accent': 'var(--color-accent)' } as React.CSSProperties}
+                    >
+                      {TIER_ICONS[tierId]}
                     </span>
                     {tier.name}
                   </h3>
