@@ -211,3 +211,21 @@ const finalOutput = {
 **Regression test:** `scripts/generate-report-input.test.ts` — "overrides totalMarketCapUsd with CoinGecko global value even when LLM returns a wrong-scale number".
 
 **Constraint:** Never trust LLM output for raw numeric values that represent large-scale financial figures. Any field that requires a trillion-scale integer must be sourced from the authoritative data fetch, not from LLM JSON output. Extend this pattern to any new snapshot fields of the same scale.
+
+---
+
+## D-09 — Dependabot PR triage automation (R2.3)
+
+**Decision (WCP-224):** Dependabot PRs are triaged automatically via two GitHub Actions workflows:
+1. `dependabot-triage.yml` — triggers on PR open/reopen by `dependabot[bot]`; classifies the update as patch / minor / major; auto-approves and enables auto-merge for patches; posts a manual-review comment for major updates.
+2. `dependabot-stuck-ci-watch.yml` — runs Monday 09:00 UTC; flags PRs open >7 days with non-passing CI; opens a GitHub issue with the stuck-PR report.
+
+**Companion scripts:** `scripts/dependabot-triage.mjs`, `scripts/dependabot-stuck-ci-watch.mjs` (Node.js ESM, no added npm dependencies — use `gh` CLI and `node:child_process` only).
+
+**Agent spec:** `.claude/agents/dependabot-triage.md` — for manual triage sweeps or edge cases the automation cannot handle.
+
+**Rationale:** The backlog of Dependabot PRs (#188, #194, #197, #199–#206) grew while the project lacked any automated triage. Manual review of each PR was blocking merge cycles. The automation handles the unambiguous cases (patches) without operator input, surfaces the ambiguous ones (majors, stuck CI) for explicit human decision, and creates an audit trail via GitHub labels and issues.
+
+**Constraint:** The triage workflow must never auto-approve or auto-merge major-version updates. Major bumps require a human to review breaking changes before any merge action. If the version-inference logic in `dependabot-triage.mjs` cannot determine the update type, the PR must be flagged as `dependabot-review-needed` — not approved.
+
+**PR #188 note (postcss bump):** This PR predates the automation and must be triaged manually. Check whether the bumped postcss version is within the Tailwind v4 peer requirement range. If CI passes and it is, approve as minor. See `.claude/agents/dependabot-triage.md` for the full triage checklist.
