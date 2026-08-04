@@ -61,7 +61,7 @@
     "js-yaml": "^4.3.0",
     "postcss": "8.5.25",
     "tailwindcss": "^4.3.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "^4.1.10"
   },
   "engines": {
