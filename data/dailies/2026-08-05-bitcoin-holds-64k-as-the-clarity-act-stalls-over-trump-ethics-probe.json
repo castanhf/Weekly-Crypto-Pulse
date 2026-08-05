@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-05T08:45:03.009Z",
+  "publishedAt": "2026-08-05",
+  "slug": "2026-08-05-bitcoin-holds-64k-as-the-clarity-act-stalls-over-trump-ethics-probe",
+  "headline": "Bitcoin holds $64K as the Clarity Act stalls over Trump ethics probe",
+  "summary": "Crypto markets drifted on light moves today — Bitcoin barely budged at $64,184 while stocks hit record highs — but the real story is in Washington. The Clarity Act, the most significant US crypto market structure bill in years, is stuck in the Senate as lawmakers push the SEC to investigate President Trump's memecoin dealings. Meanwhile, Zcash jumped 6.5% as a $130M hardware wallet hack renewed interest in privacy-focused coins.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 6.5,
+        "catalyst": "Zcash surged 6.5% to $518.50, likely benefiting from renewed investor interest in privacy coins amid ongoing fallout from the $130M Coldcard hack and broader concerns about on-chain security. Privacy-focused assets like ZEC tend to attract attention during periods of heightened security incidents in the crypto space.",
+        "priceUsd": 518.5,
+        "priceChange24hUsd": 33.7
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -2.8,
+        "catalyst": "Monero slipped 2.8% to $351.16 with no specific catalyst identified, though the broader risk-off environment — reflected in a Fear & Greed Index of 27 and yen carry trade concerns — likely weighed on the asset.",
+        "priceUsd": 351.16,
+        "priceChange24hUsd": -9.83
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64184,
+        "changePct24h": 0.8,
+        "marketCapUsd": 1287857894405,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1869.48,
+        "changePct24h": 0.7,
+        "marketCapUsd": 225606305712,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 183110905453,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 599.69,
+        "changePct24h": 1.6,
+        "marketCapUsd": 79850013393,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72094102368,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.066,
+        "changePct24h": -0.7,
+        "marketCapUsd": 66641927355,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.03,
+        "changePct24h": 0.7,
+        "marketCapUsd": 43029507416,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3272,
+        "changePct24h": -0.5,
+        "marketCapUsd": 31050004797,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.003,
+        "changePct24h": -0.3,
+        "marketCapUsd": 20986014647,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.59,
+        "changePct24h": 4.9,
+        "marketCapUsd": 12811468402,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0698,
+        "changePct24h": -0.5,
+        "marketCapUsd": 10849361455,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9839034205,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.76,
+        "changePct24h": -0.3,
+        "marketCapUsd": 8978788454,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 518.5,
+        "changePct24h": 6.5,
+        "marketCapUsd": 8700819165,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0124,
+        "changePct24h": -2.1,
+        "marketCapUsd": 8623818701,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin held near $64,000 all day even as US equity indexes printed record highs — a notable decoupling. Normally, record stock markets pull crypto higher alongside them; today the Fear & Greed Index sat at 27 (Fear), suggesting the crypto-specific mood is cautious regardless of what equities are doing. The most plausible explanation is regulatory overhang: the Clarity Act, the bill that would establish a clear legal framework for crypto markets in the US, is effectively frozen. Senator Elizabeth Warren has asked the SEC to investigate President Trump's memecoin, and several senators are unwilling to advance the bill while that question hangs open. That political standoff is the clearest near-term catalyst the market is waiting on.\n\nThe day's most notable price move came from Zcash, up 6.5% to $518.50. The $130M Coldcard hardware wallet hack — which exposed vulnerabilities in how private keys are stored — appears to have driven fresh attention toward privacy-focused coins. The logic: if on-chain transactions are traceable and hardware wallets can be compromised, assets built around transaction privacy look more attractive to a subset of holders. Monero, the other major privacy coin, moved in the opposite direction, slipping 2.8% — likely reflecting the broader risk-off tone rather than any asset-specific development.\n\nHyperliquid gained 4.9% to $57.59, the second-largest move in the top 15, with no single catalyst identified in today's news. BNB added 1.6%. Everything else moved less than 1% in either direction — a genuinely quiet session.",
+  "worthKnowing": [
+    "Ethereum researchers proposed a mechanism that would cut validator rewards to zero if staked ETH reaches $112 billion — roughly 50% of total supply — a change that would fundamentally alter how ETH is issued and could reduce the annual return for stakers.",
+    "Crypto PAC Fairshake backed winning candidates in Michigan and Washington state primaries, extending the industry's track record of electoral influence ahead of key congressional votes on crypto legislation.",
+    "Cloudflare began rolling out stablecoin wallets designed for AI agents to pay for APIs and online content automatically — an early real-world test of programmable money in machine-to-machine payments."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2277376389757,
+    "btcDominancePct": 56.57,
+    "ethDominancePct": 9.9054,
+    "fearGreedIndex": 27
+  },
+  "tags": [
+    "clarity-act",
+    "zcash",
+    "privacy-coins",
+    "hyperliquid",
+    "fairshake",
+    "cloudflare",
+    "ethereum-issuance"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
