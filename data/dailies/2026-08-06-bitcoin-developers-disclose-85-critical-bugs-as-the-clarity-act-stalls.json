@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-06T08:45:30.479Z",
+  "publishedAt": "2026-08-06",
+  "slug": "2026-08-06-bitcoin-developers-disclose-85-critical-bugs-as-the-clarity-act-stalls",
+  "headline": "Bitcoin developers disclose 85 critical bugs as the Clarity Act stalls in the Senate",
+  "summary": "A sweeping disclosure of 85 critical vulnerabilities in Bitcoin's codebase rattled developers today, casting a shadow over the market even as BTC edged up 0.90% to $64,824. The bigger structural story is in Washington: the Clarity Act — the most significant U.S. crypto market-structure bill in years — remains stuck in the Senate ahead of the August recess, leaving the entire sector in a regulatory holding pattern. Ethereum outperformed, rising 2.10%, while the Fear & Greed index sits at 25, deep in fear territory.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 3.8,
+        "catalyst": "Monero gained amid renewed demand for privacy-focused assets, potentially boosted by a reported Coldcard hardware wallet exploit that analysts say could push users toward alternative secure storage. CryptoQuant's bear-market accumulation narrative for hard-money assets may also be providing a tailwind.",
+        "priceUsd": 364.7,
+        "priceChange24hUsd": 13.86
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -7.1,
+        "catalyst": "Canton fell 7.1% with no specific catalyst; the decline likely reflects broader risk-off pressure on lower-cap assets, consistent with a Fear & Greed reading of 25 and the ongoing stall in U.S. crypto legislation.",
+        "priceUsd": 0.100196,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64824,
+        "changePct24h": 0.9,
+        "marketCapUsd": 1300843718034,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1911.93,
+        "changePct24h": 2.1,
+        "marketCapUsd": 230739490876,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0,
+        "marketCapUsd": 183363240263,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 594.82,
+        "changePct24h": -1,
+        "marketCapUsd": 79217789586,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9994,
+        "changePct24h": 0,
+        "marketCapUsd": 71690987985,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.054,
+        "changePct24h": -1.9,
+        "marketCapUsd": 65910138762,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.8,
+        "changePct24h": -0.2,
+        "marketCapUsd": 42904230140,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3265,
+        "changePct24h": 0,
+        "marketCapUsd": 30988671950,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.02,
+        "changePct24h": 1.7,
+        "marketCapUsd": 21390697795,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 56.06,
+        "changePct24h": -2.1,
+        "marketCapUsd": 12468946962,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0698,
+        "changePct24h": -0.1,
+        "marketCapUsd": 10851155862,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 9848078008,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.75,
+        "changePct24h": 0,
+        "marketCapUsd": 8973443769,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0126,
+        "changePct24h": 1,
+        "marketCapUsd": 8723130311,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 505.63,
+        "changePct24h": -2.3,
+        "marketCapUsd": 8488778959,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's headline was a disclosure of 85 critical vulnerabilities in Bitcoin's codebase — described by developers as an 'extremely bad' situation. The bugs were flagged by Bitcoin developers themselves, which is the normal responsible-disclosure process, but the sheer number and severity rattled the developer community. Despite the news, Bitcoin ended the session up 0.90%, suggesting markets either discounted the risk quickly or are waiting for more technical detail before reacting. Ethereum outperformed at +2.10%, continuing a pattern of ETH holding up better than BTC on days when Bitcoin-specific bad news surfaces.\n\nThe broader backdrop is a market sitting in fear. The Fear & Greed index at 25 reflects a sector that has been grinding lower, and the stall of the Clarity Act in the Senate is keeping institutional appetite cautious. The bill — which would establish a clear framework for which crypto assets are securities and which are commodities — was expected to advance before the August recess, but an ethics dispute and law enforcement concerns have it stuck. Without that clarity, large players remain on the sidelines.\n\nOn-chain data from CryptoQuant offers a counterpoint: large holders of BTC, ETH, and XRP are accumulating at current prices, a pattern analysts associate with late-stage bear markets. That accumulation narrative likely supported Monero's 3.80% gain, as privacy-coin demand picked up alongside reports of a Coldcard hardware wallet exploit. Lower-cap assets bore the brunt of the risk-off mood, with Canton dropping 7.1% on no specific news.",
+  "worthKnowing": [
+    "Russia's President Putin signed a law legalizing regulated retail crypto trading, opening one of the world's largest economies to a new class of crypto participants.",
+    "The Clarity Act — the U.S. bill that would define whether crypto assets are securities or commodities — remains stalled in the Senate ahead of the August recess, with ethics disputes and law enforcement objections unresolved.",
+    "CryptoQuant's on-chain data shows BTC, ETH, and XRP whales accumulating at current prices, a pattern the firm characterizes as consistent with a late-stage bear market.",
+    "Coinbase launched 24/5 U.S. stock trading for U.K. users, advancing its stated goal of becoming a single platform for both crypto and traditional financial assets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2292960750018,
+    "btcDominancePct": 56.7348,
+    "ethDominancePct": 10.0574,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "bitcoin-vulnerabilities",
+    "clarity-act",
+    "russia-crypto-law",
+    "monero",
+    "cryptoquant-accumulation",
+    "senate-stalemate"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
