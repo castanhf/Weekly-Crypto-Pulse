@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-07T07:24:03.368Z",
+  "publishedAt": "2026-08-07",
+  "slug": "2026-08-07-senate-delays-clarity-act-vote-as-bitcoin-whales-and-etfs-absorb-195b-",
+  "headline": "Senate delays Clarity Act vote as Bitcoin whales and ETFs absorb $1.95B in fresh demand",
+  "summary": "The Senate pushed its crypto Clarity Act vote past the August recess, extending regulatory uncertainty and weighing on XRP and major assets across the board. Despite the political setback, on-chain data told a different story: Bitcoin whales accumulated $1.2 billion in BTC while ETFs attracted another $750 million, suggesting institutional buyers are treating the range near $64,000 as an entry point. Cardano was the day's standout mover, jumping 7.1% as traders rotated into lower-cap layer-1 assets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "changePct24h": 7.1,
+        "catalyst": "Cardano outperformed the broader market amid a risk-off session, likely benefiting from rotation into lower-cap layer-1 assets as traders sought alternatives to BTC and ETH. No specific fundamental catalyst was identified, though the Fear & Greed Index at 29 suggests selective speculative positioning.",
+        "priceUsd": 0.201921,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -11.3,
+        "catalyst": "Canton led losses with an 11.3% decline; no specific catalyst was identified in available news items for this asset.",
+        "priceUsd": 0.088512,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64318,
+        "changePct24h": -0.8,
+        "marketCapUsd": 1290168152411,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1904.49,
+        "changePct24h": -0.4,
+        "marketCapUsd": 229822712685,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 183378549683,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 587.01,
+        "changePct24h": -1.6,
+        "marketCapUsd": 78146809419,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 71822458823,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.027,
+        "changePct24h": -2.3,
+        "marketCapUsd": 64211351705,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 72.89,
+        "changePct24h": -1.8,
+        "marketCapUsd": 42418767660,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3269,
+        "changePct24h": 0.3,
+        "marketCapUsd": 31012776002,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 1.5,
+        "marketCapUsd": 21772550837,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.58,
+        "changePct24h": -1.3,
+        "marketCapUsd": 12368152423,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0693,
+        "changePct24h": -1,
+        "marketCapUsd": 10758618141,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9845210168,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0126,
+        "changePct24h": -0.3,
+        "marketCapUsd": 8995605865,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.75,
+        "changePct24h": 0,
+        "marketCapUsd": 8974397159,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 501.73,
+        "changePct24h": -1.4,
+        "marketCapUsd": 8421332999,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main story was political, not technical. Senate Majority Leader Thune confirmed the Clarity Act — the most advanced US crypto regulatory framework in years — will not reach a floor vote before Congress breaks for August recess. That delay removes a near-term catalyst that parts of the market had been pricing in, and it hit XRP hardest among the top 15, down 2.3%, given XRP's history of sensitivity to US regulatory developments. Solana fell 1.8% and BNB dropped 1.6%, while Bitcoin held up relatively well, slipping just 0.8% to $64,318.\n\nThe Fear & Greed Index sitting at 29 — firmly in Fear territory — reflects the cautious mood. But the on-chain picture was more constructive: Bitcoin whales accumulated a net $1.2 billion in BTC over the past 24 hours, and ETF products attracted $750 million in fresh inflows. That combination of large-buyer accumulation and fund demand suggests institutional participants are not treating the current range as a reason to exit — quite the opposite.\n\nHyperliquid fell 1.3% after JPMorgan analysts flagged slowing inflows into HYPE-linked ETF products, citing rising competition from rival decentralized exchange platforms. Cardano was the notable exception to the broad decline, gaining 7.1% with no clear fundamental driver — the move looks like a rotation trade, with some capital shifting out of large-cap assets and into smaller layer-1 tokens during a low-conviction session.",
+  "worthKnowing": [
+    "Tokenized real-world assets (on-chain representations of traditional financial instruments like bonds and loans) tripled deposits to $7.4 billion while overall DeFi TVL contracted 15%, according to CoinShares — a structural shift toward regulated on-chain products.",
+    "A governance dispute has erupted at Ondo Finance, one of the leading real-world asset tokenization protocols, after the late founder's mother sought company control and CEO removal.",
+    "JPMorgan analysts flagged stalling ETF inflows into Hyperliquid products, citing mounting competition from rival decentralized exchange platforms."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2278211601944,
+    "btcDominancePct": 56.6262,
+    "ethDominancePct": 10.0904,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "senate-clarity-act",
+    "btc-etf-flows",
+    "whale-accumulation",
+    "rwa-tokenization",
+    "ondo-finance",
+    "hyperliquid"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
