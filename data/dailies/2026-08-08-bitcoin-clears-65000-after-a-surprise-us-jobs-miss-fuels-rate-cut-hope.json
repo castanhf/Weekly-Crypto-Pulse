@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-08T07:01:28.728Z",
+  "publishedAt": "2026-08-08",
+  "slug": "2026-08-08-bitcoin-clears-65000-after-a-surprise-us-jobs-miss-fuels-rate-cut-hope",
+  "headline": "Bitcoin clears $65,000 after a surprise US jobs miss fuels rate-cut hopes; CRO crashes 9.5% as Trump Media scraps Crypto.com deal",
+  "summary": "A weaker-than-expected US jobs report shifted macro sentiment sharply dovish on Saturday, pushing Bitcoin above $65,000 for the first time in weeks and lifting most of the top 20 assets. The macro tailwind was the day's main story — but the sharpest single move belonged to Cronos, which fell 9.5% after Trump Media terminated its partnership with Crypto.com and abandoned plans to hold CRO in its treasury. Fear & Greed sits at 30, still in Fear territory, suggesting the market is cautious even as prices tick higher.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": 5.5,
+        "catalyst": "OKB gained 5.5% as OKX's public profile rose amid executive commentary on the Clarity Act and broader US regulatory discourse, lifting sentiment around the exchange's native token.",
+        "priceUsd": 93,
+        "priceChange24hUsd": 5.12
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": -9.5,
+        "catalyst": "CRO crashed 9.5% after Trump Media announced it was scrapping its partnership with Crypto.com and abandoning the CRO token treasury deal, directly removing a high-profile institutional demand catalyst.",
+        "priceUsd": 0.04803919,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64971,
+        "changePct24h": 1.1,
+        "marketCapUsd": 1303796649632,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1915.34,
+        "changePct24h": 0.9,
+        "marketCapUsd": 231150481134,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 183158581539,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 594.33,
+        "changePct24h": 1.2,
+        "marketCapUsd": 79142401391,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 72140585177,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.035,
+        "changePct24h": 1.5,
+        "marketCapUsd": 64697675061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 74.66,
+        "changePct24h": 2.6,
+        "marketCapUsd": 43460697409,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3274,
+        "changePct24h": 0.3,
+        "marketCapUsd": 31061867855,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.007,
+        "changePct24h": -2.7,
+        "marketCapUsd": 21206669134,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 54.34,
+        "changePct24h": -1.7,
+        "marketCapUsd": 12088364863,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0703,
+        "changePct24h": 1.7,
+        "marketCapUsd": 10926938870,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9860612764,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0127,
+        "changePct24h": 1.3,
+        "marketCapUsd": 9102790675,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.71,
+        "changePct24h": -0.5,
+        "marketCapUsd": 8930846411,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 505.22,
+        "changePct24h": 0.6,
+        "marketCapUsd": 8480243299,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a US jobs report that came in well below expectations — the kind of data that typically prompts traders to price in earlier Federal Reserve rate cuts. Lower rates are generally favorable for risk assets including crypto, and Bitcoin responded by crossing $65,000, a level it had not held in recent weeks. Solana led the top-15 with a 2.6% gain, and most large-cap assets moved modestly higher in the same macro current.\n\nThe counterpoint to the broad lift was Cronos. Trump Media's decision to terminate its Crypto.com partnership and drop plans to hold CRO in its corporate treasury removed what had been a concrete institutional demand signal for the token. That kind of deal — a publicly traded company committing to hold a specific token — is rare, and its cancellation hit CRO hard: down 9.5% on the day.\n\nOKB, the exchange token for OKX, moved in the opposite direction, gaining 5.5%. OKX executives were publicly engaged in commentary around the Clarity Act, the US crypto regulatory framework currently advancing through Congress, and that visibility appears to have supported buying in the exchange's native token — though no single direct catalyst was identified.\n\nThe Fear & Greed index at 30 is worth noting: even with Bitcoin pushing higher on positive macro news, the broader sentiment reading remains in Fear territory. That gap between price action and sentiment often reflects lingering uncertainty rather than conviction.",
+  "worthKnowing": [
+    "Trump Media scrapped its partnership with Crypto.com and abandoned plans to hold CRO in its treasury, triggering a 9.5% sell-off in the Cronos token.",
+    "A developer warned that Bitcoin holders who sell coins received from the BIP-110 fork risk inadvertently losing their legitimate BTC — a user-education issue the network will need to address.",
+    "Proposed XRP Ledger amendments aim to expand support for tokenized real-world assets, targeting $530 million in Wall Street securities.",
+    "Bybit filed a lawsuit against North Korea and the Lazarus Group over the $1.5 billion exchange hack and obtained a court-ordered asset freeze — a significant legal escalation in crypto theft recovery."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2296490026011,
+    "btcDominancePct": 56.7717,
+    "ethDominancePct": 10.0646,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "bitcoin-jobs-report",
+    "cro-trump-media",
+    "okb-clarity-act",
+    "bybit-lazarus-lawsuit",
+    "xrp-tokenization",
+    "bip-110-fork"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
