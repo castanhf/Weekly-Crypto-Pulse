@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-10T07:50:43.350Z",
+  "publishedAt": "2026-08-10",
+  "slug": "2026-08-10-bitcoin-holds-65k-as-senate-punts-clarity-act-vote-to-september-etf-in",
+  "headline": "Bitcoin holds $65K as Senate punts CLARITY Act vote to September, ETF inflows hit $853M",
+  "summary": "The Senate delayed its landmark crypto-regulation vote — the CLARITY Act — to September 15, but Bitcoin barely flinched, holding above $65,000 on the back of $853 million in single-day ETF inflows led by BlackRock's IBIT. The broader market drifted on light moves, with Fear & Greed sitting at 30, reflecting a cautious mood rather than outright panic. The day's real story is the tension between institutional money flowing steadily in and a regulatory calendar that keeps slipping.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 4,
+        "catalyst": "Monero gained roughly 4% as the Senate's delay of the CLARITY Act renewed interest in privacy-focused assets. When regulatory timelines stretch out, censorship-resistant coins historically attract flows from traders seeking assets outside the direct reach of pending rules.",
+        "priceUsd": 393.83,
+        "priceChange24hUsd": 15.75
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -5.9,
+        "catalyst": "MemeCore fell nearly 6% with no identifiable specific catalyst, consistent with the broader 2026 shakeout in which over 100 crypto projects have shut down. Lower-cap meme-adjacent tokens are absorbing disproportionate pressure as capital concentrates in top-tier assets.",
+        "priceUsd": 1.11,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65262,
+        "changePct24h": 0.8,
+        "marketCapUsd": 1309808913816,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1925.77,
+        "changePct24h": 0.7,
+        "marketCapUsd": 232417931188,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 183115041231,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 604.16,
+        "changePct24h": 0.3,
+        "marketCapUsd": 80452081436,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72106848573,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.038,
+        "changePct24h": 0.2,
+        "marketCapUsd": 64898447775,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.98,
+        "changePct24h": 1.3,
+        "marketCapUsd": 44813662590,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3298,
+        "changePct24h": -0.1,
+        "marketCapUsd": 31298204916,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -2.7,
+        "marketCapUsd": 21104209248,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 54.71,
+        "changePct24h": -0.1,
+        "marketCapUsd": 12167719305,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.07,
+        "changePct24h": 0.2,
+        "marketCapUsd": 10882768556,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9854125751,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0126,
+        "changePct24h": -0.7,
+        "marketCapUsd": 9000316298,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.64,
+        "changePct24h": -1.1,
+        "marketCapUsd": 8870575581,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 508.89,
+        "changePct24h": 0.3,
+        "marketCapUsd": 8584113921,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces pulled in opposite directions today, and the net result was near-stillness. On the bullish side, Bitcoin spot ETFs recorded $853 million in single-day inflows — BlackRock's IBIT took the largest share — following last week's $1.1 billion record. That level of institutional buying created a steady bid under BTC, keeping it above $65,000 even as the Senate announced it would push the CLARITY Act vote to September 15. The CLARITY Act is the most significant US crypto-regulation framework currently in progress; its delay removes a near-term catalyst in either direction and leaves the market in a holding pattern heading into fall.\n\nThe Fear & Greed Index at 30 — in \"Fear\" territory — reflects that holding pattern accurately. Most top-15 assets moved less than 1% in either direction. Solana was the relative standout among large caps, up 1.3%, though no specific catalyst drove that move. Figure Heloc slipped 2.7%, the sharpest decline in the top 15, also without a clear news driver.\n\nThe CLARITY Act delay had one visible side effect: Monero, the leading privacy-focused cryptocurrency, gained 4% as the day's top mover. When regulatory timelines extend, assets designed to operate outside traditional financial oversight tend to attract attention from traders who see regulatory ambiguity as a reason to hold assets that are harder to surveil or restrict. That pattern held today. On the other end, Hyperliquid's HYPE token was essentially flat despite a structural story worth watching: rapid growth in real-world asset perpetuals on the platform is compressing the fee revenue that backs HYPE's value.",
+  "worthKnowing": [
+    "Hyperliquid's expansion into real-world asset perpetuals (contracts that track the price of assets like real estate or private credit) is growing fast enough to eat into the fee pool that underpins HYPE token's value — a structural headwind the market has not yet fully priced.",
+    "More than 100 crypto projects have shut down so far in 2026, echoing the early-2000s dot-com shakeout; capital is concentrating in top-tier assets while smaller and meme-adjacent tokens absorb the pressure.",
+    "Robinhood launched no-fee crypto trading in its main UK app via a Bitstamp integration, expanding retail access to digital assets in one of Europe's largest markets.",
+    "US inflation data is due later this week — the result will be the next major macro input for crypto markets while the CLARITY Act vote waits until September."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2309713315423,
+    "btcDominancePct": 56.7171,
+    "ethDominancePct": 10.0671,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "clarity-act",
+    "bitcoin-etf",
+    "blackrock-ibit",
+    "monero",
+    "hyperliquid",
+    "dot-com-shakeout"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
