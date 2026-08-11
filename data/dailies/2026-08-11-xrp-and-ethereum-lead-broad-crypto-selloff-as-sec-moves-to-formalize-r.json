@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-11T07:16:03.484Z",
+  "publishedAt": "2026-08-11",
+  "slug": "2026-08-11-xrp-and-ethereum-lead-broad-crypto-selloff-as-sec-moves-to-formalize-r",
+  "headline": "XRP and Ethereum lead broad crypto selloff as SEC moves to formalize 'Reg Crypto' framework",
+  "summary": "A broad risk-off session pushed most major crypto assets lower, with XRP falling 2.9% and Ethereum dropping 2.6% to lead large-cap losses. The day's real story is regulatory: the SEC announced a formal meeting to propose 'Reg Crypto,' a new framework that could reshape how digital asset offerings are structured in the U.S. BlackRock added a counterpoint, arguing that Bitcoin sentiment is improving and that BTC is beginning to trade independently from equities — a potential shift worth watching as the Fear & Greed index sits at a cautious 29.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "MNT",
+        "name": "Mantle",
+        "changePct24h": 4.9,
+        "catalyst": "Mantle attracted rotation into mid-cap layer-2 assets as traders sought relative value while Bitcoin and Ethereum declined — no single news catalyst was identified.",
+        "priceUsd": 0.449414,
+        "priceChange24hUsd": 0.02
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -6.8,
+        "catalyst": "Canton fell sharply with no specific catalyst identified, likely reflecting broad risk-off pressure as the Fear & Greed index sits at 29 and major assets sold off across the board.",
+        "priceUsd": 0.093374,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63918,
+        "changePct24h": -1.9,
+        "marketCapUsd": 1282676149195,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1872.57,
+        "changePct24h": -2.6,
+        "marketCapUsd": 225965108819,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183081532887,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 598.4,
+        "changePct24h": -0.8,
+        "marketCapUsd": 79682552937,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 72165710438,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.005,
+        "changePct24h": -2.9,
+        "marketCapUsd": 62822546543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.68,
+        "changePct24h": -1.4,
+        "marketCapUsd": 44083041317,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3314,
+        "changePct24h": 0.4,
+        "marketCapUsd": 31445243737,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.003,
+        "changePct24h": 0.2,
+        "marketCapUsd": 21140797246,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.07,
+        "changePct24h": 1.5,
+        "marketCapUsd": 12251048441,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0702,
+        "changePct24h": 0.2,
+        "marketCapUsd": 10902643430,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9813846954,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0129,
+        "changePct24h": 2.3,
+        "marketCapUsd": 9207305438,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.49,
+        "changePct24h": -1.9,
+        "marketCapUsd": 8732811715,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 489.09,
+        "changePct24h": -3.8,
+        "marketCapUsd": 8250638327,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's losses were broad and orderly rather than panicked — Bitcoin fell 1.9% to $63,918, Ethereum dropped 2.6% to $1,872, and XRP led large-cap declines at -2.9%. Zcash was the hardest hit among the top 15, sliding 3.8%. The Fear & Greed index at 29 reflects a market in cautious territory, and the selling pattern was consistent with that reading: no single dramatic event, just steady pressure across risk assets.\n\nThe regulatory backdrop provided the day's most significant context. The SEC announced a formal meeting to propose 'Reg Crypto,' a new framework designed to govern how digital asset offerings are structured and sold in the U.S. The proposal is still in early stages, but the announcement itself signals that the agency is moving from enforcement-first toward a more defined ruleset — a shift the market has been anticipating for years. XRP's steeper-than-average decline may partly reflect sensitivity to SEC-related news given the asset's history with the agency.\n\nOn the other side of the ledger, BlackRock published analysis arguing that Bitcoin sentiment is improving and that BTC is increasingly decoupling from equities — trading on its own dynamics rather than moving in lockstep with the S&P 500. That framing sits in tension with today's risk-off tone, but BlackRock's point is structural rather than day-to-day: if the decoupling thesis holds, Bitcoin's correlation to stock market swings should diminish over time. Market participants appear to be watching the $70,000 level as the next meaningful test for BTC.",
+  "worthKnowing": [
+    "BTCPay Server, an open-source Bitcoin payment tool used by merchants, suffered an exploit that drained funds from multiple instances — the project is offering a $190,000 bounty for information leading to recovery.",
+    "Vitalik Buterin updated Ethereum's development roadmap to elevate privacy features and quantum-resistant cryptography as priority goals, signaling a meaningful shift in the protocol's long-term technical direction.",
+    "Mantle (MNT) gained 4.9% against the day's trend, with traders rotating into mid-cap layer-2 assets as Bitcoin and Ethereum declined."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2269407020916,
+    "btcDominancePct": 56.5186,
+    "ethDominancePct": 9.9574,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "sec-reg-crypto",
+    "xrp",
+    "ethereum-roadmap",
+    "btcpay-exploit",
+    "blackrock-btc-decoupling",
+    "layer-2-rotation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
