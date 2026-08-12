@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-12T07:40:10.798Z",
+  "publishedAt": "2026-08-12",
+  "slug": "2026-08-12-harmony-one-crashes-40-after-attacker-mints-4-billion-tokens-uniswap-s",
+  "headline": "Harmony ONE crashes 40% after attacker mints 4 billion tokens; Uniswap slides 9% as SEC tightens crypto rules",
+  "summary": "A smart contract exploit on Harmony allowed an attacker to mint roughly a quarter of ONE's total token supply, sending the asset into freefall and rattling DeFi confidence broadly. Uniswap fell 9% as the SEC's emerging 'Reg Crypto' framework put additional pressure on decentralized finance tokens. The broader market held relatively steady — Bitcoin dipped half a percent, Ethereum edged up 0.7% — but the Fear & Greed index sits at 27, deep in fear territory, with traders bracing for a U.S. inflation print that could move things sharply in either direction.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": 4.8,
+        "catalyst": "Canton Network gained roughly 4.8% with no specific catalyst identified — the move appears technical against a broadly cautious market backdrop.",
+        "priceUsd": 0.098057,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -9,
+        "catalyst": "Uniswap fell 9% as the SEC's formalization of its 'Reg Crypto' framework weighed heavily on DeFi tokens, with risk-off positioning ahead of the U.S. CPI print amplifying the selloff.",
+        "priceUsd": 3.56,
+        "priceChange24hUsd": -0.32
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63664,
+        "changePct24h": -0.5,
+        "marketCapUsd": 1277710882462,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1887.57,
+        "changePct24h": 0.7,
+        "marketCapUsd": 227793076349,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183022455689,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 611.36,
+        "changePct24h": 1.9,
+        "marketCapUsd": 81410514636,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72076533693,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.019,
+        "changePct24h": 1,
+        "marketCapUsd": 63879464215,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.97,
+        "changePct24h": 0.4,
+        "marketCapUsd": 44249671500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3358,
+        "changePct24h": 1.3,
+        "marketCapUsd": 31863984316,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.038,
+        "changePct24h": 3.5,
+        "marketCapUsd": 21983454157,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 55.05,
+        "changePct24h": -1,
+        "marketCapUsd": 12248651254,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0715,
+        "changePct24h": 2.2,
+        "marketCapUsd": 11123734655,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9801529518,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0129,
+        "changePct24h": 0.6,
+        "marketCapUsd": 9261645074,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.1,
+        "changePct24h": -3.9,
+        "marketCapUsd": 8411131234,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 478.5,
+        "changePct24h": -2.8,
+        "marketCapUsd": 8073927738,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two stories dominated today. The first: an attacker exploited a vulnerability in Harmony's smart contracts to mint approximately 4 billion ONE tokens — roughly a quarter of the asset's entire supply — out of thin air. The token crashed around 40% on the news. The mechanics here matter: minting that volume of new tokens instantly dilutes every existing holder, and the attacker can sell those tokens into the market, compounding the price collapse. It's a reminder that smart contract security remains one of the sharpest risks in DeFi (decentralized finance, where code governs transactions without a central intermediary).\n\nThe second story is regulatory. The SEC appears to be formalizing what analysts at TD Cowen are calling 'Reg Crypto' — a structured framework for how crypto assets get classified and regulated. A token safe harbor, which would give projects a defined window to achieve compliance before facing enforcement, is reportedly on the table. That sounds constructive in the long run, but the near-term effect was the opposite: DeFi tokens sold off as traders priced in the possibility of tighter rules. Uniswap, the largest decentralized exchange by volume, fell 9% — the sharpest drop in the top tracked universe today.\n\nOverlaying both stories is a market already on edge. The Fear & Greed index sits at 27, firmly in fear territory, and traders in the Bitcoin and Ethereum options markets are positioning cautiously ahead of a U.S. CPI (consumer price index, the main inflation gauge) release. A hotter-than-expected print could push the Fed toward keeping rates higher for longer, which historically weighs on risk assets including crypto. A cooler print could provide relief. The market is waiting.",
+  "worthKnowing": [
+    "An XRP bridge was drained of $200,000 after a software flaw caused the system to treat fake deposits as real ones — a separate security incident from the Harmony exploit, adding to a difficult day for DeFi infrastructure.",
+    "Bitwise Asset Management cut 14% of its staff today, one of the more visible signs that the prolonged market downturn — with Fear & Greed at 27 — is translating into real cost-cutting at established crypto firms.",
+    "The SEC's emerging 'Reg Crypto' framework, flagged by TD Cowen analysts as potentially pivotal, could reshape compliance requirements across the industry; a formal proposal has not yet been published."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2271049230739,
+    "btcDominancePct": 56.2921,
+    "ethDominancePct": 10.036,
+    "fearGreedIndex": 27
+  },
+  "tags": [
+    "harmony-exploit",
+    "uniswap",
+    "sec-reg-crypto",
+    "defi-security",
+    "cpi-positioning",
+    "bitwise-layoffs"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
