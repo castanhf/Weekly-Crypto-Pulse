@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-13T07:42:02.739Z",
+  "publishedAt": "2026-08-13",
+  "slug": "2026-08-13-goldman-sachs-buys-neos-for-225b-as-bitcoin-drifts-near-63500-on-fed-w",
+  "headline": "Goldman Sachs buys NEOS for $2.25B as Bitcoin drifts near $63,500 on Fed watch",
+  "summary": "The day's real story wasn't price action — it was Goldman Sachs paying $2.25 billion to acquire ETF provider NEOS, giving Wall Street's most storied bank direct exposure to Bitcoin and Ethereum income products. Bitcoin itself barely moved, trading near $63,500 as traders looked past this week's CPI print and waited for clearer signals from the Federal Reserve. The Fear & Greed index sits at 29 — firmly in fear territory — and that backdrop is showing up in DeFi tokens, with Uniswap extending a two-day slide to -14% cumulative on SEC regulatory pressure.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": 7.9,
+        "catalyst": "OKB surged 7.9%, likely lifted by the broader exchange-token sector catching a bid after Goldman Sachs' $2.25B NEOS acquisition signaled deep institutional confidence in crypto infrastructure — though no single confirmed catalyst for OKB specifically was identified.",
+        "priceUsd": 102.26,
+        "priceChange24hUsd": 8.08
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -5,
+        "catalyst": "Uniswap fell another 5%, compounding yesterday's 9% drop, as SEC tightening of rules on decentralized exchange protocols continued to weigh on DeFi token valuations. With Fear & Greed at 29, risk appetite for governance tokens is thin.",
+        "priceUsd": 3.6,
+        "priceChange24hUsd": -0.18
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63831,
+        "changePct24h": 0.1,
+        "marketCapUsd": 1281075531297,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1896.06,
+        "changePct24h": 0.3,
+        "marketCapUsd": 228824104071,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183022917405,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 613.1,
+        "changePct24h": -0.1,
+        "marketCapUsd": 81642135226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 72029595973,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.014,
+        "changePct24h": -0.7,
+        "marketCapUsd": 63546602424,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.43,
+        "changePct24h": 0.2,
+        "marketCapUsd": 44530863743,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.337,
+        "changePct24h": 0.6,
+        "marketCapUsd": 31978864008,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.04,
+        "changePct24h": 0.2,
+        "marketCapUsd": 22066269790,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.31,
+        "changePct24h": 5,
+        "marketCapUsd": 12747614919,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0707,
+        "changePct24h": -2,
+        "marketCapUsd": 10987130336,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9812679442,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0124,
+        "changePct24h": -3.8,
+        "marketCapUsd": 8869060254,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.38,
+        "changePct24h": 2.8,
+        "marketCapUsd": 8627064378,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 496.6,
+        "changePct24h": 2.7,
+        "marketCapUsd": 8378377445,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin spent the day in a narrow band around $63,500, and the flat price action reflects where macro attention is right now: traders have absorbed the latest CPI data and are now waiting on the Federal Reserve's next signals before committing to a direction. With the Fear & Greed index at 29 — deep in fear territory — there's little appetite for risk-taking, and that's showing up across the board.\n\nThe Goldman Sachs–NEOS deal is the session's most consequential development. Goldman is paying up to $2.25 billion to acquire NEOS, an ETF provider with Bitcoin and Ethereum income products. For a bank of Goldman's stature to write a check that size for crypto ETF infrastructure is a meaningful data point about where institutional money is heading, even if it didn't move Bitcoin's price today.\n\nIn DeFi, Uniswap's continued slide — down 5% today after a 9% drop yesterday — traces directly to the SEC's tightening posture on decentralized exchange protocols. When regulators signal enforcement interest in a specific category of product, the tokens associated with those protocols tend to reprice quickly, and that's what's happening here. Hyperliquid bucked the trend, rising 5% after its treasury vehicle Hyperion reported a threefold jump in quarterly profits, driven by appreciation in HYPE holdings. Dogecoin fell 2%, consistent with a broader collapse in retail speculative interest — speculative activity in DOGE has reportedly returned to October 2025 levels while the token sits 70% below its peak.",
+  "worthKnowing": [
+    "The SEC approved Franklin Templeton's use of its onchain BENJI system for fund cash management — a regulatory green light for tokenized fund infrastructure that could open the door for other asset managers to follow.",
+    "Dogecoin speculative activity has fallen to October 2025 levels while the token trades 70% below its all-time high, reflecting how far retail enthusiasm for meme coins has retreated.",
+    "Hyperliquid's treasury vehicle Hyperion reported a threefold increase in quarterly profits, driven by rising HYPE token valuations — the direct catalyst behind HYPE's 5% gain today."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2276202641278,
+    "btcDominancePct": 56.2977,
+    "ethDominancePct": 10.052,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "goldman-sachs-neos",
+    "bitcoin-etf",
+    "sec-defi-enforcement",
+    "uniswap",
+    "hyperliquid",
+    "franklin-templeton-benji",
+    "fed-macro"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
