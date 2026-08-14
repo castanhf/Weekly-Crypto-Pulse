@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-14T07:39:29.522Z",
+  "publishedAt": "2026-08-14",
+  "slug": "2026-08-14-sec-cancels-crypto-rulemaking-meeting-as-bitcoin-slips-to-62962-and-fe",
+  "headline": "SEC cancels crypto rulemaking meeting as Bitcoin slips to $62,962 and Fear & Greed hits 29",
+  "summary": "The SEC abruptly cancelled its long-awaited Reg Crypto rulemaking session with no new date set, adding to a day already weighed down by MSCI's proposal to strip Bitcoin-heavy companies like Strategy and Metaplanet from major stock indices. Bitcoin fell 1.3% to $62,962 and the Fear & Greed index sits at 29 — firmly in fear territory. The one bright spot: Tether completed its first full KPMG audit of USDT, receiving a clean opinion on the $180 billion stablecoin.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": 5,
+        "catalyst": "Cronos outperformed the broader market amid general risk-off sentiment, though no specific catalyst was identified — the move appears technical against an otherwise red session.",
+        "priceUsd": 0.04919274,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -4.1,
+        "catalyst": "Bitcoin Cash declined 4.1%, pressured by a cluster of macro and regulatory headwinds including the SEC's cancelled rulemaking meeting and MSCI's proposed exclusion of Bitcoin-holding companies from stock indices.",
+        "priceUsd": 205.79,
+        "priceChange24hUsd": -8.44
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 62962,
+        "changePct24h": -1.3,
+        "marketCapUsd": 1263649591637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1873.59,
+        "changePct24h": -1.1,
+        "marketCapUsd": 226096896123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183010746985,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 607.89,
+        "changePct24h": -0.7,
+        "marketCapUsd": 80945274609,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 71907200503,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.003,
+        "changePct24h": -0.6,
+        "marketCapUsd": 62872988356,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.57,
+        "changePct24h": -1.2,
+        "marketCapUsd": 44026178486,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3341,
+        "changePct24h": -1.3,
+        "marketCapUsd": 31708263510,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.006,
+        "changePct24h": -3.2,
+        "marketCapUsd": 21429666002,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 56.43,
+        "changePct24h": -1,
+        "marketCapUsd": 12551386853,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0697,
+        "changePct24h": -1.3,
+        "marketCapUsd": 10831861848,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9817237414,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0125,
+        "changePct24h": 0.2,
+        "marketCapUsd": 8980105920,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.22,
+        "changePct24h": -1.9,
+        "marketCapUsd": 8489857606,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 486.15,
+        "changePct24h": -1.6,
+        "marketCapUsd": 8207573470,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two regulatory developments set the tone for a broadly negative session. First, the SEC cancelled its Reg Crypto rulemaking meeting — a session the industry had been waiting on for months — with no replacement date announced. That kind of open-ended delay tends to suppress risk appetite because it leaves companies and projects unable to plan around a clear legal framework. Second, MSCI, the index provider whose benchmarks underpin trillions of dollars in institutional fund flows, proposed excluding companies that hold large Bitcoin treasuries — firms like Strategy and Metaplanet — from its major stock indices. If adopted, the rule would force index-tracking funds to sell shares in those companies, removing one of the more visible channels through which institutional money has flowed into Bitcoin indirectly. Together, the two developments reinforced a cautious mood: the Fear & Greed index sits at 29, squarely in fear territory. Bitcoin fell 1.3% to $62,962, Solana dropped 1.2%, and most of the top 15 tracked assets closed lower. Bitcoin Cash was the session's hardest-hit major asset, down 4.1%, with no single catalyst beyond the general regulatory overhang. Cronos was the outlier, gaining 5% with no clear news driver — the move looks technical rather than fundamental.",
+  "worthKnowing": [
+    "Tether completed its first full audit by KPMG — a Big Four accounting firm — covering the $180 billion USDT stablecoin, and received a clean opinion, a credibility milestone the company had long promised.",
+    "JPMorgan terminated its banking relationship with Polymarket, the prediction market platform, while Baltimore filed suit against both Polymarket and Kalshi and a Washington court ordered Kalshi to halt certain offerings — a coordinated squeeze on crypto-adjacent prediction markets.",
+    "Trezor warned roughly 14,000 customers that a data breach at its fulfilment partner exposed their personal information, a reminder that hardware wallet security extends beyond the device itself."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2252330975967,
+    "btcDominancePct": 56.17,
+    "ethDominancePct": 10.0517,
+    "fearGreedIndex": 29
+  },
+  "tags": [
+    "sec-reg-crypto",
+    "msci-bitcoin-exclusion",
+    "tether-kpmg-audit",
+    "prediction-markets",
+    "trezor-data-breach",
+    "btc-dominance"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
