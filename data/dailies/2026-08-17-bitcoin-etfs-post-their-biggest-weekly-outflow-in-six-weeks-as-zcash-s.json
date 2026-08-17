@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-17T07:04:45.779Z",
+  "publishedAt": "2026-08-17",
+  "slug": "2026-08-17-bitcoin-etfs-post-their-biggest-weekly-outflow-in-six-weeks-as-zcash-s",
+  "headline": "Bitcoin ETFs post their biggest weekly outflow in six weeks as Zcash surges 6% on privacy-coin rotation",
+  "summary": "Institutional appetite for Bitcoin cooled noticeably this week — ETF outflows hit a six-week high even as BTC briefly touched $64,000 during Asian trading hours, a gap between price and fund flows that pushed the Fear & Greed Index down to 31 (Fear). The day's standout mover was Zcash, up 6% to $515, as traders rotated into privacy-focused assets. Hyperliquid's HYPE also outperformed, gaining 4.3% on the day and 8% on the week. Read on for what's driving the divergence between spot prices and institutional positioning.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 6,
+        "catalyst": "Renewed interest in privacy-coin narratives drove Zcash up 6% to $515. No single news event triggered the move; traders appear to be rotating into assets with a distinct value proposition as broader market sentiment stays cautious.",
+        "priceUsd": 515.01,
+        "priceChange24hUsd": 30.9
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "SHIB",
+        "name": "Shiba Inu",
+        "changePct24h": -1.3,
+        "catalyst": "Shiba Inu slipped 1.3% with no specific catalyst — memecoin assets have struggled to attract fresh capital in the current risk-off environment, with the Fear & Greed Index sitting at 31.",
+        "priceUsd": 0.00000444,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63574,
+        "changePct24h": 0.9,
+        "marketCapUsd": 1276250899143,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1904.11,
+        "changePct24h": 1.4,
+        "marketCapUsd": 229834023652,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 183023550458,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 605.88,
+        "changePct24h": 0.1,
+        "marketCapUsd": 80687178630,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 71796696992,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.005,
+        "changePct24h": 0.5,
+        "marketCapUsd": 63000997728,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.82,
+        "changePct24h": 0.6,
+        "marketCapUsd": 44191313043,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3326,
+        "changePct24h": 0.5,
+        "marketCapUsd": 31566327277,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -0.5,
+        "marketCapUsd": 21413950725,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 59.25,
+        "changePct24h": 4.3,
+        "marketCapUsd": 13182470985,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0704,
+        "changePct24h": 1.1,
+        "marketCapUsd": 10950364929,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9791383099,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.013,
+        "changePct24h": 2.6,
+        "marketCapUsd": 9321473300,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 515.01,
+        "changePct24h": 6,
+        "marketCapUsd": 8696702897,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.44,
+        "changePct24h": 0.6,
+        "marketCapUsd": 8686389229,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The headline story today is a disconnect between Bitcoin's spot price and institutional fund flows. BTC briefly crossed $64,000 during Asian trading hours — a level that would normally read as constructive — but Bitcoin ETFs recorded their largest weekly outflow in six weeks, suggesting that institutional investors are quietly reducing exposure even as the price holds up. The Fear & Greed Index at 31 (Fear) reflects that tension: the market is not in freefall, but confidence is thin.\n\nAdding to the unease, analysts flagged elevated open interest and concentrated long positioning in BTC futures markets. When too many traders are positioned in the same direction, a modest price reversal can trigger a cascade of forced liquidations — amplifying any move lower. That structural risk is sitting in the background today.\n\nAgainst that cautious backdrop, capital rotated into a handful of assets with distinct narratives. Zcash led the top 15, up 6% to $515, as traders sought out privacy-focused assets that carry a different story from large-cap Bitcoin exposure. Hyperliquid's HYPE gained 4.3% on the day, extending a strong weekly run of 8%, driven by continued interest in its decentralized perpetuals exchange. Ethereum edged up 1.4% to $1,904, outpacing Bitcoin's 0.9% gain — a small but notable divergence given that Ethereum developers are actively narrowing proposals for the upcoming Hegotá protocol upgrade.",
+  "worthKnowing": [
+    "SafePal, a crypto wallet provider, disclosed a data breach affecting the personal order information of roughly 40,000 customers — no funds were reported stolen, but the incident adds to a recent string of security events across the industry.",
+    "Ethereum developers are working to cull 66 improvement proposals tied to the upcoming Hegotá upgrade, a process that will shape ETH's protocol roadmap over the next development cycle.",
+    "BTC futures markets are carrying elevated open interest with concentrated long positioning, a setup that analysts say raises the risk of a sharp liquidation cascade if price momentum reverses."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2270246884924,
+    "btcDominancePct": 56.2303,
+    "ethDominancePct": 10.1339,
+    "fearGreedIndex": 31
+  },
+  "tags": [
+    "btc-etf-outflows",
+    "zcash",
+    "hyperliquid",
+    "privacy-coins",
+    "ethereum-hegota",
+    "safepal-breach"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
