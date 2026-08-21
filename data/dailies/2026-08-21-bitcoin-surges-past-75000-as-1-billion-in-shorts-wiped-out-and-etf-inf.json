@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-21T06:55:29.203Z",
+  "publishedAt": "2026-08-21",
+  "slug": "2026-08-21-bitcoin-surges-past-75000-as-1-billion-in-shorts-wiped-out-and-etf-inf",
+  "headline": "Bitcoin surges past $75,000 as $1 billion in shorts wiped out and ETF inflows hit $800M for a second day",
+  "summary": "A second consecutive day of massive short liquidations — roughly $1 billion in forced closures — sent Bitcoin up 8.5% to $75,437 and pulled the entire market higher with it. Institutional money reinforced the move: Bitcoin and Ethereum ETFs together drew $800 million in fresh inflows for the second day running. XRP was the standout, jumping nearly 19% on Ripple's announcement of an RLUSD-backed credit fund during what is shaping up to be XRP's best week in months.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "changePct24h": 18.9,
+        "catalyst": "Ripple announced backing of an RLUSD credit fund during XRP's best week in months, while a $2 million options bet on XRP volatility crossed the tape as prices surged. Continued short liquidations — with another $1 billion in shorts wiped out market-wide — amplified the move to nearly +19%.",
+        "priceUsd": 1.3,
+        "priceChange24hUsd": 0.25
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -6,
+        "catalyst": "No specific catalyst identified; MemeCore declined against the broad market rally, likely reflecting profit-taking or reduced appetite for lower-liquidity meme assets on a risk-on day dominated by large-cap moves.",
+        "priceUsd": 1.13,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75437,
+        "changePct24h": 8.5,
+        "marketCapUsd": 1514147927418,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2370.64,
+        "changePct24h": 4.9,
+        "marketCapUsd": 286151679697,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 183010272750,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 665.97,
+        "changePct24h": 5.9,
+        "marketCapUsd": 88703815459,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": 18.9,
+        "marketCapUsd": 81598501193,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 72801225534,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 90.19,
+        "changePct24h": 6.4,
+        "marketCapUsd": 52589552875,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3381,
+        "changePct24h": 1.7,
+        "marketCapUsd": 32089327413,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.026,
+        "changePct24h": -1.6,
+        "marketCapUsd": 22199594855,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 72.78,
+        "changePct24h": 2.9,
+        "marketCapUsd": 16192433522,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0833,
+        "changePct24h": 10.5,
+        "marketCapUsd": 12965414859,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 600.23,
+        "changePct24h": 8,
+        "marketCapUsd": 10142362531,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0139,
+        "changePct24h": -0.3,
+        "marketCapUsd": 9942806017,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9743019783,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.27,
+        "changePct24h": -0.9,
+        "marketCapUsd": 8529592621,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces combined to produce one of the stronger broad-market rallies in recent months. First, short liquidations: for the second day running, roughly $1 billion in leveraged short positions were forcibly closed as prices rose. When traders bet that prices will fall and prices rise instead, their brokers automatically buy back those positions — which pushes prices higher still, triggering more liquidations in a self-reinforcing loop. That mechanism explains why moves like today's can feel outsized relative to the underlying news. Second, institutional ETF inflows: Bitcoin and Ethereum spot ETFs together pulled in $800 million on the day, the second consecutive session of that magnitude. Sustained fund inflows represent real buying pressure — money entering the market and staying, rather than leveraged positions that can unwind quickly. Bitcoin crossed $75,000 on the combination, up 8.5%. Ethereum gained 4.9% to $2,370. Solana added 6.4%, BNB rose 5.9%, and Dogecoin jumped 10.5% — the kind of broad participation that typically accompanies genuine momentum rather than isolated asset moves. XRP was the day's clear leader at nearly +19%, driven by Ripple's announcement of an RLUSD-denominated credit fund. RLUSD is Ripple's dollar-pegged stablecoin; backing a credit fund with it adds a concrete financial use case to the stablecoin ecosystem and gave traders a specific reason to buy XRP beyond the general market tailwind. The Fear & Greed index sits at 72 — firmly in Greed territory — reflecting the two-day run of positive momentum.",
+  "worthKnowing": [
+    "MANTRA's blockchain was frozen following an unspecified exploit, sending its token to an all-time low — an 18% drop — and raising fresh questions about security in the real-world asset tokenization sector.",
+    "South Korea's Shinhan Bank partnered with the Solana Foundation, Etherfuse, and Orca to issue tokenized funds on the Solana network, one of the more concrete institutional commitments to Solana's real-world asset infrastructure to date.",
+    "A single $2 million options trade on XRP volatility crossed the tape as XRP surged, signaling that at least some traders were positioning for continued large price swings in the token."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2552556318243,
+    "btcDominancePct": 59.1592,
+    "ethDominancePct": 11.1878,
+    "fearGreedIndex": 72
+  },
+  "tags": [
+    "btc-etf-inflows",
+    "short-liquidations",
+    "xrp-rlusd",
+    "ripple",
+    "mantra-exploit",
+    "solana-tokenization",
+    "shinhan-bank"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
