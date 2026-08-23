@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-23T07:03:03.994Z",
+  "publishedAt": "2026-08-23",
+  "slug": "2026-08-23-xrp-drops-14-and-altcoins-slide-as-bitcoin-etfs-log-their-best-inflow-",
+  "headline": "XRP drops 14% and altcoins slide as Bitcoin ETFs log their best inflow week since October",
+  "summary": "A broad selloff hit altcoins hard on August 23, with XRP falling 14.2%, Solana down 7.4%, and Dogecoin losing nearly 10% — even as spot Bitcoin and Ether ETFs recorded $2.6 billion in weekly inflows, their strongest week since October. The disconnect between institutional buying and spot price action points to a market absorbing profit-taking and liquidation cascades after last week's short-squeeze rally. Zcash was the day's standout story, pulling back from an eight-year high near $850 on the back of Grayscale's ETF filing and nearly $10 billion in futures volume.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "PUMP",
+        "name": "Pump.fun",
+        "changePct24h": 13.6,
+        "catalyst": "Pump.fun gained 13.6% on continued memecoin and retail speculation momentum, riding the tail of last week's squeeze-led rally with no single identified news catalyst.",
+        "priceUsd": 0.00503752,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CRO",
+        "name": "Cronos",
+        "changePct24h": -18.7,
+        "catalyst": "Cronos fell 18.7% with no specific catalyst identified; the broad market selloff — BTC down 3.1%, XRP down 14.2% — appears to have triggered liquidation cascades that hit mid-cap altcoins hardest.",
+        "priceUsd": 0.055704,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76250,
+        "changePct24h": -3.1,
+        "marketCapUsd": 1529918727972,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2392.25,
+        "changePct24h": -5.6,
+        "marketCapUsd": 288557324230,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 183200011536,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 686.01,
+        "changePct24h": -5.8,
+        "marketCapUsd": 91318408229,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.45,
+        "changePct24h": -14.2,
+        "marketCapUsd": 91191493977,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73545202349,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 92.52,
+        "changePct24h": -7.4,
+        "marketCapUsd": 53920059095,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.342,
+        "changePct24h": -2.2,
+        "marketCapUsd": 32461709642,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1,
+        "changePct24h": -2.4,
+        "marketCapUsd": 21693263485,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.77,
+        "changePct24h": -4.4,
+        "marketCapUsd": 17507815558,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.09,
+        "changePct24h": -9.8,
+        "marketCapUsd": 14003088820,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 791.11,
+        "changePct24h": -3.9,
+        "marketCapUsd": 13343388736,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0139,
+        "changePct24h": -7.7,
+        "marketCapUsd": 9925490940,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9752775874,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.49,
+        "changePct24h": 0.8,
+        "marketCapUsd": 8727003680,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's selloff looks like a hangover from last week's short-squeeze rally. When a market rises sharply on forced short covering rather than fresh buying, the move tends to unwind quickly once the squeeze pressure fades — and that appears to be what happened here. Bitcoin fell 3.1% to $76,250, but the real damage was in mid- and small-cap altcoins: XRP dropped 14.2%, Dogecoin lost 9.8%, Solana fell 7.4%, and BNB slid 5.8%. Assets that had run hardest on speculative momentum gave back the most.\n\nThe counterintuitive backdrop is that institutional demand, as measured by ETF flows, remained strong. Spot Bitcoin and Ether ETFs drew $2.6 billion in net inflows last week — the largest weekly figure since October — suggesting that large buyers were still adding exposure even as prices fell. That divergence between fund flows and spot prices is not unusual in the short term; ETF purchases settle over days, and intraday spot markets can move independently.\n\nXRP's 14.2% drop stands out as the session's sharpest large-cap loss. No specific news catalyst was identified, which points to liquidation cascades — a chain reaction where falling prices trigger automatic sell orders on leveraged positions, accelerating the decline. BNB faced an additional headwind: The Sandbox, a Web3 gaming platform, halted bridging on BNB Chain after a security exploit, adding ecosystem-specific pressure to an already weak session.\n\nZcash, which had surged to an eight-year high near $850 on Grayscale's ETF filing and nearly $10 billion in futures volume, pulled back 3.9% to $791 — a relatively contained retreat given the scale of its recent run.",
+  "worthKnowing": [
+    "Spot Bitcoin and Ether ETFs recorded $2.6 billion in net inflows last week, their strongest weekly figure since October, even as prices fell on August 23.",
+    "Zcash hit an eight-year price high near $850 this week, driven by Grayscale's ETF filing and nearly $10 billion in futures volume, before retreating 3.9% on the day.",
+    "The Sandbox halted cross-chain bridging on Base and BNB Chain after a security exploit, introducing fresh risk for BNB ecosystem participants.",
+    "Solana cut its mainnet slot time to 350 milliseconds — a meaningful network performance upgrade and the first step toward a 200ms target — though the news did not offset the day's broad selloff."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2575284803143,
+    "btcDominancePct": 59.277,
+    "ethDominancePct": 11.1806,
+    "fearGreedIndex": 66
+  },
+  "tags": [
+    "xrp-selloff",
+    "btc-eth-etf-inflows",
+    "zcash-grayscale-etf",
+    "sandbox-exploit",
+    "solana-upgrade",
+    "liquidation-cascade"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
