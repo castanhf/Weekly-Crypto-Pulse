@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-24T07:21:53.245Z",
+  "publishedAt": "2026-08-24",
+  "slug": "2026-08-24-ray-dalio-backs-bitcoin-as-a-debt-hedge-ethereum-outpaces-btc-on-golde",
+  "headline": "Ray Dalio backs Bitcoin as a debt hedge, Ethereum outpaces BTC on golden cross signal",
+  "summary": "Two macro catalysts drove crypto higher Monday: Bridgewater founder Ray Dalio publicly called Bitcoin a hedge against rising U.S. sovereign debt, and the Treasury's $4 billion bond buyback was read by markets as a signal of yield suppression and dollar risk. Bitcoin rose 1.72% to $77,493, but Ethereum was the day's standout — up 2.81% to $2,459 — as DeFi tokens caught a broader bid. Aave led the field with a 15% gain. Ahead, traders are watching Fed Chair Kevin Warsh's Jackson Hole debut for signals on monetary policy.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AAVE",
+        "name": "Aave",
+        "changePct24h": 15.35,
+        "catalyst": "Aave surged amid a broad DeFi and altcoin rally, likely benefiting from renewed risk appetite as ETH outperformed BTC. The Term Finance governance exploit may have also driven users toward more established lending protocols like Aave.",
+        "priceUsd": 141.74,
+        "priceChange24hUsd": 21.76
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "PUMP",
+        "name": "Pump.fun",
+        "changePct24h": -4.51,
+        "catalyst": "No specific catalyst identified; the drop likely reflects profit-taking or rotation out of speculative meme-adjacent tokens as capital shifted toward larger-cap assets during the weekly rally.",
+        "priceUsd": 0.00502051,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77493,
+        "changePct24h": 1.72,
+        "marketCapUsd": 1555299069913,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2459.2,
+        "changePct24h": 2.81,
+        "marketCapUsd": 296771549992,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183209939032,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.49,
+        "changePct24h": 2.44,
+        "marketCapUsd": 93196379043,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 699.81,
+        "changePct24h": 1.9,
+        "marketCapUsd": 93182847959,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73519330108,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 94.76,
+        "changePct24h": 2.5,
+        "marketCapUsd": 55277300561,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3442,
+        "changePct24h": 0.61,
+        "marketCapUsd": 32667417951,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 21693263485,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.78,
+        "changePct24h": 1.83,
+        "marketCapUsd": 17740429225,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0918,
+        "changePct24h": 1.93,
+        "marketCapUsd": 14279938660,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 842.14,
+        "changePct24h": 6.52,
+        "marketCapUsd": 14225725419,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.014,
+        "changePct24h": 0.96,
+        "marketCapUsd": 10013240241,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9757343594,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 11.55,
+        "changePct24h": 2.84,
+        "marketCapUsd": 8639716470,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two distinct macro narratives converged to push crypto higher on Monday. The first was Ray Dalio — founder of Bridgewater, the world's largest hedge fund — publicly stating that investors should hold 'a bit of Bitcoin' as a hedge against rising U.S. sovereign debt risks. Dalio has historically been skeptical of crypto, which made the endorsement notable and widely covered. The second was the U.S. Treasury's $4 billion bond buyback operation. The buyback was designed to push yields lower, but markets read it as a signal that the government is actively managing the yield curve — a move that tends to raise concerns about dollar purchasing power over time. Bitcoin, as a fixed-supply asset, attracted fresh interest in that context. Ethereum outpaced Bitcoin on the day, rising 2.81% versus BTC's 1.72%. The ETH outperformance was broad-based: DeFi tokens rallied alongside it, with Aave gaining 15.35% as capital rotated into established lending protocols. Zcash was the top performer in the top 15, up 6.52%, though no specific catalyst was identified for that move. The broader market held its weekly gains heading into Fed Chair Kevin Warsh's first Jackson Hole speech, which traders are watching for any shift in tone on interest rates. Pump.fun was the session's notable decliner, falling 4.51% as capital rotated away from speculative tokens toward larger-cap assets.",
+  "worthKnowing": [
+    "DeFi lending protocol Term Finance lost an estimated $8.5 million after an attacker purchased enough governance voting power to drain funds from its vault — a reminder that governance mechanisms in DeFi can themselves be attack surfaces.",
+    "Ethereum's 50-day moving average crossed above its 200-day moving average on Monday — a pattern traders call a 'golden cross' — as ETH continued to outpace Bitcoin on a weekly basis.",
+    "Fed Chair Kevin Warsh makes his Jackson Hole debut this week; crypto markets have been sensitive to Fed signals on rates, and traders are watching for any change in tone."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2619050500985,
+    "btcDominancePct": 59.2431,
+    "ethDominancePct": 11.2968,
+    "fearGreedIndex": 73
+  },
+  "tags": [
+    "ray-dalio",
+    "treasury-buyback",
+    "ethereum-golden-cross",
+    "aave",
+    "term-finance-exploit",
+    "jackson-hole"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
