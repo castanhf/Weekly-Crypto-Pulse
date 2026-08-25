@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-25T07:09:27.102Z",
+  "publishedAt": "2026-08-25",
+  "slug": "2026-08-25-bitcoin-reclaims-80000-and-solana-surges-7-on-a-deflationary-governanc",
+  "headline": "Bitcoin reclaims $80,000 and Solana surges 7% on a deflationary governance vote",
+  "summary": "Bitcoin crossed back above $80,000 for the first time since May, carried by steady ETF inflows and a broad altcoin rally that sent Solana up nearly 7%. The Solana move had a specific driver: a live governance proposal to ramp daily SOL burns to $800,000 and slow new token creation, introducing a deflationary narrative that amplified the broader market tailwind. Analysts flagged overbought technical signals as a near-term check on the rally, but the underlying ETF flow data remains constructive.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct24h": 6.89,
+        "catalyst": "A live Solana governance proposal to ramp daily SOL burns to $800,000 and slow new token creation introduced a deflationary narrative. Combined with exchange volumes doubling over five days and the broader crypto rally extending into altcoins, SOL outperformed the market by a wide margin.",
+        "priceUsd": 100.86,
+        "priceChange24hUsd": 6.95
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AAVE",
+        "name": "Aave",
+        "changePct24h": -7.29,
+        "catalyst": "No clear catalyst identified; Aave moved sharply against the day's broad rally, likely reflecting profit-taking or technical selling in DeFi tokens after recent gains.",
+        "priceUsd": 131.37,
+        "priceChange24hUsd": -9.58
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80500,
+        "changePct24h": 3.95,
+        "marketCapUsd": 1615518032577,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2500.28,
+        "changePct24h": 1.77,
+        "marketCapUsd": 301668561575,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183175267333,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 712.45,
+        "changePct24h": 1.8,
+        "marketCapUsd": 94882121968,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.5,
+        "changePct24h": 1.37,
+        "marketCapUsd": 94178509423,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73631375521,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.86,
+        "changePct24h": 6.89,
+        "marketCapUsd": 58809366507,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3446,
+        "changePct24h": 0.06,
+        "marketCapUsd": 32709090057,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 0,
+        "marketCapUsd": 22559605529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 80.75,
+        "changePct24h": 1.28,
+        "marketCapUsd": 17960523472,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 855.75,
+        "changePct24h": 1.37,
+        "marketCapUsd": 14437398266,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0919,
+        "changePct24h": 0.19,
+        "marketCapUsd": 14290322573,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0147,
+        "changePct24h": 5.04,
+        "marketCapUsd": 10512642084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9741935357,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 11.72,
+        "changePct24h": 1.48,
+        "marketCapUsd": 8767590154,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's return above $80,000 — a level it last held in May — was not a sudden spike but a sustained move backed by ETF inflows that have been accumulating for several sessions. Analysts covering the ETF flow data describe the current setup as early-stage but constructive: institutional money is coming in steadily rather than in a single burst, which tends to produce more durable price support than retail-driven surges. The broader market followed BTC higher, with most top-15 assets posting gains between 1% and 7%.\n\nSolana's outperformance had a specific, identifiable cause. A live governance vote — meaning token holders are actively deciding right now — proposes to increase daily SOL burns to $800,000 and restrict new token creation. Burns reduce the circulating supply of SOL over time, which is generally read as deflationary and positive for price. Exchange volumes for SOL roughly doubled over the past five days, suggesting the governance narrative attracted fresh trading interest well before today's price move.\n\nThe one notable exception to the rally was Aave, the decentralized lending protocol, which fell 7.29% with no clear catalyst. On a day when most assets rose, a move of that size against the trend typically reflects either concentrated selling or profit-taking after a prior run — though the researcher's data does not identify a specific trigger.\n\nAnalysts flagged overbought technical signals for both BTC and SOL, meaning the assets have moved far and fast enough that a short-term pullback is statistically common. That is a description of where prices are relative to recent history, not a prediction of what happens next.",
+  "worthKnowing": [
+    "The Blockchain Association formally backed the Treasury's proposed GENIUS Act rules for stablecoin issuers, adding industry weight to a regulatory framework that would set federal standards for dollar-pegged tokens.",
+    "Coinbase launched tokenized stocks on its Base network, letting users hold on-chain representations of equities — joining a growing race among crypto platforms to bring traditional financial assets onto blockchains.",
+    "Aave fell 7.29% with no identified catalyst, the sharpest single-asset decline among tracked assets on an otherwise broadly positive day."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2717095347825,
+    "btcDominancePct": 59.3266,
+    "ethDominancePct": 11.0807,
+    "fearGreedIndex": 74
+  },
+  "tags": [
+    "bitcoin-80k",
+    "solana-governance",
+    "sol-burn-proposal",
+    "etf-flows",
+    "genius-act",
+    "tokenized-equities",
+    "base-network"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
