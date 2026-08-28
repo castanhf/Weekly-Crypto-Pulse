@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-28T18:39:22.863Z",
+  "publishedAt": "2026-08-28",
+  "slug": "2026-08-28-fed-chair-warshs-hawkish-jackson-hole-remarks-drag-bitcoin-below-78k-a",
+  "headline": "Fed Chair Warsh's hawkish Jackson Hole remarks drag Bitcoin below $78K and pull most of crypto lower",
+  "summary": "Fed Chair Kevin Warsh used his Jackson Hole address to signal that the fight against inflation isn't over, and crypto markets took the message hard — Bitcoin fell 2.96% to $77,546, its sharpest single-day drop in weeks, while XRP, Solana, and Dogecoin all shed more than 3%. The day's story isn't just prices; it's the collision of macro headwinds with a pair of Solana-specific events — a razor-thin governance vote on token supply and the Bitwise Solana ETF crossing $1 billion in assets — that made SOL's session particularly eventful. Tokenized real-world assets bucked the trend, with Figure Heloc edging higher as traders rotated toward yield-bearing alternatives.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": 3.32,
+        "catalyst": "Figure Heloc's tokenized HELOC product continues to attract institutional interest as banks build crypto infrastructure ahead of anticipated Clarity Act passage. The asset's gain stands out on a broad red day, suggesting defensive rotation into yield-bearing tokenized real-world assets.",
+        "priceUsd": 1.036,
+        "priceChange24hUsd": 0.03
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -8.37,
+        "catalyst": "MemeCore led losses on a day of broad altcoin consolidation following Bitcoin's pullback from 3-month highs, with no specific positive catalyst to offset the risk-off sentiment triggered by Fed Chair Warsh's hawkish Jackson Hole remarks on inflation.",
+        "priceUsd": 1.027,
+        "priceChange24hUsd": -0.09
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77546,
+        "changePct24h": -2.96,
+        "marketCapUsd": 1557028916283,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2431.27,
+        "changePct24h": -2.54,
+        "marketCapUsd": 293444387764,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183339289949,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 689.09,
+        "changePct24h": -2.66,
+        "marketCapUsd": 91770256272,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.38,
+        "changePct24h": -4.64,
+        "marketCapUsd": 86330711750,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73941347392,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 103.51,
+        "changePct24h": -3.57,
+        "marketCapUsd": 60472829201,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3397,
+        "changePct24h": 0.75,
+        "marketCapUsd": 32247524106,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.036,
+        "changePct24h": 3.32,
+        "marketCapUsd": 22545220048,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.66,
+        "changePct24h": -6.45,
+        "marketCapUsd": 17718399795,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 784.61,
+        "changePct24h": -2.97,
+        "marketCapUsd": 13257669906,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0846,
+        "changePct24h": -4.1,
+        "marketCapUsd": 13174363140,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0176,
+        "changePct24h": 2.01,
+        "marketCapUsd": 12515595927,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 9794470043,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 464.6,
+        "changePct24h": 1.28,
+        "marketCapUsd": 8734008158,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was Fed Chair Kevin Warsh's speech at Jackson Hole, Wyoming — the annual gathering where central bankers signal their policy intentions. Warsh said the Fed still has \"work to do\" on inflation, a phrase the market read as a commitment to keeping interest rates higher for longer. That's a headwind for risk assets broadly, and crypto felt it immediately: Bitcoin fell 2.96% to $77,546, pulling back from 3-month highs it had reached in the prior session. XRP dropped 4.64%, Solana fell 3.57%, and Hyperliquid shed 6.45% — the kind of broad, correlated decline that typically follows a macro shock rather than any asset-specific news.\n\nSolana had its own subplot. A governance vote to accelerate the rate at which new SOL tokens are issued — specifically, to double the speed at which that issuance rate declines over time — passed by a narrow margin. The vote introduced uncertainty about SOL's future token supply dynamics just as the price was digesting a 12% rally from the prior day. At the same time, the Bitwise Solana ETF crossed $1 billion in assets under management, a milestone that underscores sustained institutional demand even as the spot price retreated.\n\nThe one corner of the market that held up was tokenized real-world assets. Figure Heloc, which represents a tokenized home equity line of credit product, gained 3.32% — a small move in absolute terms, but notable on a day when almost everything else fell. TRON and Monero also posted small gains, though without a clear shared catalyst.",
+  "worthKnowing": [
+    "Circle secured a front-of-shirt sponsorship with Chelsea FC featuring USDC branding — the first Premier League jersey deal for a crypto company, putting stablecoin branding in front of a global football audience.",
+    "SBI Holdings invested $270 million for a 20% stake in Indonesian broker Ajaib, with plans to expand yen stablecoin distribution across Southeast Asia — a sign of accelerating institutional commitment to stablecoin infrastructure in the region.",
+    "The Bitwise Solana ETF crossed $1 billion in assets under management, becoming the first Solana ETF to reach that milestone despite SOL's price pullback from recent highs."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2636329292623,
+    "btcDominancePct": 59.0257,
+    "ethDominancePct": 11.1282,
+    "fearGreedIndex": 73
+  },
+  "tags": [
+    "jackson-hole",
+    "fed-policy",
+    "solana-governance",
+    "tokenized-real-world-assets",
+    "solana-etf",
+    "circle-usdc"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
