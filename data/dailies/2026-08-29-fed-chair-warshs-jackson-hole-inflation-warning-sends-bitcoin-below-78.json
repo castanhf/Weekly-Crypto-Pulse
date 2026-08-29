@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-29T12:46:47.897Z",
+  "publishedAt": "2026-08-29",
+  "slug": "2026-08-29-fed-chair-warshs-jackson-hole-inflation-warning-sends-bitcoin-below-78",
+  "headline": "Fed Chair Warsh's Jackson Hole inflation warning sends Bitcoin below $78K",
+  "summary": "Fed Chair Kevin Warsh used his Jackson Hole address to signal that the central bank still has 'work to do' on inflation, triggering a broad risk-off move that pulled Bitcoin down 2.42% to $77,579 and dragged most of the top 20 assets lower. Ethereum fell 2.59%, BNB and XRP each dropped around 2.3%, and Bitcoin Cash led losses with a 7.6% decline on thinner liquidity. Against that backdrop, two pieces of Solana news stood out: the Bitwise Solana ETF crossed $1 billion in assets under management, and a governance vote to accelerate SOL emission reductions passed narrowly — both signals of longer-term institutional and community confidence even on a rough macro day.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "changePct24h": 2.23,
+        "catalyst": "LEO Token outperformed the broader market amid continued consolidation by its parent company iFinex; no single breaking catalyst was identified, but relative strength against a macro-driven down day suggests defensive accumulation. Broader market weakness from Fed Chair Warsh's hawkish Jackson Hole remarks may have driven rotation into exchange tokens with perceived utility floors.",
+        "priceUsd": 9.66,
+        "priceChange24hUsd": 0.22
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -7.6,
+        "catalyst": "Bitcoin Cash led losses on the day, likely amplified by the broader risk-off sentiment following Fed Chair Warsh's hawkish Jackson Hole inflation remarks that dragged BTC below $78K. BCH, with thinner liquidity than BTC, typically sees outsized drawdowns in macro-driven selloffs. No BCH-specific catalyst was identified.",
+        "priceUsd": 244.12,
+        "priceChange24hUsd": -18.55
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77579,
+        "changePct24h": -2.42,
+        "marketCapUsd": 1557474121332,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2435.5,
+        "changePct24h": -2.59,
+        "marketCapUsd": 293910394731,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 183418837889,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 689.03,
+        "changePct24h": -2.29,
+        "marketCapUsd": 91748926496,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.38,
+        "changePct24h": -2.31,
+        "marketCapUsd": 86809545335,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 74063292589,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 103.5,
+        "changePct24h": -1.36,
+        "marketCapUsd": 60465305926,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3386,
+        "changePct24h": -0.68,
+        "marketCapUsd": 32139820223,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.04,
+        "changePct24h": 0.31,
+        "marketCapUsd": 22632938881,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.24,
+        "changePct24h": -2.16,
+        "marketCapUsd": 18068841064,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 810.49,
+        "changePct24h": 0.99,
+        "marketCapUsd": 13703941528,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0848,
+        "changePct24h": -2.38,
+        "marketCapUsd": 13195737748,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0176,
+        "changePct24h": 1.33,
+        "marketCapUsd": 12498604165,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 9815374474,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.66,
+        "changePct24h": 2.23,
+        "marketCapUsd": 8886298188,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story begins and ends in Wyoming. Fed Chair Kevin Warsh, speaking at the Jackson Hole economic symposium, told the audience that the central bank still has 'work to do' on inflation — language that markets read as a signal that rate cuts are not imminent. Crypto, which had been trading near recent highs, sold off immediately. Bitcoin fell 2.42% to $77,579, Ethereum dropped 2.59% to $2,435.50, and BNB and XRP each shed roughly 2.3%. The Fear & Greed index sits at 68, still in 'Greed' territory, but the day's move reflects a meaningful cooling of the optimism that had built up over recent weeks.\n\nWhen the Fed signals it will keep borrowing costs elevated for longer, risk assets — stocks, crypto, commodities — tend to reprice lower, because higher rates make safer alternatives like Treasury bonds more attractive by comparison. Crypto is particularly sensitive to this dynamic given its lack of yield and high volatility profile.\n\nBitcoin Cash bore the brunt of the selloff, falling 7.6%. BCH trades on thinner volume than Bitcoin, which means that when sellers step in during a macro-driven move, there are fewer buyers to absorb the pressure and prices drop further and faster. No BCH-specific news drove the move — it was a liquidity story layered on top of a macro one.\n\nSolana was the relative standout, falling only 1.36% despite the broader pressure. That resilience likely reflects two concurrent pieces of positive news: the Bitwise Solana ETF crossing $1 billion in assets under management, and a closely contested governance vote that passed to accelerate the reduction of new SOL issuance over time. Both developments point to growing institutional and community conviction in the network, even if neither was enough to push SOL higher on a day when the macro backdrop dominated.\n\nLEO Token was the day's lone meaningful gainer among tracked assets, rising 2.23%. Exchange tokens sometimes attract capital during broad selloffs as traders consolidate activity onto familiar platforms — LEO's parent company iFinex has also been active on the corporate front, which may have contributed to the relative strength.",
+  "worthKnowing": [
+    "Charles Schwab expanded its retail crypto offering beyond Bitcoin and Ethereum, deepening mainstream brokerage access to digital assets.",
+    "The Ninth Circuit Court of Appeals ruled against Kalshi in a Nevada sports betting dispute, affirming state authority over prediction markets and creating regulatory uncertainty for crypto-adjacent platforms that had relied on CFTC's claimed exclusive jurisdiction.",
+    "Solana's governance community passed a proposal to double the rate of SOL emission reduction — a supply-side change that reduces the pace at which new SOL enters circulation — though the vote was extremely close."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2632658460915,
+    "btcDominancePct": 58.9788,
+    "ethDominancePct": 11.1306,
+    "fearGreedIndex": 68
+  },
+  "tags": [
+    "jackson-hole",
+    "federal-reserve",
+    "solana-etf",
+    "solana-governance",
+    "charles-schwab",
+    "bitcoin-cash"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
