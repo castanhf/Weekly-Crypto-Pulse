@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-03T11:11:02.616Z",
+  "publishedAt": "2026-09-03",
+  "slug": "2026-09-03-bitcoin-reclaims-77500-as-fading-fed-hike-odds-and-record-low-dollar-h",
+  "headline": "Bitcoin reclaims $77,500 as fading Fed hike odds and record-low dollar hedges lift crypto across the board.",
+  "summary": "A day after geopolitical jitters knocked prices lower, crypto staged a broad recovery. The catalyst was macro, not crypto-specific: global fund managers cut their dollar hedges to the lowest level since 2015, and the probability of a Federal Reserve rate hike slid to 62% — both conditions that tend to ease pressure on risk assets. Bitcoin climbed 1.5% back above $77,600, XRP led the top-10 with a 3.5% gain, and higher-beta altcoins like Sui jumped even harder. The CFTC also made a notable regulatory move in derivatives markets — details below.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "SUI",
+        "name": "Sui",
+        "changePct24h": 7.74,
+        "catalyst": "Sui surged 7.74% as broader crypto majors bounced back from the prior day's Iran-driven selloff, with risk appetite returning as Fed rate hike odds slid toward 62% and dollar hedges among global funds hit their lowest levels since 2015. The macro tailwind disproportionately lifted higher-beta altcoins like SUI.",
+        "priceUsd": 0.762664,
+        "priceChange24hUsd": 0.06
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": -2,
+        "catalyst": "Figure Heloc slipped 2% with no specific catalyst identified — the move appears to reflect thin liquidity in a niche asset rather than any fundamental development.",
+        "priceUsd": 1.013,
+        "priceChange24hUsd": -0.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77662,
+        "changePct24h": 1.5,
+        "marketCapUsd": 1559787625093,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2393.99,
+        "changePct24h": 1.13,
+        "marketCapUsd": 292167913483,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183303256485,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 704.07,
+        "changePct24h": 3.31,
+        "marketCapUsd": 93716841027,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": 3.5,
+        "marketCapUsd": 85521499818,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 73579408633,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.14,
+        "changePct24h": 2.22,
+        "marketCapUsd": 58628991622,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3281,
+        "changePct24h": 1.64,
+        "marketCapUsd": 31143565505,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.013,
+        "changePct24h": -2,
+        "marketCapUsd": 22411163291,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.4,
+        "changePct24h": 0.4,
+        "marketCapUsd": 18113797555,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 832.09,
+        "changePct24h": 4.23,
+        "marketCapUsd": 14074958498,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0828,
+        "changePct24h": 2.85,
+        "marketCapUsd": 12899048080,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0166,
+        "changePct24h": -1.66,
+        "marketCapUsd": 11750829299,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9821880500,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 510.07,
+        "changePct24h": -1.92,
+        "marketCapUsd": 9587177898,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Yesterday's selloff — triggered by geopolitical tension linked to Iran — reversed sharply today, and the driver was macro rather than anything crypto-specific. Two data points did most of the work. First, global fund managers cut their dollar hedges to the lowest level since 2015, meaning large institutional players are less defensively positioned against a strong dollar. A weaker dollar environment generally benefits risk assets, including crypto. Second, the probability of a Federal Reserve rate hike at the next meeting slid to 62% — still elevated, but down from recent highs — reducing one of the main headwinds that had been weighing on Bitcoin and altcoins.\n\nBitcoin responded by climbing 1.5% back above $77,600, reclaiming the level it lost in yesterday's geopolitical-driven drop. XRP outperformed among the top-10 assets, gaining 3.5%, while BNB added 3.3% and Solana rose 2.2%. The biggest beneficiary was Sui, up 7.74% — a pattern consistent with how higher-beta altcoins (assets that tend to move more sharply than Bitcoin in either direction) respond when macro conditions shift from headwind to tailwind. Zcash also stood out with a 4.2% gain, though no specific catalyst was identified beyond the broader risk-on tone. The Fear & Greed index sits at 65, in Greed territory, reflecting the recovered sentiment.",
+  "worthKnowing": [
+    "The CFTC asked a federal judge to dismiss CME Group's lawsuit challenging the regulator's approval of crypto perpetual futures — a legal fight that could shape how leveraged crypto derivatives are structured and offered in the United States.",
+    "Australia is intensifying enforcement actions against crypto businesses ahead of a major compliance deadline, adding to a pattern of tightening regulatory requirements across Asia-Pacific markets.",
+    "Arbitrum's DAO reported $6.2 million in first-half income, with Robinhood Chain contributing a new revenue stream — a sign that Ethereum's layer-2 ecosystem is developing more durable business models beyond transaction fees."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2607074417545,
+    "btcDominancePct": 59.5463,
+    "ethDominancePct": 11.1651,
+    "fearGreedIndex": 65
+  },
+  "tags": [
+    "fed-rate-expectations",
+    "dollar-hedging",
+    "xrp-rally",
+    "sui",
+    "cftc-cme-perpetual-futures",
+    "australia-regulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
