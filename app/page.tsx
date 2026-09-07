@@ -23,14 +23,17 @@ const METRICS = [
 const EDITORIAL_PATH = [
   {
     label: 'Free',
+    price: null as string | null,
     description: 'The public layer. Weekly reports every Monday, plus shorter daily updates in between. All free.'
   },
   {
     label: 'Weekly Pro',
+    price: '$29 one-time' as string | null,
     description: 'Go deeper on one specific week when the free read is not enough.'
   },
   {
     label: 'Monthly Bundle',
+    price: '$79 one-time' as string | null,
     description: 'Follow four Pro weeks in a row, with a summary at the end of the month.'
   }
 ] as const;
@@ -85,7 +88,7 @@ export default function HomePage(): JSX.Element {
 
       <PageSection aria-labelledby="focus-heading" className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] xl:items-stretch">
         <SurfaceCard className="space-y-5 bg-gradient-to-br from-surface via-surface to-canvas/50">
-          <p className={editorialLabelClassName}>Latest report</p>
+          <p className={editorialLabelClassName}>Latest weekly report</p>
           <div className="space-y-3">
             <h2 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2.25rem]" id="focus-heading">
               {latestReport.metadata.title}
@@ -104,16 +107,19 @@ export default function HomePage(): JSX.Element {
         </SurfaceCard>
 
         <SurfaceCard className="space-y-5 border-ink/10 bg-paper/70">
-          <p className={editorialLabelClassName}>Path to Pro</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink/50">Path to Pro</p>
           <div className="space-y-4">
             {EDITORIAL_PATH.map((step) => (
-              <div className="space-y-1 border-l-2 border-line pl-3" key={step.label}>
-                <p className="text-base font-semibold text-ink">{step.label}</p>
-                <p className="text-base leading-8 text-muted">{step.description}</p>
+              <div className="space-y-1 border-l-2 border-ink/20 pl-3" key={step.label}>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-base font-semibold text-ink">{step.label}</p>
+                  {step.price ? <p className="text-sm font-medium text-ink/50">{step.price}</p> : null}
+                </div>
+                <p className="text-base leading-8 text-ink/65">{step.description}</p>
               </div>
             ))}
           </div>
-          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
+          <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
         </SurfaceCard>
       </PageSection>
 
@@ -169,8 +175,8 @@ export default function HomePage(): JSX.Element {
             })}
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
-            <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Weekly Pro — Single Issue" />
-            <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle — Best value" checkoutTarget={monthlyBundleCheckoutTarget} />
+            <ProCta checkoutTarget={weeklyProCheckoutTarget} label="Buy Single Issue" />
+            <ProCta className={secondaryCtaClassName} label="Buy Monthly Bundle" checkoutTarget={monthlyBundleCheckoutTarget} />
             <Link className={secondaryCtaClassName} href="/pro">
               View full comparison
             </Link>

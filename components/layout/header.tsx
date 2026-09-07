@@ -68,7 +68,7 @@ export function Header(): JSX.Element {
   const pathname = normalizePathname(usePathname() ?? '/');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-canvas/95 backdrop-blur-xl supports-[backdrop-filter]:bg-canvas/88">
       <div className={`${pageContainerClassName} py-4 sm:py-5`}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <Link className="min-w-0 max-w-2xl" href="/">
@@ -84,7 +84,7 @@ export function Header(): JSX.Element {
           </Link>
 
           <nav aria-label="Primary navigation" className="w-full lg:w-auto">
-            <ul className="flex w-full gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-surface p-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:flex-wrap sm:justify-end">
+            <ul className="flex w-full flex-wrap gap-2 rounded-2xl border border-white/10 bg-surface p-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:justify-end">
               {navItems.map((item) => {
                 const isActive = isNavItemActive(item, pathname);
 

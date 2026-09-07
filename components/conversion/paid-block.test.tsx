@@ -69,8 +69,8 @@ describe('PaidBlock', () => {
 
     test('renders both Single Issue and Monthly Bundle CTAs', () => {
       render(<PaidBlock variant="standalone" />);
-      expect(screen.getByRole('link', { name: 'Buy Single Issue' })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Buy Monthly Bundle' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Buy Single Issue — $29' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Buy Monthly Bundle — $79' })).toBeInTheDocument();
     });
   });
 });

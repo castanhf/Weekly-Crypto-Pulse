@@ -38,3 +38,6 @@ pnpm-debug.log*
 
 # claude code local settings (machine-specific permissions)
 .claude/settings.local.json
+
+# playwright test run cache
+test-results/.last-run.json

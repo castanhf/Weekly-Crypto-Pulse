@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
@@ -40,6 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
       <body className="min-h-screen">
         <div className="flex min-h-screen flex-col">
           <AnalyticsProvider />
+          <SpeedInsights />
           <Header />
           <main className={`${pageContainerClassName} flex-1 py-10 sm:py-14 lg:py-16`}>{children}</main>
           <Footer />

@@ -1,6 +1,6 @@
 {
   "name": "weekly-crypto-pulse",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "private": true,
   "license": "AGPL-3.0-or-later",
   "scripts": {
@@ -19,6 +19,7 @@
     "test:e2e:headed": "playwright test --headed",
     "generate:pro-pack": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
     "generate:pro": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-pro-pack.js",
+    "preview:pro": "node scripts/preview-pro.mjs",
     "generate:premium": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/sync-premium-artifacts.js",
     "generate:report-input": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/generate-report-input.js",
     "validate:agents": "rm -rf .generated/scripts && tsc -p tsconfig.scripts.json && node .generated/scripts/scripts/validate-agent-files.js",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^17.4.2",
     "fast-xml-parser": "^5.10.1",
     "next": "^16.2.12",

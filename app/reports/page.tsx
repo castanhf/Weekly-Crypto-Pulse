@@ -110,7 +110,7 @@ export default function ReportsPage(): JSX.Element {
               ))}
             </ul>
 
-            <aside className="space-y-4 xl:sticky xl:top-24">
+            <aside className="space-y-4 xl:sticky xl:top-36">
               <SurfaceCard className="space-y-5 bg-surface p-5 sm:p-6">
                 <h2 className="text-lg font-semibold tracking-tight">How to use the archive</h2>
                 <p className="text-base leading-8 text-muted">

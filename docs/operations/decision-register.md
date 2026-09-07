@@ -211,3 +211,57 @@ const finalOutput = {
 **Regression test:** `scripts/generate-report-input.test.ts` — "overrides totalMarketCapUsd with CoinGecko global value even when LLM returns a wrong-scale number".
 
 **Constraint:** Never trust LLM output for raw numeric values that represent large-scale financial figures. Any field that requires a trillion-scale integer must be sourced from the authoritative data fetch, not from LLM JSON output. Extend this pattern to any new snapshot fields of the same scale.
+
+---
+
+## D-09 — Dependabot PR triage automation (R2.3)
+
+**Decision (WCP-224):** Dependabot PRs are triaged automatically via two GitHub Actions workflows:
+1. `dependabot-triage.yml` — triggers on PR open/reopen by `dependabot[bot]`; classifies the update as patch / minor / major; auto-approves and enables auto-merge for patches; posts a manual-review comment for major updates.
+2. `dependabot-stuck-ci-watch.yml` — runs Monday 09:00 UTC; flags PRs open >7 days with non-passing CI; opens a GitHub issue with the stuck-PR report.
+
+**Companion scripts:** `scripts/dependabot-triage.mjs`, `scripts/dependabot-stuck-ci-watch.mjs` (Node.js ESM, no added npm dependencies — use `gh` CLI and `node:child_process` only).
+
+**Agent spec:** `.claude/agents/dependabot-triage.md` — for manual triage sweeps or edge cases the automation cannot handle.
+
+**Rationale:** The backlog of Dependabot PRs (#188, #194, #197, #199–#206) grew while the project lacked any automated triage. Manual review of each PR was blocking merge cycles. The automation handles the unambiguous cases (patches) without operator input, surfaces the ambiguous ones (majors, stuck CI) for explicit human decision, and creates an audit trail via GitHub labels and issues.
+
+**Constraint:** The triage workflow must never auto-approve or auto-merge major-version updates. Major bumps require a human to review breaking changes before any merge action. If the version-inference logic in `dependabot-triage.mjs` cannot determine the update type, the PR must be flagged as `dependabot-review-needed` — not approved.
+
+**PR #188 note (postcss bump):** This PR predates the automation and must be triaged manually. Check whether the bumped postcss version is within the Tailwind v4 peer requirement range. If CI passes and it is, approve as minor. See `.claude/agents/dependabot-triage.md` for the full triage checklist.
+
+---
+
+## D-10 — Sunday digest stays disabled (R2.3)
+
+**Decision (R2.3 closeout):** The Sunday digest pipeline remains dormant behind `BEEHIIV_BROADCAST_ENABLED=false`. Do not enable it during or after R2.3.
+
+**Rationale:** The Sunday digest is a week-in-review recap — it summarises the Mon–Sat daily briefings. The upcoming content phase will restructure how reports are generated and what the daily cadence looks like. Enabling the Sunday digest now would mean reworking a subscriber-facing touchpoint within weeks of shipping it, which is wasteful and potentially confusing to subscribers.
+
+**Re-enable condition:** Revisit after the content phase is complete and the report structure it will touch has stabilised. At that point, re-evaluate Option A (week-in-review, current implementation), Option B (weekly teaser), or Option C (keep disabled) with updated context.
+
+**Implementation note:** The pipeline is fully built in `scripts/run-sunday-digest-pipeline.ts` and wired into `daily-pipeline.yml` (fires on `date +%u == 7`). One env var flip — `BEEHIIV_BROADCAST_ENABLED=true` in Vercel — enables it. The `sunday_digest_writer` agent spec is at `.claude/agents/sunday-digest-writer.md`. Note that Beehiiv Send API requires Enterprise tier (see D-05).
+
+**Constraint:** Do not enable `BEEHIIV_BROADCAST_ENABLED=true` in any environment without first resolving the content phase and confirming the Beehiiv tier is sufficient.
+
+---
+
+## D-11 — Fulfillment ledger deferred, not rejected (R2.3)
+
+**Decision (R2.3 closeout):** `data/fulfillments.jsonl` (an append-only local fulfillment audit trail) will not be built during R2.3. The decision is a deferral, not a rejection.
+
+**Rationale:** The R2.3 Stripe/fulfillment audit found that Monthly Bundle continuity tracking is the weakest point in the current manual-fulfillment model — it becomes unreliable around ~10 concurrent subscribers (no record of which weeks a given buyer has received). However, with zero customers today and an open question about whether to move to automated subscriptions with programmatic delivery, building a manual-fulfillment audit trail now risks building for a model that may be replaced before it matters.
+
+**Re-examine condition:** Before the first Monthly Bundle sale, or as part of any subscription architecture work — whichever comes first. At that point, choose between: (a) append-only `data/fulfillments.jsonl` (no infrastructure, commitable audit trail); (b) Stripe metadata on PaymentIntents (`fulfilled: true`, `deliveryDate`); or (c) a proper database if volume warrants it.
+
+**Constraint:** If Monthly Bundle sales begin before a fulfillment ledger is in place, the operator must maintain a manual spreadsheet tracking which weeks each buyer is owed. Do not assume Stripe's payment log is sufficient for multi-delivery products.
+
+---
+
+## D-12 — Workflow naming consolidation deferred to content phase (R2.3)
+
+**Decision (R2.3 closeout):** The naming inconsistency between `data/dailies/` (where daily artifacts live) and `data/reports/` (where weekly report JSONs live) — and the related inconsistency in the artifact loading layer — is deferred into the content phase rather than addressed in R2.3.
+
+**Rationale:** The content phase will restructure report generation and will touch these paths regardless. Path renames are also the bug class that caused the v2.1.3 and v2.1.4 hotfixes (a path mismatch that only manifested in production). Doing the rename once, carefully, alongside the work that already has to touch these paths is safer than doing it twice with an intermediate broken state. Doing it in isolation now adds risk for a cosmetic benefit.
+
+**Constraint:** Until the content phase consolidates these paths, do not add new code that introduces a third naming convention for the same concepts. Use `data/dailies/` for daily artifacts and `data/reports/` for weekly report JSONs, consistent with existing code.

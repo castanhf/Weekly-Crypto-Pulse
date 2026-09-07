@@ -1,0 +1,30 @@
+name: Dependabot triage
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  contents: write        # enable auto-merge
+  pull-requests: write   # approve, label, comment
+
+jobs:
+  triage:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e  # v4.1.0
+        with:
+          node-version: '20'
+
+      - name: Run triage script
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node scripts/dependabot-triage.mjs

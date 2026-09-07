@@ -80,12 +80,14 @@ const createPageMetadata = ({ title, description, path }: PageSeoInput): Metadat
   };
 };
 
-export const createHomeMetadata = (): Metadata =>
-  createPageMetadata({
-    title: 'Crypto market reports',
+export const createHomeMetadata = (): Metadata => {
+  const base = createPageMetadata({
+    title: siteConfig.name,
     description: 'Weekly and daily crypto market reports. Free to read. We cover what happened and what it means.',
     path: '/'
   });
+  return { ...base, title: { absolute: siteConfig.name } };
+};
 
 export const createReportsArchiveMetadata = (): Metadata =>
   createPageMetadata({
@@ -106,6 +108,20 @@ export const createDisclaimerMetadata = (): Metadata =>
     title: 'Disclaimer',
     description: 'Crypto Pulse is informational only. Read this before acting on anything here.',
     path: '/disclaimer'
+  });
+
+export const createPrivacyMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Privacy Policy',
+    description: 'How Crypto Pulse collects, uses, and protects your information.',
+    path: '/privacy'
+  });
+
+export const createTermsMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Terms of Use',
+    description: 'Terms and conditions for using Crypto Pulse.',
+    path: '/terms'
   });
 
 export const createProMetadata = (): Metadata =>
@@ -157,6 +173,6 @@ export const createDailyMetadata = (daily: DailyArtifact): Metadata => {
   };
 };
 
-export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer'];
+export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer', '/privacy', '/terms'];
 
 export const getSiteOrigin = (): string => getSiteUrl();

@@ -7,7 +7,9 @@ const primaryFooterLinks = [
   { href: '/reports', label: 'Reports archive' },
   { href: '/pro', label: 'Pro offers' },
   { href: '/methodology', label: 'Methodology' },
-  { href: '/disclaimer', label: 'Disclaimer' }
+  { href: '/disclaimer', label: 'Disclaimer' },
+  { href: '/privacy', label: 'Privacy policy' },
+  { href: '/terms', label: 'Terms of use' }
 ] as const;
 
 export function Footer(): JSX.Element {

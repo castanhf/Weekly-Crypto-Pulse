@@ -1,0 +1,50 @@
+name: Dependabot stuck-CI watch
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'   # Monday 09:00 UTC
+  workflow_dispatch:
+    inputs:
+      stuck_days:
+        description: 'Flag PRs open longer than this many days (default: 7)'
+        required: false
+        default: '7'
+        type: string
+
+permissions:
+  pull-requests: read
+  issues: write   # create the stuck-PRs report issue
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e  # v4.1.0
+        with:
+          node-version: '20'
+
+      - name: Run stuck-CI watch
+        id: watch
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STUCK_DAYS: ${{ inputs.stuck_days || '7' }}
+        run: node scripts/dependabot-stuck-ci-watch.mjs
+
+      - name: Open GitHub issue for stuck PRs
+        if: steps.watch.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STUCK_REPORT: ${{ steps.watch.outputs.stuck_report }}
+        run: |
+          gh issue create \
+            --title "Dependabot: stuck PRs need attention ($(date -u +%Y-%m-%d))" \
+            --label "dependabot-review-needed" \
+            --body "$STUCK_REPORT" \
+            || echo "Issue creation failed — check gh permissions."

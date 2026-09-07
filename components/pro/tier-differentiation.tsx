@@ -1,5 +1,6 @@
 import { PageSection, SectionIntro, SurfaceCard } from '@/components/layout/page-shell';
 import { CONTENT_TIER_IDS, type ContentTierId, getContentBlockLabel, getContentTierDefinition } from '@/domain/content-tier';
+import { TierIcon } from '@/components/pro/tier-icons';
 
 type TierDifferentiationProps = Readonly<{
   description: string;
@@ -9,7 +10,6 @@ type TierDifferentiationProps = Readonly<{
 type TierPresentation = Readonly<{
   badgeClassName: string;
   cardClassName: string;
-  icon: string;
   railClassName: string;
   toneLabel: string;
 }>;
@@ -18,21 +18,18 @@ const TIER_PRESENTATIONS: Readonly<Record<ContentTierId, TierPresentation>> = {
   free: {
     badgeClassName: 'border-white/10 bg-surface text-paper',
     cardClassName: 'border-white/10 bg-surface',
-    icon: '◎',
     railClassName: 'border-white/20',
     toneLabel: 'Orientation layer'
   },
   weeklyPro: {
     badgeClassName: 'border-accent/30 bg-brand text-paper',
     cardClassName: 'border-accent/30 bg-gradient-to-br from-brand to-canvas text-paper',
-    icon: '◉',
     railClassName: 'border-paper/35',
     toneLabel: 'Decision layer'
   },
   monthlyBundle: {
     badgeClassName: 'border-accent/20 bg-accent/10 text-accent',
     cardClassName: 'border-accent/20 bg-gradient-to-br from-accent/15 via-surface to-surface',
-    icon: '◆',
     railClassName: 'border-accent/30',
     toneLabel: 'Continuity layer'
   }
@@ -59,15 +56,30 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Usage ladder</p>
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-white/10 bg-surface px-4 py-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Free</p>
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+              <span className="inline-flex shrink-0" style={{ '--tier-icon-accent': 'var(--color-accent)' } as React.CSSProperties}>
+                <TierIcon tierId="free" size={16} />
+              </span>
+              Free
+            </p>
             <p className="mt-2 text-sm leading-7 text-muted">Read first. Free covers what&apos;s happening this week.</p>
           </div>
           <div className="rounded-xl border border-accent/30 bg-brand px-4 py-4 text-paper">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">Weekly Pro</p>
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">
+              <span className="inline-flex shrink-0" style={{ '--tier-icon-accent': 'var(--color-accent)' } as React.CSSProperties}>
+                <TierIcon tierId="weeklyPro" size={16} />
+              </span>
+              Weekly Pro
+            </p>
             <p className="mt-2 text-sm leading-7 text-paper/88">Buy when the free summary isn&apos;t enough for this week.</p>
           </div>
           <div className="rounded-xl border border-accent/20 bg-accent/10 px-4 py-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Monthly Bundle</p>
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+              <span className="inline-flex shrink-0" style={{ '--tier-icon-accent': 'var(--color-accent)' } as React.CSSProperties}>
+                <TierIcon tierId="monthlyBundle" size={16} />
+              </span>
+              Monthly Bundle
+            </p>
             <p className="mt-2 text-sm leading-7 text-muted">Use when you want four weeks connected, not four separate reads.</p>
           </div>
         </div>
@@ -90,9 +102,12 @@ export function TierDifferentiation({ description, title }: TierDifferentiationP
                   <p className={`text-xs font-semibold uppercase tracking-[0.14em] ${mutedClassName}`}>{presentation.toneLabel}</p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold tracking-tight">
-                    <span className="mr-2" aria-hidden="true">
-                      {presentation.icon}
+                  <h3 className="flex items-center text-xl font-semibold tracking-tight">
+                    <span
+                      className="mr-2 inline-flex"
+                      style={{ '--tier-icon-accent': 'var(--color-accent)' } as React.CSSProperties}
+                    >
+                      <TierIcon tierId={tierId} size={24} />
                     </span>
                     {tier.name}
                   </h3>

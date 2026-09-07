@@ -90,21 +90,21 @@ export const createEmailReportHtml = (report: Report, context: DistributionConte
     .map((section) => renderSectionHtml(section.heading, section.body, section.highlights))
     .join('\n');
 
+  const accentColor = '#F7931A';
+  const canvasColor = '#0d1b2e';
+  const paperColor = '#F5F7FA';
+  const mutedColor = '#94a3b8';
+  const bodyTextColor = '#1a1a2e';
+
   return `<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8" />\n<meta name="viewport" content="width=device-width, initial-scale=1" />\n<title>${escapeHtml(
     report.metadata.title
-  )} | ${escapeHtml(siteConfig.name)}</title>\n</head>\n<body style="margin:0;padding:16px;color:#111;font-family:Arial,Helvetica,sans-serif;line-height:1.5">\n<main style="max-width:720px;margin:0 auto">\n<header>\n<p><strong>${escapeHtml(
-    siteConfig.name
-  )}</strong></p>\n<h1>${escapeHtml(report.metadata.title)}</h1>\n<p><strong>Week:</strong> ${escapeHtml(
-    report.metadata.weekLabel
-  )}<br /><strong>Published:</strong> ${escapeHtml(report.metadata.publishedAt)}</p>\n<p>${escapeHtml(
-    report.metadata.summary
-  )}</p>\n<p><a href="${reportUrl}">Read this report on the website</a></p>\n<hr />\n</header>\n<section>\n<h2>Market snapshot</h2>\n<ul>\n<li><strong>Total market cap:</strong> ${escapeHtml(
+  )} | ${escapeHtml(siteConfig.name)}</title>\n</head>\n<body style="margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:${bodyTextColor}">\n<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;padding:24px 0">\n<tr><td align="center">\n<table role="presentation" width="100%" style="max-width:680px;margin:0 auto">\n<tr><td style="background:${canvasColor};border-radius:12px 12px 0 0;padding:24px 32px">\n<p style="margin:0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:${mutedColor}">${escapeHtml(siteConfig.name)}</p>\n<h1 style="margin:12px 0 0;font-size:22px;font-weight:700;color:${paperColor};line-height:1.3">${escapeHtml(report.metadata.title)}</h1>\n<p style="margin:8px 0 0;font-size:13px;color:${mutedColor}">${escapeHtml(report.metadata.weekLabel)} &middot; Published ${escapeHtml(report.metadata.publishedAt)}</p>\n</td></tr>\n<tr><td style="background:#ffffff;padding:28px 32px">\n<p style="margin:0 0 20px;color:#333">${escapeHtml(report.metadata.summary)}</p>\n<p style="margin:0 0 28px"><a href="${reportUrl}" style="display:inline-block;background:${accentColor};color:#fff;font-weight:700;font-size:14px;text-decoration:none;padding:10px 20px;border-radius:8px">Read on the website</a></p>\n<hr style="border:none;border-top:1px solid #e5e7eb;margin:0 0 24px" />\n<h2 style="margin:0 0 12px;font-size:16px;color:${canvasColor}">Market snapshot</h2>\n<ul style="margin:0 0 24px;padding:0 0 0 20px;color:#444">\n<li><strong>Total market cap:</strong> ${escapeHtml(
     getCurrency(report.marketSnapshot.totalMarketCapUsd)
   )}</li>\n<li><strong>BTC dominance:</strong> ${escapeHtml(
     getPercent(report.marketSnapshot.btcDominancePct)
   )}</li>\n<li><strong>ETH dominance:</strong> ${escapeHtml(getPercent(
     report.marketSnapshot.ethDominancePct
-  ))}</li>\n<li><strong>Fear &amp; Greed:</strong> ${escapeHtml(String(report.marketSnapshot.fearGreedIndex))}</li>\n</ul>\n</section>\n<section>\n<h2>Top movers (7d)</h2>\n<ul>\n${report.movers.map(renderMoverItem).join('\n')}\n</ul>\n</section>\n${sectionsHtml}\n<hr />\n<footer>\n<p><a href="${archiveUrl}">Browse all reports</a></p>\n<p>This report is informational only and is not investment advice.</p>\n<p><a href="${getEmailReportUrl(siteOrigin, report.metadata.slug)}">Permanent email-friendly link</a></p>\n</footer>\n</main>\n</body>\n</html>`;
+  ))}</li>\n<li><strong>Fear &amp; Greed:</strong> ${escapeHtml(String(report.marketSnapshot.fearGreedIndex))}</li>\n</ul>\n<h2 style="margin:0 0 12px;font-size:16px;color:${canvasColor}">Top movers (7d)</h2>\n<ul style="margin:0 0 24px;padding:0 0 0 20px;color:#444">\n${report.movers.map(renderMoverItem).join('\n')}\n</ul>\n${sectionsHtml}\n</td></tr>\n<tr><td style="background:${canvasColor};border-radius:0 0 12px 12px;padding:20px 32px">\n<p style="margin:0 0 8px;font-size:12px;color:${mutedColor}"><a href="${archiveUrl}" style="color:${accentColor};text-decoration:none">Browse all reports</a> &middot; <a href="${getEmailReportUrl(siteOrigin, report.metadata.slug)}" style="color:${accentColor};text-decoration:none">Email-friendly link</a></p>\n<p style="margin:0;font-size:12px;color:${mutedColor}">This report is informational only and is not investment advice.</p>\n</td></tr>\n</table>\n</td></tr>\n</table>\n</body>\n</html>`;
 };
 
 export const createDistributionContext = (siteOrigin: string, now: Date = new Date(), feedUrl?: string): DistributionContext => ({

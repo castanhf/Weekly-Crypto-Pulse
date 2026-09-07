@@ -45,7 +45,7 @@ export function NewsletterSignup({ className = '' }: Props): JSX.Element {
   }
 
   return (
-    <form className={`space-y-3 ${className}`} onSubmit={(e) => void handleSubmit(e)}>
+    <form className={`max-w-md space-y-3 ${className}`} onSubmit={(e) => void handleSubmit(e)}>
       <div className="flex flex-col gap-2 sm:flex-row">
         <input
           required
@@ -69,7 +69,7 @@ export function NewsletterSignup({ className = '' }: Props): JSX.Element {
       <label className="flex cursor-pointer items-start gap-2 text-sm text-muted">
         <input
           checked={dailyOptIn}
-          className="mt-0.5 accent-accent"
+          className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer appearance-none rounded border border-white/25 bg-canvas transition checked:border-accent checked:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           disabled={status === 'loading'}
           type="checkbox"
           onChange={(e) => setDailyOptIn(e.target.checked)}

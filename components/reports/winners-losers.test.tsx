@@ -15,7 +15,7 @@ const mover = (overrides: Partial<Mover> = {}): Mover => ({
 describe('WinnersAndLosers', () => {
   test('renders section heading', () => {
     render(<WinnersAndLosers movers={[]} />);
-    expect(screen.getByText('Winners & Losers (7D)')).toBeInTheDocument();
+    expect(screen.getByText('Top movers (7D)')).toBeInTheDocument();
   });
 
   test('renders a winner with its symbol and catalyst', () => {
@@ -47,11 +47,11 @@ describe('WinnersAndLosers', () => {
 
   test('shows empty state when there are no winners', () => {
     render(<WinnersAndLosers movers={[mover({ changePct7d: -5 })]} />);
-    expect(screen.getByText('No winners for this period.')).toBeInTheDocument();
+    expect(screen.getByText('None for this period.')).toBeInTheDocument();
   });
 
   test('shows empty state when there are no losers', () => {
     render(<WinnersAndLosers movers={[mover({ changePct7d: 5 })]} />);
-    expect(screen.getByText('No losers for this period.')).toBeInTheDocument();
+    expect(screen.getByText('None for this period.')).toBeInTheDocument();
   });
 });
