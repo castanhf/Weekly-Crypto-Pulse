@@ -39,8 +39,11 @@ export default function PrivacyPage(): JSX.Element {
             on our servers.
           </p>
           <p className="text-base leading-8 text-muted">
-            We may collect anonymised usage analytics (page views, referrer information) to understand how the site is
-            used. No personally identifiable information is included in analytics.
+            We use Vercel Analytics and Vercel Speed Insights to understand how the site is used and how it performs.
+            These tools are cookieless — they do not set tracking cookies, do not build cross-site profiles, and do not
+            collect personally identifiable information. Vercel Analytics records aggregate page view counts and referrer
+            information; Speed Insights measures Core Web Vitals (page load performance). No individual user is tracked
+            across sessions or sites.
           </p>
         </SurfaceCard>
       </PageSection>
@@ -69,7 +72,7 @@ export default function PrivacyPage(): JSX.Element {
           <ul className="space-y-3.5 text-base leading-8 text-muted">
             <li className="border-l-2 border-line pl-4"><strong className="text-paper">Stripe</strong> — payment processing</li>
             <li className="border-l-2 border-line pl-4"><strong className="text-paper">beehiiv</strong> — newsletter delivery</li>
-            <li className="border-l-2 border-line pl-4"><strong className="text-paper">Vercel</strong> — site hosting and edge network</li>
+            <li className="border-l-2 border-line pl-4"><strong className="text-paper">Vercel</strong> — site hosting, edge network, and cookieless analytics (Vercel Analytics + Speed Insights). Vercel&apos;s privacy policy: <a className="underline underline-offset-2 hover:text-paper" href="https://vercel.com/legal/privacy-policy" rel="noopener noreferrer" target="_blank">vercel.com/legal/privacy-policy</a></li>
           </ul>
         </SurfaceCard>
       </PageSection>
@@ -89,9 +92,9 @@ export default function PrivacyPage(): JSX.Element {
         <SurfaceCard className="space-y-5">
           <h2 className="text-[1.45rem] font-semibold tracking-tight">Cookies</h2>
           <p className="text-base leading-8 text-muted">
-            This site may use cookies or local storage for session management and analytics. No third-party advertising
-            cookies are used. You can disable cookies in your browser settings, though some site functionality may be
-            affected.
+            The analytics tools used on this site (Vercel Analytics and Vercel Speed Insights) are cookieless — they
+            do not set or read cookies. No third-party advertising cookies are used. If other cookies or local storage
+            are introduced in future (for example, for session management), this policy will be updated to reflect that.
           </p>
         </SurfaceCard>
       </PageSection>
