@@ -2,8 +2,6 @@
 
 import { track } from '@vercel/analytics';
 
-import { isAnalyticsEnabled } from '@/lib/analytics/config';
-
 type ReportViewPayload = Readonly<{
   reportSlug: string;
 }>;
@@ -25,9 +23,5 @@ export const trackEvent = <TEventName extends AnalyticsEventName>(
   eventName: TEventName,
   payload: AnalyticsEventMap[TEventName]
 ): void => {
-  if (!isAnalyticsEnabled()) {
-    return;
-  }
-
   track(eventName, payload);
 };

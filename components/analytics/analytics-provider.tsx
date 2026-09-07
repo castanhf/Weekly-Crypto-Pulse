@@ -2,12 +2,6 @@
 
 import { Analytics } from '@vercel/analytics/react';
 
-import { isAnalyticsEnabled } from '@/lib/analytics/config';
-
-export function AnalyticsProvider(): JSX.Element | null {
-  if (!isAnalyticsEnabled()) {
-    return null;
-  }
-
+export function AnalyticsProvider(): JSX.Element {
   return <Analytics />;
 }
