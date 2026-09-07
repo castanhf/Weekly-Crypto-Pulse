@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-01T11:38:20.197Z",
+  "publishedAt": "2026-09-01",
+  "slug": "2026-09-01-robinhood-chain-hits-989m-dex-record-lifting-uniswap-12-while-bitcoin-",
+  "headline": "Robinhood Chain hits $989M DEX record, lifting Uniswap 12% while Bitcoin slips on hawkish Fed bets",
+  "summary": "A record-breaking day for decentralized trading overshadowed a quiet session for large-cap crypto. Robinhood Chain processed $989 million in daily DEX volume — a new high — sending Arbitrum up 30% and pulling Uniswap along for an 11.7% gain as traders rotated into DeFi governance tokens. Bitcoin slipped 0.83% to $77,899 and Solana fell 1.8%, both weighed down by hawkish Federal Reserve expectations and a global bond sell-off. The bright spot in institutional flows: Bitcoin and Ethereum ETFs resumed or extended their inflow streaks even as prices drifted lower.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": 11.68,
+        "catalyst": "Robinhood Chain hit a record $989M in daily DEX volume, boosting Arbitrum 30% and lifting sentiment across decentralized exchange tokens; traders rotated into UNI as the leading DEX governance token on the back of surging on-chain trading activity.",
+        "priceUsd": 5.74,
+        "priceChange24hUsd": 0.67
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "MNT",
+        "name": "Mantle",
+        "changePct24h": -5.5,
+        "catalyst": "No specific catalyst identified; the decline likely reflects broader risk-off pressure as hawkish Fed bets weighed on mid-cap Layer-2 tokens.",
+        "priceUsd": 0.540312,
+        "priceChange24hUsd": -0.03
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77899,
+        "changePct24h": -0.83,
+        "marketCapUsd": 1563819574256,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2453.93,
+        "changePct24h": -0.04,
+        "marketCapUsd": 296022983571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 183322901386,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 685.85,
+        "changePct24h": -0.32,
+        "marketCapUsd": 91312938358,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.38,
+        "changePct24h": -0.12,
+        "marketCapUsd": 86429640624,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73383065201,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 102.18,
+        "changePct24h": -1.79,
+        "marketCapUsd": 59768238427,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3288,
+        "changePct24h": -1.8,
+        "marketCapUsd": 31212597496,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.002,
+        "changePct24h": 0,
+        "marketCapUsd": 21870285003,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 83.63,
+        "changePct24h": 2.1,
+        "marketCapUsd": 18589641151,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 843.39,
+        "changePct24h": 0.47,
+        "marketCapUsd": 14249973545,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0828,
+        "changePct24h": -0.32,
+        "marketCapUsd": 12882931084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0167,
+        "changePct24h": 0.38,
+        "marketCapUsd": 11816566995,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 528.07,
+        "changePct24h": -3.27,
+        "marketCapUsd": 9919601469,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 9826454039,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main story played out in DeFi, not in Bitcoin. Robinhood Chain — a new blockchain built on Arbitrum's technology — processed a record $989 million in DEX (decentralized exchange) volume in a single day, generating meaningful revenue that flowed back to Arbitrum token holders. ARB jumped 30% on that news, and the momentum carried into Uniswap, the largest decentralized exchange by trading volume. Traders rotated capital into UNI as the most direct way to gain exposure to a surge in on-chain trading activity, pushing it up 11.7%.\n\nHyperliquid gained 2.1% after reports emerged that it is pursuing a deal with Kraken's parent company Payward to offer crypto perpetual futures (contracts that let traders bet on price direction without owning the underlying asset) to US customers — a significant expansion of its addressable market.\n\nThe broader large-cap market drifted lower. Bitcoin fell 0.83% to $77,899 and Solana dropped 1.79%, both pressured by a global bond sell-off and rising expectations that the Federal Reserve will hold rates higher for longer. When bond yields rise, risk assets — including crypto — tend to face headwinds as investors can earn more from safer alternatives. Despite the price pressure, Bitcoin and Ethereum ETFs continued to attract institutional inflows, with Ethereum funds extending their inflow streak to 11 consecutive days, suggesting that longer-term institutional appetite remains intact even as short-term traders pulled back.",
+  "worthKnowing": [
+    "The London Stock Exchange announced a partnership with Kraken's parent company Payward to tokenize 100 UK-listed stocks on-chain, with 24-hour trading planned — one of the most concrete TradFi-crypto convergence moves from a major exchange to date.",
+    "Singapore's central bank (MAS) proposed requiring stablecoin issuers to hold 100% reserves and banned them from offering yield-bearing products, a significant tightening that could reshape how stablecoins compete globally.",
+    "Hyperliquid is in talks with Payward to bring crypto perpetual futures to US customers, which would mark the platform's first major push into the regulated US market."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2622448239237,
+    "btcDominancePct": 59.5607,
+    "ethDominancePct": 11.2681,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "robinhood-chain",
+    "uniswap",
+    "arbitrum",
+    "dex-volume",
+    "etf-flows",
+    "singapore-stablecoin-regulation",
+    "lse-tokenization"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

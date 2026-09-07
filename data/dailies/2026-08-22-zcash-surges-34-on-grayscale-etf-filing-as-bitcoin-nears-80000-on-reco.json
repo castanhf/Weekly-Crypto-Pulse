@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-22T07:02:41.952Z",
+  "publishedAt": "2026-08-22",
+  "slug": "2026-08-22-zcash-surges-34-on-grayscale-etf-filing-as-bitcoin-nears-80000-on-reco",
+  "headline": "Zcash surges 34% on Grayscale ETF filing as Bitcoin nears $80,000 on record ETF inflows",
+  "summary": "A Grayscale spot ETF filing for Zcash sent ZEC above $800 for the first time since 2016, making it the day's standout mover. Bitcoin climbed 3.2% toward $80,000, powered by its largest single-day ETF inflows since May — with BlackRock capturing 83% of those flows. XRP added 16.5%, erasing a bearish technical pattern, while the broader altcoin market rode Bitcoin's momentum higher.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 34,
+        "catalyst": "Grayscale filed for a spot Zcash ETF, reigniting institutional interest in the privacy coin and pushing ZEC above $800 for the first time since 2016. The ETF narrative combined with broader altcoin momentum from Bitcoin's rally drove outsized buying pressure.",
+        "priceUsd": 794.51,
+        "priceChange24hUsd": 270.13
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RLUSD",
+        "name": "Ripple USD",
+        "changePct24h": 0,
+        "catalyst": "No meaningful price movement.",
+        "priceUsd": 1,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77441,
+        "changePct24h": 3.2,
+        "marketCapUsd": 1554365225452,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2434.09,
+        "changePct24h": 3.6,
+        "marketCapUsd": 293761962897,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 183193044862,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.59,
+        "changePct24h": 16.5,
+        "marketCapUsd": 99500567847,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 699.13,
+        "changePct24h": 5.7,
+        "marketCapUsd": 93071018308,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73504073608,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 94.75,
+        "changePct24h": 5.6,
+        "marketCapUsd": 55244935087,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3455,
+        "changePct24h": 2.4,
+        "marketCapUsd": 32792966280,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.033,
+        "changePct24h": 0.4,
+        "marketCapUsd": 22376981368,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.87,
+        "changePct24h": 9.7,
+        "marketCapUsd": 17770541529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0929,
+        "changePct24h": 11.4,
+        "marketCapUsd": 14456946296,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 794.51,
+        "changePct24h": 34,
+        "marketCapUsd": 13396368815,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0143,
+        "changePct24h": 3.2,
+        "marketCapUsd": 10233545821,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9729741314,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 11.89,
+        "changePct24h": 8.6,
+        "marketCapUsd": 8891539316,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces drove today's broad rally: a macro liquidity shift and a wave of institutional ETF activity.\n\nOn the macro side, a U.S. Treasury debt buyback policy adjustment — a technical change to how the government manages its outstanding debt — injected conditions favorable to risk assets. Bitcoin responded with a multi-day surge that brought it within striking distance of $80,000. That macro tailwind was amplified by the largest single-day inflows into Bitcoin spot ETFs since May, with BlackRock alone capturing 83% of the total. When institutional money moves into Bitcoin at that scale, it tends to lift the broader market.\n\nAltcoins followed, but two stood out for asset-specific reasons. XRP jumped 16.5% after clearing its 'death cross' — a technical pattern (formed when a short-term moving average falls below a long-term one) that had been signaling bearish momentum. Its erasure, combined with ongoing optimism around Ripple's regulatory situation in the U.S., drew fresh buyers. Zcash's 34% surge was the day's most dramatic move: Grayscale filed for a spot Zcash ETF, the same playbook that preceded Bitcoin's ETF approval in January 2024. Traders rotated into ZEC on the prospect that a similar institutional wrapper could follow for the privacy coin. Hyperliquid gained 9.7%, Dogecoin 11.4%, and Chainlink 8.6% — all riding the broader altcoin momentum rather than any single catalyst.",
+  "worthKnowing": [
+    "Nomura-backed Laser Digital received Japan's first new crypto business approval in four years, signaling a meaningful shift in regulatory openness from one of the world's largest financial markets.",
+    "Bitcoin's rally toward $80,000 has come largely within days, with a U.S. Treasury buyback adjustment cited as the key macro trigger — a reminder that debt management policy can move crypto markets.",
+    "BlackRock captured 83% of Bitcoin ETF inflows on the day, extending its dominance of the institutional crypto fund market."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2648747829209,
+    "btcDominancePct": 58.6293,
+    "ethDominancePct": 11.0792,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "zcash-etf",
+    "grayscale",
+    "bitcoin-etf-inflows",
+    "blackrock",
+    "xrp-death-cross",
+    "treasury-buyback",
+    "laser-digital-japan"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

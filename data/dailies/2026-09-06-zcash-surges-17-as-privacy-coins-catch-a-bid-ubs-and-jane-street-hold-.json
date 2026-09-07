@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-06T10:52:36.091Z",
+  "publishedAt": "2026-09-06",
+  "slug": "2026-09-06-zcash-surges-17-as-privacy-coins-catch-a-bid-ubs-and-jane-street-hold-",
+  "headline": "Zcash surges 17% as privacy coins catch a bid; UBS and Jane Street hold $75M in Hyperliquid ETFs",
+  "summary": "The day's standout move was Zcash, which jumped 17.4% to $1,187.27 as traders rotated into privacy-focused assets alongside a 2.58% gain in Monero. Solana and Dogecoin also outperformed, rising 3.8% and 4.35% respectively, while Bitcoin drifted up 0.45% to $79,980 and Ethereum gained 1.79%. The bigger institutional story: UBS and Jane Street have together accumulated $75 million in Hyperliquid ETF exposure, a sign that traditional finance is moving beyond Bitcoin and Ethereum when it comes to crypto products.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 17.4,
+        "catalyst": "Zcash surged 17.40% to $1,187.27, driven by a broad rotation into privacy coins — Monero gained 2.58% on the same day. No single news event triggered the move; the pattern points to renewed demand for assets that offer transaction privacy as regulatory surveillance concerns persist.",
+        "priceUsd": 1187.27,
+        "priceChange24hUsd": 206.61
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "TAO",
+        "name": "Bittensor",
+        "changePct24h": -0.42,
+        "catalyst": "Bittensor slipped 0.42% — the day's weakest performer among tracked non-stablecoin assets, though the move was too small to point to any specific catalyst.",
+        "priceUsd": 235.77,
+        "priceChange24hUsd": -0.98
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79980,
+        "changePct24h": 0.45,
+        "marketCapUsd": 1606019731848,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2498.75,
+        "changePct24h": 1.79,
+        "marketCapUsd": 304906554366,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 183401808860,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 757.26,
+        "changePct24h": 1.23,
+        "marketCapUsd": 100838188765,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.42,
+        "changePct24h": 1.02,
+        "marketCapUsd": 89029032513,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 74550249889,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 106.43,
+        "changePct24h": 3.8,
+        "marketCapUsd": 62309972975,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3342,
+        "changePct24h": 0.4,
+        "marketCapUsd": 31727453256,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.055,
+        "changePct24h": 1.58,
+        "marketCapUsd": 23516084575,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1187.27,
+        "changePct24h": 17.4,
+        "marketCapUsd": 20084274751,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 87.71,
+        "changePct24h": 3.5,
+        "marketCapUsd": 19509781782,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0897,
+        "changePct24h": 4.35,
+        "marketCapUsd": 13979806103,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.017,
+        "changePct24h": 3.56,
+        "marketCapUsd": 12067412297,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 538.58,
+        "changePct24h": 2.58,
+        "marketCapUsd": 10125853688,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 9820171578,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The clearest story today was in privacy coins. Zcash jumped 17.4% and Monero gained 2.58% — both moving together in a pattern that suggests capital rotating into assets designed to obscure transaction trails. No specific news event triggered the Zcash move, but the broader context is a persistent undercurrent of concern about blockchain surveillance and regulatory monitoring of on-chain activity. When that concern flares, privacy-focused assets tend to catch a bid simultaneously, which is what happened here.\n\nBeyond privacy coins, the session had a broadly constructive tone. Solana rose 3.8%, Dogecoin gained 4.35%, and Hyperliquid climbed 3.5% — the last of those supported by a concrete institutional catalyst: UBS and Jane Street disclosed a combined $75 million in Hyperliquid ETF holdings, a meaningful signal that traditional finance firms are building exposure to on-chain derivatives infrastructure, not just Bitcoin and Ethereum.\n\nBitcoin itself was quiet, gaining just 0.45% to $79,980. With BTC dominance at 59.23% and the Fear & Greed index at 73 (Greed territory), the market's overall mood was positive but the day's energy was in smaller assets rather than the flagship. Ethereum added 1.79%, in line with the broader altcoin tone.",
+  "worthKnowing": [
+    "A Bank of Korea study found that dollar-backed stablecoins can suppress local currency values, raising the prospect of tighter sovereign restrictions on stablecoin adoption in markets outside the US.",
+    "Tether-backed exchange Orionx is shutting down after an audit identified a $7 million gap in customer custody holdings, adding to scrutiny of crypto custodial practices.",
+    "Poland's legislature upheld a presidential veto on a crypto regulatory bill while the Zondacrypto exchange scandal continued to widen, leaving the country's regulatory framework unresolved."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2705222953900,
+    "btcDominancePct": 59.2283,
+    "ethDominancePct": 11.2432,
+    "fearGreedIndex": 73
+  },
+  "tags": [
+    "zcash-privacy-rotation",
+    "hyperliquid-etf",
+    "ubs-jane-street",
+    "stablecoin-regulation",
+    "orionx-custody",
+    "monero"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

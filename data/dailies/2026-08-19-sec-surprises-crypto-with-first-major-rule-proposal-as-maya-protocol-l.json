@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-19T06:52:35.072Z",
+  "publishedAt": "2026-08-19",
+  "slug": "2026-08-19-sec-surprises-crypto-with-first-major-rule-proposal-as-maya-protocol-l",
+  "headline": "SEC surprises crypto with first major rule proposal as Maya Protocol loses $11M to exploit",
+  "summary": "Two high-impact stories landed on an otherwise quiet Tuesday: the SEC unveiled an unexpected proposal for new crypto offering rules — the agency's first significant regulatory move as Congressional work on the Clarity Act stalls — and a security exploit drained roughly $11 million from Maya Protocol's liquidity pools. Bitcoin barely moved (+0.10%), but Solana outpaced the field at +1.30%, and the broader market held a cautious Fear & Greed reading of 46. The regulatory and security headlines are the real story today; price action was largely noise.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 58.3,
+        "catalyst": "No specific catalyst identified — the move appears to be speculative trading activity with no news anchor.",
+        "priceUsd": 0.602913,
+        "priceChange24hUsd": 0.35
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -10.4,
+        "catalyst": "No specific catalyst identified; broader risk-off sentiment, reflected in a Fear & Greed reading of 46, appears to have weighed on speculative meme assets.",
+        "priceUsd": 1.13,
+        "priceChange24hUsd": -0.12
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64265,
+        "changePct24h": 0.1,
+        "marketCapUsd": 1290110276382,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1913.2,
+        "changePct24h": 0.8,
+        "marketCapUsd": 230976780305,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 182964075430,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 601.48,
+        "changePct24h": -0.3,
+        "marketCapUsd": 80106886771,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 71740955022,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.003,
+        "changePct24h": 0.5,
+        "marketCapUsd": 62926934157,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 77,
+        "changePct24h": 1.3,
+        "marketCapUsd": 44911981975,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.333,
+        "changePct24h": 0.4,
+        "marketCapUsd": 31605447336,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.005,
+        "changePct24h": -0.1,
+        "marketCapUsd": 21604901577,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 58.5,
+        "changePct24h": -1.7,
+        "marketCapUsd": 13022333517,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.07,
+        "changePct24h": 0.1,
+        "marketCapUsd": 10910690348,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9782496524,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0131,
+        "changePct24h": -0.1,
+        "marketCapUsd": 9368110925,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 503.73,
+        "changePct24h": -1.4,
+        "marketCapUsd": 8510833082,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.23,
+        "changePct24h": -2.3,
+        "marketCapUsd": 8493947070,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Price action on August 19 was about as quiet as it gets — Bitcoin edged up 0.10%, Ethereum gained 0.80%, and Solana led the top 15 with a 1.30% rise. Nothing in the price data demands explanation. The day's real content was regulatory and security news arriving in parallel.\n\nThe SEC's surprise proposal for new crypto offering rules is the bigger of the two stories. The agency has been largely quiet on rulemaking while Congress worked on the Clarity Act, a bill that would define which digital assets fall under securities law versus commodity law. With that legislation stalled, the SEC appears to be moving on its own track — a dynamic that matters because a Congressional framework and an SEC-written rule could end up in conflict. The proposal's details will take time to parse, but the announcement itself signals that the regulatory picture for crypto issuers is about to get more complicated before it gets clearer.\n\nThe Maya Protocol exploit is a separate and more immediate concern for DeFi users. Attackers drained approximately $11 million in Bitcoin and other assets from the protocol's liquidity pools — the mechanism by which decentralized exchanges hold funds to facilitate trades. Maya is a cross-chain protocol built on the same architecture as THORChain, meaning it handles real assets across multiple blockchains simultaneously. Exploits of this type tend to be permanent losses for liquidity providers. The Fear & Greed index sitting at 46 (roughly neutral, leaning cautious) is consistent with a market that has absorbed both pieces of news without panic but without enthusiasm either.",
+  "worthKnowing": [
+    "Citi plans to launch institutional Bitcoin custody through its new Custody+ platform before year-end, adding a major Wall Street bank to the growing list of traditional financial firms offering direct crypto services.",
+    "Cypherpunk Technologies secured a $33 million deal backed by the Winklevoss twins to launch a dedicated Zcash mining fleet — a notable institutional bet on a privacy-focused coin that has faced delistings from several exchanges in recent years.",
+    "Solana outperformed Bitcoin and Ethereum on the day (+1.30%) even as Korean chip stocks slid 7%, a divergence that analysts noted as evidence of crypto trading on its own dynamics rather than mirroring broader tech sentiment."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2283004747308,
+    "btcDominancePct": 56.4701,
+    "ethDominancePct": 10.099,
+    "fearGreedIndex": 46
+  },
+  "tags": [
+    "sec-rulemaking",
+    "maya-protocol-exploit",
+    "defi-security",
+    "citi-bitcoin-custody",
+    "solana",
+    "zcash"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

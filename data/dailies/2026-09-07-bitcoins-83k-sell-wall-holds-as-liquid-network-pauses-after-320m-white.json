@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-07T12:17:56.893Z",
+  "publishedAt": "2026-09-07",
+  "slug": "2026-09-07-bitcoins-83k-sell-wall-holds-as-liquid-network-pauses-after-320m-white",
+  "headline": "Bitcoin's $83K sell wall holds as Liquid Network pauses after $320M white-hat exploit",
+  "summary": "Bitcoin's biggest story today isn't the price — it's a $320 million security incident on the Liquid Network, a Bitcoin sidechain, which prompted a full network pause after a purported white-hat attacker withdrew 4,000 BTC and promised to return most of it once the vulnerability is fixed. Meanwhile, on-chain data shows large BTC holders actively selling into the $83,000 resistance level, capping any upside. The broader market drifted lower on light volume, with Chainlink the notable exception, jumping 7.5% on the day.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "TAO",
+        "name": "Bittensor",
+        "changePct24h": 9.28,
+        "catalyst": "No single identifiable catalyst; AI-adjacent narrative momentum and residual buying from the prior day's altcoin rally likely drove the move before broader market softness set in.",
+        "priceUsd": 264.48,
+        "priceChange24hUsd": 24.55
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -3.68,
+        "catalyst": "The weekend altcoin rally ran out of steam as broader risk appetite faded with Bitcoin slipping below key resistance levels. No asset-specific catalyst was identified.",
+        "priceUsd": 0.106558,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79415,
+        "changePct24h": -0.62,
+        "marketCapUsd": 1594629603888,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2489.96,
+        "changePct24h": -0.45,
+        "marketCapUsd": 303819542578,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183401432028,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 744.92,
+        "changePct24h": -1.69,
+        "marketCapUsd": 99184046353,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.4,
+        "changePct24h": -1.46,
+        "marketCapUsd": 87793384185,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 74412863794,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 105,
+        "changePct24h": -1.39,
+        "marketCapUsd": 61527497543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3364,
+        "changePct24h": 0.44,
+        "marketCapUsd": 31938589255,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.055,
+        "changePct24h": 0,
+        "marketCapUsd": 23516084575,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1194.86,
+        "changePct24h": 1.07,
+        "marketCapUsd": 20203784605,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 87.92,
+        "changePct24h": -0.71,
+        "marketCapUsd": 19539642912,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0898,
+        "changePct24h": -0.2,
+        "marketCapUsd": 13993283735,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0165,
+        "changePct24h": -3.04,
+        "marketCapUsd": 11701699814,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 534.16,
+        "changePct24h": -0.8,
+        "marketCapUsd": 10035540040,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 13.19,
+        "changePct24h": 7.48,
+        "marketCapUsd": 9862171316,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's dominant story is a security incident, not a price move. Bitcoin's Liquid Network — a sidechain designed for faster, more private BTC transactions — was paused after an attacker withdrew roughly 4,000 BTC, worth approximately $320 million at current prices. The attacker claims white-hat intent, meaning they exploited the vulnerability to expose it rather than profit from it, and has promised to return most of the funds once the underlying bug is patched. The network pause is precautionary. This is a significant event for Bitcoin's broader ecosystem, though it does not affect the main Bitcoin blockchain.\n\nOn the price side, on-chain data shows large BTC holders — sometimes called whales — have flipped to net selling as Bitcoin approaches the $83,000 level. That level has acted as a ceiling: every time price pushes toward it, sellers step in and cap the move. Bitcoin closed the day down 0.62% at $79,415, a small move in percentage terms but one that reflects genuine distribution pressure from larger holders.\n\nThe contrast with last week's ETF data is notable. Spot Bitcoin ETFs pulled in $987 million in net inflows over the past week, the strongest weekly figure in months — a sign that institutional buyers are still accumulating through fund vehicles even as on-chain whales sell. These two forces — institutional buying via ETFs and whale selling on-chain — are currently offsetting each other, which explains the sideways-to-slightly-down price action.\n\nChainlink was the day's standout, gaining 7.48% to $13.19 with no single catalyst in the news data — likely a combination of technical momentum and broader oracle-sector interest.",
+  "worthKnowing": [
+    "The Coldcard hardware wallet hacker moved 45% of funds from the latest theft wave — about $7.7 million in BTC — keeping self-custody security concerns in focus.",
+    "South Korean conglomerate Hanwha is building a tokenized securities platform on Avalanche as Korean crypto regulation takes shape, one of the larger institutional blockchain commitments from the region this year.",
+    "Spot Bitcoin ETFs recorded $987 million in net inflows last week, the strongest weekly figure in recent months, even as spot prices face near-term selling pressure from large on-chain holders."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2689585916481,
+    "btcDominancePct": 59.1332,
+    "ethDominancePct": 11.2667,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "liquid-network-exploit",
+    "btc-etf-flows",
+    "whale-distribution",
+    "chainlink",
+    "bittensor",
+    "tokenized-securities"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

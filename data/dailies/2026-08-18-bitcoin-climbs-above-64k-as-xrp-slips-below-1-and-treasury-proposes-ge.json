@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-18T06:52:09.437Z",
+  "publishedAt": "2026-08-18",
+  "slug": "2026-08-18-bitcoin-climbs-above-64k-as-xrp-slips-below-1-and-treasury-proposes-ge",
+  "headline": "Bitcoin climbs above $64K as XRP slips below $1 and Treasury proposes GENIUS Act stablecoin rules",
+  "summary": "Bitcoin edged up 1.1% to $64,294 while most major tokens lost ground — XRP fell below the $1 mark for the first time since 2024 despite a new banking partnership in South Korea. The day's bigger story is regulatory: the U.S. Treasury formally proposed rulemaking under the GENIUS Act stablecoin framework, opening a public comment period that puts federal oversight of USDT, USDC, and DeFi one step closer to reality. Zcash extended a multi-day privacy-coin rally while OKB led exchange-token losses amid concerns about BitMart's financial health.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 3.3,
+        "catalyst": "Zcash extended a multi-day privacy-coin rotation rally, adding another 3.3% as speculative flows moved away from major tokens and into privacy-focused alternatives during a period of broad market weakness.",
+        "priceUsd": 511.02,
+        "priceChange24hUsd": 16.86
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": -5.9,
+        "catalyst": "OKB fell 5.9%, pressured by broader exchange-token weakness and negative sentiment tied to the BitMart audit controversy — the operational distress at BitMart appears to be casting a shadow over centralized exchange native tokens generally.",
+        "priceUsd": 97.97,
+        "priceChange24hUsd": -5.78
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64294,
+        "changePct24h": 1.1,
+        "marketCapUsd": 1290595751671,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1902.11,
+        "changePct24h": -0.4,
+        "marketCapUsd": 229551651515,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 182986716565,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 604.27,
+        "changePct24h": -0.5,
+        "marketCapUsd": 80468280585,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 71814610685,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9979,
+        "changePct24h": -0.7,
+        "marketCapUsd": 62546912344,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.89,
+        "changePct24h": 0.3,
+        "marketCapUsd": 44241142365,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3322,
+        "changePct24h": -0.2,
+        "marketCapUsd": 31525933879,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.006,
+        "changePct24h": 0.5,
+        "marketCapUsd": 21535082250,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.03,
+        "changePct24h": 0.5,
+        "marketCapUsd": 13352764679,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0699,
+        "changePct24h": -0.6,
+        "marketCapUsd": 10880274784,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9791775423,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0131,
+        "changePct24h": 0.6,
+        "marketCapUsd": 9376742571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.42,
+        "changePct24h": 0.2,
+        "marketCapUsd": 8663876508,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 511.02,
+        "changePct24h": 3.3,
+        "marketCapUsd": 8626148949,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's 1.1% gain to $64,294 stood out today because nearly everything else in the top 15 was flat or lower. ETH slipped 0.4%, BNB fell 0.5%, XRP dropped 0.7%, and DOGE lost 0.6% — a pattern consistent with capital consolidating into Bitcoin rather than spreading across the market. BTC dominance sits at 56.58%, and the Fear & Greed index at 41 (in 'Fear' territory) reinforces the flight-to-quality dynamic: when sentiment is cautious, Bitcoin tends to hold up better than smaller assets.\n\nXRP's dip below $1 is the day's most striking individual story. Ripple announced a cross-border payments partnership with South Korea's Jeonbuk Bank — the kind of adoption headline that typically supports a token's price — yet XRP still fell through the $1 level it had held since 2024. The disconnect suggests the market is pricing something else: possibly the broader regulatory uncertainty that the Treasury's GENIUS Act proposal puts back in focus, or simply that adoption news alone isn't enough to move price when sentiment is defensive.\n\nZcash's 3.3% gain continues a multi-day run that began with a 6% move yesterday. No single news catalyst drove it; the pattern looks like speculative rotation into privacy-focused assets when majors are underperforming — a niche trade that tends to attract attention during periods of broad market softness.\n\nOKB's 5.9% drop reflects contagion from the BitMart situation. BitMart's founder publicly dismissed calls for an audit while users reported blocked withdrawals and unpaid employees — the kind of operational distress that historically raises counterparty risk concerns across the exchange-token category.",
+  "worthKnowing": [
+    "The U.S. Treasury formally proposed rulemaking under the GENIUS Act stablecoin framework, opening a public comment period — a procedural milestone that moves federal oversight of USDT, USDC, and DeFi meaningfully closer.",
+    "BitMart's founder dismissed calls for an independent audit as users reported blocked withdrawals and staff reported unpaid wages, raising counterparty risk concerns across centralized exchange tokens.",
+    "Tokenized equities have tripled their market share in the real-world asset (RWA) sector, with Ondo Finance and Binance's xStocks platform leading the shift — while tokenized real-estate and bond products have lost ground."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2283941420088,
+    "btcDominancePct": 56.5754,
+    "ethDominancePct": 10.0591,
+    "fearGreedIndex": 41
+  },
+  "tags": [
+    "genius-act",
+    "stablecoin-regulation",
+    "xrp-ripple",
+    "zcash-privacy",
+    "bitmart",
+    "tokenized-equities"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

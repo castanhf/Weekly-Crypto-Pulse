@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-04T08:47:08.610Z",
+  "publishedAt": "2026-08-04",
+  "slug": "2026-08-04-bitcoin-recovers-toward-64k-as-coldcard-hack-losses-swell-to-130m-and-",
+  "headline": "Bitcoin recovers toward $64K as Coldcard hack losses swell to $130M and yen carry trade fears return",
+  "summary": "Bitcoin climbed 1.8% to $63,506 as broader market sentiment steadied, but two macro threats kept the Fear & Greed index deep in fear territory at 25. Galaxy Research raised its estimate of losses from the Coldcard hardware wallet exploit to $130 million, and coordinated U.S.-Japan currency action strengthened the yen — reviving fears of a carry trade unwind that previously sent Bitcoin sharply lower. Avalanche was the day's standout gainer at +6.8%, while Uniswap fell 6.1% despite decentralized exchanges hitting a record 24% share of spot crypto trading.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": 6.8,
+        "catalyst": "Avalanche surged 6.80% as broader market sentiment stabilized with Bitcoin recovering toward $64,000, and DEX volumes hitting record market share may have boosted L1 ecosystems with active DeFi activity. No single AVAX-specific catalyst was identified.",
+        "priceUsd": 6.77,
+        "priceChange24hUsd": 0.46
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -6.1,
+        "catalyst": "Uniswap dropped 6.10% despite DEXs capturing a record 24% of spot crypto trading volume, suggesting profit-taking or rotation away from the token even as the underlying protocol gains share; the disconnect between DEX volume growth and UNI price may reflect ongoing concerns about fee accrual to token holders.",
+        "priceUsd": 3.88,
+        "priceChange24hUsd": -0.24
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63506,
+        "changePct24h": 1.8,
+        "marketCapUsd": 1274292171023,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1856.44,
+        "changePct24h": 0.9,
+        "marketCapUsd": 224057517750,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183111351146,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 589.37,
+        "changePct24h": 1.4,
+        "marketCapUsd": 78485870345,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": 0,
+        "marketCapUsd": 72019388552,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.074,
+        "changePct24h": 1,
+        "marketCapUsd": 67145316871,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.31,
+        "changePct24h": 1.6,
+        "marketCapUsd": 42614227729,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3293,
+        "changePct24h": 1,
+        "marketCapUsd": 31237824018,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.006,
+        "changePct24h": 0.5,
+        "marketCapUsd": 20916645635,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 54.53,
+        "changePct24h": 4.9,
+        "marketCapUsd": 12130040414,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0701,
+        "changePct24h": 1.6,
+        "marketCapUsd": 11984631625,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9722260419,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.78,
+        "changePct24h": 0,
+        "marketCapUsd": 9002259856,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0127,
+        "changePct24h": -0.8,
+        "marketCapUsd": 8800235532,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 485.61,
+        "changePct24h": 3.2,
+        "marketCapUsd": 8159582510,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The market's modest recovery today — Bitcoin up 1.8%, most top assets in the green — happened against a backdrop of two genuine headwinds that explain why the Fear & Greed index sits at 25, deep in fear territory.\n\nThe more immediate pressure came from the Coldcard hardware wallet exploit. Galaxy Research raised its estimate of potential Bitcoin losses from the hack to $130 million, up from earlier figures. Coldcard is a widely used cold storage device; an exploit at that layer of the security stack unsettles holders who thought their Bitcoin was safely offline. That kind of news doesn't cause a single-day crash, but it keeps a ceiling on enthusiasm.\n\nThe macro threat is the yen carry trade. Coordinated U.S.-Japan currency intervention strengthened the yen today, and traders have a long memory here: in August 2024, a similar yen strengthening move triggered a rapid unwinding of carry trades — where investors borrow cheaply in yen to buy higher-yielding assets like crypto — and Bitcoin fell sharply in a matter of hours. Today's action revived those fears without yet triggering the same cascade.\n\nAgainst that backdrop, Hyperliquid gained 4.9% and Zcash rose 3.2%, both outpacing Bitcoin. The UNI/DEX divergence was the day's most notable disconnect: Uniswap's protocol hit a record 24% share of spot crypto trading volume, yet UNI the token fell 6.1%, reflecting a persistent concern among holders that protocol success doesn't automatically translate into token value when fee revenue doesn't flow to token holders.",
+  "worthKnowing": [
+    "BlackRock launched two tokenized money market funds designed to back stablecoin reserves, a significant step toward institutional-grade on-chain financial infrastructure.",
+    "Decentralized exchanges captured a record 24% of spot crypto trading volume as centralized exchange volumes declined — the highest DEX market share on record.",
+    "A Solana governance proposal would raise the network's daily token burn from roughly $47,000 to $650,000, a move that would meaningfully reduce SOL supply inflation if passed."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2260509137615,
+    "btcDominancePct": 56.3767,
+    "ethDominancePct": 9.912,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "coldcard-hack",
+    "yen-carry-trade",
+    "blackrock-tokenization",
+    "dex-volume-record",
+    "avalanche",
+    "uniswap"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-16T06:48:03.074Z",
+  "publishedAt": "2026-08-16",
+  "slug": "2026-08-16-ubs-and-paul-tudor-jones-pile-into-bitcoin-etfs-as-fear-greed-hits-34",
+  "headline": "UBS and Paul Tudor Jones pile into Bitcoin ETFs as Fear & Greed hits 34",
+  "summary": "Two major institutional names — UBS and Paul Tudor Jones' firm — made significant moves into Bitcoin ETF exposure on the same day, even as the Fear & Greed Index sits deep in fear territory at 34. Price action was quiet across the board, with Bitcoin barely moving and most top assets down less than 1%. The bigger story is the institutional behavior running counter to the sentiment reading, plus a conditional federal bank charter granted to Trump-linked World Liberty Financial for its USD1 stablecoin.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "changePct24h": 7.5,
+        "catalyst": "LEO Token jumped 7.5% with no direct catalyst identified in the day's news; the move may reflect broader institutional engagement narratives lifting exchange-adjacent tokens, though no LEO-specific announcement was found.",
+        "priceUsd": 9.29,
+        "priceChange24hUsd": 0.7
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": -5.7,
+        "catalyst": "Avalanche fell 5.7% with no specific catalyst identified; the drop stands out against an otherwise quiet market day and appears to be technical or liquidity-driven selling.",
+        "priceUsd": 6.33,
+        "priceChange24hUsd": -0.36
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63009,
+        "changePct24h": -0.1,
+        "marketCapUsd": 1264639379610,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1879.05,
+        "changePct24h": -0.2,
+        "marketCapUsd": 226766244953,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 183022660399,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 604.63,
+        "changePct24h": -0.8,
+        "marketCapUsd": 80518364521,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 71853536530,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1,
+        "changePct24h": -0.5,
+        "marketCapUsd": 62681890938,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.36,
+        "changePct24h": -0.2,
+        "marketCapUsd": 43910147924,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3309,
+        "changePct24h": -0.5,
+        "marketCapUsd": 31409623169,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -0.5,
+        "marketCapUsd": 21413950725,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.03,
+        "changePct24h": 1.2,
+        "marketCapUsd": 12685400000,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0697,
+        "changePct24h": -0.9,
+        "marketCapUsd": 10829972686,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9799929155,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0127,
+        "changePct24h": -0.6,
+        "marketCapUsd": 9085845340,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.29,
+        "changePct24h": 7.5,
+        "marketCapUsd": 8544377648,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 487.56,
+        "changePct24h": -1.4,
+        "marketCapUsd": 8229007788,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Price action on August 16 was almost entirely flat — Bitcoin dipped 0.10% to $63,009, Ethereum slipped 0.20% to $1,879, and most of the top 15 assets moved less than 1% in either direction. The day's story is not in the price chart; it's in two institutional disclosures that landed while the Fear & Greed Index sat at 34 (a reading that typically signals widespread anxiety among retail participants).\n\nUBS disclosed a 24-fold increase in its Bitcoin ETF call options position — a dramatic scaling-up from one of the world's largest wealth managers. On the same day, Paul Tudor Jones' firm reversed a year-long selling trend and added to its BlackRock Bitcoin ETF stake. These two moves, arriving together, suggest that some large institutional players are treating the current fear environment as an entry point rather than a warning sign. Neither disclosure directly moved Bitcoin's price today — institutional ETF activity flows through fund mechanics, not spot markets — but both are meaningful signals about where large money is positioning.\n\nAvalanche was the day's notable outlier, falling 5.7% with no identifiable news catalyst. The move appears technical or liquidity-driven against an otherwise calm backdrop. LEO Token gained 7.5% with similarly thin news coverage — no direct announcement was found to explain the move.\n\nThe broader regulatory picture remained unsettled. A White House meeting with crypto and prediction market executives is scheduled, signaling continued executive-branch engagement, but Galaxy Research cut its odds of the CLARITY Act — the main U.S. crypto market structure bill — passing to just 10%, a significant downgrade from earlier estimates.",
+  "worthKnowing": [
+    "World Liberty Financial, the Trump-linked crypto firm, received a conditional federal bank charter for its USD1 stablecoin — the first such charter granted to a stablecoin issuer and a notable regulatory milestone regardless of one's view of the project.",
+    "Galaxy Research now puts the CLARITY Act's odds of passing at 10%, down sharply from prior estimates, suggesting comprehensive U.S. crypto market structure legislation is unlikely in the near term.",
+    "A White House meeting between Trump, CFTC Chair Selig, and crypto and prediction market executives is expected, continuing a pattern of direct executive engagement with the industry.",
+    "Hyperliquid gained 1.2% to $57.03, the only meaningful gainer among top-15 non-stablecoin assets aside from LEO Token, with no specific catalyst identified."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2250646909708,
+    "btcDominancePct": 56.18,
+    "ethDominancePct": 10.0735,
+    "fearGreedIndex": 34
+  },
+  "tags": [
+    "ubs-bitcoin-etf",
+    "paul-tudor-jones",
+    "world-liberty-usd1",
+    "clarity-act",
+    "institutional-flows",
+    "stablecoin-charter"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

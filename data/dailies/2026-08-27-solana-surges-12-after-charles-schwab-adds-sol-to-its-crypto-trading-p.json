@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-27T17:44:03.489Z",
+  "publishedAt": "2026-08-27",
+  "slug": "2026-08-27-solana-surges-12-after-charles-schwab-adds-sol-to-its-crypto-trading-p",
+  "headline": "Solana surges 12% after Charles Schwab adds SOL to its crypto trading platform",
+  "summary": "Charles Schwab's announcement that it will offer Solana, Avalanche, and Chainlink trading to its retail customers was the day's clearest catalyst — Solana jumped 12.43% to $109, while Chainlink gained 5.49% and the broader market rallied alongside them. Bitcoin held near $80,800, up nearly 3%, as traders also positioned ahead of Fed Chair Kevin Warsh's Jackson Hole speech. The rest of this report covers what drove each major mover, what BlackRock said about Bitcoin's long-term role, and a DeFi security incident worth watching.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "changePct24h": 12.43,
+        "catalyst": "Charles Schwab announced it will add Solana to its crypto trading platform, dramatically expanding retail access to the asset. DeFi Development Corp also resumed SOL purchases, acquiring nearly 20,000 SOL, and MoonPay launched an AI-agent crypto lending integration on Solana — a confluence of institutional and ecosystem catalysts driving the 12.43% surge.",
+        "priceUsd": 109.04,
+        "priceChange24hUsd": 13.55
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -1.09,
+        "catalyst": "No specific catalyst identified; the -1.09% decline appears to be minor underperformance in a broadly positive market session.",
+        "priceUsd": 0.01742815,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80772,
+        "changePct24h": 2.97,
+        "marketCapUsd": 1621751674658,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2527.4,
+        "changePct24h": 2.69,
+        "marketCapUsd": 305093988322,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 183366768423,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 712.87,
+        "changePct24h": 1.73,
+        "marketCapUsd": 94939325659,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.47,
+        "changePct24h": 5.44,
+        "marketCapUsd": 92068622059,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 73774279050,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 109.04,
+        "changePct24h": 12.43,
+        "marketCapUsd": 63777121780,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3382,
+        "changePct24h": 0.96,
+        "marketCapUsd": 32115611498,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.002,
+        "changePct24h": -0.58,
+        "marketCapUsd": 21781666888,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 85.6,
+        "changePct24h": 5.84,
+        "marketCapUsd": 19050676004,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0897,
+        "changePct24h": 5.36,
+        "marketCapUsd": 13965773885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 822.37,
+        "changePct24h": 5.67,
+        "marketCapUsd": 13904348386,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0174,
+        "changePct24h": -1.09,
+        "marketCapUsd": 12359666987,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.03,
+        "marketCapUsd": 9819294047,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 11.94,
+        "changePct24h": 5.49,
+        "marketCapUsd": 8934325878,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day had a clear story: Charles Schwab — one of the largest retail brokerage platforms in the United States, with roughly 35 million active accounts — announced it will add Solana, Avalanche, and Chainlink to its crypto trading offering. For assets that have historically depended on crypto-native exchanges for distribution, landing on Schwab is a meaningful expansion of who can buy them with minimal friction. Solana responded with a 12.43% gain, Chainlink climbed 5.49%, and XRP added 5.44% as the broader altcoin market caught a bid alongside them.\n\nThe Schwab news wasn't the only tailwind. DeFi Development Corp, a publicly traded company, resumed buying Solana directly — acquiring nearly 20,000 SOL — adding a corporate treasury demand signal on top of the distribution news. Bitcoin's 2.97% rise to $80,772 had a different driver: markets are positioning ahead of Fed Chair Kevin Warsh's speech at Jackson Hole, with traders watching for any signal on the pace of interest rate changes. A more accommodative tone from the Fed would generally be read as supportive for risk assets including crypto. BlackRock's head of digital assets also publicly reaffirmed the firm's view that Bitcoin's role as a long-term store of value — a hedge against currency debasement rather than a risk-on trade — is the thesis that holds up over time. That kind of institutional endorsement doesn't move markets on its own, but it reinforces the backdrop against which Bitcoin is consolidating above $80,000.",
+  "worthKnowing": [
+    "Moonwell, a lending protocol on Coinbase's Base network, is investigating a suspected multimillion-dollar exploit flagged by security firms — no funds have been confirmed lost yet, but the incident adds to a pattern of DeFi lending vulnerabilities.",
+    "BlackRock's head of digital assets said publicly that Bitcoin's 'risk-off' narrative — the idea that BTC functions as a store of value rather than a speculative asset — is the long-term thesis he finds most credible, as BTC consolidates near $80,000.",
+    "MoonPay launched an AI-agent crypto lending integration built on Solana, adding to the ecosystem momentum that contributed to SOL's double-digit gain today."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2729426102416,
+    "btcDominancePct": 59.262,
+    "ethDominancePct": 11.1547,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "solana",
+    "charles-schwab",
+    "chainlink",
+    "jackson-hole",
+    "blackrock",
+    "moonwell-exploit",
+    "defi-security"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

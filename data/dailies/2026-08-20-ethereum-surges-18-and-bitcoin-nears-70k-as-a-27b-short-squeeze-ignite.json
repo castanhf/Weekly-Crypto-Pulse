@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-20T06:56:30.201Z",
+  "publishedAt": "2026-08-20",
+  "slug": "2026-08-20-ethereum-surges-18-and-bitcoin-nears-70k-as-a-27b-short-squeeze-ignite",
+  "headline": "Ethereum surges 18% and Bitcoin nears $70K as a $2.7B short squeeze ignites the market",
+  "summary": "A historic short squeeze — the largest on record — wiped out $2.7 billion in bearish bets and sent Bitcoin charging toward $70,000 while Ethereum posted its biggest single-day gain in months, rising 17.7%. The catalyst was a confluence of forces: surging ETF inflows, a White House crypto event where President Trump pushed Congress on the Clarity Act, and his direct endorsement of Hyperliquid's path to U.S. regulatory compliance. Hyperliquid's HYPE token led all major assets with a 21.3% gain, and XRP and Solana each climbed more than 10%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": 21.3,
+        "catalyst": "Trump publicly stated the CFTC is working to bring Hyperliquid to the U.S. in a 'fully compliant fashion,' triggering a surge that extended into the following day for a cumulative gain exceeding 21%. The prospect of regulatory legitimacy and U.S. market access drove aggressive buying across the token.",
+        "priceUsd": 72.01,
+        "priceChange24hUsd": 15.34
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RLUSD",
+        "name": "Ripple USD",
+        "changePct24h": 0,
+        "catalyst": "No movement; no catalyst identified. RLUSD is a stablecoin and was flat on the day.",
+        "priceUsd": 1,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 69830,
+        "changePct24h": 7.9,
+        "marketCapUsd": 1401462674551,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2262.47,
+        "changePct24h": 17.7,
+        "marketCapUsd": 273039679905,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 182983970915,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 628.22,
+        "changePct24h": 3.9,
+        "marketCapUsd": 83643970284,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72369481487,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.11,
+        "changePct24h": 10.4,
+        "marketCapUsd": 69452083103,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 85.75,
+        "changePct24h": 10.4,
+        "marketCapUsd": 49996651057,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.333,
+        "changePct24h": 0,
+        "marketCapUsd": 31609593115,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.043,
+        "changePct24h": 3.8,
+        "marketCapUsd": 22494698105,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 72.01,
+        "changePct24h": 21.3,
+        "marketCapUsd": 16017635431,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0752,
+        "changePct24h": 6.7,
+        "marketCapUsd": 11691865770,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0139,
+        "changePct24h": 6.5,
+        "marketCapUsd": 9980999424,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9724915642,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 556.34,
+        "changePct24h": 9.8,
+        "marketCapUsd": 9380315918,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.36,
+        "changePct24h": 1.5,
+        "marketCapUsd": 8610710623,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Today's rally had a clear mechanical trigger: a record $2.7 billion in short positions — bets that prices would fall — were forcibly closed as Bitcoin climbed toward $70,000. When a short squeeze of this scale happens, traders who bet on declines are automatically forced to buy back the assets they shorted, which itself pushes prices higher and triggers more forced buying. The result was a self-reinforcing surge across the board.\n\nThe squeeze didn't happen in a vacuum. Spot Bitcoin ETFs pulled in $517 million in a single day, and Ether ETFs added $189 million — the largest combined inflows in months. That institutional buying provided the underlying demand that made the squeeze so violent. At the same time, President Trump held a White House crypto event where he pressed Congress to advance the Clarity Act, a bill that would establish a clearer regulatory framework for digital assets. The political signal reinforced the risk-on mood.\n\nHyperliquid's HYPE token stood apart from the broader rally. Trump specifically named the platform, saying the CFTC is working to bring it to the U.S. in a 'fully compliant fashion.' That kind of direct presidential endorsement — naming a specific token and a specific regulatory pathway — is unusual, and traders responded accordingly, pushing HYPE up 21.3%. XRP and Solana each gained 10.4%, benefiting from the general rotation into assets with regulatory exposure that could improve under a friendlier Washington posture. Zcash's 9.8% gain had a separate driver: a new Grayscale filing revealed that DCG is in talks to seed a Zcash ETF with 200,000 ZEC.",
+  "worthKnowing": [
+    "Grayscale filed an updated Zcash ETF amendment showing DCG in talks to contribute 200,000 ZEC to seed the fund, sending ZEC up 9.8% on ETF anticipation.",
+    "Spot Bitcoin ETFs recorded $517 million in single-day inflows and Ether ETFs drew $189 million — the largest combined inflow day for both products in months.",
+    "President Trump used a White House crypto event to pressure Congress on the Clarity Act, which would establish a clearer legal framework distinguishing securities from commodities in the digital asset space."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2401871732852,
+    "btcDominancePct": 58.3176,
+    "ethDominancePct": 11.3546,
+    "fearGreedIndex": 62
+  },
+  "tags": [
+    "short-squeeze",
+    "bitcoin-etf",
+    "ethereum-etf",
+    "hyperliquid",
+    "clarity-act",
+    "zcash-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

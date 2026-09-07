@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-09T07:04:47.917Z",
+  "publishedAt": "2026-08-09",
+  "slug": "2026-08-09-senate-locks-in-september-15-clarity-act-vote-as-bitcoin-etfs-pull-in-",
+  "headline": "Senate locks in September 15 Clarity Act vote as Bitcoin ETFs pull in $1.1B — their best week since April",
+  "summary": "The U.S. Senate set a firm floor vote date for the Crypto Clarity Act, the furthest a crypto market-structure bill has advanced in Congress. That news landed alongside the strongest week of Bitcoin and Ether ETF inflows since April — $1.1 billion net — even as spot prices barely moved. Bitcoin slipped 0.2% to $64,808 and Ethereum was flat, with the Fear & Greed index sitting at 31, deep in fear territory. The gap between institutional fund flows and subdued spot prices is the day's real story.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": 8.9,
+        "catalyst": "No specific catalyst identified. Canton is a smaller, thinly traded asset, and the move appears to reflect low-liquidity order-book dynamics rather than any named event.",
+        "priceUsd": 0.0989,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": -2.7,
+        "catalyst": "No specific catalyst identified. Figure Heloc is a niche tokenized asset; the decline appears to reflect thin liquidity and the cautious broader market tone.",
+        "priceUsd": 1.001,
+        "priceChange24hUsd": -0.03
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64808,
+        "changePct24h": -0.2,
+        "marketCapUsd": 1300529549045,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1917.47,
+        "changePct24h": 0,
+        "marketCapUsd": 231398311234,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": 0,
+        "marketCapUsd": 183127313051,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 603.08,
+        "changePct24h": 1.7,
+        "marketCapUsd": 80304820310,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72133601937,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.04,
+        "changePct24h": 0.7,
+        "marketCapUsd": 65048919441,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 76.32,
+        "changePct24h": 2.3,
+        "marketCapUsd": 44433444107,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3297,
+        "changePct24h": 0.7,
+        "marketCapUsd": 31291461979,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -2.7,
+        "marketCapUsd": 21104209248,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 54.73,
+        "changePct24h": 0.6,
+        "marketCapUsd": 12173724409,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0701,
+        "changePct24h": -0.1,
+        "marketCapUsd": 10901938235,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9858761176,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0126,
+        "changePct24h": -0.6,
+        "marketCapUsd": 9050220720,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.75,
+        "changePct24h": 0.4,
+        "marketCapUsd": 8967908535,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 509.57,
+        "changePct24h": 0.5,
+        "marketCapUsd": 8554014106,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Spot prices were nearly frozen today — Bitcoin down 0.2%, Ethereum flat — but the session was far from uneventful. Two high-signal developments pulled in opposite directions and largely cancelled each other out in price terms.\n\nOn the bullish side, Senate Majority Leader Thune filed cloture on the Crypto Clarity Act, locking in a September 15 floor vote. This is the furthest a crypto market-structure bill has advanced in the U.S. Senate. The Clarity Act would establish a regulatory framework distinguishing digital commodities from securities — a distinction that has left exchanges and token issuers in legal limbo for years. ETF inflow data reinforced the institutional appetite: U.S. spot Bitcoin and Ether funds attracted $1.1 billion in net inflows over the past week, the strongest weekly figure since April.\n\nOn the cautious side, the Fear & Greed index sits at 31 — firmly in fear territory — and a Bitcoin protocol dispute added noise. The BIP-110 soft-fork attempt, which had under 3% miner support, briefly produced two blocks on a minority chain before stalling as the main Bitcoin network pulled ahead. The episode resolved quickly and posed no real threat to the network, but it contributed to the day's uncertain tone.\n\nSolana was the standout in the top 15, gaining 2.3% to $76.32, and BNB added 1.7% to $603.08. Neither move had a named catalyst; both likely reflect rotation into mid-cap assets on a day when Bitcoin offered no directional signal.",
+  "worthKnowing": [
+    "A Bitcoin Lightning infrastructure exploit drained funds from merchant payment servers running BTCPay Server, which responded by restricting remote Lightning node access — a precautionary measure affecting merchants who process Bitcoin payments.",
+    "Brazil's central bank ordered crypto exchanges to impose delays on large cross-border crypto transfers, adding capital-flow friction for one of Latin America's largest crypto markets.",
+    "The BIP-110 Bitcoin fork attempt produced two blocks on a minority chain before stalling; the main Bitcoin network maintained its lead and the minority chain lost momentum within hours."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2298021880943,
+    "btcDominancePct": 56.5909,
+    "ethDominancePct": 10.0697,
+    "fearGreedIndex": 31
+  },
+  "tags": [
+    "clarity-act",
+    "senate-vote",
+    "btc-etf-flows",
+    "bip-110",
+    "btcpay-server",
+    "brazil-crypto-regulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

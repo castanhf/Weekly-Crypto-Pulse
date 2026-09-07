@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-02T11:12:13.111Z",
+  "publishedAt": "2026-09-02",
+  "slug": "2026-09-02-us-strikes-on-iran-send-oil-above-93-pulling-bitcoin-below-76500-and-t",
+  "headline": "U.S. strikes on Iran send oil above $93, pulling Bitcoin below $76,500 and triggering broad crypto selloff",
+  "summary": "A U.S. military strike on Iran was the day's defining catalyst — oil surged past $93, global bond yields spiked, and risk assets sold off hard. Bitcoin fell 1.9% to $76,500, Ethereum dropped 3.6%, and XRP slid 4.4% despite a separate story showing XRP ETFs pulling in $170 million over 11 days. The one standout was Uniswap, which held gains as elevated DEX trading volumes from Robinhood Chain's record activity carried over. Below, the full picture.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": 4.36,
+        "catalyst": "Uniswap continued to benefit from residual momentum following Robinhood Chain's record DEX volumes reported the prior day, sustaining elevated trading activity on the protocol. Despite the broad macro-driven selloff, UNI held gains as DEX usage remained elevated.",
+        "priceUsd": 6,
+        "priceChange24hUsd": 0.26
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": -6.82,
+        "catalyst": "Canton fell sharply amid the broad risk-off selloff triggered by U.S. military strikes on Iran. Smaller-cap assets bore disproportionate selling pressure; no asset-specific catalyst was identified beyond macro-driven risk aversion.",
+        "priceUsd": 0.111713,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76500,
+        "changePct24h": -1.91,
+        "marketCapUsd": 1535763061591,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2365.62,
+        "changePct24h": -3.64,
+        "marketCapUsd": 288574383354,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183305954613,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 681.6,
+        "changePct24h": -0.73,
+        "marketCapUsd": 90756123143,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.32,
+        "changePct24h": -4.43,
+        "marketCapUsd": 82580404578,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73733054706,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 97.95,
+        "changePct24h": -4.28,
+        "marketCapUsd": 57322357435,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3228,
+        "changePct24h": -1.73,
+        "marketCapUsd": 30646324331,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.034,
+        "changePct24h": 0,
+        "marketCapUsd": 22767887395,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81,
+        "changePct24h": -2.93,
+        "marketCapUsd": 18030357202,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 798.42,
+        "changePct24h": -5.4,
+        "marketCapUsd": 13500220022,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0805,
+        "changePct24h": -2.85,
+        "marketCapUsd": 12531951854,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0168,
+        "changePct24h": 1.04,
+        "marketCapUsd": 11930172495,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.03,
+        "marketCapUsd": 9840790814,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 521.34,
+        "changePct24h": -1.52,
+        "marketCapUsd": 9801249935,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session had a single dominant driver: U.S. military strikes on Iran. Oil jumped above $93 a barrel, global bond yields surged, and investors moved out of risk assets across the board — crypto included. Bitcoin fell 1.9% to $76,500, Ethereum dropped 3.6%, XRP slid 4.4%, and Solana gave up 4.3%. Zcash was the hardest hit among the top 15, down 5.4%, consistent with smaller and less liquid assets absorbing heavier selling in risk-off conditions.\n\nThe bond yield surge compounded the pressure specifically on Bitcoin. When yields rise sharply, assets that trade as inflation hedges or debasement plays — Bitcoin being the clearest example — tend to face outflows as investors can earn more from government bonds without taking on crypto risk. That dynamic showed up directly: BlackRock's IBIT led $236 million in Bitcoin ETF outflows on the day, the largest single-session exit in recent weeks.\n\nA separate China economic indicator — one that historically tracks global risk appetite — also turned negative, adding a second macro headwind on top of the geopolitical shock. The combination of a Middle East escalation, rising oil, surging yields, and a weakening Chinese risk signal made for a difficult session across the board.\n\nUniswap was the notable exception. DEX (decentralized exchange) trading volumes remained elevated following Robinhood Chain's record activity the prior day, and that sustained usage kept UNI in positive territory even as the rest of the market sold off.",
+  "worthKnowing": [
+    "XRP ETFs attracted $170 million in net inflows over the past 11 days, with Goldman Sachs emerging as the top institutional holder — even as XRP's price fell 4.4% on the day's macro headwinds.",
+    "G20 finance ministers pledged to establish 'clear pathways' for digital asset innovation, a broadly positive signal for long-term regulatory clarity, though no binding commitments were announced.",
+    "A key Chinese economic indicator tied to global risk appetite turned negative, adding a macro headwind to crypto markets on top of the Iran-driven selloff."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2598765691991,
+    "btcDominancePct": 59.0229,
+    "ethDominancePct": 11.0894,
+    "fearGreedIndex": 63
+  },
+  "tags": [
+    "iran-strikes",
+    "btc-etf-outflows",
+    "xrp-etf-inflows",
+    "oil-shock",
+    "uniswap",
+    "g20-regulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

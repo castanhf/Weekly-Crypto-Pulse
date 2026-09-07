@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-15T06:46:30.125Z",
+  "publishedAt": "2026-08-15",
+  "slug": "2026-08-15-bitcoin-etfs-post-augusts-first-back-to-back-outflows-as-world-liberty",
+  "headline": "Bitcoin ETFs post August's first back-to-back outflows as World Liberty wins a federal bank charter",
+  "summary": "Bitcoin slipped 0.5% to $63,009 after U.S. inflation data failed to spark a rally and spot ETFs recorded their first consecutive days of outflows in August — a sign that institutional appetite is cooling at current prices. The bigger story is regulatory: the OCC granted World Liberty Financial conditional approval for a national trust bank charter, the first time a crypto-native entity has reached that milestone. Chainlink bucked the trend, jumping 7.6% on optimism around institutional adoption, while Uniswap fell 5.6% after the SEC delayed key tokenization approvals.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "changePct24h": 7.6,
+        "catalyst": "Chainlink surged 7.60% amid broader positive sentiment around institutional crypto adoption, including Israel's largest bank partnering with Galaxy for crypto trading and Trump's expected White House meeting with crypto CEOs, which lifted oracle and infrastructure tokens. No single direct Chainlink-specific catalyst was identified.",
+        "priceUsd": 9.4,
+        "priceChange24hUsd": 0.71
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -5.6,
+        "catalyst": "Uniswap fell 5.60% as an SEC delay on tokenization approvals put a speed bump in crypto's Wall Street push, dampening sentiment for DeFi and DEX tokens particularly sensitive to regulatory progress. LEO Token's concurrent 5% drop suggests broader selling pressure in non-core assets on a risk-off day.",
+        "priceUsd": 3.28,
+        "priceChange24hUsd": -0.18
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63009,
+        "changePct24h": -0.5,
+        "marketCapUsd": 1264615490751,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1879.48,
+        "changePct24h": -0.2,
+        "marketCapUsd": 226815064319,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 183021781644,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 611,
+        "changePct24h": -0.1,
+        "marketCapUsd": 81362502951,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 71874842683,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.004,
+        "changePct24h": -0.5,
+        "marketCapUsd": 62953717906,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 75.31,
+        "changePct24h": -0.7,
+        "marketCapUsd": 43883893778,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3324,
+        "changePct24h": -0.5,
+        "marketCapUsd": 31537355443,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.038,
+        "changePct24h": 3.1,
+        "marketCapUsd": 22169214769,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 56.27,
+        "changePct24h": -1,
+        "marketCapUsd": 12513918076,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0701,
+        "changePct24h": 0.3,
+        "marketCapUsd": 10893602767,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9805301992,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0128,
+        "changePct24h": 0.8,
+        "marketCapUsd": 9138713249,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 491.75,
+        "changePct24h": -0.1,
+        "marketCapUsd": 8299090839,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 8.74,
+        "changePct24h": -5,
+        "marketCapUsd": 8044725260,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's price action was shaped by two competing forces: a cautious macro read and a string of genuinely significant regulatory news that kept sentiment from falling further.\n\nOn the macro side, U.S. inflation data came in without the upside surprise that might have rattled markets — but it also failed to deliver the downside surprise that crypto bulls were hoping for as a catalyst for rate-cut optimism. Bitcoin's response was a quiet -0.5% drift. More telling was the ETF data: spot Bitcoin ETFs recorded back-to-back outflows for the first time in August, suggesting that institutional buyers who had been absorbing supply are stepping back at current price levels. The Fear & Greed Index sits at 34 — in 'Fear' territory — consistent with a market that is waiting rather than committing.\n\nChainlink's 7.6% gain stood out against the flat-to-down backdrop. The move tracked a cluster of institutional adoption headlines: Israel's largest bank announced a partnership with Galaxy Digital to offer BTC, ETH, and SOL trading to retail and institutional clients, and President Trump is expected to personally attend a White House meeting with crypto executives. Neither event directly involves Chainlink's oracle network, but infrastructure tokens tend to catch a bid when the broader narrative around institutional integration strengthens.\n\nUniswap's 5.6% drop had a clearer cause: the SEC delayed approvals on tokenization-related products, removing a near-term catalyst that DeFi and decentralized exchange tokens had been pricing in. LEO Token's concurrent 5% decline reinforced the pattern — assets without direct institutional tailwinds sold off as risk appetite contracted.",
+  "worthKnowing": [
+    "The OCC granted World Liberty Financial — a crypto venture backed by the Trump family — conditional approval for a national trust bank charter, the first time a crypto-native entity has cleared that regulatory threshold in the U.S.",
+    "Israel's largest bank partnered with Galaxy Digital to offer retail and institutional clients direct trading access to Bitcoin, Ethereum, and Solana, extending the trend of traditional banks integrating crypto services.",
+    "President Trump is expected to personally attend a White House meeting with top crypto executives, a level of direct political engagement with the industry that has no recent precedent.",
+    "The SEC delayed key tokenization approvals, slowing momentum for crypto's integration with traditional capital markets and weighing on related equities and DeFi tokens."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2253592080395,
+    "btcDominancePct": 56.1028,
+    "ethDominancePct": 10.0589,
+    "fearGreedIndex": 34
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "world-liberty-occ-charter",
+    "chainlink",
+    "uniswap",
+    "sec-tokenization",
+    "galaxy-digital",
+    "trump-crypto"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

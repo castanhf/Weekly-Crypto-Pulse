@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-05T10:32:51.534Z",
+  "publishedAt": "2026-09-05",
+  "slug": "2026-09-05-uks-largest-investment-platform-opens-crypto-etns-as-bitcoin-slips-15-",
+  "headline": "UK's largest investment platform opens crypto ETNs as Bitcoin slips 1.5% on broad market softness",
+  "summary": "Hargreaves Lansdown's decision to list crypto exchange-traded notes marks a meaningful expansion of mainstream retail access in the UK — the day's clearest signal that institutional adoption is still moving forward even as prices retreated. Bitcoin fell 1.5% to $79,622 and Ethereum dropped 2.3% to $2,457, with most of the top 15 pulling back. The exception was NEAR Protocol, which surged 12.5% as capital rotated into altcoins, and BNB, which gained 4.4% against the broader trend.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 12.53,
+        "catalyst": "NEAR surged roughly 12.5% with no single identifiable catalyst; the move appears to reflect altcoin rotation in a broadly risk-on environment, possibly supported by renewed Southeast Asia crypto funding activity drawing capital toward mid-cap layer-1 assets.",
+        "priceUsd": 2.25,
+        "priceChange24hUsd": 0.28
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -5.23,
+        "catalyst": "Monero fell 5.23%, likely on profit-taking and rotation out of privacy coins after the prior session's rally that pushed Zcash above $1,000, with capital shifting toward higher-momentum assets.",
+        "priceUsd": 525.26,
+        "priceChange24hUsd": -27.48
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79622,
+        "changePct24h": -1.5,
+        "marketCapUsd": 1598780926829,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2457.56,
+        "changePct24h": -2.29,
+        "marketCapUsd": 299869765659,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183397000256,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 747.6,
+        "changePct24h": 4.39,
+        "marketCapUsd": 99597466153,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.41,
+        "changePct24h": -2.7,
+        "marketCapUsd": 88184048350,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74598847510,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 102.46,
+        "changePct24h": -1.09,
+        "marketCapUsd": 59970385565,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3324,
+        "changePct24h": 1.4,
+        "marketCapUsd": 31548319905,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 0,
+        "marketCapUsd": 23113874102,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 84.71,
+        "changePct24h": -2.08,
+        "marketCapUsd": 18843594552,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1009.25,
+        "changePct24h": 1.95,
+        "marketCapUsd": 17070266294,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.086,
+        "changePct24h": -1.5,
+        "marketCapUsd": 13392391373,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0164,
+        "changePct24h": -2.59,
+        "marketCapUsd": 11652976455,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 525.26,
+        "changePct24h": -5.23,
+        "marketCapUsd": 9870521742,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 9809594423,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's price action was a modest, broad-based pullback — Bitcoin down 1.5%, Ethereum down 2.3%, XRP down 2.7% — without a single macro catalyst driving the decline. No major economic data or policy announcement triggered the move; it reads as routine consolidation after recent gains, with the Fear & Greed index still sitting at 73 (Greed), suggesting the market hasn't shifted into a defensive posture.\n\nThe more interesting story was the divergence within the top 15. BNB gained 4.4% and NEAR Protocol surged 12.5%, both moving against the broader trend. NEAR's move had no clear single catalyst in the day's news — the most plausible explanation is altcoin rotation, where traders pulled capital from large-cap assets like Bitcoin and Ethereum and redeployed it into mid-cap layer-1 tokens. Monero's 5.2% decline fits the same pattern in reverse: privacy coins that had rallied in the prior session gave back gains as capital chased higher-momentum names.\n\nHyperliquid slipped 2% despite President Trump publicly stating he wants the decentralized exchange to enter the US market — a notable case of positive political news failing to overcome broader market softness. The token's 2% decline alongside the market suggests traders treated the endorsement as noise rather than a near-term catalyst.\n\nThe structural backdrop remains constructive: BTC dominance at 59% and a Fear & Greed reading of 73 both point to a market that is risk-on but not euphoric. Today's pullback looks more like digestion than a trend reversal.",
+  "worthKnowing": [
+    "Hargreaves Lansdown, the UK's largest retail investment platform, reversed its prior cautious stance and listed crypto exchange-traded notes (ETNs — funds that track crypto prices without requiring direct ownership), opening digital asset exposure to millions of mainstream UK retail investors.",
+    "Robinhood publicly refused AMC Entertainment CEO Adam Aron's demand to halt issuance of tokenized AMC stock, escalating a dispute that could set legal and regulatory precedent for the emerging crypto-equity token market.",
+    "Polymarket, best known as a prediction market, launched leveraged crypto perpetual futures with up to 20x leverage, moving it into direct competition with established crypto derivatives exchanges.",
+    "G7 nations issued a coordinated warning that advances in quantum computing pose a credible threat to current cryptographic security standards, prompting the crypto industry to accelerate work on post-quantum defenses."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2704355336863,
+    "btcDominancePct": 59.006,
+    "ethDominancePct": 11.0685,
+    "fearGreedIndex": 73
+  },
+  "tags": [
+    "hargreaves-lansdown",
+    "crypto-etn",
+    "near-protocol",
+    "hyperliquid",
+    "tokenized-stocks",
+    "quantum-computing"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

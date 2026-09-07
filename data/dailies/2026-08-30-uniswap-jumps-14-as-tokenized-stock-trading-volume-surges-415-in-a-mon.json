@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-30T11:51:34.875Z",
+  "publishedAt": "2026-08-30",
+  "slug": "2026-08-30-uniswap-jumps-14-as-tokenized-stock-trading-volume-surges-415-in-a-mon",
+  "headline": "Uniswap jumps 14% as tokenized stock trading volume surges 415% in a month",
+  "summary": "The day's standout move came from Uniswap, which gained 14.12% after data showed tokenized equity transfer volume hit $29.5 billion over the past 30 days — a 415% jump that signals real institutional appetite for trading stocks on-chain. The broader market was calm by comparison: Bitcoin edged up 0.63% to $78,195 and Ethereum gained 0.91% to $2,459, with Solana and Hyperliquid also posting quiet gains. The bigger story is structural — tokenized real-world assets are growing fast, and DeFi protocols built to handle that volume are getting a fresh look from investors.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": 14.12,
+        "catalyst": "Tokenized stock transfer volume jumped 415% in 30 days to $29.5B, boosting sentiment around DEX infrastructure positioned to capture on-chain equity trading flows. Stellar's tokenized RWA market nearing $4B after fourfold 2026 growth further lifted DeFi protocol valuations.",
+        "priceUsd": 5,
+        "priceChange24hUsd": 0.71
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "changePct24h": -1.53,
+        "catalyst": "No specific catalyst identified; the modest decline likely reflects mild risk-off pressure following Fed Chair Warsh's prior-day Jackson Hole inflation warning and general market consolidation.",
+        "priceUsd": 9.51,
+        "priceChange24hUsd": -0.15
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 78195,
+        "changePct24h": 0.63,
+        "marketCapUsd": 1569951121099,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2459.3,
+        "changePct24h": 0.91,
+        "marketCapUsd": 296801362251,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183393795674,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 693.64,
+        "changePct24h": 0.64,
+        "marketCapUsd": 92367208507,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.39,
+        "changePct24h": 0.42,
+        "marketCapUsd": 87229999765,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73979363778,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 105.08,
+        "changePct24h": 1.44,
+        "marketCapUsd": 61484233602,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3403,
+        "changePct24h": 0.56,
+        "marketCapUsd": 32309567726,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 21815005602,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 83.31,
+        "changePct24h": 2.44,
+        "marketCapUsd": 18533469790,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 841.23,
+        "changePct24h": 4.26,
+        "marketCapUsd": 14225017223,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0849,
+        "changePct24h": 0.46,
+        "marketCapUsd": 13220108962,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0175,
+        "changePct24h": -0.81,
+        "marketCapUsd": 12405044290,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9841414207,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 476.9,
+        "changePct24h": 2.14,
+        "marketCapUsd": 8965135208,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest driver was the tokenized real-world asset (RWA) narrative — the idea that traditional financial assets like stocks and bonds can be represented and traded directly on a blockchain. New data showed tokenized stock transfer volume hit $29.5 billion over the past 30 days, a 415% increase, and that number caught the market's attention. Uniswap, as one of the largest decentralized exchanges (platforms where users trade crypto assets directly without a middleman), is a natural beneficiary if equity trading migrates on-chain — hence the 14% jump. Zcash gained 4.26% and Monero rose 2.14%, though neither had a clear news catalyst; both are privacy-focused assets that sometimes move together on low-volume days. Hyperliquid added 2.44%, consistent with broader interest in on-chain trading infrastructure. The large-cap assets — Bitcoin, Ethereum, BNB, XRP — all moved less than 1%, reflecting a market that was broadly constructive but not excited. The Fear & Greed index sits at 69 (Greed), suggesting the market is in a positive mood without being euphoric. Fed Chair Warsh's Jackson Hole inflation comments from the prior session added a faint headwind — a reminder that rate-cut expectations remain uncertain — but not enough to dent the day's tone. The session's story was less about macro and more about a specific structural shift: on-chain finance is handling volumes that were unthinkable two years ago, and protocols built for that world are getting repriced accordingly.",
+  "worthKnowing": [
+    "BitGo acquired NYDIG's institutional trading arm, expanding its derivatives and financing capabilities — a sign of continued consolidation among the custodians that serve large institutional crypto clients.",
+    "Layer-1 blockchain Fogo suspended its mainnet after an attacker received 400 million FOGO tokens (roughly 10% of circulating supply) in what appears to be a critical exploit.",
+    "Stellar's tokenized real-world asset market has grown fourfold in 2026 to nearly $4 billion, adding weight to the broader narrative that on-chain versions of traditional assets are gaining genuine traction.",
+    "A new analysis highlights blockchain-based payment rails mounting a credible challenge to Swift's $1.5 quadrillion settlement network — a long-term structural story for stablecoins and tokenized settlement layers."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2634526944674,
+    "btcDominancePct": 59.4813,
+    "ethDominancePct": 11.2518,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "uniswap",
+    "tokenized-rwa",
+    "on-chain-equities",
+    "bitgo-nydig",
+    "fogo-exploit",
+    "defi-infrastructure"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-08-26T07:10:13.108Z",
+  "publishedAt": "2026-08-26",
+  "slug": "2026-08-26-traders-bank-weekly-gains-as-bitcoin-slips-below-79k-and-zcash-tumbles",
+  "headline": "Traders bank weekly gains as Bitcoin slips below $79K and Zcash tumbles 7.6% after ETF-driven surge",
+  "summary": "A broad profit-taking session pulled most of the top 20 assets lower on Wednesday, with Bitcoin dipping to $78,884 and Solana shedding nearly 4%. The selloff follows a strong week for crypto, and the Fear & Greed Index — now at its highest reading since just before a $19 billion market wipeout last October — suggests the market may be running warm. Zcash was the day's biggest story: Grayscale launched the first-ever Zcash ETF earlier this week, sending ZEC sharply higher, and today's 7.6% drop looks like the hangover.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 20.57,
+        "catalyst": "Rain spiked more than 20% with no identifiable news catalyst — the move appears to be a speculative surge in a low-liquidity asset, running against the grain of a broad market pullback.",
+        "priceUsd": 0.0176945,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -7.62,
+        "catalyst": "Grayscale's debut of the first Zcash ETF drove a sharp rally in ZEC earlier this week; today's decline reflects profit-taking and leverage unwinding following that ETF-driven surge, compounded by the broader market selloff.",
+        "priceUsd": 786.56,
+        "priceChange24hUsd": -59.92
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 78884,
+        "changePct24h": -1.95,
+        "marketCapUsd": 1583610422622,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2458.73,
+        "changePct24h": -1.59,
+        "marketCapUsd": 296745226634,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 183207815464,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 696.82,
+        "changePct24h": -2.1,
+        "marketCapUsd": 92792756718,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.44,
+        "changePct24h": -4.22,
+        "marketCapUsd": 90127331673,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 73701766171,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 96.7,
+        "changePct24h": -3.99,
+        "marketCapUsd": 56415867781,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3382,
+        "changePct24h": -1.86,
+        "marketCapUsd": 32100215721,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.01,
+        "changePct24h": -2.87,
+        "marketCapUsd": 21961380416,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.88,
+        "changePct24h": 1.39,
+        "marketCapUsd": 18217726928,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0866,
+        "changePct24h": -5.62,
+        "marketCapUsd": 13482052632,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 786.56,
+        "changePct24h": -7.62,
+        "marketCapUsd": 13290542179,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0177,
+        "changePct24h": 20.57,
+        "marketCapUsd": 12545116590,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9728975918,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 72.84,
+        "changePct24h": -1.87,
+        "marketCapUsd": 8592972304,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's dominant story was profit-taking after a strong weekly run. Bitcoin slipped 1.95% to $78,884, Solana fell nearly 4%, and XRP dropped 4.22% — all consistent with traders locking in gains rather than reacting to fresh bad news. Dogecoin led the large-cap losers with a 5.62% decline, also consistent with a risk-off rotation out of more speculative assets.\n\nThe macro backdrop for the selloff is worth noting. The Fear & Greed Index — a composite measure of market sentiment — hit its highest reading since just before last October's $19 billion market correction. Elevated sentiment readings like this don't predict a crash, but they do indicate the market has been running hot, and profit-taking sessions tend to be sharper when leverage has built up.\n\nXRP's 4.22% drop fits that pattern precisely. The asset had rallied 44% in recent weeks, and futures data showed elevated leverage — meaning a lot of borrowed money was riding the move. When sentiment cools, those leveraged positions get unwound quickly, amplifying the decline.\n\nZcash's 7.62% drop has a cleaner story: Grayscale launched the first-ever Zcash ETF earlier this week, which sent ZEC surging. Today's decline is the typical post-launch hangover — traders who bought the rumor or the initial ETF excitement sold into the news.\n\nOne counterpoint to the broad selloff: BlackRock reportedly cut the minimum swap size for its Bitcoin ETF from a higher threshold down to $1 million, a move that could bring more institutional buyers into the product. That structural tailwind did not prevent today's dip, but it points to continued institutional infrastructure building around Bitcoin.",
+  "worthKnowing": [
+    "Grayscale launched the first-ever Zcash ETF this week, making ZEC the latest privacy-focused cryptocurrency to gain a regulated US investment wrapper.",
+    "BlackRock cut the minimum swap threshold for its Bitcoin ETF to $1 million, a change that could allow a broader range of institutional investors to access the fund.",
+    "XRP's 44% rally over the past week left futures markets with elevated leverage, raising the risk of sharper moves in either direction if sentiment shifts further.",
+    "The Fear & Greed Index reached its highest reading since just before last October's $19 billion market correction — a signal that sentiment has been running well above neutral."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2663846669104,
+    "btcDominancePct": 59.2615,
+    "ethDominancePct": 11.1043,
+    "fearGreedIndex": 65
+  },
+  "tags": [
+    "zcash-etf",
+    "grayscale",
+    "blackrock-btc-etf",
+    "xrp-leverage",
+    "fear-greed-index",
+    "profit-taking"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}

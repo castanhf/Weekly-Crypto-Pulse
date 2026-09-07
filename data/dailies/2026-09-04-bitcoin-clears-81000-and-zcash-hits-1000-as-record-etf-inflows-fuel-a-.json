@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-04T11:11:31.760Z",
+  "publishedAt": "2026-09-04",
+  "slug": "2026-09-04-bitcoin-clears-81000-and-zcash-hits-1000-as-record-etf-inflows-fuel-a-",
+  "headline": "Bitcoin clears $81,000 and Zcash hits $1,000 as record ETF inflows fuel a broad crypto rally",
+  "summary": "US spot Bitcoin ETFs pulled in $731 million in a single day — the largest inflow since January — pushing BTC above $81,000 and lifting nearly every major asset. Zcash was the standout, surging 20% to breach the $1,000 mark as a short squeeze wiped out $34 million in bearish bets. Privacy coins led the charge, but the rally was broad: Ethereum gained 5.4%, XRP climbed 6.2%, and Hyperliquid rose nearly 7%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 20.67,
+        "catalyst": "A short squeeze liquidated roughly $34 million in short positions, driving ZEC to the psychologically significant $1,000 level. The move was amplified by broad privacy-coin momentum and improving market sentiment tied to fading Fed rate-hike odds and record Bitcoin ETF inflows.",
+        "priceUsd": 1003.97,
+        "priceChange24hUsd": 207.56
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "changePct24h": -1.23,
+        "catalyst": "No specific catalyst identified; LEO was the weakest performer on the day, slipping 1.2% while the broader market rallied.",
+        "priceUsd": 9.27,
+        "priceChange24hUsd": -0.11
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81100,
+        "changePct24h": 4.39,
+        "marketCapUsd": 1628469977183,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2524.49,
+        "changePct24h": 5.41,
+        "marketCapUsd": 308087580059,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 1,
+        "changePct24h": 0.04,
+        "marketCapUsd": 183374533612,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 721.48,
+        "changePct24h": 2.42,
+        "marketCapUsd": 96107377523,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.45,
+        "changePct24h": 6.2,
+        "marketCapUsd": 90875902456,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74182243484,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 104.02,
+        "changePct24h": 3.71,
+        "marketCapUsd": 60908668687,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3285,
+        "changePct24h": 0.1,
+        "marketCapUsd": 31184400168,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.032,
+        "changePct24h": 0,
+        "marketCapUsd": 22913496019,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 87.05,
+        "changePct24h": 6.92,
+        "marketCapUsd": 19364733752,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1003.97,
+        "changePct24h": 20.67,
+        "marketCapUsd": 16997791590,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0877,
+        "changePct24h": 5.82,
+        "marketCapUsd": 13658155248,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0169,
+        "changePct24h": 1.95,
+        "marketCapUsd": 11976833651,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 547.39,
+        "changePct24h": 7.36,
+        "marketCapUsd": 10246959664,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.03,
+        "marketCapUsd": 9789547224,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main engine was institutional money flowing back into Bitcoin ETFs at a scale not seen since January. US spot Bitcoin ETFs recorded $731 million in net inflows on September 4 — a single-day figure that signals a meaningful return of fund-level demand, not just retail enthusiasm. That inflow pushed BTC above $81,000 and set the tone for everything else.\n\nLayered on top of that was a shift in expectations around Federal Reserve policy. Fading odds of another rate hike made risk assets broadly more attractive, and crypto — which tends to move sharply when macro headwinds ease — responded across the board. Ethereum gained 5.4%, XRP climbed 6.2%, Dogecoin rose 5.8%, and Hyperliquid added nearly 7%.\n\nThe sharpest move belonged to Zcash, which surged 20% to breach $1,000 for the first time. The immediate trigger was a short squeeze: traders who had bet against ZEC were forced to buy back their positions as the price rose, accelerating the move. Roughly $34 million in short positions were liquidated in the process. Monero gained 7.4% on the same session, suggesting broader momentum behind privacy-focused coins rather than a Zcash-specific story. The Fear & Greed Index sits at 74 — firmly in Greed territory — reflecting the day's risk-on tone.",
+  "worthKnowing": [
+    "OpenReserve, backed by Andreessen Horowitz, received preliminary approval from the US Office of the Comptroller of the Currency (OCC) to operate as a national bank — a significant step toward blockchain-native firms holding full banking licenses in the US.",
+    "South Korea announced a phased plan to launch a fully tokenized securities market by February 2027, covering all asset classes and reinforcing the global push toward regulated on-chain capital markets.",
+    "Monero (XMR) gained 7.4% alongside Zcash's 20% surge, suggesting the session's privacy-coin rally was broad rather than isolated to a single asset."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2718565303591,
+    "btcDominancePct": 59.7437,
+    "ethDominancePct": 11.3134,
+    "fearGreedIndex": 74
+  },
+  "tags": [
+    "bitcoin-etf-inflows",
+    "zcash-short-squeeze",
+    "privacy-coins",
+    "fed-rate-expectations",
+    "occ-bank-charter",
+    "tokenized-securities"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
