@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-08T11:11:26.410Z",
+  "publishedAt": "2026-09-08",
+  "slug": "2026-09-08-bitcoin-slips-below-79k-as-fed-rate-hike-odds-hold-near-60-zcash-leads",
+  "headline": "Bitcoin slips below $79K as Fed rate-hike odds hold near 60%, Zcash leads losses",
+  "summary": "Elevated expectations for another Federal Reserve rate hike — sitting near 60% in futures markets — pushed Bitcoin below $79,000 and dragged most of the top assets lower. Privacy coins took the hardest hit, with Zcash falling nearly 5%. The day's bigger stories were off-chain: a white-hat hacker returned most of a $320M Bitcoin haul from Liquid Network, and Cronos executed a controversial blockchain rollback to claw back $111M from an exploit.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "DOT",
+        "name": "Polkadot",
+        "changePct24h": 9.36,
+        "catalyst": "Polkadot surged roughly 9.4% as rotation into altcoins picked up amid Bitcoin's slip below $79K. BNB and DeFi-adjacent layer-1 tokens broadly bucked the wider selloff, and DOT appeared to benefit disproportionately from that risk-on tilt in select altcoins — no single project-specific catalyst was identified.",
+        "priceUsd": 1.08,
+        "priceChange24hUsd": 0.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ASTER",
+        "name": "Aster",
+        "changePct24h": -5.25,
+        "catalyst": "Aster fell 5.25% with no identified project-specific catalyst; the move appears consistent with broader selling pressure on smaller-cap assets during the macro-driven risk-off session.",
+        "priceUsd": 0.763129,
+        "priceChange24hUsd": -0.04
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 78613,
+        "changePct24h": -0.94,
+        "marketCapUsd": 1578687912248,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2483.38,
+        "changePct24h": -0.23,
+        "marketCapUsd": 303041849964,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.03,
+        "marketCapUsd": 183369074554,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 757.43,
+        "changePct24h": 1.83,
+        "marketCapUsd": 100843225951,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.4,
+        "changePct24h": -0.05,
+        "marketCapUsd": 87736048521,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74278294647,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 103.4,
+        "changePct24h": -1.53,
+        "marketCapUsd": 60621946806,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3379,
+        "changePct24h": 0.36,
+        "marketCapUsd": 32093418163,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.055,
+        "changePct24h": 0,
+        "marketCapUsd": 23516084575,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1148.04,
+        "changePct24h": -4.76,
+        "marketCapUsd": 19425965552,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 83.82,
+        "changePct24h": -4.39,
+        "marketCapUsd": 18644847694,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0901,
+        "changePct24h": 0.64,
+        "marketCapUsd": 14048702289,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0169,
+        "changePct24h": 2.53,
+        "marketCapUsd": 12008564346,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9844413347,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 512.8,
+        "changePct24h": -3.51,
+        "marketCapUsd": 9640032796,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The main driver today was macro: futures markets are pricing a roughly 60% chance of another Federal Reserve rate hike, and a simultaneous rally in the Japanese yen added pressure on risk assets broadly. Bitcoin broke below $79,000 under that weight, closing around $78,613 — a decline of just under 1% but psychologically significant given the round-number breach. Privacy coins bore the sharpest losses. Zcash fell 4.76% and Monero dropped 3.51%; both assets tend to attract heightened regulatory scrutiny, and rate-hike environments that push investors toward lower-risk positions tend to hit that corner of the market harder. Hyperliquid also slid 4.39% with no specific catalyst beyond the broader selloff. Against that backdrop, a pocket of altcoins moved the other way. BNB gained 1.83% and Polkadot surged 9.36%, part of a rotation into select layer-1 and DeFi-adjacent tokens as traders shifted out of large-cap Bitcoin exposure. Rain added 2.53% and Dogecoin edged up 0.64%, rounding out the day's small group of gainers. Ethereum held up relatively well, slipping only 0.23% to $2,483 — a narrower decline than Bitcoin, which compressed BTC dominance slightly. The Fear & Greed index sits at 69, still in greed territory, suggesting the macro pressure has not yet meaningfully dented broader sentiment.",
+  "worthKnowing": [
+    "Liquid Network recovered 3,400 BTC from white-hat hackers who exploited the protocol for roughly $320M, with negotiations ongoing for the remaining balance — a meaningful reduction in a key overhang on Bitcoin sentiment.",
+    "Cronos executed a blockchain rollback following the Tectonic exploit to recover approximately $111M, though $9.2M remains unrecovered; the move reignited debate about whether blockchains should ever reverse transactions.",
+    "The Ethereum Foundation outlined a roadmap to make Ethereum's base layer quantum-resistant by 2029 via the forthcoming Hegotá upgrade, addressing a long-term cryptographic risk as quantum computing advances.",
+    "South Korea's budget office published a report estimating stablecoin adoption could save the country's merchants up to $3.8 billion annually in payment costs, lending official credibility to stablecoin utility arguments in a major Asian economy."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2672439399156,
+    "btcDominancePct": 58.912,
+    "ethDominancePct": 11.3081,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "fed-rate-hike",
+    "liquid-network-exploit",
+    "cronos-rollback",
+    "ethereum-hegota-upgrade",
+    "privacy-coins",
+    "polkadot"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
