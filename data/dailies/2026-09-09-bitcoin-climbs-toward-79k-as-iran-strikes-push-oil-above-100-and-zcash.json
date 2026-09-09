@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-09T11:16:01.736Z",
+  "publishedAt": "2026-09-09",
+  "slug": "2026-09-09-bitcoin-climbs-toward-79k-as-iran-strikes-push-oil-above-100-and-zcash",
+  "headline": "Bitcoin climbs toward $79K as Iran strikes push oil above $100 and Zcash pulls in a $500M ETF haul",
+  "summary": "Geopolitical shock drove the day's story: Iran strikes sent Brent crude above $100 for the first time since July, equities sold off, and Bitcoin absorbed some of the safe-haven demand — recovering toward $79,000 after a prior-day dip. The bigger surprise came from Zcash, which surged more than 8% after a newly launched ETF attracted $500 million in inflows. XRP also stood out, drawing fresh institutional money into its ETF products even as funds tied to Bitcoin, Ethereum, and Solana saw net outflows.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 10.07,
+        "catalyst": "No NEAR-specific news identified; the gain likely reflects broader risk-on momentum in mid-cap altcoins as Bitcoin recovered toward $79K and geopolitical safe-haven flows lifted sentiment across the market.",
+        "priceUsd": 2.54,
+        "priceChange24hUsd": 0.26
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -5.81,
+        "catalyst": "No specific catalyst identified; the decline appears to reflect continued selling pressure in lower-liquidity assets amid macro uncertainty driven by the Iran strikes and elevated oil prices.",
+        "priceUsd": 0.01595014,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 78920,
+        "changePct24h": 0.55,
+        "marketCapUsd": 1584856328934,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2486.79,
+        "changePct24h": 0.31,
+        "marketCapUsd": 303469359972,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 183433024281,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 750.5,
+        "changePct24h": -0.73,
+        "marketCapUsd": 99938173577,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.42,
+        "changePct24h": 1.83,
+        "marketCapUsd": 89264403594,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74371316051,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 103.74,
+        "changePct24h": 0.42,
+        "marketCapUsd": 60819025664,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3389,
+        "changePct24h": 0.32,
+        "marketCapUsd": 32174929228,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 0,
+        "marketCapUsd": 23075166018,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1243.74,
+        "changePct24h": 8.2,
+        "marketCapUsd": 21042523335,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 86.17,
+        "changePct24h": 2.99,
+        "marketCapUsd": 19167488851,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0907,
+        "changePct24h": 0.72,
+        "marketCapUsd": 14142553136,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.016,
+        "changePct24h": -5.81,
+        "marketCapUsd": 11311181871,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9824579780,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 81.53,
+        "changePct24h": 3.87,
+        "marketCapUsd": 9614337910,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was geopolitical: Iran strikes sent Brent crude above $100 a barrel for the first time since July, triggering a broad equity selloff. Bitcoin, rather than falling with stocks, held its ground and edged up 0.55% to $78,920 — a pattern that has appeared before when macro stress is geopolitical rather than financial in origin. The Fear & Greed index sits at 66 (Greed), suggesting the market absorbed the shock without a panic response.\n\nThe standout story was Zcash, up 8.2% to $1,243.74 after a newly launched ETF pulled in $500 million in inflows — a significant haul for a privacy-focused asset that has historically sat at the margins of institutional interest. That kind of ETF demand is a concrete, quantifiable catalyst, and the price move reflects it directly.\n\nXRP gained 1.83% and was the clearest beneficiary of rotating institutional flows: XRP ETF products attracted net inflows on the day while funds tied to Bitcoin, Ethereum, and Solana all saw outflows. Traders moved capital toward XRP exposure even as the larger-cap ETF products shed assets.\n\nHyperliquid rose 2.99% to a new all-time high of $86.17, supported by record open interest on its derivatives platform — $14.3 billion — pointing to genuine platform growth rather than speculative noise. NEAR Protocol led all tracked assets with a 10% gain, though no specific news drove it; the move appears to reflect mid-cap altcoin momentum in a risk-on pocket of the market.",
+  "worthKnowing": [
+    "A staked TRX ETF launched in the U.S. on Wednesday — the first of its kind tied to Tron — potentially broadening institutional access to the network's staking yield.",
+    "Hyperliquid open interest reached a record $14.3 billion as HYPE hit an all-time high, reflecting accelerating adoption of the on-chain derivatives platform.",
+    "XRP ETFs drew net inflows while Bitcoin, Ethereum, and Solana ETF products all saw outflows on the same day — an unusual divergence in institutional fund flows across major crypto products."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2681862299056,
+    "btcDominancePct": 58.9463,
+    "ethDominancePct": 11.2821,
+    "fearGreedIndex": 66
+  },
+  "tags": [
+    "zcash-etf",
+    "xrp-etf-flows",
+    "iran-strikes",
+    "hyperliquid",
+    "btc-safe-haven",
+    "tron-staked-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
