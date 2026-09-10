@@ -19,7 +19,8 @@ const navItems: readonly NavItem[] = [
   { href: '/reports', label: 'Reports', matchPaths: ['/reports'], matchPrefixes: ['/reports/'] },
   { href: '/pro', label: 'Pro', isEmphasized: true, matchPaths: ['/pro'], matchPrefixes: ['/pro/'] },
   { href: '/methodology', label: 'Methodology' },
-  { href: '/disclaimer', label: 'Disclaimer' }
+  { href: '/disclaimer', label: 'Disclaimer' },
+  { href: '/contact', label: 'Contact' }
 ] as const;
 
 const normalizePathname = (pathname: string): string => {
