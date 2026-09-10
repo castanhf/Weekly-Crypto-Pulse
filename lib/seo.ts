@@ -124,6 +124,13 @@ export const createTermsMetadata = (): Metadata =>
     path: '/terms'
   });
 
+export const createContactMetadata = (): Metadata =>
+  createPageMetadata({
+    title: 'Contact',
+    description: 'Get in touch with the Crypto Pulse team.',
+    path: '/contact'
+  });
+
 export const createProMetadata = (): Metadata =>
   createPageMetadata({
     title: 'Crypto Pulse Pro',
@@ -173,6 +180,6 @@ export const createDailyMetadata = (daily: DailyArtifact): Metadata => {
   };
 };
 
-export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer', '/privacy', '/terms'];
+export const getDiscoverableRoutes = (): ReadonlyArray<string> => ['/', '/reports', '/pro', '/methodology', '/disclaimer', '/privacy', '/terms', '/contact'];
 
 export const getSiteOrigin = (): string => getSiteUrl();
