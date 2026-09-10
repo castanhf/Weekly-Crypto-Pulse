@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-10T11:12:31.883Z",
+  "publishedAt": "2026-09-10",
+  "slug": "2026-09-10-bitcoin-etfs-post-back-to-back-outflows-as-rising-treasury-yields-and-",
+  "headline": "Bitcoin ETFs post back-to-back outflows as rising Treasury yields and $102 oil drag crypto lower",
+  "summary": "A second straight day of Bitcoin ETF outflows, combined with Treasury yields climbing and Brent crude topping $102, pushed most of the top 20 assets into the red. Bitcoin slipped 1.25% to $77,941, while Dogecoin led major losses with a nearly 6% drop as speculative assets bore the brunt of the selling. The one bright spot was Monero, which gained 2.3% — a sign that some capital rotated into privacy-focused coins as macro pressure mounted.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 2.28,
+        "catalyst": "Monero extended gains amid a broad risk-off session, likely benefiting from privacy-coin demand as macro pressures (rising Treasury yields, crude above $102) drove investors toward hard-to-trace assets. Its relative outperformance versus the broader market retreat suggests continued rotation into privacy assets following Zcash's ETF momentum from the prior session.",
+        "priceUsd": 507.78,
+        "priceChange24hUsd": 11.58
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -9.37,
+        "catalyst": "Uniswap led losses among major DeFi tokens, dropping nearly 10% as memecoins and small-caps dragged the broader market lower and Bitcoin ETFs posted a second straight day of outflows. No specific Uniswap protocol catalyst was identified; the sell-off appears to reflect amplified risk-off pressure on DeFi governance tokens.",
+        "priceUsd": 6.02,
+        "priceChange24hUsd": -0.56
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77941,
+        "changePct24h": -1.25,
+        "marketCapUsd": 1563652344903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2467.74,
+        "changePct24h": -0.76,
+        "marketCapUsd": 300791370244,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183399694790,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 717.77,
+        "changePct24h": -4.36,
+        "marketCapUsd": 95492556111,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.38,
+        "changePct24h": -3.07,
+        "marketCapUsd": 86323308845,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 74309083296,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 101.26,
+        "changePct24h": -2.38,
+        "marketCapUsd": 59264268044,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3403,
+        "changePct24h": 0.43,
+        "marketCapUsd": 32298076442,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": 0,
+        "marketCapUsd": 22973961676,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1222.79,
+        "changePct24h": -1.76,
+        "marketCapUsd": 20667587814,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 82.87,
+        "changePct24h": -3.82,
+        "marketCapUsd": 18399949471,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0853,
+        "changePct24h": -5.94,
+        "marketCapUsd": 13275476493,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0162,
+        "changePct24h": 1.4,
+        "marketCapUsd": 11461606806,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 9852583702,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 507.78,
+        "changePct24h": 2.28,
+        "marketCapUsd": 9534054173,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's selling pressure had two clear drivers working together. First, Bitcoin ETFs recorded a second consecutive day of net outflows — fund redemptions piling up over back-to-back sessions signal that institutional buyers are stepping back, not in. Second, the macro backdrop turned unfriendly: Treasury yields climbed and Brent crude crossed $102 a barrel, a combination that typically pulls capital away from risk assets like crypto. When borrowing costs rise and energy prices spike, investors tend to reduce exposure to speculative positions first.\n\nThe damage was uneven across the market. Dogecoin fell nearly 6%, and Uniswap dropped close to 10% — both reflecting the pattern where speculative and DeFi governance tokens absorb outsized losses when sentiment sours. BNB fell 4.4% and Solana slid 2.4%, while Bitcoin and Ethereum held up relatively better at -1.25% and -0.76% respectively.\n\nThe one countertrend move came from Monero, up 2.3%, which extended a run that appears tied to renewed interest in privacy-focused coins — a theme that gained traction after Zcash's ETF-related momentum in the prior session. Some capital rotated into assets that are harder to trace as macro uncertainty increased.\n\nCoinbase CEO Brian Armstrong publicly called this Bitcoin's cycle bottom, predicting an uptrend over the next two years. That kind of statement can support sentiment near a key price level — Bitcoin is hovering just below $78,000 — but it did not reverse the day's outflow-driven pressure.",
+  "worthKnowing": [
+    "Singapore Exchange (SGX) opened bitcoin and ether perpetual futures to U.S. institutional clients, expanding regulated derivatives access beyond existing U.S.-listed venues.",
+    "A politically themed memecoin called 'Hunter Biden's LAPTOP' collapsed 98–99% on its launch day, with the team blaming sniper bots and thin liquidity — traders reported six-figure losses within hours of the token going live.",
+    "Dogecoin's 5.9% drop made it the worst performer among major tracked assets, with analysts pointing to a broad rotation out of memecoins and small-cap tokens as the session's primary selling pressure."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2667980242494,
+    "btcDominancePct": 58.5478,
+    "ethDominancePct": 11.2617,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "treasury-yields",
+    "monero",
+    "uniswap",
+    "dogecoin",
+    "sgx-derivatives",
+    "memecoin-collapse"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
