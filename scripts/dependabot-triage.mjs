@@ -10,6 +10,7 @@
  */
 
 import { execSync } from 'node:child_process';
+import { classifyUpdate } from './dependabot-classify.mjs';
 
 const PR_NUMBER = process.env.PR_NUMBER;
 if (!PR_NUMBER) {
@@ -23,33 +24,13 @@ const run = (cmd) => execSync(cmd, { encoding: 'utf8' }).trim();
 /** @param {string} cmd @returns {unknown} */
 const runJson = (cmd) => JSON.parse(run(cmd));
 
-const pr = /** @type {{ title: string; headRefName: string }} */ (
-  runJson(`gh pr view ${PR_NUMBER} --json title,headRefName`)
+const pr = /** @type {{ title: string; headRefName: string; body: string; comments: Array<{body: string}> }} */ (
+  runJson(`gh pr view ${PR_NUMBER} --json title,headRefName,body,comments`)
 );
-const { title } = pr;
+const { title, body: prBody, comments } = pr;
 console.log(`[triage] PR #${PR_NUMBER}: "${title}"`);
 
-// Infer update type from Dependabot title.
-// semver bump: "Bump <pkg> from 1.2.3 to 1.2.4"
-// Actions bump: "Bump <action> from 1 to 2"
-const semverMatch = title.match(/from (\d+)\.(\d+)\.\d+ to (\d+)\.(\d+)\.\d+/);
-const majorOnlyMatch = title.match(/from (\d+) to (\d+)/);
-
-/** @type {'patch'|'minor'|'major'|'unknown'} */
-let updateType = 'unknown';
-
-if (semverMatch) {
-  const fromMajor = semverMatch[1];
-  const fromMinor = semverMatch[2];
-  const toMajor = semverMatch[3];
-  const toMinor = semverMatch[4];
-  if (toMajor !== fromMajor) updateType = 'major';
-  else if (toMinor !== fromMinor) updateType = 'minor';
-  else updateType = 'patch';
-} else if (majorOnlyMatch) {
-  updateType = majorOnlyMatch[1] !== majorOnlyMatch[2] ? 'major' : 'patch';
-}
-
+const updateType = classifyUpdate(title, prBody);
 console.log(`[triage] Detected update type: ${updateType}`);
 
 // Ensure labels exist, then apply the relevant one.
@@ -73,7 +54,12 @@ try {
   console.warn(`[triage] Could not apply label: ${err instanceof Error ? err.message : String(err)}`);
 }
 
-// Auto-approve patch and minor; comment for major / unknown.
+// Guard against duplicate comments when a PR is closed and reopened.
+const alreadyCommented = comments?.some(
+  (c) => typeof c.body === 'string' && c.body.includes('**Dependabot triage:**')
+);
+
+// Auto-approve patch and minor; hold major / unknown for manual review.
 if (updateType === 'patch' || updateType === 'minor') {
   run(`gh pr review ${PR_NUMBER} --approve --body "Auto-approved by dependabot-triage: **${updateType}** update. Safe to merge."`);
   console.log(`[triage] Approved (${updateType}).`);
@@ -88,9 +74,14 @@ if (updateType === 'patch' || updateType === 'minor') {
     }
   }
 } else {
-  const emoji = updateType === 'major' ? '🔴' : '⚠️';
-  run(`gh pr comment ${PR_NUMBER} --body "${emoji} **Dependabot triage:** This is a **${updateType}** update. Manual review is required before merging."`);
-  console.log(`[triage] Manual-review comment posted (${updateType}).`);
+  if (alreadyCommented) {
+    console.log('[triage] Triage comment already exists — skipping duplicate.');
+  } else {
+    const article = updateType === 'unknown' ? 'an' : 'a';
+    const emoji = updateType === 'major' ? '🔴' : '⚠️';
+    run(`gh pr comment ${PR_NUMBER} --body "${emoji} **Dependabot triage:** This is ${article} **${updateType}** update. Manual review is required before merging."`);
+    console.log(`[triage] Manual-review comment posted (${updateType}).`);
+  }
 }
 
 console.log('[triage] Done.');
