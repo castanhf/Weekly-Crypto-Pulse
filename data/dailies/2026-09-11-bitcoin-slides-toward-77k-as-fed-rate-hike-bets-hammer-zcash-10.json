@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-11T11:10:38.733Z",
+  "publishedAt": "2026-09-11",
+  "slug": "2026-09-11-bitcoin-slides-toward-77k-as-fed-rate-hike-bets-hammer-zcash-10",
+  "headline": "Bitcoin slides toward $77K as Fed rate-hike bets hammer Zcash 10%",
+  "summary": "Traders pricing in a potential Federal Reserve rate hike sold broadly across crypto on Friday, pushing Bitcoin below $77,000 and sending Zcash down 10% as leveraged long positions were forcibly unwound. The macro pressure overshadowed a pair of genuinely significant news items: the Senate's revised Clarity Act is heading toward a vote next week, and India announced plans to tokenize its $620 billion corporate bond market using digital rupee settlement. Read on for what moved, why, and what else is worth knowing.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "OKB",
+        "name": "OKB",
+        "changePct24h": 2.1,
+        "catalyst": "OKX expanded its pre-IPO trading offering to Europe, bringing OpenAI and Anthropic bets to new markets, boosting platform visibility and sentiment around OKB. The exchange's product growth narrative supported modest outperformance against a broadly red market.",
+        "priceUsd": 114.08,
+        "priceChange24hUsd": 2.4
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -10.02,
+        "catalyst": "Zcash led losses as traders unwound leveraged long positions amid bets on a Fed rate hike, with forced liquidations amplifying the 10% decline. The broader macro headwind of rising rate expectations hit higher-beta privacy coins disproportionately hard.",
+        "priceUsd": 1099.09,
+        "priceChange24hUsd": -110.1
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77001,
+        "changePct24h": -1.11,
+        "marketCapUsd": 1546393725128,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2463.35,
+        "changePct24h": -0.06,
+        "marketCapUsd": 300642321651,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 183398263488,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 712.83,
+        "changePct24h": -0.6,
+        "marketCapUsd": 94929059359,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.33,
+        "changePct24h": -2.96,
+        "marketCapUsd": 83950553328,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74093003577,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 99.28,
+        "changePct24h": -1.77,
+        "marketCapUsd": 58237303469,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3383,
+        "changePct24h": -0.56,
+        "marketCapUsd": 32126280048,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 0.8,
+        "marketCapUsd": 23225849429,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1099.09,
+        "changePct24h": -10.02,
+        "marketCapUsd": 18603542204,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.25,
+        "changePct24h": -4.19,
+        "marketCapUsd": 17631248571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0835,
+        "changePct24h": -2,
+        "marketCapUsd": 13010460554,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0157,
+        "changePct24h": -3.12,
+        "marketCapUsd": 11096822381,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9752022650,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 508.82,
+        "changePct24h": 0.36,
+        "marketCapUsd": 9567622503,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a shift in expectations around Federal Reserve policy. Traders began pricing in a higher probability of a rate hike — a reversal from the rate-cut narrative that had supported risk assets through much of the year. When rate expectations move in that direction, assets perceived as high-risk tend to sell off first, and crypto is firmly in that category.\n\nBitcoin fell 1.11% to $77,001, struggling to hold the psychologically significant $77,000 level. Ethereum was largely spared, slipping just 0.06% — a notable divergence that may reflect its lower leverage profile on the day. Solana dropped 1.77%, XRP fell 2.96%, and Hyperliquid gave back 4.19%.\n\nZcash bore the sharpest pain. Privacy coins tend to attract speculative leveraged positioning, and when macro sentiment sours, those positions get liquidated quickly. The 10% decline in ZEC was not purely a reaction to Zcash-specific news — it was a cascade of forced selling on top of an already weak tape.\n\nThe one bright spot was OKB, the exchange token of OKX, which gained 2.10% after OKX announced it was expanding pre-IPO trading of private companies — including OpenAI and Anthropic — to European users. That product expansion gave traders a concrete reason to buy OKB even as the rest of the market sold off.\n\nThe Fear & Greed Index sits at 56, still in neutral territory, suggesting the market has not yet tipped into panic — but the rate-hike narrative, if it persists into next week's Senate vote on the Clarity Act, could test that reading.",
+  "worthKnowing": [
+    "Senate Republicans released revised Clarity Act text — with updated DeFi and credit union provisions — ahead of a scheduled Senate vote next week, keeping US crypto regulatory legislation on the near-term calendar.",
+    "India announced plans to tokenize its $620 billion corporate bond market using digital rupee settlement, a sovereign-scale step toward real-world asset tokenization that goes well beyond pilot programs.",
+    "Bitwise shut down its Dogecoin ETF less than a year after launch, citing weak demand — a signal that retail appetite for altcoin ETF products remains limited outside of Bitcoin and Ethereum.",
+    "Sam Bankman-Fried filed a petition asking the Supreme Court to overturn his fraud conviction and $11 billion forfeiture order, keeping the FTX case in headlines with no near-term resolution in sight."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2638885889058,
+    "btcDominancePct": 58.5151,
+    "ethDominancePct": 11.378,
+    "fearGreedIndex": 56
+  },
+  "tags": [
+    "fed-rate-hike",
+    "zcash-liquidations",
+    "clarity-act",
+    "india-tokenization",
+    "okx-pre-ipo",
+    "dogecoin-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
