@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-12T10:38:52.193Z",
+  "publishedAt": "2026-09-12",
+  "slug": "2026-09-12-hot-cpi-print-revives-fed-rate-hike-fears-but-altcoins-shrug-off-bitco",
+  "headline": "Hot CPI print revives Fed rate-hike fears, but altcoins shrug off Bitcoin's stumble",
+  "summary": "August core inflation came in at 0.3% — a tick above forecasts — pushing Fed rate-hike odds toward 70% and sending Bitcoin back toward $77,000 after an early gain. The surprise was enough to weigh on mid-cap altcoins like Polkadot, but Ethereum, BNB, Solana, and XRP all climbed anyway, suggesting traders rotated into alternatives rather than fleeing the market entirely. A separate story worth watching: a social-engineering attack tricked Revolut into handing over Bitcoin activity and passport data for an unknown number of users.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLFI",
+        "name": "World Liberty Financial",
+        "changePct24h": 16.75,
+        "catalyst": "World Liberty Financial surged 16.75% with no identifiable specific catalyst; the broader market recovery from prior-day Fed-driven losses and a jump in the Fear & Greed index from 56 to 63 likely amplified momentum in this lower-liquidity token.",
+        "priceUsd": 0.056939,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "DOT",
+        "name": "Polkadot",
+        "changePct24h": -4.47,
+        "catalyst": "Polkadot fell 4.47% as hotter-than-forecast August CPI data firmed up Fed rate-hike expectations, pressuring mid-cap altcoins already under stress from rising yields and oil prices.",
+        "priceUsd": 1.043,
+        "priceChange24hUsd": -0.05
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77362,
+        "changePct24h": 0.37,
+        "marketCapUsd": 1553742038992,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2531.59,
+        "changePct24h": 2.65,
+        "marketCapUsd": 309003459991,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183479278274,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 737.01,
+        "changePct24h": 3.28,
+        "marketCapUsd": 98168404696,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.37,
+        "changePct24h": 2.28,
+        "marketCapUsd": 86199828414,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74340071978,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 102.05,
+        "changePct24h": 2.58,
+        "marketCapUsd": 59874481398,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3395,
+        "changePct24h": 0.28,
+        "marketCapUsd": 32230539427,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.016,
+        "changePct24h": -1.77,
+        "marketCapUsd": 22870996370,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1153.26,
+        "changePct24h": 4.11,
+        "marketCapUsd": 19522537555,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.61,
+        "changePct24h": 0.3,
+        "marketCapUsd": 17709854675,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.085,
+        "changePct24h": 1.61,
+        "marketCapUsd": 13253419251,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0151,
+        "changePct24h": -3.55,
+        "marketCapUsd": 10734541482,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 534.08,
+        "changePct24h": 4.72,
+        "marketCapUsd": 10045525423,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9790252269,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was August's CPI report, which showed core inflation rising 0.3% — one tick above what economists had forecast. That single data point pushed market-implied odds of a Fed rate hike to around 70%, reversing the optimism that had been building since the prior session. Bitcoin gave up an early gain and settled near $77,362, up just 0.37% on the day — a flat result that masks the intraday whipsaw.\n\nWhat's notable is that the inflation print didn't sink the broader market. Ethereum climbed 2.65% to $2,531, BNB rose 3.28% to $737, Solana gained 2.58% to $102, and XRP added 2.28% to $1.37. Zcash and Monero — both privacy-focused assets — led the top-15 with gains of 4.11% and 4.72% respectively, though no specific catalyst explains those moves beyond the general improvement in sentiment. The Fear & Greed index moved from 56 to 63, crossing from neutral into greed territory, which may have encouraged traders to rotate into assets that had lagged Bitcoin's recent run.\n\nPolkadot was the clearest casualty of the macro news, falling 4.47% as mid-cap altcoins with less liquidity absorbed the rate-hike anxiety more directly. The pattern — Bitcoin flat, large-cap altcoins up, select mid-caps down — points to a market that absorbed the CPI shock without panicking, but redistributed capital selectively rather than rallying uniformly.",
+  "worthKnowing": [
+    "A social-engineering attack tricked Revolut into disclosing Bitcoin activity and passport data for an unknown number of users, raising fresh concerns about how crypto exchanges handle government data requests.",
+    "Blockstream publicly refused a ransom demand from attackers who exploited the Liquid Network, leaving 600 BTC still at risk and drawing attention to security gaps in Bitcoin sidechain infrastructure.",
+    "India's securities regulator SEBI launched a tokenized bond pilot exceeding $100 million, a significant institutional step toward real-world asset tokenization in one of the world's largest economies.",
+    "Robinhood reported a 61% jump in crypto trading volume for August, pointing to rising retail participation even as macro headwinds kept institutional positioning cautious."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2665783473342,
+    "btcDominancePct": 58.1902,
+    "ethDominancePct": 11.5788,
+    "fearGreedIndex": 63
+  },
+  "tags": [
+    "cpi-inflation",
+    "fed-rate-hike",
+    "revolut-data-breach",
+    "liquid-network-exploit",
+    "india-tokenization",
+    "robinhood"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
