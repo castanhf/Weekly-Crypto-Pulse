@@ -2,7 +2,9 @@ name: Dependabot triage
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize]
+  check_suite:
+    types: [completed]
 
 permissions:
   contents: write        # enable auto-merge
@@ -10,7 +12,12 @@ permissions:
 
 jobs:
   triage:
-    if: github.actor == 'dependabot[bot]'
+    # For pull_request events the actor must be dependabot[bot].
+    # For check_suite events github.actor is the CI app, not dependabot — the
+    # PR author check happens inside the "Resolve PR number" step instead.
+    if: >-
+      github.event_name == 'check_suite' ||
+      github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,9 +30,44 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run triage script
+      - name: Install triage dependencies
+        run: npm install nodemailer --no-save
+
+      - name: Resolve PR number
+        id: resolve_pr
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER_FROM_EVENT: ${{ github.event.pull_request.number }}
+        run: |
+          if [[ "$EVENT_NAME" == "check_suite" ]]; then
+            # Extract the first attached PR number from the event payload.
+            PR_NUMBER=$(jq -r '.check_suite.pull_requests[0].number // empty' "$GITHUB_EVENT_PATH")
+            if [[ -z "$PR_NUMBER" ]]; then
+              echo "No PR attached to this check_suite event — skipping."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            # Verify the PR was opened by dependabot[bot], not another actor.
+            PR_AUTHOR=$(gh pr view "$PR_NUMBER" --json author --jq '.author.login')
+            if [[ "$PR_AUTHOR" != "dependabot[bot]" ]]; then
+              echo "PR #$PR_NUMBER is not a Dependabot PR (author: $PR_AUTHOR) — skipping."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          else
+            PR_NUMBER="$PR_NUMBER_FROM_EVENT"
+          fi
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Run triage script
+        if: steps.resolve_pr.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.resolve_pr.outputs.pr_number }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: node scripts/dependabot-triage.mjs
