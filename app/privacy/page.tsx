@@ -82,8 +82,12 @@ export default function PrivacyPage(): JSX.Element {
           <h2 className="text-[1.45rem] font-semibold tracking-tight">Your rights</h2>
           <p className="text-base leading-8 text-muted">
             You may request access to, correction of, or deletion of any personal data we hold about you. To make a
-            request, or to unsubscribe from communications, contact us at the email address on this site. We aim to
-            respond within 30 days.
+            request, or to unsubscribe from communications, email us at{' '}
+            <a className="underline underline-offset-2 hover:text-paper" href="mailto:hello@weekly-crypto-pulse.com">
+              hello@weekly-crypto-pulse.com
+            </a>{' '}
+            or use the <a className="underline underline-offset-2 hover:text-paper" href="/contact">contact page</a>.
+            We aim to respond within 30 days.
           </p>
         </SurfaceCard>
       </PageSection>
