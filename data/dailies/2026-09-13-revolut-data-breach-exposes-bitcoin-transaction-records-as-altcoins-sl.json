@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-13T11:40:54.658Z",
+  "publishedAt": "2026-09-13",
+  "slug": "2026-09-13-revolut-data-breach-exposes-bitcoin-transaction-records-as-altcoins-sl",
+  "headline": "Revolut data breach exposes Bitcoin transaction records as altcoins slide broadly",
+  "summary": "A security incident at Revolut — in which customer passport data and Bitcoin transaction histories were leaked via a fake government domain request — rattled crypto markets on Sunday, adding a regulatory edge to an already soft session. Bitcoin slipped 0.84% to $76,628, still below the $81,700 level that on-chain analysts say must be cleared to confirm a new bull run. Altcoins took the harder hit: BNB, Solana, and Ethereum all fell between 2% and 3%, while Zcash led losses at -5.41% as privacy-coin concerns intensified.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 1.47,
+        "catalyst": "Rain posted the session's top gain of +1.47% amid a broadly risk-off day for altcoins, likely benefiting from relative safe-haven rotation within micro-cap assets; no specific news catalyst was identified.",
+        "priceUsd": 0.01535533,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -5.41,
+        "catalyst": "Zcash led losses with a -5.41% decline, consistent with broader altcoin selling pressure and heightened regulatory scrutiny of privacy coins; the Revolut KYC and Bitcoin transaction data breach may have amplified concerns around privacy-focused assets attracting regulatory attention.",
+        "priceUsd": 1092.57,
+        "priceChange24hUsd": -59.14
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76628,
+        "changePct24h": -0.84,
+        "marketCapUsd": 1538906314307,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2474.85,
+        "changePct24h": -2.25,
+        "marketCapUsd": 301983332268,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183469084514,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 715.09,
+        "changePct24h": -2.88,
+        "marketCapUsd": 95219959623,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.34,
+        "changePct24h": -2.17,
+        "marketCapUsd": 84340739292,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74262515635,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 99.72,
+        "changePct24h": -2.25,
+        "marketCapUsd": 58503072629,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3405,
+        "changePct24h": 0.01,
+        "marketCapUsd": 32330099593,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1,
+        "changePct24h": -1.59,
+        "marketCapUsd": 22551817529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1092.57,
+        "changePct24h": -5.41,
+        "marketCapUsd": 18493481588,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.33,
+        "changePct24h": -3.24,
+        "marketCapUsd": 17202834409,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0835,
+        "changePct24h": -1.71,
+        "marketCapUsd": 13015919454,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0154,
+        "changePct24h": 1.47,
+        "marketCapUsd": 10886583862,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 540.02,
+        "changePct24h": 1.08,
+        "marketCapUsd": 10166225955,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9813156014,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's dominant story was a data breach at Revolut, the UK-based fintech with a large crypto user base. The company disclosed that a fraudulent request spoofing a government domain tricked it into handing over customer passport data and Bitcoin transaction histories. That combination — personal identity records tied to specific Bitcoin activity — is the kind of exposure that makes regulators and users uncomfortable in equal measure. It didn't cause a market crash, but it added a layer of unease to an already soft session.\n\nBitcoin's -0.84% slip kept it well below $81,700, the resistance level that on-chain analytics firm CryptoQuant identified this week as the threshold Bitcoin needs to clear before a sustained bull market can be confirmed. Until that level breaks, the market is in a holding pattern — and Sunday's session did nothing to change that picture.\n\nAltcoins bore the brunt of the selling. BNB fell 2.88%, Ethereum and Solana each dropped 2.25%, and XRP slid 2.17%. Zcash took the steepest hit at -5.41%, with the Revolut breach plausibly amplifying existing regulatory anxiety around privacy-focused coins — assets that already draw scrutiny for their ability to obscure transaction trails. Monero, the other major privacy coin in the top 15, bucked the trend with a +1.08% gain, though no specific catalyst explained the divergence. TRON was the only other asset to hold flat, essentially unchanged at +0.01%.",
+  "worthKnowing": [
+    "Revolut disclosed that customer passport data and Bitcoin transaction histories were leaked after a fraudulent request successfully impersonated a government domain — a reminder that crypto data held by fintech platforms carries regulatory and personal risk beyond the blockchain itself.",
+    "Crypto billionaires Ben Delo and Christopher Harborne donated a combined $97 million to Nigel Farage's Reform UK party, one of the largest political donations in UK history and a signal of growing crypto-industry involvement in mainstream electoral politics.",
+    "Ripple's stablecoin division outlined a $13 trillion addressable market for its RLUSD stablecoin as a corporate treasury instrument, a significant narrative push even as XRP fell 2.17% on the day.",
+    "Bitcoin Suisse announced plans to cut up to half its Swiss workforce, shifting operations abroad — a sign of continued margin pressure across crypto service and custody firms."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2610154626915,
+    "btcDominancePct": 58.8164,
+    "ethDominancePct": 11.5402,
+    "fearGreedIndex": 61
+  },
+  "tags": [
+    "revolut-data-breach",
+    "privacy-coins",
+    "zcash",
+    "bitcoin-resistance",
+    "rlusd",
+    "reform-uk-donation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
