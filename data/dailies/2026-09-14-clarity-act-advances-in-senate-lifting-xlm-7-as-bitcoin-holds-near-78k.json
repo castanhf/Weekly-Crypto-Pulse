@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-14T12:35:20.794Z",
+  "publishedAt": "2026-09-14",
+  "slug": "2026-09-14-clarity-act-advances-in-senate-lifting-xlm-7-as-bitcoin-holds-near-78k",
+  "headline": "Clarity Act advances in Senate, lifting XLM 7% as Bitcoin holds near $78K",
+  "summary": "Senate Republicans released a final draft of the Clarity Act crypto bill — and Trump's acceptance of ethics provisions gave it real momentum, which Bernstein says is 'definitely not priced in.' Altcoins with regulatory-sensitive narratives led the gains, with Stellar jumping nearly 7% and XRP climbing 4%. Bitcoin rose 1.4% to $77,858, outperforming equities as an AI-sector selloff hit tech stocks. Monero was the day's notable loser, falling 4% as the same regulatory push raised concerns about compliance requirements for privacy-focused assets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": 6.87,
+        "catalyst": "Stellar surged nearly 7% as the Clarity Act crypto bill advanced with Senate Republicans releasing a final draft and Trump accepting ethics provisions, broadly lifting altcoins with regulatory-sensitive narratives. XLM, historically sensitive to payments and regulatory clarity themes, outperformed peers on the positive legislative momentum.",
+        "priceUsd": 0.190442,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -4.07,
+        "catalyst": "Monero fell over 4% as privacy coins faced renewed headwinds amid the broader Clarity Act legislative push, which may impose stricter compliance requirements on anonymity-focused assets. The prior day's Revolut data breach news may have also triggered profit-taking in privacy coins after an initial speculative spike.",
+        "priceUsd": 513.07,
+        "priceChange24hUsd": -20.91
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77858,
+        "changePct24h": 1.38,
+        "marketCapUsd": 1563567121104,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2512.49,
+        "changePct24h": 1.24,
+        "marketCapUsd": 306596951729,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183362645103,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 722.47,
+        "changePct24h": 0.83,
+        "marketCapUsd": 96198710873,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.4,
+        "changePct24h": 4.13,
+        "marketCapUsd": 87886609325,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74204988953,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 101.57,
+        "changePct24h": 1.86,
+        "marketCapUsd": 59604582116,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3402,
+        "changePct24h": -0.17,
+        "marketCapUsd": 32302598699,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.021,
+        "changePct24h": 0,
+        "marketCapUsd": 23035851596,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1132.56,
+        "changePct24h": 3.76,
+        "marketCapUsd": 19174046721,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 80.44,
+        "changePct24h": 3.81,
+        "marketCapUsd": 17891637529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0842,
+        "changePct24h": 0.89,
+        "marketCapUsd": 13126623011,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0151,
+        "changePct24h": -1.61,
+        "marketCapUsd": 10710120851,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9832010906,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 513.07,
+        "changePct24h": -4.07,
+        "marketCapUsd": 9652298190,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was legislative: Senate Republicans released what they're calling the final draft of the Clarity Act, a comprehensive crypto regulatory framework, and Trump's agreement to include stricter ethics provisions cleared a significant political obstacle. Bernstein analysts noted the development is 'definitely not priced in,' suggesting markets have not yet fully absorbed the implications of a bill this close to passage.\n\nAltcoins with direct regulatory exposure moved the most. XRP gained 4.1% and Stellar jumped 6.9% — both assets have faced years of legal and regulatory uncertainty, so a credible path to a clear federal framework carries outsized meaning for their holders. Zcash and Hyperliquid also gained roughly 3.8% each, part of a broader altcoin lift. Monero moved in the opposite direction: privacy coins stand to face stricter compliance requirements under any regulatory framework that emphasizes transaction traceability, and Monero fell 4.1% as traders priced in that risk.\n\nBitcoin's 1.4% gain to $77,858 came with an additional tailwind: an AI-sector selloff hit technology equities, and crypto — Bitcoin in particular — attracted capital that rotated out of tech stocks. BTC dominance ticked upward, consistent with a pattern where Bitcoin draws relative safe-haven flows during equity stress. Ethereum rose 1.2%, broadly in line with Bitcoin rather than leading the altcoin charge.",
+  "worthKnowing": [
+    "The Fed, Bank of England, and Bank of Japan are all scheduled to announce interest-rate decisions this week — a rare convergence of major central bank actions that tends to increase volatility across risk assets.",
+    "India announced it is beginning to tokenize its $620 billion corporate bond market, one of the largest sovereign-scale blockchain infrastructure commitments to date.",
+    "The UK's Financial Conduct Authority is exploring regulatory exemptions for tokenized gold products, a move that could accelerate real-world asset tokenization in London's financial markets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2670020759209,
+    "btcDominancePct": 58.3936,
+    "ethDominancePct": 11.4506,
+    "fearGreedIndex": 57
+  },
+  "tags": [
+    "clarity-act",
+    "senate-crypto-legislation",
+    "xlm-stellar",
+    "xmr-monero",
+    "privacy-coins",
+    "btc-safe-haven",
+    "real-world-asset-tokenization"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
