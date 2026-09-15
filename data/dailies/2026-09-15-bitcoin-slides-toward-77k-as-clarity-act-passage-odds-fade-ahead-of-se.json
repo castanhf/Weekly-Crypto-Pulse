@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-15T11:41:17.836Z",
+  "publishedAt": "2026-09-15",
+  "slug": "2026-09-15-bitcoin-slides-toward-77k-as-clarity-act-passage-odds-fade-ahead-of-se",
+  "headline": "Bitcoin slides toward $77K as Clarity Act passage odds fade ahead of Senate vote",
+  "summary": "Prediction market odds for the Clarity Act — the Senate's main crypto regulatory framework — fell sharply on Tuesday, reversing Monday's rally and pulling Bitcoin down 1.16%. Ethereum, Solana, and Dogecoin all closed lower alongside it, while XRP held up relatively better as its own regulatory story took a positive turn. The day's moves were driven almost entirely by one pending event: the Senate vote.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 20.5,
+        "catalyst": "No clear catalyst identified; the move appears to be technical, driven by thin liquidity in a low-cap asset.",
+        "priceUsd": 0.716274,
+        "priceChange24hUsd": 0.15
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -12.36,
+        "catalyst": "No specific catalyst identified; the sharp decline likely reflects thin liquidity and selling pressure in a low-cap asset.",
+        "priceUsd": 0.01324557,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76948,
+        "changePct24h": -1.16,
+        "marketCapUsd": 1545549052772,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2479.56,
+        "changePct24h": -1.37,
+        "marketCapUsd": 302677523504,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 183368858312,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 717.94,
+        "changePct24h": -0.55,
+        "marketCapUsd": 95608185054,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.4,
+        "changePct24h": -0.37,
+        "marketCapUsd": 87916500880,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 74090590592,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.67,
+        "changePct24h": -1.07,
+        "marketCapUsd": 59099250283,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3383,
+        "changePct24h": -0.51,
+        "marketCapUsd": 32130640532,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.028,
+        "changePct24h": 0,
+        "marketCapUsd": 23195007025,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1137.26,
+        "changePct24h": -0.12,
+        "marketCapUsd": 19256694543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.08,
+        "changePct24h": -1.25,
+        "marketCapUsd": 17594168468,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0826,
+        "changePct24h": -2.04,
+        "marketCapUsd": 12880965937,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 9852576872,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 515.33,
+        "changePct24h": 0.13,
+        "marketCapUsd": 9696835154,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0132,
+        "changePct24h": -12.36,
+        "marketCapUsd": 9386909329,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story was a single data point: prediction market odds for the Clarity Act's Senate passage fell, unwinding the optimism that had lifted Bitcoin toward $80,000 on Monday. The Clarity Act is the most advanced crypto regulatory framework to reach the Senate floor in years, and Monday's rally was built almost entirely on expectations that it would pass. When Polymarket odds pulled back on Tuesday, so did prices — Bitcoin dropped 1.16%, Ethereum fell 1.37%, and Solana slid 1.07%. Dogecoin was the hardest hit among the top assets, down 2.04%, consistent with its pattern of amplifying broader market moves.\n\nXRP held up better than most, declining only 0.37%, likely because its own regulatory picture brightened independently: the XRP Ledger is one vote away from activating a major payments protocol upgrade, giving XRP holders a concrete near-term development to focus on beyond the Senate vote.\n\nThe Fear & Greed index sits at 69 — still in greed territory — which means the market has not fully repriced for a scenario where the Clarity Act stalls. BTC dominance held at 58.32%, suggesting no significant rotation out of Bitcoin into smaller assets during the pullback. The session was orderly rather than panicked; this was a recalibration of legislative expectations, not a broader loss of confidence.",
+  "worthKnowing": [
+    "Balancer's governance has proposed winding down the DeFi protocol entirely and distributing its treasury to BAL token holders — a rare full shutdown of a once-prominent decentralized exchange.",
+    "Hong Kong crypto exchange CoinEx announced it will cease operations after nine years, citing a prolonged market slump.",
+    "The U.S. Department of Justice is seeking $61 million in crypto assets allegedly used to launder proceeds from sanctioned Iranian oil sales via Binance."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2641432494163,
+    "btcDominancePct": 58.3164,
+    "ethDominancePct": 11.4228,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "clarity-act",
+    "senate-vote",
+    "xrp-ledger-upgrade",
+    "balancer-shutdown",
+    "doj-binance",
+    "btc-pullback"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
