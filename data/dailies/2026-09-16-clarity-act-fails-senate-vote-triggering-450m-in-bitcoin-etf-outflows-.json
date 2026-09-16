@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-16T11:26:21.656Z",
+  "publishedAt": "2026-09-16",
+  "slug": "2026-09-16-clarity-act-fails-senate-vote-triggering-450m-in-bitcoin-etf-outflows-",
+  "headline": "Clarity Act fails Senate vote, triggering $450M in Bitcoin ETF outflows and a broad altcoin selloff",
+  "summary": "The Senate blocked the Clarity Act — crypto's most significant regulatory framework in years — on a procedural vote, and markets responded immediately. Bitcoin ETFs shed $450 million in a single day, Bitcoin fell 1.6%, and XRP dropped 8.2% as assets with direct regulatory exposure took the hardest hit. The rest of this report covers Circle's Arc mainnet launch with BlackRock and Visa as validators, Deutsche Bank's move into crypto custody, and a novel insider-trading case tied to Hyperliquid.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 9.52,
+        "catalyst": "Bitway bucked the broad market selloff, rising 9.52% on no widely reported catalyst — likely technical buying or low-liquidity momentum.",
+        "priceUsd": 0.779362,
+        "priceChange24hUsd": 0.07
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XLM",
+        "name": "Stellar",
+        "changePct24h": -10.27,
+        "catalyst": "Stellar dropped over 10% in a broad altcoin selloff triggered by the Clarity Act's failure in the Senate, which removed a key regulatory tailwind for the crypto market; XRP's sharper -8.2% decline also dragged correlated layer-1 assets lower.",
+        "priceUsd": 0.174989,
+        "priceChange24hUsd": -0.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75864,
+        "changePct24h": -1.63,
+        "marketCapUsd": 1523685849016,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2403.85,
+        "changePct24h": -3.27,
+        "marketCapUsd": 293397928830,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.03,
+        "marketCapUsd": 183314907559,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 710.8,
+        "changePct24h": -1.23,
+        "marketCapUsd": 94641786588,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.29,
+        "changePct24h": -8.2,
+        "marketCapUsd": 80922308382,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73674158274,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 97.13,
+        "changePct24h": -3.78,
+        "marketCapUsd": 57016665394,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3347,
+        "changePct24h": -1.12,
+        "marketCapUsd": 31786812078,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.003,
+        "changePct24h": -2.44,
+        "marketCapUsd": 22696334368,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1208.54,
+        "changePct24h": 5.65,
+        "marketCapUsd": 20481538244,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.68,
+        "changePct24h": -0.83,
+        "marketCapUsd": 17480352757,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0799,
+        "changePct24h": -3.57,
+        "marketCapUsd": 12459358504,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0137,
+        "changePct24h": 3.58,
+        "marketCapUsd": 9722112781,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9994,
+        "changePct24h": -0.03,
+        "marketCapUsd": 9577570945,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 504.85,
+        "changePct24h": -2.11,
+        "marketCapUsd": 9492082578,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The Senate's failure to advance the Clarity Act — a bill that would have established the first comprehensive US framework for crypto regulation — was the single catalyst behind today's broad decline. The vote failed on a procedural cloture motion, meaning it didn't even reach a full Senate debate, and the defeat was tangled up in a separate ethics dispute over President Trump's crypto holdings, which complicated bipartisan support.\n\nThe market reaction was swift and specific. Bitcoin ETFs saw $450 million in outflows in a single session — the largest single-day exit in recent months — pushing the Coinbase premium to a one-month low, a sign that US-based demand weakened sharply relative to offshore markets. Bitcoin itself fell 1.63% to $75,864, a relatively contained move given the news, but altcoins with direct regulatory exposure took a harder hit. XRP dropped 8.2% to $1.29; the asset had rallied earlier this year partly on expectations that clearer US rules would benefit tokens that had faced SEC enforcement scrutiny. Stellar, which trades in close correlation with XRP, fell 10.27%. Solana dropped 3.78% and Ethereum fell 3.27%, both reflecting the broader pullback in risk appetite.\n\nThe Fear & Greed index sits at 51 — neutral — suggesting the market hasn't tipped into panic, but the ETF outflow data points to institutional sellers leading the move rather than retail. Zcash gained 5.65% against the trend, though no specific catalyst was reported; the move appears technical.",
+  "worthKnowing": [
+    "Circle launched its Arc blockchain mainnet today with BlackRock and Visa among the validator set, minting 10 billion ARC tokens; CEO Jeremy Allaire described it as more consequential than USDC itself.",
+    "Deutsche Bank is nearing the launch of a crypto custody service for institutional clients in Europe, a notable step for a major traditional bank moving into digital asset infrastructure.",
+    "Two former Robinhood engineers were charged by the DOJ with insider trading after allegedly using advance knowledge of crypto listing announcements to trade perpetuals on Hyperliquid — a novel enforcement action targeting DeFi-native markets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2602329062104,
+    "btcDominancePct": 58.5054,
+    "ethDominancePct": 11.2694,
+    "fearGreedIndex": 51
+  },
+  "tags": [
+    "clarity-act",
+    "senate-vote",
+    "btc-etf-outflows",
+    "circle-arc-mainnet",
+    "deutsche-bank-custody",
+    "hyperliquid-insider-trading"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
