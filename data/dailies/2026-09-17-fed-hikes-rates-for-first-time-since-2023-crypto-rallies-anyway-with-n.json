@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-17T11:34:26.817Z",
+  "publishedAt": "2026-09-17",
+  "slug": "2026-09-17-fed-hikes-rates-for-first-time-since-2023-crypto-rallies-anyway-with-n",
+  "headline": "Fed hikes rates for first time since 2023 — crypto rallies anyway, with NEAR surging 15%",
+  "summary": "The Federal Reserve raised interest rates by 25 basis points on September 17 — its first hike since July 2023 — and crypto markets shrugged off the tightening signal, posting broad gains. Bitcoin climbed to $76,301, Solana broke above $99, and mid-cap altcoins led by NEAR Protocol surged as $345 million in short liquidations swept the market. The session also saw Zcash spike sharply on the liquidation wave, while regulatory uncertainty from the stalled Clarity Act continued to hang over smaller tokens.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 15.03,
+        "catalyst": "NEAR surged ~15% as the Fed's 25bps rate hike came in as expected and markets interpreted it as manageable, triggering a relief rally. Short liquidations across altcoins — $345M in total — disproportionately benefited mid-cap tokens like NEAR, which also rebounded from the prior session's Clarity Act-driven selloff.",
+        "priceUsd": 2.82,
+        "priceChange24hUsd": 0.42
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -10.32,
+        "catalyst": "Bitway fell ~10% with no specific catalyst identified. Broader post-Clarity Act regulatory uncertainty and signals from the SEC and CFTC that they will pursue independent rulemaking appear to have weighed on smaller-cap tokens with less liquidity.",
+        "priceUsd": 0.698957,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 76301,
+        "changePct24h": 0.53,
+        "marketCapUsd": 1532820739188,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2433.09,
+        "changePct24h": 1.18,
+        "marketCapUsd": 297052652943,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.01,
+        "marketCapUsd": 183286782875,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 722.25,
+        "changePct24h": 1.43,
+        "marketCapUsd": 96186690665,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": 0.6,
+        "marketCapUsd": 81458566390,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73595317845,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 99.98,
+        "changePct24h": 2.91,
+        "marketCapUsd": 58719859680,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3344,
+        "changePct24h": -0.16,
+        "marketCapUsd": 31750954127,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 2.64,
+        "marketCapUsd": 23268681307,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1349.69,
+        "changePct24h": 11.35,
+        "marketCapUsd": 22872429053,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.66,
+        "changePct24h": 1.08,
+        "marketCapUsd": 17723497330,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0808,
+        "changePct24h": 1.04,
+        "marketCapUsd": 12601285664,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.05,
+        "marketCapUsd": 9565438156,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 498.72,
+        "changePct24h": -1.15,
+        "marketCapUsd": 9389204142,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "priceUsd": 0.0132,
+        "changePct24h": -3.45,
+        "marketCapUsd": 9379038351,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was the Federal Reserve's decision to raise interest rates by 25 basis points — the first hike since July 2023. Markets had been bracing for the move, and when it landed without a hawkish surprise in the accompanying statement, crypto rallied rather than sold off. Bitcoin gained 0.53% to $76,301, Ethereum rose 1.18%, and Solana climbed nearly 3% to just under $100.\n\nThe rally was amplified by a wave of short liquidations: $345 million in leveraged short positions were forced to close across the market, pushing prices higher and creating outsized moves in mid-cap and privacy-focused tokens. Zcash jumped 11.35% in the top-15 tracked assets, and NEAR Protocol — not in the top 15 but the session's standout mover — surged 15% as traders who had bet against altcoins were squeezed out.\n\nThe backdrop also included a sentiment-stabilizing note from Bitwise CIO Matt Hougan, who argued after the Clarity Act's Senate failure that the crypto bull market does not depend on that legislation passing. Yesterday's session had seen $450 million in ETF outflows tied to the bill's collapse; today, that pressure eased. The SEC and CFTC separately signaled they will pursue independent crypto rulemaking now that the Clarity Act has stalled, and a House panel advanced the first federal crypto tax framework — regulatory activity that kept some uncertainty in the market but did not derail the day's gains.",
+  "worthKnowing": [
+    "The SEC and CFTC both signaled they will move forward with independent crypto rulemaking after the Clarity Act stalled in the Senate, while a House panel separately approved the first federal crypto tax framework.",
+    "Bitwise CIO Matt Hougan said the crypto bull market can continue without the Clarity Act passing, a notable shift in tone after yesterday's $450M in ETF outflows tied to the bill's Senate failure.",
+    "Hackers targeting Revolut demanded $3 million in Monero (XMR) and threatened to sell customer data — spotlighting privacy coins in a negative regulatory context on the same day Monero's price dipped 1.15%."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2626040399853,
+    "btcDominancePct": 58.3169,
+    "ethDominancePct": 11.3057,
+    "fearGreedIndex": 50
+  },
+  "tags": [
+    "federal-reserve-rate-hike",
+    "near-protocol",
+    "zcash",
+    "clarity-act",
+    "sec-cftc-rulemaking",
+    "short-liquidations"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
