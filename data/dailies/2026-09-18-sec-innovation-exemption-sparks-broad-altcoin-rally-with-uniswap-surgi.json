@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-18T11:08:42.816Z",
+  "publishedAt": "2026-09-18",
+  "slug": "2026-09-18-sec-innovation-exemption-sparks-broad-altcoin-rally-with-uniswap-surgi",
+  "headline": "SEC innovation exemption sparks broad altcoin rally, with Uniswap surging 33% and Solana topping 6%",
+  "summary": "The SEC released a long-awaited innovation exemption for crypto developers today, cutting regulatory uncertainty for DeFi protocols and triggering one of the broader altcoin rallies of the year. Uniswap led the charge with a 33% gain, but the move was wide: Solana rose 6.8%, BNB climbed 4.1%, and even Bitcoin added 2.6% to reach $78,242. The Fed's recent rate hike, which had rattled markets earlier in the week, was absorbed with more resilience than expected — and the SEC news gave traders a reason to rotate into risk assets across the board.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": 32.87,
+        "catalyst": "Uniswap surged 32.87% as post-Fed hike nerves faded and DeFi tokens led a broad altcoin rally, with both the SEC and CFTC adopting developer-friendly no-action stances that reduced regulatory overhang for DeFi protocols. The SEC's release of a long-awaited innovation exemption further boosted sentiment for decentralized exchange tokens.",
+        "priceUsd": 9.03,
+        "priceChange24hUsd": 2.97
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -2.63,
+        "catalyst": "Rain fell 2.63% with no specific catalyst identified; the decline likely reflects profit-taking or thin liquidity on a day when capital flowed toward higher-profile DeFi and Layer-2 assets.",
+        "priceUsd": 0.01288543,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 78242,
+        "changePct24h": 2.56,
+        "marketCapUsd": 1571168511550,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2514.67,
+        "changePct24h": 3.43,
+        "marketCapUsd": 306832080637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 183288649461,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 752.28,
+        "changePct24h": 4.14,
+        "marketCapUsd": 100163312687,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.33,
+        "changePct24h": 3.21,
+        "marketCapUsd": 83874378906,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.01,
+        "marketCapUsd": 73789690762,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 106.41,
+        "changePct24h": 6.78,
+        "marketCapUsd": 62468010120,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3372,
+        "changePct24h": 0.78,
+        "marketCapUsd": 32020358983,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1480.65,
+        "changePct24h": 10.09,
+        "marketCapUsd": 25073099899,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.028,
+        "changePct24h": -0.15,
+        "marketCapUsd": 23302238576,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 90.8,
+        "changePct24h": 14,
+        "marketCapUsd": 20198988929,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0861,
+        "changePct24h": 6.7,
+        "marketCapUsd": 13420074686,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 535.98,
+        "changePct24h": 7.88,
+        "marketCapUsd": 10077773858,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 9562067709,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 80.57,
+        "changePct24h": 2.64,
+        "marketCapUsd": 9495437798,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces converged today to push the market broadly higher. The first was the SEC's formal release of an innovation exemption — a policy document that crypto developers have been waiting on for years. In plain terms, it tells builders that certain DeFi and digital asset projects won't automatically face enforcement action, removing a legal cloud that had kept institutional capital on the sidelines. The CFTC issued a parallel no-action stance for developers, reinforcing the message. DeFi tokens responded immediately: Uniswap, as the most prominent decentralized exchange, absorbed the bulk of the enthusiasm with a 33% gain. Hyperliquid added 14%, partly on the regulatory tailwind and partly on its own momentum — real-world asset trading volumes on the platform have been climbing, drawing institutional attention.\n\nThe second force was the market's digestion of the Fed's recent rate hike. Rate hikes typically cool risk appetite, and crypto had been cautious in the days leading up to today. But with no fresh economic shock materializing, traders rotated back into higher-risk assets. Layer-2 and DeFi tokens led that rotation, consistent with the pattern seen in prior post-hike recoveries where smaller-cap assets outpace Bitcoin once the initial uncertainty clears. Bitcoin itself rose 2.56% to $78,242 — a solid gain, but well behind the altcoin leaders. Ethereum climbed 3.43% to $2,514.67, buoyed both by the macro recovery and by its own upcoming Glamsterdam upgrade, which confirmed dates today. The Fear & Greed index sits at 56, in neutral territory — elevated enough to support risk-taking, not so high as to signal froth.",
+  "worthKnowing": [
+    "Ethereum's next major upgrade, Glamsterdam, confirmed its hard fork dates today, though developers flagged a potential chain-stall risk from malicious or misconfigured block builders ahead of the fork.",
+    "US authorities sanctioned Iranian crypto exchange BitBank for allegedly facilitating bitcoin transfers to Iran's Revolutionary Guard Corps, the latest enforcement action tying crypto to geopolitical risk.",
+    "Hyperliquid's 14% gain was supported by rising real-world asset trading volumes on the platform and a high-profile institutional endorsement of a multichain future from Dragonfly's Haseeb Qureshi."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2698056956260,
+    "btcDominancePct": 58.1062,
+    "ethDominancePct": 11.3589,
+    "fearGreedIndex": 56
+  },
+  "tags": [
+    "sec-innovation-exemption",
+    "defi-rally",
+    "uniswap",
+    "hyperliquid",
+    "ethereum-glamsterdam",
+    "post-fed-rotation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
