@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "daily@1.0",
+  "generatedAt": "2026-09-19T10:37:37.442Z",
+  "publishedAt": "2026-09-19",
+  "slug": "2026-09-19-markets-quiet",
+  "headline": "Markets are quiet today.",
+  "summary": "Today's daily report could not be assembled. The full pulse will resume tomorrow.",
+  "whatMoved": {
+    "winners": [],
+    "losers": [],
+    "topTracked": []
+  },
+  "whyItMoved": "Today's report could not be generated due to upstream data unavailability. Normal coverage resumes tomorrow.",
+  "worthKnowing": [],
+  "snapshot": {
+    "totalMarketCapUsd": 0,
+    "btcDominancePct": 0,
+    "ethDominancePct": 0,
+    "fearGreedIndex": 0
+  },
+  "tags": [
+    "placeholder",
+    "pipeline-failure"
+  ]
+}
