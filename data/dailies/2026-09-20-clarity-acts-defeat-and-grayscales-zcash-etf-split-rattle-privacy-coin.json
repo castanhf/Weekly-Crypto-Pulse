@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-20T11:14:11.272Z",
+  "publishedAt": "2026-09-20",
+  "slug": "2026-09-20-clarity-acts-defeat-and-grayscales-zcash-etf-split-rattle-privacy-coin",
+  "headline": "Clarity Act's defeat and Grayscale's Zcash ETF split rattle privacy coins as crypto slides broadly",
+  "summary": "Congress's failure to pass the Clarity Act left crypto market structure regulation in the hands of the SEC and CFTC, removing a key source of near-term policy clarity and weighing on sentiment across the board. Monero led losses, falling nearly 11%, after Grayscale's Zcash ETF share-split filing drew attention to privacy coins and triggered profit-taking rotation. Bitcoin slipped 1.1% to $80,304 while Ethereum fell 2.6% — though Bitcoin ETFs closed the week on a positive note with a $433M Friday inflow.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 25.32,
+        "catalyst": "No clear catalyst identified — the move appears technical, with no major news tied to Bitway on the day.",
+        "priceUsd": 0.760304,
+        "priceChange24hUsd": 0.19
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -10.98,
+        "catalyst": "Grayscale filed for a 3-for-1 forward share split on its Zcash ETF, drawing investor attention to privacy coins broadly and likely triggering profit-taking rotation out of Monero, which had previously rallied on privacy-coin ETF enthusiasm. The broad market selloff compounded the pressure.",
+        "priceUsd": 521.77,
+        "priceChange24hUsd": -57.3
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80304,
+        "changePct24h": -1.1,
+        "marketCapUsd": 1613049318867,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2570.27,
+        "changePct24h": -2.56,
+        "marketCapUsd": 313739017150,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 183308535398,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 748.35,
+        "changePct24h": -2.16,
+        "marketCapUsd": 99650626776,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.38,
+        "changePct24h": -2.98,
+        "marketCapUsd": 86532324116,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 74193052856,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 108.05,
+        "changePct24h": -3.22,
+        "marketCapUsd": 63467107358,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3426,
+        "changePct24h": 1.46,
+        "marketCapUsd": 32531466244,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1436.51,
+        "changePct24h": -6.49,
+        "marketCapUsd": 24337900698,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.017,
+        "changePct24h": -1.32,
+        "marketCapUsd": 23140466333,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 90.86,
+        "changePct24h": -0.98,
+        "marketCapUsd": 20211346058,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0847,
+        "changePct24h": -3.41,
+        "marketCapUsd": 13213095712,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 521.77,
+        "changePct24h": -10.98,
+        "marketCapUsd": 9812997342,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 81.68,
+        "changePct24h": -1.65,
+        "marketCapUsd": 9710441264,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 9596041359,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two stories drove today's broad decline. The first was the Clarity Act's failure in Congress. That bill would have drawn clear lines between which digital assets fall under the SEC and which fall under the CFTC — a distinction that matters enormously for how crypto projects can operate in the US. Without it, both agencies retain wide discretionary authority, and the industry faces continued regulatory uncertainty. That backdrop weighed on sentiment across the board, with Solana off 3.2%, XRP down 3.0%, and Ethereum sliding 2.6%.\n\nThe second story was more specific to privacy coins. Grayscale filed to split its Zcash ETF shares 3-for-1 — a move designed to make individual shares cheaper and more accessible to retail investors. The filing reignited attention on privacy-focused assets, but the effect on Monero was negative: traders who had bought XMR earlier in the week on privacy-coin ETF enthusiasm used the Grayscale news as an exit point, rotating out of Monero and into Zcash directly. XMR fell nearly 11% as a result, while ZEC itself dropped 6.5% — suggesting the broader privacy-coin trade unwound rather than simply rotating.\n\nOne counterpoint to the gloom: Bitcoin ETFs closed the week with a $433M inflow on Friday, keeping the weekly total positive. Ethereum ETFs, however, broke a four-week inflow streak, pointing to diverging institutional appetite between the two. TRON was the only top-15 asset to close in the green, gaining 1.5% without a clear catalyst.",
+  "worthKnowing": [
+    "The Clarity Act's defeat leaves the SEC and CFTC with broad, overlapping authority over digital assets — a status quo that crypto industry groups had lobbied hard to change.",
+    "Ripple says institutional asset managers are actively positioning ahead of a major XRP Ledger payments upgrade, even as XRP's price fell nearly 3% on the day.",
+    "Visa is moving to close a loophole that allowed users to earn memecoin rewards through Crossmint, reflecting tightening compliance scrutiny on crypto-linked consumer products."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2733246939496,
+    "btcDominancePct": 58.9442,
+    "ethDominancePct": 11.4773,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "clarity-act",
+    "grayscale-zcash-etf",
+    "monero",
+    "btc-etf-flows",
+    "privacy-coins",
+    "sec-cftc"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
