@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-22T11:30:51.340Z",
+  "publishedAt": "2026-09-22",
+  "slug": "2026-09-22-bitcoin-etfs-pull-nearly-1b-in-a-single-day-as-dogecoin-leads-the-altc",
+  "headline": "Bitcoin ETFs pull nearly $1B in a single day as Dogecoin leads the altcoin rebound",
+  "summary": "Spot Bitcoin ETFs recorded roughly $1 billion in inflows on Monday — the largest single-day haul in 11 months — helping anchor Bitcoin above $85,000 while altcoins staged a broad recovery. Dogecoin was the headline mover, surging as much as 15% before settling at a 4.72% gain. The day's other big story was Binance: the exchange struck a $100 million deal with Circle to promote USDC, while simultaneously facing a fresh federal probe over alleged sanctions violations.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "TAO",
+        "name": "Bittensor",
+        "changePct24h": 10.19,
+        "catalyst": "Bittensor surged over 10% as AI-agent payment narratives gained momentum, with Cardano joining Solana and XRP Ledger in the race to power AI agent payments, lifting sentiment across AI-linked tokens. The broader market recovery from Asian-session lows and a Fear & Greed Index of 78 provided additional tailwind for higher-beta assets like TAO.",
+        "priceUsd": 313.94,
+        "priceChange24hUsd": 32
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -11.36,
+        "catalyst": "MemeCore dropped over 11% with no specific catalyst identified, suggesting profit-taking or liquidity rotation out of lower-cap meme tokens following the prior day's broad altcoin rally. DOGE's outsized 4.72% gain may have cannibalized meme-sector flows away from smaller competitors like MemeCore.",
+        "priceUsd": 1.34,
+        "priceChange24hUsd": -0.15
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 85938,
+        "changePct24h": 1.58,
+        "marketCapUsd": 1725933201917,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2740.47,
+        "changePct24h": 0.75,
+        "marketCapUsd": 334460993979,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 183336887974,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 785.81,
+        "changePct24h": -0.27,
+        "marketCapUsd": 104631672654,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.53,
+        "changePct24h": 2.39,
+        "marketCapUsd": 96152054852,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74660021185,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 116.84,
+        "changePct24h": 0.39,
+        "marketCapUsd": 68620675121,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3465,
+        "changePct24h": 0.59,
+        "marketCapUsd": 32899609672,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1503.66,
+        "changePct24h": -1.44,
+        "marketCapUsd": 25434165084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.013,
+        "changePct24h": 0,
+        "marketCapUsd": 23062099668,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 94.96,
+        "changePct24h": -0.56,
+        "marketCapUsd": 21105155866,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0977,
+        "changePct24h": 4.72,
+        "marketCapUsd": 15242766424,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 567.28,
+        "changePct24h": -1.42,
+        "marketCapUsd": 10669445543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 86.4,
+        "changePct24h": 0.64,
+        "marketCapUsd": 10270746608,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 12.92,
+        "changePct24h": -1.11,
+        "marketCapUsd": 9657286194,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest driver was institutional demand for Bitcoin. Spot BTC ETFs attracted nearly $1 billion in inflows on Monday — the 9th largest single-day figure on record and the biggest in 11 months — anchoring Bitcoin above $85,000 and giving the broader market a confidence floor. Falling oil prices also helped by easing macro pressure, removing one argument for a risk-off rotation.\n\nWith Bitcoin steady, capital moved into altcoins. Dogecoin led the charge, spiking as much as 15% intraday before settling at a 4.72% gain in the top-15 snapshot — the move appeared driven by renewed retail enthusiasm and the broader meme-token bid that followed Bitcoin's stability. XRP gained 2.39%, partly lifted by growing attention to AI-agent payment infrastructure, where XRP Ledger is competing alongside Solana and Cardano to become the settlement layer for autonomous AI transactions. That same narrative pushed Bittensor (TAO) up more than 10%, making it the day's standout winner among tracked assets.\n\nOn the losing side, MemeCore fell 11.36% with no identifiable catalyst — the most plausible explanation is that DOGE's surge pulled meme-sector liquidity toward the larger, more liquid name, leaving smaller competitors like MemeCore without buyers. The Fear & Greed Index at 78 (Greed) reflects the day's overall tone: risk appetite was elevated, but the gains were uneven, with larger and more liquid assets capturing most of the flow.",
+  "worthKnowing": [
+    "Binance acquired a $100 million stake in Circle and signed a five-year agreement to promote USDC across its platform — a significant shift for the exchange, which has historically favored its own BUSD stablecoin.",
+    "U.S. federal prosecutors are investigating Binance over whether it knowingly facilitated trades linked to Iran in violation of sanctions, adding fresh regulatory uncertainty for the world's largest crypto exchange.",
+    "X (formerly Twitter) is reportedly advancing plans to integrate Bitcoin and stock trading directly into its platform, which would mark a major expansion of retail crypto access if it moves forward.",
+    "Bittensor (TAO) surged 10.19% as Cardano joined Solana and XRP Ledger in positioning to support AI-agent payment infrastructure, lifting sentiment across AI-linked tokens broadly."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2917871819524,
+    "btcDominancePct": 58.9263,
+    "ethDominancePct": 11.4236,
+    "fearGreedIndex": 78
+  },
+  "tags": [
+    "bitcoin-etf-inflows",
+    "dogecoin",
+    "binance-circle-usdc",
+    "binance-sanctions-probe",
+    "bittensor",
+    "ai-agent-payments"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
