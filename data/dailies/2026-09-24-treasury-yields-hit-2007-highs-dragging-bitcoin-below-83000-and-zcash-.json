@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-24T11:40:40.272Z",
+  "publishedAt": "2026-09-24",
+  "slug": "2026-09-24-treasury-yields-hit-2007-highs-dragging-bitcoin-below-83000-and-zcash-",
+  "headline": "Treasury yields hit 2007 highs, dragging Bitcoin below $83,000 and Zcash down 8.5%",
+  "summary": "Surging U.S. Treasury yields — now at their highest since 2007 — rattled crypto markets Thursday, with traders pricing in four Fed rate hikes by mid-2027. Bitcoin fell 2.35%, XRP dropped 6.77%, and Zcash led losses among tracked assets at -8.48%. The macro pressure overshadowed two notable policy stories: the Trump administration's reported push for a global dollar-stablecoin strategy, and EU regulators warning that quantum computing could threaten blockchain encryption sooner than expected.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 7.73,
+        "catalyst": "Bitway gained 7.73% against the broader market selloff, though no specific catalyst was identified — the move appears technical amid thin liquidity.",
+        "priceUsd": 1.016,
+        "priceChange24hUsd": 0.08
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -8.48,
+        "catalyst": "Zcash fell sharply alongside broader market weakness driven by surging U.S. Treasury yields hitting their highest level since 2007. EU financial watchdog warnings about quantum computing threatening blockchain encryption may have added additional pressure on privacy coins with older cryptographic foundations.",
+        "priceUsd": 1497.14,
+        "priceChange24hUsd": -127.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83542,
+        "changePct24h": -2.35,
+        "marketCapUsd": 1678178607909,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2650.71,
+        "changePct24h": -2.63,
+        "marketCapUsd": 323560762477,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 183498845238,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 770.25,
+        "changePct24h": -1.44,
+        "marketCapUsd": 102565473226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.47,
+        "changePct24h": -6.77,
+        "marketCapUsd": 92601956638,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 75247714312,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 113.43,
+        "changePct24h": -2.85,
+        "marketCapUsd": 66635500549,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3392,
+        "changePct24h": -1.12,
+        "marketCapUsd": 32217686220,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1497.14,
+        "changePct24h": -8.48,
+        "marketCapUsd": 25375327887,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": 0.37,
+        "marketCapUsd": 23844553123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 91.22,
+        "changePct24h": -4.42,
+        "marketCapUsd": 20290014686,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0929,
+        "changePct24h": -6.35,
+        "marketCapUsd": 14492669433,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 547.46,
+        "changePct24h": -2.53,
+        "marketCapUsd": 10295567828,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 83.59,
+        "changePct24h": -2.73,
+        "marketCapUsd": 9934470614,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 9691027052,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's driver was straightforward: U.S. Treasury yields climbed to their highest level since 2007, and markets responded by pricing in four Federal Reserve rate hikes before June 2027. Higher yields make risk assets less attractive relative to government bonds, and crypto — which has traded with a strong sensitivity to rate expectations since 2022 — sold off broadly. Bitcoin fell 2.35%, Ethereum dropped 2.63%, and Dogecoin slid 6.35%. XRP's 6.77% decline stood out among large-caps, though no XRP-specific news explained the additional gap versus Bitcoin's move. Zcash took the hardest hit among tracked assets at -8.48%. Beyond the macro rate story, EU financial regulators published a warning that 'Q-Day' — the point at which quantum computers could break current blockchain encryption — may arrive before quantum hardware becomes commercially available. That warning landed with particular weight on privacy coins like Zcash and Monero, whose cryptographic designs are older and potentially more exposed. The Fear & Greed index sits at 71 (Greed), a reading that looks disconnected from the day's macro pressure — markets are selling off while the sentiment gauge still reads optimistic, a gap that reflects how quickly the rate narrative shifted.",
+  "worthKnowing": [
+    "The Trump administration is reportedly developing a coordinated international stablecoin strategy to extend U.S. dollar dominance globally, which would represent a significant regulatory tailwind for USD-pegged stablecoin issuers.",
+    "Visa research found that consumer willingness to use stablecoins jumped from 36% to 56% when bank-level protections are in place, lending weight to arguments for regulated stablecoin frameworks.",
+    "IBM connected its Digital Asset Haven platform to Swift's blockchain ledger for tokenized deposit transactions, a step toward institutional infrastructure that bridges traditional banking rails with crypto settlement."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2828358106715,
+    "btcDominancePct": 59.2093,
+    "ethDominancePct": 11.4166,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "treasury-yields",
+    "fed-rate-hikes",
+    "zcash",
+    "quantum-computing",
+    "stablecoin-regulation",
+    "trump-dollar-dominance"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
