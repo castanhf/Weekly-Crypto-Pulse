@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-25T11:45:50.627Z",
+  "publishedAt": "2026-09-25",
+  "slug": "2026-09-25-ondo-surges-28-on-blackrock-backed-token-launch-as-bitcoin-etfs-erase-",
+  "headline": "Ondo surges 28% on BlackRock-backed token launch as Bitcoin ETFs erase $5.8B in outflows",
+  "summary": "Ondo Finance's launch of onchain portfolio tokens built on BlackRock-developed investment strategies drove a 28.5% spike in ONDO — the day's clearest single-asset story. The broader market caught a bid too: XRP gained 7.7%, Solana climbed 6.8%, and Chainlink jumped 14.6% as institutional momentum returned. Underpinning the rally, spot Bitcoin ETFs fully recovered $5.8 billion in prior outflows, with BTC consolidating near $85,000 and the Fear & Greed index sitting at 71.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ONDO",
+        "name": "Ondo",
+        "changePct24h": 28.53,
+        "catalyst": "Ondo Finance launched onchain portfolio tokens based on BlackRock-developed investment strategies, driving strong institutional demand sentiment. The product launch appeared to restore confidence following earlier uncertainty around founder Nathan Allman's death, sparking a 28.5% surge.",
+        "priceUsd": 0.549851,
+        "priceChange24hUsd": 0.16
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -2.8,
+        "catalyst": "MemeCore slipped 2.8% with no specific catalyst identified — a modest decline on a broadly green day.",
+        "priceUsd": 1.2,
+        "priceChange24hUsd": -0.03
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 84911,
+        "changePct24h": 1.67,
+        "marketCapUsd": 1705778651376,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2724.98,
+        "changePct24h": 2.9,
+        "marketCapUsd": 332626567142,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183745521075,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 779.7,
+        "changePct24h": 1.34,
+        "marketCapUsd": 103821932480,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.59,
+        "changePct24h": 7.71,
+        "marketCapUsd": 99800574828,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 75423604786,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 120.95,
+        "changePct24h": 6.79,
+        "marketCapUsd": 71049126440,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3372,
+        "changePct24h": -0.61,
+        "marketCapUsd": 32024064384,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1606.38,
+        "changePct24h": 7.98,
+        "marketCapUsd": 27226561438,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": 0,
+        "marketCapUsd": 23713801595,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 93.69,
+        "changePct24h": 2.98,
+        "marketCapUsd": 20841984226,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0982,
+        "changePct24h": 5.86,
+        "marketCapUsd": 15326870787,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 569.44,
+        "changePct24h": 4.33,
+        "marketCapUsd": 10710584944,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.02,
+        "changePct24h": 14.55,
+        "marketCapUsd": 10485536119,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 84.71,
+        "changePct24h": 1.37,
+        "marketCapUsd": 10073290037,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two stories drove today's session. The first was Ondo Finance's announcement that it had launched onchain portfolio tokens built on investment strategies developed by BlackRock. The product puts traditional asset management logic directly on a blockchain — meaning investors can hold a token that tracks a professionally managed portfolio without going through a conventional fund structure. The market read this as a meaningful step toward institutional-grade decentralized finance, and ONDO jumped 28.5% on the news. The second story was the Bitcoin ETF recovery data: spot BTC funds have now fully clawed back $5.8 billion in outflows that had accumulated earlier in the year. That milestone matters because ETF flows are one of the cleaner signals of institutional appetite — sustained inflows mean large buyers are returning through regulated vehicles, not just retail speculation. BTC responded by holding near $85,000, up 1.7% on the day. The broader altcoin market moved with conviction: Chainlink gained 14.6%, XRP rose 7.7%, Zcash climbed 8.0%, and Solana added 6.8%. No single catalyst explains each of those moves individually, but the combination of the Ondo announcement and the ETF recovery data appears to have shifted sentiment toward risk-on across the board. The Fear & Greed index at 71 — in Greed territory — reflects that tone. TRON was the only top-15 asset to close lower, slipping 0.6% with no clear driver.",
+  "worthKnowing": [
+    "The U.S. Federal Reserve advanced formal proposals to implement the GENIUS Act, setting reserve requirements and capital standards for stablecoin issuers — the most concrete regulatory framework for stablecoins to reach this stage in the U.S.",
+    "KelpDAO filed suit against LayerZero, alleging the protocol endorsed a bridge configuration that enabled a $292 million exploit of its rsETH bridge — the largest DeFi hack of 2026.",
+    "New York state moved to block Polymarket from operating in the state, alleging its prediction markets constitute illegal gambling under state law."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2884828386660,
+    "btcDominancePct": 58.855,
+    "ethDominancePct": 11.481,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "ondo-finance",
+    "blackrock",
+    "bitcoin-etf-flows",
+    "genius-act",
+    "layerzero-exploit",
+    "polymarket",
+    "chainlink"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
