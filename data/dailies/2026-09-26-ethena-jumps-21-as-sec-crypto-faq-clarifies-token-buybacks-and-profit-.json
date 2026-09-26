@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-26T11:20:15.857Z",
+  "publishedAt": "2026-09-26",
+  "slug": "2026-09-26-ethena-jumps-21-as-sec-crypto-faq-clarifies-token-buybacks-and-profit-",
+  "headline": "Ethena jumps 21% as SEC crypto FAQ clarifies token buybacks and profit-sharing rules",
+  "summary": "The SEC published a crypto FAQ addressing how it views token buybacks and profit-sharing arrangements — and Ethena, a synthetic dollar protocol that distributes yield to holders, was the day's clearest beneficiary, surging 21%. The broader market drifted lower, with Bitcoin slipping 0.74% and Ethereum down 1.16%, as traders also absorbed news that Hester Peirce — the SEC's most consistently pro-crypto commissioner — is leaving next week. The day's story is regulatory: one document gave DeFi yield tokens a lift while one departure introduced fresh uncertainty about what comes next in Washington.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ENA",
+        "name": "Ethena",
+        "changePct24h": 21.24,
+        "catalyst": "The SEC's new crypto FAQ clarified its stance on token buybacks and profit-sharing mechanisms, boosting sentiment around yield-bearing protocols like Ethena. Momentum from the prior day's Ondo surge appears to have rotated into DeFi yield assets as traders interpreted the guidance as incrementally favorable for synthetic dollar protocols that distribute returns to token holders.",
+        "priceUsd": 0.282457,
+        "priceChange24hUsd": 0.06
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -18.39,
+        "catalyst": "No specific catalyst identified; the decline appears to be technical or driven by low-liquidity selling pressure.",
+        "priceUsd": 0.91473,
+        "priceChange24hUsd": -0.17
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 84155,
+        "changePct24h": -0.74,
+        "marketCapUsd": 1690789457968,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2686.17,
+        "changePct24h": -1.16,
+        "marketCapUsd": 327950055545,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 183789667581,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 773.91,
+        "changePct24h": -0.44,
+        "marketCapUsd": 103059316885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.55,
+        "changePct24h": -0.66,
+        "marketCapUsd": 97464959039,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 75404539089,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 120.48,
+        "changePct24h": 0.75,
+        "marketCapUsd": 70815754711,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3368,
+        "changePct24h": -0.04,
+        "marketCapUsd": 31988611883,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1533.77,
+        "changePct24h": -4.39,
+        "marketCapUsd": 26007989021,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.024,
+        "changePct24h": 0,
+        "marketCapUsd": 23701563556,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 91.94,
+        "changePct24h": -2.31,
+        "marketCapUsd": 20453273176,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0978,
+        "changePct24h": 0.73,
+        "marketCapUsd": 15270512646,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.16,
+        "changePct24h": 1.65,
+        "marketCapUsd": 10597590885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 553.11,
+        "changePct24h": -2.51,
+        "marketCapUsd": 10401057545,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 83.96,
+        "changePct24h": -0.75,
+        "marketCapUsd": 9979860129,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was regulatory signal, not price momentum. The SEC published a crypto FAQ clarifying how it thinks about token buybacks and profit-sharing arrangements — the kind of guidance that directly affects whether a token might be classified as a security. Ethena, which issues a synthetic dollar and distributes yield to holders, was the clearest winner: its token jumped 21.24% as traders interpreted the FAQ as incrementally favorable for that model. The move follows a similar surge in Ondo the prior day, suggesting a rotation is underway into DeFi yield assets as regulatory visibility improves.\n\nThe broader market told a quieter story. Bitcoin slipped 0.74% to $84,155 and Ethereum fell 1.16% to $2,686 — moves small enough to be noise, but consistent with a market that is digesting two competing regulatory signals at once. On the same day the SEC offered incremental clarity via the FAQ, the agency also confirmed that Hester Peirce — its most reliably pro-crypto voice — is departing next week. Peirce has been a consistent dissenter on enforcement actions and a public advocate for clearer rulemaking; her exit leaves the commission's composition and direction less predictable heading into the next policy cycle.\n\nZcash was the notable decliner among the top 15, falling 4.39% to $1,533.77, though no specific catalyst was identified for the move. Chainlink gained 1.65% and Solana added 0.75%, the latter supported by a technical milestone on its settlement upgrade.",
+  "worthKnowing": [
+    "Hester Peirce, the SEC commissioner most consistently supportive of crypto-friendly rulemaking, is departing next week — her exit leaves the agency's direction on digital assets less certain.",
+    "Circle and Tether coordinated to freeze wallets linked to a major Bitget hack, but most of the stolen funds had already moved beyond reach before the freeze took effect.",
+    "Solana's 150-millisecond settlement upgrade — designed to reduce transaction latency — reached its second public test network, a step toward eventual mainnet deployment.",
+    "Aave V4 on Base now accepts Coinbase-issued tokenized stocks as collateral for USDC loans, a concrete example of traditional finance assets being used inside DeFi lending markets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2895212552438,
+    "btcDominancePct": 58.3037,
+    "ethDominancePct": 11.3118,
+    "fearGreedIndex": 74
+  },
+  "tags": [
+    "sec-crypto-faq",
+    "ethena",
+    "hester-peirce",
+    "bitget-hack",
+    "solana-settlement-upgrade",
+    "aave-tokenized-stocks"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
