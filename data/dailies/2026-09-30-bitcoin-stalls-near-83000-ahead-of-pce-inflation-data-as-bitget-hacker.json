@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-09-30T12:28:16.363Z",
+  "publishedAt": "2026-09-30",
+  "slug": "2026-09-30-bitcoin-stalls-near-83000-ahead-of-pce-inflation-data-as-bitget-hacker",
+  "headline": "Bitcoin stalls near $83,000 ahead of PCE inflation data as Bitget hackers route $4M into Zcash",
+  "summary": "Markets held their breath Wednesday as traders waited on U.S. PCE inflation figures — the Fed's preferred inflation gauge — keeping Bitcoin pinned just below $84,000. The bigger story was off-chain: hackers from the Bitget breach moved $4 million into Zcash's privacy pool, drawing fresh regulatory heat onto privacy coins. Meanwhile, Robinhood's announcement of U.S. crypto perpetuals trading rattled existing platforms, and a House committee pressed Crypto.com, Hyperliquid, and PredictIt on identity checks and suspicious trades.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": 24.9,
+        "catalyst": "Quant surged nearly 25% with no single confirmed catalyst; the move appears technical, with the token catching a bid as traders rotated into lower-liquidity mid-cap assets.",
+        "priceUsd": 318.76,
+        "priceChange24hUsd": 79.36
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HBAR",
+        "name": "Hedera",
+        "changePct24h": -8.24,
+        "catalyst": "Hedera fell 8.2% amid regulatory overhang after House Oversight Committee Chairman Comer sent letters to Crypto.com, Hyperliquid, and PredictIt demanding answers on KYC practices and suspicious trading activity — pressure that spread across mid-cap altcoins with exchange or platform exposure.",
+        "priceUsd": 0.108816,
+        "priceChange24hUsd": -0.01
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83790,
+        "changePct24h": -0.61,
+        "marketCapUsd": 1683363361634,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2694.4,
+        "changePct24h": -1.31,
+        "marketCapUsd": 328937302001,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183793805712,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 768.52,
+        "changePct24h": 0.37,
+        "marketCapUsd": 102333081855,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.51,
+        "changePct24h": -0.31,
+        "marketCapUsd": 95396134271,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.02,
+        "marketCapUsd": 74332304659,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 119.5,
+        "changePct24h": -0.47,
+        "marketCapUsd": 70259575505,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3397,
+        "changePct24h": 1.21,
+        "marketCapUsd": 32260091658,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1429.04,
+        "changePct24h": -1.16,
+        "marketCapUsd": 24238456280,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 2.73,
+        "marketCapUsd": 23957551712,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 86.4,
+        "changePct24h": -2.41,
+        "marketCapUsd": 19219265160,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0958,
+        "changePct24h": 0.1,
+        "marketCapUsd": 14964991666,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.42,
+        "changePct24h": -5.88,
+        "marketCapUsd": 10782398039,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 540.97,
+        "changePct24h": -0.6,
+        "marketCapUsd": 10175769399,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.04,
+        "marketCapUsd": 10020351742,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant force today was anticipation, not action. Bitcoin has been trading in a tight band below $84,000 for several sessions, and Wednesday was no different — the market is waiting on U.S. PCE inflation data (the Federal Reserve's preferred measure of price growth) before committing to a direction. On-chain analytics firm CryptoQuant flagged that traders' unrealized profits have reached a 21-month high, a level that has historically preceded pullbacks as holders take money off the table.\n\nThe session's sharpest story was regulatory, not macro. Hackers from the Bitget breach moved $4 million into Zcash's shielded pool — a privacy feature that makes transactions extremely difficult to trace. Zcash fell 1.2% on the news, a muted reaction given the attention the story drew; regulators have long viewed privacy coins with suspicion, and this incident is likely to intensify that scrutiny. Chainlink dropped 5.9% with no clear catalyst, making it the notable underperformer among large-cap assets.\n\nHyperliquid slid 2.4% after House Oversight Committee Chairman James Comer sent formal letters to Crypto.com, Hyperliquid, and PredictIt demanding documentation of their identity verification practices and explanations for flagged trading activity. The letters don't constitute enforcement, but they signal that congressional attention on crypto platforms is sharpening — and mid-cap tokens with platform exposure, including Hedera, felt the pressure most acutely.",
+  "worthKnowing": [
+    "Robinhood announced it will launch crypto perpetuals trading for U.S. retail users alongside weekend stock trading — a direct move into territory dominated by platforms like dYdX and Hyperliquid, sending Lighter down 17% on the news.",
+    "Gemini upgraded its Zcash node software ahead of a network upgrade that will cut block confirmation times from roughly 75 seconds to 25 seconds, signaling continued institutional engagement with the privacy coin despite its regulatory headwinds.",
+    "CryptoQuant data shows Bitcoin traders' unrealized profits at a 21-month high — a level that has preceded corrections in past cycles, though it is not a reliable timing signal on its own."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2881047227991,
+    "btcDominancePct": 58.263,
+    "ethDominancePct": 11.3822,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "pce-inflation",
+    "bitget-hack",
+    "zcash-privacy",
+    "robinhood-perpetuals",
+    "comer-kyc-letters",
+    "hyperliquid"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
