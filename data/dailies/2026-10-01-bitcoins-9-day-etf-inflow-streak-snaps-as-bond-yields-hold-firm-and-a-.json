@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-01T13:02:50.277Z",
+  "publishedAt": "2026-10-01",
+  "slug": "2026-10-01-bitcoins-9-day-etf-inflow-streak-snaps-as-bond-yields-hold-firm-and-a-",
+  "headline": "Bitcoin's 9-day ETF inflow streak snaps as bond yields hold firm and a MetaMask security incident rattles Ethereum staking",
+  "summary": "A nine-day, $3 billion run of Bitcoin ETF inflows ended on October 1 with $149 million in net outflows, and a brief rally to $85,500 — sparked by a softer PCE inflation print — faded as bond yields refused to budge. Bitcoin settled down 1.15% at $83,889, dragging most of the top 20 lower. A MetaMask infrastructure incident forced validator exits from Lido, adding a separate layer of concern around Ethereum staking infrastructure.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 15.79,
+        "catalyst": "No clear catalyst identified — move appears technical on thin volume.",
+        "priceUsd": 1.4,
+        "priceChange24hUsd": 0.22
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": -8.95,
+        "catalyst": "No specific catalyst identified; QNT sold off sharply in a broad risk-off session, likely amplified by its relatively thin liquidity.",
+        "priceUsd": 278.07,
+        "priceChange24hUsd": -24.9
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83889,
+        "changePct24h": -1.15,
+        "marketCapUsd": 1685625357036,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2704.29,
+        "changePct24h": -0.91,
+        "marketCapUsd": 330231081639,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183821186889,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 769.74,
+        "changePct24h": -0.62,
+        "marketCapUsd": 102505329795,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.49,
+        "changePct24h": -2.82,
+        "marketCapUsd": 94060281148,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 74102433025,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 117.68,
+        "changePct24h": -3.07,
+        "marketCapUsd": 69192980766,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3326,
+        "changePct24h": -2.21,
+        "marketCapUsd": 31587657624,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.027,
+        "changePct24h": -0.27,
+        "marketCapUsd": 23966256451,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1407.33,
+        "changePct24h": -3.33,
+        "marketCapUsd": 23866558857,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 90.04,
+        "changePct24h": 3.29,
+        "marketCapUsd": 20032592680,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0948,
+        "changePct24h": -2.44,
+        "marketCapUsd": 14802970565,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.42,
+        "changePct24h": -1.43,
+        "marketCapUsd": 10790936285,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 541.53,
+        "changePct24h": -0.35,
+        "marketCapUsd": 10189353263,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 83.8,
+        "changePct24h": -1.15,
+        "marketCapUsd": 9962869338,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces collided on October 1 and neither resolved cleanly. First, a softer-than-expected PCE inflation reading — the Fed's preferred gauge — briefly pushed Bitcoin to $85,500 as traders priced in a slightly friendlier rate environment. That pop lasted hours. Bond yields, which have a direct bearing on how attractive risk assets look relative to safer alternatives, refused to fall in response, and Bitcoin gave back the gains to close at $83,889, down 1.15%.\n\nThe second force was the end of a nine-day Bitcoin ETF inflow streak. Over that stretch, institutional funds had absorbed roughly $3 billion in net new capital — a sustained run that had provided a floor under prices. On October 1, that flipped: $149 million exited the funds in a single session. One day of outflows does not erase the trend, and Citigroup chose the same day to raise its 12-month Bitcoin price target to $113,000, citing renewed institutional demand as the structural driver. But the short-term signal was clear: the buying pressure that had supported prices through September paused at the start of Q4.\n\nSolana fell 3.07% and Zcash dropped 3.33%, both underperforming Bitcoin on a day when risk appetite was already thin. Hyperliquid was the notable exception in the top 15, rising 3.29% with no obvious macro catalyst — likely a product of its own trading activity on the Hyperliquid perpetuals platform.",
+  "worthKnowing": [
+    "A MetaMask infrastructure security incident forced validator exits from Lido Finance, Ethereum's largest liquid staking protocol — no user funds were lost, but affected validators forfeited staking rewards during the exit window.",
+    "Citigroup raised its 12-month Bitcoin price target to $113,000, citing the resumption of institutional ETF inflows as the primary demand driver — the upgrade landed on the same day those inflows turned negative.",
+    "Lloyds Bank and Visa completed a live cross-border settlement of $750,000 using USDC, one of the first public demonstrations of a major traditional bank using stablecoin rails for real transactions."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2883809961146,
+    "btcDominancePct": 58.3606,
+    "ethDominancePct": 11.4362,
+    "fearGreedIndex": 74
+  },
+  "tags": [
+    "bitcoin-etf-flows",
+    "metamask-lido-incident",
+    "citigroup-price-target",
+    "bond-yields",
+    "usdc-settlement",
+    "ethereum-staking"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
