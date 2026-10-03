@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-03T11:37:21.688Z",
+  "publishedAt": "2026-10-03",
+  "slug": "2026-10-03-bitcoin-slides-2-as-weak-us-jobs-data-fails-to-sustain-a-rally-blast-l",
+  "headline": "Bitcoin slides 2% as weak U.S. jobs data fails to sustain a rally, Blast L2 shuts down",
+  "summary": "September's jobs report came in far below expectations — just 29,000 new positions added, with unemployment ticking up to 4.2% — and crypto's initial reaction was a brief rally on Fed rate-cut hopes that quickly reversed. Bitcoin ended the session down 2.1% at $84,625, dragging most of the top 20 lower. The bigger story may be structural: Blast, once a $2 billion Ethereum Layer-2 network backed by Paradigm, announced it is shutting down after assets collapsed 98%, raising hard questions about how many L2 projects can survive long-term.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": 8.43,
+        "catalyst": "Reports of BNY Mellon in infrastructure partnership talks with Kraken parent Payward renewed institutional interest in interoperability-focused assets. Quant's Overledger protocol, which connects different blockchains, positioned it as a direct beneficiary of traditional finance moving closer to crypto infrastructure. Weak jobs data also pushed traders toward higher-risk altcoins with strong institutional narratives.",
+        "priceUsd": 258.96,
+        "priceChange24hUsd": 21.84
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -8.81,
+        "catalyst": "No specific catalyst identified. The decline appears to reflect broad risk-off pressure following the disappointing U.S. jobs report and a pullback from prior-day highs across the crypto market.",
+        "priceUsd": 0.01063626,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 84625,
+        "changePct24h": -2.11,
+        "marketCapUsd": 1700401891977,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2682.24,
+        "changePct24h": -2.38,
+        "marketCapUsd": 327523944699,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184070828613,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 768.89,
+        "changePct24h": -1.11,
+        "marketCapUsd": 102389669028,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.48,
+        "changePct24h": -3.61,
+        "marketCapUsd": 93561822256,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 74105051499,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 119.29,
+        "changePct24h": -2.3,
+        "marketCapUsd": 70167467838,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3371,
+        "changePct24h": 0.67,
+        "marketCapUsd": 32028386888,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.045,
+        "changePct24h": 2.18,
+        "marketCapUsd": 24476929854,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1314.4,
+        "changePct24h": -5.41,
+        "marketCapUsd": 22298653061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 87.89,
+        "changePct24h": -3.54,
+        "marketCapUsd": 19552589364,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0927,
+        "changePct24h": -4.26,
+        "marketCapUsd": 14480552080,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 13.92,
+        "changePct24h": -3.57,
+        "marketCapUsd": 10410065548,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 545.82,
+        "changePct24h": 0.21,
+        "marketCapUsd": 10274291133,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 84.17,
+        "changePct24h": -2.28,
+        "marketCapUsd": 10007203523,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's main driver was a September jobs report that badly missed expectations: the U.S. economy added just 29,000 jobs last month, well below forecasts, while unemployment rose to 4.2%. Crypto's first reaction was a brief rally — weak labor data historically raises the odds of Federal Reserve rate cuts, which tends to lift risk assets including crypto. Bitcoin touched the $85,000–$86,000 range intraday before sellers stepped back in and the rally faded. By the close, BTC was down 2.1% and most of the top 15 followed.\n\nThe assets that fell hardest were those with less institutional anchoring. Zcash dropped 5.4%, Dogecoin fell 4.3%, and XRP slid 3.6% — none with a specific catalyst beyond the broad risk-off tone. Quant was the notable exception: reports that BNY Mellon is in infrastructure partnership talks with Kraken parent Payward sent traders toward assets tied to traditional finance-crypto integration, and Quant's Overledger protocol — which connects different blockchain networks — was a direct beneficiary. QNT gained 8.4% on the session.\n\nThe Fear & Greed index sits at 67, still in greed territory, suggesting the market has not fully repriced the macro uncertainty. BTC dominance at 59.2% is holding firm, meaning the day's losses were spread broadly rather than concentrated in a flight to Bitcoin.",
+  "worthKnowing": [
+    "Blast, once a $2 billion Ethereum Layer-2 network backed by Paradigm, is shutting down after its total assets collapsed 98%, marking one of the most significant L2 failures to date and prompting fresh scrutiny of whether the broader L2 ecosystem can sustain its current scale.",
+    "A U.S. banking industry group filed suit against a federal regulator over the granting of crypto trust charters, adding legal uncertainty to the custody landscape at a moment when traditional finance is moving closer to crypto infrastructure.",
+    "Circle pushed back against a European Union rule under MiCA (the EU's crypto regulatory framework) that would require stablecoin issuers to hold a portion of reserves in bank deposits — a requirement Circle argues threatens USDC's European operations."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2868326927277,
+    "btcDominancePct": 59.1773,
+    "ethDominancePct": 11.3966,
+    "fearGreedIndex": 67
+  },
+  "tags": [
+    "jobs-report",
+    "blast-l2-shutdown",
+    "bny-mellon-kraken",
+    "quant-overledger",
+    "mica-stablecoin",
+    "crypto-trust-charters"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
