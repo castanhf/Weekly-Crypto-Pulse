@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-04T12:18:14.624Z",
+  "publishedAt": "2026-10-04",
+  "slug": "2026-10-04-chainalysis-ties-387m-bitget-hack-to-north-korea-as-crypto-drifts-high",
+  "headline": "Chainalysis ties $387M Bitget hack to North Korea as crypto drifts higher on light volume",
+  "summary": "A broad but shallow rally lifted most major assets Sunday — Bitcoin gained 0.76% to $85,311 and Ethereum added 0.61% to $2,700 — but the day's real story was Chainalysis using AI to trace a $387 million Bitget exchange hack to North Korean state actors. Pump.fun surged 10.45% on renewed meme coin enthusiasm after Trump announced a third meme coin holder dinner. The rest of the market moved quietly, with no major macro catalyst in play.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "PUMP",
+        "name": "Pump.fun",
+        "changePct24h": 10.45,
+        "catalyst": "Trump announced a third meme coin holder dinner event, reigniting retail speculative interest in politically themed tokens and driving inflows into Pump.fun, the Solana-based meme coin launchpad that stands to benefit directly from increased platform activity.",
+        "priceUsd": 0.00625566,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -18.51,
+        "catalyst": "No clear catalyst identified — the move appears to be idiosyncratic selling pressure on a lower-liquidity asset, with no major protocol news or broader sector event to explain the decline.",
+        "priceUsd": 1.18,
+        "priceChange24hUsd": -0.22
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 85311,
+        "changePct24h": 0.76,
+        "marketCapUsd": 1713872772754,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2700.36,
+        "changePct24h": 0.61,
+        "marketCapUsd": 329648833363,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 184061447708,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 788.53,
+        "changePct24h": 2.49,
+        "marketCapUsd": 104989417010,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.5,
+        "changePct24h": 0.83,
+        "marketCapUsd": 94550199639,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 74116949460,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 121.22,
+        "changePct24h": 1.55,
+        "marketCapUsd": 71278187437,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3363,
+        "changePct24h": -0.04,
+        "marketCapUsd": 31942572211,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.069,
+        "changePct24h": 2.3,
+        "marketCapUsd": 25083941967,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1334.11,
+        "changePct24h": 1.63,
+        "marketCapUsd": 22623755854,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 90.2,
+        "changePct24h": 2.56,
+        "marketCapUsd": 20060799458,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0935,
+        "changePct24h": 0.71,
+        "marketCapUsd": 14595871097,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.1,
+        "changePct24h": 1.3,
+        "marketCapUsd": 10544546218,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 549.42,
+        "changePct24h": 0.44,
+        "marketCapUsd": 10335582439,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 84.84,
+        "changePct24h": 0.67,
+        "marketCapUsd": 10080115357,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Sunday's session was a quiet grind higher with no single macro catalyst driving the tape. Bitcoin added 0.76% and Ethereum 0.61% — both moves well within normal weekend noise. BNB and Hyperliquid led the top-15 with gains around 2.5%, though neither had a specific news driver; the moves look like low-volume drift rather than conviction buying.\n\nThe day's most meaningful price action came from Pump.fun, which jumped 10.45% after Donald Trump announced a third meme coin holder dinner. The event — which rewards holders of Trump-branded meme tokens with access to exclusive dinners — has become a recurring retail catalyst. Each announcement pulls speculative capital into the meme coin ecosystem, and Pump.fun, as the dominant Solana-based launchpad for new meme tokens, tends to catch that flow directly. Solana itself gained 1.55%, consistent with elevated activity on its network.\n\nThe bigger story of the day was off-chain: Chainalysis published findings attributing the $387 million Bitget hack to North Korean state-sponsored actors, using AI-assisted tracing tools to follow the funds across the blockchain. North Korea's Lazarus Group has been linked to billions in crypto theft over the past several years, and this case adds to that pattern. The attribution does not recover the funds, but it reinforces pressure on exchanges to tighten security and on regulators to treat state-level crypto theft as a geopolitical issue, not just a financial crime.\n\nThe Fear & Greed index sits at 65 — in greed territory, but not at extremes. The market is not panicking and not euphoric.",
+  "worthKnowing": [
+    "Chainalysis used AI blockchain tracing tools to attribute the $387M Bitget exchange hack to North Korean state-sponsored actors — the latest in a long string of exchange thefts linked to Lazarus Group.",
+    "BlackRock outlined how tokenizing real-world assets (converting ownership of things like bonds or real estate into blockchain-based tokens) could reshape both retail and institutional investment portfolios.",
+    "El Salvador received a $138M IMF disbursement after the fund granted waivers related to the country's Bitcoin legal tender law, a sign that the IMF is finding ways to work around rather than block crypto-adopting nations.",
+    "Russia's Finance Ministry made its first-ever wage payments using the digital ruble, a state-issued digital currency, marking a concrete step in Russia's CBDC rollout."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2890439051347,
+    "btcDominancePct": 59.1701,
+    "ethDominancePct": 11.3838,
+    "fearGreedIndex": 65
+  },
+  "tags": [
+    "north-korea-hack",
+    "bitget-exploit",
+    "chainalysis",
+    "pump-fun",
+    "trump-meme-coin",
+    "blackrock-tokenization",
+    "el-salvador-imf",
+    "digital-ruble-cbdc"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
