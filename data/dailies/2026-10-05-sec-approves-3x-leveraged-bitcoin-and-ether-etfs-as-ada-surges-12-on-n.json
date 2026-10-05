@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-05T14:22:01.501Z",
+  "publishedAt": "2026-10-05",
+  "slug": "2026-10-05-sec-approves-3x-leveraged-bitcoin-and-ether-etfs-as-ada-surges-12-on-n",
+  "headline": "SEC approves 3x leveraged Bitcoin and Ether ETFs as ADA surges 12% on no clear catalyst",
+  "summary": "The SEC greenlit triple-leveraged ETF products for Bitcoin and Ether — the most aggressive regulated crypto exposure products approved to date — giving the market a structural headline even on a day when price moves were mostly contained. Bitcoin held above $86,000 as traders priced out an October Fed rate hike, and Cardano's ADA stole the show with a 12% jump that analysts attributed to technical rotation rather than any specific news. The rest of the top 15 moved within 3.5% in either direction.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "changePct24h": 12,
+        "catalyst": "ADA led all gains with a 12% surge in an otherwise range-bound session. No single fundamental catalyst was identified — the move appears technically driven or reflects rotation into large-cap laggards that had underperformed recent rallies.",
+        "priceUsd": 0.2739,
+        "priceChange24hUsd": 0.03
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -3.52,
+        "catalyst": "Rain was the session's largest decliner, falling 3.52% with no specific news catalyst identified.",
+        "priceUsd": 0.01179544,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 86429,
+        "changePct24h": 1.43,
+        "marketCapUsd": 1735452371944,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2720.88,
+        "changePct24h": 0.93,
+        "marketCapUsd": 332057581998,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184053005673,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 792.36,
+        "changePct24h": 0.58,
+        "marketCapUsd": 105479546176,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.52,
+        "changePct24h": 1.11,
+        "marketCapUsd": 95581781309,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 73960177568,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 120.85,
+        "changePct24h": -0.64,
+        "marketCapUsd": 71062338509,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3363,
+        "changePct24h": 0.24,
+        "marketCapUsd": 31947285564,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.065,
+        "changePct24h": -0.4,
+        "marketCapUsd": 25020251476,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1344.67,
+        "changePct24h": 1.28,
+        "marketCapUsd": 22800555427,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 93.1,
+        "changePct24h": 3.42,
+        "marketCapUsd": 20686051529,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0961,
+        "changePct24h": 2.8,
+        "marketCapUsd": 15005164977,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 14.07,
+        "changePct24h": -0.29,
+        "marketCapUsd": 10515137659,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 548.59,
+        "changePct24h": 0.07,
+        "marketCapUsd": 10319844402,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ADA",
+        "name": "Cardano",
+        "priceUsd": 0.2739,
+        "changePct24h": 12,
+        "marketCapUsd": 10277156569,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces shaped today's session, and they pulled in different directions. On the macro side, Bitcoin's resilience above $86,000 came as traders reduced the probability of a Fed rate hike in October — even with the US dollar climbing to an 18-month high, a level that typically weighs on risk assets. The market read the Fed repricing as a net positive: less tightening risk meant less pressure on crypto valuations, and Bitcoin responded with a 1.43% gain.\n\nThe structural headline was the SEC's approval of triple-leveraged Bitcoin and Ether ETFs — products that let traders take on three times the daily price movement of each asset through a regulated fund wrapper. These are the most aggressive crypto ETF products the SEC has approved, and their arrival signals a meaningful expansion of what regulated markets will accommodate. Whether retail or institutional flows follow is a separate question, but the approval itself is a landmark.\n\nCardano's 12% jump stands apart from the rest of the session. No news event explains it — the move appears to reflect technical buying or rotation into a large-cap asset that had lagged the broader market recovery. Hyperliquid (+3.42%) and Dogecoin (+2.80%) also outperformed without obvious catalysts, suggesting some appetite for higher-beta names. Solana slipped 0.64% and Chainlink edged down 0.29%, both within normal noise range. The Fear & Greed index sits at 70 — in greed territory — consistent with a market that is constructive but not euphoric.",
+  "worthKnowing": [
+    "Metaplanet, a Japanese investment firm, sold 10,000 BTC and repurchased 11,000 BTC in Q3 to demonstrate liquidity, ending the quarter with a net addition of 1,000 Bitcoin and total holdings of 44,000 BTC.",
+    "OKX and Intercontinental Exchange — the parent company of the New York Stock Exchange — announced a joint venture to launch a regulated venue for trading tokenized US stocks, a significant step toward merging traditional equity markets with crypto infrastructure.",
+    "Stripe announced plans to expand stablecoin-backed payment cards to more than 100 countries by year-end, a broad push toward using stablecoins as everyday consumer payment rails."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2948398766603,
+    "btcDominancePct": 58.7893,
+    "ethDominancePct": 11.2546,
+    "fearGreedIndex": 70
+  },
+  "tags": [
+    "sec-etf-approval",
+    "leveraged-etf",
+    "cardano-ada",
+    "metaplanet",
+    "okx-ice-tokenization",
+    "stripe-stablecoin",
+    "fed-rate-expectations"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
