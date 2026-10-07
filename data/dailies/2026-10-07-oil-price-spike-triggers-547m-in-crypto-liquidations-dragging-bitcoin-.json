@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-07T13:15:31.108Z",
+  "publishedAt": "2026-10-07",
+  "slug": "2026-10-07-oil-price-spike-triggers-547m-in-crypto-liquidations-dragging-bitcoin-",
+  "headline": "Oil price spike triggers $547M in crypto liquidations, dragging Bitcoin to $83,440 and Ethereum down 5%",
+  "summary": "A sharp rally in oil prices rattled risk assets broadly, setting off a cascade of forced selling in crypto markets — over $547 million in leveraged long positions were wiped out in 24 hours. Bitcoin fell 3.2% to $83,440, while Ethereum dropped 5.4% to $2,570, compounded by news that Bitmine is halting its ETH treasury purchases, removing a consistent institutional buyer. DeFi tokens bore the brunt of the selloff, with Uniswap falling more than 10%.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 2.46,
+        "catalyst": "MemeCore bucked the broad selloff with a 2.46% gain, one of the few assets to post positive returns on a day dominated by liquidation-driven losses.",
+        "priceUsd": 1.028,
+        "priceChange24hUsd": 0.03
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "UNI",
+        "name": "Uniswap",
+        "changePct24h": -10.72,
+        "catalyst": "Uniswap fell sharply amid a broad crypto selloff triggered by an oil-price-driven liquidation cascade that wiped out over $547 million in leveraged positions. As a DeFi-native token, UNI was disproportionately hit relative to large-caps, with no specific positive catalyst to offset the risk-off pressure.",
+        "priceUsd": 7.95,
+        "priceChange24hUsd": -0.85
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83440,
+        "changePct24h": -3.23,
+        "marketCapUsd": 1676710094622,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2570.6,
+        "changePct24h": -5.38,
+        "marketCapUsd": 313903796396,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184047976420,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 767.09,
+        "changePct24h": -2.39,
+        "marketCapUsd": 102144248789,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.44,
+        "changePct24h": -4.47,
+        "marketCapUsd": 91125225596,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 74061487282,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 116.38,
+        "changePct24h": -3.38,
+        "marketCapUsd": 68557954109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.334,
+        "changePct24h": -0.41,
+        "marketCapUsd": 31724838596,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.038,
+        "changePct24h": 0.36,
+        "marketCapUsd": 24449269325,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1318.32,
+        "changePct24h": -3.8,
+        "marketCapUsd": 22367621037,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 89.05,
+        "changePct24h": -4.59,
+        "marketCapUsd": 19808187114,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0887,
+        "changePct24h": -7.21,
+        "marketCapUsd": 13853835567,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 547.29,
+        "changePct24h": -2.13,
+        "marketCapUsd": 10297014192,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.999,
+        "changePct24h": -0.08,
+        "marketCapUsd": 10215791183,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 13.36,
+        "changePct24h": -4.69,
+        "marketCapUsd": 9997651994,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The trigger was oil. A sharp rally in crude prices spooked risk markets broadly, and crypto — where many traders hold leveraged long positions — felt the impact almost immediately. As prices dipped, those positions were automatically liquidated, which pushed prices lower still, triggering more liquidations. The result: more than $547 million in forced selling in 24 hours, one of the larger single-day liquidation events in recent months.\n\nBitcoin fell 3.2% to $83,440, briefly dipping below $84,000 during the worst of the selling. Ethereum's decline was steeper — down 5.4% to $2,570 — partly because of a separate piece of news: Bitmine, a company that had been steadily accumulating ETH as a treasury asset, confirmed it is halting those purchases. Tom Lee, who is associated with the strategy, confirmed the decision publicly. Losing a consistent institutional buyer on a day when the broader market is already under pressure amplified Ethereum's move.\n\nDeFi tokens were hit hardest. Uniswap fell more than 10%, Dogecoin dropped 7.2%, and Chainlink and Hyperliquid each lost around 4.6–4.7%. These assets tend to carry more risk in the eyes of traders, so they get sold first when sentiment turns. TRON was a notable exception, falling only 0.4% — its relatively stable price likely reflects its use in stablecoin transfers, which don't depend on market sentiment the way speculative assets do.",
+  "worthKnowing": [
+    "Robinhood added $25 million in Bitcoin to its corporate balance sheet, joining a growing list of public companies treating BTC as a treasury reserve asset.",
+    "Abstract, the Ethereum Layer 2 network backed by Pudgy Penguins' parent company Igloo, announced it is shutting down after losing tens of millions of dollars — a reminder that not all L2 projects survive the build-out phase.",
+    "Crypto trading firm GSR launched a new vault product representing a $100 million commitment to onchain credit markets, a sign that institutional appetite for DeFi lending infrastructure is growing even as token prices fall."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2847653474159,
+    "btcDominancePct": 58.7928,
+    "ethDominancePct": 10.9972,
+    "fearGreedIndex": 71
+  },
+  "tags": [
+    "liquidation-cascade",
+    "oil-price-shock",
+    "uniswap",
+    "bitmine-eth-treasury",
+    "robinhood-bitcoin",
+    "abstract-l2-shutdown"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
