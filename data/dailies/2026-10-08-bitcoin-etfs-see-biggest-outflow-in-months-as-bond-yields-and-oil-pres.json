@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-08T13:21:51.701Z",
+  "publishedAt": "2026-10-08",
+  "slug": "2026-10-08-bitcoin-etfs-see-biggest-outflow-in-months-as-bond-yields-and-oil-pres",
+  "headline": "Bitcoin ETFs see biggest outflow in months as bond yields and oil pressure crypto lower",
+  "summary": "A macro risk-off session hit crypto broadly on October 8, with rising bond yields and oil prices pulling capital out of risk assets. Bitcoin ETFs recorded their largest single-day outflows in months, dragging BTC down 1.5% to $82,271 and pulling most of the top 20 lower with it. The bigger stories, though, are structural: Samsung is rolling out USDC on Solana to 82 million Galaxy users, Securitize is bringing Apple, Nvidia, and Tesla shares onto the Solana blockchain, and Ethereum's research community is sounding alarms about AI-driven threats to crypto encryption.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 14.08,
+        "catalyst": "Bitway surged 14.08% with no identifiable news catalyst — the move appears to reflect idiosyncratic retail momentum running against a broadly risk-off session.",
+        "priceUsd": 1.38,
+        "priceChange24hUsd": 0.19
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "PUMP",
+        "name": "Pump.fun",
+        "changePct24h": -9.55,
+        "catalyst": "Pump.fun fell 9.55%, pressured by the broader market selloff driven by rising bond yields and oil prices, compounded by lingering risk-off sentiment following the prior session's $547M liquidation event. No token-specific news catalyst was identified.",
+        "priceUsd": 0.00575719,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 82271,
+        "changePct24h": -1.49,
+        "marketCapUsd": 1653253650919,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2528.62,
+        "changePct24h": -1.51,
+        "marketCapUsd": 308849184583,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9994,
+        "changePct24h": -0.04,
+        "marketCapUsd": 183962487196,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 758.91,
+        "changePct24h": -1.09,
+        "marketCapUsd": 101065780876,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.39,
+        "changePct24h": -3.45,
+        "marketCapUsd": 87967181891,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 73539334496,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 111.98,
+        "changePct24h": -3.87,
+        "marketCapUsd": 65958125571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3345,
+        "changePct24h": 0.12,
+        "marketCapUsd": 31773543632,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.018,
+        "changePct24h": -1.92,
+        "marketCapUsd": 24053593959,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1206.02,
+        "changePct24h": -8.63,
+        "marketCapUsd": 20469622682,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 85.14,
+        "changePct24h": -4.46,
+        "marketCapUsd": 18920717978,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0868,
+        "changePct24h": -2.43,
+        "marketCapUsd": 13558811648,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 549.13,
+        "changePct24h": 0.07,
+        "marketCapUsd": 10332791242,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.999,
+        "changePct24h": 0,
+        "marketCapUsd": 10198556304,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 81.75,
+        "changePct24h": -1.58,
+        "marketCapUsd": 9711491089,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session's main driver was a macro risk-off shift: rising US Treasury yields and stronger oil prices pulled capital away from risk assets broadly, and crypto felt it. Bitcoin ETFs recorded their largest single-day outflows in months — institutional fund redemptions amplified the selling pressure beyond what spot market activity alone would explain. BTC fell 1.49% to $82,271 and ETH dropped 1.51% to $2,528.62, but the sharper moves were in mid-cap assets. Solana slid 3.87% to $111.98 and XRP fell 3.45% to $1.39, both more exposed to risk appetite swings than the large-cap pair. Zcash was the hardest hit in the top 15, dropping 8.63% to $1,206.02, though no specific news catalyst was identified for that move — it appears to reflect thin liquidity amplifying the broader selloff. Hyperliquid fell 4.46%. The prior session's $547M liquidation event left the market in a fragile state heading into today, and the macro backdrop provided no relief. TRON and Monero were the only top-15 non-stablecoin assets to hold flat, each moving less than 0.2%. The Fear & Greed index sits at 64 — still in greed territory, but down from recent highs, consistent with a market that is cautious but not panicking.",
+  "worthKnowing": [
+    "Samsung is rolling out USDC transfers on the Solana network for its 82 million Galaxy smartphone users, one of the largest mainstream on-ramps for both assets announced to date.",
+    "Securitize is tokenizing Apple, Nvidia, and Tesla shares on Solana, with NYSE-linked trading in development — a significant expansion of real-world asset activity on the chain.",
+    "Ethereum researcher Justin Drake warned that AI could break crypto encryption faster than quantum computing; Vitalik Buterin responded by urging against rushed wallet migrations, leaving the community divided on urgency.",
+    "Greece is moving to impose a 10% capital gains tax on crypto holdings, adding to a growing list of European regulatory actions targeting retail crypto participation."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2804209243885,
+    "btcDominancePct": 58.8292,
+    "ethDominancePct": 10.9922,
+    "fearGreedIndex": 64
+  },
+  "tags": [
+    "btc-etf-outflows",
+    "samsung-solana-usdc",
+    "securitize-rwa-solana",
+    "ethereum-encryption-risk",
+    "greece-crypto-tax",
+    "bond-yields-macro"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
