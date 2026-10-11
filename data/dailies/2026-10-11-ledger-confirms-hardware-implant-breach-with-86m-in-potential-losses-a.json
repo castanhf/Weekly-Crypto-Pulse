@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-11T12:40:14.623Z",
+  "publishedAt": "2026-10-11",
+  "slug": "2026-10-11-ledger-confirms-hardware-implant-breach-with-86m-in-potential-losses-a",
+  "headline": "Ledger confirms hardware implant breach with $86M in potential losses as ETF outflows weigh on Ethereum and Solana",
+  "summary": "A hardware-level security breach at Ledger — one of the most widely used crypto wallet makers — dominated the day's news, with confirmed unauthorized implants in devices and potential user losses above $86M. The incident lands as Ethereum ETFs extend their outflow streak to nine consecutive days and Solana funds snap a record 14-week inflow run, suggesting institutional appetite for both assets is cooling. Price action across the top 15 was subdued, with most assets moving less than 1% in either direction.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 4.91,
+        "catalyst": "No clear catalyst identified — move appears technical on light volume.",
+        "priceUsd": 1.67,
+        "priceChange24hUsd": 0.08
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -6.05,
+        "catalyst": "No clear catalyst identified — move appears technical; memecoin-sector sentiment remained soft.",
+        "priceUsd": 0.940728,
+        "priceChange24hUsd": -0.06
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83071,
+        "changePct24h": 0.36,
+        "marketCapUsd": 1669524663608,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2504.28,
+        "changePct24h": 0.4,
+        "marketCapUsd": 305857780656,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184096212444,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 749.27,
+        "changePct24h": 0.25,
+        "marketCapUsd": 99783197841,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.39,
+        "changePct24h": -0.56,
+        "marketCapUsd": 88007445771,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 72962345095,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 109.6,
+        "changePct24h": 0.05,
+        "marketCapUsd": 64563577930,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3304,
+        "changePct24h": -0.14,
+        "marketCapUsd": 31394966311,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.065,
+        "changePct24h": 0,
+        "marketCapUsd": 25304079164,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1235.84,
+        "changePct24h": 0.89,
+        "marketCapUsd": 20984980096,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 85.29,
+        "changePct24h": 1.32,
+        "marketCapUsd": 18974038945,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0853,
+        "changePct24h": -0.47,
+        "marketCapUsd": 13332415157,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10164919162,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 533.6,
+        "changePct24h": 1.27,
+        "marketCapUsd": 10042226080,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 12.92,
+        "changePct24h": -0.1,
+        "marketCapUsd": 9907602576,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Price action was quiet across the board — Bitcoin edged up 0.36% to $83,071, Ethereum gained 0.40% to $2,504, and nothing in the top 15 moved more than 1.32%. The day's real story was in the news, not the charts.\n\nLedger, the company behind the most widely used hardware crypto wallets, confirmed a hardware-level security breach: unauthorized implants were found in devices, with potential user losses estimated above $86M. Hardware wallets are the gold-standard storage method for crypto — physical devices that keep private keys offline and away from internet-connected systems. A confirmed implant at the hardware level is a different category of threat from software exploits, and the industry reaction was swift concern about supply-chain integrity across the sector.\n\nSeparately, ETF flow data told a story of institutional cooling. Ethereum spot ETFs extended their outflow streak to nine consecutive days, while Solana-based funds broke a record 14-week inflow run — both reversals happening simultaneously. Neither asset's price reflected the magnitude of the shift yet, but sustained fund outflows over multiple weeks tend to remove a structural source of buying pressure. The Fear & Greed index sits at 61, in 'Greed' territory, suggesting the broader market hasn't fully processed the Ledger news or the ETF trend reversal.",
+  "worthKnowing": [
+    "The CFTC released new proposed rules formally distinguishing regulated prediction markets — platforms where users bet on real-world outcomes — from gambling, with direct implications for on-chain platforms like Kalshi.",
+    "A French parliamentary committee backed taxes on stablecoin swaps and crypto exits before rejecting the broader budget, leaving European crypto holders facing regulatory uncertainty without a settled legal framework.",
+    "A Bitcoin-native life insurance company backed by Sam Altman closed a $37.5M funding round, running its entire operation on Bitcoin as a reserve and operational asset."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2793291707065,
+    "btcDominancePct": 59.6666,
+    "ethDominancePct": 10.9301,
+    "fearGreedIndex": 61
+  },
+  "tags": [
+    "ledger-breach",
+    "hardware-wallet-security",
+    "eth-etf-outflows",
+    "sol-etf-flows",
+    "cftc-prediction-markets",
+    "bitcoin-reserve"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
