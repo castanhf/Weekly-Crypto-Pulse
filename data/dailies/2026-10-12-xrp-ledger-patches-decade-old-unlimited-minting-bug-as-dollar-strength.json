@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-12T15:10:51.978Z",
+  "publishedAt": "2026-10-12",
+  "slug": "2026-10-12-xrp-ledger-patches-decade-old-unlimited-minting-bug-as-dollar-strength",
+  "headline": "XRP Ledger patches decade-old unlimited-minting bug as dollar strength drags Bitcoin below $83K",
+  "summary": "A critical vulnerability in the XRP Ledger — one that could have allowed an attacker to mint an unlimited supply of XRP — was quietly patched, raising fresh questions about the network's supply integrity. That news landed on a day when a strengthening U.S. dollar was already pressing Bitcoin below $83,000 and keeping most of the top assets in the red. Standard Chartered's move to offer institutional custody for Ripple's RLUSD stablecoin in Dubai offered a counterpoint: traditional finance is still building on XRP Ledger infrastructure even as the network works through a trust-shaking disclosure.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 5.4,
+        "catalyst": "Bitway gained 5.40% during a thin-volume altcoin session on October 12; no specific fundamental catalyst was identified.",
+        "priceUsd": 1.76,
+        "priceChange24hUsd": 0.1
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": -6.35,
+        "catalyst": "Quant fell 6.35% with no specific catalyst identified; the decline likely reflects broader dollar-strength pressure weighing on mid-cap altcoins.",
+        "priceUsd": 228.62,
+        "priceChange24hUsd": -14.51
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 82494,
+        "changePct24h": -0.69,
+        "marketCapUsd": 1657849531926,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2520.74,
+        "changePct24h": 0.63,
+        "marketCapUsd": 307810593617,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.01,
+        "marketCapUsd": 184105787272,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 745.69,
+        "changePct24h": -0.5,
+        "marketCapUsd": 99301720920,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.37,
+        "changePct24h": -1.93,
+        "marketCapUsd": 86618771199,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 72822142492,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 108.59,
+        "changePct24h": -0.95,
+        "marketCapUsd": 63967855217,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3309,
+        "changePct24h": 0.26,
+        "marketCapUsd": 31428182568,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": 0,
+        "marketCapUsd": 23789227512,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1268.6,
+        "changePct24h": 2.9,
+        "marketCapUsd": 21529395603,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 84.19,
+        "changePct24h": -1.72,
+        "marketCapUsd": 18732618710,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0851,
+        "changePct24h": -0.83,
+        "marketCapUsd": 13295931969,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10233354759,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 530.57,
+        "changePct24h": -0.57,
+        "marketCapUsd": 9984248897,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 12.98,
+        "changePct24h": -0.83,
+        "marketCapUsd": 9953339927,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's dominant macro force was a stronger U.S. dollar, which pushed Bitcoin below $83,000 and kept most of the top 15 in the red. When the dollar strengthens, dollar-denominated assets like crypto tend to face headwinds — investors holding other currencies effectively pay more for the same exposure, which dampens demand at the margin. Bitcoin ended the session at $82,494, down 0.69%, while XRP fell 1.93% to $1.37.\n\nXRP's decline came despite — or perhaps partly because of — a significant disclosure: the XRP Ledger had quietly patched a decade-old bug that, if exploited, could have allowed an attacker to mint an unlimited quantity of XRP. The patch was applied without incident, but the revelation that such a vulnerability existed for years is the kind of news that prompts holders to reassess their confidence in the network's supply guarantees. XRP's supply cap is a core part of its value proposition; a bug that threatened it, even one now fixed, is not a minor footnote.\n\nEthereum was the one notable exception in the top 15, gaining 0.63% to $2,520.74. No single catalyst explained the move — it appears to reflect mild rotation away from Bitcoin on a day when BTC faced specific dollar-strength pressure. Zcash also bucked the trend, rising 2.90%, though no clear fundamental driver was identified for that move. The Fear & Greed index sat at 69 — still in \"Greed\" territory — suggesting the broader market mood has not turned negative despite the day's red-leaning price action.",
+  "worthKnowing": [
+    "Ledger updated the public on the CryptoBilis hardware-implant breach: $93 million in affected funds has been traced and $10 million frozen, as the company works to limit reputational fallout from the supply-chain attack.",
+    "Standard Chartered launched institutional custody for Ripple's RLUSD stablecoin in Dubai and plans to integrate it as collateral with trading venue LMAX — a concrete step in traditional finance building on XRP Ledger infrastructure.",
+    "An international financial watchdog called for coordinated cross-border oversight and formal crisis planning for a potential stablecoin market failure, adding regulatory pressure to the sector at a moment when stablecoin legislation is advancing in multiple jurisdictions."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2792442219201,
+    "btcDominancePct": 59.0279,
+    "ethDominancePct": 10.9481,
+    "fearGreedIndex": 69
+  },
+  "tags": [
+    "xrp-ledger-vulnerability",
+    "dollar-strength",
+    "standard-chartered-rlusd",
+    "ledger-cryptobilis-breach",
+    "stablecoin-regulation",
+    "btc-price-pressure"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
