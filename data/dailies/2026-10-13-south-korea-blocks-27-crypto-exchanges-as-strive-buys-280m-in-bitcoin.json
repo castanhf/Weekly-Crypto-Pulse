@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-13T14:08:40.570Z",
+  "publishedAt": "2026-10-13",
+  "slug": "2026-10-13-south-korea-blocks-27-crypto-exchanges-as-strive-buys-280m-in-bitcoin",
+  "headline": "South Korea blocks 27 crypto exchanges as Strive buys $280M in Bitcoin",
+  "summary": "South Korea's financial regulators cut off access to 27 unregistered foreign exchanges — including Bitmart and KuCoin — in one of crypto's largest retail markets, hitting altcoin liquidity and dragging most of the top 20 lower. Bitcoin held up relatively well, edging up 0.65% to $83,233, while Solana fell 3% and Zcash dropped nearly 7%. Against that backdrop, Strive Asset Management quietly added 3,311 BTC for $280 million, its largest purchase since January.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 8.55,
+        "catalyst": "No specific catalyst identified; the move appears to reflect speculative rotation into smaller-cap assets while Bitcoin traded in a tight range near $83K.",
+        "priceUsd": 1.91,
+        "priceChange24hUsd": 0.16
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": -11.12,
+        "catalyst": "No direct catalyst identified; the decline likely reflects broader altcoin weakness following South Korea's decision to block 27 foreign crypto exchanges, reducing liquidity and sentiment for mid-cap assets.",
+        "priceUsd": 204.25,
+        "priceChange24hUsd": -22.72
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83233,
+        "changePct24h": 0.65,
+        "marketCapUsd": 1672762961945,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2505.79,
+        "changePct24h": -1.02,
+        "marketCapUsd": 306033602918,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": -0.01,
+        "marketCapUsd": 184058217092,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 741.09,
+        "changePct24h": -0.72,
+        "marketCapUsd": 98681964893,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": -1.63,
+        "marketCapUsd": 86113608810,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 72680702288,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 106.9,
+        "changePct24h": -3,
+        "marketCapUsd": 62979048373,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3281,
+        "changePct24h": -0.95,
+        "marketCapUsd": 31163517265,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.065,
+        "changePct24h": 6.37,
+        "marketCapUsd": 25299494317,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1194.68,
+        "changePct24h": -6.84,
+        "marketCapUsd": 20287826415,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.43,
+        "changePct24h": -4.45,
+        "marketCapUsd": 18113132320,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0842,
+        "changePct24h": -1.68,
+        "marketCapUsd": 13167276023,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 10342830849,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 529.33,
+        "changePct24h": -0.91,
+        "marketCapUsd": 9960458355,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 12.95,
+        "changePct24h": -1.57,
+        "marketCapUsd": 9927135883,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant story today was South Korea's decision to block access to 27 unregistered foreign crypto exchanges, including Bitmart and KuCoin. South Korea is one of the world's most active retail crypto markets, and cutting off access to major trading venues reduces the pool of buyers for altcoins — assets that depend heavily on retail participation. The effect showed up clearly in the day's losers: Solana fell 3%, Zcash dropped 6.84%, Hyperliquid slid 4.45%, and Quant led all declines at -11.12%. Bitcoin, which draws more institutional demand and trades on a wider range of venues, was largely insulated — it edged up 0.65% to $83,233 and extended its dominance to 59.28% of total market cap. That divergence between Bitcoin and the broader altcoin market is a recurring pattern when retail-facing liquidity tightens. On the institutional side, Strive Asset Management added 3,311 BTC for $280 million — its largest single purchase since January — suggesting that some buyers view the current price range as attractive for accumulation. The Fear & Greed index sits at 57, in neutral territory, consistent with a market that is neither panicking nor euphoric.",
+  "worthKnowing": [
+    "Ledger confirmed that counterfeit hardware wallets sold by CryptoBilis contained a hidden chip that transmitted private wallet keys over a mobile network — a supply-chain security breach affecting an unknown number of devices.",
+    "Federated Hermes, a traditional asset manager with roughly $800 billion under management, announced plans to issue its first onchain fund shares, joining BlackRock and Franklin Templeton in the real-world asset tokenization space.",
+    "Russia's largest bank, Sberbank, received regulatory approval to trade cryptocurrencies, marking a significant expansion of state-adjacent institutional crypto activity in Russia."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2815549478571,
+    "btcDominancePct": 59.2761,
+    "ethDominancePct": 10.8461,
+    "fearGreedIndex": 57
+  },
+  "tags": [
+    "south-korea-exchange-ban",
+    "strive-btc-acquisition",
+    "ledger-supply-chain-hack",
+    "real-world-asset-tokenization",
+    "altcoin-liquidity",
+    "sberbank-crypto"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
