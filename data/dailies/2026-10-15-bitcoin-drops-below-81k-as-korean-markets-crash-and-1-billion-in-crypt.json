@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-15T11:23:06.556Z",
+  "publishedAt": "2026-10-15",
+  "slug": "2026-10-15-bitcoin-drops-below-81k-as-korean-markets-crash-and-1-billion-in-crypt",
+  "headline": "Bitcoin drops below $81K as Korean markets crash and $1 billion in crypto bets get wiped out",
+  "summary": "A brutal session for crypto: nearly $1 billion in leveraged positions were liquidated after South Korea's Kospi index plunged 8% and hotter-than-expected US core CPI data revived fears of a Fed rate hike. Bitcoin fell 3% to around $80,800, but Ethereum took the harder hit, sliding 5.6% — a sign that traders unwound riskier positions first. Gold-backed token Tether Gold was the rare bright spot, edging up 0.34% as investors sought something with a floor.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XAUT",
+        "name": "Tether Gold",
+        "changePct24h": 0.34,
+        "catalyst": "Gold-backed Tether token outperformed as investors rotated into safe-haven assets amid a broad crypto selloff driven by Asian equity market turmoil and Fed rate uncertainty. With BTC and altcoins sliding, XAUT's underlying gold exposure provided a defensive bid.",
+        "priceUsd": 4151.04,
+        "priceChange24hUsd": 13.93
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -22.97,
+        "catalyst": "No specific catalyst identified; the decline likely reflects thin liquidity amplifying the day's broad risk-off pressure.",
+        "priceUsd": 1.97,
+        "priceChange24hUsd": -0.45
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80803,
+        "changePct24h": -3.04,
+        "marketCapUsd": 1623850889124,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2359.57,
+        "changePct24h": -5.64,
+        "marketCapUsd": 288105238207,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183879528752,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 718.96,
+        "changePct24h": -3.04,
+        "marketCapUsd": 95705539275,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": -4.89,
+        "marketCapUsd": 82343645966,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 72652931935,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 102.06,
+        "changePct24h": -4.44,
+        "marketCapUsd": 60094908072,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3317,
+        "changePct24h": -0.52,
+        "marketCapUsd": 31511360703,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.039,
+        "changePct24h": 0,
+        "marketCapUsd": 24781146821,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1083.49,
+        "changePct24h": -12.45,
+        "marketCapUsd": 18382181942,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.85,
+        "changePct24h": -3.09,
+        "marketCapUsd": 17533196557,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.08,
+        "changePct24h": -4.89,
+        "marketCapUsd": 12506396796,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10229047663,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 535.33,
+        "changePct24h": -3.1,
+        "marketCapUsd": 10072152465,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 79.08,
+        "changePct24h": -3.3,
+        "marketCapUsd": 9393704538,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two macro shocks hit at once. First, US core CPI came in hotter than expected, reviving the possibility that the Federal Reserve could hold rates higher for longer — or even hike again. That alone would have been enough to pressure risk assets. Then South Korea's Kospi index plunged 8%, one of its sharpest single-day drops in years, sending a jolt through Asian markets and triggering a global risk-off move that reached crypto within hours.\n\nThe combination was particularly damaging because crypto markets were carrying significant leverage. When prices started falling, automated liquidations kicked in — forced selling that accelerated the decline. Nearly $1 billion in leveraged positions were wiped out across BTC, ETH, and XRP in a single session. Ethereum's 5.6% drop outpaced Bitcoin's 3% slide, which is typical in sharp selloffs: traders tend to exit higher-beta, riskier positions first, and ETH fits that profile relative to BTC.\n\nZcash was the notable outlier in the top 15, falling 12.5% with no obvious catalyst beyond the broader selloff amplified by thin liquidity. Tether Gold's slight gain was the clearest signal of where sentiment sat: when crypto traders want a hedge, they reach for something tied to physical gold. The Fear & Greed index sits at 53 — technically neutral, but the day's action felt anything but.",
+  "worthKnowing": [
+    "Hyperliquid's founder publicly called for US regulatory oversight to apply to trading platforms rather than the underlying blockchain — a proactive move ahead of anticipated crypto market structure legislation.",
+    "Richard Heart, founder of Hex and PulseChain, was detained in Istanbul according to Turkish media reports, a significant legal development for the controversial project.",
+    "Australia's financial regulator is pushing for tougher compliance requirements for crypto exchanges as a licensing deadline approaches, adding to a global tightening of crypto oversight."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2706797333970,
+    "btcDominancePct": 60.0232,
+    "ethDominancePct": 10.6565,
+    "fearGreedIndex": 53
+  },
+  "tags": [
+    "liquidations",
+    "fed-rate-uncertainty",
+    "kospi-crash",
+    "tether-gold",
+    "richard-heart-hex",
+    "australia-crypto-regulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
