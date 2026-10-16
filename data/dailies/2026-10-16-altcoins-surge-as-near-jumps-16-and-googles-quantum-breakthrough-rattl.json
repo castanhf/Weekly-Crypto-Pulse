@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-16T11:17:46.777Z",
+  "publishedAt": "2026-10-16",
+  "slug": "2026-10-16-altcoins-surge-as-near-jumps-16-and-googles-quantum-breakthrough-rattl",
+  "headline": "Altcoins surge as NEAR jumps 16% and Google's quantum breakthrough rattles Bitcoin security debate",
+  "summary": "A broad altcoin rally stole the show Friday, with NEAR Protocol and Celestia each climbing over 16% as Bitcoin steadied above $82,000 and traders rotated into layer-1 alternatives. Google's latest quantum computing milestone added an unexpected dimension to the day — experts flagged that 6.4 million Bitcoin in early wallets could eventually be at risk, prompting Starknet to open a governance vote on restructuring its architecture. The rest of this report covers the MSCI index shake-up threatening Strategy and Metaplanet, and Circle's push into 40 new markets.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 16.21,
+        "catalyst": "NEAR surged 16.21% as Bitcoin's stabilization above $82,000 fueled a broad rotation into layer-1 altcoins — Celestia's simultaneous 16% jump suggests sector-wide momentum rather than a NEAR-specific catalyst.",
+        "priceUsd": 5.28,
+        "priceChange24hUsd": 0.86
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -6.6,
+        "catalyst": "No clear catalyst identified; Bitway fell 6.60% against the broader market's upward trend, suggesting idiosyncratic selling pressure.",
+        "priceUsd": 1.84,
+        "priceChange24hUsd": -0.12
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 82166,
+        "changePct24h": 1.58,
+        "marketCapUsd": 1651441794302,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2463.32,
+        "changePct24h": 4.27,
+        "marketCapUsd": 300868230958,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.02,
+        "marketCapUsd": 183527866925,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 731.6,
+        "changePct24h": 1.72,
+        "marketCapUsd": 97418961536,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.34,
+        "changePct24h": 2.7,
+        "marketCapUsd": 84674762903,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.02,
+        "marketCapUsd": 72500949760,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 106.67,
+        "changePct24h": 4.45,
+        "marketCapUsd": 62865938906,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3355,
+        "changePct24h": 1.22,
+        "marketCapUsd": 31875774633,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.031,
+        "changePct24h": 0,
+        "marketCapUsd": 24659484845,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1233.12,
+        "changePct24h": 14.08,
+        "marketCapUsd": 20948509355,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.67,
+        "changePct24h": 3.64,
+        "marketCapUsd": 18168124466,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0822,
+        "changePct24h": 2.71,
+        "marketCapUsd": 12853368231,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 561.3,
+        "changePct24h": 4.74,
+        "marketCapUsd": 10562737800,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 10233367470,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 12.64,
+        "changePct24h": 5.24,
+        "marketCapUsd": 9690765893,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's consolidation above $82,000 gave traders the confidence to reach further out the risk curve. With BTC up a relatively modest 1.58%, the real action was in layer-1 altcoins: NEAR Protocol jumped 16.21%, Celestia gained 16%, Solana rose 4.45%, Ethereum climbed 4.27%, and Chainlink added 5.24%. Zcash was a notable outlier, surging 14.08% — privacy coins also benefited from the day's quantum computing headlines, as Google's latest milestone renewed interest in cryptographic security. The Federal Reserve angle added a layer of macro uncertainty: Fed Chair candidate Kevin Warsh declined to signal any direction on interest rates, leaving traders without a clear read on monetary policy. That ambiguity didn't derail the rally, but it kept Bitcoin's gains contained while altcoins ran. The rotation pattern — Bitcoin stable, altcoins outperforming — is a familiar one when sentiment recovers from a dip and traders seek higher-beta exposure. Fear & Greed held at 63 (Greed), consistent with a market that is optimistic but not euphoric.",
+  "worthKnowing": [
+    "Google's quantum computing breakthrough reignited debate over Bitcoin's long-term security — experts estimate 6.4 million BTC in early-format wallets could eventually be vulnerable, and Starknet opened a governance vote on restructuring as an independent layer-1 to address the threat.",
+    "MSCI finalized new index rules that could remove crypto treasury companies — including Strategy (formerly MicroStrategy) and Japan's Metaplanet — from major equity indexes, which would reduce the indirect Bitcoin exposure available to traditional fund managers.",
+    "A federal judge rejected a joint Gemini-CFTC bid to unwind a $5 million settlement, affirming that regulatory enforcement outcomes hold even when both parties later seek to reverse them.",
+    "Circle announced plans to expand USDC into 40 new international markets, accelerating its push to compete with Tether for global stablecoin dominance."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2782976889963,
+    "btcDominancePct": 59.2033,
+    "ethDominancePct": 10.7856,
+    "fearGreedIndex": 63
+  },
+  "tags": [
+    "near-protocol",
+    "quantum-computing",
+    "altcoin-rotation",
+    "msci-index",
+    "circle-usdc",
+    "layer-1"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
