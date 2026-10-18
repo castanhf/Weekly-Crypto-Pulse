@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-18T10:56:06.845Z",
+  "publishedAt": "2026-10-18",
+  "slug": "2026-10-18-wall-street-banks-embrace-tokenization-while-a-quantum-alliance-warns-",
+  "headline": "Wall Street banks embrace tokenization while a Quantum Alliance warns 6 million BTC sit exposed",
+  "summary": "The day's two biggest stories pulled in opposite directions: Goldman Sachs, Wells Fargo, and Morgan Stanley publicly framed asset tokenization as a growth business, while a newly formed Quantum Alliance flagged that roughly 6 million Bitcoin remain vulnerable to future quantum computing attacks. Neither moved prices dramatically — Bitcoin edged up 0.66% to $82,096 and the broader market drifted within 1% in either direction — but both stories carry real weight for where the industry is heading. Read on for what moved, what didn't, and why.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 19.6,
+        "catalyst": "Bitway surged roughly 19.6% with no specific catalyst identifiable from available news; the move appears to reflect low-liquidity momentum trading in a broadly neutral market environment.",
+        "priceUsd": 2.47,
+        "priceChange24hUsd": 0.48
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "PUMP",
+        "name": "Pump.fun",
+        "changePct24h": -6.95,
+        "catalyst": "Pump.fun fell roughly 6.95% amid a risk-off tone for speculative assets; no specific news catalyst was identified.",
+        "priceUsd": 0.00431592,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 82096,
+        "changePct24h": 0.66,
+        "marketCapUsd": 1650081362937,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2420.3,
+        "changePct24h": -0.67,
+        "marketCapUsd": 295656806867,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0.01,
+        "marketCapUsd": 183476406303,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 722.77,
+        "changePct24h": 0.26,
+        "marketCapUsd": 96251255105,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": -0.62,
+        "marketCapUsd": 81978080355,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 72334247843,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 104.05,
+        "changePct24h": -0.73,
+        "marketCapUsd": 61336849961,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3331,
+        "changePct24h": -0.75,
+        "marketCapUsd": 31639801487,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.068,
+        "changePct24h": 3.2,
+        "marketCapUsd": 25631793251,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1134.64,
+        "changePct24h": -3.9,
+        "marketCapUsd": 19282408764,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 79.1,
+        "changePct24h": -0.86,
+        "marketCapUsd": 17597632030,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0794,
+        "changePct24h": -1.2,
+        "marketCapUsd": 12412850743,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 585.69,
+        "changePct24h": 5.89,
+        "marketCapUsd": 11021926901,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 10224945998,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 80.31,
+        "changePct24h": 0.37,
+        "marketCapUsd": 9539153858,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Price action was quiet across the board — Bitcoin's 0.66% gain and Ethereum's 0.67% decline are essentially noise, and most of the top 15 tracked assets moved less than 1%. The Fear & Greed index sits at 53, squarely neutral, which matches the session's character.\n\nThe more interesting story is structural. The formation of a coordinated Quantum Alliance — a group of industry players focused on post-quantum cryptography — put a specific number on a long-running concern: roughly 6 million BTC are held in address formats that a sufficiently powerful quantum computer could theoretically crack. That is not an imminent threat; quantum computers capable of breaking Bitcoin's encryption do not exist yet. But the fact that a formal industry coalition formed around the issue signals that serious people are treating it as a planning problem, not a theoretical one. Monero's 5.89% gain and Zcash's 3.90% decline are worth noting in this context — privacy coins often attract attention when cryptographic security narratives resurface, though no direct link was confirmed.\n\nOn the institutional side, Goldman Sachs, Wells Fargo, and Morgan Stanley all publicly characterized asset tokenization — the process of representing real-world assets like stocks or bonds on a blockchain — as a revenue opportunity rather than a competitive threat. That framing matters: when major banks stop treating a technology as disruptive and start treating it as a product line, adoption timelines tend to compress. Figure Heloc's 3.20% gain, a tokenized real-estate credit product, fits that backdrop.",
+  "worthKnowing": [
+    "Nine major corporations — including CoreWeave, Broadcom, and Verizon — formally objected to OKX and ICE offering tokenized versions of their equity, introducing legal headwinds for equity-tokenization platforms.",
+    "Turkish authorities confirmed the arrest of Hex founder Richard Heart and the seizure of $7.15 million and six cold wallets, adding to a pattern of enforcement actions against high-profile crypto figures.",
+    "Polygon acquired Coinme, a crypto payments company, positioning the network to compete in consumer payments alongside Visa and Stripe."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2740776973804,
+    "btcDominancePct": 60.0943,
+    "ethDominancePct": 10.7734,
+    "fearGreedIndex": 53
+  },
+  "tags": [
+    "quantum-cryptography",
+    "asset-tokenization",
+    "goldman-sachs",
+    "richard-heart-arrest",
+    "polygon-coinme",
+    "monero",
+    "privacy-coins"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
