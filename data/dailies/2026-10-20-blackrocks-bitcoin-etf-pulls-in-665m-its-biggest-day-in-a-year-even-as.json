@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-20T11:26:34.800Z",
+  "publishedAt": "2026-10-20",
+  "slug": "2026-10-20-blackrocks-bitcoin-etf-pulls-in-665m-its-biggest-day-in-a-year-even-as",
+  "headline": "BlackRock's Bitcoin ETF pulls in $665M — its biggest day in a year — even as BTC slips to $81,400",
+  "summary": "BlackRock's IBIT fund recorded its largest single-day inflow since October 2025, a striking show of institutional appetite on a day when Bitcoin itself fell 0.79% to $81,540. The dip was driven by weakness in Asian equity markets tied to an AI-sector selloff, with options traders buying downside protection as risk sentiment cooled. The ETF inflow story and the price dip tell opposite stories about where institutional conviction sits right now — and JPMorgan added a third data point, publishing a forecast that Bitcoin will outperform stocks, bonds, and gold over the next decade.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": 8.75,
+        "catalyst": "No single identifiable news catalyst; the gain appears to reflect altcoin rotation as BTC dominance compressed from 60.19% to 59.58% on the day, with capital shifting into smaller-cap assets while Bitcoin drifted lower.",
+        "priceUsd": 0.542215,
+        "priceChange24hUsd": 0.05
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -13.42,
+        "catalyst": "No specific catalyst identified in available news; the decline likely reflects thin liquidity and the broader risk-off tone that accompanied the Asian equity selloff.",
+        "priceUsd": 1.84,
+        "priceChange24hUsd": -0.25
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81540,
+        "changePct24h": -0.79,
+        "marketCapUsd": 1638840887559,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2387.26,
+        "changePct24h": -1.21,
+        "marketCapUsd": 291615155126,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": -0.02,
+        "marketCapUsd": 183032180543,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 728.15,
+        "changePct24h": 0.52,
+        "marketCapUsd": 95752714464,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": -0.47,
+        "marketCapUsd": 81768514330,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 72073939992,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 104.32,
+        "changePct24h": -0.21,
+        "marketCapUsd": 61494536909,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3319,
+        "changePct24h": 0.27,
+        "marketCapUsd": 31535298932,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.021,
+        "changePct24h": 0,
+        "marketCapUsd": 24520722123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1149.38,
+        "changePct24h": 1.11,
+        "marketCapUsd": 19541887975,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.5,
+        "changePct24h": -0.83,
+        "marketCapUsd": 17456009188,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0792,
+        "changePct24h": 0.24,
+        "marketCapUsd": 12384210764,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 609.34,
+        "changePct24h": 3.52,
+        "marketCapUsd": 11460143517,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 10048369918,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 79.57,
+        "changePct24h": -0.98,
+        "marketCapUsd": 9451958705,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Bitcoin's slide to around $81,400 tracked a broader risk-off move in Asian markets, where chip stocks fell sharply on AI-sector concerns. When equity sentiment sours in Asia, crypto often follows — particularly Bitcoin, which has become increasingly correlated with tech-heavy indices as institutional ownership has grown. Options traders reinforced the cautious tone, with demand for downside hedges (puts) rising noticeably in derivatives markets.\n\nThe counterintuitive story of the day was the ETF data. BlackRock's IBIT fund took in $665 million in a single session — the most since October 2025 — suggesting that large institutional buyers used the dip as an entry point rather than a reason to exit. ETF inflows of that size don't happen by accident; they typically reflect pre-planned allocations from funds and wealth managers executing at scale.\n\nBTC dominance slipped from 60.19% to 59.58% during the session, a modest compression that coincided with some altcoin outperformance — Worldcoin's 8.75% gain and Monero's 3.52% rise both fit the pattern of capital rotating into smaller assets when Bitcoin's momentum stalls. Zcash also gained 1.11%, continuing a theme of privacy-coin interest. The broader top-15 was mostly flat to slightly negative, with no single altcoin catalyst beyond the rotation dynamic.",
+  "worthKnowing": [
+    "BlackRock filed for a new structured Bitcoin ETF product designed to limit downside losses while preserving upside exposure, a format that could attract institutional investors who have avoided unhedged BTC positions.",
+    "JPMorgan published a long-term forecast projecting Bitcoin as the top-performing major asset class over the next decade, ahead of stocks, bonds, and gold.",
+    "The Blockchain Association flagged regulatory ambiguity in the GENIUS Act's implementation guidance, warning that unclear rules around DeFi protocols and foreign stablecoin issuers could create compliance uncertainty for the sector."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2748291211722,
+    "btcDominancePct": 59.5805,
+    "ethDominancePct": 10.6002,
+    "fearGreedIndex": 55
+  },
+  "tags": [
+    "blackrock-ibit",
+    "bitcoin-etf-flows",
+    "jpmorgan-forecast",
+    "genius-act",
+    "altcoin-rotation",
+    "privacy-coins"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
