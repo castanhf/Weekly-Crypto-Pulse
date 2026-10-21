@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-21T11:42:40.551Z",
+  "publishedAt": "2026-10-21",
+  "slug": "2026-10-21-zcash-surges-12-on-confirmed-november-upgrade-as-bitcoin-ethereum-and-",
+  "headline": "Zcash surges 12% on confirmed November upgrade as Bitcoin, Ethereum, and XRP all climb",
+  "summary": "A broad market rally lifted most major assets on October 21, with Zcash leading the way after developers confirmed a November date for a protocol upgrade that triples payment speed. Bitcoin rose 2.4% to $83,428, Ethereum gained 3.4% to $2,464, and XRP jumped 4.8% — the kind of across-the-board move that suggests genuine buying pressure rather than rotation. The day also brought a cluster of significant news: a SpaceX-Tesla merger rumor that would consolidate 30,000 BTC under one roof, the OCC's first rule implementing the GENIUS Act stablecoin framework, and JPMorgan's inaugural long-term Bitcoin return forecast.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 12.33,
+        "catalyst": "Zcash developers confirmed a November date for a protocol upgrade that triples payment speed, driving a sustained 12%+ rally as markets priced in the near-term technical milestone.",
+        "priceUsd": 1284.51,
+        "priceChange24hUsd": 158.44
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -4.18,
+        "catalyst": "No clear catalyst identified; Bitway declined 4.18% against the broader market's upward trend.",
+        "priceUsd": 1.72,
+        "priceChange24hUsd": -0.07
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 83428,
+        "changePct24h": 2.43,
+        "marketCapUsd": 1676663516763,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2464.16,
+        "changePct24h": 3.4,
+        "marketCapUsd": 301010344177,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": -0.02,
+        "marketCapUsd": 182751942081,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 747.22,
+        "changePct24h": 2.66,
+        "marketCapUsd": 98280135010,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.36,
+        "changePct24h": 4.8,
+        "marketCapUsd": 85726192571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9994,
+        "changePct24h": -0.05,
+        "marketCapUsd": 72066812859,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 106.83,
+        "changePct24h": 2.55,
+        "marketCapUsd": 62965321109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3307,
+        "changePct24h": -0.33,
+        "marketCapUsd": 31417864327,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.025,
+        "changePct24h": 0.4,
+        "marketCapUsd": 24711548735,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1284.51,
+        "changePct24h": 12.33,
+        "marketCapUsd": 21833545954,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.54,
+        "changePct24h": 4.45,
+        "marketCapUsd": 18126428938,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0821,
+        "changePct24h": 3.84,
+        "marketCapUsd": 12835494864,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 598.85,
+        "changePct24h": -1.55,
+        "marketCapUsd": 11265377993,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1.001,
+        "changePct24h": 0,
+        "marketCapUsd": 10020785123,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 81.57,
+        "changePct24h": 2.65,
+        "marketCapUsd": 9689847624,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's clearest catalyst was Zcash: developers confirmed a specific November activation date for a protocol upgrade that triples transaction speed, and the market responded immediately — ZEC climbed 12.33% to $1,284.51, the sharpest single-day move among tracked assets. Confirmed timelines for concrete technical improvements tend to move privacy-coin markets more than vague roadmap promises, and this one did.\n\nBeyond Zcash, the broader rally had a few reinforcing drivers. Reports emerged that SpaceX and Tesla are exploring a merger that would consolidate more than 30,000 BTC under a single corporate entity — the largest institutional Bitcoin holding concentration since MicroStrategy's early accumulation phase. That narrative added a tailwind to Bitcoin's 2.43% gain, which pulled most of the top 15 higher in its wake.\n\nJPMorgan also published its first-ever long-term capital market assumption for Bitcoin, projecting 10% annualized returns — a notable shift for a bank that spent years dismissing the asset class. Institutional forecasts of this kind don't move markets directly, but they do shift the conversation among allocators who track JPMorgan's research.\n\nXRP's 4.80% gain stood out among large-caps. No single XRP-specific catalyst was reported, but the asset has historically responded to positive regulatory signals — and the OCC's release of its first final rule under the GENIUS Act stablecoin framework (see Worth Knowing) provided a constructive backdrop for assets with regulatory exposure. Monero's -1.55% dip was the only notable decliner among the top 15, with no clear catalyst.",
+  "worthKnowing": [
+    "The OCC released its first final rule implementing the GENIUS Act stablecoin framework, marking the first concrete regulatory guidance for stablecoin issuers under the Trump-signed legislation.",
+    "Solana's Alpenglow upgrade — described as the network's most significant consensus and networking overhaul since 2020 — is scheduled to go live Wednesday, a potential near-term catalyst for SOL ecosystem activity.",
+    "JPMorgan published its inaugural long-term Bitcoin return forecast, projecting 10% annualized returns — the first time the bank has included BTC in its formal capital market assumptions.",
+    "Reports indicate SpaceX and Tesla are exploring a merger that would consolidate more than 30,000 BTC under a single corporate entity, adding a new institutional Bitcoin accumulation narrative to the market."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2812384569733,
+    "btcDominancePct": 59.5525,
+    "ethDominancePct": 10.6915,
+    "fearGreedIndex": 63
+  },
+  "tags": [
+    "zcash-upgrade",
+    "genius-act",
+    "jpmorgan-bitcoin-forecast",
+    "spacex-tesla-merger",
+    "solana-alpenglow",
+    "xrp",
+    "stablecoin-regulation"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
