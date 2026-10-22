@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-22T11:42:32.615Z",
+  "publishedAt": "2026-10-22",
+  "slug": "2026-10-22-chinas-61800-btc-seizure-threat-and-equity-bear-market-drag-crypto-low",
+  "headline": "China's 61,800 BTC seizure threat and equity bear market drag crypto lower across the board",
+  "summary": "A macro risk-off wave originating in China's equity markets hit crypto hard on Thursday — Bitcoin fell 1.95% to $81,822 and Ethereum dropped 2.55% to $2,401, with most of the top 15 assets closing in the red. The day's defining story was China's move to seize nearly 62,000 BTC linked to a $5.7 billion fraud case, which added supply-side uncertainty on top of already fragile sentiment. Monero was the lone standout, surging 7.4% as traders sought privacy-coin alternatives amid the broader selloff.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 7.38,
+        "catalyst": "Monero surged over 7% as broader altcoin weakness drove privacy-coin demand, with China's reported move to seize 61,800 BTC tied to a $5.7 billion fraud scheme likely amplifying interest in censorship-resistant, untraceable assets. The macro risk-off backdrop pushing traders toward Bitcoin shelter may have paradoxically boosted Monero's appeal among privacy-focused holders.",
+        "priceUsd": 643.19,
+        "priceChange24hUsd": 47.46
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "WLD",
+        "name": "Worldcoin",
+        "changePct24h": -7.33,
+        "catalyst": "Worldcoin declined 7.33% amid a broad altcoin selloff driven by returning AI skepticism, with Bitcoin's failed run at $85,000 and DeFi tokens leading declines creating a risk-off environment that disproportionately hit AI-linked tokens like WLD.",
+        "priceUsd": 0.54868,
+        "priceChange24hUsd": -0.04
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81822,
+        "changePct24h": -1.95,
+        "marketCapUsd": 1644692967722,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2401.7,
+        "changePct24h": -2.55,
+        "marketCapUsd": 293340769466,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.02,
+        "marketCapUsd": 182695638870,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 732.99,
+        "changePct24h": -1.93,
+        "marketCapUsd": 96373816816,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.33,
+        "changePct24h": -2.24,
+        "marketCapUsd": 83803941461,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 72425201424,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 104.46,
+        "changePct24h": -2.21,
+        "marketCapUsd": 61579740345,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3304,
+        "changePct24h": -0.11,
+        "marketCapUsd": 31388813518,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.029,
+        "changePct24h": 0.42,
+        "marketCapUsd": 25691902980,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1255.66,
+        "changePct24h": -2.44,
+        "marketCapUsd": 21341925233,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.43,
+        "changePct24h": -3.86,
+        "marketCapUsd": 17441252084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0792,
+        "changePct24h": -3.51,
+        "marketCapUsd": 12385348657,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 643.19,
+        "changePct24h": 7.38,
+        "marketCapUsd": 12104696841,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9984,
+        "changePct24h": -0.23,
+        "marketCapUsd": 10001780852,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 79.39,
+        "changePct24h": -2.7,
+        "marketCapUsd": 9430233554,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two stories collided on Thursday to push crypto broadly lower. First, Asian equity markets fell sharply as China's stock market entered bear market territory — a decline of 20% or more from a recent peak — and that risk-off mood carried directly into crypto. When traditional markets in the region sell off hard, Bitcoin tends to feel it, and today was no exception: BTC failed to hold above $85,000 earlier in the week and slid to $81,822 by Thursday's close.\n\nThe second, more crypto-specific story was China's reported attempt to seize 61,800 BTC — worth roughly $5 billion at current prices — linked to a $5.7 billion fraud case. That kind of potential forced liquidation creates what traders call supply-side overhang: the market prices in the possibility that a large block of coins could hit exchanges at any time. Even if the seizure takes months to resolve legally, the uncertainty alone is enough to dampen buying appetite.\n\nAgainst that backdrop, Bitcoin ETFs did attract $1.08 billion in net inflows over the past three days — a meaningful number that shows institutional demand hasn't evaporated. But analysts noted that the buying pressure wasn't sufficient to overcome the macro headwinds, and Thursday's price action bore that out.\n\nMonero's 7.38% gain was the day's sharpest outlier. The China seizure news — which highlighted the traceability of Bitcoin on a public blockchain — appears to have sent some holders toward privacy-focused alternatives. Monero transactions are designed to be untraceable by default, making it a natural beneficiary when government asset seizures make headlines. Worldcoin fell 7.33%, the day's steepest loser, as AI-linked tokens bore the brunt of the broader altcoin selloff.",
+  "worthKnowing": [
+    "Solana's Alpenglow upgrade went live, cutting transaction finality to 150 milliseconds — described as the network's most significant technical change since 2020, though SOL still fell 2.21% on the day.",
+    "South Korea is nearing completion of comprehensive crypto legislation, with a tax debate ongoing that could materially affect one of Asia's largest retail crypto markets.",
+    "Bitcoin ETFs pulled in $1.08 billion across three days of inflows, but analysts flagged that the pace of buying has not been enough to offset macro selling pressure."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2736246796369,
+    "btcDominancePct": 60.0344,
+    "ethDominancePct": 10.6984,
+    "fearGreedIndex": 68
+  },
+  "tags": [
+    "china-btc-seizure",
+    "bitcoin-etf-flows",
+    "monero-privacy",
+    "solana-alpenglow",
+    "south-korea-crypto-regulation",
+    "risk-off"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
