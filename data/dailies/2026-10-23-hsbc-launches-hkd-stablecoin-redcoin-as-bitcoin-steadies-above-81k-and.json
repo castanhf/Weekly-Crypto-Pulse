@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-23T11:32:24.081Z",
+  "publishedAt": "2026-10-23",
+  "slug": "2026-10-23-hsbc-launches-hkd-stablecoin-redcoin-as-bitcoin-steadies-above-81k-and",
+  "headline": "HSBC launches HKD stablecoin RedCoin as Bitcoin steadies above $81K and PEPE surges 10%",
+  "summary": "The day's biggest story came from traditional finance: HSBC rolled out RedCoin, a Hong Kong dollar stablecoin, to more than 3 million retail customers — the most significant bank-issued stablecoin launch to date. Bitcoin held relatively steady, dipping less than half a percent to around $81,500 as the prior session's AI-sector selloff faded. Altcoins staged a partial recovery, with meme coins leading the way; PEPE jumped nearly 10% while most large-caps posted small losses.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "PEPE",
+        "name": "Pepe",
+        "changePct24h": 9.59,
+        "catalyst": "PEPE surged as risk appetite returned to the lower-cap speculative segment of the market following the prior day's equity-driven selloff, with Bitcoin stabilizing above $81,000 giving traders confidence to reach for higher-risk assets.",
+        "priceUsd": 0.0000049,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": -6.86,
+        "catalyst": "No specific catalyst was identified for Quant's decline; the drop likely reflects continued altcoin weakness and residual pressure from the tech stock selloff spilling into crypto.",
+        "priceUsd": 181.76,
+        "priceChange24hUsd": -12.47
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 81529,
+        "changePct24h": -0.45,
+        "marketCapUsd": 1638918578811,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2393.45,
+        "changePct24h": -0.34,
+        "marketCapUsd": 292351715726,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": -0.02,
+        "marketCapUsd": 182541060711,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 744.34,
+        "changePct24h": 1.53,
+        "marketCapUsd": 97883556099,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.32,
+        "changePct24h": -0.89,
+        "marketCapUsd": 83094522273,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 72001327272,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 103.88,
+        "changePct24h": -0.57,
+        "marketCapUsd": 61251137227,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3301,
+        "changePct24h": -0.1,
+        "marketCapUsd": 31355192066,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.028,
+        "changePct24h": 0,
+        "marketCapUsd": 26172470278,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1210.88,
+        "changePct24h": -3.39,
+        "marketCapUsd": 20565629794,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.57,
+        "changePct24h": -1.12,
+        "marketCapUsd": 17258176537,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0797,
+        "changePct24h": 0.61,
+        "marketCapUsd": 12474398072,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 606.93,
+        "changePct24h": -5.74,
+        "marketCapUsd": 11419401511,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10083731937,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 79.13,
+        "changePct24h": -0.39,
+        "marketCapUsd": 9399660493,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The session was shaped by two forces pulling in opposite directions. On the macro side, the previous day's sharp selloff in AI and tech stocks — which had dragged crypto lower alongside equities — began to fade, removing the immediate pressure on Bitcoin. BTC found its footing above $81,000 and barely moved, ending the day down 0.45%. That stabilization was enough to bring risk appetite back to the smaller end of the market: meme coins and lower-cap altcoins attracted fresh capital as traders who had pulled back during the equity rout returned. PEPE was the clearest beneficiary, climbing nearly 10% as speculative interest concentrated in assets that had sold off hardest the day before.\n\nThe broader top-15 picture was mostly red but quietly so. Ethereum slipped 0.34%, Solana fell 0.57%, and XRP dropped 0.89% — none of these moves suggest a new leg lower, just residual softness. Monero was the notable exception among large tracked assets, falling 5.74%, though no specific news drove that move. Zcash also dropped 3.39%. BNB bucked the trend with a 1.53% gain, the strongest performance among the top-10 assets.\n\nThe Fear & Greed index sits at exactly 50 — neutral — which matches the day's tone: not a recovery, not a continuation of the selloff, just a market catching its breath. The bigger story today was not price action at all but HSBC's RedCoin launch, which represents the most significant entry by a global bank into the retail stablecoin market.",
+  "worthKnowing": [
+    "HSBC launched RedCoin, a Hong Kong dollar stablecoin, to more than 3 million retail customers — the first retail stablecoin issued by a major global bank.",
+    "Ethereum developers postponed a testnet deployment of the Glamsterdam upgrade after security researchers flagged potential risks to existing smart contracts, adding uncertainty to ETH's near-term development timeline.",
+    "South Korea is moving to amend its foreign exchange law to regulate stablecoins as payment instruments, a significant policy shift in one of crypto's largest retail markets.",
+    "Crypto custody firm Fireblocks denied a report that Visa was in acquisition talks to buy it for approximately $2.5 billion."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2723246574656,
+    "btcDominancePct": 60.015,
+    "ethDominancePct": 10.7018,
+    "fearGreedIndex": 50
+  },
+  "tags": [
+    "hsbc-redcoin",
+    "hkd-stablecoin",
+    "ethereum-glamsterdam",
+    "south-korea-stablecoin-regulation",
+    "fireblocks-visa",
+    "pepe-meme-coin"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
