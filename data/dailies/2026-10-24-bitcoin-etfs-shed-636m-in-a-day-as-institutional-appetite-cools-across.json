@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-24T10:52:10.923Z",
+  "publishedAt": "2026-10-24",
+  "slug": "2026-10-24-bitcoin-etfs-shed-636m-in-a-day-as-institutional-appetite-cools-across",
+  "headline": "Bitcoin ETFs shed $636M in a day as institutional appetite cools across the board",
+  "summary": "A sharp reversal in Bitcoin ETF flows — $636 million in net outflows erasing the prior session's gains — pulled Bitcoin down 1.27% to $80,617 and dragged most of the top 20 lower. The selloff was broad rather than deep, with altcoins like Solana, XRP, and Dogecoin each falling 2–4%. Against that backdrop, Franklin Templeton quietly tokenized $150 million in fund shares on the XRP Ledger, a reminder that institutional infrastructure work continues even on down days.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": 20.88,
+        "catalyst": "MemeCore surged roughly 21% with no identifiable news catalyst — the move appears to be speculative retail momentum running against the broader risk-off session.",
+        "priceUsd": 1.086,
+        "priceChange24hUsd": 0.23
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": -7.91,
+        "catalyst": "NEAR fell nearly 8%, underperforming the broader altcoin selloff. The $636M in Bitcoin ETF outflows dampened risk appetite across layer-1 tokens; no NEAR-specific catalyst was identified.",
+        "priceUsd": 4.52,
+        "priceChange24hUsd": -0.36
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80617,
+        "changePct24h": -1.27,
+        "marketCapUsd": 1620563394407,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2369.06,
+        "changePct24h": -1.23,
+        "marketCapUsd": 289357942302,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0.01,
+        "marketCapUsd": 182476430105,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 732.32,
+        "changePct24h": -1.98,
+        "marketCapUsd": 96302774028,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.28,
+        "changePct24h": -2.79,
+        "marketCapUsd": 80863725637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 71627765118,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 101.65,
+        "changePct24h": -2.37,
+        "marketCapUsd": 59940191740,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.33,
+        "changePct24h": 0.18,
+        "marketCapUsd": 31345198401,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.021,
+        "changePct24h": 0,
+        "marketCapUsd": 26024452775,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1154.1,
+        "changePct24h": -4.75,
+        "marketCapUsd": 19622079749,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 75.54,
+        "changePct24h": -3.19,
+        "marketCapUsd": 16801273659,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0775,
+        "changePct24h": -3.27,
+        "marketCapUsd": 12116378034,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 587.07,
+        "changePct24h": -3.76,
+        "marketCapUsd": 11047285496,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 10048205460,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 78.23,
+        "changePct24h": -1.32,
+        "marketCapUsd": 9291967589,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story was ETF flows, not price. Spot Bitcoin ETFs recorded $636 million in net outflows — reversing the prior session's inflows in a single day and marking one of the sharper single-day redemption events in recent months. When institutional money exits BTC funds at that pace, it tends to pull the broader market lower, and that's what happened: Bitcoin fell 1.27% to $80,617, Ethereum dropped 1.23%, and most of the top 20 followed. The selling was orderly rather than panicked — the Fear & Greed index sits at 51, squarely neutral — but the breadth was notable. Privacy coins took a harder hit: Zcash fell 4.75% and Monero dropped 3.76%, though no specific news drove those moves. XRP slid 2.79% despite a genuinely positive institutional development — Franklin Templeton tokenized $150 million in fund shares directly on the XRP Ledger, all held in a single wallet. That kind of real-money institutional adoption would normally be a tailwind, but it wasn't enough to offset the day's broader risk-off tone driven by the ETF outflow data. NEAR Protocol was the session's worst performer among major assets, falling 7.91% — a steeper drop than peers, though no NEAR-specific catalyst emerged. The most likely explanation is that layer-1 tokens with smaller liquidity bases tend to absorb more selling pressure when institutional flows reverse.",
+  "worthKnowing": [
+    "Singapore, Malaysia, and Thailand's central banks expanded a cross-border stablecoin payment corridor that now includes Ripple, Visa, and Mastercard — a sign that regulated stablecoin infrastructure is advancing in Southeast Asia.",
+    "Bitcoin Core updated its vulnerability disclosure policy to account for AI tools that can now identify protocol bugs far faster than human researchers alone.",
+    "Senator Blumenthal sent a formal inquiry to Tether demanding details on payments made to a firm founded by a former White House crypto adviser, adding a new thread of regulatory scrutiny to the stablecoin issuer."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2691253463838,
+    "btcDominancePct": 60.0903,
+    "ethDominancePct": 10.7316,
+    "fearGreedIndex": 51
+  },
+  "tags": [
+    "btc-etf-outflows",
+    "franklin-templeton",
+    "xrp-ledger-tokenization",
+    "stablecoin-infrastructure",
+    "tether-senate-probe",
+    "bitcoin-core-security"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
