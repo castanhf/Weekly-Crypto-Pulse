@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-25T11:16:10.584Z",
+  "publishedAt": "2026-10-25",
+  "slug": "2026-10-25-bitcoin-briefly-breaks-below-80000-as-us-middle-east-evacuations-trigg",
+  "headline": "Bitcoin briefly breaks below $80,000 as U.S. Middle East evacuations trigger a $404M liquidation cascade",
+  "summary": "A weekend risk-off move tied to U.S. evacuation activity in the Middle East pushed Bitcoin below $80,000, triggering $404 million in forced long liquidations within four hours. Most of the top 15 assets ended the day in the red, with Ethereum sliding 1.86% and Solana losing nearly 1%. Privacy coins Zcash and Monero bucked the trend, attracting rotation as traders sought assets less correlated to macro risk sentiment.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 2.62,
+        "catalyst": "Zcash gained 2.62% amid a broader flight toward privacy-focused assets as geopolitical tensions — specifically U.S. Middle East evacuation activity — pressured risk sentiment. Monero posted a similar 1.91% gain on the day, suggesting sector-wide demand for privacy coins rather than a ZEC-specific catalyst.",
+        "priceUsd": 1184.77,
+        "priceChange24hUsd": 31.09
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "M",
+        "name": "MemeCore",
+        "changePct24h": -16.38,
+        "catalyst": "MemeCore fell 16.38% with no specific public catalyst identified; the move likely reflects thin liquidity and the broader risk-off tone that hit speculative, lower-cap assets hardest.",
+        "priceUsd": 0.926322,
+        "priceChange24hUsd": -0.15
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80187,
+        "changePct24h": -0.48,
+        "marketCapUsd": 1612023045607,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2323.16,
+        "changePct24h": -1.86,
+        "marketCapUsd": 283794868068,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 182458438889,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 736.94,
+        "changePct24h": 0.69,
+        "marketCapUsd": 96924390027,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.29,
+        "changePct24h": 0.83,
+        "marketCapUsd": 81796840943,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 71571247481,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.62,
+        "changePct24h": -0.94,
+        "marketCapUsd": 59353886187,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3288,
+        "changePct24h": -0.4,
+        "marketCapUsd": 31247216700,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.063,
+        "changePct24h": 0,
+        "marketCapUsd": 27189417100,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1184.77,
+        "changePct24h": 2.62,
+        "marketCapUsd": 20147129859,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 75.6,
+        "changePct24h": 0.18,
+        "marketCapUsd": 16816688592,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0764,
+        "changePct24h": -1.47,
+        "marketCapUsd": 11950765295,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 601.66,
+        "changePct24h": 1.91,
+        "marketCapUsd": 11322773926,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": -0.01,
+        "marketCapUsd": 10022861413,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 77.19,
+        "changePct24h": -1.26,
+        "marketCapUsd": 9168662210,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The weekend session was defined by two overlapping pressures: geopolitical news and a liquidation spiral that fed on itself. Reports of U.S. evacuation activity in the Middle East hit during low-liquidity weekend hours — the worst possible timing for a market already carrying heavy long positions from the prior week's ETF-driven optimism. Bitcoin dipped below $80,000, and that level acted as a trigger: leveraged long positions (bets that prices would rise, funded by borrowed money) began getting automatically closed, which pushed prices lower, which closed more positions. The result was $404 million in forced liquidations within four hours — a significant single-session wipeout.\n\nEthereum fell harder than Bitcoin on a percentage basis, dropping 1.86% to $2,323, while Solana lost 0.94% to close just above $100. The pattern across the top 15 was consistent: assets with more speculative positioning took larger hits.\n\nThe exception was privacy coins. Zcash rose 2.62% and Monero gained 1.91% — both moving against the broader market. When geopolitical uncertainty spikes, a subset of crypto traders rotates into assets whose transaction histories are harder to trace, treating them as a hedge within the crypto space itself. That appears to be what happened here.\n\nThe Fear & Greed index sits at 54 — technically in neutral territory — which means the broader market has not yet tipped into fear despite the day's turbulence. Bitcoin recovered to close at $80,187, above the $80,000 level that triggered the cascade.",
+  "worthKnowing": [
+    "HSBC rolled out a stablecoin to 3 million Hong Kong customers, marking one of the largest institutional deployments of blockchain-based payments in Asia to date.",
+    "The CEO of Apex Group said the stalling of the U.S. Clarity Act — the main pending crypto regulatory framework in Congress — is accelerating capital and talent flows toward Asia and the Middle East.",
+    "An Argentine judge cleared President Milei and 10 others in the LIBRA memecoin collapse case, finding no criminally relevant deception and closing a high-profile legal overhang."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2676415938047,
+    "btcDominancePct": 60.1206,
+    "ethDominancePct": 10.5846,
+    "fearGreedIndex": 54
+  },
+  "tags": [
+    "bitcoin-liquidations",
+    "geopolitical-risk",
+    "privacy-coins",
+    "hsbc-stablecoin",
+    "clarity-act",
+    "milei-libra"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
