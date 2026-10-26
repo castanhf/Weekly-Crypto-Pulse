@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-26T12:48:57.962Z",
+  "publishedAt": "2026-10-26",
+  "slug": "2026-10-26-bitcoin-holds-near-80k-as-traders-wait-on-fed-ecb-and-boj-rate-decisio",
+  "headline": "Bitcoin holds near $80K as traders wait on Fed, ECB, and BOJ rate decisions",
+  "summary": "A packed central bank week — Fed, ECB, and BOJ all deciding on rates within days of each other — has crypto traders in a holding pattern. Bitcoin briefly dipped below $80,000 before recovering to $80,400, while most of the top 15 moved less than 2%. The bigger story is what's coming: Wednesday's FOMC decision is the clearest near-term catalyst for whether Bitcoin breaks out of its current range or tests lower support. Meanwhile, Aviva Investors and Ripple tokenized a $29 billion sterling fund on the XRP Ledger, the kind of institutional milestone that tends to get noticed even on quiet price days.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": 21.98,
+        "catalyst": "Quant surged roughly 22% with no single confirmed catalyst, though broader tokenization momentum — including Aviva Investors and Ripple launching a tokenized fund on the XRP Ledger — may have lifted interoperability-focused assets. Thin liquidity in QNT's mid-cap range likely amplified the move.",
+        "priceUsd": 222.16,
+        "priceChange24hUsd": 48.83
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -13.75,
+        "catalyst": "No specific catalyst identified; the decline appears to reflect thin liquidity and selling pressure in a low-volume session.",
+        "priceUsd": 1.48,
+        "priceChange24hUsd": -0.2
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80400,
+        "changePct24h": 0.14,
+        "marketCapUsd": 1616457414109,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2330.1,
+        "changePct24h": 0.16,
+        "marketCapUsd": 284719072455,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.02,
+        "marketCapUsd": 182370693286,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 742.19,
+        "changePct24h": 0.42,
+        "marketCapUsd": 97637332912,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": 0.29,
+        "marketCapUsd": 82191191651,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 71414438704,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 101.7,
+        "changePct24h": 1.05,
+        "marketCapUsd": 60003697432,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3306,
+        "changePct24h": 0.48,
+        "marketCapUsd": 31409250959,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": 0,
+        "marketCapUsd": 25632887028,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1241.47,
+        "changePct24h": 3.25,
+        "marketCapUsd": 21168393895,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.55,
+        "changePct24h": 1.78,
+        "marketCapUsd": 17259220489,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0773,
+        "changePct24h": 1.16,
+        "marketCapUsd": 12097449172,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 590.57,
+        "changePct24h": -2.27,
+        "marketCapUsd": 11115305388,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 9999682589,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 77.39,
+        "changePct24h": 0.1,
+        "marketCapUsd": 9189182333,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant force today was not price action — it was anticipation. The Federal Reserve, European Central Bank, and Bank of Japan all have rate decisions due this week, and Bitcoin briefly slipped below $80,000 as traders reduced risk exposure ahead of Wednesday's FOMC announcement. That dip and recovery to $80,400 is the session in a sentence: no conviction in either direction, just positioning.\n\nSpot Bitcoin ETFs did provide a constructive data point. After two consecutive weeks of net outflows, last week's ETF flows turned positive — a signal that institutional buyers are still present even as spot prices stall near the $80,000 level. That level has become a technical reference point: it has been tested multiple times in recent sessions, and traders are watching whether it holds or gives way after the Fed speaks.\n\nZcash was the notable mover in the top 15, up 3.25% to $1,241.47, though no specific catalyst was identified — likely a thin-liquidity move. Monero slipped 2.27%, also without a clear driver. Solana gained 1.05% and Hyperliquid rose 1.78%, both outperforming Bitcoin on the day without a named catalyst beyond the generally cautious but not panicked market tone reflected in the Fear & Greed index sitting at exactly 50 — neutral.\n\nThe Fear & Greed reading of 50 is itself a story: the market is neither fearful nor greedy, which is consistent with a week defined by waiting rather than acting.",
+  "worthKnowing": [
+    "Aviva Investors and Ripple tokenized a share class of a $29 billion sterling fund on the XRP Ledger — one of the largest real-world-asset tokenization announcements to date from a traditional asset manager.",
+    "Spot Bitcoin ETFs snapped a two-week outflow streak last week, returning to net inflows even as Bitcoin's spot price remained under pressure near $80,000.",
+    "South Korean lawmakers are reportedly weighing a fourth delay of the country's crypto capital gains tax, potentially pushing the start date back to 2029 — which would remove a near-term selling overhang for Korean retail investors.",
+    "Coinbase earnings are also due this week alongside the three central bank rate decisions, making it one of the busiest macro and earnings weeks crypto has faced in months."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2706922578566,
+    "btcDominancePct": 59.4763,
+    "ethDominancePct": 10.4784,
+    "fearGreedIndex": 50
+  },
+  "tags": [
+    "fed-rate-decision",
+    "bitcoin-etf-flows",
+    "xrp-ledger-tokenization",
+    "aviva-ripple",
+    "coinbase-earnings",
+    "south-korea-crypto-tax"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
