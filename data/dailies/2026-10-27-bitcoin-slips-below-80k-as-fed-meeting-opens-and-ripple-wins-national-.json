@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-27T12:06:30.567Z",
+  "publishedAt": "2026-10-27",
+  "slug": "2026-10-27-bitcoin-slips-below-80k-as-fed-meeting-opens-and-ripple-wins-national-",
+  "headline": "Bitcoin slips below $80K as Fed meeting opens and Ripple wins national bank charter",
+  "summary": "Bitcoin dipped under $80,000 for the first time in recent sessions, brushing off a positive Asian tech rally as traders turned their attention to the Federal Reserve's two-day policy meeting that kicked off today. The bigger story may be regulatory: Ripple secured final approval from the Office of the Comptroller of the Currency (OCC) for a national trust bank charter, placing its RLUSD stablecoin under federal oversight — a landmark for institutional crypto credibility. Zcash was the day's standout mover, gaining 2.35% after a co-founder proposed ending the project's grants program and pointing to a $125 million treasury.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 2.35,
+        "catalyst": "Zcash co-founder proposed ending the project's grants funding program, citing a $125 million treasury balance. The proposal drew attention to Zcash's substantial reserves and sparked speculation about capital redistribution, driving the day's outperformance.",
+        "priceUsd": 1251.79,
+        "priceChange24hUsd": 29.43
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -12.52,
+        "catalyst": "No clear catalyst identified — the move appears to reflect technical selling pressure or thin liquidity rather than a specific news event.",
+        "priceUsd": 0.00706875,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79791,
+        "changePct24h": -0.62,
+        "marketCapUsd": 1603926781863,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2312.76,
+        "changePct24h": -0.68,
+        "marketCapUsd": 282496895271,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9986,
+        "changePct24h": -0.07,
+        "marketCapUsd": 182235154962,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 738.95,
+        "changePct24h": -0.24,
+        "marketCapUsd": 97177433469,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": 0.86,
+        "marketCapUsd": 82460824072,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.05,
+        "marketCapUsd": 71006486586,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.11,
+        "changePct24h": -1.28,
+        "marketCapUsd": 59047394717,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3277,
+        "changePct24h": -0.86,
+        "marketCapUsd": 31127920548,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.036,
+        "changePct24h": 0,
+        "marketCapUsd": 26507743745,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1251.79,
+        "changePct24h": 2.35,
+        "marketCapUsd": 21281868758,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.84,
+        "changePct24h": 0.99,
+        "marketCapUsd": 17313308606,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0772,
+        "changePct24h": 0.08,
+        "marketCapUsd": 12075331628,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 593.47,
+        "changePct24h": 0.72,
+        "marketCapUsd": 11170155004,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 9967585051,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 76.64,
+        "changePct24h": -0.84,
+        "marketCapUsd": 9098181761,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The dominant force today was the opening of the Federal Reserve's two-day policy meeting, which pulled trader attention away from broader risk assets. Bitcoin slipped below $80,000 — a psychologically significant level — even as Asian tech stocks rallied, a decoupling that signals crypto markets are pricing in Fed uncertainty rather than following the usual risk-on playbook. The Fear & Greed index sits at 48, squarely in neutral territory, consistent with a market that is waiting rather than acting.\n\nSolana was the hardest hit among large caps, falling 1.28% to $100.11, though no specific catalyst drove the move beyond the broader cautious tone. XRP bucked the trend with a 0.86% gain, likely buoyed by the day's biggest regulatory headline: Ripple's final OCC approval for a national trust bank charter. That approval places Ripple's RLUSD stablecoin under direct federal oversight — a meaningful step that distinguishes Ripple from most crypto firms still operating in regulatory gray areas.\n\nZcash's 2.35% gain stood out on a flat-to-down day. A co-founder's proposal to end the project's grants program — pointing to a $125 million treasury as justification — drew fresh attention to ZEC's balance sheet and prompted speculation about what the project might do with those reserves.\n\nEthereum developers also patched a critical bug in the Glamsterdam upgrade that could have incorrectly routed staking deposits to block builders. The fix was applied before any funds were affected, but the episode is a reminder that protocol upgrades carry real technical risk even when they proceed without incident.",
+  "worthKnowing": [
+    "Ripple received final OCC approval for a national trust bank charter, bringing its RLUSD stablecoin under federal oversight — the first stablecoin issued by a crypto-native firm to reach this regulatory milestone.",
+    "Ethereum developers patched a critical bug in the Glamsterdam upgrade that could have sent staking deposits to block builders rather than validators; no funds were lost.",
+    "Hyperliquid announced that Payward — Kraken's parent company — will become the first CFTC-regulated entity to deploy as a HIP-3 validator on the Hyperliquid network, adding institutional backing to the protocol."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2667080916223,
+    "btcDominancePct": 60.0073,
+    "ethDominancePct": 10.5676,
+    "fearGreedIndex": 48
+  },
+  "tags": [
+    "ripple-occ-charter",
+    "rlusd",
+    "federal-reserve-meeting",
+    "zcash-treasury",
+    "ethereum-glamsterdam",
+    "hyperliquid-kraken"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
