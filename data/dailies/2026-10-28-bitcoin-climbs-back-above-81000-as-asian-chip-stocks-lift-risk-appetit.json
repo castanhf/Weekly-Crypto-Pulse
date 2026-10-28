@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-28T12:41:54.585Z",
+  "publishedAt": "2026-10-28",
+  "slug": "2026-10-28-bitcoin-climbs-back-above-81000-as-asian-chip-stocks-lift-risk-appetit",
+  "headline": "Bitcoin climbs back above $81,000 as Asian chip stocks lift risk appetite ahead of the Fed",
+  "summary": "A strong earnings report from SK Hynix sent Asian semiconductor stocks higher, and that optimism spilled into crypto — Bitcoin rose 1.1% to $80,884 and most of the top 15 tracked assets followed. The day's real story is what comes next: the Fed's Wednesday decision is the event the market is positioning around, and the pre-decision calm is visible in the Fear & Greed index sitting at a neutral 51. Moody's also assigned investment-grade ratings to Ripple's RLUSD stablecoin, a notable institutional credibility marker for the XRP ecosystem.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": 18.1,
+        "catalyst": "Bitway surged 18.10% amid a broad crypto market rebound as Bitcoin climbed back above $81,000, driven by positive sentiment from an Asian chip stock rally and pre-Fed optimism. No specific fundamental catalyst for Bitway was identified.",
+        "priceUsd": 1.73,
+        "priceChange24hUsd": 0.31
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": -3.06,
+        "catalyst": "Quant declined 3.06% with no specific news catalyst identified. Broader caution ahead of the Fed decision may have weighed on mid-cap assets with institutional narratives.",
+        "priceUsd": 196.88,
+        "priceChange24hUsd": -6.02
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 80884,
+        "changePct24h": 1.11,
+        "marketCapUsd": 1626100127605,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2344.69,
+        "changePct24h": 1.06,
+        "marketCapUsd": 286438767549,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9988,
+        "changePct24h": 0.02,
+        "marketCapUsd": 181602759915,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 755.42,
+        "changePct24h": 2.03,
+        "marketCapUsd": 99352122706,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.32,
+        "changePct24h": 0.72,
+        "marketCapUsd": 83399357816,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9993,
+        "changePct24h": 0,
+        "marketCapUsd": 71108432868,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 101.92,
+        "changePct24h": 1.65,
+        "marketCapUsd": 60115520344,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3315,
+        "changePct24h": 1.12,
+        "marketCapUsd": 31488417759,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": -0.62,
+        "marketCapUsd": 26429266842,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1296.1,
+        "changePct24h": 3,
+        "marketCapUsd": 22038711853,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81,
+        "changePct24h": 3.37,
+        "marketCapUsd": 19382922778,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0796,
+        "changePct24h": 2.82,
+        "marketCapUsd": 12453858938,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 602.03,
+        "changePct24h": 1.18,
+        "marketCapUsd": 11329711571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9846776078,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 77.64,
+        "changePct24h": 1.07,
+        "marketCapUsd": 9217330645,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's catalyst came from outside crypto: SK Hynix, the South Korean chipmaker, posted strong earnings that sent Asian semiconductor stocks higher. That risk-on mood carried into crypto markets, with Bitcoin reclaiming $81,000 and most tracked assets posting gains. BNB led the large-caps with a 2.03% rise, while Hyperliquid (+3.37%) and Zcash (+3.00%) were the standout movers in the top 15.\n\nThe backdrop, though, is the Federal Reserve's Wednesday decision. Crypto tends to be sensitive to Fed signals because tighter monetary conditions raise the opportunity cost of holding riskier assets — so even a hawkish tone without an actual rate move can weigh on prices. Markets are watching specifically for any dissent among committee members, which could signal a more divided policy outlook. The Fear & Greed index sitting at 51 — squarely neutral — reflects that holding pattern: the chip-stock tailwind was enough to push prices higher, but not enough to generate strong directional conviction.\n\nQuant was the notable exception, declining 3.06% with no identifiable news catalyst. No specific event drove the move.\n\nXRP gained a more modest 0.72%, though the day brought meaningful ecosystem news: Moody's assigned investment-grade ratings to Ripple's RLUSD stablecoin, adding institutional credibility to the XRP network at a moment when the broader stablecoin landscape is drawing regulatory attention.",
+  "worthKnowing": [
+    "Moody's assigned investment-grade ratings to Ripple's RLUSD stablecoin, a first for a crypto-native stablecoin issuer and a signal of growing institutional acceptance of the XRP ecosystem.",
+    "XRP Ledger developers proposed enabling wallets with zero XRP balance for stablecoin payments — a change that would lower the cost of onboarding new users to the network.",
+    "Google plans to preview a crypto custody security system as AI-driven threats to digital asset infrastructure grow, marking a notable step in big-tech engagement with the sector.",
+    "Markets are watching Wednesday's Fed decision for signs of dissent among committee members, which could indicate a more divided outlook on future rate policy."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2728518318840,
+    "btcDominancePct": 59.4617,
+    "ethDominancePct": 10.4731,
+    "fearGreedIndex": 51
+  },
+  "tags": [
+    "bitcoin-rebound",
+    "fed-decision",
+    "sk-hynix",
+    "rlusd-rating",
+    "moodys",
+    "ripple",
+    "xrp-ledger"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
