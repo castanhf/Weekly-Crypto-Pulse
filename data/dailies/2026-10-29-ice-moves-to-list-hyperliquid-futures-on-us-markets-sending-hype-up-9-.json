@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-29T12:52:02.506Z",
+  "publishedAt": "2026-10-29",
+  "slug": "2026-10-29-ice-moves-to-list-hyperliquid-futures-on-us-markets-sending-hype-up-9-",
+  "headline": "ICE moves to list Hyperliquid futures on U.S. markets, sending HYPE up 9% as Bitcoin slips toward $80K",
+  "summary": "The owner of the New York Stock Exchange announced steps to bring Hyperliquid perpetual futures to U.S. markets — a significant institutional endorsement that sent HYPE surging 9.4% while the rest of the market drifted lower. Bitcoin fell 0.86% to just under $80,000, pressured by disappointing earnings from Samsung and Alphabet and a dissenting voice at the Federal Reserve. With $10 billion in Bitcoin options expiring soon, the broader market is in a cautious holding pattern.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": 9.37,
+        "catalyst": "ICE, the NYSE's parent company, announced steps to list Hyperliquid perpetual futures in the U.S. — a major institutional legitimacy boost that drove HYPE up 9.37%, the day's top gainer by a wide margin.",
+        "priceUsd": 88.16,
+        "priceChange24hUsd": 8.26
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -5.9,
+        "catalyst": "No specific catalyst identified; Bitcoin Cash fell 5.90% in a broad risk-off session, underperforming the wider market.",
+        "priceUsd": 278.33,
+        "priceChange24hUsd": -16.42
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79976,
+        "changePct24h": -0.86,
+        "marketCapUsd": 1607926321799,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2318.18,
+        "changePct24h": -0.77,
+        "marketCapUsd": 283218766860,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": 0.03,
+        "marketCapUsd": 180853297182,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 739.85,
+        "changePct24h": -1.77,
+        "marketCapUsd": 97298133700,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.29,
+        "changePct24h": -1.99,
+        "marketCapUsd": 81556917526,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.02,
+        "marketCapUsd": 71221258655,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 100.25,
+        "changePct24h": -1.17,
+        "marketCapUsd": 59147864212,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3312,
+        "changePct24h": -0.03,
+        "marketCapUsd": 31469002546,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": 0.07,
+        "marketCapUsd": 26555226089,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1263.43,
+        "changePct24h": -1.81,
+        "marketCapUsd": 21491665089,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 88.16,
+        "changePct24h": 9.37,
+        "marketCapUsd": 21107212769,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0787,
+        "changePct24h": -0.66,
+        "marketCapUsd": 12314006937,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 598.51,
+        "changePct24h": -0.39,
+        "marketCapUsd": 11266389340,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 9803260236,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 76.8,
+        "changePct24h": -0.82,
+        "marketCapUsd": 9113134889,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces shaped the day, pulling in opposite directions. The macro backdrop was unfriendly: Samsung and Alphabet both reported earnings that disappointed investors, and a dissenting voice within the Federal Reserve added to uncertainty about the pace of rate cuts. Risk assets broadly sold off, and Bitcoin — which has been trading near the psychologically significant $80,000 level — slipped 0.86% to $79,976. BNB fell 1.77%, XRP dropped 1.99%, and Solana lost 1.17%, all tracking the broader risk-off tone. AI-linked tokens took a harder hit, consistent with the Alphabet earnings miss weighing on sentiment around artificial intelligence plays.\n\nThe exception was Hyperliquid. ICE — the Intercontinental Exchange, which owns the New York Stock Exchange — announced it is taking steps to list Hyperliquid perpetual futures (contracts that let traders bet on price direction without an expiry date) in the U.S. market. That kind of institutional endorsement is meaningful: it signals that a major regulated exchange sees enough demand and legitimacy in Hyperliquid's decentralized trading platform to build a product around it. HYPE jumped 9.37% on the news, the day's standout move by a wide margin.\n\nAdding to the cautious mood: roughly $10 billion in Bitcoin options are approaching expiry. Options pricing around that event suggests the market is watching the level closely, and traders are aware that large expiries can produce short-term volatility as positions are settled or rolled forward. The Fear & Greed index sits at 51 — neutral — which fits a day where one strong catalyst (ICE/HYPE) ran against a soft macro backdrop.",
+  "worthKnowing": [
+    "Thailand's Supreme Court ruled that Bitcoin is legally classified as property, strengthening protections for crypto holders after a thief challenged his own conviction by arguing Bitcoin wasn't a recognized asset.",
+    "The U.S. Treasury sanctioned 11 individuals — including Russian nationals — for running a crypto laundering network that channeled funds to North Korean IT workers circumventing sanctions.",
+    "A $10 billion Bitcoin options expiry is approaching; options pricing around the event points to elevated attention on the $80,000 level as a near-term focal point."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2701272092231,
+    "btcDominancePct": 59.3929,
+    "ethDominancePct": 10.4606,
+    "fearGreedIndex": 51
+  },
+  "tags": [
+    "hyperliquid",
+    "ice-nyse",
+    "perpetual-futures",
+    "bitcoin-options-expiry",
+    "fed-dissent",
+    "sanctions"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
