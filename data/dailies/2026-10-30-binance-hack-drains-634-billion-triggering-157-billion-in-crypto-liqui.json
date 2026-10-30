@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-30T12:43:42.903Z",
+  "publishedAt": "2026-10-30",
+  "slug": "2026-10-30-binance-hack-drains-634-billion-triggering-157-billion-in-crypto-liqui",
+  "headline": "Binance hack drains $6.34 billion, triggering $1.57 billion in crypto liquidations",
+  "summary": "A record-breaking hack attributed to North Korea's TraderTraitor group drained $6.34 billion from Binance, forcing the exchange to arrange emergency funds and setting off a cascade of forced liquidations across leveraged positions. Bitcoin fell 3.26% to $77,399 and Ethereum dropped 3.74% to $2,233.61, with BNB taking the hardest hit among large caps at -5.36%. The rest of this report covers the secondary headwinds — a CFO departure at Strategy, a hardware wallet security alert, and one bright spot in Coinbase's earnings.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "PEPE",
+        "name": "Pepe",
+        "changePct24h": 7.3,
+        "catalyst": "PEPE outperformed the broader market selloff, likely benefiting from speculative rotation into meme coins as traders sought assets uncorrelated to the Binance hack fallout. No specific fundamental catalyst identified.",
+        "priceUsd": 0.00000526,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BTW",
+        "name": "Bitway",
+        "changePct24h": -27.07,
+        "catalyst": "No specific catalyst identified; the sharp decline coincided with the broader market stress triggered by the Binance hack and resulting liquidation cascade.",
+        "priceUsd": 1.3,
+        "priceChange24hUsd": -0.35
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77399,
+        "changePct24h": -3.26,
+        "marketCapUsd": 1556099825825,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2233.61,
+        "changePct24h": -3.74,
+        "marketCapUsd": 272843682347,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0.01,
+        "marketCapUsd": 180350097449,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 700.26,
+        "changePct24h": -5.36,
+        "marketCapUsd": 92085378026,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.25,
+        "changePct24h": -3.24,
+        "marketCapUsd": 78947552477,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 71330813643,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 96.54,
+        "changePct24h": -3.71,
+        "marketCapUsd": 56957487701,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3329,
+        "changePct24h": 0.47,
+        "marketCapUsd": 31636059089,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.03,
+        "changePct24h": -0.07,
+        "marketCapUsd": 26606230338,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 92.14,
+        "changePct24h": 4.79,
+        "marketCapUsd": 22055513209,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1245.48,
+        "changePct24h": -1.19,
+        "marketCapUsd": 21183486021,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0758,
+        "changePct24h": -3.67,
+        "marketCapUsd": 11857519309,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 589.57,
+        "changePct24h": -1.56,
+        "marketCapUsd": 11099250348,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.06,
+        "marketCapUsd": 9585414003,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 74.17,
+        "changePct24h": -3.42,
+        "marketCapUsd": 8802825364,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story is a single event: a hack that blockchain analytics firms TRM and Chainalysis attributed to North Korea's TraderTraitor group drained approximately $6.34 billion from Binance — the largest exchange hack on record. Binance arranged emergency funds to cover user losses, but the damage to market confidence was immediate. Leveraged positions across the market unwound rapidly, producing $1.57 billion in forced liquidations. Bitcoin fell through $77,000 before settling around $77,399, down 3.26%. BNB took the sharpest hit among large caps at -5.36%, reflecting direct exposure to Binance's platform risk. Ethereum fell 3.74%, XRP dropped 3.24%, and Solana lost 3.71% — broad-based selling rather than asset-specific weakness.\n\nA secondary headwind arrived from Strategy, the Bitcoin-holding company formerly known as MicroStrategy: CFO Andrew Kang resigned on the same day the company reported a record quarterly operating profit. The combination sent MSTR shares down 6% and added another layer of uncertainty to Bitcoin sentiment on an already difficult session.\n\nThe Fear & Greed index sits at 30 — squarely in \"Fear\" territory — reflecting the day's mood accurately. TRON (+0.47%) and Hyperliquid (+4.79%) were notable exceptions to the selloff, though neither move had a clear catalyst beyond the broader rotation away from assets with direct Binance exposure. PEPE's 7.3% gain stood out as speculative capital moved into meme coins, which traders treated as uncorrelated to the hack fallout.",
+  "worthKnowing": [
+    "Coinbase reported a 66% year-over-year jump in Q3 net income, driven partly by growth in prediction market activity — a rare positive signal on an otherwise bruising day for the industry.",
+    "Trezor flagged a suspected hardware-level supply chain compromise in Safe 5 devices sold through third-party reseller CryptoBilis, raising fresh concerns about physical wallet security."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2600809964285,
+    "btcDominancePct": 59.7886,
+    "ethDominancePct": 10.4918,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "binance-hack",
+    "north-korea-tradertraitor",
+    "liquidations",
+    "strategy-mstr",
+    "trezor-supply-chain",
+    "coinbase-earnings"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
