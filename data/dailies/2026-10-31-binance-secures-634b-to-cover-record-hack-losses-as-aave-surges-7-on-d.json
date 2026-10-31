@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-10-31T12:12:45.176Z",
+  "publishedAt": "2026-10-31",
+  "slug": "2026-10-31-binance-secures-634b-to-cover-record-hack-losses-as-aave-surges-7-on-d",
+  "headline": "Binance secures $6.34B to cover record hack losses as Aave surges 7% on DeFi rotation",
+  "summary": "The largest exchange hack in crypto history dominated the day — Binance confirmed it has lined up $6.34 billion to make users whole and is targeting a Sunday withdrawal restart. The breach triggered a visible rotation: traders moved capital away from centralized exchange exposure and into decentralized alternatives, with Aave leading the day's gainers at +7%. Bitcoin and Ethereum held relatively steady, suggesting the market is treating this as an exchange-specific event rather than a systemic crypto crisis.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "AAVE",
+        "name": "Aave",
+        "changePct24h": 7,
+        "catalyst": "Renewed interest in non-custodial DeFi alternatives following the $6.34B Binance hack drove capital into Aave, the leading decentralized lending protocol, as traders sought on-chain solutions over centralized exchange exposure.",
+        "priceUsd": 133.86,
+        "priceChange24hUsd": 9.37
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -7.68,
+        "catalyst": "No specific public catalyst identified.",
+        "priceUsd": 0.00613655,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77539,
+        "changePct24h": 0.35,
+        "marketCapUsd": 1558959081038,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2248.24,
+        "changePct24h": 0.76,
+        "marketCapUsd": 274683512376,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": 0.01,
+        "marketCapUsd": 179993886765,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 705.04,
+        "changePct24h": 0.84,
+        "marketCapUsd": 92720471793,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.25,
+        "changePct24h": 0.27,
+        "marketCapUsd": 79105448366,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.02,
+        "marketCapUsd": 71774685609,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 95.83,
+        "changePct24h": -0.52,
+        "marketCapUsd": 56546858902,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3198,
+        "changePct24h": -6.13,
+        "marketCapUsd": 30383134864,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.028,
+        "changePct24h": 0,
+        "marketCapUsd": 26610051070,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1286.25,
+        "changePct24h": 4.07,
+        "marketCapUsd": 21885237229,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 88.18,
+        "changePct24h": -3.7,
+        "marketCapUsd": 21110444492,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0752,
+        "changePct24h": -0.52,
+        "marketCapUsd": 11778700236,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 594.97,
+        "changePct24h": 1.03,
+        "marketCapUsd": 11200270340,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1.001,
+        "changePct24h": 0.01,
+        "marketCapUsd": 9587645321,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 74.42,
+        "changePct24h": 0.53,
+        "marketCapUsd": 8832358306,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The Binance hack — now confirmed as the largest exchange exploit in crypto history — set the tone for the day, but the market's reaction was more measured than the headline suggests. Bitcoin gained 0.35% and Ethereum rose 0.76%, both holding near recent levels rather than selling off sharply. The Fear & Greed index sits at 30, in Fear territory, but the absence of a broad crash points to a market that is rattled rather than panicking.\n\nThe clearest price signal came from the DeFi sector. Aave jumped 7% as traders rotated capital away from centralized exchange exposure toward decentralized, self-custody alternatives. When a major centralized exchange suffers a breach of this scale, on-chain lending protocols that don't hold user funds in a central pool tend to attract fresh interest — that dynamic appears to have played out here.\n\nTRON fell 6.1% on the day; no clear catalyst was identified for the decline. Zcash gained 4.07% and Hyperliquid dropped 3.70%, both without obvious named drivers in the researcher's data.\n\nOn the regulatory front, the CFTC Chair publicly used the Binance breach to argue for mandatory US oversight of offshore exchanges — a signal that the hack is already shaping the policy conversation. Circle froze $823 million in USDC linked to the exploit, an action taken in coordination with law enforcement as part of the federal response to the breach. The Secret Service and FBI have both joined the investigation, and President Trump indicated the administration is monitoring the situation.",
+  "worthKnowing": [
+    "Circle froze $823 million in USDC linked to the Binance hack as part of the federal law enforcement response, with the Secret Service and FBI now formally involved in the investigation.",
+    "The CFTC Chair argued publicly that the Binance exploit demonstrates why offshore crypto exchanges should face mandatory US regulatory oversight — a position that could accelerate new compliance requirements.",
+    "Multiple Wall Street analysts recommended buying Bitcoin-proxy stocks (such as shares in publicly listed crypto firms) rather than exchange-held crypto in the wake of the hack, framing regulated equity exposure as a lower-custody-risk alternative.",
+    "Strategy's preferred-stock financing structure positions the firm to resume aggressive Bitcoin purchases, according to analysts — a potential demand signal for BTC amid the current uncertainty."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2602386992209,
+    "btcDominancePct": 59.8424,
+    "ethDominancePct": 10.5341,
+    "fearGreedIndex": 30
+  },
+  "tags": [
+    "binance-hack",
+    "aave",
+    "defi-rotation",
+    "cftc-oversight",
+    "circle-usdc-freeze",
+    "exchange-security"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
