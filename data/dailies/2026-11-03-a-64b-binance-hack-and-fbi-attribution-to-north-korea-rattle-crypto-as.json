@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-03T14:09:07.567Z",
+  "publishedAt": "2026-11-03",
+  "slug": "2026-11-03-a-64b-binance-hack-and-fbi-attribution-to-north-korea-rattle-crypto-as",
+  "headline": "A $6.4B Binance hack and FBI attribution to North Korea rattle crypto as Bitcoin tests $76K",
+  "summary": "The week's defining story is a record $6.4 billion exploit on Binance, now attributed by the FBI to North Korea's TraderTraitor hacking group — triggering $5.3 billion in net outflows from the exchange and pushing the Fear & Greed index to 26. Bitcoin briefly dipped to $76,300 before recovering to $77,324, on track for a fifth consecutive weekly loss. Privacy coins split: Monero gained 3.2% as traders sought assets with stronger on-chain anonymity, while Zcash fell nearly 6% as lower-liquidity coins bore the brunt of the fear-driven selloff.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 3.24,
+        "catalyst": "Monero gained as the Binance hack and broader exchange security concerns drove renewed interest in privacy-preserving assets. The FBI's attribution of the $6.4B Binance hack to North Korea's TraderTraitor group may have amplified demand for coins with stronger on-chain anonymity.",
+        "priceUsd": 623.58,
+        "priceChange24hUsd": 20.21
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -5.84,
+        "catalyst": "Zcash fell sharply despite sharing privacy-coin characteristics with top mover XMR, suggesting rotation within the privacy-coin sector rather than a broad thematic bid. Continued market-wide fear — Fear & Greed at 26 and BTC facing a fifth consecutive weekly loss — weighed disproportionately on lower-liquidity assets.",
+        "priceUsd": 1192.52,
+        "priceChange24hUsd": -69.68
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 77324,
+        "changePct24h": -0.75,
+        "marketCapUsd": 1555102724841,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2283.59,
+        "changePct24h": -0.18,
+        "marketCapUsd": 279158305970,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9987,
+        "changePct24h": -0.01,
+        "marketCapUsd": 178877863003,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 697.56,
+        "changePct24h": -0.98,
+        "marketCapUsd": 91754358108,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.29,
+        "changePct24h": 2.38,
+        "marketCapUsd": 81500051121,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9994,
+        "changePct24h": -0.01,
+        "marketCapUsd": 70835494718,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 93.01,
+        "changePct24h": -1.47,
+        "marketCapUsd": 54925429693,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3223,
+        "changePct24h": 1.56,
+        "marketCapUsd": 30630489047,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.032,
+        "changePct24h": 1.27,
+        "marketCapUsd": 26855948187,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 85.02,
+        "changePct24h": -1.4,
+        "marketCapUsd": 20367475135,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1192.52,
+        "changePct24h": -5.84,
+        "marketCapUsd": 20333822679,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.075,
+        "changePct24h": -0.59,
+        "marketCapUsd": 11750718286,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 623.58,
+        "changePct24h": 3.24,
+        "marketCapUsd": 11739809021,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9593579867,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 74.43,
+        "changePct24h": -0.58,
+        "marketCapUsd": 8834489816,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The week's dominant force is a $6.4 billion exploit on Binance — the largest exchange hack on record — which the FBI has formally attributed to North Korea's TraderTraitor hacking group. Binance reported cumulative net outflows of $5.3 billion as users pulled funds in response, though the exchange's CEO stated recovery is underway and published a fresh proof-of-reserves snapshot to reassure remaining depositors. North Korea's government, through Kim Jong-Un's sister, publicly denied involvement, adding a geopolitical dimension to an already unsettled market.\n\nBitcoin touched $76,300 during the session before recovering to $77,324, a -0.75% move on the day that understates the week's cumulative pressure. Persistent ETF outflows and uncertainty around U.S. midterm elections have kept sentiment deeply negative — the Fear & Greed index sits at 26, firmly in fear territory, and Bitcoin is on pace for a fifth straight weekly loss.\n\nThe hack's clearest market signal was a split within privacy coins. Monero rose 3.2% as traders rotated toward assets with stronger built-in transaction anonymity — the logic being that Monero's privacy architecture is more robust than Zcash's optional shielding. Zcash fell 5.8%, suggesting this was a targeted rotation rather than a broad privacy-coin bid. Lower-liquidity assets across the board absorbed more of the fear-driven selling pressure. XRP and TRON bucked the trend with modest gains of 2.4% and 1.6% respectively, though no specific catalyst was identified for either move beyond relative resilience in a down session.",
+  "worthKnowing": [
+    "Liquid Network's bitcoin IOUs are fully collateralized again after a $320 million exploit was remediated — a rare clean resolution in a week dominated by exchange security failures.",
+    "Brazil's Mercado Bitcoin suffered a hack of approximately $46 million and pledged to cover all affected user losses in full.",
+    "Binance completed a fresh proof-of-reserves snapshot following the $5.3 billion in net outflows, with the CEO stating the exchange's recovery is in progress.",
+    "North Korea's government publicly denied FBI claims attributing the Binance hack to the TraderTraitor group, adding geopolitical uncertainty to the ongoing fallout."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2622329605961,
+    "btcDominancePct": 59.219,
+    "ethDominancePct": 10.6411,
+    "fearGreedIndex": 26
+  },
+  "tags": [
+    "binance-hack",
+    "north-korea-tradertraitor",
+    "monero-privacy",
+    "btc-etf-outflows",
+    "exchange-security",
+    "midterm-elections"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
