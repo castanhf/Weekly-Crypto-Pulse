@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-05T14:39:42.190Z",
+  "publishedAt": "2026-11-05",
+  "slug": "2026-11-05-bitcoin-holds-above-80k-as-democrats-retake-congress-forcing-cryptos-w",
+  "headline": "Bitcoin holds above $80K as Democrats retake Congress, forcing crypto's Washington strategy reset",
+  "summary": "The day after US elections, crypto markets stabilized with Bitcoin holding above $80,000 and most major assets posting modest gains — but the real story is political. Democrats retaking Congress puts pending crypto legislation in a much harder position, and the industry is already rethinking how to advance its Washington agenda. Meanwhile, Binance severed access for trading tool SignalPlus following a security warning, adding a separate note of caution to the session.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": 5.69,
+        "catalyst": "Bitcoin Cash surged roughly 5.7% as broader crypto markets stabilized following post-election volatility, with BTC holding above $80,000 and risk appetite returning. BCH tends to outperform Bitcoin in relief rallies given its high sensitivity to Bitcoin sentiment. No BCH-specific catalyst was identified.",
+        "priceUsd": 288.72,
+        "priceChange24hUsd": 16.42
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "changePct24h": -3.52,
+        "catalyst": "Hyperliquid fell roughly 3.5% as post-election enthusiasm cooled and Binance's security incident involving SignalPlus raised broader concerns about exchange platform risk, potentially weighing on trading-focused tokens.",
+        "priceUsd": 81.42,
+        "priceChange24hUsd": -2.87
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 79336,
+        "changePct24h": 1.3,
+        "marketCapUsd": 1595088334046,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2379.07,
+        "changePct24h": 2.67,
+        "marketCapUsd": 290703287318,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.05,
+        "marketCapUsd": 178287692388,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 709.07,
+        "changePct24h": 1.22,
+        "marketCapUsd": 93250049206,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.3,
+        "changePct24h": 1.66,
+        "marketCapUsd": 82530012500,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.03,
+        "marketCapUsd": 70955964040,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 95.19,
+        "changePct24h": 2.46,
+        "marketCapUsd": 56192216117,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.318,
+        "changePct24h": -0.22,
+        "marketCapUsd": 30214365959,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.046,
+        "changePct24h": 1.57,
+        "marketCapUsd": 27327781607,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1300.46,
+        "changePct24h": 1.76,
+        "marketCapUsd": 22140639489,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 81.42,
+        "changePct24h": -3.52,
+        "marketCapUsd": 19491857170,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 636.63,
+        "changePct24h": -0.31,
+        "marketCapUsd": 11985825480,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0757,
+        "changePct24h": 1.1,
+        "marketCapUsd": 11857379862,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.02,
+        "marketCapUsd": 9582633122,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 76.6,
+        "changePct24h": 1.8,
+        "marketCapUsd": 9089094995,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Markets spent Thursday absorbing two things at once: the relief that Bitcoin held above $80,000 after Tuesday's election-night volatility, and the dawning reality that the political landscape for crypto legislation just got harder.\n\nDemocrats retaking Congress is the day's defining story. The Digital Chamber of Commerce called Sherrod Brown's Senate win the 'most consequential unfavorable result' for the crypto industry — Brown has been one of the most vocal critics of crypto on Capitol Hill. Pending bills on stablecoin regulation and market structure now face a much steeper path, and industry groups are already signaling they need to rethink their Washington approach from scratch.\n\nOn the price side, the stabilization was real but thin. Analysis published today noted that while BTC holding above $80,000 is technically constructive, the rally lacks conviction — leverage remains subdued and spot demand is still tepid. Bitcoin Cash's 5.7% gain fits the pattern of a relief bounce rather than a new trend: high-beta assets like BCH tend to outperform in short-term recoveries when the broader market steadies after a shock.\n\nHyperliquid's 3.5% decline stood out against the otherwise green tape. Binance severed access for trading tool SignalPlus following a security warning and issued an alert to affected users — the incident added a layer of unease around exchange security, and trading-focused tokens like HYPE absorbed some of that sentiment. Ethereum's 2.67% gain and Solana's 2.46% rise were the strongest moves among large-caps, both recovering ground lost in Tuesday's volatility. The Fear & Greed index sitting at exactly 50 — the neutral midpoint — captures the session's ambivalence well.",
+  "worthKnowing": [
+    "Binance severed access for trading tool SignalPlus and issued a security alert to affected users following a warning about unauthorized account activity.",
+    "Samsung Wallet launched USDC accounts on Solana for US Galaxy device users, bringing Solana's payment rails to a mainstream consumer audience.",
+    "Kraken's parent company Payward purchased AAVE tokens directly alongside clients, a signal of institutional interest in DeFi blue-chip assets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2678432066466,
+    "btcDominancePct": 59.4443,
+    "ethDominancePct": 10.8307,
+    "fearGreedIndex": 50
+  },
+  "tags": [
+    "us-election-2026",
+    "crypto-legislation",
+    "binance-signalplus",
+    "bitcoin-cash",
+    "hyperliquid",
+    "solana-adoption"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
