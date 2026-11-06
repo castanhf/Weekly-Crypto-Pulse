@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-06T14:15:06.294Z",
+  "publishedAt": "2026-11-06",
+  "slug": "2026-11-06-bitcoin-drops-48-and-xrp-falls-9-as-blowout-jobs-report-crushes-rate-c",
+  "headline": "Bitcoin drops 4.8% and XRP falls 9% as blowout jobs report crushes rate-cut hopes",
+  "summary": "A much stronger-than-expected U.S. jobs report — 165,000 new jobs against a 65,000 forecast — sent a clear signal that the Federal Reserve has little reason to cut interest rates soon, and crypto markets absorbed the blow across the board. Bitcoin fell 4.8% to $75,767, Ethereum slid 6.4% to $2,233, and XRP led major-asset losses with a 9.2% drop. The selling was amplified by more than $1 billion in forced liquidations of bullish bets and over $500 million in ETF outflows, turning what might have been an orderly pullback into a sharper cascade. The Fear & Greed index fell to 28, firmly in fear territory. The one exception was PEPE, the meme coin, which gained 2.9% as some traders rotated into speculative assets at the margins.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "PEPE",
+        "name": "Pepe",
+        "changePct24h": 2.94,
+        "catalyst": "PEPE outperformed the broader market amid a broad crypto selloff, likely benefiting from speculative rotation into meme coins as traders sought high-beta alternatives; no specific fundamental catalyst was identified.",
+        "priceUsd": 0.00000504,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "changePct24h": -9.19,
+        "catalyst": "XRP led losses among major assets, dropping over 9%, as broader post-midterm market risk-off sentiment combined with over $1 billion in bullish liquidations and significant crypto ETF outflows amplified selling pressure across altcoins.",
+        "priceUsd": 1.19,
+        "priceChange24hUsd": -0.11
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75767,
+        "changePct24h": -4.77,
+        "marketCapUsd": 1523322817999,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2233.19,
+        "changePct24h": -6.38,
+        "marketCapUsd": 272884096948,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.03,
+        "marketCapUsd": 177580348612,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 695.33,
+        "changePct24h": -2.18,
+        "marketCapUsd": 91444248157,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.19,
+        "changePct24h": -9.19,
+        "marketCapUsd": 75318010123,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.02,
+        "marketCapUsd": 70273972426,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 90.25,
+        "changePct24h": -5.3,
+        "marketCapUsd": 53272725215,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3184,
+        "changePct24h": 0.2,
+        "marketCapUsd": 30261340122,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.035,
+        "changePct24h": -1.43,
+        "marketCapUsd": 27177012231,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1311.61,
+        "changePct24h": 0.11,
+        "marketCapUsd": 22330860249,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 78.51,
+        "changePct24h": -3.88,
+        "marketCapUsd": 18796477522,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 621.37,
+        "changePct24h": -2.58,
+        "marketCapUsd": 11698747462,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0724,
+        "changePct24h": -4.66,
+        "marketCapUsd": 11333272199,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": -0.01,
+        "marketCapUsd": 9534341879,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 72.82,
+        "changePct24h": -5.24,
+        "marketCapUsd": 8640984575,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story starts with a single economic data point: the U.S. economy added 165,000 jobs in October, more than double the 65,000 analysts had expected. For crypto markets, that number matters because a strong labor market gives the Federal Reserve less reason to cut interest rates. Lower rates tend to push investors toward riskier assets like crypto; higher-for-longer rates do the opposite. The jobs print landed and the selling began.\n\nWhat turned a macro-driven pullback into a sharper drop was the structure of the market itself. A large number of traders had borrowed money to bet on prices rising — these are called long positions, or leveraged bets. When prices fell, automated systems began closing those positions to limit losses, which required selling crypto, which pushed prices lower, which triggered more closures. More than $1 billion in these bullish bets were liquidated over the course of the day.\n\nAt the same time, spot crypto ETFs — the funds that hold actual Bitcoin and Ethereum and trade on traditional stock exchanges — recorded more than $500 million in net outflows. Institutional investors were pulling capital back from risk exposure, removing a source of buying pressure that had supported prices in recent weeks.\n\nXRP bore the heaviest losses among major assets, falling 9.2%. Altcoins with thinner liquidity tend to absorb macro shocks more sharply than Bitcoin, and XRP's drop reflects that dynamic. Ethereum fell 6.4%, also outpacing Bitcoin's 4.8% decline. Zcash and TRON were the only top-15 assets to finish in positive territory, with Zcash's flat-to-positive close likely supported by its NU7 network upgrade going live today.",
+  "worthKnowing": [
+    "Zcash's NU7 network upgrade activated on mainnet today, cutting block times roughly threefold and increasing the speed of private transactions — the likely reason ZEC held flat while the rest of the market sold off.",
+    "Greece enacted new crypto tax legislation today, imposing a 10% capital gains tax on crypto profits and a 15% tax on income earned through DeFi (decentralized finance) protocols, adding a new compliance layer for European participants.",
+    "The Fear & Greed index fell to 28 out of 100, placing market sentiment firmly in 'Fear' territory — a notable shift from the more optimistic readings that had prevailed in recent weeks."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2574964893530,
+    "btcDominancePct": 59.1897,
+    "ethDominancePct": 10.6037,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "btc-etf-outflows",
+    "fed-rate-expectations",
+    "liquidation-cascade",
+    "jobs-report",
+    "zcash-nu7",
+    "greece-crypto-tax"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
