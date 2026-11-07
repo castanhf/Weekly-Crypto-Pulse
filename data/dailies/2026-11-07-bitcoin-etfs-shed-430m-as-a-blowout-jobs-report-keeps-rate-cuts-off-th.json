@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-07T12:58:24.731Z",
+  "publishedAt": "2026-11-07",
+  "slug": "2026-11-07-bitcoin-etfs-shed-430m-as-a-blowout-jobs-report-keeps-rate-cuts-off-th",
+  "headline": "Bitcoin ETFs shed $430M as a blowout jobs report keeps rate cuts off the table",
+  "summary": "A stronger-than-expected October jobs report crushed hopes for near-term Federal Reserve rate cuts, and institutional money responded by pulling $430 million out of Bitcoin spot ETFs — the clearest sign yet that Wall Street's crypto appetite is tied directly to the rate environment. Bitcoin slipped 0.44% to $75,791 and most of the top 20 followed lower, with the Fear & Greed Index sitting at 25 — deep in fear territory. The day's other big story: the U.S. Treasury sanctioned MEXC Global over alleged ties to Iran, North Korea, and Russia, adding fresh regulatory weight to an already cautious market.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "QNT",
+        "name": "Quant",
+        "changePct24h": 3.46,
+        "catalyst": "Quant outperformed on a broadly red day, likely drawing interest from renewed attention to enterprise blockchain interoperability following tokenized stock initiatives from OKX and ICE — a space where Quant's cross-chain technology has a direct use case. No single confirmed catalyst; the move looks like defensive rotation into utility-focused assets.",
+        "priceUsd": 198.32,
+        "priceChange24hUsd": 6.87
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -4.42,
+        "catalyst": "Bitcoin Cash led losses among major assets, absorbing amplified selling pressure in the wake of the October jobs report that reset rate-cut expectations. With Bitcoin ETFs bleeding $430 million and the Fear & Greed Index at 25, risk appetite stayed suppressed and smaller-cap Bitcoin forks bore the brunt.",
+        "priceUsd": 257.71,
+        "priceChange24hUsd": -11.38
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75791,
+        "changePct24h": -0.44,
+        "marketCapUsd": 1524089180077,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2239.67,
+        "changePct24h": -0.09,
+        "marketCapUsd": 273682991322,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0.02,
+        "marketCapUsd": 176888265746,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 693.68,
+        "changePct24h": -0.35,
+        "marketCapUsd": 91227193090,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.16,
+        "changePct24h": -2.99,
+        "marketCapUsd": 73635342224,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.02,
+        "marketCapUsd": 70516137991,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 89.75,
+        "changePct24h": -0.91,
+        "marketCapUsd": 53041330733,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3195,
+        "changePct24h": 0.46,
+        "marketCapUsd": 30363076523,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.022,
+        "changePct24h": 0,
+        "marketCapUsd": 26885016143,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1287.74,
+        "changePct24h": -2.43,
+        "marketCapUsd": 21928357149,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.84,
+        "changePct24h": -1.27,
+        "marketCapUsd": 18635938453,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 612.36,
+        "changePct24h": -1.68,
+        "marketCapUsd": 11529418359,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0717,
+        "changePct24h": -1.19,
+        "marketCapUsd": 11233726643,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0.01,
+        "marketCapUsd": 8785956529,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 72.86,
+        "changePct24h": -0.42,
+        "marketCapUsd": 8645431636,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The October jobs report landed well above expectations, and the market's reaction was swift: if the U.S. economy is still running hot, the Federal Reserve has less reason to cut interest rates anytime soon. That matters for crypto because the 2024–2025 rally was partly built on the assumption that cheaper money was coming. When that assumption gets challenged, institutional investors — the ones who came in through Bitcoin ETFs — tend to pull back first.\n\nThe $430 million in ETF outflows reported today is the clearest measure of that pullback. These are not retail traders panic-selling; they are fund managers reducing risk exposure in response to a macro data point. Bitcoin fell only 0.44% on the day, which actually understates the pressure — the ETF outflow number tells a more complete story than the price move alone.\n\nXRP dropped 2.99% and Zcash fell 2.43%, both tracking the broader risk-off tone without a specific catalyst of their own. Solana slid 0.91%. The one exception was Quant, which gained 3.46% — a move that appears linked to fresh attention on enterprise blockchain interoperability, following news that OKX and ICE are pursuing tokenized stock initiatives. Quant's technology sits directly in that space, and on a day when most assets fell, that relative strength stood out.\n\nThe Fear & Greed Index at 25 confirms what the price action suggests: the market is in fear territory, not panic, but not comfortable either. The macro backdrop — a strong labor market keeping rates elevated — is the dominant force right now.",
+  "worthKnowing": [
+    "The U.S. Treasury sanctioned MEXC Global, cutting the exchange off from the U.S. financial system over alleged facilitation of roughly $16 billion in transactions tied to Iran, North Korea, and Russia.",
+    "The Trump administration moved closer to allowing crypto allocations inside U.S. 401(k) retirement plans, a policy shift that would open a significant new pool of institutional demand.",
+    "Apple and Meta declined to participate in OKX and ICE's tokenized stock initiative, leaving crypto-native firms as the primary players in that emerging market.",
+    "Greece passed a crypto tax law imposing a 10% levy on capital gains and 15% on income from staking and DeFi — one of the more detailed tax frameworks enacted in Europe so far."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2567865484781,
+    "btcDominancePct": 59.3147,
+    "ethDominancePct": 10.6454,
+    "fearGreedIndex": 25
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "mexc-sanctions",
+    "401k-crypto",
+    "tokenized-stocks",
+    "greece-crypto-tax",
+    "fed-rate-expectations"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
