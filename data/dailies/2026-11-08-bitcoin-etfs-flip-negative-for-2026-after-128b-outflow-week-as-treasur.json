@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-08T13:15:33.181Z",
+  "publishedAt": "2026-11-08",
+  "slug": "2026-11-08-bitcoin-etfs-flip-negative-for-2026-after-128b-outflow-week-as-treasur",
+  "headline": "Bitcoin ETFs flip negative for 2026 after $1.28B outflow week as Treasury moves against MEXC",
+  "summary": "A brutal week for Bitcoin ETFs — $1.28 billion in net outflows erased all 2026 inflows — pushed the Fear & Greed Index to 28, deep into fear territory. The broader market barely moved in price terms, but the institutional selling pressure and a Treasury action targeting offshore exchange MEXC set a distinctly risk-off tone. The day's real story is structural: the smart money that piled into BTC ETFs earlier this year is now heading for the exits, and regulators are tightening the screws on exchanges operating outside U.S. oversight.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "changePct24h": 4.25,
+        "catalyst": "Figure Heloc's tokenized HELOC product (a home-equity line of credit packaged as a blockchain token) gained 4.25% as traders rotated toward yield-bearing real-world asset tokens while Bitcoin ETF outflows weighed on speculative positions. No specific news catalyst was identified.",
+        "priceUsd": 1.066,
+        "priceChange24hUsd": 0.05
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "BCH",
+        "name": "Bitcoin Cash",
+        "changePct24h": -4.78,
+        "catalyst": "Bitcoin Cash fell 4.78%, pressured by the broader risk-off sentiment following the $1.28 billion Bitcoin ETF outflow week and a Fear & Greed Index of 28. No BCH-specific catalyst was identified.",
+        "priceUsd": 245.05,
+        "priceChange24hUsd": -11.71
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 75887,
+        "changePct24h": 0.07,
+        "marketCapUsd": 1526050707431,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2236.92,
+        "changePct24h": -0.12,
+        "marketCapUsd": 273353824370,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.01,
+        "marketCapUsd": 176868920412,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 697.81,
+        "changePct24h": 0.58,
+        "marketCapUsd": 91770278434,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.16,
+        "changePct24h": 0.16,
+        "marketCapUsd": 73865851479,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 70457223679,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 89.48,
+        "changePct24h": -0.22,
+        "marketCapUsd": 52883207540,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3202,
+        "changePct24h": 0.18,
+        "marketCapUsd": 30424931062,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.066,
+        "changePct24h": 4.25,
+        "marketCapUsd": 28101001218,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1270.8,
+        "changePct24h": -1.06,
+        "marketCapUsd": 21641750222,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 77.48,
+        "changePct24h": -0.14,
+        "marketCapUsd": 18549667199,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 602.57,
+        "changePct24h": -1.67,
+        "marketCapUsd": 11345375792,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0712,
+        "changePct24h": -0.77,
+        "marketCapUsd": 11153439839,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 8832833970,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 72.85,
+        "changePct24h": -0.04,
+        "marketCapUsd": 8644609587,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The headline number today isn't a price — it's $1.28 billion. That's how much left Bitcoin ETFs over the past week, the worst outflow stretch since June and enough to wipe out every dollar of net inflows recorded in 2026. The Fear & Greed Index sitting at 28 (\"Fear\") reflects the mood: institutional buyers who drove the ETF boom earlier this year are now net sellers, and retail sentiment has followed.\n\nBitcoin itself barely moved — up just 0.07% to $75,887 — which is almost more unsettling than a sharp drop. The price is holding, but the underlying demand picture has deteriorated. Ethereum dipped 0.12% to $2,236.92. Most of the top 15 tracked assets moved less than 1% in either direction, a sign of a market in a holding pattern rather than active selling.\n\nThe one notable exception was Figure Heloc, up 4.25%, as traders rotated toward tokenized real-world assets — products that generate yield from things like home-equity loans — while speculative positions in large-cap crypto faced redemption pressure.\n\nOn the regulatory front, the U.S. Treasury moved to cut off MEXC, an offshore exchange accused of facilitating $16 billion in alleged illicit flows. Actions like this — targeting the pipes that connect global crypto trading to the U.S. financial system — have historically tightened liquidity conditions for assets that rely on offshore venues for price discovery.",
+  "worthKnowing": [
+    "Binance's CFO stepped down nine days after a reported $6 billion hack; management says the departure was planned six months in advance, but the timing has raised governance questions about the world's largest crypto exchange.",
+    "Binance is closing accounts for users in several European countries by year-end, requiring them to withdraw assets before new fees take effect — part of an accelerating regulatory retreat from the EU.",
+    "A security breach at Gnosis Pay exposed card numbers, home addresses, and linked crypto wallet data, a reminder that crypto-connected payment products carry the same custodial risks as traditional fintech."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2536369476427,
+    "btcDominancePct": 59.9706,
+    "ethDominancePct": 10.7426,
+    "fearGreedIndex": 28
+  },
+  "tags": [
+    "btc-etf-outflows",
+    "treasury-mexc-enforcement",
+    "binance-hack-cfo",
+    "real-world-assets",
+    "gnosis-pay-breach",
+    "fear-greed"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
