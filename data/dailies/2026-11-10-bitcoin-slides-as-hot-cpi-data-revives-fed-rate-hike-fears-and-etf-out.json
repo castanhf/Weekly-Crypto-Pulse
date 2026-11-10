@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-10T14:51:53.724Z",
+  "publishedAt": "2026-11-10",
+  "slug": "2026-11-10-bitcoin-slides-as-hot-cpi-data-revives-fed-rate-hike-fears-and-etf-out",
+  "headline": "Bitcoin slides as hot CPI data revives Fed rate-hike fears and ETF outflows mount",
+  "summary": "October's inflation reading came in hotter than expected — CPI up 0.4% for the month — and traders quickly repriced the odds of a December Fed rate hike, sending Bitcoin down 0.46% to $74,093 and pulling most of the top 20 lower. The pressure wasn't just macro: spot Bitcoin ETFs saw accelerating outflows at the same time miner MARA disclosed it sold nearly 13,600 BTC over six weeks and plans to keep selling. Ethereum fell 2.1%, Solana dropped 3.4%, and the Fear & Greed index sits at 32 — squarely in fear territory. The one bright spot was Gram, the Telegram-native token, which gained 4.5% after its wallet product rebranded and launched as a standalone trading app.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "changePct24h": 4.52,
+        "catalyst": "The Telegram-native crypto wallet rebranded to Walt and launched as a standalone trading app, driving renewed attention to the Gram ecosystem and its user base. This product independence narrative boosted sentiment around the token.",
+        "priceUsd": 1.096,
+        "priceChange24hUsd": 0.05
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -15.96,
+        "catalyst": "No specific catalyst identified; the move appears technical amid a broad risk-off session driven by hotter-than-expected CPI data.",
+        "priceUsd": 0.00395434,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 74093,
+        "changePct24h": -0.46,
+        "marketCapUsd": 1489741590581,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 2076.27,
+        "changePct24h": -2.09,
+        "marketCapUsd": 253649724754,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 176883324089,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 685.61,
+        "changePct24h": 0.29,
+        "marketCapUsd": 90157481330,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.01,
+        "marketCapUsd": 69953815400,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.066,
+        "changePct24h": -2.6,
+        "marketCapUsd": 67649504653,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 84.16,
+        "changePct24h": -3.4,
+        "marketCapUsd": 49717058125,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.319,
+        "changePct24h": 0.45,
+        "marketCapUsd": 30314219623,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.047,
+        "changePct24h": -0.14,
+        "marketCapUsd": 27628852095,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 1181.76,
+        "changePct24h": -3.22,
+        "marketCapUsd": 20121036491,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 73.13,
+        "changePct24h": -1.57,
+        "marketCapUsd": 17495666128,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0692,
+        "changePct24h": -0.79,
+        "marketCapUsd": 10827211777,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 548.97,
+        "changePct24h": -8.06,
+        "marketCapUsd": 10334394301,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 1,
+        "changePct24h": 0,
+        "marketCapUsd": 8602383194,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.35,
+        "changePct24h": 0.68,
+        "marketCapUsd": 8596472515,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was a hotter-than-expected US inflation report. October CPI rose 0.4% month-over-month, above forecasts, and the core rate — which strips out food and energy — came in at 0.3%. That was enough to shift market expectations toward a December Fed rate hike, which tends to be negative for risk assets including crypto. Bitcoin fell 0.46% to $74,093, but the macro print was only part of the story.\n\nTwo supply-side forces compounded the pressure on Bitcoin specifically. First, spot Bitcoin ETFs saw accelerating outflows — institutional money exiting the funds that have been a key demand driver since their January 2024 launch. Second, mining company MARA disclosed it sold 13,597 BTC — roughly $1.1 billion worth — over the past six weeks and signaled it plans to continue. That combination of ETF redemptions and miner liquidation created meaningful selling pressure at a moment when the macro backdrop was already unfavorable.\n\nNotably, Bitcoin declined even as US equities rebounded on the day, a divergence that underscores how much of BTC's recent support has come from ETF-driven institutional flows rather than broad risk appetite. When those flows reverse, Bitcoin loses the cushion that had been keeping it elevated relative to other risk assets.\n\nEthereum fell 2.1% to $2,076, Solana dropped 3.4% to $84.16, and Monero slid 8.1% — the sharpest decline among the top 15 tracked assets. The Fear & Greed index at 32 reflects the cautious tone across the market.",
+  "worthKnowing": [
+    "Coinbase, Kalshi, and Payward (Kraken's parent) filed briefs backing the CFTC in a lawsuit over single-stock perpetual futures — a case that could define where the regulatory line sits between crypto derivatives and traditional finance.",
+    "Gram's wallet product, previously embedded inside Telegram, rebranded to Walt and launched as a standalone trading app, expanding its reach beyond Telegram's user base.",
+    "Monero fell 8.1% on the day with no clear catalyst identified — the move stands out given the broader market's relatively contained losses."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2476726592569,
+    "btcDominancePct": 59.6184,
+    "ethDominancePct": 10.1416,
+    "fearGreedIndex": 32
+  },
+  "tags": [
+    "cpi-inflation",
+    "fed-rate-hike",
+    "bitcoin-etf-outflows",
+    "mara-miner-selling",
+    "gram-walt-rebrand",
+    "cftc-derivatives"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
