@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-13T14:33:50.640Z",
+  "publishedAt": "2026-11-13",
+  "slug": "2026-11-13-bitcoin-hits-a-12-week-low-as-a-surging-dollar-triggers-16-billion-in-",
+  "headline": "Bitcoin hits a 12-week low as a surging dollar triggers $1.6 billion in crypto liquidations.",
+  "summary": "A hawkish shift in U.S. interest rate expectations sent the dollar sharply higher, pushing Bitcoin down 4% to $69,269 — its lowest level in three months — and triggering over $1.6 billion in forced liquidations across the market. The selloff exposed cracks in leveraged crypto strategies: one Ethereum treasury firm sold ETH at a loss to keep a $64 million DeFi loan afloat, and Bitcoin firm Nakamoto now owes Kraken more than its entire market value. Most of the top 15 assets fell, though Hyperliquid and NEAR Protocol bucked the trend.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 6.16,
+        "catalyst": "NEAR outperformed on a broadly risk-off day, likely benefiting from rotation into mid-cap layer-1 assets as traders sought alternatives amid Bitcoin's continued slide. No specific fundamental catalyst was identified.",
+        "priceUsd": 3.57,
+        "priceChange24hUsd": 0.22
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "changePct24h": -8.06,
+        "catalyst": "Gram was the session's worst performer, dropping over 8% as dollar strength, rising rate expectations, and $1.6 billion in crypto liquidations weighed heavily on smaller-cap assets. No Gram-specific catalyst was identified.",
+        "priceUsd": 1.13,
+        "priceChange24hUsd": -0.09
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 69269,
+        "changePct24h": -4.04,
+        "marketCapUsd": 1393102975883,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1964.32,
+        "changePct24h": -1.64,
+        "marketCapUsd": 240070552721,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 175565237014,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 641.05,
+        "changePct24h": -1.79,
+        "marketCapUsd": 84305421870,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.01,
+        "marketCapUsd": 69040968141,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 1.031,
+        "changePct24h": 0.68,
+        "marketCapUsd": 65467292487,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 81.34,
+        "changePct24h": 0.6,
+        "marketCapUsd": 48115355430,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3133,
+        "changePct24h": -0.69,
+        "marketCapUsd": 29779316543,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.001,
+        "changePct24h": -5.89,
+        "marketCapUsd": 26618396861,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 73.92,
+        "changePct24h": 6.03,
+        "marketCapUsd": 17573439322,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 960.77,
+        "changePct24h": -0.17,
+        "marketCapUsd": 16370687202,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.066,
+        "changePct24h": 1.48,
+        "marketCapUsd": 10347516456,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 535.25,
+        "changePct24h": -1.79,
+        "marketCapUsd": 10079073983,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9998,
+        "changePct24h": 0,
+        "marketCapUsd": 8571430950,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.26,
+        "changePct24h": 0.51,
+        "marketCapUsd": 8520289030,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story was macro, not crypto-specific. Markets repriced U.S. interest rate expectations upward, sending the dollar sharply higher and pulling risk assets down with it. Bitcoin bore the brunt, falling 4% to $69,269 — a 12-week low — as the stronger dollar made dollar-denominated assets less attractive to international buyers and prompted leveraged traders to cut positions. The cascade was significant: over $1.6 billion in crypto positions were forcibly liquidated across the market in 24 hours.\n\nThe selloff also exposed how fragile some leveraged crypto strategies have become. BTCS, a firm that holds Ethereum as a treasury asset, was forced to sell ETH at a loss to maintain the collateral health of a $64 million loan on Aave (a decentralized lending protocol). Separately, Bitcoin firm Nakamoto disclosed it owes Kraken $165 million — more than its entire market capitalization — raising real questions about its solvency.\n\nOn the institutional side, U.S. spot Bitcoin ETFs have now recorded cumulative net outflows of more than $1.5 billion for 2026, reflecting sustained de-risking by fund investors. The Fear & Greed index sits at 20, deep in \"Extreme Fear\" territory.\n\nA few assets moved against the trend. Hyperliquid gained 6% and NEAR Protocol rose 6.2%, with traders rotating into mid-cap alternatives as Bitcoin's slide continued. XRP and Solana also held flat to slightly positive, suggesting some selective capital movement rather than a uniform flight to cash.",
+  "worthKnowing": [
+    "JPMorgan reported a 36% rise in its holdings of Strategy shares and disclosed $540 million in BlackRock's Bitcoin ETF, indicating some large institutional players are maintaining or adding exposure even as the broader market sells off.",
+    "Bitcoin firm Nakamoto owes Kraken $165 million — a figure that exceeds its entire market capitalization — adding to concerns about the viability of leveraged Bitcoin treasury strategies.",
+    "BTCS, an Ethereum treasury firm, sold ETH at a loss to keep a $64 million Aave loan from being liquidated, a concrete example of the DeFi deleveraging pressure building during this downturn.",
+    "Cumulative net outflows from U.S. spot Bitcoin ETFs have crossed $1.5 billion for 2026, the largest sustained institutional exit since the ETFs launched."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2356747134633,
+    "btcDominancePct": 58.9602,
+    "ethDominancePct": 10.1494,
+    "fearGreedIndex": 20
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "liquidations",
+    "defi-deleveraging",
+    "nakamoto-insolvency",
+    "btcs-aave",
+    "dollar-strength"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
