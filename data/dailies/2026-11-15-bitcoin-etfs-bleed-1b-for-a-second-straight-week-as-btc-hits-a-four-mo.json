@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-15T14:01:23.888Z",
+  "publishedAt": "2026-11-15",
+  "slug": "2026-11-15-bitcoin-etfs-bleed-1b-for-a-second-straight-week-as-btc-hits-a-four-mo",
+  "headline": "Bitcoin ETFs bleed $1B for a second straight week as BTC hits a four-month low near $62K.",
+  "summary": "Two consecutive weeks of $1 billion in Bitcoin ETF outflows have crystallized into a broad crypto selloff — Bitcoin touched a four-month low near $62K during the session, extending a six-week losing streak, while Ethereum fell over 3% and XRP hit its lowest level since late 2024. The Fear & Greed index sits at an extreme 10, deep in fear territory. Privacy coins were the lone bright spot, with Zcash gaining 3.45% as traders rotated into assets seen as hedges against surveillance risk.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": 3.45,
+        "catalyst": "Zcash outperformed the broader market amid a flight to privacy assets as macro crypto sentiment deteriorated sharply, with traders rotating into privacy coins like ZEC and XMR as a hedge against regulatory and surveillance concerns — a move amplified by the extreme fear environment gripping the wider market.",
+        "priceUsd": 911.36,
+        "priceChange24hUsd": 31.42
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "changePct24h": -7.99,
+        "catalyst": "Avalanche was among the hardest-hit major assets as accelerating liquidations and a second consecutive week of $1 billion in Bitcoin ETF outflows deepened the crypto-wide selloff, with risk-off sentiment disproportionately punishing mid-cap layer-1 tokens. No Avalanche-specific catalyst was identified; the decline appears driven by broad market capitulation.",
+        "priceUsd": 7.31,
+        "priceChange24hUsd": -0.58
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 65408,
+        "changePct24h": -1.91,
+        "marketCapUsd": 1315499955061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1829.75,
+        "changePct24h": -3.15,
+        "marketCapUsd": 223634502061,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9996,
+        "changePct24h": 0.02,
+        "marketCapUsd": 175322002908,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 595.76,
+        "changePct24h": -1.88,
+        "marketCapUsd": 78349044380,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9998,
+        "changePct24h": 0.01,
+        "marketCapUsd": 69091945099,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9716,
+        "changePct24h": -2.01,
+        "marketCapUsd": 61714593885,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 72.62,
+        "changePct24h": -3.75,
+        "marketCapUsd": 42966123398,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3068,
+        "changePct24h": -1.76,
+        "marketCapUsd": 29157696209,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.066,
+        "changePct24h": 1.89,
+        "marketCapUsd": 28433892105,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 68.1,
+        "changePct24h": 0.09,
+        "marketCapUsd": 16189909637,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 911.36,
+        "changePct24h": 3.45,
+        "marketCapUsd": 15532135451,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 503.06,
+        "changePct24h": -4.89,
+        "marketCapUsd": 9473278986,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0593,
+        "changePct24h": -5.09,
+        "marketCapUsd": 9294621299,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9997,
+        "changePct24h": 0,
+        "marketCapUsd": 8546504352,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.15,
+        "changePct24h": -1.63,
+        "marketCapUsd": 8415656242,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The proximate driver is institutional money leaving Bitcoin ETFs — $1 billion in net outflows for the second consecutive week, according to The Block. That kind of sustained institutional exit removes a significant source of buying pressure and signals that larger funds are reducing crypto exposure. The downstream effect is a broad selloff: Bitcoin touched a four-month low near $62K during the session, extending what is now a six-week losing streak. Ethereum fell 3.15%, Solana dropped 3.75%, and Dogecoin slid over 5%. XRP fell to its lowest level since November 2024 as capital continued leaving the asset class. Avalanche was the hardest-hit major name, down nearly 8%, with no asset-specific catalyst — the move reflects the broader pattern of mid-cap layer-1 tokens absorbing outsized losses during risk-off episodes. The Fear & Greed index at 10 — deep in Extreme Fear territory — confirms the sentiment picture. The one exception was privacy coins: Zcash gained 3.45% while most of the market fell. Traders appear to have rotated a portion of capital into assets perceived as resistant to regulatory surveillance, a pattern that has appeared in prior periods of macro crypto stress.",
+  "worthKnowing": [
+    "Kava's lending protocol lost roughly $3.8 million to a hack, sending the KAVA token down nearly 40% — adding to negative sentiment around DeFi on an already difficult day.",
+    "XRP fell to its lowest level since November 2024 as broad capital outflows hit major altcoins particularly hard, according to CoinDesk.",
+    "The UK, Singapore, and Thailand central banks are piloting cross-border foreign exchange settlement infrastructure using stablecoin and tokenization technology, signaling growing institutional interest in the underlying rails even as crypto markets sell off."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2212114846038,
+    "btcDominancePct": 59.4406,
+    "ethDominancePct": 10.1061,
+    "fearGreedIndex": 10
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "extreme-fear",
+    "privacy-coins",
+    "kava-hack",
+    "avalanche",
+    "zcash",
+    "defi-exploit"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
