@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-16T15:35:17.614Z",
+  "publishedAt": "2026-11-16",
+  "slug": "2026-11-16-bitcoin-posts-its-sixth-straight-weekly-loss-as-fear-greed-hits-extrem",
+  "headline": "Bitcoin posts its sixth straight weekly loss as Fear & Greed hits extreme fear at 10",
+  "summary": "A weekend liquidation event wiped out $2 billion in leveraged positions, and Bitcoin has yet to recover — it's hovering near $64K and now down six weeks in a row, its longest losing streak in over a year. The Fear & Greed Index sits at 10, deep in extreme fear territory. Ethereum held up better than most, and Solana marked a genuine milestone by dropping its 'beta' label — but neither was enough to lift sentiment on a day when the broader market, including the Nasdaq, was under pressure.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": 111.99,
+        "catalyst": "Rain surged over 111% with no specific public catalyst identified — the move appears to reflect thin liquidity and speculative activity in a low-volume token during a broad market selloff.",
+        "priceUsd": 0.00787489,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -4.69,
+        "catalyst": "Zcash fell nearly 5% amid a broad crypto market selloff, with BTC hitting multi-month lows and the Fear & Greed Index at extreme fear (10). As a privacy coin with thinner liquidity, ZEC amplified broader market weakness with no specific positive catalyst to offset selling pressure.",
+        "priceUsd": 851.66,
+        "priceChange24hUsd": -39.91
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 64247,
+        "changePct24h": -0.66,
+        "marketCapUsd": 1291473313564,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1810.46,
+        "changePct24h": 0.13,
+        "marketCapUsd": 221150486595,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9993,
+        "changePct24h": -0.03,
+        "marketCapUsd": 175277219563,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 585.69,
+        "changePct24h": -0.81,
+        "marketCapUsd": 76986096980,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.02,
+        "marketCapUsd": 69031168001,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9465,
+        "changePct24h": -1.21,
+        "marketCapUsd": 60070416635,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 70.23,
+        "changePct24h": -1.51,
+        "marketCapUsd": 41525655449,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3048,
+        "changePct24h": -0.38,
+        "marketCapUsd": 28969598771,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.056,
+        "changePct24h": 0,
+        "marketCapUsd": 28204705132,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 66,
+        "changePct24h": -1.81,
+        "marketCapUsd": 15688707419,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 851.66,
+        "changePct24h": -4.69,
+        "marketCapUsd": 14486258495,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 496.96,
+        "changePct24h": -0.33,
+        "marketCapUsd": 9367364906,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0584,
+        "changePct24h": -0.04,
+        "marketCapUsd": 9143655588,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.2,
+        "changePct24h": 0.59,
+        "marketCapUsd": 8465905722,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0.05,
+        "marketCapUsd": 8429677042,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The week's main story is a slow-motion pressure campaign on Bitcoin. A weekend liquidation event — $2 billion in leveraged positions wiped out as BTC briefly touched its lowest level since July 14 — left the market fragile heading into Monday. Bitcoin is now down six consecutive weeks, its longest losing streak in recent memory, and the Fear & Greed Index at 10 reflects genuine distress rather than routine caution.\n\nThe macro backdrop is not helping. The Nasdaq fell 2% on the same session, reinforcing that this isn't purely a crypto-specific event — risk assets broadly are under pressure, and Bitcoin is moving with them rather than against them.\n\nMichael Saylor's Strategy purchased another 485 BTC for roughly $33 million during the dip, continuing its long-running accumulation program. The purchase confirms that at least one large institutional buyer remained active at current prices, though it did not arrest the broader selloff.\n\nEthereum was the relative bright spot, edging up 0.13% — a meaningful divergence from the rest of the top 15, most of which closed lower. Vitalik Buterin's public endorsement of an accelerated path to quantum-resistant cryptography gave ETH a distinct narrative on an otherwise grim day. Quantum resistance refers to redesigning Ethereum's cryptographic foundations so they remain secure against future quantum computers — a long-horizon concern, but one that Buterin is now treating with more urgency.\n\nSolana dropped its 'mainnet beta' label and formally launched as protocol version 1.0 after more than six years — a genuine maturity milestone. SOL still fell 1.51% on the day, suggesting the market was more focused on macro pressure than the network news.",
+  "worthKnowing": [
+    "Vitalik Buterin publicly backed an accelerated timeline for quantum-resistant cryptography on Ethereum, framing it as a higher-priority upgrade than previously signaled.",
+    "Solana officially removed its 'mainnet beta' designation and launched as protocol version 1.0, ending more than six years of beta status.",
+    "DBS and JPMorgan went live with instant cross-border tokenized deposit transfers between the US and Singapore — one of the first live deployments of tokenized settlement between major global banks.",
+    "Strategy purchased 485 BTC for approximately $33 million during the weekend dip, extending its ongoing accumulation program."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2205225050910,
+    "btcDominancePct": 58.5618,
+    "ethDominancePct": 10.0032,
+    "fearGreedIndex": 10
+  },
+  "tags": [
+    "bitcoin-losing-streak",
+    "extreme-fear",
+    "solana-v1",
+    "ethereum-quantum-resistance",
+    "strategy-btc-purchase",
+    "tokenized-deposits"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
