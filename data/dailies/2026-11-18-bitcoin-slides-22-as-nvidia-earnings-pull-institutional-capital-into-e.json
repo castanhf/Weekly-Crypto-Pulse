@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-18T15:39:07.064Z",
+  "publishedAt": "2026-11-18",
+  "slug": "2026-11-18-bitcoin-slides-22-as-nvidia-earnings-pull-institutional-capital-into-e",
+  "headline": "Bitcoin slides 2.2% as Nvidia earnings pull institutional capital into equities ahead of expected Fed rate hike",
+  "summary": "A one-two punch hit crypto today: strong Nvidia earnings drew institutional money toward equities, and mounting expectations of a Federal Reserve rate hike weighed on risk assets across the board. Bitcoin fell 2.2% to $63,570 and Ethereum dropped 2.26% to $1,772, with the Fear & Greed Index sitting at an extreme-fear reading of 11. The session's standout story is what the macro backdrop is doing to miners — MARA sold $1 billion in BTC to service debt, then immediately raised $185 million more, a sign of how much pressure the current environment is putting on publicly listed mining operations.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "CC",
+        "name": "Canton",
+        "changePct24h": 2.48,
+        "catalyst": "Canton gained 2.48% as institutional blockchain adoption narratives strengthened, with Hyundai testing AI agent commerce on JPMorgan's Kinexys blockchain highlighting enterprise demand for permissioned networks. The broader risk-off environment made Canton's relative outperformance notable against a sea of red.",
+        "priceUsd": 0.083014,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -11.75,
+        "catalyst": "Rain dropped 11.75% with no specific catalyst identifiable; the decline likely reflects broader market weakness with the Fear & Greed Index at 11 and BTC sliding amid Fed rate hike expectations.",
+        "priceUsd": 0.00470914,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 63570,
+        "changePct24h": -2.2,
+        "marketCapUsd": 1278417691338,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1772.62,
+        "changePct24h": -2.26,
+        "marketCapUsd": 216629041457,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": -0.01,
+        "marketCapUsd": 175303477548,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 586.19,
+        "changePct24h": -1.11,
+        "marketCapUsd": 77081517856,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 68824669374,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9815,
+        "changePct24h": 0.94,
+        "marketCapUsd": 62326242713,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 73.97,
+        "changePct24h": 0.28,
+        "marketCapUsd": 43772529787,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3102,
+        "changePct24h": 0.67,
+        "marketCapUsd": 29482475282,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.007,
+        "changePct24h": -3.04,
+        "marketCapUsd": 27020395493,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 67.22,
+        "changePct24h": -3.22,
+        "marketCapUsd": 15974162865,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 934.03,
+        "changePct24h": -1.53,
+        "marketCapUsd": 15918886976,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 499.48,
+        "changePct24h": -1.32,
+        "marketCapUsd": 9397402022,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.059,
+        "changePct24h": -0.61,
+        "marketCapUsd": 9244595735,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.3,
+        "changePct24h": 0.01,
+        "marketCapUsd": 8554764058,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDS",
+        "name": "USDS",
+        "priceUsd": 0.9999,
+        "changePct24h": 0,
+        "marketCapUsd": 8456509810,
+        "isStablecoin": true
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two macro forces converged today to push crypto lower. First, Nvidia reported blowout earnings, which sent stock index futures higher and pulled institutional capital toward equities — the kind of rotation that tends to drain liquidity from Bitcoin and other risk assets in the short term. Second, and more persistently, markets are pricing in a Federal Reserve rate hike, which raises the cost of holding speculative assets and has historically weighed on both Bitcoin and gold. Notably, Bitcoin is holding up relatively better than gold in this environment, though both are under pressure.\n\nThe miner stress story is worth watching closely. MARA — one of the largest publicly listed Bitcoin mining companies — sold roughly $1 billion in BTC to pay down debt, then turned around and raised $185 million in new debt the same day. That cycle of liquidation and re-leveraging reflects the financial squeeze that lower BTC prices and higher borrowing costs are creating for miners who expanded aggressively during the bull run.\n\nAmong the top 15, Hyperliquid fell 3.22% and Figure Heloc dropped 3.04%, both outpacing Bitcoin's decline. XRP (+0.94%), Solana (+0.28%), and TRON (+0.67%) were the only non-stablecoin assets in the tracked group to finish in positive territory, though none moved enough to suggest a genuine counter-trend. The Fear & Greed Index at 11 — deep in extreme fear — reflects how broadly the negative sentiment has spread.",
+  "worthKnowing": [
+    "Circle and DBS Bank have partnered to let eligible institutions across Asia mint and redeem USDC around the clock, a significant expansion of stablecoin settlement infrastructure in the region.",
+    "Hong Kong's central bank is piloting AI-driven tools to detect crypto-related financial crime in real time, signaling tighter regulatory surveillance in one of Asia's key crypto markets.",
+    "Hyundai is testing AI agent commerce on JPMorgan's Kinexys blockchain, a development that contributed to Canton's outperformance today as enterprise interest in permissioned networks remains active despite the broader selloff."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2191280574280,
+    "btcDominancePct": 58.2506,
+    "ethDominancePct": 9.8714,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-miners",
+    "fed-rate-hike",
+    "nvidia-earnings",
+    "mara-debt",
+    "dbs-usdc",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
