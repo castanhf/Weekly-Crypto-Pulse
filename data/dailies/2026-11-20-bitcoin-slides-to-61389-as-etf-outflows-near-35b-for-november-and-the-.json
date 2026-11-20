@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-20T15:24:08.941Z",
+  "publishedAt": "2026-11-20",
+  "slug": "2026-11-20-bitcoin-slides-to-61389-as-etf-outflows-near-35b-for-november-and-the-",
+  "headline": "Bitcoin slides to $61,389 as ETF outflows near $3.5B for November and the CFTC rejects special rules for onchain trading",
+  "summary": "A third consecutive day of Bitcoin declines pushed the total crypto market cap below $2.12 trillion, with the Fear & Greed Index hitting 12 — deep in Extreme Fear territory. Two catalysts drove the session: US spot Bitcoin ETFs recorded $582 million in single-day net outflows, bringing November's cumulative redemptions close to $3.5 billion, and the CFTC announced it would not create tailored rules for onchain trading venues, hitting Hyperliquid particularly hard. Ark Invest added pressure by trimming its Ethereum and Solana staking ETF positions to fund a $90 million purchase of Anthropic shares — a visible sign of institutional capital moving from crypto into AI equities. The selloff was broad: every asset in the top 15 finished lower, with privacy coins Zcash and Monero among the hardest hit.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "USYC",
+        "name": "Circle USYC",
+        "changePct24h": 0.05,
+        "catalyst": "Circle's USYC, a yield-bearing stablecoin product, posted a marginal gain as investors rotated into low-risk, yield-generating instruments amid broad market fear. The +0.05% move is effectively flat — an artifact of the instrument's yield accrual rather than a market signal.",
+        "priceUsd": 1.14,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -19.04,
+        "catalyst": "Rain dropped nearly 19% with no specific catalyst identifiable from the available news; the decline likely reflects broader risk-off pressure as total crypto market cap fell and Bitcoin ETF outflows accelerated toward $3.5 billion for November.",
+        "priceUsd": 0.00356096,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 61389,
+        "changePct24h": -3.67,
+        "marketCapUsd": 1235040080062,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1728.84,
+        "changePct24h": -4.47,
+        "marketCapUsd": 211405404674,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9992,
+        "changePct24h": 0,
+        "marketCapUsd": 175100373609,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 567.11,
+        "changePct24h": -4.2,
+        "marketCapUsd": 74590243089,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9997,
+        "changePct24h": 0.01,
+        "marketCapUsd": 68333343736,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9365,
+        "changePct24h": -5.49,
+        "marketCapUsd": 59511614313,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 70.51,
+        "changePct24h": -6.41,
+        "marketCapUsd": 41740537789,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3053,
+        "changePct24h": -1.8,
+        "marketCapUsd": 29006844371,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.015,
+        "changePct24h": -1.23,
+        "marketCapUsd": 27367436353,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 63.03,
+        "changePct24h": -9.14,
+        "marketCapUsd": 14979876086,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 810.94,
+        "changePct24h": -13.98,
+        "marketCapUsd": 13831461429,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0559,
+        "changePct24h": -6.28,
+        "marketCapUsd": 8766765533,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 452.26,
+        "changePct24h": -10.27,
+        "marketCapUsd": 8519233483,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.25,
+        "changePct24h": -0.87,
+        "marketCapUsd": 8508791037,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 59.43,
+        "changePct24h": -3.91,
+        "marketCapUsd": 7049135285,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Three named catalysts converged to produce one of November's worst sessions. First, US spot Bitcoin ETFs recorded $582 million in net outflows on Friday alone — the largest single-day exit in weeks — pushing November's cumulative redemptions close to $3.5 billion. When institutional money exits ETFs at that pace, it creates sustained sell pressure on BTC that ripples across the market. Bitcoin fell 3.67% to $61,389; Ethereum dropped 4.47% to $1,728.84; Solana slid 6.41% to $70.51.\n\nSecond, the CFTC announced it would not create a tailored regulatory framework for onchain trading venues — a direct rejection of arguments that decentralized exchanges deserve different treatment from traditional platforms. Hyperliquid, whose token is closely tied to the fortunes of its onchain perpetuals exchange, fell 9.14% to $63.03 in direct response. The ruling also signals a harder compliance environment for the broader decentralized finance sector.\n\nThird, Ark Invest trimmed its Ethereum and Solana staking ETF positions to fund a $90 million purchase of Anthropic shares on the AI company's market debut. The move is a concrete example of institutional capital rotating out of crypto and into AI equities — and it added visible downward pressure on ETH and SOL specifically.\n\nPrivacy coins Zcash (-13.98%) and Monero (-10.27%) fell harder than the broader market, consistent with their pattern of amplified moves during risk-off sessions. The Fear & Greed Index sits at 12, its lowest reading in months.",
+  "worthKnowing": [
+    "Hong Kong proposed extending its crypto licensing regime to cover brokers, advisers, and custodians — a significant expansion of the regulatory perimeter that could reshape how crypto services are structured across Asia.",
+    "Representative Horsford identified a potential window for a House vote on a crypto tax bill before the current congressional session closes, which could introduce regulatory clarity or new compliance requirements for US market participants.",
+    "Ark Invest's $90 million Anthropic purchase — funded in part by trimming crypto ETF holdings — marks one of the more visible single-day institutional rotations from digital assets into AI equities this year."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2113601785877,
+    "btcDominancePct": 58.1086,
+    "ethDominancePct": 9.9522,
+    "fearGreedIndex": 12
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "cftc-onchain-ruling",
+    "hyperliquid",
+    "ark-invest",
+    "crypto-tax-legislation",
+    "hong-kong-licensing"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
