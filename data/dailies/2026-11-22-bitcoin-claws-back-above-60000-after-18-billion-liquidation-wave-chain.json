@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-22T14:35:56.209Z",
+  "publishedAt": "2026-11-22",
+  "slug": "2026-11-22-bitcoin-claws-back-above-60000-after-18-billion-liquidation-wave-chain",
+  "headline": "Bitcoin claws back above $60,000 after $1.8 billion liquidation wave; Chainflip confirms $12M hack",
+  "summary": "A mass liquidation event wiped $1.8 billion from leveraged crypto positions before Bitcoin staged a roughly 9% bounce from a two-year low, reclaiming $60,000 by end of session. The recovery came against a backdrop of deepening security concerns: Chainflip confirmed a $12 million vault hack, South Korean exchanges froze CYBER transfers over a suspected bridge exploit, and a quantum computing analysis flagged systemic risks to crypto infrastructure. Fear & Greed sits at 11 — deep in Extreme Fear — signaling how raw sentiment remains even after the bounce.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 3.67,
+        "catalyst": "Monero surged amid renewed demand for privacy coins as a string of bridge exploits and exchange hacks highlighted custodial and cross-chain security risks. Google's latest quantum computing chip milestone may have reinforced interest in privacy-focused assets perceived as resistant to surveillance.",
+        "priceUsd": 491.03,
+        "priceChange24hUsd": 18.04
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -7.39,
+        "catalyst": "No specific catalyst identified; likely caught in the broader liquidation-driven selloff that preceded Bitcoin's recovery.",
+        "priceUsd": 0.00327251,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60639,
+        "changePct24h": 0.4,
+        "marketCapUsd": 1219803451656,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1704.41,
+        "changePct24h": 0.68,
+        "marketCapUsd": 208350219156,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9989,
+        "changePct24h": 0.01,
+        "marketCapUsd": 174649207044,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 555.18,
+        "changePct24h": 1.48,
+        "marketCapUsd": 73012363561,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": 0.01,
+        "marketCapUsd": 68385870340,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9203,
+        "changePct24h": -1.06,
+        "marketCapUsd": 58456908871,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 70.17,
+        "changePct24h": -0.65,
+        "marketCapUsd": 41538386451,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3049,
+        "changePct24h": -0.13,
+        "marketCapUsd": 28983729891,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.056,
+        "changePct24h": 2.16,
+        "marketCapUsd": 28644056454,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 62.53,
+        "changePct24h": 2.48,
+        "marketCapUsd": 14863180397,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 791.54,
+        "changePct24h": -0.42,
+        "marketCapUsd": 13499891542,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 491.03,
+        "changePct24h": 3.67,
+        "marketCapUsd": 9248279932,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.055,
+        "changePct24h": -0.44,
+        "marketCapUsd": 8619893427,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.16,
+        "changePct24h": 0.46,
+        "marketCapUsd": 8428195653,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 58.22,
+        "changePct24h": 0.31,
+        "marketCapUsd": 6905889579,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's story began with a forced unwind. A cascade of liquidations — $1.8 billion in leveraged positions closed in a short window — pushed Bitcoin to its lowest level in roughly two years before buyers stepped in around the $55,000–$57,000 range. By the end of the session, BTC had recovered to just above $60,000, a roughly 9% swing from the intraday low. That kind of move is less about conviction and more about mechanics: when leveraged longs get wiped out, the forced selling creates a vacuum that spot buyers can fill at distressed prices.\n\nThe recovery happened despite, not because of, the news cycle. Chainflip confirmed that attackers drained approximately $12 million from its cross-chain vault — the protocol is now offering the attacker a 10% bounty to return the rest, a now-common tactic in DeFi exploits. South Korean exchanges Upbit and Bithumb separately froze CYBER token transfers over a suspected $1 million bridge attack. The pattern of cross-chain infrastructure failures continued to weigh on confidence in DeFi broadly.\n\nMonero's 3.67% gain stood out against the flat-to-down backdrop. Privacy coins attracted fresh attention as the day's security headlines reinforced concerns about custodial risk and cross-chain exposure. A widely circulated analysis also warned that quantum computing advances — specifically Google's latest chip milestone — pose risks not just to individual Bitcoin wallets but to the bridges and custodians holding large reserves. Whether that narrative drove real capital or just attention is hard to separate, but Monero was the clearest beneficiary.\n\nThe Fear & Greed index at 11 reflects where sentiment sits: Extreme Fear, even after the bounce.",
+  "worthKnowing": [
+    "Chainflip, a cross-chain swap protocol, confirmed a $12 million vault hack and is offering the attacker a 10% bounty to return the remaining funds — a tactic that has become standard in DeFi exploits.",
+    "South Korean exchanges Upbit and Bithumb froze CYBER token transfers while investigators probed a suspected $1 million bridge exploit, the latest in a string of cross-chain security incidents.",
+    "The SEC alleged that fraudsters operating fake crypto exchange platforms stole $37 million from retail victims, adding to regulatory pressure on retail-facing crypto infrastructure.",
+    "A quantum computing analysis warned that Google's latest chip advances pose systemic risks to crypto bridges and custodians — not just individual wallets — because large coin reserves held by intermediaries could become targets."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2098137443970,
+    "btcDominancePct": 57.9872,
+    "ethDominancePct": 9.9027,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-liquidation",
+    "chainflip-hack",
+    "privacy-coins",
+    "quantum-computing",
+    "defi-exploits",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
