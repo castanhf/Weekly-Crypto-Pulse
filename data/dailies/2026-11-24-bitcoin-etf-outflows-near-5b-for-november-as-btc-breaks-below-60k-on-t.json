@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-24T17:31:41.761Z",
+  "publishedAt": "2026-11-24",
+  "slug": "2026-11-24-bitcoin-etf-outflows-near-5b-for-november-as-btc-breaks-below-60k-on-t",
+  "headline": "Bitcoin ETF outflows near $5B for November as BTC breaks below $60K on tariff fears",
+  "summary": "A brutal day across crypto: Bitcoin fell 3.6% to $59,780, breaking back below $60,000 as spot ETF outflows for November approached $5 billion — the worst monthly redemption total on record. Renewed tariff concerns from Washington erased the brief optimism from Monday's Nvidia-driven rally, sending liquidations tripling and dragging nearly every major asset lower. Ethereum dropped 5%, Solana fell nearly 7%, and the Fear & Greed index sat at 11 — deep in Extreme Fear territory.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "EURSAFO",
+        "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+        "changePct24h": 0.77,
+        "catalyst": "Spiko's EUR-denominated overnight swap fund posted a modest gain as investors rotated into stable, yield-bearing tokenized assets amid broad crypto market weakness. The fund's near-zero volatility profile made it a relative safe haven on a day when Fear & Greed sat at 11.",
+        "priceUsd": 1.12,
+        "priceChange24hUsd": 0.01
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "changePct24h": -14.74,
+        "catalyst": "Zcash suffered the steepest decline in the top 15, likely amplified by broad market selling pressure and a risk-off environment driven by record Bitcoin ETF outflows and tariff concerns re-entering the macro picture. No specific Zcash catalyst was identified; the move appears to reflect outsized sensitivity to the broader downturn.",
+        "priceUsd": 714.38,
+        "priceChange24hUsd": -105.27
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 59780,
+        "changePct24h": -3.6,
+        "marketCapUsd": 1202810504363,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1676.08,
+        "changePct24h": -5.02,
+        "marketCapUsd": 204922869842,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": -0.01,
+        "marketCapUsd": 174679250279,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 547.88,
+        "changePct24h": -3.02,
+        "marketCapUsd": 72059801385,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": -0.01,
+        "marketCapUsd": 69089424561,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9162,
+        "changePct24h": -5.65,
+        "marketCapUsd": 58199566602,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 69.37,
+        "changePct24h": -6.9,
+        "marketCapUsd": 41081500917,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3073,
+        "changePct24h": -1.53,
+        "marketCapUsd": 29215676474,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.057,
+        "changePct24h": 0.63,
+        "marketCapUsd": 28775309760,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 61.12,
+        "changePct24h": -7.35,
+        "marketCapUsd": 14528901839,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 714.38,
+        "changePct24h": -14.74,
+        "marketCapUsd": 12193564853,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 497.08,
+        "changePct24h": -1.67,
+        "marketCapUsd": 9363548058,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0551,
+        "changePct24h": -5.15,
+        "marketCapUsd": 8643249115,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 9.04,
+        "changePct24h": -1.47,
+        "marketCapUsd": 8316224489,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 8.85,
+        "changePct24h": -3.95,
+        "marketCapUsd": 6789816964,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces collided today to push crypto into its sharpest single-day drop in weeks. First, spot Bitcoin ETF outflows — the funds that allow traditional investors to hold BTC without touching a crypto exchange — hit another $570 million in net redemptions, bringing November's running total close to $5 billion. That is the worst monthly outflow figure since these funds launched in January 2024, and it reflects sustained institutional selling rather than a one-day blip. Bitcoin had briefly recovered above $60,000 on Monday, lifted by enthusiasm around Nvidia's earnings, but that recovery evaporated quickly.\n\nThe second force was macro: renewed tariff concerns out of Washington revived the kind of risk-off sentiment that tends to hit speculative assets hard. When investors pull back from risk broadly, crypto tends to move faster and further than equities — and that pattern held today. Liquidations tripled compared to the prior session as leveraged long positions were forcibly closed, amplifying the downward move.\n\nThe result was a broad selloff with almost no shelter. Ethereum fell 5%, Solana dropped nearly 7%, and Hyperliquid slid 7.35%. Zcash led losses at -14.74%, though no Zcash-specific news drove that move — it appears to reflect the asset's higher sensitivity to broad market swings. The one exception was Spiko's EUR-denominated tokenized fund, which edged up 0.77% as a small amount of capital rotated toward yield-bearing, low-volatility instruments. The Fear & Greed index at 11 — deep in Extreme Fear — captures the session's tone accurately.",
+  "worthKnowing": [
+    "South Korea proposed lifting its 2017 ban on initial coin offerings (ICOs — fundraising events where new crypto tokens are sold to the public), a move that would open one of Asia's largest economies to onshore token issuances for the first time in nearly a decade.",
+    "BlackRock expanded its tokenized money market fund — which holds $100 million in assets — to investors in Hong Kong, continuing the firm's push into real-world asset tokenization despite the broader market downturn.",
+    "Prominent crypto trader Ansem's wallet was reportedly drained of $2.57 million, triggering a 55% crash in his associated creator token; Ansem denied involvement, suggesting the wallet was hacked."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2087202884951,
+    "btcDominancePct": 57.8866,
+    "ethDominancePct": 9.8537,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "tariff-risk",
+    "south-korea-ico-ban",
+    "blackrock-tokenization",
+    "zcash",
+    "extreme-fear"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
