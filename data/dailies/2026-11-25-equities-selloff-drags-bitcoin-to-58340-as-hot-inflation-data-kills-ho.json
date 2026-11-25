@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-25T17:13:09.695Z",
+  "publishedAt": "2026-11-25",
+  "slug": "2026-11-25-equities-selloff-drags-bitcoin-to-58340-as-hot-inflation-data-kills-ho",
+  "headline": "Equities selloff drags Bitcoin to $58,340 as hot inflation data kills hopes for a Fed pause",
+  "summary": "A hotter-than-expected PCE inflation reading — the Fed's preferred gauge — cemented expectations of a December rate hike and sent risk assets lower across the board. Bitcoin fell 1.71% to $58,340, Ethereum dropped 1.59% to $1,639, and DeFi tokens took a harder hit as the Fear & Greed index sits at 13, deep in extreme fear territory. The one exception was Monero, which gained 2% as privacy-coin demand picked up amid tightening regulatory scrutiny of DeFi in Europe.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": 2.05,
+        "catalyst": "Monero outperformed the broader market amid a risk-off selloff, likely benefiting from privacy-coin demand as regulators tighten oversight of DeFi and crypto firms across the EU and Ukraine, driving flows into censorship-resistant assets. The EU bank watchdog's push for new DeFi lending rules may have reinforced Monero's appeal as a non-custodial, privacy-preserving alternative.",
+        "priceUsd": 504.91,
+        "priceChange24hUsd": 10.33
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "RAIN",
+        "name": "Rain",
+        "changePct24h": -11.41,
+        "catalyst": "No specific catalyst identified — Rain's 11.41% decline outpaced the broader market selloff, suggesting asset-specific selling pressure on top of the macro headwinds.",
+        "priceUsd": 0.00265946,
+        "priceChange24hUsd": 0
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 58340,
+        "changePct24h": -1.71,
+        "marketCapUsd": 1173634456939,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1639.29,
+        "changePct24h": -1.59,
+        "marketCapUsd": 200404114582,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.9991,
+        "changePct24h": 0,
+        "marketCapUsd": 174682912058,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 537.38,
+        "changePct24h": -1.22,
+        "marketCapUsd": 70670988320,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9996,
+        "changePct24h": 0,
+        "marketCapUsd": 68953520276,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9031,
+        "changePct24h": -0.67,
+        "marketCapUsd": 57362514279,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 67.55,
+        "changePct24h": -1.97,
+        "marketCapUsd": 39997364357,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.303,
+        "changePct24h": -1.4,
+        "marketCapUsd": 28806894672,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.041,
+        "changePct24h": -1.55,
+        "marketCapUsd": 28453758149,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 57.66,
+        "changePct24h": -4.97,
+        "marketCapUsd": 13702513279,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 689.69,
+        "changePct24h": -2.99,
+        "marketCapUsd": 11766805053,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 504.91,
+        "changePct24h": 2.05,
+        "marketCapUsd": 9510236880,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0534,
+        "changePct24h": -2.31,
+        "marketCapUsd": 8376593751,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 8.99,
+        "changePct24h": -1.2,
+        "marketCapUsd": 8273086779,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "priceUsd": 8.66,
+        "changePct24h": -1.39,
+        "marketCapUsd": 6641097709,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "The day's main driver was macro: the PCE index — the Federal Reserve's preferred measure of inflation — came in hotter than expected, locking in market expectations for a December rate hike. When the Fed raises rates, it makes holding risk assets like crypto less attractive relative to cash and bonds, and today's data removed the last credible case for a pause. Bitcoin fell 1.71% to $58,340, a relatively contained move compared to Ethereum and DeFi tokens, which dropped roughly twice as hard as equities sold off in parallel. Ethereum fell 1.59% to $1,639, but DeFi-adjacent tokens bore the brunt — Hyperliquid's HYPE dropped nearly 5%, and Zcash fell 3%. The Fear & Greed index at 13 reflects a market in extreme fear, a level that typically signals broad capitulation rather than selective selling. The one asset that moved against the trend was Monero, up 2.05%. The European Banking Authority's push for formal EU-level rules on DeFi lending appears to have nudged capital toward privacy-preserving, non-custodial assets — Monero being the clearest beneficiary. When regulators tighten oversight of identifiable on-chain activity, assets designed to resist that oversight tend to attract attention. Solana fell 1.97% despite a significant institutional vote of confidence: Japan's SBI and SMFG announced a joint venture to build stablecoin payment and tokenization infrastructure on the Solana network. The price decline reflects the macro environment overwhelming any asset-specific tailwinds on a day like this.",
+  "worthKnowing": [
+    "Japan's SBI Holdings and Sumitomo Mitsui Financial Group launched a joint venture to build stablecoin payment and tokenization infrastructure on Solana — one of the largest institutional endorsements the network has received from traditional finance.",
+    "The European Banking Authority is pushing the European Commission to establish formal rules for crypto firms offering DeFi lending services, a move that could significantly reshape how decentralized protocols operate for European users.",
+    "Franklin Templeton's multi-asset crypto ETF is adding Hyperliquid's HYPE token to its basket, giving institutional investors exposure to the asset despite its nearly 5% decline on the day."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2036058206773,
+    "btcDominancePct": 57.5987,
+    "ethDominancePct": 9.8382,
+    "fearGreedIndex": 13
+  },
+  "tags": [
+    "fed-rate-hike",
+    "pce-inflation",
+    "eu-defi-regulation",
+    "monero-privacy",
+    "solana-institutional",
+    "franklin-templeton-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
