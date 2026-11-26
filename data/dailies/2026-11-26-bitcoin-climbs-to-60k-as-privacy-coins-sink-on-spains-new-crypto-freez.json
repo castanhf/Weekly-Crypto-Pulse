@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "daily@1.2",
+  "generatedAt": "2026-11-26T16:53:39.563Z",
+  "publishedAt": "2026-11-26",
+  "slug": "2026-11-26-bitcoin-climbs-to-60k-as-privacy-coins-sink-on-spains-new-crypto-freez",
+  "headline": "Bitcoin climbs to $60K as privacy coins sink on Spain's new crypto-freeze law",
+  "summary": "A broad but uneven Thanksgiving rally pushed Bitcoin up 3.3% to $60,317 and Ethereum up 2.7% to $1,682 — yet the Fear & Greed index sits at a deeply fearful 11, a reminder that this bounce is happening inside a bear market, not out of one. The day's sharpest story was regulatory: Spain granted its anti-laundering unit the power to freeze crypto accounts without a court order, hammering Monero 11.5% lower. NEAR Protocol gained the same 11.5% on the other side of the ledger, riding thin holiday volume and a rotation into DeFi tokens.",
+  "whatMoved": {
+    "winners": [
+      {
+        "symbol": "NEAR",
+        "name": "NEAR Protocol",
+        "changePct24h": 11.54,
+        "catalyst": "NEAR surged 11.54% on Thanksgiving Day as thin holiday liquidity amplified a broader DeFi-led bounce, with DeFi tokens outperforming the flat Bitcoin market. No single project-specific catalyst was identified, but sector rotation into DeFi assets on low volume likely drove the outsized gain.",
+        "priceUsd": 3.04,
+        "priceChange24hUsd": 0.35
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "changePct24h": -11.54,
+        "catalyst": "Monero dropped 11.54% amid renewed regulatory pressure on privacy coins: Spain granted its anti-laundering unit power to freeze crypto accounts without judicial oversight, and Switzerland approved a 57-jurisdiction crypto data-sharing framework — both developments disproportionately threatening privacy-focused assets. Zcash developers simultaneously urging migration away from legacy shielded pools added to the sector's regulatory and technical overhang.",
+        "priceUsd": 445.31,
+        "priceChange24hUsd": -51.39
+      }
+    ],
+    "topTracked": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "priceUsd": 60317,
+        "changePct24h": 3.32,
+        "marketCapUsd": 1213882045956,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "priceUsd": 1682.68,
+        "changePct24h": 2.74,
+        "marketCapUsd": 205761155888,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "priceUsd": 0.999,
+        "changePct24h": -0.01,
+        "marketCapUsd": 173845870229,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "priceUsd": 549.47,
+        "changePct24h": 2.47,
+        "marketCapUsd": 72280854150,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "priceUsd": 0.9995,
+        "changePct24h": -0.01,
+        "marketCapUsd": 69253139044,
+        "isStablecoin": true
+      },
+      {
+        "symbol": "XRP",
+        "name": "XRP",
+        "priceUsd": 0.9457,
+        "changePct24h": 4.85,
+        "marketCapUsd": 60083816571,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "priceUsd": 70.52,
+        "changePct24h": 4.42,
+        "marketCapUsd": 41767035479,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "FIGR_HELOC",
+        "name": "Figure Heloc",
+        "priceUsd": 1.057,
+        "changePct24h": 1.47,
+        "marketCapUsd": 28998885350,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "TRX",
+        "name": "TRON",
+        "priceUsd": 0.3023,
+        "changePct24h": -0.25,
+        "marketCapUsd": 28739187970,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "HYPE",
+        "name": "Hyperliquid",
+        "priceUsd": 60.16,
+        "changePct24h": 4.96,
+        "marketCapUsd": 14300634854,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "ZEC",
+        "name": "Zcash",
+        "priceUsd": 693.49,
+        "changePct24h": 1.34,
+        "marketCapUsd": 11809967502,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "DOGE",
+        "name": "Dogecoin",
+        "priceUsd": 0.0564,
+        "changePct24h": 5.75,
+        "marketCapUsd": 8849033979,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "XMR",
+        "name": "Monero",
+        "priceUsd": 445.31,
+        "changePct24h": -11.54,
+        "marketCapUsd": 8388664962,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "LEO",
+        "name": "LEO Token",
+        "priceUsd": 8.98,
+        "changePct24h": -0.32,
+        "marketCapUsd": 8255898084,
+        "isStablecoin": false
+      },
+      {
+        "symbol": "WBT",
+        "name": "WhiteBIT Coin",
+        "priceUsd": 60.83,
+        "changePct24h": 9.63,
+        "marketCapUsd": 7217305539,
+        "isStablecoin": false
+      }
+    ],
+    "sectionLabels": {
+      "winners": "Winners",
+      "losers": "Losers"
+    }
+  },
+  "whyItMoved": "Two forces pulled in opposite directions today. On the upside, thin Thanksgiving holiday trading in the US meant that even modest buying pressure produced outsized percentage moves — Bitcoin crossed back above $60,000, XRP gained nearly 5%, Solana climbed 4.4%, and Dogecoin rose 5.75%. DeFi tokens led the charge, with NEAR Protocol jumping 11.5% as traders rotated into smaller-cap assets on low volume. None of these moves came with a clear fundamental catalyst; they look like a technical bounce inside a bear market rather than a trend reversal.\n\nOn the downside, the regulatory backdrop tightened visibly. Spain passed a law giving its financial intelligence unit the authority to freeze crypto accounts without a court order — a meaningful escalation in EU enforcement reach. Separately, Switzerland approved a framework for sharing crypto transaction data across 57 jurisdictions. Both developments hit privacy coins hardest: Monero fell 11.54%, erasing its recent gains, as assets designed to obscure transaction trails face the most direct threat from expanded government surveillance powers.\n\nThe broader context remains bearish. Spot Bitcoin ETFs are on pace for their worst month of outflows on record, according to The Block, and Galaxy Research walked back its earlier call that Bitcoin had bottomed in June — flagging $58,525 as a support level to watch. The Fear & Greed index at 11 reflects that underlying anxiety. Today's green candles are real, but they are happening against a backdrop of institutional redemptions and analyst caution, not in spite of them.",
+  "worthKnowing": [
+    "Spot Bitcoin ETFs are on track for their worst month of outflows on record, with JPMorgan noting that Strategy's NAV premium has fallen to what it characterizes as a capitulation low.",
+    "Galaxy Research reversed its June bottom call for Bitcoin, warning that a break below $58,525 could trigger further losses.",
+    "Fidelity filed to launch a Chainlink ETF, extending the wave of institutional filings for altcoin exposure products even as the broader market remains under pressure.",
+    "Zcash developers are urging holders to move roughly $300 million out of the legacy Sprout shielded pool, citing risks from future cryptographic advances."
+  ],
+  "snapshot": {
+    "totalMarketCapUsd": 2092499065077,
+    "btcDominancePct": 57.9561,
+    "ethDominancePct": 9.8195,
+    "fearGreedIndex": 11
+  },
+  "tags": [
+    "bitcoin-etf-outflows",
+    "privacy-coins",
+    "spain-crypto-regulation",
+    "defi-rotation",
+    "monero",
+    "near-protocol",
+    "fidelity-chainlink-etf"
+  ],
+  "weeklyFooter": {
+    "text": "For deeper context, see this week's Crypto Pulse",
+    "weeklySlug": "2026-07-27-ethereum-leads-market-surge-as-bitcoin-stabilizes-above-65-000"
+  }
+}
